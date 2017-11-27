@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>每天一个linux命令（4）: mkdir | 叶落阁</title>
-  <meta name="keywords" content=" linux命令 ">
-  <meta name="description" content="每天一个linux命令（4）: mkdir | 叶落阁">
+  <title>[转]谈谈Java中的语法糖 | 叶落阁</title>
+  <meta name="keywords" content=" java ">
+  <meta name="description" content="[转]谈谈Java中的语法糖 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="很抱歉，您所访问的地址并不存在">
 <meta property="og:type" content="website">
@@ -1444,9 +1444,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-linux-command（4）-mkdir" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-java-grammatical-sugar" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">每天一个linux命令（4）: mkdir</h1>
+        <h1 class="article-title">[转]谈谈Java中的语法糖</h1>
     
     <div class="article-meta">
         
@@ -1454,26 +1454,26 @@
         
         <span class="book">
             
-            <a href="javascript:" data-rel="运维">运维</a>
+            <a href="javascript:" data-rel="后端">后端</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">linux命令</a>
+            <a href="javascript:" class="color5">java</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2017-11-06 10:20:12'>2016-12-04 09:27</time>
+        创建时间:<time class="date" title='更新时间: 2017-11-27 23:12:18'>2017-11-27 22:51</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:545</span>
+        <span>字数:1,672</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1501,9 +1501,19 @@
         
     </div>
     
+    <div class="article-meta">
+        <span class="origin">原文:
+            <a href="http://blog.csdn.net/danchu/article/details/54986442" target="_blank">
+                
+                谈谈Java中的语法糖
+                
+            </a>
+        </span>
+    </div>
+    
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-text">命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令功能"><span class="toc-text">命令功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令参数"><span class="toc-text">命令参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令是实例"><span class="toc-text">命令是实例</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型与类型擦除"><span class="toc-text">泛型与类型擦除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自动装箱与拆箱"><span class="toc-text">自动装箱与拆箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变长参数"><span class="toc-text">变长参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增强for循环"><span class="toc-text">增强for循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内部类"><span class="toc-text">内部类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#枚举类型"><span class="toc-text">枚举类型</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1518,83 +1528,191 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　linux mkdir 命令用来创建指定的名称的目录，要求创建目录的用户在当前目录中具有写权限，并且指定的目录名不能是当前目录中已有的目录。<br><a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ mkdir [选项] 目录...
+        <blockquote>
+<p>语法糖（Syntactic Sugar），也称糖衣语法，指在计算机语言中添加的某种语法，这种语法对语言本身功能来说没有什么影响，只是为了方便程序员的开发，提高开发效率。说白了，语法糖就是对现有语法的一个封装。</p>
+</blockquote>
+<p>Java作为一种与平台无关的高级语言，当然也含有语法糖，这些语法糖并不被虚拟机所支持，在编译成字节码阶段就自动转换成简单常用语法。一般来说Java中的语法糖主要有以下几种：</p>
+<ol>
+<li>泛型与类型擦除</li>
+<li>自动装箱与拆箱，变长参数、</li>
+<li>增强for循环</li>
+<li>内部类与枚举类</li>
+</ol>
+<h2 id="泛型与类型擦除"><a href="#泛型与类型擦除" class="headerlink" title="泛型与类型擦除"></a>泛型与类型擦除</h2><p>Java语言并不是一开始就支持泛型的。在早期的JDK中，只能通过Object类是所有类型的父类和强制类型转换来实现泛型的功能。强制类型转换的缺点就是把编译期间的问题延迟到运行时，JVM并不能为我们提供编译期间的检查。</p>
+<p>在JDK1.5中，Java语言引入了泛型机制。但是这种泛型机制是通过类型擦除来实现的，即Java中的泛型只在程序源代码中有效（源代码阶段提供类型检查），在编译后的字节码中自动用强制类型转换进行替代。也就是说，Java语言中的泛型机制其实就是一颗语法糖，相较与C++、C#相比，其泛型实现实在是不那么优雅。</p>
+<pre><code class="java">/**
+* 在源代码中存在泛型
+*/
+public static void main(String[] args) {
+    Map&lt;String,String&gt; map = new HashMap&lt;String,String&gt;();
+    map.put(&quot;hello&quot;,&quot;你好&quot;);
+    String hello = map.get(&quot;hello&quot;);
+    System.out.println(hello);
+}
 </code></pre>
-<h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　通过 mkdir 命令可以实现在指定位置创建以 DirName(指定的文件名)命名的文件夹或目录。要创建文件夹或目录的用户必须对所创建的文件夹的父文件夹具有写权限。并且，所创建的文件夹(目录)不能与其父目录(即父文件夹)中的文件名重名，即同一个目录下不能有同名的(区分大小写)。</p>
-<h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">-m, –mode=模式</td>
-<td style="text-align:left">设定权限&lt;模式&gt; (类似 chmod)，而不是 rwxrwxrwx 减 umask</td>
-</tr>
-<tr>
-<td style="text-align:left">-p, –parents</td>
-<td style="text-align:left">可以是一个路径名称。此时若路径中的某些目录尚不存在,加上此选项后,系统将自动建立好那些尚不存在的目录,即一次可以建立多个目录</td>
-</tr>
-<tr>
-<td style="text-align:left">-v, –verbose</td>
-<td style="text-align:left">每次创建新目录都显示信息</td>
-</tr>
-<tr>
-<td style="text-align:left">–help</td>
-<td style="text-align:left">显示此帮助信息并退出</td>
-</tr>
-<tr>
-<td style="text-align:left">–version</td>
-<td style="text-align:left">输出版本信息并退出</td>
-</tr>
-</tbody>
-</table>
-<h3 id="命令是实例"><a href="#命令是实例" class="headerlink" title="命令是实例"></a>命令是实例</h3><p><strong><code>例一</code>：创建一个空目录</strong></p>
-<pre><code class="bash">$ mkdir test
+<p>当上述源代码被编译为class文件后，泛型被擦除且引入强制类型转换</p>
+<pre><code class="java">public static void main(String[] args) {
+    HashMap map = new HashMap(); //类型擦除
+    map.put(&quot;hello&quot;, &quot;你好&quot;);
+    String hello = (String)map.get(&quot;hello&quot;);//强制转换
+    System.out.println(hello);
+}
 </code></pre>
-<p><strong><code>例二</code>：递归创建多个目录</strong></p>
-<pre><code class="bash">#在当前目录创建一个嵌套文件夹test1/test11
-$ mkdir -p test1/test11
+<h2 id="自动装箱与拆箱"><a href="#自动装箱与拆箱" class="headerlink" title="自动装箱与拆箱"></a>自动装箱与拆箱</h2><blockquote>
+<p>Java中的自动装箱与拆箱指的是基本数据类型与他们的包装类型之间的相互转换。</p>
+</blockquote>
+<p>我们知道Java是一门面向对象的语言，在Java世界中有一句话是这么说的：“万物皆对象”。但是Java中的基本数据类型却不是对象，他们不需要进行new操作，也不能调用任何方法，这在使用的时候有诸多不便。因此Java为这些基本类型提供了包装类，并且为了使用方便，提供了自动装箱与拆箱功能。自动装箱与拆箱在使用的过程中，其实是一个语法糖，内部还是调用了相应的函数进行转换。</p>
+<p>下面代码演示了自动装箱和拆箱功能</p>
+<pre><code class="java">public static void main(String[] args) {
+    Integer a = 1;
+    int b = 2;
+    int c = a + b;
+    System.out.println(c);
+}
 </code></pre>
-<p><strong><code>例三</code>：创建权限为777的目录</strong></p>
-<pre><code class="bash">$ mkdir -m 777 test
+<p>经过编译后，代码如下</p>
+<pre><code class="java">public static void main(String[] args) {
+    Integer a = Integer.valueOf(1); // 自动装箱
+    byte b = 2;
+    int c = a.intValue() + b;//自动拆箱
+    System.out.println(c);
+}
 </code></pre>
-<p><strong><code>例四</code>：创建新目录都显示信息</strong></p>
-<pre><code class="bash">$ mkdir -v test
+<h2 id="变长参数"><a href="#变长参数" class="headerlink" title="变长参数"></a>变长参数</h2><blockquote>
+<p>所谓变长参数，就是方法可以接受长度不定确定的参数</p>
+</blockquote>
+<p>变长参数特性是在JDK1.5中引入的，使用变长参数有两个条件，一是变长的那一部分参数具有相同的类型，二是变长参数必须位于方法参数列表的最后面。变长参数同样是Java中的语法糖，其内部实现是Java数组。</p>
+<pre><code class="java">public class Varargs {
+    public static void print(String... args) {
+        for(String str : args){
+            System.out.println(str);
+        }
+    }
+
+    public static void main(String[] args) {
+        print(&quot;hello&quot;, &quot;world&quot;);
+    }
+}
 </code></pre>
-<p><strong><code>例五</code>：一个命令创建项目的目录结构</strong></p>
-<pre><code class="bash">$ mkdir -vp scf/{lib/,bin/,doc/{info,product},logs/{info,product},service/deploy/{info,product}}
-mkdir: 已创建目录 “scf”
-mkdir: 已创建目录 “scf/lib”
-mkdir: 已创建目录 “scf/bin”
-mkdir: 已创建目录 “scf/doc”
-mkdir: 已创建目录 “scf/doc/info”
-mkdir: 已创建目录 “scf/doc/product”
-mkdir: 已创建目录 “scf/logs”
-mkdir: 已创建目录 “scf/logs/info”
-mkdir: 已创建目录 “scf/logs/product”
-mkdir: 已创建目录 “scf/service”
-mkdir: 已创建目录 “scf/service/deploy”
-mkdir: 已创建目录 “scf/service/deploy/info”
-mkdir: 已创建目录 “scf/service/deploy/product”
-[root@localhost test]# tree scf/
-scf/
-|-- bin
-|-- doc
-|   |-- info
-|   `-- product
-|-- lib
-|-- logs
-|   |-- info
-|   `-- product
-`-- service
-    `-- deploy
-        |-- info
-        `-- product
-12 directories, 0 files
+<p>编译为class文件后如下，从中可以很明显的看出变长参数内部是通过数组实现的</p>
+<pre><code class="java">public class Varargs {
+    public Varargs() {
+    }
+
+    public static void print(String... args) {
+        String[] var1 = args;
+        int var2 = args.length;
+        //增强for循环的数组实现方式
+        for(int var3 = 0; var3 &lt; var2; ++var3) {
+            String str = var1[var3];
+            System.out.println(str);
+        }
+
+    }
+
+    public static void main(String[] args) {
+        //变长参数转换为数组
+        print(new String[]{&quot;hello&quot;, &quot;world&quot;});
+    }
+}
+</code></pre>
+<h2 id="增强for循环"><a href="#增强for循环" class="headerlink" title="增强for循环"></a>增强for循环</h2><blockquote>
+<p>增强for循环与普通for循环相比，功能更强并且代码更简洁</p>
+</blockquote>
+<p>增强for循环的对象要么是一个数组，要么实现了Iterable接口。这个语法糖主要用来对数组或者集合进行遍历，其在循环过程中不能改变集合的大小。</p>
+<pre><code class="java">public static void main(String[] args) {
+    String[] params = new String[]{&quot;hello&quot;,&quot;world&quot;};
+    //增强for循环对象为数组
+    for(String str : params){
+        System.out.println(str);
+    }
+
+    List&lt;String&gt; lists = Arrays.asList(&quot;hello&quot;,&quot;world&quot;);
+    //增强for循环对象实现Iterable接口
+    for(String str : lists){
+        System.out.println(str);
+    }
+}
+</code></pre>
+<p>编译后的class文件为</p>
+<pre><code class="java">public static void main(String[] args) {
+   String[] params = new String[]{&quot;hello&quot;, &quot;world&quot;};
+   String[] lists = params;
+   int var3 = params.length;
+   //数组形式的增强for退化为普通for
+   for(int str = 0; str &lt; var3; ++str) {
+       String str1 = lists[str];
+       System.out.println(str1);
+   }
+
+   List var6 = Arrays.asList(new String[]{&quot;hello&quot;, &quot;world&quot;});
+   Iterator var7 = var6.iterator();
+   //实现Iterable接口的增强for使用iterator接口进行遍历
+   while(var7.hasNext()) {
+       String var8 = (String)var7.next();
+       System.out.println(var8);
+   }
+
+}
+</code></pre>
+<h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><blockquote>
+<p>内部类就是定义在一个类内部的类</p>
+</blockquote>
+<p>Java语言中之所以引入内部类，是因为有些时候一个类只在另一个类中有用，我们不想让其在另外一个地方被使用。内部类之所以是语法糖，是因为其只是一个编译时的概念，一旦编译完成，编译器就会为内部类生成一个单独的class文件，名为outer$innter.class。</p>
+<pre><code class="java">public class Outer {
+    class Inner{
+    }
+}
+</code></pre>
+<p>使用javac编译后，生成两个class文件Outer.class和Outer$Inner.class，其中Outer$Inner.class的内容如下：</p>
+<pre><code class="java">class Outer$Inner {
+    Outer$Inner(Outer var1) {
+        this.this$0 = var1;
+    }
+}
+</code></pre>
+<p>内部类分为四种：成员内部类、局部内部类、匿名内部类、静态内部类，每一种都有其用法，这里就不介绍了</p>
+<h2 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h2><blockquote>
+<p>枚举类型就是一些具有相同特性的类常量</p>
+</blockquote>
+<p>java中类的定义使用class，枚举类的定义使用enum。在Java的字节码结构中，其实并没有枚举类型，枚举类型只是一个语法糖，在编译完成后被编译成一个普通的类。这个类继承java.lang.Enum，并被final关键字修饰。</p>
+<pre><code class="java">public enum Fruit {
+    APPLE,ORINGE
+}
+</code></pre>
+<p>使用jad对编译后的class文件进行反编译后得到</p>
+<pre><code class="java">//继承java.lang.Enum并声明为final
+public final class Fruit extends Enum
+{
+
+    public static Fruit[] values()
+    {
+        return (Fruit[])$VALUES.clone();
+    }
+
+    public static Fruit valueOf(String s)
+    {
+        return (Fruit)Enum.valueOf(Fruit, s);
+    }
+
+    private Fruit(String s, int i)
+    {
+        super(s, i);
+    }
+    //枚举类型常量
+    public static final Fruit APPLE;
+    public static final Fruit ORANGE;
+    private static final Fruit $VALUES[];//使用数组进行维护
+
+    static
+    {
+        APPLE = new Fruit(&quot;APPLE&quot;, 0);
+        ORANGE = new Fruit(&quot;ORANGE&quot;, 1);
+        $VALUES = (new Fruit[] {
+            APPLE, ORANGE
+        });
+    }
+}
 </code></pre>
 
       
@@ -1609,12 +1727,12 @@ scf/
 
 
 <div class="article_copyright">
-    <p><span>文章标题:</span>每天一个linux命令（4）: mkdir</p>
-    <p><span>文章字数:</span><span class="post-count">545</span></p>
+    <p><span>文章标题:</span>[转]谈谈Java中的语法糖</p>
+    <p><span>文章字数:</span><span class="post-count">1,672</span></p>
     <p><span>本文作者:</span><a href="javascript:void(0)" title="叶落阁">叶落阁</a></p>
-    <p><span>发布时间:</span>2016-12-04, 09:27:32</p>
-    <p><span>最后更新:</span>2017-11-06, 10:20:12</p>
-    <span>原始链接:</span><a class="post-url" href="/2016/12/04/linux-command（4）-mkdir/" title="每天一个linux命令（4）: mkdir">http://yelog.org/2016/12/04/linux-command（4）-mkdir/</a>
+    <p><span>发布时间:</span>2017-11-27, 22:51:45</p>
+    <p><span>最后更新:</span>2017-11-27, 23:12:18</p>
+    <span>原始链接:</span><a class="post-url" href="/2017/11/27/java-grammatical-sugar/" title="[转]谈谈Java中的语法糖">http://yelog.org/2017/11/27/java-grammatical-sugar/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
