@@ -364,6 +364,7 @@ div.ac > ul.tag > li:before {
 .article .article-meta .tag:before,
 .article .article-meta .book:before,
 .nav-right nav a:before,
+#local-search-result a:before,
 .nav-right form .cross:before,
 .full-toc .full .min:before,
 .full-toc .full .max:before,
@@ -869,7 +870,8 @@ left0px
 .nav-right .title-list .tags-list li a.color5:before {
   border-right-color: #7b5d5f;
 }
-.nav-right .title-list nav {
+.nav-right .title-list nav,
+.nav-right .title-list #local-search-result {
   clear: both;
   border-top: 1px solid #e5e8ec;
   width: 100%;
@@ -883,19 +885,37 @@ left0px
   bottom: 0;
   -webkit-overflow-scrolling: touch;
 }
-.nav-right .title-list nav::-webkit-scrollbar {
+.nav-right .title-list nav::-webkit-scrollbar,
+.nav-right .title-list #local-search-result::-webkit-scrollbar {
   width: 3px;
 }
-.nav-right .title-list nav::-webkit-scrollbar-thumb {
+.nav-right .title-list nav::-webkit-scrollbar-thumb,
+.nav-right .title-list #local-search-result::-webkit-scrollbar-thumb {
   background: #309e85;
 }
-.nav-right .title-list nav a {
+.nav-right .title-list nav .search-result-list,
+.nav-right .title-list #local-search-result .search-result-list {
+  padding-left: 0;
+}
+.nav-right .title-list nav .search-result-list .search-result,
+.nav-right .title-list #local-search-result .search-result-list .search-result {
+  padding: 0 16px 0 32px;
+  margin: 0;
+  color: #808080;
+}
+.nav-right .title-list nav .search-result-list .search-result .search-keyword,
+.nav-right .title-list #local-search-result .search-result-list .search-result .search-keyword {
+  color: #f00;
+}
+.nav-right .title-list nav a,
+.nav-right .title-list #local-search-result a {
   display: block;
   height: 32px;
   color: inherit;
   position: relative;
 }
-.nav-right .title-list nav a:before {
+.nav-right .title-list nav a:before,
+.nav-right .title-list #local-search-result a:before {
   content: "\e901";
   position: absolute;
   top: 7px;
@@ -904,13 +924,16 @@ left0px
   font-size: 18px;
   color: #309e85;
 }
-.nav-right .title-list nav a#top:before {
+.nav-right .title-list nav a#top:before,
+.nav-right .title-list #local-search-result a#top:before {
   content: "\f08d";
 }
-.nav-right .title-list nav a.hover:before {
+.nav-right .title-list nav a.hover:before,
+.nav-right .title-list #local-search-result a.hover:before {
   animation: wobble 1s linear;
 }
-.nav-right .title-list nav a .post-title {
+.nav-right .title-list nav a .post-title,
+.nav-right .title-list #local-search-result a .post-title {
   width: -webkit-calc(100% - 155px);
   width: -moz-calc(100% - 155px);
   width: calc(100% - 155px);
@@ -927,7 +950,8 @@ left0px
   overflow: hidden;
   outline: none;
 }
-.nav-right .title-list nav a .post-date {
+.nav-right .title-list nav a .post-date,
+.nav-right .title-list #local-search-result a .post-date {
   font-size: 15px;
   margin: 8px 0px;
   padding-right: 3px;

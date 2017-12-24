@@ -29,6 +29,9 @@
 <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="/js/jquery.autocomplete.min.js"></script>
+
+    <script src="/js/search.js"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 <script>
     hljs.initHighlightingOnLoad();
@@ -79,13 +82,13 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="数据库"> 数据库 </li>
-    
     <li data-rel="后端"> 后端 </li>
     
-    <li data-rel="读书"> 读书 </li>
+    <li data-rel="数据库"> 数据库 </li>
     
     <li data-rel="大前端"> 大前端 </li>
+    
+    <li data-rel="读书"> 读书 </li>
     
     <li data-rel="工具"> 工具 </li>
     
@@ -122,7 +125,7 @@
 </div>
         <div class="title-list">
     <form onkeydown="if(event.keyCode==13){return false;}">
-        <input class="search" type="text" placeholder="Search..." autocomplete="off">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
         <i class="cross"></i>
         <span>
         <label for="tagswitch">Tags:</label>
@@ -132,27 +135,11 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">PostgreSQL</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">sql</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">java</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color2">translation</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">javaee</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -168,6 +155,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">javaee</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">spring</a>
     </li>
     
@@ -176,7 +167,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">reading</a>
+        <a href="javascript:" class="color3">mybatis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">PostgreSQL</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sql</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -192,11 +191,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">freemarker</a>
+        <a href="javascript:" class="color2">jQuery</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">jQuery</a>
+        <a href="javascript:" class="color1">freemarker</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -208,11 +207,15 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">浏览器</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">js</a>
+        <a href="javascript:" class="color3">reading</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -220,11 +223,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">Git</a>
+        <a href="javascript:" class="color3">mathjax</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mathjax</a>
+        <a href="javascript:" class="color4">Git</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -236,15 +239,15 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">fragment_cache</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">mac</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color1">efficiency</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">fragment_cache</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -260,11 +263,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">tale</a>
+        <a href="javascript:" class="color3">IntellijIDEA</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">IntellijIDEA</a>
+        <a href="javascript:" class="color5">tale</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -276,19 +279,19 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">centos</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">firewall</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">vim</a>
+        <a href="javascript:" class="color2">centos</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">vim</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -316,15 +319,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">linux命令</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">maven</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color1">nexus</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">linux命令</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -334,7 +337,12 @@
     <div class="clearfix"></div>
 </div>
 
-    <nav>
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
         
         <a id="top" class="工具 "
            href="/2017/03/13/3-hexo-logs/"
@@ -418,7 +426,7 @@
         
         <a  class="大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="浏览器,js"
+           data-tag="js,浏览器"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1488,12 +1496,12 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2017-11-06 10:20:12'>2017-03-13 15:44</time>
+        创建时间:<time class="date" title='更新时间: 2017-12-24 21:27:05'>2017-03-13 15:44</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1,408</span>
+        <span>字数:1,438</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1523,7 +1531,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年10月"><span class="toc-text">2017年10月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-21-样式调整"><span class="toc-text">10-21 样式调整</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-20-样式调整与添加"><span class="toc-text">10-20 样式调整与添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-07"><span class="toc-text">10-07</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年9月"><span class="toc-text">2017年9月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#09-21"><span class="toc-text">09-21</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年7月"><span class="toc-text">2017年7月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#07-05-添加MathJax数学公式支持"><span class="toc-text">07-05 添加MathJax数学公式支持</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年6月"><span class="toc-text">2017年6月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#06-26-添加gitment评论系统"><span class="toc-text">06-26 添加gitment评论系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年4月"><span class="toc-text">2017年4月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#04-27-调整样式"><span class="toc-text">04-27 调整样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#04-19-调整样式和修复bug"><span class="toc-text">04-19 调整样式和修复bug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#04-17-调整样式及修复bug"><span class="toc-text">04-17 调整样式及修复bug</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年3月"><span class="toc-text">2017年3月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#03-29-增强文章列表上下键功能"><span class="toc-text">03-29 增强文章列表上下键功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-24-修复搜索及添加快捷键"><span class="toc-text">03-24 修复搜索及添加快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-22-添加评论系统"><span class="toc-text">03-22 添加评论系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-21-图片放大动画"><span class="toc-text">03-21 图片放大动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-20-评论添加锚点"><span class="toc-text">03-20 评论添加锚点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-19-修复firfox错位问题"><span class="toc-text">03-19 修复firfox错位问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-18-动画优化及修复bug"><span class="toc-text">03-18 动画优化及修复bug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-17-评论调整优化"><span class="toc-text">03-17 评论调整优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-16-文章meta样式修改"><span class="toc-text">03-16 文章meta样式修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-15-增加样式"><span class="toc-text">03-15 增加样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-14-打赏优化"><span class="toc-text">03-14 打赏优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-13-首页重构"><span class="toc-text">03-13 首页重构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-09-修复多说、添加流量统计"><span class="toc-text">03-09 修复多说、添加流量统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-06-添加打赏功能"><span class="toc-text">03-06 添加打赏功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-04-添加作者和标签的提示"><span class="toc-text">03-04 添加作者和标签的提示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-03-修复多作者模式"><span class="toc-text">03-03 修复多作者模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-02-图片样式改动"><span class="toc-text">03-02 图片样式改动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年2月"><span class="toc-text">2017年2月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#02-28-多作者模式"><span class="toc-text">02-28 多作者模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-27-调整样式"><span class="toc-text">02-27 调整样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-25-修改github仓库名"><span class="toc-text">02-25 修改github仓库名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-24-站点版权、ICON和置顶"><span class="toc-text">02-24 站点版权、ICON和置顶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-20-代码块高亮主题"><span class="toc-text">02-20 代码块高亮主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-19-移动端适配"><span class="toc-text">02-19 移动端适配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-08-评论系统"><span class="toc-text">02-08 评论系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-07-样式及动画新增修改"><span class="toc-text">02-07 样式及动画新增修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-06-功能和样式开发"><span class="toc-text">02-06 功能和样式开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-05-开源3-hexo主题"><span class="toc-text">02-05 开源3-hexo主题</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年12月"><span class="toc-text">2017年12月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#12-24-功能添加"><span class="toc-text">12-24 功能添加</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年10月"><span class="toc-text">2017年10月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-21-样式调整"><span class="toc-text">10-21 样式调整</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-20-样式调整与添加"><span class="toc-text">10-20 样式调整与添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-07"><span class="toc-text">10-07</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年9月"><span class="toc-text">2017年9月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#09-21"><span class="toc-text">09-21</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年7月"><span class="toc-text">2017年7月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#07-05-添加MathJax数学公式支持"><span class="toc-text">07-05 添加MathJax数学公式支持</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年6月"><span class="toc-text">2017年6月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#06-26-添加gitment评论系统"><span class="toc-text">06-26 添加gitment评论系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年4月"><span class="toc-text">2017年4月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#04-27-调整样式"><span class="toc-text">04-27 调整样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#04-19-调整样式和修复bug"><span class="toc-text">04-19 调整样式和修复bug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#04-17-调整样式及修复bug"><span class="toc-text">04-17 调整样式及修复bug</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年3月"><span class="toc-text">2017年3月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#03-29-增强文章列表上下键功能"><span class="toc-text">03-29 增强文章列表上下键功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-24-修复搜索及添加快捷键"><span class="toc-text">03-24 修复搜索及添加快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-22-添加评论系统"><span class="toc-text">03-22 添加评论系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-21-图片放大动画"><span class="toc-text">03-21 图片放大动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-20-评论添加锚点"><span class="toc-text">03-20 评论添加锚点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-19-修复firfox错位问题"><span class="toc-text">03-19 修复firfox错位问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-18-动画优化及修复bug"><span class="toc-text">03-18 动画优化及修复bug</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-17-评论调整优化"><span class="toc-text">03-17 评论调整优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-16-文章meta样式修改"><span class="toc-text">03-16 文章meta样式修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-15-增加样式"><span class="toc-text">03-15 增加样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-14-打赏优化"><span class="toc-text">03-14 打赏优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-13-首页重构"><span class="toc-text">03-13 首页重构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-09-修复多说、添加流量统计"><span class="toc-text">03-09 修复多说、添加流量统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-06-添加打赏功能"><span class="toc-text">03-06 添加打赏功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-04-添加作者和标签的提示"><span class="toc-text">03-04 添加作者和标签的提示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-03-修复多作者模式"><span class="toc-text">03-03 修复多作者模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-02-图片样式改动"><span class="toc-text">03-02 图片样式改动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2017年2月"><span class="toc-text">2017年2月</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#02-28-多作者模式"><span class="toc-text">02-28 多作者模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-27-调整样式"><span class="toc-text">02-27 调整样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-25-修改github仓库名"><span class="toc-text">02-25 修改github仓库名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-24-站点版权、ICON和置顶"><span class="toc-text">02-24 站点版权、ICON和置顶</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-20-代码块高亮主题"><span class="toc-text">02-20 代码块高亮主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-19-移动端适配"><span class="toc-text">02-19 移动端适配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-08-评论系统"><span class="toc-text">02-08 评论系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-07-样式及动画新增修改"><span class="toc-text">02-07 样式及动画新增修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-06-功能和样式开发"><span class="toc-text">02-06 功能和样式开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-05-开源3-hexo主题"><span class="toc-text">02-05 开源3-hexo主题</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1538,7 +1546,10 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="2017年10月"><a href="#2017年10月" class="headerlink" title="2017年10月"></a>2017年10月</h2><h3 id="10-21-样式调整"><a href="#10-21-样式调整" class="headerlink" title="10-21 样式调整"></a>10-21 样式调整</h3><ol>
+        <h2 id="2017年12月"><a href="#2017年12月" class="headerlink" title="2017年12月"></a>2017年12月</h2><h3 id="12-24-功能添加"><a href="#12-24-功能添加" class="headerlink" title="12-24 功能添加"></a>12-24 功能添加</h3><ol>
+<li><code>add</code> : 添加全文检索功能， 输入<code>in:</code>开头即可开始检索</li>
+</ol>
+<h2 id="2017年10月"><a href="#2017年10月" class="headerlink" title="2017年10月"></a>2017年10月</h2><h3 id="10-21-样式调整"><a href="#10-21-样式调整" class="headerlink" title="10-21 样式调整"></a>10-21 样式调整</h3><ol>
 <li><code>enhance</code> : 优化了高亮样式 <code>atom-light</code></li>
 </ol>
 <h3 id="10-20-样式调整与添加"><a href="#10-20-样式调整与添加" class="headerlink" title="10-20 样式调整与添加"></a>10-20 样式调整与添加</h3><ol>
@@ -1701,10 +1712,10 @@
 
 <div class="article_copyright">
     <p><span>文章标题:</span>3-hexo开发日志-持续更新</p>
-    <p><span>文章字数:</span><span class="post-count">1,408</span></p>
+    <p><span>文章字数:</span><span class="post-count">1,438</span></p>
     <p><span>本文作者:</span><a href="javascript:void(0)" title="叶落阁">叶落阁</a></p>
     <p><span>发布时间:</span>2017-03-13, 15:44:57</p>
-    <p><span>最后更新:</span>2017-11-06, 10:20:12</p>
+    <p><span>最后更新:</span>2017-12-24, 21:27:05</p>
     <span>原始链接:</span><a class="post-url" href="/2017/03/13/3-hexo-logs/" title="3-hexo开发日志-持续更新">http://yelog.org/2017/03/13/3-hexo-logs/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -1778,7 +1789,7 @@ gitalk.render('comments')
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#PostgreSQL','#mybatis','#sql','#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#spring','#springmvc','#reading','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#浏览器','#js','#3-hexo','#Git','#mathjax','#git','#GitHub','#mac','#efficiency','#fragment_cache','#pjax','#deepin','#运维','#tale','#IntellijIDEA','#regex','#samba','#centos','#firewall','#vim','#docker','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#linux命令','#maven','#nexus','#encoding',],
+            'data': ['#java','#translation','#encryption','#dubbo','#zookeeper','#javaee','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#jQuery','#freemarker','#node','#hexo','#js','#浏览器','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

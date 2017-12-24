@@ -29,6 +29,9 @@
 <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="/js/jquery.autocomplete.min.js"></script>
+
+    <script src="/js/search.js"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 <script>
     hljs.initHighlightingOnLoad();
@@ -79,13 +82,13 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="数据库"> 数据库 </li>
-    
     <li data-rel="后端"> 后端 </li>
     
-    <li data-rel="读书"> 读书 </li>
+    <li data-rel="数据库"> 数据库 </li>
     
     <li data-rel="大前端"> 大前端 </li>
+    
+    <li data-rel="读书"> 读书 </li>
     
     <li data-rel="工具"> 工具 </li>
     
@@ -122,7 +125,7 @@
 </div>
         <div class="title-list">
     <form onkeydown="if(event.keyCode==13){return false;}">
-        <input class="search" type="text" placeholder="Search..." autocomplete="off">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
         <i class="cross"></i>
         <span>
         <label for="tagswitch">Tags:</label>
@@ -132,27 +135,11 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">PostgreSQL</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">sql</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">java</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color2">translation</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">javaee</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -168,6 +155,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">javaee</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">spring</a>
     </li>
     
@@ -176,7 +167,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">reading</a>
+        <a href="javascript:" class="color3">mybatis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">PostgreSQL</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sql</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -192,11 +191,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">freemarker</a>
+        <a href="javascript:" class="color2">jQuery</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">jQuery</a>
+        <a href="javascript:" class="color1">freemarker</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -208,11 +207,15 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">浏览器</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">js</a>
+        <a href="javascript:" class="color3">reading</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -220,11 +223,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">Git</a>
+        <a href="javascript:" class="color3">mathjax</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mathjax</a>
+        <a href="javascript:" class="color4">Git</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -236,15 +239,15 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">fragment_cache</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">mac</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color1">efficiency</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">fragment_cache</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -260,11 +263,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">tale</a>
+        <a href="javascript:" class="color3">IntellijIDEA</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">IntellijIDEA</a>
+        <a href="javascript:" class="color5">tale</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -276,19 +279,19 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">centos</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">firewall</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">vim</a>
+        <a href="javascript:" class="color2">centos</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">vim</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -316,15 +319,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">linux命令</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">maven</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color1">nexus</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">linux命令</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -334,7 +337,12 @@
     <div class="clearfix"></div>
 </div>
 
-    <nav>
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
         
         <a id="top" class="工具 "
            href="/2017/03/13/3-hexo-logs/"
@@ -418,7 +426,7 @@
         
         <a  class="大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="浏览器,js"
+           data-tag="js,浏览器"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1484,7 +1492,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2017-11-06 10:20:12'>2017-05-22 19:11</time>
+        创建时间:<time class="date" title='更新时间: 2017-12-24 00:31:55'>2017-05-22 19:11</time>
         
     </div>
     <div class="article-meta">
@@ -1720,7 +1728,7 @@ RUN [ &quot;npm&quot;, &quot;install&quot; ]
 COPY . /app/
 CMD [ &quot;npm&quot;, &quot;start&quot; ]
 </code></pre><p>把这个 Dockerfile 放到 Node.js 项目的根目录，构建好镜像后，就可以直接拿来启动容器运行。但是如果我们还有第二个 Node.js 项目也差不多呢？好吧，那就再把这个 Dockerfile 复制到第二个项目里。那如果有第三个项目呢？再复制么？文件的副本越多，版本控制就越困难，让我们继续看这样的场景维护的问题。</p>
-<p>如果第一个 Node.js 项目在开发过程中，发现这个 Dockerfile 里存在问题，比如敲错字了、或者需要安装额外的包，然后开发人员修复了这个 Dockerfile，再次构建，问题解决。第一个项目没问题了，但是第二个项目呢？虽然最初 Dockerfile 是复制、粘贴自第一个项目的，但是并不会因为第一个项目修复了他们的 Dockerfile，而第二个项目的 Dockerfile 就会被自动修复。</p>
+<p>如果第一个 Node.js 项目在开发过程中，发现这个 Dockerfile 里存在问题，比如敲错字了、或者需要安装额外的包，然后开发人员修复了这个 Dockerfile，再次构建，问题解决。第一个项目没问题了，但是第二个项目呢？虽然最初 Dockerfile 是复制、粘贴自第一个项目的，但是并不会因为第一个项目修复了他们的 Dockerfile，而第二个项目的 Dockerfile 就会被自动修复。</p>
 <p>那么我们可不可以做一个基础镜像，然后各个项目使用这个基础镜像呢？这样基础镜像更新，各个项目不用同步 Dockerfile 的变化，重新构建后就继承了基础镜像的更新？好吧，可以，让我们看看这样的结果。那么上面的这个 Dockerfile 就会变为：</p>
 <pre><code>FROM node:slim
 RUN &quot;mkdir /app&quot;
@@ -1762,7 +1770,7 @@ CMD [ &quot;npm&quot;, &quot;start&quot; ]
     <p><span>文章字数:</span><span class="post-count">5,818</span></p>
     <p><span>本文作者:</span><a href="javascript:void(0)" title="叶落阁">叶落阁</a></p>
     <p><span>发布时间:</span>2017-05-22, 19:11:42</p>
-    <p><span>最后更新:</span>2017-11-06, 10:20:12</p>
+    <p><span>最后更新:</span>2017-12-24, 00:31:55</p>
     <span>原始链接:</span><a class="post-url" href="/2017/05/22/Dockerfile/" title="Dockerfile指令详解">http://yelog.org/2017/05/22/Dockerfile/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -1836,7 +1844,7 @@ gitalk.render('comments')
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#PostgreSQL','#mybatis','#sql','#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#spring','#springmvc','#reading','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#浏览器','#js','#3-hexo','#Git','#mathjax','#git','#GitHub','#mac','#efficiency','#fragment_cache','#pjax','#deepin','#运维','#tale','#IntellijIDEA','#regex','#samba','#centos','#firewall','#vim','#docker','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#linux命令','#maven','#nexus','#encoding',],
+            'data': ['#java','#translation','#encryption','#dubbo','#zookeeper','#javaee','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#jQuery','#freemarker','#node','#hexo','#js','#浏览器','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
