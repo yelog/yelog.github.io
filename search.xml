@@ -486,7 +486,7 @@ a8 1010 1000
 <h2 id="二-安装zkui（非必须）"><a href="#二-安装zkui（非必须）" class="headerlink" title="二.安装zkui（非必须）"></a>二.安装zkui（非必须）</h2><p>这个项目为 zookeeper 提供一个 web 的管理界面。当然我们也可以直接在zookeeper中使用命令查看，所以此步骤可以忽略</p>
 <p>在开始前需要安装 Java 环境、Maven 环境。</p>
 <ol>
-<li>到 <a href="https://github.com/DeemOpen/zkui" target="_blank" rel="external">zkui</a> 的项目中下载代码。<pre><code class="bash">git clone https://github.com/DeemOpen/zkui.git
+<li>到 <a href="https://github.com/DeemOpen/zkui" target="_blank" rel="noopener">zkui</a> 的项目中下载代码。<pre><code class="bash">git clone https://github.com/DeemOpen/zkui.git
 </code></pre>
 </li>
 <li>执行 <code>mvn clean install</code> 生成jar文件。</li>
@@ -609,7 +609,7 @@ public class IndexController {
 </li>
 </ol>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>至此，单机运行的 rpc 服务已搭建完成。</p>
-<p>代码传送文 <a href="https://github.com/yelog/ssm" target="_blank" rel="external">ssm</a></p>
+<p>代码传送文 <a href="https://github.com/yelog/ssm" target="_blank" rel="noopener">ssm</a></p>
 ]]></content>
       
         <categories>
@@ -708,11 +708,11 @@ public class IndexController {
     <entry>
       <title><![CDATA[[转]浏览器前进/后退缓存（BF Cache）]]></title>
       <url>/2017/09/21/bf-cache/</url>
-      <content type="html"><![CDATA[<p><hr><br><a href="https://developer.mozilla.org/en-US/docs/Working_with_BFCache" target="_blank" rel="external">浏览器前进/后退缓存</a>（Backward/Forward Cache，BF Cache）是指浏览器在前进后退过程中， 会应用更强的缓存策略，表现为 DOM、window、甚至 JavaScript 对象被缓存，以及同步 XHR 也被缓存。 这一现象在移动端浏览器尤为常见，除 Chrome for Android、Android Browser 之外的浏览器基本都会触发。</p>
+      <content type="html"><![CDATA[<p><hr><br><a href="https://developer.mozilla.org/en-US/docs/Working_with_BFCache" target="_blank" rel="noopener">浏览器前进/后退缓存</a>（Backward/Forward Cache，BF Cache）是指浏览器在前进后退过程中， 会应用更强的缓存策略，表现为 DOM、window、甚至 JavaScript 对象被缓存，以及同步 XHR 也被缓存。 这一现象在移动端浏览器尤为常见，除 Chrome for Android、Android Browser 之外的浏览器基本都会触发。</p>
 <p>BF Cache 本来是一项浏览器优化，但在某些情况下（比如前端路由的 Web App）会引起困惑。 本文主要讨论 BF Cache 的行为、如何检测 BF Cache 缓存、以及如何 workaround。</p>
 <h3 id="缓存行为"><a href="#缓存行为" class="headerlink" title="缓存行为"></a>缓存行为</h3><p>BF Cache 是一种浏览器优化，HTML 标准并未指定其如何进行缓存，因此缓存行为是与浏览器实现相关的。</p>
 <blockquote>
-<p>User agents may discard the Document objects of entries other than the current entry that are not referenced from any script, reloading the pages afresh when the user or script navigates back to such pages. This specification does not specify when user agents should discard Document objects and when they should cache them. – <a href="https://html.spec.whatwg.org/multipage/browsers.html#history" target="_blank" rel="external">Session history and navigation</a>, WHATWG</p>
+<p>User agents may discard the Document objects of entries other than the current entry that are not referenced from any script, reloading the pages afresh when the user or script navigates back to such pages. This specification does not specify when user agents should discard Document objects and when they should cache them. – <a href="https://html.spec.whatwg.org/multipage/browsers.html#history" target="_blank" rel="noopener">Session history and navigation</a>, WHATWG</p>
 </blockquote>
 <ul>
 <li>Desktop Chrome：阻塞的资源和同步发出的 XHR 都会被缓存，但不缓存渲染结果。因此可以看到明显的载入过程，此时脚本也会重新执行。</li>
@@ -774,9 +774,9 @@ function sendXHR () {
         
         <tags>
             
-            <tag> js </tag>
-            
             <tag> 浏览器 </tag>
+            
+            <tag> js </tag>
             
         </tags>
         
@@ -1096,7 +1096,7 @@ $ sudo docker images
 <h2 id="作者环境"><a href="#作者环境" class="headerlink" title="作者环境"></a>作者环境</h2><p>  本次搭建私服是在局域网的一台服务器上，操作系统为 CentOS 。<br>  需要部署到私服的项目 <code>soul</code><br>  <code>ssm</code> 项目需要引用 <code>soul</code></p>
 <h2 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h2><p>  确保服务器已经安装了 java 环境，这个过程不是本文重点，安装过程自行百度。</p>
 <h2 id="安装Nexus"><a href="#安装Nexus" class="headerlink" title="安装Nexus"></a>安装Nexus</h2><blockquote>
-<p>官网 pro 版本的是需要付费的。所以我们使用免费的 OSS 版本，下载地址 (<a href="https://www.sonatype.com/download-oss-sonatype" target="_blank" rel="external">https://www.sonatype.com/download-oss-sonatype</a>)</p>
+<p>官网 pro 版本的是需要付费的。所以我们使用免费的 OSS 版本，下载地址 (<a href="https://www.sonatype.com/download-oss-sonatype" target="_blank" rel="noopener">https://www.sonatype.com/download-oss-sonatype</a>)</p>
 </blockquote>
 <pre><code class="bash"># 上传到服务器并解压
 $ tar xvf nexus-3.5.1-02-unix.tar.gz
@@ -1105,7 +1105,7 @@ $ tar xvf nexus-3.5.1-02-unix.tar.gz
 $ cd /nexus-3.5.1-02/bin/
 $ ./nexus start
 </code></pre>
-<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>打开网址：(<a href="http://192.168.0.86:8081/" target="_blank" rel="external">http://192.168.0.86:8081/</a>) , ip 为搭建私服的服务器 ip 。<br>用户名/密码： admin/admin123<br>出现一下画面，就说明安装成功了。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FkIlJRDdMC2yJFT9huIk9gBuCe15.png" alt="nexus"></p>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>打开网址：(<a href="http://192.168.0.86:8081/" target="_blank" rel="noopener">http://192.168.0.86:8081/</a>) , ip 为搭建私服的服务器 ip 。<br>用户名/密码： admin/admin123<br>出现一下画面，就说明安装成功了。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FkIlJRDdMC2yJFT9huIk9gBuCe15.png" alt="nexus"></p>
 <h2 id="发布soul项目到私服"><a href="#发布soul项目到私服" class="headerlink" title="发布soul项目到私服"></a>发布soul项目到私服</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><ol>
 <li>创建yelog-release仓库（<em>名字自定义</em>）, type选择 ： release<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fk5UboZXVf4aegz63N4TDrITMh4V.png" alt="①.创建宿主仓库"><br><img src="http://oncj6b2vl.bkt.clouddn.com/FjAz8w445FFeVqDDzLLTLitOkZyV.png" alt="②.选择hosted类型"><br><img src="http://oncj6b2vl.bkt.clouddn.com/Ft2u5UPqdAFxldkkwAC2uVBtjDhF.png" alt="③.创建release类型仓库"></li>
 <li>创建yelog-snapshot仓库（<em>名字自定义</em>）， type选择 ： snapshot<br>重复上面 ① 和 ② 步，根据下图选择类型:<br><img src="http://oncj6b2vl.bkt.clouddn.com/FgX10ufvTV_YUK2vjrdRN3InKN1i.png" alt="创建snapshot类型仓库"></li>
@@ -1289,7 +1289,7 @@ $ ./nexus start
     <entry>
       <title><![CDATA[MathJax适配Pjax]]></title>
       <url>/2017/07/05/MathJax-pjax/</url>
-      <content type="html"><![CDATA[<p>hexo 添加 MathJax 的过程网上很多，这里就不细讲，这里贴一张写的不错的文章 <a href="http://masikkk.com/article/hexo-13-MathJax/" target="_blank" rel="external">Hexo博客(13)添加MathJax数学公式渲染</a></p>
+      <content type="html"><![CDATA[<p>hexo 添加 MathJax 的过程网上很多，这里就不细讲，这里贴一张写的不错的文章 <a href="http://masikkk.com/article/hexo-13-MathJax/" target="_blank" rel="noopener">Hexo博客(13)添加MathJax数学公式渲染</a></p>
 <p>由于 <code>3-hexo</code> 这个主题使用了 <code>pjax</code> ，刷新和第一次加载没有问题，但是点到其他文章，再点回来，渲染就无效了。</p>
 <p>这个问题和之前适配多说和高亮时，是同样的问题，只需要在下面配置即可。</p>
 <pre><code class="js">$(document).on({
@@ -1351,7 +1351,7 @@ mathjax:
 <p>这样，就可以在页面内写MathJax公式了。</p>
 <h2 id="MathJax公式书写"><a href="#MathJax公式书写" class="headerlink" title="MathJax公式书写"></a>MathJax公式书写</h2><p>公式书写依然按照MarkDown语法来，基本上也和LaTeX相同，单 <code>$</code> 符引住的是行内公式，双$符引住的是行间公式。</p>
 <ul>
-<li>MathJax公式书写参考<br><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax basic tutorial and quick reference</a></li>
+<li>MathJax公式书写参考<br><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a></li>
 </ul>
 <h3 id="1-MathJax行内公式"><a href="#1-MathJax行内公式" class="headerlink" title="1.MathJax行内公式"></a>1.MathJax行内公式</h3><p>含有下划线 <code>_</code> 的公式 <code>$x_mu$</code> ： $x_mu$</p>
 <p>希腊字符 <code>$\sigma$</code> ： $\sigma$</p>
@@ -1425,7 +1425,7 @@ $$
 <p>行内小矩阵：<br><code>$\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)$</code><br>$\bigl( \begin{smallmatrix} a &amp; b \ c &amp; d \end{smallmatrix} \bigr)$</p>
 <p>这里有个问题，上面的写法在矩阵内没有换行，我看了下源码，双反斜杠\又被MarkDown渲染引擎转义为单个反斜杠了，解决方法是写三个反斜杠\\或在双反斜杠后换行即可：</p>
 <p><code>$\bigl( \begin{smallmatrix} a &amp; b \\\ c &amp; d \end{smallmatrix} \bigr)$</code><br>$\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)$</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://masikkk.com/article/hexo-13-MathJax/" target="_blank" rel="external">Hexo博客(13)添加MathJax数学公式渲染</a><br><a href="http://www.jianshu.com/p/7ab21c7f0674" target="_blank" rel="external">在Hexo中渲染MathJax数学公式</a><br><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">MathJax basic tutorial and quick reference</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://masikkk.com/article/hexo-13-MathJax/" target="_blank" rel="noopener">Hexo博客(13)添加MathJax数学公式渲染</a><br><a href="http://www.jianshu.com/p/7ab21c7f0674" target="_blank" rel="noopener">在Hexo中渲染MathJax数学公式</a><br><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a></p>
 ]]></content>
       
         <categories>
@@ -1550,8 +1550,8 @@ $ chown nobody:nobody
 </li>
 </ul>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><a href="http://www.cnblogs.com/lion382/p/4078931.html" target="_blank" rel="external">CentOS7 安装Samba服务</a></li>
-<li><a href="http://blog.leanote.com/post/dapingxia@163.com/CentOS7-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E5%8C%BF%E5%90%8D%E8%AE%BF%E9%97%AESamba" target="_blank" rel="external">CentOS7 安装配置匿名访问Samba</a></li>
+<li><a href="http://www.cnblogs.com/lion382/p/4078931.html" target="_blank" rel="noopener">CentOS7 安装Samba服务</a></li>
+<li><a href="http://blog.leanote.com/post/dapingxia@163.com/CentOS7-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E5%8C%BF%E5%90%8D%E8%AE%BF%E9%97%AESamba" target="_blank" rel="noopener">CentOS7 安装配置匿名访问Samba</a></li>
 </ul>
 ]]></content>
       
@@ -1573,9 +1573,9 @@ $ chown nobody:nobody
     <entry>
       <title><![CDATA[完美替代多说-gitment]]></title>
       <url>/2017/06/26/gitment/</url>
-      <content type="html"><![CDATA[<p>自从多说要停止服务时，就开始关注第三方评论系统，现在的评论系统都有这样或那样的问题，见 <a href="/2017/03/23/the-third-comment/" title="关于第三方评论系统">关于第三方评论系统</a> 。忽然看到作者 孙士权 的一片文章 <a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="external">Gitment：使用 GitHub Issues 搭建评论系统</a> 。</p>
+      <content type="html"><![CDATA[<p>自从多说要停止服务时，就开始关注第三方评论系统，现在的评论系统都有这样或那样的问题，见 <a href="/2017/03/23/the-third-comment/" title="关于第三方评论系统">关于第三方评论系统</a> 。忽然看到作者 孙士权 的一片文章 <a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="noopener">Gitment：使用 GitHub Issues 搭建评论系统</a> 。</p>
 <p>立即就将 <code>gitment</code> 集成到 <code>3-hexo</code> 主题内。本篇文章只讲在 <code>3-hexo</code> 内如何使用，如果想自定义，可以参考上面原文。</p>
-<h2 id="注册-OAuth-Application"><a href="#注册-OAuth-Application" class="headerlink" title="注册 OAuth Application"></a>注册 OAuth Application</h2><p><a href="https://github.com/settings/applications/new" target="_blank" rel="external">点击此处</a> 来注册一个新的 OAuth Application。其他内容可以随意填写，但要确保填入正确的 callback URL（一般是评论页面对应的域名，如 <a href="http://yelog.org）。" target="_blank" rel="external">http://yelog.org）。</a><br><img src="http://oncj6b2vl.bkt.clouddn.com/FsumVHpCC4h5JxRNg0TiKlMf0b1Y.png" alt="作者是这样填的"></p>
+<h2 id="注册-OAuth-Application"><a href="#注册-OAuth-Application" class="headerlink" title="注册 OAuth Application"></a>注册 OAuth Application</h2><p><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击此处</a> 来注册一个新的 OAuth Application。其他内容可以随意填写，但要确保填入正确的 callback URL（一般是评论页面对应的域名，如 <a href="http://yelog.org）。" target="_blank" rel="noopener">http://yelog.org）。</a><br><img src="http://oncj6b2vl.bkt.clouddn.com/FsumVHpCC4h5JxRNg0TiKlMf0b1Y.png" alt="作者是这样填的"></p>
 <h2 id="使用-gitment-评论系统"><a href="#使用-gitment-评论系统" class="headerlink" title="使用 gitment 评论系统"></a>使用 gitment 评论系统</h2><p>修改主题 <code>_config.yml</code></p>
 <pre><code class="xml">gitment:
   on: true  # 启用gitment评论系统
@@ -1712,9 +1712,9 @@ complete -W &quot;$(docker ps --format &quot;{{.Names}}&quot;)&quot; ctn
     <entry>
       <title><![CDATA[tale博客搭建及体验]]></title>
       <url>/2017/05/24/tale-build-experience/</url>
-      <content type="html"><![CDATA[<p>不久之前在逛blog时，发现了这款tale，今天抽空搭建了一下，将搭建过程写于此。<br>demo website：<a href="https://tale.biezhi.me" target="_blank" rel="external">https://tale.biezhi.me</a></p>
-<h2 id="搭建思路"><a href="#搭建思路" class="headerlink" title="搭建思路"></a>搭建思路</h2><p>看了tale作者的(github)[<a href="https://github.com/otale" target="_blank" rel="external">https://github.com/otale</a>] 发现有建好docker，所以果断使用docker搭建tale的环境</p>
-<h3 id="构建docker镜像"><a href="#构建docker镜像" class="headerlink" title="构建docker镜像"></a>构建docker镜像</h3><p>下载<a href="https://github.com/otale/tale-docker" target="_blank" rel="external">tale-docker</a>到本地。</p>
+      <content type="html"><![CDATA[<p>不久之前在逛blog时，发现了这款tale，今天抽空搭建了一下，将搭建过程写于此。<br>demo website：<a href="https://tale.biezhi.me" target="_blank" rel="noopener">https://tale.biezhi.me</a></p>
+<h2 id="搭建思路"><a href="#搭建思路" class="headerlink" title="搭建思路"></a>搭建思路</h2><p>看了tale作者的(github)[<a href="https://github.com/otale" target="_blank" rel="noopener">https://github.com/otale</a>] 发现有建好docker，所以果断使用docker搭建tale的环境</p>
+<h3 id="构建docker镜像"><a href="#构建docker镜像" class="headerlink" title="构建docker镜像"></a>构建docker镜像</h3><p>下载<a href="https://github.com/otale/tale-docker" target="_blank" rel="noopener">tale-docker</a>到本地。</p>
 <pre><code class="bash"># 下载官方Dockerfile
 $ git clone https://github.com/otale/tale-docker.git
 # 构建 tale 镜像
@@ -1789,7 +1789,7 @@ $ mv tale /home
 <blockquote>
 <p>注意：也可以在 Dockerfile 中使用 VOLUME 来添加一个或者多个新的卷到由该镜像创建的任意容器。</p>
 </blockquote>
-<h3 id="删除数据卷"><a href="#删除数据卷" class="headerlink" title="删除数据卷"></a>删除数据卷</h3><p>数据卷是被设计用来持久化数据的，它的生命周期独立于容器，Docker不会在容器被删除后自动删除数据卷，并且也不存在垃圾回收这样的机制来处理没有任何容器引用的数据卷。如果需要在删除容器的同时移除数据卷。可以在删除容器的时候使用 docker rm -v 这个命令。无主的数据卷可能会占据很多空间，要清理会很麻烦。Docker官方正在试图解决这个问题，相关工作的进度可以查看这个<a href="https://github.com/docker/docker/pull/8484" target="_blank" rel="external">PR</a>。</p>
+<h3 id="删除数据卷"><a href="#删除数据卷" class="headerlink" title="删除数据卷"></a>删除数据卷</h3><p>数据卷是被设计用来持久化数据的，它的生命周期独立于容器，Docker不会在容器被删除后自动删除数据卷，并且也不存在垃圾回收这样的机制来处理没有任何容器引用的数据卷。如果需要在删除容器的同时移除数据卷。可以在删除容器的时候使用 docker rm -v 这个命令。无主的数据卷可能会占据很多空间，要清理会很麻烦。Docker官方正在试图解决这个问题，相关工作的进度可以查看这个<a href="https://github.com/docker/docker/pull/8484" target="_blank" rel="noopener">PR</a>。</p>
 <h3 id="挂载一个主机目录作为数据卷"><a href="#挂载一个主机目录作为数据卷" class="headerlink" title="挂载一个主机目录作为数据卷"></a>挂载一个主机目录作为数据卷</h3><p>使用 -v 标记也可以指定挂载一个本地主机的目录到容器中去。</p>
 <pre><code class="bash">$ sudo docker run -d -P --name web -v /src/webapp:/opt/webapp training/webapp python app.py
 </code></pre>
@@ -1953,7 +1953,7 @@ $ docker stats $(docker ps --format={{.Names}})
     <entry>
       <title><![CDATA[docker仓库]]></title>
       <url>/2017/05/23/docker-registry/</url>
-      <content type="html"><![CDATA[<h2 id="Docker-Hub"><a href="#Docker-Hub" class="headerlink" title="Docker Hub"></a>Docker Hub</h2><p>目前 Docker 官方维护了一个公共仓库 <a href="https://hub.docker.com/" target="_blank" rel="external">Docker Hub</a>，其中已经包括了超过 15,000 的镜像。大部分需求，都可以通过在 Docker Hub 中直接下载镜像来实现。</p>
+      <content type="html"><![CDATA[<h2 id="Docker-Hub"><a href="#Docker-Hub" class="headerlink" title="Docker Hub"></a>Docker Hub</h2><p>目前 Docker 官方维护了一个公共仓库 <a href="https://hub.docker.com/" target="_blank" rel="noopener">Docker Hub</a>，其中已经包括了超过 15,000 的镜像。大部分需求，都可以通过在 Docker Hub 中直接下载镜像来实现。</p>
 <h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><p>可以通过执行 docker login 命令来输入用户名、密码和邮箱来完成注册和登录。 注册成功后，本地用户目录的 .dockercfg 中将保存用户的认证信息。</p>
 <h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><p>用户无需登录即可通过 docker search 命令来查找官方仓库中的镜像，并利用 docker pull 命令来将它下载到本地。</p>
 <p>例如以 centos 为关键词进行搜索：</p>
@@ -2070,7 +2070,7 @@ $ sudo docker images
 REPOSITORY                         TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 192.168.7.26:5000/test             latest              ba5877dc9bec        6 weeks ago         192.7 MB
 </code></pre>
-<p>可以使用 <a href="https://github.com/yeasy/docker_practice/raw/master/_local/push_images.sh" target="_blank" rel="external">这个脚本</a> 批量上传本地的镜像到注册服务器中，默认是本地注册服务器 127.0.0.1:5000。例如：</p>
+<p>可以使用 <a href="https://github.com/yeasy/docker_practice/raw/master/_local/push_images.sh" target="_blank" rel="noopener">这个脚本</a> 批量上传本地的镜像到注册服务器中，默认是本地注册服务器 127.0.0.1:5000。例如：</p>
 <pre><code class="bash">$ wget https://github.com/yeasy/docker_practice/raw/master/_local/push_images.sh; sudo chmod a+x push_images.sh
 $ ./push_images.sh ubuntu:latest centos:centos7
 The registry server is 127.0.0.1
@@ -2417,7 +2417,7 @@ RUN echo &quot;hello&quot; &gt; world.txt
 <pre><code>RUN groupadd -r redis &amp;&amp; useradd -r -g redis redis
 USER redis
 RUN [ &quot;redis-server&quot; ]
-</code></pre><p>如果以 root 执行的脚本，在执行期间希望改变身份，比如希望以某个已经建立好的用户来运行某个服务进程，不要使用 su 或者 sudo，这些都需要比较麻烦的配置，而且在 TTY 缺失的环境下经常出错。建议使用 gosu，可以从其项目网站看到进一步的信息：<a href="https://github.com/tianon/gosu" target="_blank" rel="external">https://github.com/tianon/gosu</a></p>
+</code></pre><p>如果以 root 执行的脚本，在执行期间希望改变身份，比如希望以某个已经建立好的用户来运行某个服务进程，不要使用 su 或者 sudo，这些都需要比较麻烦的配置，而且在 TTY 缺失的环境下经常出错。建议使用 gosu，可以从其项目网站看到进一步的信息：<a href="https://github.com/tianon/gosu" target="_blank" rel="noopener">https://github.com/tianon/gosu</a></p>
 <pre><code># 建立 redis 用户，并使用 gosu 换另一个用户执行命令
 RUN groupadd -r redis &amp;&amp; useradd -r -g redis redis
 # 下载 gosu
@@ -2440,7 +2440,7 @@ CMD [ &quot;exec&quot;, &quot;gosu&quot;, &quot;redis&quot;, &quot;redis-server&
 RUN apt-get update &amp;&amp; apt-get install -y curl &amp;&amp; rm -rf /var/lib/apt/lists/*
 HEALTHCHECK --interval=5s --timeout=3s \
   CMD curl -fs http://localhost/ || exit 1
-</code></pre><p>这里我们设置了每 5 秒检查一次（这里为了试验所以间隔非常短，实际应该相对较长），如果健康检查命令超过 3 秒没响应就视为失败，并且使用 curl -fs <a href="http://localhost/" target="_blank" rel="external">http://localhost/</a> || exit 1 作为健康检查命令。</p>
+</code></pre><p>这里我们设置了每 5 秒检查一次（这里为了试验所以间隔非常短，实际应该相对较长），如果健康检查命令超过 3 秒没响应就视为失败，并且使用 curl -fs <a href="http://localhost/" target="_blank" rel="noopener">http://localhost/</a> || exit 1 作为健康检查命令。</p>
 <p>使用 docker build 来构建这个镜像：</p>
 <pre><code class="bash">$ docker build -t myweb:v1 .
 </code></pre>
@@ -2509,7 +2509,7 @@ CMD [ &quot;npm&quot;, &quot;start&quot; ]
 </code></pre><p>这次我们回到原始的 Dockerfile，但是这次将项目相关的指令加上 ONBUILD，这样在构建基础镜像的时候，这三行并不会被执行。然后各个项目的 Dockerfile 就变成了简单地：</p>
 <pre><code>FROM my-node
 </code></pre><p>是的，只有这么一行。当在各个项目目录中，用这个只有一行的 Dockerfile 构建镜像时，之前基础镜像的那三行 ONBUILD 就会开始执行，成功的将当前项目的代码复制进镜像、并且针对本项目执行 npm install，生成应用镜像。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>Docker–从入门到实践: <a href="https://yeasy.gitbooks.io/docker_practice/content/" target="_blank" rel="external">https://yeasy.gitbooks.io/docker_practice/content/</a><br>Dockerfie 官方文档：<a href="https://docs.docker.com/engine/reference/builder/" target="_blank" rel="external">https://docs.docker.com/engine/reference/builder/</a><br>Dockerfile 最佳实践文档：<a href="https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/" target="_blank" rel="external">https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/</a></p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>Docker–从入门到实践: <a href="https://yeasy.gitbooks.io/docker_practice/content/" target="_blank" rel="noopener">https://yeasy.gitbooks.io/docker_practice/content/</a><br>Dockerfie 官方文档：<a href="https://docs.docker.com/engine/reference/builder/" target="_blank" rel="noopener">https://docs.docker.com/engine/reference/builder/</a><br>Dockerfile 最佳实践文档：<a href="https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/" target="_blank" rel="noopener">https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/</a></p>
 ]]></content>
       
         <categories>
@@ -2615,7 +2615,7 @@ $ curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/
 # DaoCloud 的安装脚本
 $ curl -sSL https://get.daocloud.io/docker | sh
 </code></pre>
-<h2 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h2><p><a href="https://hub.docker.com/explore/" target="_blank" rel="external">Docker Hub</a> 上有大量的高质量的镜像可以用，这里我们就说一下怎么获取这些镜像并运行。<br>从 Docker Registry 获取镜像的命令是 docker pull。其命令格式为：</p>
+<h2 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h2><p><a href="https://hub.docker.com/explore/" target="_blank" rel="noopener">Docker Hub</a> 上有大量的高质量的镜像可以用，这里我们就说一下怎么获取这些镜像并运行。<br>从 Docker Registry 获取镜像的命令是 docker pull。其命令格式为：</p>
 <pre><code class="bash">$ docker pull [选项] [Docker Registry地址]&lt;仓库名&gt;:&lt;标签&gt;
 </code></pre>
 <p>具体的选项可以通过 <code>docker pull --help</code> 命令看到，这里我们说一下镜像名称的格式。</p>
@@ -2957,7 +2957,7 @@ rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
 <p>哈希主要用来校验身份，错误检查，完整性检查。</p>
 <h3 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h3><p>MD5（Message-Digest5 Algorithm）即消息摘要算法，是最著名、应用最为广泛的一种哈希算法，于1992年被公开。MD5之前还有MD4、MD3、MD2等哥哥算法，MD5是最终的改进版。</p>
 <p>MD5输入不定长度信息，输出固定长度为128-bits的散列</p>
-<h2 id="未完-待补充"><a href="#未完-待补充" class="headerlink" title="未完 待补充"></a>未完 待补充</h2><h2 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE"></a>REFERENCE</h2><p><a href="http://woostundy.github.io/2016/07/16/%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/" target="_blank" rel="external">常见加密算法简介</a></p>
+<h2 id="未完-待补充"><a href="#未完-待补充" class="headerlink" title="未完 待补充"></a>未完 待补充</h2><h2 id="REFERENCE"><a href="#REFERENCE" class="headerlink" title="REFERENCE"></a>REFERENCE</h2><p><a href="http://woostundy.github.io/2016/07/16/%E5%B8%B8%E8%A7%81%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E7%AE%80%E4%BB%8B/" target="_blank" rel="noopener">常见加密算法简介</a></p>
 ]]></content>
       
         <categories>
@@ -3401,7 +3401,7 @@ rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
 </code></pre>
 <p>view.render就是进行视图的渲染，然后跳转页面等处理。</p>
 <p>到这里大概的流程就走完了。其中涉及到的东西还有很多，暂先不做详细处理。</p>
-<p>原文：<a href="http://cxis.me/2017/04/06/SpringMVC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%E5%8F%8A%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" target="_blank" rel="external">SpringMVC执行流程及源码解析</a></p>
+<p>原文：<a href="http://cxis.me/2017/04/06/SpringMVC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%E5%8F%8A%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" target="_blank" rel="noopener">SpringMVC执行流程及源码解析</a></p>
 ]]></content>
       
         <categories>
@@ -3530,10 +3530,10 @@ ___________________________
       <title><![CDATA[deepin系统使用记录]]></title>
       <url>/2017/03/30/deepin-linux/</url>
       <content type="html"><![CDATA[<h2 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a>传送门</h2><ul>
-<li><a href="https://www.deepin.org/" target="_blank" rel="external">官网</a></li>
-<li><a href="https://bbs.deepin.org/" target="_blank" rel="external">论坛</a></li>
-<li><a href="https://wiki.deepin.org/" target="_blank" rel="external">deepin’wiki</a></li>
-<li><a href="https://wiki.deepin.org/index.php?title=Deepin%E5%BA%94%E7%94%A8%E7%AE%A1%E7%90%86" target="_blank" rel="external">Deepin应用列表</a></li>
+<li><a href="https://www.deepin.org/" target="_blank" rel="noopener">官网</a></li>
+<li><a href="https://bbs.deepin.org/" target="_blank" rel="noopener">论坛</a></li>
+<li><a href="https://wiki.deepin.org/" target="_blank" rel="noopener">deepin’wiki</a></li>
+<li><a href="https://wiki.deepin.org/index.php?title=Deepin%E5%BA%94%E7%94%A8%E7%AE%A1%E7%90%86" target="_blank" rel="noopener">Deepin应用列表</a></li>
 </ul>
 <h2 id="输入法"><a href="#输入法" class="headerlink" title="输入法"></a>输入法</h2><p>安装输入法，除了商店下载（好多输入法没有被收录进deepin商店），可以使用fcitx安装。<br>如安装google拼音输入法：</p>
 <pre><code class="bash">$ sudo aptitude install fcitx fcitx-googlepinyin
@@ -3557,7 +3557,7 @@ Categories=TextEditor;Development;Utility;
 MimeType=text/plain;
 </code></pre>
 <blockquote>
-<p>解释：<br><code>Name</code>：创建的图标名称<br><code>Comment</code>：备注，随便填<br><code>Exec</code>：启动文件的位置<br><code>Icon</code>：图标位置<br><code>Type</code>：类型，启动程序就填Application<br><code>StartupNotify</code>: 启动通知，填true就行了。详细可查 <a href="https://developer.gnome.org/integration-guide/stable/startup-notification.html.en" target="_blank" rel="external">Startup notification</a><br><code>Categories</code>： 分类，随便填，比如：Application;<br><code>MimeType</code>： 打开文件类型</p>
+<p>解释：<br><code>Name</code>：创建的图标名称<br><code>Comment</code>：备注，随便填<br><code>Exec</code>：启动文件的位置<br><code>Icon</code>：图标位置<br><code>Type</code>：类型，启动程序就填Application<br><code>StartupNotify</code>: 启动通知，填true就行了。详细可查 <a href="https://developer.gnome.org/integration-guide/stable/startup-notification.html.en" target="_blank" rel="noopener">Startup notification</a><br><code>Categories</code>： 分类，随便填，比如：Application;<br><code>MimeType</code>： 打开文件类型</p>
 </blockquote>
 <h2 id="修改apt源"><a href="#修改apt源" class="headerlink" title="修改apt源"></a>修改apt源</h2><p>修改 <code>/etc/apt/sources.list</code><br>默认的源</p>
 <pre><code class="bash">deb [by-hash=force] http://packages.deepin.com/deepin/ unstable main contrib non-free
@@ -3966,8 +3966,8 @@ alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&#39;  #部署博客
       <content type="html"><![CDATA[<p>之前已经出过几期搭建 <code>hexo</code> 的文章，但是有不少朋友私信说系统是windows的，希望出一期windows环境下的hexo搭建文章。</p>
 <p>为此，确保可用性，笔者在linux（笔者的系统环境）环境下安装了windows虚拟机重新演练了一边，确保没有什么漏洞，才写下了此文。</p>
 <p>本文会非常详细，以确保没有计算机背景的小白也可以轻松上手</p>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>1).下载：从官网下载windows版本的git,地址在下方。<br><a href="https://git-scm.com/download/win" target="_blank" rel="external">https://git-scm.com/download/win</a><br>2).安装：双击安装，一直点击下一步即可</p>
-<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>1).下载：从官网下载windows版本的node.js安装包（.msi后缀），地址下方<br><a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="external">https://nodejs.org/zh-cn/download/</a><br>2).安装：双击安装，一直点击下一步即可</p>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>1).下载：从官网下载windows版本的git,地址在下方。<br><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a><br>2).安装：双击安装，一直点击下一步即可</p>
+<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>1).下载：从官网下载windows版本的node.js安装包（.msi后缀），地址下方<br><a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/</a><br>2).安装：双击安装，一直点击下一步即可</p>
 <h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>在任意目录如桌面，点击鼠标右键，选择Git Bash Here这一项，打开git bash命令框（前提是git安装成功），如下图<br><img src="http://oncj6b2vl.bkt.clouddn.com/FraxkCebAzx-dlPGsUmgcLZRR_Lj.png" alt="鼠标右键"><br>在打开的命令窗内输入下面的命令进行安装</p>
 <pre><code class="bash">npm install hexo-cli -g
 </code></pre>
@@ -3993,8 +3993,8 @@ openssl: 1.0.2k
 $ hexo server
 </code></pre>
 <p>在浏览器输入 <code>127.0.0.1:4000</code>就可以访问到刚刚创建好的blog了。</p>
-<h2 id="换皮肤"><a href="#换皮肤" class="headerlink" title="换皮肤"></a>换皮肤</h2><p>如果觉的自带的皮肤太难看。可以根据以下步奏更换皮肤<br>在<a href="https://hexo.io/themes/" target="_blank" rel="external">官网</a> 可以查看各种各样的皮肤，挑选自己喜欢的皮肤</p>
-<p>这里以 <code>3-hexo</code> 这款皮肤为例（这款皮肤是笔者写的，效果可查看 <a href="http://yelog.org/">yelog.org</a>）<br>1）进入皮肤的 <code>github</code> 官网，如<a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="external">3-hexo</a>的网址<br>找到 <code>clone or download</code> ,复制它的url：<a href="https://github.com/yelog/hexo-theme-3-hexo.git" target="_blank" rel="external">https://github.com/yelog/hexo-theme-3-hexo.git</a></p>
+<h2 id="换皮肤"><a href="#换皮肤" class="headerlink" title="换皮肤"></a>换皮肤</h2><p>如果觉的自带的皮肤太难看。可以根据以下步奏更换皮肤<br>在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">官网</a> 可以查看各种各样的皮肤，挑选自己喜欢的皮肤</p>
+<p>这里以 <code>3-hexo</code> 这款皮肤为例（这款皮肤是笔者写的，效果可查看 <a href="http://yelog.org/">yelog.org</a>）<br>1）进入皮肤的 <code>github</code> 官网，如<a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a>的网址<br>找到 <code>clone or download</code> ,复制它的url：<a href="https://github.com/yelog/hexo-theme-3-hexo.git" target="_blank" rel="noopener">https://github.com/yelog/hexo-theme-3-hexo.git</a></p>
 <p>2）进入 <code>myblog</code> 目录，打开 <code>git bash</code> 命令框，执行以下命令将皮肤下载到themes目录下</p>
 <pre><code class="bash">$ git clone https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo
 </code></pre>
@@ -4405,7 +4405,7 @@ function loadComment() {
   (d.head || d.body).appendChild(s);
 }
 </code></pre>
-<p>当局部加载页面时，就会无法加载多说。<br>需要编写一个js方法，参考文档：(<a href="http://dev.duoshuo.com/docs/50b344447f32d30066000147" target="_blank" rel="external">http://dev.duoshuo.com/docs/50b344447f32d30066000147</a>)</p>
+<p>当局部加载页面时，就会无法加载多说。<br>需要编写一个js方法，参考文档：(<a href="http://dev.duoshuo.com/docs/50b344447f32d30066000147" target="_blank" rel="noopener">http://dev.duoshuo.com/docs/50b344447f32d30066000147</a>)</p>
 <pre><code class="JavaScript">/**
  * pjax后需要回调函数.加载多说
  */
@@ -4570,7 +4570,7 @@ footer { display: none; }
 <li><strong>Layout</strong> - 基于HTML的元视窗标签，生成布局</li>
 <li><strong>Paint</strong> - 绘制网页<br>基于这些信息，我们可以知道如何优化关键渲染路径。</li>
 </ol>
-<p>原文： <a href="https://bitsofco.de/understanding-the-critical-rendering-path/" target="_blank" rel="external">Understanding the Critical Rendering Path</a></p>
+<p>原文： <a href="https://bitsofco.de/understanding-the-critical-rendering-path/" target="_blank" rel="noopener">Understanding the Critical Rendering Path</a></p>
 ]]></content>
       
         <categories>
@@ -4597,7 +4597,7 @@ footer { display: none; }
 </blockquote>
 <p>有对搭建个人blog有兴趣的朋友，可以翻看我往期文章。</p>
 <p>笔者从去年开始通过hexo写blog，使用了yilia主题，但是随着文章数量的上升，检索等操作就显得特别笨重。</p>
-<p>在遍寻无果的情况下，就写下了<a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="external">3-hexo</a>主题。Demo:<a href="http://yelog.org">http://yelog.org</a></p>
+<p>在遍寻无果的情况下，就写下了<a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a>主题。Demo:<a href="http://yelog.org">http://yelog.org</a></p>
 <p>多图预警 ↓↓↓</p>
 <h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><h3 id="整体设计"><a href="#整体设计" class="headerlink" title="整体设计"></a>整体设计</h3><p><strong>三段式设计:</strong><br><img src="http://oncj6b2vl.bkt.clouddn.com/Fl2tl1Is5zx-D0DAt03bg0WkWXhO.png" alt="三段式设计"></p>
 <h3 id="通过分类过滤"><a href="#通过分类过滤" class="headerlink" title="通过分类过滤"></a>通过分类过滤</h3><p><img src="http://oncj6b2vl.bkt.clouddn.com/FmooXnOPeRPGBts5V5W7CV0AHuIo.gif" alt="分类过滤文章"></p>
@@ -5414,7 +5414,7 @@ anon_max_rate=30000
 # 匿名登录的目录（可选）
 anon_root=/example/directory/
 </code></pre>
-<p><strong>根目录限制（Chroot Jail）</strong><br>（ LCTT 译注：chroot jail是类unix系统中的一种安全机制，用于修改进程运行的根目录环境，限制该线程不能感知到其根目录树以外的其他目录结构和文件的存在。详情参看<a href="https://zh.wikipedia.org/wiki/Chroot" target="_blank" rel="external">chroot jail</a>）</p>
+<p><strong>根目录限制（Chroot Jail）</strong><br>（ LCTT 译注：chroot jail是类unix系统中的一种安全机制，用于修改进程运行的根目录环境，限制该线程不能感知到其根目录树以外的其他目录结构和文件的存在。详情参看<a href="https://zh.wikipedia.org/wiki/Chroot" target="_blank" rel="noopener">chroot jail</a>）</p>
 <p>有时我们需要设置根目录（chroot）环境来禁止用户离开他们的家（home）目录。在配置文件中增加/修改下面配置开启根目录限制（Chroot Jail）:</p>
 <pre><code class="xml">chroot_list_enable=YES
 chroot_list_file=/etc/vsftpd.chroot_list
@@ -5621,7 +5621,7 @@ date: 2016-09-27 11:31:01
 <p>这就导致了一个问题，我重装了一次电脑，.md文件通过git备份了，还原回来的时候，md的创建时间都是一样的，所以文章列表就按照文章标题排序了</p>
 <p>随后就想起了以前使用yilia主题时，设置过置顶文章。所以做了排序，顺便做了置顶的功能。</p>
 <blockquote>
-<p><strong><a href="http://s.amlove.cn/" target="_blank" rel="external">@牵猪的松鼠</a>根据这篇文章写了一个npm插件 <a href="https://www.npmjs.com/package/hexo-generator-topindex" target="_blank" rel="external">hexo-generator-topindex</a><br>安装插件命令： <code>npm install hexo-generator-topindex --save</code><br>如果安装插件，可跳过第一部分 <a href="#修改hexo的js代码">#修改hexo的js代码</a>，直接看第二部分 <a href="#设置置顶">#设置置顶</a></strong></p>
+<p><strong><a href="http://s.amlove.cn/" target="_blank" rel="noopener">@牵猪的松鼠</a>根据这篇文章写了一个npm插件 <a href="https://www.npmjs.com/package/hexo-generator-topindex" target="_blank" rel="noopener">hexo-generator-topindex</a><br>安装插件命令： <code>npm install hexo-generator-topindex --save</code><br>如果安装插件，可跳过第一部分 <a href="#修改hexo的js代码">#修改hexo的js代码</a>，直接看第二部分 <a href="#设置置顶">#设置置顶</a></strong></p>
 </blockquote>
 <h2 id="修改hexo的js代码"><a href="#修改hexo的js代码" class="headerlink" title="修改hexo的js代码"></a>修改hexo的js代码</h2><p>直接上操作，修改<code>node_modules/hexo-generator-index/lib/generator.js</code></p>
 <pre><code class="javascript">&#39;use strict&#39;;
@@ -5665,7 +5665,7 @@ tags:
 ---
 </code></pre>
 <p>如果存在多个置顶文章，top后的参数越大，越靠前。</p>
-<p>References<br>　　Netcan 的 <a href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/" target="_blank" rel="external">解决Hexo置顶问题</a></p>
+<p>References<br>　　Netcan 的 <a href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/" target="_blank" rel="noopener">解决Hexo置顶问题</a></p>
 ]]></content>
       
         <categories>
@@ -5700,7 +5700,7 @@ tags:
 <li>注意事件监听和回调，当一个监听事件被注册，而这个类再也没有被使用时可能会发生内存泄露。</li>
 <li>“如果一个类管理自己的内存，程序员应该被提醒内存泄漏了”，通常，一个对象的指向其他对象的成员变量需要被置为null。</li>
 </ol>
-<p>References：<br>[1] Program Creek :<a href="http://www.programcreek.com/2013/10/the-introduction-of-memory-leak-what-why-and-how/" target="_blank" rel="external">The Introduction of Java Memory Leaks</a></p>
+<p>References：<br>[1] Program Creek :<a href="http://www.programcreek.com/2013/10/the-introduction-of-memory-leak-what-why-and-how/" target="_blank" rel="noopener">The Introduction of Java Memory Leaks</a></p>
 ]]></content>
       
         <categories>
@@ -5773,7 +5773,7 @@ $ tailf access.log | grep 24.10.160.10
     <entry>
       <title><![CDATA[pjax用法]]></title>
       <url>/2017/02/08/pjax/</url>
-      <content type="html"><![CDATA[<p>最近在开发一款hexo主题3-hexo，其中使用了pjax大大提高了用户体验和加载速度，在此简单介绍一下pjax的用法<a href="https://github.com/defunkt/jquery-pjax" target="_blank" rel="external">github链接</a><br><a id="more"></a></p>
+      <content type="html"><![CDATA[<p>最近在开发一款hexo主题3-hexo，其中使用了pjax大大提高了用户体验和加载速度，在此简单介绍一下pjax的用法<a href="https://github.com/defunkt/jquery-pjax" target="_blank" rel="noopener">github链接</a><br><a id="more"></a></p>
 <h2 id="pjax是什么"><a href="#pjax是什么" class="headerlink" title="pjax是什么"></a>pjax是什么</h2><blockquote>
 <p>pjax是一款jQuery插件，使用了ajax和pushState的技术，在保留真正永久链接，网页标题和可用的返回功能的情况下，带来一种快速的浏览体验。 –官方介绍</p>
 </blockquote>
@@ -5857,12 +5857,12 @@ $(document).pjax(&#39;.#menu a&#39;, &#39;.pjax&#39;, {fragment:&#39;.pjax&#39;,
 <tr>
 <td style="text-align:left"><code>type</code></td>
 <td style="text-align:left">“GET”</td>
-<td style="text-align:left">可以查看<a href="http://api.jquery.com/jQuery.ajax/" target="_blank" rel="external">jQuery.ajax()</a></td>
+<td style="text-align:left">可以查看<a href="http://api.jquery.com/jQuery.ajax/" target="_blank" rel="noopener">jQuery.ajax()</a></td>
 </tr>
 <tr>
 <td style="text-align:left"><code>dataType</code></td>
 <td style="text-align:left">“html”</td>
-<td style="text-align:left">可以查看<a href="http://api.jquery.com/jQuery.ajax/" target="_blank" rel="external">jQuery.ajax()</a></td>
+<td style="text-align:left">可以查看<a href="http://api.jquery.com/jQuery.ajax/" target="_blank" rel="noopener">jQuery.ajax()</a></td>
 </tr>
 <tr>
 <td style="text-align:left"><code>container</code></td>
@@ -6089,7 +6089,7 @@ $(document).pjax(&#39;.#menu a&#39;, &#39;.pjax&#39;, {fragment:&#39;.pjax&#39;,
     <entry>
       <title><![CDATA[每天一个linux命令]]></title>
       <url>/2017/01/23/linux-command/</url>
-      <content type="html"><![CDATA[<p>开始详细的系统的学习linux命令，坚持每天一个命令。<br><a id="more"></a><br>此系列最初参考<a href="http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html" target="_blank" rel="external">peida</a>的“ 每天一个linux命令”，之后根据自己的见闻逐渐添加整理。</p>
+      <content type="html"><![CDATA[<p>开始详细的系统的学习linux命令，坚持每天一个命令。<br><a id="more"></a><br>此系列最初参考<a href="http://www.cnblogs.com/peida/archive/2012/12/05/2803591.html" target="_blank" rel="noopener">peida</a>的“ 每天一个linux命令”，之后根据自己的见闻逐渐添加整理。</p>
 <h3 id="文件目录操作命令"><a href="#文件目录操作命令" class="headerlink" title="文件目录操作命令"></a>文件目录操作命令</h3><ol>
 <li><a href="/2016/12/01/linux-command（1）-ls/" title="每天一个linux命令（1）: ls">每天一个linux命令（1）: ls</a></li>
 <li><a href="/2016/12/02/linux-command（2）-cd/" title="每天一个linux命令（2）: cd">每天一个linux命令（2）: cd</a></li>
@@ -11184,7 +11184,7 @@ $ find . -name &quot;*.iml&quot; | xargs rm -f
 <h3 id="在使用SecureCRT上传下载之前需要给服务器安装lrzsz"><a href="#在使用SecureCRT上传下载之前需要给服务器安装lrzsz" class="headerlink" title="在使用SecureCRT上传下载之前需要给服务器安装lrzsz"></a>在使用SecureCRT上传下载之前需要给服务器安装lrzsz</h3><ul>
 <li>从下面的地址下载 lrzsz-0.12.20.tar.gz</li>
 </ul>
-<p><a href="http://down1.chinaunix.net/distfiles/lrzsz-0.12.20.tar.gz" target="_blank" rel="external">我是下载地址</a></p>
+<p><a href="http://down1.chinaunix.net/distfiles/lrzsz-0.12.20.tar.gz" target="_blank" rel="noopener">我是下载地址</a></p>
 <ul>
 <li>查看里面的INSTALL文档了解安装参数说明和细节</li>
 <li>解压文件</li>
@@ -13988,7 +13988,7 @@ callback(可选)  请求完成的回调函数
     <entry>
       <title><![CDATA[Hexo+Git服务器搭建blog]]></title>
       <url>/2016/10/23/hexo-git-server-blog/</url>
-      <content type="html"><![CDATA[<p>博主最近在服务器上搭建Hexo发布平台，感觉整个搭建过程和搭建思想蛮有意思，在此记录一下，供猿友参考<br>Hexo 是一个快速，简单，功能强大，主题社区特别庞大的开源blog框架-》<a href="https://hexo.io/" target="_blank" rel="external">官网</a><br>本次搭建是通过在服务器上搭建Git服务器来实现一键发布blog<br><a id="more"></a></p>
+      <content type="html"><![CDATA[<p>博主最近在服务器上搭建Hexo发布平台，感觉整个搭建过程和搭建思想蛮有意思，在此记录一下，供猿友参考<br>Hexo 是一个快速，简单，功能强大，主题社区特别庞大的开源blog框架-》<a href="https://hexo.io/" target="_blank" rel="noopener">官网</a><br>本次搭建是通过在服务器上搭建Git服务器来实现一键发布blog<br><a id="more"></a></p>
 <h2 id="搭建思路"><a href="#搭建思路" class="headerlink" title="搭建思路"></a>搭建思路</h2><p><img src="http://oncj6b2vl.bkt.clouddn.com/FjUDxVksbmykVH1wvQJc4h57wMrQ.jpg" alt="图解"></p>
 <ol>
 <li>客户端就是自己的电脑,可以把hexo的静态资源目录当成一个git仓库.</li>
@@ -14059,14 +14059,14 @@ git pull origin master #拉取最新代码
     <entry>
       <title><![CDATA[Hexo+GitHub Pages搭建属于自己的blog]]></title>
       <url>/2016/10/22/hexo-gitHub-pages-create-own-blog/</url>
-      <content type="html"><![CDATA[<p>Hexo是一个快速，简单，功能强大的开源博客框架-》<a href="https://hexo.io/" target="_blank" rel="external">官网</a><br>GitHub Pages 是一个不受限的网站空间。<br>两者相得益彰。给那些喜欢自己折腾的人提供一些借鉴。<br><a id="more"></a></p>
+      <content type="html"><![CDATA[<p>Hexo是一个快速，简单，功能强大的开源博客框架-》<a href="https://hexo.io/" target="_blank" rel="noopener">官网</a><br>GitHub Pages 是一个不受限的网站空间。<br>两者相得益彰。给那些喜欢自己折腾的人提供一些借鉴。<br><a id="more"></a></p>
 <h2 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h2><h3 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h3><p>博主使用系统：Deepin Linux 15.3桌面版<br>安装 node与npm</p>
 <h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><pre><code class="bash">npm install hexo-cli -g
 </code></pre>
 <h3 id="初始化blog"><a href="#初始化blog" class="headerlink" title="初始化blog"></a>初始化blog</h3><pre><code class="bash">hexo init blog
 </code></pre>
 <p>至此，本地blog已经创建完成，是不是很简单，简单到没朋友</p>
-<h3 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h3><p>可以在<a href="https://hexo.io/themes/" target="_blank" rel="external">hexo官网</a>查看自己喜欢的主题<br>通过git clone [url] themes/xxx 将主题克隆到本地，<br>修改 <code>_config.yml</code> 中的theme：xxx</p>
+<h3 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h3><p>可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo官网</a>查看自己喜欢的主题<br>通过git clone [url] themes/xxx 将主题克隆到本地，<br>修改 <code>_config.yml</code> 中的theme：xxx</p>
 <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><pre><code class="bash">#创建一个新的文章
 $ hexo new &quot;文章名&quot;
 
@@ -14079,9 +14079,9 @@ $ hexo publish [layout] &lt;filename&gt;
 #启动一个本地服务器
 $ hexo server
 </code></pre>
-<p>更多命令移步<a href="https://hexo.io/docs/commands.html" target="_blank" rel="external">官方文档</a></p>
+<p>更多命令移步<a href="https://hexo.io/docs/commands.html" target="_blank" rel="noopener">官方文档</a></p>
 <h3 id="搭建github-pages"><a href="#搭建github-pages" class="headerlink" title="搭建github pages"></a>搭建github pages</h3><p>本地blog已经搭建完成，现在可以发布到github pages上</p>
-<h4 id="注册github账户"><a href="#注册github账户" class="headerlink" title="注册github账户"></a>注册github账户</h4><p>到<a href="https://github.com/" target="_blank" rel="external">github官网</a>注册一个github账户</p>
+<h4 id="注册github账户"><a href="#注册github账户" class="headerlink" title="注册github账户"></a>注册github账户</h4><p>到<a href="https://github.com/" target="_blank" rel="noopener">github官网</a>注册一个github账户</p>
 <h4 id="配置登录免密码"><a href="#配置登录免密码" class="headerlink" title="配置登录免密码"></a>配置登录免密码</h4><p>移步 <a href="/2016/12/21/Git-SSH-HTTPS-verify-configuration/" title="Git之SSH与HTTPS免密码配置">Git之SSH与HTTPS免密码配置</a></p>
 <h4 id="创建github远程仓库"><a href="#创建github远程仓库" class="headerlink" title="创建github远程仓库"></a>创建github远程仓库</h4><p>在github上创建一个仓库 <code>xxx.github.io</code> xxx为自己的github用户名</p>
 <h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><pre><code class="bash">$ npm install hexo-deployer-git --save
@@ -14485,7 +14485,7 @@ DROP TABLE IF EXISTS backup_tbl;
     <entry>
       <title><![CDATA[PostgreSQL的介绍与安装]]></title>
       <url>/2016/10/12/PostgreSQL-3/</url>
-      <content type="html"><![CDATA[<p>由于工作认识了PostgreSQL，在此系统学习一下这个数据库，本文除博主实践所得以外，大量译于 <a href="https://www.postgresql.org/docs/9.6/static/" target="_blank" rel="external">官方文档</a></p>
+      <content type="html"><![CDATA[<p>由于工作认识了PostgreSQL，在此系统学习一下这个数据库，本文除博主实践所得以外，大量译于 <a href="https://www.postgresql.org/docs/9.6/static/" target="_blank" rel="noopener">官方文档</a></p>
 <h2 id="PostgreSQL是什么"><a href="#PostgreSQL是什么" class="headerlink" title="PostgreSQL是什么"></a>PostgreSQL是什么</h2><blockquote>
 <p>PostgreSQL 是一个基于 <code>POSTGRES, Version 4.2</code> 的对象关系数据库系统（ORDBMS），由加州大学伯克利分校计算机科学系开发。<br>PostgreSQL 是一个开源的数据库，因为自由许可，任何人都可以免费的使用、修改、分发 PostgreSQL 数据库用于任何目的。</p>
 </blockquote>

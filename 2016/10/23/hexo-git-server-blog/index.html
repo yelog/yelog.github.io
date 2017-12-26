@@ -79,9 +79,9 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="数据库"> 数据库 </li>
-    
     <li data-rel="后端"> 后端 </li>
+    
+    <li data-rel="数据库"> 数据库 </li>
     
     <li data-rel="大前端"> 大前端 </li>
     
@@ -132,18 +132,6 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">PostgreSQL</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">sql</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">java</a>
     </li>
     
@@ -156,10 +144,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">encryption</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">dubbo</a>
     </li>
     
@@ -168,11 +152,27 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">encryption</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">spring</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">springmvc</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">mybatis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">PostgreSQL</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sql</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -204,11 +204,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">js</a>
+        <a href="javascript:" class="color4">浏览器</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">浏览器</a>
+        <a href="javascript:" class="color3">js</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -423,7 +423,7 @@
         
         <a  class="大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1541,7 +1541,7 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>博主最近在服务器上搭建Hexo发布平台，感觉整个搭建过程和搭建思想蛮有意思，在此记录一下，供猿友参考<br>Hexo 是一个快速，简单，功能强大，主题社区特别庞大的开源blog框架-》<a href="https://hexo.io/" target="_blank" rel="external">官网</a><br>本次搭建是通过在服务器上搭建Git服务器来实现一键发布blog<br><a id="more"></a></p>
+        <p>博主最近在服务器上搭建Hexo发布平台，感觉整个搭建过程和搭建思想蛮有意思，在此记录一下，供猿友参考<br>Hexo 是一个快速，简单，功能强大，主题社区特别庞大的开源blog框架-》<a href="https://hexo.io/" target="_blank" rel="noopener">官网</a><br>本次搭建是通过在服务器上搭建Git服务器来实现一键发布blog<br><a id="more"></a></p>
 <h2 id="搭建思路"><a href="#搭建思路" class="headerlink" title="搭建思路"></a>搭建思路</h2><p><img src="http://oncj6b2vl.bkt.clouddn.com/FjUDxVksbmykVH1wvQJc4h57wMrQ.jpg" alt="图解"></p>
 <ol>
 <li>客户端就是自己的电脑,可以把hexo的静态资源目录当成一个git仓库.</li>
@@ -1615,8 +1615,7 @@ git pull origin master #拉取最新代码
 </div>
 
 
-    
-        <div id="comments"></div>
+    <div id="comments"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
 <script type="text/javascript">
@@ -1635,7 +1634,6 @@ git pull origin master #拉取最新代码
         gitalk.render('comments')
     })
 </script>
-    
 
 
 
@@ -1682,7 +1680,7 @@ git pull origin master #拉取最新代码
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#mybatis','#PostgreSQL','#sql','#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#spring','#springmvc','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding',],
+            'data': ['#java','#translation','#javaee','#dubbo','#zookeeper','#encryption','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#浏览器','#js','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

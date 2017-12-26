@@ -79,9 +79,9 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="数据库"> 数据库 </li>
-    
     <li data-rel="后端"> 后端 </li>
+    
+    <li data-rel="数据库"> 数据库 </li>
     
     <li data-rel="大前端"> 大前端 </li>
     
@@ -132,18 +132,6 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">PostgreSQL</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">sql</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">java</a>
     </li>
     
@@ -156,10 +144,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">encryption</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">dubbo</a>
     </li>
     
@@ -168,11 +152,27 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">encryption</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">spring</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">springmvc</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">mybatis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">PostgreSQL</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sql</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -204,11 +204,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">js</a>
+        <a href="javascript:" class="color4">浏览器</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">浏览器</a>
+        <a href="javascript:" class="color3">js</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -423,7 +423,7 @@
         
         <a  class="大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1543,14 +1543,14 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Hexo是一个快速，简单，功能强大的开源博客框架-》<a href="https://hexo.io/" target="_blank" rel="external">官网</a><br>GitHub Pages 是一个不受限的网站空间。<br>两者相得益彰。给那些喜欢自己折腾的人提供一些借鉴。<br><a id="more"></a></p>
+        <p>Hexo是一个快速，简单，功能强大的开源博客框架-》<a href="https://hexo.io/" target="_blank" rel="noopener">官网</a><br>GitHub Pages 是一个不受限的网站空间。<br>两者相得益彰。给那些喜欢自己折腾的人提供一些借鉴。<br><a id="more"></a></p>
 <h2 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h2><h3 id="环境介绍"><a href="#环境介绍" class="headerlink" title="环境介绍"></a>环境介绍</h3><p>博主使用系统：Deepin Linux 15.3桌面版<br>安装 node与npm</p>
 <h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><pre><code class="bash">npm install hexo-cli -g
 </code></pre>
 <h3 id="初始化blog"><a href="#初始化blog" class="headerlink" title="初始化blog"></a>初始化blog</h3><pre><code class="bash">hexo init blog
 </code></pre>
 <p>至此，本地blog已经创建完成，是不是很简单，简单到没朋友</p>
-<h3 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h3><p>可以在<a href="https://hexo.io/themes/" target="_blank" rel="external">hexo官网</a>查看自己喜欢的主题<br>通过git clone [url] themes/xxx 将主题克隆到本地，<br>修改 <code>_config.yml</code> 中的theme：xxx</p>
+<h3 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h3><p>可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo官网</a>查看自己喜欢的主题<br>通过git clone [url] themes/xxx 将主题克隆到本地，<br>修改 <code>_config.yml</code> 中的theme：xxx</p>
 <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><pre><code class="bash">#创建一个新的文章
 $ hexo new &quot;文章名&quot;
 
@@ -1563,9 +1563,9 @@ $ hexo publish [layout] &lt;filename&gt;
 #启动一个本地服务器
 $ hexo server
 </code></pre>
-<p>更多命令移步<a href="https://hexo.io/docs/commands.html" target="_blank" rel="external">官方文档</a></p>
+<p>更多命令移步<a href="https://hexo.io/docs/commands.html" target="_blank" rel="noopener">官方文档</a></p>
 <h3 id="搭建github-pages"><a href="#搭建github-pages" class="headerlink" title="搭建github pages"></a>搭建github pages</h3><p>本地blog已经搭建完成，现在可以发布到github pages上</p>
-<h4 id="注册github账户"><a href="#注册github账户" class="headerlink" title="注册github账户"></a>注册github账户</h4><p>到<a href="https://github.com/" target="_blank" rel="external">github官网</a>注册一个github账户</p>
+<h4 id="注册github账户"><a href="#注册github账户" class="headerlink" title="注册github账户"></a>注册github账户</h4><p>到<a href="https://github.com/" target="_blank" rel="noopener">github官网</a>注册一个github账户</p>
 <h4 id="配置登录免密码"><a href="#配置登录免密码" class="headerlink" title="配置登录免密码"></a>配置登录免密码</h4><p>移步 <a href="/2016/12/21/Git-SSH-HTTPS-verify-configuration/" title="Git之SSH与HTTPS免密码配置">Git之SSH与HTTPS免密码配置</a></p>
 <h4 id="创建github远程仓库"><a href="#创建github远程仓库" class="headerlink" title="创建github远程仓库"></a>创建github远程仓库</h4><p>在github上创建一个仓库 <code>xxx.github.io</code> xxx为自己的github用户名</p>
 <h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><pre><code class="bash">$ npm install hexo-deployer-git --save
@@ -1607,8 +1607,7 @@ $ hexo server
 </div>
 
 
-    
-        <div id="comments"></div>
+    <div id="comments"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
 <script type="text/javascript">
@@ -1627,7 +1626,6 @@ $ hexo server
         gitalk.render('comments')
     })
 </script>
-    
 
 
 
@@ -1674,7 +1672,7 @@ $ hexo server
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#mybatis','#PostgreSQL','#sql','#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#spring','#springmvc','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding',],
+            'data': ['#java','#translation','#javaee','#dubbo','#zookeeper','#encryption','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#浏览器','#js','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

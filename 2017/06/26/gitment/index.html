@@ -79,9 +79,9 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="数据库"> 数据库 </li>
-    
     <li data-rel="后端"> 后端 </li>
+    
+    <li data-rel="数据库"> 数据库 </li>
     
     <li data-rel="大前端"> 大前端 </li>
     
@@ -132,18 +132,6 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">PostgreSQL</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">sql</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">java</a>
     </li>
     
@@ -156,10 +144,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">encryption</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">dubbo</a>
     </li>
     
@@ -168,11 +152,27 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">encryption</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">spring</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">springmvc</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">mybatis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">PostgreSQL</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sql</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -204,11 +204,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">js</a>
+        <a href="javascript:" class="color4">浏览器</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">浏览器</a>
+        <a href="javascript:" class="color3">js</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -423,7 +423,7 @@
         
         <a  class="大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1539,9 +1539,9 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>自从多说要停止服务时，就开始关注第三方评论系统，现在的评论系统都有这样或那样的问题，见 <a href="/2017/03/23/the-third-comment/" title="关于第三方评论系统">关于第三方评论系统</a> 。忽然看到作者 孙士权 的一片文章 <a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="external">Gitment：使用 GitHub Issues 搭建评论系统</a> 。</p>
+        <p>自从多说要停止服务时，就开始关注第三方评论系统，现在的评论系统都有这样或那样的问题，见 <a href="/2017/03/23/the-third-comment/" title="关于第三方评论系统">关于第三方评论系统</a> 。忽然看到作者 孙士权 的一片文章 <a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="noopener">Gitment：使用 GitHub Issues 搭建评论系统</a> 。</p>
 <p>立即就将 <code>gitment</code> 集成到 <code>3-hexo</code> 主题内。本篇文章只讲在 <code>3-hexo</code> 内如何使用，如果想自定义，可以参考上面原文。</p>
-<h2 id="注册-OAuth-Application"><a href="#注册-OAuth-Application" class="headerlink" title="注册 OAuth Application"></a>注册 OAuth Application</h2><p><a href="https://github.com/settings/applications/new" target="_blank" rel="external">点击此处</a> 来注册一个新的 OAuth Application。其他内容可以随意填写，但要确保填入正确的 callback URL（一般是评论页面对应的域名，如 <a href="http://yelog.org）。" target="_blank" rel="external">http://yelog.org）。</a><br><img src="http://oncj6b2vl.bkt.clouddn.com/FsumVHpCC4h5JxRNg0TiKlMf0b1Y.png" alt="作者是这样填的"></p>
+<h2 id="注册-OAuth-Application"><a href="#注册-OAuth-Application" class="headerlink" title="注册 OAuth Application"></a>注册 OAuth Application</h2><p><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击此处</a> 来注册一个新的 OAuth Application。其他内容可以随意填写，但要确保填入正确的 callback URL（一般是评论页面对应的域名，如 <a href="http://yelog.org）。" target="_blank" rel="noopener">http://yelog.org）。</a><br><img src="http://oncj6b2vl.bkt.clouddn.com/FsumVHpCC4h5JxRNg0TiKlMf0b1Y.png" alt="作者是这样填的"></p>
 <h2 id="使用-gitment-评论系统"><a href="#使用-gitment-评论系统" class="headerlink" title="使用 gitment 评论系统"></a>使用 gitment 评论系统</h2><p>修改主题 <code>_config.yml</code></p>
 <pre><code class="xml">gitment:
   on: true  # 启用gitment评论系统
@@ -1581,8 +1581,7 @@
 </div>
 
 
-    
-        <div id="comments"></div>
+    <div id="comments"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
 <script type="text/javascript">
@@ -1601,7 +1600,6 @@
         gitalk.render('comments')
     })
 </script>
-    
 
 
 
@@ -1648,7 +1646,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#mybatis','#PostgreSQL','#sql','#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#spring','#springmvc','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding',],
+            'data': ['#java','#translation','#javaee','#dubbo','#zookeeper','#encryption','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#浏览器','#js','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

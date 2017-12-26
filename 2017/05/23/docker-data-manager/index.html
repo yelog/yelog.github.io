@@ -79,9 +79,9 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="数据库"> 数据库 </li>
-    
     <li data-rel="后端"> 后端 </li>
+    
+    <li data-rel="数据库"> 数据库 </li>
     
     <li data-rel="大前端"> 大前端 </li>
     
@@ -132,18 +132,6 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">PostgreSQL</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">sql</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">java</a>
     </li>
     
@@ -156,10 +144,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">encryption</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">dubbo</a>
     </li>
     
@@ -168,11 +152,27 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">encryption</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">spring</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">springmvc</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">mybatis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">PostgreSQL</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sql</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -204,11 +204,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">js</a>
+        <a href="javascript:" class="color4">浏览器</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">浏览器</a>
+        <a href="javascript:" class="color3">js</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -423,7 +423,7 @@
         
         <a  class="大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1556,7 +1556,7 @@
 <blockquote>
 <p>注意：也可以在 Dockerfile 中使用 VOLUME 来添加一个或者多个新的卷到由该镜像创建的任意容器。</p>
 </blockquote>
-<h3 id="删除数据卷"><a href="#删除数据卷" class="headerlink" title="删除数据卷"></a>删除数据卷</h3><p>数据卷是被设计用来持久化数据的，它的生命周期独立于容器，Docker不会在容器被删除后自动删除数据卷，并且也不存在垃圾回收这样的机制来处理没有任何容器引用的数据卷。如果需要在删除容器的同时移除数据卷。可以在删除容器的时候使用 docker rm -v 这个命令。无主的数据卷可能会占据很多空间，要清理会很麻烦。Docker官方正在试图解决这个问题，相关工作的进度可以查看这个<a href="https://github.com/docker/docker/pull/8484" target="_blank" rel="external">PR</a>。</p>
+<h3 id="删除数据卷"><a href="#删除数据卷" class="headerlink" title="删除数据卷"></a>删除数据卷</h3><p>数据卷是被设计用来持久化数据的，它的生命周期独立于容器，Docker不会在容器被删除后自动删除数据卷，并且也不存在垃圾回收这样的机制来处理没有任何容器引用的数据卷。如果需要在删除容器的同时移除数据卷。可以在删除容器的时候使用 docker rm -v 这个命令。无主的数据卷可能会占据很多空间，要清理会很麻烦。Docker官方正在试图解决这个问题，相关工作的进度可以查看这个<a href="https://github.com/docker/docker/pull/8484" target="_blank" rel="noopener">PR</a>。</p>
 <h3 id="挂载一个主机目录作为数据卷"><a href="#挂载一个主机目录作为数据卷" class="headerlink" title="挂载一个主机目录作为数据卷"></a>挂载一个主机目录作为数据卷</h3><p>使用 -v 标记也可以指定挂载一个本地主机的目录到容器中去。</p>
 <pre><code class="bash">$ sudo docker run -d -P --name web -v /src/webapp:/opt/webapp training/webapp python app.py
 </code></pre>
@@ -1658,8 +1658,7 @@ $ sudo docker run -d --volumes-from dbdata --name db2 training/postgres
 </div>
 
 
-    
-        <div id="comments"></div>
+    <div id="comments"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
 <script type="text/javascript">
@@ -1678,7 +1677,6 @@ $ sudo docker run -d --volumes-from dbdata --name db2 training/postgres
         gitalk.render('comments')
     })
 </script>
-    
 
 
 
@@ -1725,7 +1723,7 @@ $ sudo docker run -d --volumes-from dbdata --name db2 training/postgres
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#mybatis','#PostgreSQL','#sql','#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#spring','#springmvc','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding',],
+            'data': ['#java','#translation','#javaee','#dubbo','#zookeeper','#encryption','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#浏览器','#js','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

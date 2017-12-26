@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>[转]浏览器前进/后退缓存（BF Cache） | 叶落阁</title>
-  <meta name="keywords" content=" js , 浏览器 ">
+  <meta name="keywords" content=" 浏览器 , js ">
   <meta name="description" content="[转]浏览器前进/后退缓存（BF Cache） | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="很抱歉，您所访问的地址并不存在">
@@ -79,9 +79,9 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="数据库"> 数据库 </li>
-    
     <li data-rel="后端"> 后端 </li>
+    
+    <li data-rel="数据库"> 数据库 </li>
     
     <li data-rel="大前端"> 大前端 </li>
     
@@ -132,18 +132,6 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">PostgreSQL</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">sql</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">java</a>
     </li>
     
@@ -156,10 +144,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">encryption</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">dubbo</a>
     </li>
     
@@ -168,11 +152,27 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">encryption</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">spring</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">springmvc</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">mybatis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">PostgreSQL</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sql</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -204,11 +204,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">js</a>
+        <a href="javascript:" class="color4">浏览器</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">浏览器</a>
+        <a href="javascript:" class="color3">js</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -423,7 +423,7 @@
         
         <a  class="大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1482,9 +1482,9 @@
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">js</a>
-            
             <a href="javascript:" class="color4">浏览器</a>
+            
+            <a href="javascript:" class="color3">js</a>
             
         </span>
         
@@ -1551,11 +1551,11 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p><hr><br><a href="https://developer.mozilla.org/en-US/docs/Working_with_BFCache" target="_blank" rel="external">浏览器前进/后退缓存</a>（Backward/Forward Cache，BF Cache）是指浏览器在前进后退过程中， 会应用更强的缓存策略，表现为 DOM、window、甚至 JavaScript 对象被缓存，以及同步 XHR 也被缓存。 这一现象在移动端浏览器尤为常见，除 Chrome for Android、Android Browser 之外的浏览器基本都会触发。</p>
+        <p><hr><br><a href="https://developer.mozilla.org/en-US/docs/Working_with_BFCache" target="_blank" rel="noopener">浏览器前进/后退缓存</a>（Backward/Forward Cache，BF Cache）是指浏览器在前进后退过程中， 会应用更强的缓存策略，表现为 DOM、window、甚至 JavaScript 对象被缓存，以及同步 XHR 也被缓存。 这一现象在移动端浏览器尤为常见，除 Chrome for Android、Android Browser 之外的浏览器基本都会触发。</p>
 <p>BF Cache 本来是一项浏览器优化，但在某些情况下（比如前端路由的 Web App）会引起困惑。 本文主要讨论 BF Cache 的行为、如何检测 BF Cache 缓存、以及如何 workaround。</p>
 <h3 id="缓存行为"><a href="#缓存行为" class="headerlink" title="缓存行为"></a>缓存行为</h3><p>BF Cache 是一种浏览器优化，HTML 标准并未指定其如何进行缓存，因此缓存行为是与浏览器实现相关的。</p>
 <blockquote>
-<p>User agents may discard the Document objects of entries other than the current entry that are not referenced from any script, reloading the pages afresh when the user or script navigates back to such pages. This specification does not specify when user agents should discard Document objects and when they should cache them. – <a href="https://html.spec.whatwg.org/multipage/browsers.html#history" target="_blank" rel="external">Session history and navigation</a>, WHATWG</p>
+<p>User agents may discard the Document objects of entries other than the current entry that are not referenced from any script, reloading the pages afresh when the user or script navigates back to such pages. This specification does not specify when user agents should discard Document objects and when they should cache them. – <a href="https://html.spec.whatwg.org/multipage/browsers.html#history" target="_blank" rel="noopener">Session history and navigation</a>, WHATWG</p>
 </blockquote>
 <ul>
 <li>Desktop Chrome：阻塞的资源和同步发出的 XHR 都会被缓存，但不缓存渲染结果。因此可以看到明显的载入过程，此时脚本也会重新执行。</li>
@@ -1631,8 +1631,7 @@ function sendXHR () {
 </div>
 
 
-    
-        <div id="comments"></div>
+    <div id="comments"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
 <script type="text/javascript">
@@ -1651,7 +1650,6 @@ function sendXHR () {
         gitalk.render('comments')
     })
 </script>
-    
 
 
 
@@ -1698,7 +1696,7 @@ function sendXHR () {
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#mybatis','#PostgreSQL','#sql','#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#spring','#springmvc','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding',],
+            'data': ['#java','#translation','#javaee','#dubbo','#zookeeper','#encryption','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#浏览器','#js','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

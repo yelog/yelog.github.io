@@ -906,6 +906,7 @@ left0px
 .nav-right .title-list nav .search-result-list .search-result .search-keyword,
 .nav-right .title-list #local-search-result .search-result-list .search-result .search-keyword {
   color: #f00;
+  font-style: normal;
 }
 .nav-right .title-list nav a,
 .nav-right .title-list #local-search-result a {
