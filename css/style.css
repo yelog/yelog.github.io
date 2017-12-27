@@ -1316,22 +1316,25 @@ left0px
 .post .pjax article a:hover {
   text-decoration: underline;
 }
-.post .pjax article .div_img {
+.post .pjax article .div_img,
+.post .pjax article figure {
+  margin: 0;
   padding: 10px 0;
 }
-.post .pjax article .div_img img {
+.post .pjax article img {
   max-width: 100%;
   display: block;
   margin: auto;
   cursor: zoom-in;
 }
-.post .pjax article .div_img .img_alt {
+.post .pjax article .img_alt {
   text-align: center;
 }
-.post .pjax article .div_img .img_alt span {
+.post .pjax article .img_alt span {
   border-bottom: 1px solid #d9d9d9;
   padding: 10px 30px;
   color: #969696;
+  font-family: "Open Sans", "Hiragino Sans GB", sans-serif;
   display: inline-block;
 }
 .post .pjax article blockquote {
