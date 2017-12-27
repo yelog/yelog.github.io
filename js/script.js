@@ -126,7 +126,7 @@ $(document).keyup(function (e) {
     if (!$(".nav-right form .search").is(":focus") && !$('#comments textarea').is(':focus')) {
         if (e.keyCode == 83) { /* S - 显示/隐藏文章列表 */
             $(".full-toc .full").trigger("click");
-        } else if (e.keyCode == 73 && !$(".nav").hasClass("fullscreen") && !$('.title-list').hasClass('friend')) { /* I */
+        } else if (e.keyCode == 73 && ($(".nav").css('margin-left')=='0px') && !$('.title-list').hasClass('friend')) { /* I */
             $(".nav-right form .search").focus();
         } else if (e.keyCode == 87) { /* W - 显示/隐藏文章目录 */
             $(".full-toc .post-toc-menu").trigger("click");
@@ -144,48 +144,87 @@ $(".nav-right form .search").blur(function (e) {
 })
 /*输入框焦点时的快捷键捕获*/
 $(".nav-right form .search").keydown(function (e) {
-    if ($(".nav-right nav a:not(:hidden)").length > 0 && !$(".ac").is(":visible")) {
+    if ($(".nav-right nav a:not(:hidden), #local-search-result a:not(:hidden)").length > 0 && !$(".ac").is(":visible")) {
         if (e.which == 13) { /* 回车 */
-            var $handle = $(".nav-right nav a.hover:not(:hidden)");
+            var $handle = $(".nav-right nav a.hover:not(:hidden), #local-search-result a.hover:not(:hidden)");
             if ($handle.length == 0) {
-                $(".nav-right nav a:not(:hidden):first").trigger("click");
+                $(".nav-right nav a:not(:hidden):first, #local-search-result a:not(:hidden):first").trigger("click");
             } else {
                 $handle.trigger("click");
             }
         } else if (e.which == 38) { /* 上 */
-            if ($("nav a:visible.hover").length == 0 || $("nav a:visible.hover").prevAll(":visible").length == 0) {
-                $("nav").scrollTop($("nav").prop("scrollHeight"));
-                $(".nav-right nav a.hover").removeClass("hover");
-                $(".nav-right nav a:visible:last").addClass("hover");
-            } else {
-                $("nav a.hover").prevAll().each(function () {
-                    if ($(this).is(":visible")) {
-                        $(".nav-right nav a.hover").removeClass("hover");
-                        $(this).addClass("hover");
-                        if (($(this).offset().top) - $(".nav-right form").height() < 0) {
-                            $("nav").scrollTop($("nav").scrollTop() - $(this).height());
+            if (!$('nav').is(':visible')) {
+                if ($('#local-search-result a.hover').length == 0 || $('#local-search-result a.hover').parent().prevAll(":visible").length == 0) {
+                    $("#local-search-result").scrollTop($("#local-search-result").prop("scrollHeight"));
+                    $("#local-search-result a.hover").removeClass("hover");
+                    $("#local-search-result a:visible:last").addClass("hover");
+                } else {
+                    $("#local-search-result a.hover").parent().prevAll().each(function () {
+                        if ($(this).is(":visible")) {
+                            $("#local-search-result a.hover").removeClass("hover");
+                            $(this).children().addClass("hover");
+                            if (($(this).offset().top) - $(".nav-right form").height() < 0) {
+                                $("#local-search-result").scrollTop($("#local-search-result").scrollTop() - $(this).height());
+                            }
+                            return false;
                         }
-                        return false;
-                    }
-                })
+                    })
+                }
+            } else {
+                if ($("nav a:visible.hover").length == 0 || $("nav a:visible.hover").prevAll(":visible").length == 0) {
+                    $("nav").scrollTop($("nav").prop("scrollHeight"));
+                    $(".nav-right nav a.hover").removeClass("hover");
+                    $(".nav-right nav a:visible:last").addClass("hover");
+                } else {
+                    $("nav a.hover").prevAll().each(function () {
+                        if ($(this).is(":visible")) {
+                            $(".nav-right nav a.hover").removeClass("hover");
+                            $(this).addClass("hover");
+                            if (($(this).offset().top) - $(".nav-right form").height() < 0) {
+                                $("nav").scrollTop($("nav").scrollTop() - $(this).height());
+                            }
+                            return false;
+                        }
+                    })
+                }
             }
         } else if (e.which == 40) { /* 下 */
-            if ($("nav a:visible.hover").length == 0 || $("nav a:visible.hover").nextAll(":visible").length == 0) {
-                $("nav").scrollTop(0);
-                $(".nav-right nav a.hover").removeClass("hover");
-                $(".nav-right nav a:visible:first").addClass("hover");
-            } else {
-                $("nav a.hover").nextAll().each(function () {
-                    if ($(this).is(":visible")) {
-                        $(".nav-right nav a.hover").removeClass("hover");
-                        $(this).addClass("hover");
-                        if (($("nav").height() + $(".nav-right form").height() - $(this).offset().top) < 0) {
-                            $("nav").scrollTop($("nav").scrollTop() + $(this).height());
+            if ($('nav').is(':visible')) {
+                if ($("nav a:visible.hover").length == 0 || $("nav a:visible.hover").nextAll(":visible").length == 0) {
+                    $("nav").scrollTop(0);
+                    $(".nav-right nav a.hover").removeClass("hover");
+                    $(".nav-right nav a:visible:first").addClass("hover");
+                } else {
+                    $("nav a.hover").nextAll().each(function () {
+                        if ($(this).is(":visible")) {
+                            $(".nav-right nav a.hover").removeClass("hover");
+                            $(this).addClass("hover");
+                            if (($("nav").height() + $(".nav-right form").height() - $(this).offset().top) < 20) {
+                                $("nav").scrollTop($("nav").scrollTop() + $(this).height());
+                            }
+                            return false;
                         }
-                        return false;
-                    }
-                })
+                    })
+                }
+            } else {
+                if ($("#local-search-result a:visible.hover").length == 0 || $("#local-search-result a:visible.hover").parent().nextAll(":visible").length == 0) {
+                    $("#local-search-result").scrollTop(0);
+                    $("#local-search-result a.hover").removeClass("hover");
+                    $("#local-search-result a:visible:first").addClass("hover");
+                } else {
+                    $("#local-search-result a.hover").parent().nextAll().each(function () {
+                        if ($(this).is(":visible")) {
+                            $("#local-search-result a.hover").removeClass("hover");
+                            $(this).children().addClass("hover");
+                            if (($("#local-search-result").height() + $(".nav-right form").height() - $(this).offset().top) < 20) {
+                                $("#local-search-result").scrollTop($("#local-search-result").scrollTop() + $(this).prev().height());
+                            }
+                            return false;
+                        }
+                    })
+                }
             }
+
         }
     }
 
@@ -204,10 +243,15 @@ $(".nav-right form .search").on("input", function (e) {
 $(".nav-right form .search").on("change", function (e) {
     inputChange(e);
 });
+var searchContent;
 /*根据搜索条件，过滤文章列表*/
 function inputChange(e) {
-    $(".nav-right form .cross").css("display", $(e.currentTarget).val() == "" ? "none" : "block");
     var val = $(e.currentTarget).val().trim();
+    if (val == searchContent) {
+        return;
+    }
+    searchContent = val;
+    $(".nav-right form .cross").css("display", val == "" ? "none" : "block");
     if ($('#local-search-result').length>0) {
         if (val.length>3 && (val.substr(0,3).toLowerCase() == 'in:' || val.substr(0,3).toLowerCase()=='in：')) {
             $('#title-list-nav').hide();
@@ -285,6 +329,7 @@ $(".post").hover(function () {
 
 $(function () {
     bind();
+    $('.nav-left ul').css('height', 'calc(100vh - '+($('.avatar_target img').outerHeight(true) + $('.author').outerHeight(true)+$('.nav-left .icon').outerHeight(true)+$('.left-bottom').outerHeight(true))+'px)');
     if ($('#local-search-result').length>0) {
         // 全文搜索
         $.getScript('/js/search.js', function () {

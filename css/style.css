@@ -624,6 +624,7 @@ div.ac > ul > li:before,
   font-size: 17px;
   border-top: 1px solid #fff;
   list-style: none;
+  overflow-y: auto;
 }
 .nav-left ul li {
   color: rgba(255,255,255,0.7);
@@ -895,6 +896,7 @@ left0px
 }
 .nav-right .title-list nav .search-result-list,
 .nav-right .title-list #local-search-result .search-result-list {
+  margin-top: 0;
   padding-left: 0;
 }
 .nav-right .title-list nav .search-result-list .search-result,
@@ -1188,6 +1190,7 @@ left0px
 .post .pjax article .article-meta .top-comment a {
   cursor: pointer;
   color: inherit;
+  font: 400 15px/1 "Open Sans", "Hiragino Sans GB", sans-serif;
 }
 .post .pjax article .article-meta .top-comment a:hover {
   color: #4078c0;
