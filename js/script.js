@@ -18,7 +18,7 @@ jQuery.expr[':'].contains_author = function (a, i, m) {
 /*使用pjax加载页面，速度更快，交互更友好*/
 var content = $(".pjax");
 var container = $(".post");
-$(document).pjax('.nav-right nav a,.nav-left .avatar_target,.nav-left .about', '.pjax', {fragment: '.pjax', timeout: 8000});
+$(document).pjax('.nav-right nav a,.nav-left .avatar_target,.site_url', '.pjax', {fragment: '.pjax', timeout: 8000});
 $(document).on({
     /*点击链接后触发的事件*/
     'pjax:click': function () {
@@ -329,6 +329,16 @@ $(".post").hover(function () {
 
 $(function () {
     bind();
+
+    $('.more-menus').on('click', function () {
+        $('.mobile-menus-out').addClass('show');
+        $('.mobile-menus').addClass('show');
+    })
+    $('.mobile-menus-out,.mobile-menus a').on('click', function () {
+        $('.mobile-menus-out').removeClass('show');
+        $('.mobile-menus').removeClass('show');
+    })
+
     $('.nav-left ul').css('height', 'calc(100vh - '+($('.avatar_target img').outerHeight(true) + $('.author').outerHeight(true)+$('.nav-left .icon').outerHeight(true)+$('.left-bottom').outerHeight(true))+'px)');
     if ($('#local-search-result').length>0) {
         // 全文搜索

@@ -580,6 +580,9 @@ div.ac > ul > li:before,
   height: 27px;
   color: #fff;
 }
+.nav-left .more-menus {
+  display: none;
+}
 .nav-left .icon {
   text-align: center;
   margin: 0 auto 5px;
@@ -659,15 +662,18 @@ div.ac > ul > li:before,
   height: 30px;
   text-align: center;
   vertical-align: middle;
+  border-top: 1px solid #fff;
+  width: 100%;
+  line-height: 30px;
 }
 .nav-left .left-bottom a.about {
-  border-top: 1px solid #fff;
-  border-right: 1px solid #fff;
-  width: 58px;
+  display: inline-block;
 }
 .nav-left .left-bottom a.friends {
-  border-top: 1px solid #fff;
-  width: 59px;
+  display: inline-block;
+}
+.nav-left .left-bottom a.dynamic-menu {
+  display: block;
 }
 .nav-right {
   width: 420px;
@@ -1599,6 +1605,51 @@ img.img_max {
   z-index: 51;
   transition: top 0.5s, left 0.5s, transform 0.5s, width 0.5s, height 0.5s;
 }
+.mobile-menus-out {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+  background: #808080;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+}
+.mobile-menus-out.show {
+  display: block;
+  opacity: 0.3;
+}
+.mobile-menus {
+  display: block;
+  position: absolute;
+  background: #fff;
+  height: auto;
+  width: 0;
+  font-size: 1px;
+  padding: 0;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  transition: width 0.4s, font-size 0.4s, padding 0.4s;
+}
+.mobile-menus.show {
+  width: 100px;
+  font-size: 16px;
+  padding: 20px;
+}
+.mobile-menus .dynamic-menu {
+  display: block;
+  margin-top: 20px;
+}
+.mobile-menus .dynamic-menu:nth-child(1) {
+  margin-top: 0;
+}
 @media screen and (max-width: 1468px) {
   html,
   body {
@@ -1708,13 +1759,24 @@ img.img_max {
     height: 80px;
     width: 80px;
   }
+  .nav-left .more-menus {
+    position: absolute;
+    color: #fff;
+    display: block;
+    z-index: 100;
+    bottom: 5px;
+    right: 30px;
+  }
   .nav-left .left-bottom {
-    bottom: 35px;
+    top: 108px;
     text-align: center;
+  }
+  .nav-left .left-bottom .menus {
+    display: none;
   }
   .nav-left .left-bottom a.about {
     border-top: none;
-    border-right: none;
+    border-right: none !important;
     display: inline;
   }
   .nav-left .left-bottom a.about:after {

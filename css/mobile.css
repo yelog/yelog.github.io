@@ -107,13 +107,24 @@
     height: 80px;
     width: 80px;
   }
+  .nav-left .more-menus {
+    position: absolute;
+    color: #fff;
+    display: block;
+    z-index: 100;
+    bottom: 5px;
+    right: 30px;
+  }
   .nav-left .left-bottom {
-    bottom: 35px;
+    top: 108px;
     text-align: center;
+  }
+  .nav-left .left-bottom .menus {
+    display: none;
   }
   .nav-left .left-bottom a.about {
     border-top: none;
-    border-right: none;
+    border-right: none !important;
     display: inline;
   }
   .nav-left .left-bottom a.about:after {

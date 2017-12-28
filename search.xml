@@ -774,9 +774,9 @@ function sendXHR () {
         
         <tags>
             
-            <tag> js </tag>
-            
             <tag> 浏览器 </tag>
+            
+            <tag> js </tag>
             
         </tags>
         
@@ -3634,9 +3634,9 @@ MimeType=text/plain;
         
         <tags>
             
-            <tag> 运维 </tag>
-            
             <tag> deepin </tag>
+            
+            <tag> 运维 </tag>
             
         </tags>
         
@@ -4137,7 +4137,19 @@ limit: 20
     <entry>
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
-      <content type="html"><![CDATA[<h2 id="2017年12月"><a href="#2017年12月" class="headerlink" title="2017年12月"></a>2017年12月</h2><h3 id="12-24-功能添加"><a href="#12-24-功能添加" class="headerlink" title="12-24 功能添加"></a>12-24 功能添加</h3><ol>
+      <content type="html"><![CDATA[<h2 id="2017年12月"><a href="#2017年12月" class="headerlink" title="2017年12月"></a>2017年12月</h2><h3 id="12-28-添加自定义菜单功能"><a href="#12-28-添加自定义菜单功能" class="headerlink" title="12-28 添加自定义菜单功能"></a>12-28 添加自定义菜单功能</h3><ol>
+<li><code>add</code> : 添加自定义菜单功能，见配置文件 <code>menu:</code> 相关</li>
+<li><code>fix</code> : 修复 <code>photoSwipe</code> 一些问题：手机端右上角图标遮挡、首页图片渲染失败、CDN引入配置文件</li>
+</ol>
+<h3 id="12-27-插件添加"><a href="#12-27-插件添加" class="headerlink" title="12-27 插件添加"></a>12-27 插件添加</h3><ol>
+<li><code>add</code> : 引入 <code>photoSwipe</code> 图片相册，可在 <code>_config</code> 中 配置 <code>img_resize: photoSwipe</code></li>
+<li><code>fix</code> : 左侧分类列表过多，则显示滚动条</li>
+<li><code>change</code> : 由于cdnjs最近在国内网络波动较大，将默认CDN改到bootcdn</li>
+</ol>
+<h3 id="12-26-功能优化"><a href="#12-26-功能优化" class="headerlink" title="12-26 功能优化"></a>12-26 功能优化</h3><ol>
+<li><code>enhance</code> : 全文检索支持通过方向键选择文章，回车跳转</li>
+</ol>
+<h3 id="12-24-功能添加"><a href="#12-24-功能添加" class="headerlink" title="12-24 功能添加"></a>12-24 功能添加</h3><ol>
 <li><code>add</code> : 添加全文检索功能， 输入<code>in:</code>开头即可开始检索</li>
 </ol>
 <h2 id="2017年10月"><a href="#2017年10月" class="headerlink" title="2017年10月"></a>2017年10月</h2><h3 id="10-21-样式调整"><a href="#10-21-样式调整" class="headerlink" title="10-21 样式调整"></a>10-21 样式调整</h3><ol>
