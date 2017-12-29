@@ -391,11 +391,11 @@ xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用
             
             <tag> vim </tag>
             
-            <tag> linux </tag>
-            
             <tag> keybord </tag>
             
             <tag> emacs </tag>
+            
+            <tag> linux </tag>
             
         </tags>
         
