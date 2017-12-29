@@ -3801,7 +3801,7 @@ tags:
 - 3-hexo
 ---
 </code></pre>
-<h3 id="写作技巧"><a href="#写作技巧" class="headerlink" title="写作技巧"></a>写作技巧</h3><p>1.设置模板，blog根目录 <code>scaffolds/post.md</code><br>加入categories,tags等，这样以后通过 <code>hexo new</code> 生成的模板就不用写这两个单词了。<br>当然，你也可以写入任何你每个文章中都会有的部分。</p>
+<h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><p>1.设置模板，blog根目录 <code>scaffolds/post.md</code><br>加入categories,tags等，这样以后通过 <code>hexo new</code> 生成的模板就不用写这两个单词了。<br>当然，你也可以写入任何你每个文章中都会有的部分。</p>
 <pre><code class="xml">---
 title: {{ title }}
 date: {{ date }}
@@ -3809,11 +3809,21 @@ categories:
 tags:
 ---
 </code></pre>
-<p>2.设置脚本命令<br>其实就通过alias，触发一些命令的集合<br>在 <code>~/.bashrc</code> 文件中添加</p>
+<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><h3 id="快捷命令"><a href="#快捷命令" class="headerlink" title="快捷命令"></a>快捷命令</h3><p>其实就通过alias，触发一些命令的集合<br>在 <code>~/.bashrc</code> 文件中添加</p>
 <pre><code class="bash">alias hs=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&#39;  #启动本地服务
 alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&#39;  #部署博客
 </code></pre>
 <p>甚至你也可以加入备份文章的命令，可以自由发挥。</p>
+<h3 id="博客备份（快捷命令升级版）"><a href="#博客备份（快捷命令升级版）" class="headerlink" title="博客备份（快捷命令升级版）"></a>博客备份（快捷命令升级版）</h3><p>为了保证我们写的文章不丢失、快速迁移博客，都需要备份我们的blog。</p>
+<ol>
+<li>博客根目录，执行 <code>git init</code> 创建 git 仓库。</li>
+<li>在 github（或其他托管平台、自建远程仓库等） 创建仓库并和本地仓库建立联系。</li>
+<li>在 <code>~/.bashrc</code> 文件中添加<pre><code class="bash">alias hs=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&#39;
+alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add . &amp;&amp; git commit -m &quot;update&quot; &amp;&amp; git push -f&#39;
+</code></pre>
+</li>
+</ol>
+<p>这样，我们在执行 <code>hd</code> 进行部署时，就一同将博客进行备份了</p>
 ]]></content>
       
         <categories>

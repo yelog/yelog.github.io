@@ -91,9 +91,9 @@
     
     <li data-rel="后端"> 后端 </li>
     
-    <li data-rel="大前端"> 大前端 </li>
-    
     <li data-rel="读书"> 读书 </li>
+    
+    <li data-rel="大前端"> 大前端 </li>
     
     <li data-rel="运维"> 运维 </li>
     
@@ -110,7 +110,7 @@
     <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="80">
-<input type="hidden" id="yelog_site_word_count" value="71.4k">
+<input type="hidden" id="yelog_site_word_count" value="71.5k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -150,11 +150,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">sql</a>
+        <a href="javascript:" class="color3">mybatis</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
+        <a href="javascript:" class="color4">sql</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -162,11 +162,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">javaee</a>
+        <a href="javascript:" class="color2">translation</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">translation</a>
+        <a href="javascript:" class="color2">javaee</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -182,7 +182,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">AngularJs</a>
+        <a href="javascript:" class="color3">reading</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -191,6 +191,10 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">springmvc</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">AngularJs</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -226,10 +230,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">reading</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">firewall</a>
     </li>
     
@@ -250,15 +250,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">vim</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">docker仓库</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">磁盘分区</a>
+        <a href="javascript:" class="color4">vim</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -271,6 +267,10 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color1">linux</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">磁盘分区</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -318,19 +318,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">mac</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">efficiency</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">pjax</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">IntellijIDEA</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -343,6 +331,18 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color1">regex</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">mac</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">efficiency</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">IntellijIDEA</a>
     </li>
     
     <div class="clearfix"></div>
@@ -1277,7 +1277,7 @@ $ git ls-tree -r HEAD
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#PostgreSQL','#sql','#mybatis','#java','#javaee','#translation','#encryption','#dubbo','#zookeeper','#AngularJs','#spring','#springmvc','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#浏览器','#js','#reading','#firewall','#运维','#centos','#samba','#docker','#vim','#docker仓库','#磁盘分区','#keybord','#emacs','#linux','#ftp','#maven','#nexus','#linux命令','#encoding','#3-hexo','#Git','#mathjax','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#IntellijIDEA','#deepin','#tale','#regex',],
+            'data': ['#PostgreSQL','#mybatis','#sql','#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#reading','#spring','#springmvc','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#浏览器','#js','#firewall','#运维','#centos','#samba','#docker','#docker仓库','#vim','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding','#3-hexo','#Git','#mathjax','#git','#GitHub','#fragment_cache','#pjax','#deepin','#tale','#regex','#mac','#efficiency','#IntellijIDEA',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
