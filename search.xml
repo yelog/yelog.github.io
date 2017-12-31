@@ -4073,7 +4073,7 @@ limit: 20
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
       <content type="html"><![CDATA[<h2 id="2017年12月"><a href="#2017年12月" class="headerlink" title="2017年12月"></a>2017年12月</h2><h3 id="12-31-优化"><a href="#12-31-优化" class="headerlink" title="12-31 优化"></a>12-31 优化</h3><ol>
-<li><code>enhance</code> : 关闭打赏，屏蔽相关代码。</li>
+<li><code>enhance</code> : 关闭打赏，则屏蔽相关代码。</li>
 </ol>
 <h3 id="12-28-添加自定义菜单功能"><a href="#12-28-添加自定义菜单功能" class="headerlink" title="12-28 添加自定义菜单功能"></a>12-28 添加自定义菜单功能</h3><ol>
 <li><code>add</code> : 添加自定义菜单功能，见配置文件 <code>menu:</code> 相关</li>
