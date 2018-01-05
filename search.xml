@@ -391,11 +391,11 @@ xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用
             
             <tag> vim </tag>
             
-            <tag> linux </tag>
-            
             <tag> keybord </tag>
             
             <tag> emacs </tag>
+            
+            <tag> linux </tag>
             
         </tags>
         
@@ -6283,8 +6283,8 @@ $(&quot;input[type=checkbox]:checked&quot;).length     //获取被选中checkbox
 $(&quot;input[type=checkbox]:first&quot;).prop(&quot;checked&quot;)               //判断第一个checkbox是否被选中
 $(&quot;input[type=checkbox]:first&quot;).prop(&quot;checkbox&quot;,true)         //选中第一个checkbox
 
-$(&quot;input[type=checkbox]:not(:checked)&quot;).prop(&quot;checkbox&quot;,true) //全选
-$(&quot;input[type=checkbox]:checkbox&quot;).prop(&quot;checkbox&quot;,false)     //都不选中
+$(&quot;input[type=checkbox]:not(:checked)&quot;).prop(&quot;checked&quot;,true) //全选
+$(&quot;input[type=checkbox]:checkbox&quot;).prop(&quot;checked&quot;,false)     //都不选中
 
 //反选
 $(&quot;input[type=checkbox]&quot;).each(function(){
