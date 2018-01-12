@@ -107,10 +107,11 @@
         var userData = {};
         var datex = [];
         var dayDatas = $('#data').val().split('易效能100天践行');
-        console.log(dayDatas[0])
+        var yearDate = "";
         for (var i=1;i<dayDatas.length;i++) {
             var dayData = dayDatas[i];
-            datex.push(dayData.substr(0,dayData.indexOf("（")));
+            yearDate = dayData.substr(0,dayData.indexOf("（"))
+            datex.push(yearDate);
             var dataLineReg =/^\d+/;
             var dateReg = /\d+:\d+/;
             $.each(dayData.split("全员完成时间")[1].split("\n"), function () {
@@ -121,7 +122,7 @@
                         user.data = [];
                     }
                     var date = this.match(dateReg)[0].split(":");
-                    user.data.push({date: dayData.substr(0,dayData.indexOf("（")),value: parseInt(date[0]*60)+parseInt(date[1])});
+                    user.data.push({date: yearDate,value: parseInt(date[0]*60)+parseInt(date[1])});
                     userData[name] = user;
                 }
             })
@@ -129,8 +130,8 @@
         var keys = [];
         var values = [];
         $.each(userData, function (key, value) {
-            keys.push(key)
-            value.name=key
+            keys.push(key);
+            value.name=key;
             value.type='line'
             var data = value.data.sort(function (a, b) { return a.date - b.date })
             value.data = [];
@@ -139,12 +140,12 @@
             })
 
             values.push(value)
-        })
+        });
         var datex2 = [];
         $.each(datex.sort(function (a, b) { return a-b; }), function (item, that) {
             datex2.push(that.substring(4,6)+'月'+that.substring(6)+'日');
         })
-        init(keys, values, datex2, '2018易效能'+dayDatas[0].substring(1).trim()+'打卡情况');
+        init(keys, values, datex2, yearDate.substring(0,4)+'易效能'+dayDatas[0].substring(1).trim()+'打卡情况');
 
     }
     function init(keys, values, datex, title) {
