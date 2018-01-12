@@ -121,7 +121,7 @@
                         user.data = [];
                     }
                     var date = this.match(dateReg)[0].split(":");
-                    user.data.push(parseInt(date[0]*60)+parseInt(date[1]));
+                    user.data.push({date: dayData.substr(0,dayData.indexOf("（")),value: parseInt(date[0]*60)+parseInt(date[1])});
                     userData[name] = user;
                 }
             })
@@ -132,6 +132,12 @@
             keys.push(key)
             value.name=key
             value.type='line'
+            var data = value.data.sort(function (a, b) { return a.date - b.date })
+            value.data = [];
+            data.forEach(function (item) {
+               value.data.push(item.value);
+            })
+
             values.push(value)
         })
         var datex2 = [];
