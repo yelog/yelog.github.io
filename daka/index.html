@@ -144,7 +144,7 @@
 <script src="js/jquery.min.js" ></script>
 <script src="js/echarts.common.min.js" ></script>
 <script>
-    resolve();
+    // resolve();
     function resolve() {
         var userData = {};
         var datex = [];
@@ -292,19 +292,19 @@
             {data: [302, 310, 303, 316, 322], name: "41.Melissa", type: "line",
                 markLine: {
                     data: [
-                        {type: 'average', yAxis: 420, value: '7:00'}
+                        {type: 'average', yAxis: 420, value: 7}
                     ]
                 }},
             {data: [406, 420, 407, 420, 422], name: "42.谢惠丹", type: "line",
                 markLine: {
                     data: [
-                        {name: '3分线', yAxis: 420, value: '7:00'}
+                        {name: '3分线',  ,yAxis: 420, value: 7}
                     ]
                 }}
         ]
         var datex = ["20180108", "20180109", "20180110", "20180111", "20180112"];
 
-        // init(keys, values, datex);
+        init(keys, values, datex);
 
     })
 
