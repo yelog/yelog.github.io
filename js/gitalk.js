@@ -4992,6 +4992,24 @@
                                 labels: labels.concat(id).join(',')
                             }
                         }).then(function (res) {
+
+                            function sleep(millis){
+                                var njf1 = njen(this,arguments,"millis");
+                                nj:while(1) {
+                                    try{switch(njf1.cp) {
+                                        case 0:njf1._notifier=NjsRuntime.createNotifier();
+                                            setTimeout(njf1._notifier,njf1._millis);
+                                            njf1.cp = 1;
+                                            njf1._notifier.wait(njf1);
+                                            return;
+                                        case 1:break nj;
+                                    }} catch(ex) {
+                                        if(!njf1.except(ex,1))
+                                            return;
+                                    }}
+                                njf1.pf();
+                            }
+
                             var _options2 = _this4.options,
                                 admin = _options2.admin,
                                 createIssueManually = _options2.createIssueManually;
@@ -5008,9 +5026,8 @@
                                         $.cookie(_this4.options.id,'1',  { expires: date, path: '/' }); //保存一天记录
                                         return _this4.createIssue();
                                     } else {
-                                        setTimeout(function () {
-                                            return _this4.getIssue();
-                                        },1000)
+                                        sleep(1000);
+                                        return _this4.getIssue();
                                     }
                                 }
 
