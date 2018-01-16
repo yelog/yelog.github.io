@@ -4993,21 +4993,14 @@
                             }
                         }).then(function (res) {
 
-                            function sleep(millis){
-                                var njf1 = njen(this,arguments,"millis");
-                                nj:while(1) {
-                                    try{switch(njf1.cp) {
-                                        case 0:njf1._notifier=NjsRuntime.createNotifier();
-                                            setTimeout(njf1._notifier,njf1._millis);
-                                            njf1.cp = 1;
-                                            njf1._notifier.wait(njf1);
-                                            return;
-                                        case 1:break nj;
-                                    }} catch(ex) {
-                                        if(!njf1.except(ex,1))
-                                            return;
-                                    }}
-                                njf1.pf();
+                            function sleep(numberMillis) {
+                                var now = new Date();
+                                var exitTime = now.getTime() + numberMillis;
+                                while (true) {
+                                    now = new Date();
+                                    if (now.getTime() > exitTime)
+                                        return;
+                                }
                             }
 
                             var _options2 = _this4.options,
