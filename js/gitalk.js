@@ -5002,8 +5002,8 @@
                             if (!(res && res.data && res.data.length)) {
                                 if (!createIssueManually && user && ~admin.indexOf(user.login)) {
                                     if (typeof $.cookie(_this4.options.id) == 'undefined') { //如果第一次发起创建请求
+                                        console.log('这边正常创建。。。。 cookie'+$.cookie(_this4.options.id));
                                         $.cookie(_this4.options.id,'1',  { expires: 1 }); //保存一天记录
-                                        console.log('这边正常创建。。。。')
                                         return _this4.createIssue();
                                     } else {
                                         setTimeout(function () {
