@@ -3,6 +3,14 @@
   
     
     <entry>
+      <title><![CDATA[测试评论]]></title>
+      <url>/2018/01/16/%E6%B5%8B%E8%AF%95%E8%AF%84%E8%AE%BA/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Mac神器-BTT(BetterTouchTool)不完全教程]]></title>
       <url>/2017/12/13/Mac-BetterTouchTool/</url>
       <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><img src="http://oncj6b2vl.bkt.clouddn.com/Fm6s-GR0yVJgdndJwftdj9eXL7LB.png" alt="BetterTouchTool"><br>BetterTouchTool 是一款专为Mac用户开发的 窗口管理/<code>Trackpad</code>(触控板)/<code>Magic Mouse</code>(苹果鼠标)/<code>Keyboard</code>(键盘)/<code>TouchBar</code> 功能增强制作的软件。</p>
@@ -391,11 +399,11 @@ xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用
             
             <tag> vim </tag>
             
+            <tag> linux </tag>
+            
             <tag> keybord </tag>
             
             <tag> emacs </tag>
-            
-            <tag> linux </tag>
             
         </tags>
         
