@@ -5001,7 +5001,7 @@
                             if (!(res && res.data && res.data.length)) {
                                 if (!createIssueManually && user && ~admin.indexOf(user.login)) {
                                     if (typeof $.cookie(_this4.options.id) == 'undefined') { //如果第一次发起创建请求
-                                        $.cookie(_this4.id,'1',  { expires: 1 }); //保存一天记录
+                                        $.cookie(_this4.options.id,'1',  { expires: 1 }); //保存一天记录
                                         return _this4.createIssue();
                                     } else {
                                         setTimeout(function () {

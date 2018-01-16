@@ -94,9 +94,9 @@
     
     <li data-rel="大前端"> 大前端 </li>
     
-    <li data-rel="读书"> 读书 </li>
-    
     <li data-rel="运维"> 运维 </li>
+    
+    <li data-rel="读书"> 读书 </li>
     
     <li data-rel="工具"> 工具 </li>
     
@@ -161,15 +161,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">encryption</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">dubbo</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">zookeeper</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">encryption</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -229,15 +229,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">reading</a>
+        <a href="javascript:" class="color1">samba</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color4">firewall</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">samba</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -294,6 +290,10 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color4">encoding</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">reading</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -1251,7 +1251,7 @@ $(&quot;select option:selected&quot;).prop(&quot;selected&quot;,false)  //取消
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#reading','#firewall','#samba','#运维','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#IntellijIDEA','#tale','#regex',],
+            'data': ['#java','#translation','#javaee','#dubbo','#zookeeper','#encryption','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#samba','#firewall','#运维','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#IntellijIDEA','#tale','#regex',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
