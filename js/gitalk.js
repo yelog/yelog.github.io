@@ -4756,7 +4756,6 @@
 
                     _this.handleIssueCreate = function () {
                         _this.setState({ isIssueCreating: true });
-                        console.log('这边是干什么的。。。。')
                         _this.createIssue().then(function (issue) {
                             _this.setState({
                                 isIssueCreating: false,
@@ -5013,13 +5012,12 @@
                             if (!(res && res.data && res.data.length)) {
                                 if (!createIssueManually && user && ~admin.indexOf(user.login)) {
                                     if (typeof $.cookie(_this4.options.id) == 'undefined') { //如果第一次发起创建请求
-                                        console.log('这边正常创建。。。。 cookie'+$.cookie(_this4.options.id));
                                         var date = new Date();
                                         date.setTime(date.getTime()+60*1000);//过期时间60s
                                         $.cookie(_this4.options.id,'1',  { expires: date, path: '/' }); //保存一天记录
                                         return _this4.createIssue();
                                     } else {
-                                        sleep(1000);
+                                        sleep(3000);
                                         return _this4.getIssue();
                                     }
                                 }
@@ -5035,7 +5033,6 @@
                 }, {
                     key: 'createIssue',
                     value: function createIssue() {
-                        console.log('又开始创建了');
                         var _this5 = this;
 
                         var _options3 = this.options,
