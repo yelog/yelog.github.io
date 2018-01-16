@@ -3,6 +3,14 @@
   
     
     <entry>
+      <title><![CDATA[测试评论2]]></title>
+      <url>/2018/01/16/%E6%B5%8B%E8%AF%95%E8%AF%84%E8%AE%BA2/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[测试评论]]></title>
       <url>/2018/01/16/%E6%B5%8B%E8%AF%95%E8%AF%84%E8%AE%BA/</url>
       <content type="html"></content>
@@ -399,11 +407,11 @@ xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用
             
             <tag> vim </tag>
             
-            <tag> linux </tag>
-            
             <tag> keybord </tag>
             
             <tag> emacs </tag>
+            
+            <tag> linux </tag>
             
         </tags>
         
@@ -782,9 +790,9 @@ function sendXHR () {
         
         <tags>
             
-            <tag> 浏览器 </tag>
-            
             <tag> js </tag>
+            
+            <tag> 浏览器 </tag>
             
         </tags>
         
