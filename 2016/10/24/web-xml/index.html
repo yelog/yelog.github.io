@@ -160,6 +160,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">javaee</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">dubbo</a>
     </li>
     
@@ -168,7 +172,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">javaee</a>
+        <a href="javascript:" class="color3">mybatis</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -177,10 +181,6 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">springmvc</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -236,11 +236,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">samba</a>
+        <a href="javascript:" class="color4">firewall</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">firewall</a>
+        <a href="javascript:" class="color1">samba</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -252,11 +252,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">vim</a>
+        <a href="javascript:" class="color4">docker仓库</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">docker仓库</a>
+        <a href="javascript:" class="color4">vim</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -276,10 +276,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">ftp</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">maven</a>
     </li>
     
@@ -288,15 +284,19 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ftp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">linux命令</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">3-hexo</a>
+        <a href="javascript:" class="color4">encoding</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">encoding</a>
+        <a href="javascript:" class="color2">3-hexo</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -320,14 +320,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">mac</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">efficiency</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">pjax</a>
     </li>
     
@@ -336,11 +328,19 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">IntellijIDEA</a>
+        <a href="javascript:" class="color5">tale</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">tale</a>
+        <a href="javascript:" class="color4">mac</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">efficiency</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">IntellijIDEA</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -1209,10 +1209,23 @@
 
 
     <div id="comments"></div>
-<link rel="stylesheet" href="https://unpkg.com/gitalk@1.2.0/dist/gitalk.css">
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 
-<script type="text/javascript" src="/js/gitalk.js">
-
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'dc7f8ca729fea878e59c',
+            clientSecret: '67417ddbb12eeebb0de47187099e92ace7bdf90e',
+            repo: 'yelog.github.io',
+            owner: 'yelog',
+            admin: ['yelog'],
+            id: location.pathname,
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
 </script>
 
 
@@ -1267,7 +1280,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#encryption','#java','#translation','#dubbo','#zookeeper','#javaee','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#jQuery','#AngularJs','#jsp','#jstl','#freemarker','#node','#hexo','#浏览器','#js','#reading','#docker','#samba','#firewall','#运维','#centos','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#3-hexo','#encoding','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#IntellijIDEA','#tale','#regex',],
+            'data': ['#encryption','#java','#translation','#javaee','#dubbo','#zookeeper','#mybatis','#spring','#springmvc','#PostgreSQL','#sql','#jQuery','#AngularJs','#jsp','#jstl','#freemarker','#node','#hexo','#浏览器','#js','#reading','#docker','#firewall','#samba','#运维','#centos','#docker仓库','#vim','#keybord','#emacs','#linux','#磁盘分区','#maven','#nexus','#ftp','#linux命令','#encoding','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#pjax','#deepin','#tale','#mac','#efficiency','#IntellijIDEA','#regex',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
@@ -1310,21 +1323,6 @@
 
         /*代码高亮，行号对齐*/
         $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
-
-
-            var gitalk = new Gitalk({
-                clientID: 'dc7f8ca729fea878e59c',
-                clientSecret: '67417ddbb12eeebb0de47187099e92ace7bdf90e',
-                repo: 'yelog.github.io',
-                owner: 'yelog',
-                admin: ['yelog'],
-                id: location.pathname,
-                title: document.title,
-                distractionFreeMode: 'true',
-                language: 'zh-CN',
-                perPage: parseInt('10',10)
-            })
-            gitalk.render('comments')
 
         
 

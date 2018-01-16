@@ -5028,7 +5028,7 @@
                         return _util.axiosGithub.post('/repos/' + owner + '/' + repo + '/issues', {
                             title: title,
                             labels: labels.concat(id),
-                            body: body || url + ' \n\n ' + ((0, _util.getMetaContent)('description') || (0, _util.getMetaContent)('description', 'og:description') || '')
+                            body: body || url + ' \n\n ' + (title || (0, _util.getMetaContent)('description') || (0, _util.getMetaContent)('description', 'og:description') || '')
                         }, {
                             headers: {
                                 Authorization: 'token ' + this.accessToken
