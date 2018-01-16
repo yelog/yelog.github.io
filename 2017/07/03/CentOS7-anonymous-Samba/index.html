@@ -96,9 +96,9 @@
     
     <li data-rel="大前端"> 大前端 </li>
     
-    <li data-rel="运维"> 运维 </li>
-    
     <li data-rel="读书"> 读书 </li>
+    
+    <li data-rel="运维"> 运维 </li>
     
     <li data-rel="工具"> 工具 </li>
     
@@ -151,15 +151,15 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">encryption</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">java</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color2">translation</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">encryption</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -175,15 +175,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">spring</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">springmvc</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">mybatis</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -199,11 +199,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">jsp</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">jstl</a>
+        <a href="javascript:" class="color1">freemarker</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -211,7 +207,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">freemarker</a>
+        <a href="javascript:" class="color4">jsp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">jstl</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -231,11 +231,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">samba</a>
+        <a href="javascript:" class="color3">reading</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color4">firewall</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">samba</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -247,6 +251,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">vim</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">docker</a>
     </li>
     
@@ -255,7 +263,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">vim</a>
+        <a href="javascript:" class="color5">磁盘分区</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -275,10 +283,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">磁盘分区</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">maven</a>
     </li>
     
@@ -292,10 +296,6 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color4">encoding</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">reading</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -323,14 +323,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">deepin</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">pjax</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">mac</a>
     </li>
     
@@ -339,11 +331,19 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">tale</a>
+        <a href="javascript:" class="color3">IntellijIDEA</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">IntellijIDEA</a>
+        <a href="javascript:" class="color5">pjax</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">deepin</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">tale</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -1222,7 +1222,7 @@ $ chown nobody:nobody
 <link rel="stylesheet" href="/css/gitalk.css">
 
 <script type="text/javascript">
-    $.getScript('/js/gitalk.min.js', function () {
+    $.getScript('/js/gitalk.js', function () {
         var gitalk = new Gitalk({
             clientID: 'dc7f8ca729fea878e59c',
             clientSecret: '67417ddbb12eeebb0de47187099e92ace7bdf90e',
@@ -1290,7 +1290,7 @@ $ chown nobody:nobody
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#java','#translation','#encryption','#javaee','#dubbo','#zookeeper','#mybatis','#spring','#springmvc','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#jQuery','#freemarker','#node','#hexo','#js','#浏览器','#samba','#firewall','#运维','#centos','#docker','#docker仓库','#vim','#keybord','#emacs','#linux','#ftp','#磁盘分区','#maven','#nexus','#linux命令','#encoding','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#deepin','#pjax','#mac','#efficiency','#tale','#IntellijIDEA','#regex',],
+            'data': ['#encryption','#java','#translation','#javaee','#dubbo','#zookeeper','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#freemarker','#jQuery','#jsp','#jstl','#node','#hexo','#js','#浏览器','#reading','#firewall','#samba','#运维','#centos','#vim','#docker','#docker仓库','#磁盘分区','#keybord','#emacs','#linux','#ftp','#maven','#nexus','#linux命令','#encoding','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#IntellijIDEA','#pjax','#deepin','#tale','#regex',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
