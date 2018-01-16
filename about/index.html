@@ -161,15 +161,15 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">encryption</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">dubbo</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">zookeeper</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">encryption</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -1110,9 +1110,10 @@
 
 
     <div id="comments"></div>
-<link rel="stylesheet" href="/css/gitalk.css">
-<script src="/js/gitalk.js"/>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
 <script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
         var gitalk = new Gitalk({
             clientID: 'dc7f8ca729fea878e59c',
             clientSecret: '67417ddbb12eeebb0de47187099e92ace7bdf90e',
@@ -1125,6 +1126,7 @@
             perPage: parseInt('10',10)
         })
         gitalk.render('comments')
+    })
 </script>
 
 
@@ -1179,7 +1181,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#java','#translation','#javaee','#dubbo','#zookeeper','#encryption','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#samba','#firewall','#运维','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#IntellijIDEA','#tale','#regex',],
+            'data': ['#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#samba','#firewall','#运维','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#IntellijIDEA','#tale','#regex',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
