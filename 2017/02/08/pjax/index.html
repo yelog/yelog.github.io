@@ -149,11 +149,11 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">java</a>
+        <a href="javascript:" class="color1">encryption</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">javaee</a>
+        <a href="javascript:" class="color5">java</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -161,7 +161,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">encryption</a>
+        <a href="javascript:" class="color2">javaee</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -193,6 +193,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">jQuery</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">AngularJs</a>
     </li>
     
@@ -209,7 +213,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">jQuery</a>
+        <a href="javascript:" class="color5">hexo</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -217,19 +221,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">hexo</a>
+        <a href="javascript:" class="color3">reading</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color3">js</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">浏览器</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">reading</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -241,19 +237,23 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">docker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">浏览器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">vim</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">运维</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color2">centos</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">docker</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">vim</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -301,11 +301,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mathjax</a>
+        <a href="javascript:" class="color4">Git</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">Git</a>
+        <a href="javascript:" class="color3">mathjax</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -321,6 +321,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">pjax</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">mac</a>
     </li>
     
@@ -329,19 +333,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">pjax</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">deepin</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">IntellijIDEA</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">tale</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">deepin</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -1355,9 +1355,8 @@ $(document).pjax(&#39;.#menu a&#39;, &#39;.pjax&#39;, {fragment:&#39;.pjax&#39;,
 
     <div id="comments"></div>
 <link rel="stylesheet" href="/css/gitalk.css">
-
+<script src="/js/gitalk.js"/>
 <script type="text/javascript">
-    $.getScript('/js/gitalk.js', function () {
         var gitalk = new Gitalk({
             clientID: 'dc7f8ca729fea878e59c',
             clientSecret: '67417ddbb12eeebb0de47187099e92ace7bdf90e',
@@ -1370,7 +1369,6 @@ $(document).pjax(&#39;.#menu a&#39;, &#39;.pjax&#39;, {fragment:&#39;.pjax&#39;,
             perPage: parseInt('10',10)
         })
         gitalk.render('comments')
-    })
 </script>
 
 
@@ -1425,7 +1423,7 @@ $(document).pjax(&#39;.#menu a&#39;, &#39;.pjax&#39;, {fragment:&#39;.pjax&#39;,
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#java','#javaee','#translation','#encryption','#dubbo','#zookeeper','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#reading','#samba','#firewall','#运维','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#IntellijIDEA','#tale','#regex',],
+            'data': ['#encryption','#java','#translation','#javaee','#dubbo','#zookeeper','#spring','#springmvc','#mybatis','#PostgreSQL','#sql','#jQuery','#AngularJs','#jsp','#jstl','#freemarker','#hexo','#node','#reading','#js','#samba','#firewall','#docker','#浏览器','#vim','#运维','#centos','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#maven','#nexus','#linux命令','#encoding','#3-hexo','#Git','#mathjax','#git','#GitHub','#fragment_cache','#pjax','#mac','#efficiency','#IntellijIDEA','#tale','#deepin','#regex',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
