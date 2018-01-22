@@ -257,15 +257,51 @@
             type: 'line',
 
             markLine: {
-                name: 'aa',
+                name: '8:00',
                 itemStyle:{
-                    normal:{lineStyle:{color:'red'},label:{show:true,position:'right', formatter: '8:00'}}
+                    normal:{lineStyle:{color:'red'},label:{show:true,position:'end', formatter: '8:00'}}
                 },
                 data: [
                     [{
                         coord: [datex[0], 480]
                     }, {
                         coord: [datex[datex.length - 1], 480]
+                    }
+                    ],
+                ]
+            }
+        },{
+            name: '7:30',
+            type: 'line',
+
+            markLine: {
+                name: '7:30',
+                itemStyle:{
+                    normal:{lineStyle:{color:'purple'},label:{show:true,position:'end', formatter: '7:30'}}
+                },
+                data: [
+                    [{
+                        coord: [datex[0], 450]
+                    }, {
+                        coord: [datex[datex.length - 1], 450]
+                    }
+                    ],
+                ]
+            }
+        },{
+            name: '7:00',
+            type: 'line',
+
+            markLine: {
+                name: '7:00',
+                itemStyle:{
+                    normal:{lineStyle:{color:'green'},label:{show:true,position:'end', formatter: '7:00'}}
+                },
+                data: [
+                    [{
+                        coord: [datex[0], 420]
+                    }, {
+                        coord: [datex[datex.length - 1], 420]
                     }
                     ],
                 ]
