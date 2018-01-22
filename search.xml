@@ -774,9 +774,9 @@ function sendXHR () {
         
         <tags>
             
-            <tag> js </tag>
-            
             <tag> 浏览器 </tag>
+            
+            <tag> js </tag>
             
         </tags>
         

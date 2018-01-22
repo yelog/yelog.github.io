@@ -201,7 +201,7 @@
 <button id="" class="button" onclick="resolve()">解析</button>
 <hr>
 <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-<div id="main" style="width: 600px;height:400px;"></div>
+<div id="main" style="width: 100%;height:600px;"></div>
 <script src="js/jquery.min.js" ></script>
 <script src="js/echarts.common.min.js" ></script>
 <script>
@@ -252,6 +252,25 @@
 
     }
     function init(keys, values, datex, title) {
+        values.push({
+            name: '平行于y轴的趋势线',
+            type: 'line',
+
+            markLine: {
+                name: 'aa',
+                itemStyle:{
+                    normal:{lineStyle:{color:'red'},label:{show:true,position:'right', formatter: '8:00'}}
+                },
+                data: [
+                    [{
+                        coord: [datex[0], 480]
+                    }, {
+                        coord: [datex[datex.length - 1], 480]
+                    }
+                    ],
+                ]
+            }
+        })
 
         $('#main').attr('_echarts_instance_','')
 
@@ -271,7 +290,7 @@
                 trigger: 'axis',
                 formatter:function (params) {
                     var result = "";
-                    params.sort(function (a, b) { return a.data-b.data }).forEach(function (item) {
+                    params.sort(function (a, b) { return b.data-a.data }).forEach(function (item) {
                         var value = item.value;
                         var h = parseInt(value / 60);
                         var m = parseInt(value % 60);
@@ -305,7 +324,6 @@
             yAxis : [
                 {
                     type : '',
-                    inverse: true,
                     min: function(value) {
                         return value.min - 20;
                     },
