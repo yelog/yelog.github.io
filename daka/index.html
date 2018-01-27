@@ -394,13 +394,14 @@
                 }
             })
 
-        $('#main').attr('_echarts_instance_','')
 
         // 基于准备好的dom，初始化echarts实例
         var myChart
         if (dom) {
+            $('#'+dom).attr('_echarts_instance_','')
             myChart = echarts.init(document.getElementById(dom));
         } else {
+            $('#main').attr('_echarts_instance_','')
             myChart = echarts.init(document.getElementById('main'));
         }
 
