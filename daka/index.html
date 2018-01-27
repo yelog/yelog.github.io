@@ -8,7 +8,7 @@
 <body>
 <style>
     #data{
-        height: 200px;
+        height: 600px;
         width: 170px;
     }
     .button {
@@ -24,6 +24,60 @@
     }
 </style>
 <textarea id="data">
+第5组 易效能100天践行20180127 （24/100 ）
+全员完成时间
+42.谢惠丹  6:22
+43.三    两 6:48
+44.杨玉杰 6:47
+45.李    雯 7:01
+48.苗婷婷 5:58
+49.苗强强 6:30
+50.邹凤霞 6:47
+76.穆    婧9:30
+
+第5组 易效能100天践行20180126（23/100 ）
+全员完成时间
+42.谢惠丹  6:47
+43.三    两 6:35
+44.杨玉杰 6:08
+45.李    雯 6:42
+48.苗婷婷 5:34
+49.苗强强 6:35
+50.邹凤霞 6:58
+76.穆    婧6:58
+
+第5组 易效能100天践行20180125（22/100 ）
+全员完成时间
+42.谢惠丹  6:46
+43.三    两 6:30
+44.杨玉杰 6:13
+45.李    雯 7:03
+48.苗婷婷 5:49
+49.苗强强7:14
+50.邹凤霞
+76.穆    婧7:05
+
+第5组 易效能100天践行20180124（21/100 ）
+全员完成时间
+42.谢惠丹  6:35
+43.三    两  6:37
+44.杨玉杰 6:11
+45.李    雯 6:40
+48.苗婷婷 6:05
+49.苗强强6:31
+50.邹凤霞 6:40
+76.穆    婧6:49
+
+第5组 易效能100天践行20180123（20/100 ）
+全员完成时间
+42.谢惠丹  6:13
+43.三    两 6:35
+44.杨玉杰 6:02
+45.李    雯 6:46
+48.苗婷婷 6:03
+49.苗强强5:37
+50.邹凤霞 6:38
+76.穆    婧5:51
 第5组 易效能100天践行20180122（19/100 ）
 全员完成时间
 42.谢惠丹  6:46
@@ -199,6 +253,7 @@
 加分项 +22
 </textarea>
 <button id="" class="button" onclick="resolve()">解析</button>
+<div id="week" style="width: 70%;height:600px; display: inline-block;"></div>
 <hr>
 <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
 <div id="main" style="width: 100%;height:600px;"></div>
@@ -224,7 +279,7 @@
                     if (typeof user.data == 'undefined') {
                         user.data = [];
                     }
-                    var date = this.match(dateReg)[0].replace(/[^\d]/, ':').split(":");
+                    var date = this.match(dateReg)?this.match(dateReg)[0].replace(/[^\d]/, ':').split(":"):["10","00"];
                     user.data.push({date: yearDate,value: parseInt(date[0]*60)+parseInt(date[1])});
                     userData[name] = user;
                 }
@@ -249,9 +304,22 @@
             datex2.push(that.substring(4,6)+'月'+that.substring(6)+'日');
         })
         init(keys, values, datex2, yearDate.substring(0,4)+'易效能'+dayDatas[0].substring(1).trim()+'打卡情况');
+        initWeek(keys, values, datex2, yearDate.substring(0,4)+'易效能'+dayDatas[0].substring(1).trim()+'打卡情况');
 
     }
-    function init(keys, values, datex, title) {
+    function initWeek(keys, values, datex, title) {
+        var weekValues = [];
+        for(var i=0;i<values.length;i++) {
+            if (values[i].data) {
+                values[i].data = values[i].data.slice(values[i].data.length-7, values[i].data.length);
+            }
+            weekValues.push(values[i])
+        }
+
+        init(keys, weekValues, datex.slice(datex.length-7,datex.length), title+"-最近一周","week")
+    }
+
+    function init(keys, values, datex, title, dom) {
         values.push({
             name: '平行于y轴的趋势线',
             type: 'line',
@@ -306,12 +374,35 @@
                     ],
                 ]
             }
-        })
+        }, {
+                name: '10:00',
+                type: 'line',
+
+                markLine: {
+                    name: '10:00',
+                    itemStyle:{
+                        normal:{lineStyle:{color:'red'},label:{show:true,position:'end', formatter: '未打卡或\n已超过10点'}}
+                    },
+                    data: [
+                        [{
+                            coord: [datex[0], 600]
+                        }, {
+                            coord: [datex[datex.length - 1], 600]
+                        }
+                        ],
+                    ]
+                }
+            })
 
         $('#main').attr('_echarts_instance_','')
 
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
+        var myChart
+        if (dom) {
+            myChart = echarts.init(document.getElementById(dom));
+        } else {
+            myChart = echarts.init(document.getElementById('main'));
+        }
 
 
         // 指定图表的配置项和数据
