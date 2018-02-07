@@ -3767,6 +3767,21 @@ mathjax:
   per_page: false # 若只渲染单个页面，此选项设为false，页面内加入 mathjax: true
 </code></pre>
 <p>考虑到页面的加载速度，支持渲染单个页面。<br>设置 <code>per_page: false</code> ,在需要渲染的页面内 加入 <code>mathjax: true</code></p>
+<blockquote>
+<p><strong><code>注意:</code></strong><br>由于hexo的MarkDown渲染器与MathJax有冲突，可能会造成矩阵等使用不正常。所以在使用之前需要修改两个地方<br>编辑 <code>node_modules\marked\lib\marked.js</code> 脚本</p>
+</blockquote>
+<ol>
+<li>将451行 ，这一步取消了对 <code>\\,\{,\}</code> 的转义(escape)<pre><code class="js">escape: /^\\([\\`*{}\[\]()# +\-.!_&gt;])/,
+改为
+escape: /^\\([`*\[\]()# +\-.!_&gt;])/,
+</code></pre>
+</li>
+<li>将459行，这一步取消了对斜体标记 <code>_</code> 的转义<pre><code class="js">em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+改为
+em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+</code></pre>
+</li>
+</ol>
 <h3 id="表格样式"><a href="#表格样式" class="headerlink" title="表格样式"></a>表格样式</h3><p>目前提供了3中样式，修改 <code>_config.yml</code></p>
 <pre><code class="xml">table: green_title
 # table 的样式
