@@ -774,9 +774,9 @@ function sendXHR () {
         
         <tags>
             
-            <tag> 浏览器 </tag>
-            
             <tag> js </tag>
+            
+            <tag> 浏览器 </tag>
             
         </tags>
         
@@ -1364,7 +1364,7 @@ n/2,  &amp; \text{if $n$ is even} \\
 \end{cases}
 $$
 </code></pre>
-<p>$$<br>f(n) =<br>\begin{cases}<br>n/2,  &amp; \text{if $n$ is even} \<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p>
+<p>$$<br>f(n) =<br>\begin{cases}<br>n/2,  &amp; \text{if $n$ is even} \\<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p>
 <p>行内公式 <code>$y=ax+b$</code>：$y=ax+b$</p>
 <p>行内公式 <code>$\cos 2\theta = \cos^2 \theta - \sin^2 \theta = 2 \cos^2 \theta$</code>：$\cos 2\theta = \cos^2 \theta - \sin^2 \theta = 2 \cos^2 \theta$</p>
 <p>行内公式 <code>$M(\beta^{\ast}(D),D) \subseteq C$</code> ： $M(\beta^{\ast}(D),D) \subseteq C$</p>
@@ -1387,21 +1387,21 @@ $$
 \end{equation}
 $$
 </code></pre>
-<p>$$<br>\begin{equation}<br>\sum_{i=0}^n F_i \cdot \phi (H, p<em>i) - \sum</em>{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y<em>i}^2 )<br>\end{equation}<br>$$<br>$$<br>\begin{equation}<br>\beta^*(D) = \mathop{argmin} \limits</em>{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y<em>i f</em>{\beta}(x_i))<br>\end{equation}<br>$$</p>
+<p>$$<br>\begin{equation}<br>\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 )<br>\end{equation}<br>$$<br>$$<br>\begin{equation}<br>\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i))<br>\end{equation}<br>$$</p>
 <h2 id="MathJax公式手动编号"><a href="#MathJax公式手动编号" class="headerlink" title="MathJax公式手动编号"></a>MathJax公式手动编号</h2><p>可以在公式书写时使用 <code>\tag{手动编号}</code> 添加手动编号，例如：</p>
 <pre><code>$$
 \begin{equation}
 \sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 ) \tag{1.2.3}
 \end{equation}
 $$
-</code></pre><p>$$<br>\begin{equation}<br>\sum_{i=0}^n F_i \cdot \phi (H, p<em>i) - \sum</em>{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 ) \tag{1.2.3}<br>\end{equation}<br>$$</p>
+</code></pre><p>$$<br>\begin{equation}<br>\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 ) \tag{1.2.3}<br>\end{equation}<br>$$</p>
 <p>不加 <code>\begin{equation} \end{equation}</code> 也可以，例如：</p>
 <pre><code>$$
 \beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i)) \tag{我的公式3}
 $$
-</code></pre><p>$$<br>\beta^*(D) = \mathop{argmin} \limits<em>{\beta} \lambda {||\beta||}^2 + \sum</em>{i=1}^n max(0, 1 - y<em>i f</em>{\beta}(x_i)) \tag{我的公式3}<br>$$</p>
+</code></pre><p>$$<br>\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i)) \tag{我的公式3}<br>$$</p>
 <p>行内公式加\tag{}后会自动成为行间公式，例如： <code>$z = (p_0, ..... , p_n) \tag{公式21} $</code><br>$z = (p_0, ….. , p_n) \tag{公式21} $</p>
-<h3 id="4-其他公式书写技巧"><a href="#4-其他公式书写技巧" class="headerlink" title="4.其他公式书写技巧"></a>4.其他公式书写技巧</h3><p><strong>如何将下标放到正下方？</strong><br>① 如果是数学符号，那么直接用 <code>\limits</code> 命令放在正下方，如Max函数下面的取值范围，需要放在Max的正下方。可以如下实现：<br><code>$ \max \limits_{a&lt;x&lt;b}\{f(x)\} $</code><br>$ \max \limits_{a&lt;x&lt;b}{f(x)} $</p>
+<h3 id="4-其他公式书写技巧"><a href="#4-其他公式书写技巧" class="headerlink" title="4.其他公式书写技巧"></a>4.其他公式书写技巧</h3><p><strong>如何将下标放到正下方？</strong><br>① 如果是数学符号，那么直接用 <code>\limits</code> 命令放在正下方，如Max函数下面的取值范围，需要放在Max的正下方。可以如下实现：<br><code>$ \max \limits_{a&lt;x&lt;b}\{f(x)\} $</code><br>$ \max \limits_{a&lt;x&lt;b}\{f(x)\} $</p>
 <p>② 若是普通符号，那么要用 <code>\mathop</code> 先转成数学符号再用 <code>\limits</code>，如<br><code>$ \mathop{a}\limits_{i=1} $</code><br>$ \mathop{a}\limits_{i=1} $</p>
 <p><strong>MathJax矩阵输入</strong><br>无括号矩阵：</p>
 <pre><code>$$
@@ -1411,7 +1411,7 @@ $$
 1 &amp; z &amp; z^2 \\
 \end{matrix}
 $$
-</code></pre><p>$$<br>\begin{matrix}<br>1 &amp; x &amp; x^2 \<br>1 &amp; y &amp; y^2 \<br>1 &amp; z &amp; z^2 \<br>\end{matrix}<br>$$</p>
+</code></pre><p>$$<br>\begin{matrix}<br>1 &amp; x &amp; x^2 \\<br>1 &amp; y &amp; y^2 \\<br>1 &amp; z &amp; z^2 \\<br>\end{matrix}<br>$$</p>
 <p>有括号有竖线矩阵：</p>
 <pre><code>$$
 \left[
@@ -1421,9 +1421,9 @@ $$
     \end{array}
 \right]
 $$
-</code></pre><p>$$<br>\left[<br>    \begin{array}{cc|c}<br>      1&amp;2&amp;3\<br>      4&amp;5&amp;6<br>    \end{array}<br>\right]<br>$$</p>
+</code></pre><p>$$<br>\left[<br>    \begin{array}{cc|c}<br>      1&amp;2&amp;3\\<br>      4&amp;5&amp;6<br>    \end{array}<br>\right]<br>$$</p>
 <p>行内小矩阵：<br><code>$\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)$</code><br>$\bigl( \begin{smallmatrix} a &amp; b \ c &amp; d \end{smallmatrix} \bigr)$</p>
-<p>这里有个问题，上面的写法在矩阵内没有换行，我看了下源码，双反斜杠\又被MarkDown渲染引擎转义为单个反斜杠了，解决方法是写三个反斜杠\\或在双反斜杠后换行即可：</p>
+<p>这里有个问题，上面的写法在矩阵内没有换行，我看了下源码，双反斜杠\\又被MarkDown渲染引擎转义为单个反斜杠了，解决方法是写三个反斜杠\\\或在双反斜杠后换行即可：</p>
 <p><code>$\bigl( \begin{smallmatrix} a &amp; b \\\ c &amp; d \end{smallmatrix} \bigr)$</code><br>$\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)$</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://masikkk.com/article/hexo-13-MathJax/" target="_blank" rel="noopener">Hexo博客(13)添加MathJax数学公式渲染</a><br><a href="http://www.jianshu.com/p/7ab21c7f0674" target="_blank" rel="noopener">在Hexo中渲染MathJax数学公式</a><br><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a></p>
 ]]></content>
@@ -6074,10 +6074,10 @@ $ git ls-tree -r HEAD
 <p>假设你有一个项目，第一次提交中有一个文件，第二次提交增加了一个新的文件并修改了第一个文件，第三次提交再次修改了第一个文件。 由于第二次提交是一个未完成的工作，因此你想要压缩它。<br><img src="http://oncj6b2vl.bkt.clouddn.com/Ft27dwjZotq0XD5tYdVqc7tq-ibP.png" alt="git reset --hard"><br>那么可以运行 <code>git reset --soft HEAD~2</code> 来将 HEAD 分支移动到一个旧一点的提交上（即你想要保留的第一个提交）：<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fmv1H8vky1f0AnvlQmFFVphIn5ae.png" alt="git reset --soft HEAD~2"><br>然后只需再次运行 <code>git commit</code>：<br><img src="http://oncj6b2vl.bkt.clouddn.com/FgODKQfa32czRawEZ64luzMM3TRa.png" alt="git commit"><br>现在你可以查看可到达的历史，即将会推送的历史，现在看起来有个 <strong>v1</strong> 版 <code>file-a.txt</code> 的提交，接着第二个提交将 <code>file-a.txt</code> 修改成了 <strong>v3</strong> 版并增加了 <code>file-b.txt</code>。 包含 <strong>v2</strong> 版本的文件已经不在历史中了。</p>
 <h2 id="checkout"><a href="#checkout" class="headerlink" title="checkout"></a>checkout</h2><p>最后，你大概还想知道 <code>checkout</code> 和 <code>reset</code> 之间的区别。 和 reset 一样，checkout 也操纵三棵树，不过它有一点不同，这取决于你是否传给该命令一个文件路径。</p>
 <h3 id="不带路径"><a href="#不带路径" class="headerlink" title="不带路径"></a>不带路径</h3><p>运行 <code>git checkout [branch]</code> 与运行 <code>git reset --hard [branch]</code> 非常相似，它会更新所有三棵树使其看起来像 [branch]，不过有两点重要的区别。</p>
-<p>首先不同于 <code>reset --hard，checkout</code> 对工作目录是安全的，它会通过检查来确保不会将已更改的文件吹走。 其实它还更聪明一些。它会在工作目录中先试着简单合并一下，这样所有<em>还未修改过的</em>文件都会被更新。 而 <code>reset --hard</code> 则会不做检查就全面地替换所有东西。</p>
+<p>首先不同于 <code>reset --hard，checkout</code> 对工作目录是安全的，它会通过检查来确保不会将已更改的文件吹走。 其实它还更聪明一些。它会在工作目录中先试着简单合并一下，这样所有_还未修改过的_文件都会被更新。 而 <code>reset --hard</code> 则会不做检查就全面地替换所有东西。</p>
 <p>第二个重要的区别是如何更新 HEAD。 reset 会移动 HEAD 分支的指向，而 checkout 只会移动 HEAD 自身来指向另一个分支。</p>
 <p>例如，假设我们有 master 和 develop 分支，它们分别指向不同的提交；我们现在在 develop 上（所以 HEAD 指向它）。 如果我们运行 <code>git reset master</code>，那么 develop 自身现在会和 master 指向同一个提交。 而如果我们运行 <code>git checkout master</code> 的话，develop 不会移动，HEAD 自身会移动。 现在 HEAD 将会指向 master。</p>
-<p>所以，虽然在这两种情况下我们都移动 HEAD 使其指向了提交 A，但<em>做法</em>是非常不同的。 reset 会移动 HEAD 分支的指向，而 checkout 则移动 HEAD 自身。<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fpp-EOuRWOiTBtBWkjrvBIGHAlGm.png" alt=""></p>
+<p>所以，虽然在这两种情况下我们都移动 HEAD 使其指向了提交 A，但_做法_是非常不同的。 reset 会移动 HEAD 分支的指向，而 checkout 则移动 HEAD 自身。<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fpp-EOuRWOiTBtBWkjrvBIGHAlGm.png" alt=""></p>
 <h3 id="带路径"><a href="#带路径" class="headerlink" title="带路径"></a>带路径</h3><p>运行 <code>checkout</code> 的另一种方式就是指定一个文件路径，这会像 reset 一样不会移动 HEAD。 它就像 <code>git reset [branch] file</code> 那样用该次提交中的那个文件来更新索引，但是它也会覆盖工作目录中对应的文件。 它就像是 <code>git reset --hard [branch] file</code>（如果 reset 允许你这样运行的话）- 这样对工作目录并不安全，它也不会移动 HEAD。</p>
 <p>此外，同 <code>git reset</code> 和 <code>git add</code> 一样，<code>checkout</code> 也接受一个 –patch 选项，允许你根据选择一块一块地恢复文件内容。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>希望你现在熟悉并理解了 <code>reset</code> 命令，不过关于它和 <code>checkout</code> 之间的区别，你可能还是会有点困惑，毕竟不太可能记住不同调用的所有规则。</p>
