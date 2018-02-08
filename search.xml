@@ -3,6 +3,58 @@
   
     
     <entry>
+      <title><![CDATA[nginx配置记录]]></title>
+      <url>/2018/02/08/nginx-config/</url>
+      <content type="html"><![CDATA[<h2 id="启用https"><a href="#启用https" class="headerlink" title="启用https"></a>启用https</h2><h3 id="1-购买免费证书"><a href="#1-购买免费证书" class="headerlink" title="1.购买免费证书"></a>1.购买免费证书</h3><p>登录阿里云 -&gt; 控制台 -&gt; 安全（云盾） -&gt; CA证书服务 -&gt; 购买证书<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fr8xZ-Z1ylYPcoN1PCTk_5SDm6TM.png" alt="购买免费证书"></p>
+<h3 id="2-补全证书信息"><a href="#2-补全证书信息" class="headerlink" title="2.补全证书信息"></a>2.补全证书信息</h3><p>点击补全，绑定域名</p>
+<h3 id="3-下载并配置"><a href="#3-下载并配置" class="headerlink" title="3.下载并配置"></a>3.下载并配置</h3><p>选择下载 证书for nginx<br><img src="http://oncj6b2vl.bkt.clouddn.com/FnMUOU4IZY2ZbMZcqggp4v7JHtej.png" alt="下载证书"></p>
+<p>上面这个页面有相关的配置信息，下面简单介绍：</p>
+<p>① 将下载文件中的 <code>*.pem</code>、<code>*.key</code>, 拷贝到 nginx 目录下 的 <code>cert</code> 当然也可以是其他目录<br>② 修改 <code>nginx.conf</code></p>
+<pre><code class="conf">server {
+      listen       443 ssl;
+      server_name  xiangzhangshugongyi.com;
+
+      ssl_certificate      cert/214487958220243.pem;
+      ssl_certificate_key  cert/214487958220243.key;
+
+      ssl_session_cache    shared:SSL:1m;
+      ssl_session_timeout  5m;
+
+      ssl_ciphers  HIGH:!aNULL:!MD5;
+      ssl_prefer_server_ciphers  on;
+
+      location / {
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          proxy_set_header Host $http_host;
+          proxy_set_header X-Forwarded-Proto https;
+          proxy_redirect off;
+          proxy_connect_timeout      240;
+          proxy_send_timeout         240;
+          proxy_read_timeout         240;
+          # note, there is not SSL here! plain HTTP is used
+          proxy_pass http://127.0.0.1:8080;
+      }
+  }
+</code></pre>
+<p>③ 重启 nginx，通过 证书绑定域名进行 https 访问到 服务器跑在 8080 的服务</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 运维 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> nginx </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Mac神器-BTT(BetterTouchTool)不完全教程]]></title>
       <url>/2017/12/13/Mac-BetterTouchTool/</url>
       <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><img src="http://oncj6b2vl.bkt.clouddn.com/Fm6s-GR0yVJgdndJwftdj9eXL7LB.png" alt="BetterTouchTool"><br>BetterTouchTool 是一款专为Mac用户开发的 窗口管理/<code>Trackpad</code>(触控板)/<code>Magic Mouse</code>(苹果鼠标)/<code>Keyboard</code>(键盘)/<code>TouchBar</code> 功能增强制作的软件。</p>
@@ -391,11 +443,11 @@ xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用
             
             <tag> vim </tag>
             
+            <tag> linux </tag>
+            
             <tag> keybord </tag>
             
             <tag> emacs </tag>
-            
-            <tag> linux </tag>
             
         </tags>
         
