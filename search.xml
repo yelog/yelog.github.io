@@ -9,7 +9,7 @@
 <h3 id="2-补全证书信息"><a href="#2-补全证书信息" class="headerlink" title="2.补全证书信息"></a>2.补全证书信息</h3><p>点击补全，绑定域名</p>
 <h3 id="3-下载并配置"><a href="#3-下载并配置" class="headerlink" title="3.下载并配置"></a>3.下载并配置</h3><p>选择下载 证书for nginx<br><img src="http://oncj6b2vl.bkt.clouddn.com/FnMUOU4IZY2ZbMZcqggp4v7JHtej.png" alt="下载证书"></p>
 <p>上面这个页面有相关的配置信息，下面简单介绍：</p>
-<p>① 将下载文件中的 <code>*.pem</code>、<code>*.key</code>, 拷贝到 nginx 目录下 的 <code>cert</code> 当然也可以是其他目录<br>② 修改 <code>nginx.conf</code></p>
+<p>① 将下载文件中的 <code>*.pem</code>、<code>*.key</code>, 拷贝到 nginx 目录下 的 <code>cert</code> , 当然也可以是其他目录<br>② 修改 <code>nginx.conf</code></p>
 <pre><code class="conf">server {
       listen       443 ssl;
       server_name  xiangzhangshugongyi.com;
@@ -36,7 +36,7 @@
       }
   }
 </code></pre>
-<p>③ 重启 nginx，通过 证书绑定域名进行 https 访问到 服务器跑在 8080 的服务</p>
+<p>③ 重启 nginx，通过 证书绑定域名进行 https 访问到 服务器跑在 8080 的服务<br><img src="http://oncj6b2vl.bkt.clouddn.com/FtTXB9QIYoZOlPFKsGg-ImxbL58N.png" alt="通过https访问"></p>
 ]]></content>
       
         <categories>
@@ -443,11 +443,11 @@ xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用
             
             <tag> vim </tag>
             
-            <tag> linux </tag>
-            
             <tag> keybord </tag>
             
             <tag> emacs </tag>
+            
+            <tag> linux </tag>
             
         </tags>
         
@@ -826,9 +826,9 @@ function sendXHR () {
         
         <tags>
             
-            <tag> js </tag>
-            
             <tag> 浏览器 </tag>
+            
+            <tag> js </tag>
             
         </tags>
         
