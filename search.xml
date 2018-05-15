@@ -826,9 +826,9 @@ function sendXHR () {
         
         <tags>
             
-            <tag> js </tag>
-            
             <tag> 浏览器 </tag>
+            
+            <tag> js </tag>
             
         </tags>
         
@@ -3401,10 +3401,10 @@ rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
     </entry>
     
     <entry>
-      <title><![CDATA[常用SQL操作]]></title>
-      <url>/2017/04/14/sql-use/</url>
+      <title><![CDATA[PostgreSQL常用SQL操作]]></title>
+      <url>/2017/04/14/postgres-sql-use/</url>
       <content type="html"><![CDATA[<blockquote>
-<p>说明：文章中实例均在 <code>postgreSQL</code> 环境操作。</p>
+<p>说明：文章中实例均在 <code>PostgreSQL</code> 环境操作。</p>
 </blockquote>
 <h2 id="DDL数据定义语言"><a href="#DDL数据定义语言" class="headerlink" title="DDL数据定义语言"></a>DDL数据定义语言</h2><h3 id="数据库-角色-schema"><a href="#数据库-角色-schema" class="headerlink" title="数据库/角色/schema"></a>数据库/角色/schema</h3><pre><code class="sql">-- 创建一个数据库用户
 create role &quot;sp-boss&quot; createdb createrole login password &#39;sp-boss&#39;;
@@ -3496,6 +3496,8 @@ ___________________________
         
         
         <tags>
+            
+            <tag> postgres </tag>
             
             <tag> sql </tag>
             

@@ -123,7 +123,7 @@ $(document).keydown(function (e) {
 })
 
 $(document).keyup(function (e) {
-    if (!$(".nav-right form .search").is(":focus") && !$('#comments textarea,#comments input').is(':focus')) {
+    if (!$(".nav-right form .search").is(":focus") && !$('#comments textarea').is(':focus')) {
         if (e.keyCode == 83) { /* S - 显示/隐藏文章列表 */
             $(".full-toc .full").trigger("click");
         } else if (e.keyCode == 73 && ($(".nav").css('margin-left')=='0px') && !$('.title-list').hasClass('friend')) { /* I */
