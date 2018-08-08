@@ -551,7 +551,6 @@ div.ac > ul > li:before,
   width: 120px;
   height: 100%;
   background: #2a2935;
-  border-right: 1px solid #3c4149;
   box-shadow: inset -15px 0 15px -15px #222;
   float: left;
   position: relative;
@@ -642,10 +641,8 @@ div.ac > ul > li:before,
   box-shadow: inset 6px 0 0 #fff;
 }
 .nav-left ul li.active {
-  margin-right: -1px;
   color: #020202;
   box-shadow: inset 165px 0 0 #fff;
-  border-right: 1px solid #fafafa;
   position: relative;
 }
 .nav-left .left-bottom {

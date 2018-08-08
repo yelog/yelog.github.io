@@ -4141,7 +4141,13 @@ limit: 20
     <entry>
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
-      <content type="html"><![CDATA[<h2 id="2017年12月"><a href="#2017年12月" class="headerlink" title="2017年12月"></a>2017年12月</h2><h3 id="12-31-优化"><a href="#12-31-优化" class="headerlink" title="12-31 优化"></a>12-31 优化</h3><ol>
+      <content type="html"><![CDATA[<h2 id="2018年8月"><a href="#2018年8月" class="headerlink" title="2018年8月"></a>2018年8月</h2><h3 id="08-08-修复"><a href="#08-08-修复" class="headerlink" title="08-08 修复"></a>08-08 修复</h3><ol>
+<li><code>fix</code> : 修复左侧栏出现滚动条的问题</li>
+</ol>
+<h2 id="2018年4月"><a href="#2018年4月" class="headerlink" title="2018年4月"></a>2018年4月</h2><h3 id="04-18-修复"><a href="#04-18-修复" class="headerlink" title="04-18 修复"></a>04-18 修复</h3><ol>
+<li><code>fix</code> : 调整原文地址key，解决和 encrypt 的冲突</li>
+</ol>
+<h2 id="2017年12月"><a href="#2017年12月" class="headerlink" title="2017年12月"></a>2017年12月</h2><h3 id="12-31-优化"><a href="#12-31-优化" class="headerlink" title="12-31 优化"></a>12-31 优化</h3><ol>
 <li><code>enhance</code> : 关闭打赏，则屏蔽相关代码。</li>
 </ol>
 <h3 id="12-28-添加自定义菜单功能"><a href="#12-28-添加自定义菜单功能" class="headerlink" title="12-28 添加自定义菜单功能"></a>12-28 添加自定义菜单功能</h3><ol>
