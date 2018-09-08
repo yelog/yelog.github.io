@@ -1,7 +1,7 @@
 ## 为 layui 扩展的 表格列自动合并
 当前 `layui` 版本为 **2.3.0**
 
-在线demo： [http://yelog.org/layui-table-merge/](http://yelog.org/layui-table-merge/)
+在线demo： [http://yelog.org/layui-table-merge/](http://yelog.org/layui-table-merge/)    
 这个在线 demo就是本项目的 `index.html`。 可将项目 `clone` 到本地查看效果。
 
 ## 效果图
