@@ -106,8 +106,17 @@ table.render({
 
 <script type="text/javascript" src="layui/layui.js"></script>
 <script>
-    layui.use(['table','element'], function () {
-        var table = layui.table;
+
+    // 自定义模块
+    layui.config({
+        base: 'module/'
+    }).extend({
+        tableMerge: 'tableMerge'
+    });
+
+    layui.use(['table','element','tableMerge'], function () {
+        var table = layui.table,
+            tableMerge = layui.tableMerge;
 
         /**
          * 自动合并表格
@@ -132,6 +141,9 @@ table.render({
                 ,{field:'sentences', title:'名句', width:400}
                 ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
             ]]
+            ,done: function () {
+                tableMerge.render(this)
+            }
         });
 
         layui.element.on('tab(change)', function(data){

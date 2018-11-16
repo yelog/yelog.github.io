@@ -401,6 +401,7 @@ echo $name
 <blockquote>
 <p>注：被包含的文件 test1.sh 不需要可执行权限。</p>
 </blockquote>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference:"></a>reference:</h2><p>[1] <a href="http://www.runoob.com/linux/linux-shell.html" target="_blank" rel="noopener">http://www.runoob.com/linux/linux-shell.html</a></p>
 ]]></content>
       
         <categories>

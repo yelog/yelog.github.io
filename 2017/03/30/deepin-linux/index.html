@@ -92,9 +92,9 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="后端"> 后端 </li>
-    
     <li data-rel="数据库"> 数据库 </li>
+    
+    <li data-rel="后端"> 后端 </li>
     
     <li data-rel="大前端"> 大前端 </li>
     
@@ -153,30 +153,6 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">java</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">javaee</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">translation</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">encryption</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">spring</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">springmvc</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color3">mybatis</a>
     </li>
     
@@ -193,15 +169,19 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">AngularJs</a>
+        <a href="javascript:" class="color5">java</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">jsp</a>
+        <a href="javascript:" class="color2">translation</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">jstl</a>
+        <a href="javascript:" class="color1">encryption</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">javaee</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -217,11 +197,31 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">AngularJs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">jsp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">jstl</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">jQuery</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">node</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">spring</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">springmvc</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -281,11 +281,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">nginx</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">shell</a>
+        <a href="javascript:" class="color3">linux命令</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -301,15 +297,19 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">linux命令</a>
+        <a href="javascript:" class="color1">nginx</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">encoding</a>
+        <a href="javascript:" class="color1">shell</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color3">reading</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">encoding</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -337,15 +337,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">mac</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">efficiency</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">pjax</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">tale</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -357,11 +353,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">tale</a>
+        <a href="javascript:" class="color1">regex</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">regex</a>
+        <a href="javascript:" class="color4">mac</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">efficiency</a>
     </li>
     
     <div class="clearfix"></div>
@@ -1309,7 +1309,7 @@ MimeType=text/plain;
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#java','#javaee','#translation','#encryption','#spring','#springmvc','#mybatis','#PostgreSQL','#postgres','#sql','#AngularJs','#jsp','#jstl','#dubbo','#zookeeper','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#samba','#firewall','#运维','#centos','#docker','#docker仓库','#vim','#keybord','#emacs','#linux','#磁盘分区','#nginx','#shell','#ftp','#maven','#nexus','#linux命令','#encoding','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#IntellijIDEA','#tale','#regex',],
+            'data': ['#mybatis','#PostgreSQL','#postgres','#sql','#java','#translation','#encryption','#javaee','#dubbo','#zookeeper','#freemarker','#AngularJs','#jsp','#jstl','#jQuery','#node','#spring','#springmvc','#hexo','#js','#浏览器','#samba','#firewall','#运维','#centos','#docker','#docker仓库','#vim','#keybord','#emacs','#linux','#磁盘分区','#linux命令','#ftp','#maven','#nexus','#nginx','#shell','#reading','#encoding','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#pjax','#tale','#deepin','#IntellijIDEA','#regex','#mac','#efficiency',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
@@ -1347,7 +1347,7 @@ MimeType=text/plain;
 
         /*访问数量*/
         
-        $.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js");
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
         
 
         /*代码高亮，行号对齐*/
