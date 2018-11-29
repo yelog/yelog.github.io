@@ -6,19 +6,13 @@
   <meta name="keywords" content=" java , spring , springmvc ">
   <meta name="description" content="[转]SpringMVC执行流程及源码解析 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http://yelog.org/layui-select-multiple/ 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注     multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   l">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/README.html">
+<meta property="og:url" content="http://yelog.org/index.html">
 <meta property="og:site_name" content="叶落阁">
-<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http://yelog.org/layui-select-multiple/ 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注     multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   l">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
-<meta property="og:updated_time" content="2018-04-10T07:02:57.270Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="叶落阁">
-<meta name="twitter:description" content="为 layui 扩展的 下拉多选select在线demo： http://yelog.org/layui-select-multiple/ 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注     multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   l">
-<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -89,13 +83,13 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="数据库"> 数据库 </li>
-    
     <li data-rel="后端"> 后端 </li>
     
-    <li data-rel="大前端"> 大前端 </li>
+    <li data-rel="数据库"> 数据库 </li>
     
     <li data-rel="读书"> 读书 </li>
+    
+    <li data-rel="大前端"> 大前端 </li>
     
     <li data-rel="工具"> 工具 </li>
     
@@ -150,27 +144,7 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">postgres</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">sql</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">PostgreSQL</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">java</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">translation</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -182,6 +156,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">translation</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">dubbo</a>
     </li>
     
@@ -190,23 +168,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">AngularJs</a>
+        <a href="javascript:" class="color3">mybatis</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">jsp</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">jstl</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">freemarker</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">jQuery</a>
+        <a href="javascript:" class="color1">PostgreSQL</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -218,7 +184,39 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">postgres</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">reading</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">jsp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">jstl</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">AngularJs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">node</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">freemarker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">jQuery</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -234,10 +232,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">reading</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">3-hexo</a>
     </li>
     
@@ -250,15 +244,27 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">git</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">GitHub</a>
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">mac</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">efficiency</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">fragment_cache</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">IntellijIDEA</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -278,22 +284,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">mac</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">efficiency</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">IntellijIDEA</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">regex</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">firewall</a>
     </li>
     
@@ -302,7 +292,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">samba</a>
+        <a href="javascript:" class="color1">regex</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -310,15 +300,23 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">docker仓库</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">vim</a>
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">samba</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">docker仓库</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">磁盘分区</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">ftp</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -334,7 +332,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">ftp</a>
+        <a href="javascript:" class="color1">nginx</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -346,15 +344,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">nginx</a>
+        <a href="javascript:" class="color1">shell</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color3">linux命令</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">shell</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -1539,7 +1533,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2018-04-18 10:25:57'>2017-04-15 10:22</time>
+        创建时间:<time class="date" title='更新时间: 2018-11-29 11:23:34'>2017-04-15 10:22</time>
         
     </div>
     <div class="article-meta">
@@ -1600,7 +1594,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>在SpringMVC中主要是围绕着DispatcherServlet来设计，可以把它当做指挥中心。这里先说明一下SpringMVC文档给出的执行流程，然后是我们稍微具体的执行流程，最后是流程大致的源码跟踪。关于很很很详细的源码解析，这里暂先不做。</p>
-<h2 id="官方文档中的流程"><a href="#官方文档中的流程" class="headerlink" title="官方文档中的流程"></a>官方文档中的流程</h2><p>首先看下SpringMVC文档上给的流程图：<br><img src="http://oncj6b2vl.bkt.clouddn.com/DispatcherServlet.png" alt="官方流程图"><br>这张图片给了我们大概的执行流程：</p>
+<h2 id="官方文档中的流程"><a href="#官方文档中的流程" class="headerlink" title="官方文档中的流程"></a>官方文档中的流程</h2><p>首先看下SpringMVC文档上给的流程图：<br><img src="http://img.xiangzhangshugongyi.com/DispatcherServlet.png" alt="官方流程图"><br>这张图片给了我们大概的执行流程：</p>
 <ol>
 <li>用户请求首先发送到前端控制器DispatcherServlet，DispatcherServlet根据请求的信息来决定使用哪个页面控制器Controller（也就是我们通常编写的Controller）来处理该请求。找到控制器之后，DispatcherServlet将请求委托给控制器去处理。</li>
 <li>接下来页面控制器开始处理用户请求，页面控制器会根据请求信息进行处理，调用业务层等等，处理完成之后，会把结果封装成一个ModelAndView返回给DispatcherServlet。</li>
@@ -2005,7 +1999,7 @@
     <p><span>文章字数:</span><span class="post-count">2,615</span></p>
     <p><span>本文作者:</span><a href="javascript:void(0)" title="叶落阁">叶落阁</a></p>
     <p><span>发布时间:</span>2017-04-15, 10:22:05</p>
-    <p><span>最后更新:</span>2018-04-18, 10:25:57</p>
+    <p><span>最后更新:</span>2018-11-29, 11:23:34</p>
     <span>原始链接:</span><a class="post-url" href="/2017/04/15/SpringMVC-implementation-process/" title="[转]SpringMVC执行流程及源码解析">http://yelog.org/2017/04/15/SpringMVC-implementation-process/</a>
     <p>
         <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -2044,7 +2038,7 @@
 
     </div>
     <div class="full-toc">
-        <button class="full"><span class="min "></span></button>
+        <button class="full"><span class="min mobile"></span></button>
 <button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
 <div class="post-toc"><span class="post-toc-title">目录</span>
     <div class="post-toc-content">
@@ -2082,7 +2076,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#mybatis','#postgres','#sql','#PostgreSQL','#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#spring','#springmvc','#node','#hexo','#js','#浏览器','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#pjax','#deepin','#运维','#tale','#mac','#efficiency','#IntellijIDEA','#regex','#firewall','#centos','#samba','#docker','#docker仓库','#vim','#磁盘分区','#keybord','#emacs','#linux','#ftp','#maven','#nexus','#nginx','#linux命令','#shell','#encoding',],
+            'data': ['#java','#javaee','#encryption','#translation','#dubbo','#zookeeper','#mybatis','#PostgreSQL','#spring','#springmvc','#postgres','#sql','#reading','#jsp','#jstl','#AngularJs','#node','#freemarker','#jQuery','#hexo','#js','#浏览器','#3-hexo','#mathjax','#Git','#GitHub','#git','#mac','#efficiency','#fragment_cache','#IntellijIDEA','#pjax','#deepin','#运维','#tale','#firewall','#centos','#regex','#docker','#vim','#samba','#docker仓库','#磁盘分区','#ftp','#keybord','#emacs','#linux','#nginx','#maven','#nexus','#shell','#linux命令','#encoding',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');

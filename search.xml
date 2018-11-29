@@ -424,9 +424,9 @@ echo $name
     <entry>
       <title><![CDATA[nginx配置记录]]></title>
       <url>/2018/02/08/nginx-config/</url>
-      <content type="html"><![CDATA[<h2 id="启用https"><a href="#启用https" class="headerlink" title="启用https"></a>启用https</h2><h3 id="1-购买免费证书"><a href="#1-购买免费证书" class="headerlink" title="1.购买免费证书"></a>1.购买免费证书</h3><p>登录阿里云 -&gt; 控制台 -&gt; 安全（云盾） -&gt; CA证书服务 -&gt; 购买证书<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fr8xZ-Z1ylYPcoN1PCTk_5SDm6TM.png" alt="购买免费证书"></p>
+      <content type="html"><![CDATA[<h2 id="启用https"><a href="#启用https" class="headerlink" title="启用https"></a>启用https</h2><h3 id="1-购买免费证书"><a href="#1-购买免费证书" class="headerlink" title="1.购买免费证书"></a>1.购买免费证书</h3><p>登录阿里云 -&gt; 控制台 -&gt; 安全（云盾） -&gt; CA证书服务 -&gt; 购买证书<br><img src="http://img.xiangzhangshugongyi.com/Fr8xZ-Z1ylYPcoN1PCTk_5SDm6TM.png" alt="购买免费证书"></p>
 <h3 id="2-补全证书信息"><a href="#2-补全证书信息" class="headerlink" title="2.补全证书信息"></a>2.补全证书信息</h3><p>点击补全，绑定域名</p>
-<h3 id="3-下载并配置"><a href="#3-下载并配置" class="headerlink" title="3.下载并配置"></a>3.下载并配置</h3><p>选择下载 证书for nginx<br><img src="http://oncj6b2vl.bkt.clouddn.com/FnMUOU4IZY2ZbMZcqggp4v7JHtej.png" alt="下载证书"></p>
+<h3 id="3-下载并配置"><a href="#3-下载并配置" class="headerlink" title="3.下载并配置"></a>3.下载并配置</h3><p>选择下载 证书for nginx<br><img src="http://img.xiangzhangshugongyi.com/FnMUOU4IZY2ZbMZcqggp4v7JHtej.png" alt="下载证书"></p>
 <p>上面这个页面有相关的配置信息，下面简单介绍：</p>
 <p>① 将下载文件中的 <code>*.pem</code>、<code>*.key</code>, 拷贝到 nginx 目录下 的 <code>cert</code> , 当然也可以是其他目录<br>② 修改 <code>nginx.conf</code></p>
 <pre><code class="conf">server {
@@ -455,7 +455,7 @@ echo $name
       }
   }
 </code></pre>
-<p>③ 重启 nginx，通过 证书绑定域名进行 https 访问到 服务器跑在 8080 的服务<br><img src="http://oncj6b2vl.bkt.clouddn.com/FtTXB9QIYoZOlPFKsGg-ImxbL58N.png" alt="通过https访问"></p>
+<p>③ 重启 nginx，通过 证书绑定域名进行 https 访问到 服务器跑在 8080 的服务<br><img src="http://img.xiangzhangshugongyi.com/FtTXB9QIYoZOlPFKsGg-ImxbL58N.png" alt="通过https访问"></p>
 ]]></content>
       
         <categories>
@@ -476,7 +476,7 @@ echo $name
     <entry>
       <title><![CDATA[Mac神器-BTT(BetterTouchTool)不完全教程]]></title>
       <url>/2017/12/13/Mac-BetterTouchTool/</url>
-      <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><img src="http://oncj6b2vl.bkt.clouddn.com/Fm6s-GR0yVJgdndJwftdj9eXL7LB.png" alt="BetterTouchTool"><br>BetterTouchTool 是一款专为Mac用户开发的 窗口管理/<code>Trackpad</code>(触控板)/<code>Magic Mouse</code>(苹果鼠标)/<code>Keyboard</code>(键盘)/<code>TouchBar</code> 功能增强制作的软件。</p>
+      <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><img src="http://img.xiangzhangshugongyi.com/Fm6s-GR0yVJgdndJwftdj9eXL7LB.png" alt="BetterTouchTool"><br>BetterTouchTool 是一款专为Mac用户开发的 窗口管理/<code>Trackpad</code>(触控板)/<code>Magic Mouse</code>(苹果鼠标)/<code>Keyboard</code>(键盘)/<code>TouchBar</code> 功能增强制作的软件。</p>
 <p>这款软件不但可以设置全局的 手势/快捷键/TouchBar ，还可以给不同的应用定义不同的姿势，再配合上 Alfred 的 workflow，简直各种高难度姿势都能玩的出来。</p>
 <p>本文主要介绍以下功能：</p>
 <ol>
@@ -492,10 +492,10 @@ echo $name
 <li>将窗口移到左右边缘，最大化至半屏</li>
 <li>将窗口移到上边缘，最大化至全屏</li>
 </ul>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/lhfTY9ysdWOzOOKprnh0X6MTfoT8.gif" alt="窗口管理"><br>如果对默认配置不满意，也可以在如下图所示的位置来调整窗口展示：<br><img src="http://oncj6b2vl.bkt.clouddn.com/FkluTBqX_n2UXj2ICsOE1tW1yFan.png" alt="窗口管理配置"></p>
+<p><img src="http://img.xiangzhangshugongyi.com/lhfTY9ysdWOzOOKprnh0X6MTfoT8.gif" alt="窗口管理"><br>如果对默认配置不满意，也可以在如下图所示的位置来调整窗口展示：<br><img src="http://img.xiangzhangshugongyi.com/FkluTBqX_n2UXj2ICsOE1tW1yFan.png" alt="窗口管理配置"></p>
 <h2 id="2-帮-Trackpad-定义各种姿势"><a href="#2-帮-Trackpad-定义各种姿势" class="headerlink" title="2. 帮 Trackpad 定义各种姿势"></a>2. 帮 Trackpad 定义各种姿势</h2><h3 id="姿势选择"><a href="#姿势选择" class="headerlink" title="姿势选择"></a>姿势选择</h3><p>在界面选择 Trackpad（触摸板） -&gt; Add New Gesture（添加一个新姿势）</p>
 <p>左边可以选择生效的范围：全局或者某个应用</p>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/FsPEIn9TlNOwHkWHgyD32snaT7bY.jpg" alt="选择触摸板姿势"><br>如上图所示，姿势包括但不限于如：</p>
+<p><img src="http://img.xiangzhangshugongyi.com/FsPEIn9TlNOwHkWHgyD32snaT7bY.jpg" alt="选择触摸板姿势"><br>如上图所示，姿势包括但不限于如：</p>
 <ol>
 <li>单指：左下角单击、单指轻拍右上角、单指轻拍上边中点</li>
 <li>双指：两个手指捏、张开两指以两指中心为圆轴逆时针、中指拍住中央食指轻拍面板、双指从上边缘下滑</li>
@@ -504,23 +504,23 @@ echo $name
 <li>五指：五手指轻拍、五手指上滑</li>
 </ol>
 <p>上面只是列一些典型，更多姿势可以在上图中浏览。</p>
-<h3 id="绑定功能"><a href="#绑定功能" class="headerlink" title="绑定功能"></a>绑定功能</h3><p><img src="http://oncj6b2vl.bkt.clouddn.com/FjNWJgoefc34vGaUhruvWQr2R--5.png" alt="定义姿势功能"></p>
+<h3 id="绑定功能"><a href="#绑定功能" class="headerlink" title="绑定功能"></a>绑定功能</h3><p><img src="http://img.xiangzhangshugongyi.com/FjNWJgoefc34vGaUhruvWQr2R--5.png" alt="定义姿势功能"></p>
 <p>选择过姿势之后，也可以选择在按住某个功能键的时候才能使用（左下角）。</p>
 <p>右边是绑定功能：快捷键或动作。</p>
 <ul>
-<li><p>绑定快捷键举例：<br>比如 给chrome 设置 姿势（两指从触控板下边缘滑入），弹出开发者模式（快捷键绑定：command+option+i），如下图：<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fnuaa2qtpdf28autM22l3RPRtCau.jpg" alt="给chrome设置姿势，弹出开发者模式"></p>
+<li><p>绑定快捷键举例：<br>比如 给chrome 设置 姿势（两指从触控板下边缘滑入），弹出开发者模式（快捷键绑定：command+option+i），如下图：<br><img src="http://img.xiangzhangshugongyi.com/Fnuaa2qtpdf28autM22l3RPRtCau.jpg" alt="给chrome设置姿势，弹出开发者模式"></p>
 </li>
-<li><p>绑定动作举例：<br>设置 在任何应用内，五指下滑 锁屏，如下图<br><img src="http://oncj6b2vl.bkt.clouddn.com/FuTHBQJRvDVem9c14G608eXKtR7R.png" alt="五指下滑锁屏"></p>
+<li><p>绑定动作举例：<br>设置 在任何应用内，五指下滑 锁屏，如下图<br><img src="http://img.xiangzhangshugongyi.com/FuTHBQJRvDVem9c14G608eXKtR7R.png" alt="五指下滑锁屏"></p>
 </li>
 </ul>
-<h2 id="3-帮-Magic-Mouse-定义各种姿势"><a href="#3-帮-Magic-Mouse-定义各种姿势" class="headerlink" title="3. 帮 Magic Mouse 定义各种姿势"></a>3. 帮 Magic Mouse 定义各种姿势</h2><p>这个功能设置和 Trackpad 设置 大同小异，所以这边就不多讲，直接图示几个功能。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FgwGsolKj59jVnOkgI5vb4zdxNwm.png" alt="两指上滑呼出Mission Control"></p>
-<p>我快捷键设置了 option+E 鼠标取词翻译（欧陆词典），然后绑定到双指轻拍鼠标，即可触发翻译。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FsuJ3xU8k5ANQkuXdgpy0Xxkhdme.png" alt="双指轻拍-取词翻译"></p>
+<h2 id="3-帮-Magic-Mouse-定义各种姿势"><a href="#3-帮-Magic-Mouse-定义各种姿势" class="headerlink" title="3. 帮 Magic Mouse 定义各种姿势"></a>3. 帮 Magic Mouse 定义各种姿势</h2><p>这个功能设置和 Trackpad 设置 大同小异，所以这边就不多讲，直接图示几个功能。<br><img src="http://img.xiangzhangshugongyi.com/FgwGsolKj59jVnOkgI5vb4zdxNwm.png" alt="两指上滑呼出Mission Control"></p>
+<p>我快捷键设置了 option+E 鼠标取词翻译（欧陆词典），然后绑定到双指轻拍鼠标，即可触发翻译。<br><img src="http://img.xiangzhangshugongyi.com/FsuJ3xU8k5ANQkuXdgpy0Xxkhdme.png" alt="双指轻拍-取词翻译"></p>
 <h2 id="4-帮-Keyboard-定义各种姿势"><a href="#4-帮-Keyboard-定义各种姿势" class="headerlink" title="4. 帮 Keyboard 定义各种姿势"></a>4. 帮 Keyboard 定义各种姿势</h2><p>这个功能比较简单，设置一些 键盘快捷键或录制案件序列 来触发 一些动作或者其他快捷键功能。</p>
 <h2 id="5-帮任何应用自定义-TouchBar"><a href="#5-帮任何应用自定义-TouchBar" class="headerlink" title="5. 帮任何应用自定义 TouchBar"></a>5. 帮任何应用自定义 TouchBar</h2><p>这个重磅功能，可以帮助不支持touchbar的软件定制 TouchBar，是不是有点厉害。</p>
 <p>下面就以我给 IntelliJ IDEA 定制 TouchBar 为例 (没有F1 ~ F12 功能键，debug真的很痛苦，这个软件真的是雪中送炭)，展示一下使用效果</p>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/Fl0oSr-rNLr3f23_E_ZTlMEo46l1.png" alt="定制 TouchBar"></p>
+<p><img src="http://img.xiangzhangshugongyi.com/Fl0oSr-rNLr3f23_E_ZTlMEo46l1.png" alt="定制 TouchBar"></p>
 <p>如上图所示，我给 IntelliJ IDEA 添加了 四个功能 step over/step into/resume/evaluate</p>
-<p>添加完之后，切到 IntelliJ IDEA 软件中时，TouchBar 就显示我们添加的四个功能键， 如下图所示<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fi4MOmPsZDPj0Z2UEUxOqCbeIV1o.png" alt="IntelliJ IDEA 定制 TouchBar"></p>
+<p>添加完之后，切到 IntelliJ IDEA 软件中时，TouchBar 就显示我们添加的四个功能键， 如下图所示<br><img src="http://img.xiangzhangshugongyi.com/Fi4MOmPsZDPj0Z2UEUxOqCbeIV1o.png" alt="IntelliJ IDEA 定制 TouchBar"></p>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>BTT还有其他很方便的功能，这盘就介绍到这里，等之后更新了 Alfred 的 workflow 开发指南之后，再一起更新一篇有意思的 BTT+Alfred 效率流。</p>
 ]]></content>
       
@@ -843,8 +843,8 @@ keysym Caps_Lock = Escape
 keysym Escape = Caps_Lock
 </code></pre>
 <p>③. 执行 <code>xmodmap .xmodmaprc</code> 使之生效。</p>
-<h2 id="二、-将-右alt-改为-ctrl"><a href="#二、-将-右alt-改为-ctrl" class="headerlink" title="二、 将 右alt 改为 ctrl"></a>二、 将 右alt 改为 ctrl</h2><p>①. 查看需要修改键位的 keysym<br>通过 <code>xev | grep keycode</code> 获取右 <code>alt</code> 的 keysym 为 <code>Alt_R</code>。如下图所示：<br><img src="http://oncj6b2vl.bkt.clouddn.com/FvuqjLi5czeBluMTyIfv_xUOcu5k.png" alt="通过xev获取右alt的keysym"></p>
-<p>②. 查看 <code>Alt_R</code> 是哪个 modifier 使用的<br>通过 <code>xmodmap -pm</code> 查看，发现 <code>Alt_R</code> 是作为 modifier <code>mod1</code> 使用的。如下图所示：<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fib8QjT-Ccx30DCf2rF4WkzHsbOH.png" alt="查看 Alt_R 是作为 mode1 使用的"></p>
+<h2 id="二、-将-右alt-改为-ctrl"><a href="#二、-将-右alt-改为-ctrl" class="headerlink" title="二、 将 右alt 改为 ctrl"></a>二、 将 右alt 改为 ctrl</h2><p>①. 查看需要修改键位的 keysym<br>通过 <code>xev | grep keycode</code> 获取右 <code>alt</code> 的 keysym 为 <code>Alt_R</code>。如下图所示：<br><img src="http://img.xiangzhangshugongyi.com/FvuqjLi5czeBluMTyIfv_xUOcu5k.png" alt="通过xev获取右alt的keysym"></p>
+<p>②. 查看 <code>Alt_R</code> 是哪个 modifier 使用的<br>通过 <code>xmodmap -pm</code> 查看，发现 <code>Alt_R</code> 是作为 modifier <code>mod1</code> 使用的。如下图所示：<br><img src="http://img.xiangzhangshugongyi.com/Fib8QjT-Ccx30DCf2rF4WkzHsbOH.png" alt="查看 Alt_R 是作为 mode1 使用的"></p>
 <p>③. 修改 modifier</p>
 <pre><code class="bash">xmodmap -e &#39;remove mod1 = Alt_R&#39; # 解除原来绑定
 xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用
@@ -965,7 +965,7 @@ a8 1010 1000
 <li>执行 <code>nohup java -jar zkui-2.0-SNAPSHOT-jar-with-dependencies.jar &amp;</code></li>
 <li>测试 <code>http://localhost:9090</code>，如果能看到如下页面，表示安装成功。</li>
 </ol>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/Fherw3peRgh-grmGz6qkNri5J1aG.png" alt="登录页面"><br><img src="http://oncj6b2vl.bkt.clouddn.com/FvEVMOzSZBP4N4-Q14noQT_VsKF6.png" alt="首页"></p>
+<p><img src="http://img.xiangzhangshugongyi.com/Fherw3peRgh-grmGz6qkNri5J1aG.png" alt="登录页面"><br><img src="http://img.xiangzhangshugongyi.com/FvEVMOzSZBP4N4-Q14noQT_VsKF6.png" alt="首页"></p>
 <h2 id="三-使用dubbo"><a href="#三-使用dubbo" class="headerlink" title="三.使用dubbo"></a>三.使用dubbo</h2><ol>
 <li>在原来 SpringMVC+Spring+Mybatis 项目中，除了原来 spring 相关依赖外，还需要加入以下依赖<pre><code class="xml">&lt;dependency&gt;
      &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
@@ -1229,11 +1229,11 @@ function sendXHR () {
   xhr.send()
 }
 </code></pre>
-<p>超链接跳转后回来，该 xhr 也会被缓存。注意下图中的 XHR 一项 size 为 “from disk cache”：<br><img src="http://oncj6b2vl.bkt.clouddn.com/FiUT28A3DCpwPiyvJpsvhkdFQai1.png" alt=""></p>
+<p>超链接跳转后回来，该 xhr 也会被缓存。注意下图中的 XHR 一项 size 为 “from disk cache”：<br><img src="http://img.xiangzhangshugongyi.com/FiUT28A3DCpwPiyvJpsvhkdFQai1.png" alt=""></p>
 <p>为了强制发送 xhr，可以将 xhr 改为异步发送，或者加一个不重要的 query。</p>
 <pre><code class="javascript">setTimeout(sendXHR, 1000)
 </code></pre>
-<p>这样就能看到 xhr 真正发送出去了 :) 异步 xhr 缓存时机未经兼容性测试， 还是建议读者使用一个随机产生的 query。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FjwUrogpYSRjC5EGPGIH2x1t2Eff.png" alt=""></p>
+<p>这样就能看到 xhr 真正发送出去了 :) 异步 xhr 缓存时机未经兼容性测试， 还是建议读者使用一个随机产生的 query。<br><img src="http://img.xiangzhangshugongyi.com/FjwUrogpYSRjC5EGPGIH2x1t2Eff.png" alt=""></p>
 ]]></content>
       
         <categories>
@@ -1576,12 +1576,12 @@ $ tar xvf nexus-3.5.1-02-unix.tar.gz
 $ cd /nexus-3.5.1-02/bin/
 $ ./nexus start
 </code></pre>
-<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>打开网址：(<a href="http://192.168.0.86:8081/" target="_blank" rel="noopener">http://192.168.0.86:8081/</a>) , ip 为搭建私服的服务器 ip 。<br>用户名/密码： admin/admin123<br>出现一下画面，就说明安装成功了。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FkIlJRDdMC2yJFT9huIk9gBuCe15.png" alt="nexus"></p>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>打开网址：(<a href="http://192.168.0.86:8081/" target="_blank" rel="noopener">http://192.168.0.86:8081/</a>) , ip 为搭建私服的服务器 ip 。<br>用户名/密码： admin/admin123<br>出现一下画面，就说明安装成功了。<br><img src="http://img.xiangzhangshugongyi.com/FkIlJRDdMC2yJFT9huIk9gBuCe15.png" alt="nexus"></p>
 <h2 id="发布soul项目到私服"><a href="#发布soul项目到私服" class="headerlink" title="发布soul项目到私服"></a>发布soul项目到私服</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><ol>
-<li>创建yelog-release仓库（<em>名字自定义</em>）, type选择 ： release<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fk5UboZXVf4aegz63N4TDrITMh4V.png" alt="①.创建宿主仓库"><br><img src="http://oncj6b2vl.bkt.clouddn.com/FjAz8w445FFeVqDDzLLTLitOkZyV.png" alt="②.选择hosted类型"><br><img src="http://oncj6b2vl.bkt.clouddn.com/Ft2u5UPqdAFxldkkwAC2uVBtjDhF.png" alt="③.创建release类型仓库"></li>
-<li>创建yelog-snapshot仓库（<em>名字自定义</em>）， type选择 ： snapshot<br>重复上面 ① 和 ② 步，根据下图选择类型:<br><img src="http://oncj6b2vl.bkt.clouddn.com/FgX10ufvTV_YUK2vjrdRN3InKN1i.png" alt="创建snapshot类型仓库"></li>
+<li>创建yelog-release仓库（<em>名字自定义</em>）, type选择 ： release<br><img src="http://img.xiangzhangshugongyi.com/Fk5UboZXVf4aegz63N4TDrITMh4V.png" alt="①.创建宿主仓库"><br><img src="http://img.xiangzhangshugongyi.com/FjAz8w445FFeVqDDzLLTLitOkZyV.png" alt="②.选择hosted类型"><br><img src="http://img.xiangzhangshugongyi.com/Ft2u5UPqdAFxldkkwAC2uVBtjDhF.png" alt="③.创建release类型仓库"></li>
+<li>创建yelog-snapshot仓库（<em>名字自定义</em>）， type选择 ： snapshot<br>重复上面 ① 和 ② 步，根据下图选择类型:<br><img src="http://img.xiangzhangshugongyi.com/FgX10ufvTV_YUK2vjrdRN3InKN1i.png" alt="创建snapshot类型仓库"></li>
 </ol>
-<p>两个都创建完成后，效果如下：<br><img src="http://oncj6b2vl.bkt.clouddn.com/FjcMrajAM3anymLemHA2OoZZUut-.png" alt="创建自定义release和snapshot仓库"></p>
+<p>两个都创建完成后，效果如下：<br><img src="http://img.xiangzhangshugongyi.com/FjcMrajAM3anymLemHA2OoZZUut-.png" alt="创建自定义release和snapshot仓库"></p>
 <h3 id="pom中添加部署配置"><a href="#pom中添加部署配置" class="headerlink" title="pom中添加部署配置"></a>pom中添加部署配置</h3><p>url 复制上图中新建的仓库的 copy 按钮，复制url。</p>
 <pre><code class="xml">&lt;distributionManagement&gt;
     &lt;repository&gt;
@@ -1610,12 +1610,12 @@ $ ./nexus start
     &lt;/server&gt;
 &lt;/servers&gt;
 </code></pre>
-<h3 id="执行maven命令部署项目到私服上"><a href="#执行maven命令部署项目到私服上" class="headerlink" title="执行maven命令部署项目到私服上"></a>执行maven命令部署项目到私服上</h3><p>我这里直接使用IDE的插件执行<br><img src="http://oncj6b2vl.bkt.clouddn.com/Frs7jSIClJvF31AnyAAz5JXL-IAP.png" alt="部署项目到私服"><br>部署完成后，可以在 yelog-snapshot 仓库中，查看部署的情况，如下图所示<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fi1YtOKOAK7KMigjAc4S7ZfwLLjl.png" alt="查看部署情况"></p>
+<h3 id="执行maven命令部署项目到私服上"><a href="#执行maven命令部署项目到私服上" class="headerlink" title="执行maven命令部署项目到私服上"></a>执行maven命令部署项目到私服上</h3><p>我这里直接使用IDE的插件执行<br><img src="http://img.xiangzhangshugongyi.com/Frs7jSIClJvF31AnyAAz5JXL-IAP.png" alt="部署项目到私服"><br>部署完成后，可以在 yelog-snapshot 仓库中，查看部署的情况，如下图所示<br><img src="http://img.xiangzhangshugongyi.com/Fi1YtOKOAK7KMigjAc4S7ZfwLLjl.png" alt="查看部署情况"></p>
 <h2 id="从私服拉去依赖库"><a href="#从私服拉去依赖库" class="headerlink" title="从私服拉去依赖库"></a>从私服拉去依赖库</h2><blockquote>
 <p>上一步我们已经将项目 <code>soul</code> 部署到私服上了，这一步介绍项目 <code>ssm</code> 如何依赖引用 <code>soul</code>。<br>私服中的 maven-central 可以链接远程仓库。这样，当有依赖在私服中找不到后，就可以通过远程仓库自动下载依赖。</p>
 </blockquote>
 <h3 id="pom-文件中添加如下配置"><a href="#pom-文件中添加如下配置" class="headerlink" title="pom 文件中添加如下配置"></a>pom 文件中添加如下配置</h3><ol>
-<li>public库成员仓库中添加我们自定义的仓库<br><img src="http://oncj6b2vl.bkt.clouddn.com/FlmsId2u1z_vQ__zlfzoAIytujm3.png" alt="public库设置成员仓库"></li>
+<li>public库成员仓库中添加我们自定义的仓库<br><img src="http://img.xiangzhangshugongyi.com/FlmsId2u1z_vQ__zlfzoAIytujm3.png" alt="public库设置成员仓库"></li>
 <li>配置远程仓库为私服地址。<pre><code class="xml">&lt;repositories&gt;
  &lt;repository&gt;
      &lt;id&gt;public&lt;/id&gt;
@@ -1645,7 +1645,7 @@ $ ./nexus start
 &lt;/dependency&gt;
 </code></pre>
 </li>
-<li>ssm项目就可以引用到soul代码<br><img src="http://oncj6b2vl.bkt.clouddn.com/FvVCRBtMwy5ckbase3E3wM9JUXp6.png" alt="在代码中就可以直接引用到部署到私服的soul项目代码"></li>
+<li>ssm项目就可以引用到soul代码<br><img src="http://img.xiangzhangshugongyi.com/FvVCRBtMwy5ckbase3E3wM9JUXp6.png" alt="在代码中就可以直接引用到部署到私服的soul项目代码"></li>
 </ol>
 <p>本文结束。</p>
 ]]></content>
@@ -2046,7 +2046,7 @@ $ chown nobody:nobody
       <url>/2017/06/26/gitment/</url>
       <content type="html"><![CDATA[<p>自从多说要停止服务时，就开始关注第三方评论系统，现在的评论系统都有这样或那样的问题，见 <a href="/2017/03/23/the-third-comment/" title="关于第三方评论系统">关于第三方评论系统</a> 。忽然看到作者 孙士权 的一片文章 <a href="https://imsun.net/posts/gitment-introduction/" target="_blank" rel="noopener">Gitment：使用 GitHub Issues 搭建评论系统</a> 。</p>
 <p>立即就将 <code>gitment</code> 集成到 <code>3-hexo</code> 主题内。本篇文章只讲在 <code>3-hexo</code> 内如何使用，如果想自定义，可以参考上面原文。</p>
-<h2 id="注册-OAuth-Application"><a href="#注册-OAuth-Application" class="headerlink" title="注册 OAuth Application"></a>注册 OAuth Application</h2><p><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击此处</a> 来注册一个新的 OAuth Application。其他内容可以随意填写，但要确保填入正确的 callback URL（一般是评论页面对应的域名，如 <a href="http://yelog.org）。" target="_blank" rel="noopener">http://yelog.org）。</a><br><img src="http://oncj6b2vl.bkt.clouddn.com/FsumVHpCC4h5JxRNg0TiKlMf0b1Y.png" alt="作者是这样填的"></p>
+<h2 id="注册-OAuth-Application"><a href="#注册-OAuth-Application" class="headerlink" title="注册 OAuth Application"></a>注册 OAuth Application</h2><p><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击此处</a> 来注册一个新的 OAuth Application。其他内容可以随意填写，但要确保填入正确的 callback URL（一般是评论页面对应的域名，如 <a href="http://yelog.org）。" target="_blank" rel="noopener">http://yelog.org）。</a><br><img src="http://img.xiangzhangshugongyi.com/FsumVHpCC4h5JxRNg0TiKlMf0b1Y.png" alt="作者是这样填的"></p>
 <h2 id="使用-gitment-评论系统"><a href="#使用-gitment-评论系统" class="headerlink" title="使用 gitment 评论系统"></a>使用 gitment 评论系统</h2><p>修改主题 <code>_config.yml</code></p>
 <pre><code class="xml">gitment:
   on: true  # 启用gitment评论系统
@@ -2058,7 +2058,7 @@ $ chown nobody:nobody
 <h2 id="部署并初始化"><a href="#部署并初始化" class="headerlink" title="部署并初始化"></a>部署并初始化</h2><p>1.发布 hexo</p>
 <pre><code class="bash">$ hexo clear &amp;&amp; hexo g &amp;&amp; hexo d
 </code></pre>
-<p>2.打开发布的blog，登录github账号，并点击 <code>Initialize Comments</code>。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FnO9sHY-eFVXwnLplwsP9NRvityH.png" alt="初始化本页的评论"></p>
+<p>2.打开发布的blog，登录github账号，并点击 <code>Initialize Comments</code>。<br><img src="http://img.xiangzhangshugongyi.com/FnO9sHY-eFVXwnLplwsP9NRvityH.png" alt="初始化本页的评论"></p>
 <p>3.现在其他人就可以进行评论了</p>
 <h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><p>整体评论系统做的简洁，整体来说是个不错的系统。</p>
 ]]></content>
@@ -2096,7 +2096,7 @@ else
     echo -e &quot;\033[37m 缺少关键词，通过&#39;pay help&#39;查看帮助信息 \033[0m&quot;
 fi
 </code></pre>
-<p>却出现了错乱,如下图所示<br><img src="http://oncj6b2vl.bkt.clouddn.com/FoIefs-sorNDjfPD69gH05is3tc5.png" alt="缩进乱掉"></p>
+<p>却出现了错乱,如下图所示<br><img src="http://img.xiangzhangshugongyi.com/FoIefs-sorNDjfPD69gH05is3tc5.png" alt="缩进乱掉"></p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>vim 没有相应的程序来处理这个从其他应用复制粘贴的过程，所以Vim通过插入键盘输入的buffer来模拟这个粘贴的过程，这个时候Vim会以为这是用户输入的。</p>
 <p>所以问题是：当上一行结束，光标进入下一行时Vim会自动以上一行的的缩进为初始位置。这样就会破坏原始文件的缩进。</p>
 <h2 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h2><p>经过一番google，发现vim提供了 <code>paste</code> 选项，进入 paste 模式后，就可以正常缩进了。</p>
@@ -2106,7 +2106,7 @@ fi
 # 退出 paste 模式
 :set nopaste
 </code></pre>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/FpHOECFUPpgkJBKhKE_wcRYvPJ81.png" alt="缩进正常"></p>
+<p><img src="http://img.xiangzhangshugongyi.com/FpHOECFUPpgkJBKhKE_wcRYvPJ81.png" alt="缩进正常"></p>
 <p>如果不想每次都执行这个命令，可以在 <code>～/.vimrc</code> 中添加一行配置 <code>set pastetoggle=&lt;F12&gt;</code> ，这样就可以通过F12快速在paste模式中切换。</p>
 ]]></content>
       
@@ -2203,7 +2203,7 @@ $ mv tale /home
 -v /home/tale:/var/tale_home -p 80:9000 \
 -m 1024m --memory-swap -1 tale:1.0
 </code></pre>
-<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>浏览器进入 <code>127.0.0.1</code> 即可访问<br><img src="http://oncj6b2vl.bkt.clouddn.com/FtwT7OgspZR3YjpJhH5VSuUmnLjP.png" alt="管理后台"><br><img src="http://oncj6b2vl.bkt.clouddn.com/FnFBhuwvQ4atG2F2ahdj5PSFF3eL.png" alt="首页"><br><img src="http://oncj6b2vl.bkt.clouddn.com/Fg1891hUmEATDbFDBgdBsncb4U1U.png" alt="文章"></p>
+<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>浏览器进入 <code>127.0.0.1</code> 即可访问<br><img src="http://img.xiangzhangshugongyi.com/FtwT7OgspZR3YjpJhH5VSuUmnLjP.png" alt="管理后台"><br><img src="http://img.xiangzhangshugongyi.com/FnFBhuwvQ4atG2F2ahdj5PSFF3eL.png" alt="首页"><br><img src="http://img.xiangzhangshugongyi.com/Fg1891hUmEATDbFDBgdBsncb4U1U.png" alt="文章"></p>
 <h2 id="体验"><a href="#体验" class="headerlink" title="体验"></a>体验</h2><h3 id="管理后台"><a href="#管理后台" class="headerlink" title="管理后台"></a>管理后台</h3><ol>
 <li>文章支持Markdown和富文本。</li>
 <li>文章/评论/友链/标签管理/主题，设置简单，一目了然</li>
@@ -3485,7 +3485,7 @@ rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
       <title><![CDATA[[转]SpringMVC执行流程及源码解析]]></title>
       <url>/2017/04/15/SpringMVC-implementation-process/</url>
       <content type="html"><![CDATA[<p>在SpringMVC中主要是围绕着DispatcherServlet来设计，可以把它当做指挥中心。这里先说明一下SpringMVC文档给出的执行流程，然后是我们稍微具体的执行流程，最后是流程大致的源码跟踪。关于很很很详细的源码解析，这里暂先不做。</p>
-<h2 id="官方文档中的流程"><a href="#官方文档中的流程" class="headerlink" title="官方文档中的流程"></a>官方文档中的流程</h2><p>首先看下SpringMVC文档上给的流程图：<br><img src="http://oncj6b2vl.bkt.clouddn.com/DispatcherServlet.png" alt="官方流程图"><br>这张图片给了我们大概的执行流程：</p>
+<h2 id="官方文档中的流程"><a href="#官方文档中的流程" class="headerlink" title="官方文档中的流程"></a>官方文档中的流程</h2><p>首先看下SpringMVC文档上给的流程图：<br><img src="http://img.xiangzhangshugongyi.com/DispatcherServlet.png" alt="官方流程图"><br>这张图片给了我们大概的执行流程：</p>
 <ol>
 <li>用户请求首先发送到前端控制器DispatcherServlet，DispatcherServlet根据请求的信息来决定使用哪个页面控制器Controller（也就是我们通常编写的Controller）来处理该请求。找到控制器之后，DispatcherServlet将请求委托给控制器去处理。</li>
 <li>接下来页面控制器开始处理用户请求，页面控制器会根据请求信息进行处理，调用业务层等等，处理完成之后，会把结果封装成一个ModelAndView返回给DispatcherServlet。</li>
@@ -4118,7 +4118,7 @@ MimeType=text/plain;
     <entry>
       <title><![CDATA[hexo报错合集]]></title>
       <url>/2017/03/27/hexo-error-collection/</url>
-      <content type="html"><![CDATA[<h2 id="hexo-server时报错"><a href="#hexo-server时报错" class="headerlink" title="hexo server时报错"></a>hexo server时报错</h2><h3 id="FATAL-watch-…-ENOSPC"><a href="#FATAL-watch-…-ENOSPC" class="headerlink" title="FATAL watch … ENOSPC"></a>FATAL watch … ENOSPC</h3><p>日志：2017-03-27 执行 <code>hexo server</code> 后报错。<br><strong>如图：</strong><br><img src="http://oncj6b2vl.bkt.clouddn.com/FqCfDl6mN_Pb1_iH8fRuC5sz4A6o.png" alt="watch ENOSPC"><br><strong>分析问题：</strong><br>node.js 中 watch 的文件数是有限制的。<br><strong>解决问题：</strong></p>
+      <content type="html"><![CDATA[<h2 id="hexo-server时报错"><a href="#hexo-server时报错" class="headerlink" title="hexo server时报错"></a>hexo server时报错</h2><h3 id="FATAL-watch-…-ENOSPC"><a href="#FATAL-watch-…-ENOSPC" class="headerlink" title="FATAL watch … ENOSPC"></a>FATAL watch … ENOSPC</h3><p>日志：2017-03-27 执行 <code>hexo server</code> 后报错。<br><strong>如图：</strong><br><img src="http://img.xiangzhangshugongyi.com/FqCfDl6mN_Pb1_iH8fRuC5sz4A6o.png" alt="watch ENOSPC"><br><strong>分析问题：</strong><br>node.js 中 watch 的文件数是有限制的。<br><strong>解决问题：</strong></p>
 <pre><code class="bash">$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p
 </code></pre>
 ]]></content>
@@ -4272,7 +4272,7 @@ link:
 <pre><code class="xml">comment_count: true
 # 文章标题下方显示评论数
 </code></pre>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/FlDHXpVnJ-ECFCehRBoKkQMlqj_R.png" alt="开启效果"></p>
+<p><img src="http://img.xiangzhangshugongyi.com/FlDHXpVnJ-ECFCehRBoKkQMlqj_R.png" alt="开启效果"></p>
 <h3 id="评论区预加载"><a href="#评论区预加载" class="headerlink" title="评论区预加载"></a>评论区预加载</h3><p>开启设置 <code>_config.yml</code></p>
 <pre><code class="xml">preload_comment: false
 </code></pre>
@@ -4280,7 +4280,7 @@ link:
 <li>false: 当点击评论条等区域时再加载评论模块</li>
 <li>true: 页面加载时加载评论区</li>
 </ol>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/FrYn2xsPMLBizQZ_p_mCa-hJYTG_.png" alt="关闭效果"></p>
+<p><img src="http://img.xiangzhangshugongyi.com/FrYn2xsPMLBizQZ_p_mCa-hJYTG_.png" alt="关闭效果"></p>
 <h2 id="样式设置"><a href="#样式设置" class="headerlink" title="样式设置"></a>样式设置</h2><h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p>首先要关闭hexo根目录下<code>_config.yml</code>中的高亮设置：</p>
 <pre><code class="xml">highlight:
   enable: false
@@ -4411,7 +4411,7 @@ alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add 
       <url>/2017/03/23/the-third-comment/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>昨天登陆blog看到了多说的通知：将于2017年6月1日正式关停服务，其实并没有太大的意外。</p>
 <p>自从去年9月份disqus被GFW认证后，被迫转移到多说，一看就是很久没有维护了，感觉关闭就是迟早的事，没想到刚用5个月。。</p>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/FiTeQPGuPt1W5BuUj2NcruE_eHkv.jpg" alt="好想使用disqus啊！！！"></p>
+<p><img src="http://img.xiangzhangshugongyi.com/FiTeQPGuPt1W5BuUj2NcruE_eHkv.jpg" alt="好想使用disqus啊！！！"></p>
 <p>不能用disqus不开心，然后就又开始调查第三方评论系统。</p>
 <h2 id="友言"><a href="#友言" class="headerlink" title="友言"></a>友言</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ol>
 <li>界面挺像disqus的</li>
@@ -4420,7 +4420,7 @@ alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add 
 <li>支持自定义界面</li>
 <li>注册即用</li>
 </ol>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/Fu3w7t5F_blvaZ2xyRmNaZ70wDJD.png" alt="友言"></p>
+<p><img src="http://img.xiangzhangshugongyi.com/Fu3w7t5F_blvaZ2xyRmNaZ70wDJD.png" alt="友言"></p>
 <h2 id="网易云跟帖"><a href="#网易云跟帖" class="headerlink" title="网易云跟帖"></a>网易云跟帖</h2><h3 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h3><ol>
 <li>界面简洁</li>
 <li>网易作为后台，不容易倒</li>
@@ -4429,7 +4429,7 @@ alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add 
 <li>我在国外加载巨慢，不过查了国内的延迟，平均20ms左右。</li>
 <li>注册即用</li>
 </ol>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/Fhb1TtKq7JWIj91gU90Mh4o5Ay12.png" alt="网易云跟帖"></p>
+<p><img src="http://img.xiangzhangshugongyi.com/Fhb1TtKq7JWIj91gU90Mh4o5Ay12.png" alt="网易云跟帖"></p>
 <h2 id="畅言"><a href="#畅言" class="headerlink" title="畅言"></a>畅言</h2><h3 id="特点-2"><a href="#特点-2" class="headerlink" title="特点"></a>特点</h3><ol>
 <li>界面简介</li>
 <li>打印记的功能</li>
@@ -4437,7 +4437,7 @@ alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add 
 <li>支持获取评论数</li>
 <li>需要ICP备案</li>
 </ol>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/FufklpIz5UFXJsiKGGjTP9DnMymz.png" alt="畅言"></p>
+<p><img src="http://img.xiangzhangshugongyi.com/FufklpIz5UFXJsiKGGjTP9DnMymz.png" alt="畅言"></p>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>想要尝试一下畅言，功能符合我的预期，不过要ICP备案，最近由于想要开启国内CDN加速，也需要备案。</p>
 <p><code>蛋四！！</code> 我在国外，等回国的时候再备案吧，暂时现使用 <code>disqus</code>,如果想评论，国内只能翻墙了。╮（╯＿╰）╭</p>
 <p>最后，多说一路走好。</p>
@@ -4466,7 +4466,7 @@ alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add 
 <p>本文会非常详细，以确保没有计算机背景的小白也可以轻松上手</p>
 <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>1).下载：从官网下载windows版本的git,地址在下方。<br><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a><br>2).安装：双击安装，一直点击下一步即可</p>
 <h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>1).下载：从官网下载windows版本的node.js安装包（.msi后缀），地址下方<br><a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/</a><br>2).安装：双击安装，一直点击下一步即可</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>在任意目录如桌面，点击鼠标右键，选择Git Bash Here这一项，打开git bash命令框（前提是git安装成功），如下图<br><img src="http://oncj6b2vl.bkt.clouddn.com/FraxkCebAzx-dlPGsUmgcLZRR_Lj.png" alt="鼠标右键"><br>在打开的命令窗内输入下面的命令进行安装</p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>在任意目录如桌面，点击鼠标右键，选择Git Bash Here这一项，打开git bash命令框（前提是git安装成功），如下图<br><img src="http://img.xiangzhangshugongyi.com/FraxkCebAzx-dlPGsUmgcLZRR_Lj.png" alt="鼠标右键"><br>在打开的命令窗内输入下面的命令进行安装</p>
 <pre><code class="bash">npm install hexo-cli -g
 </code></pre>
 <p>安装过后，输入 <code>hexo -v</code>，出现下面信息，则表示安装成功</p>
@@ -4605,7 +4605,7 @@ limit: 20
 <pre><code class="xml">link:
   rss: /atom.xml
 </code></pre>
-<h3 id="5-效果"><a href="#5-效果" class="headerlink" title="5.效果"></a>5.效果</h3><p><strong>链接图标：</strong><br><img src="http://oncj6b2vl.bkt.clouddn.com/FlmC3WWi9jzgVRdSKJ2_li5UHVsr.png" alt="图标"><br><strong>链接地址效果</strong><br><img src="http://oncj6b2vl.bkt.clouddn.com/FuTy1C-xSgdTTOZch_UH1355NAs9.png" alt="效果"></p>
+<h3 id="5-效果"><a href="#5-效果" class="headerlink" title="5.效果"></a>5.效果</h3><p><strong>链接图标：</strong><br><img src="http://img.xiangzhangshugongyi.com/FlmC3WWi9jzgVRdSKJ2_li5UHVsr.png" alt="图标"><br><strong>链接地址效果</strong><br><img src="http://img.xiangzhangshugongyi.com/FuTy1C-xSgdTTOZch_UH1355NAs9.png" alt="效果"></p>
 <h2 id="添加Sitemap"><a href="#添加Sitemap" class="headerlink" title="添加Sitemap"></a>添加Sitemap</h2><p>Sitemap，网站地图，是网站优化中重要的一环，无论是对于访问者还是对于搜索引擎。</p>
 <h3 id="1-用npm安装插件-1"><a href="#1-用npm安装插件-1" class="headerlink" title="1.用npm安装插件"></a>1.用<code>npm</code>安装插件</h3><pre><code class="bash">$ npm install hexo-generator-sitemap --save
 </code></pre>
@@ -4614,7 +4614,7 @@ limit: 20
 - hexo-generator-sitemap
 </code></pre>
 <h3 id="3-验证配置是否成功-1"><a href="#3-验证配置是否成功-1" class="headerlink" title="3.验证配置是否成功"></a>3.验证配置是否成功</h3><p>执行 <code>hexo g</code>，查看一下public目录下，如果有 <code>sitemap.xml</code> 文件，则表明配置成功。</p>
-<h3 id="4-效果"><a href="#4-效果" class="headerlink" title="4.效果"></a>4.效果</h3><p>访问 /sitemap.xml 就能看到生成的站点地图了<br><img src="http://oncj6b2vl.bkt.clouddn.com/FtFLZ2CSfYa_IKLS-a9ymvKvaztp.png" alt="站点地图效果"></p>
+<h3 id="4-效果"><a href="#4-效果" class="headerlink" title="4.效果"></a>4.效果</h3><p>访问 /sitemap.xml 就能看到生成的站点地图了<br><img src="http://img.xiangzhangshugongyi.com/FtFLZ2CSfYa_IKLS-a9ymvKvaztp.png" alt="站点地图效果"></p>
 ]]></content>
       
         <categories>
@@ -5004,7 +5004,7 @@ function pajx_loadDuodsuo(){
 <li>运行JavaScript</li>
 <li>创建渲染树</li>
 <li>生成布局</li>
-<li>绘制页面<br><img src="http://oncj6b2vl.bkt.clouddn.com/FlJb4QEGB2Km-q9PYHMVe4ic37sz.png" alt="CRP的6个步骤"></li>
+<li>绘制页面<br><img src="http://img.xiangzhangshugongyi.com/FlJb4QEGB2Km-q9PYHMVe4ic37sz.png" alt="CRP的6个步骤"></li>
 </ol>
 <h2 id="构建DOM树"><a href="#构建DOM树" class="headerlink" title="构建DOM树"></a>构建DOM树</h2><p>DOM（Document Object Model）树是一个表示整个解析过的HTML页面的对象，从根节点<code>&lt;html&gt;</code>开始，会创建页面中的每个 元素/文本 节点。嵌套在其他元素中的元素作为字节点，每个节点都包含了其所有的元素属性，例如： 一个<code>&lt;a&gt;</code>节点将有 <code>href</code> 属性与其关联。</p>
 <p>举个例子</p>
@@ -5027,7 +5027,7 @@ function pajx_loadDuodsuo(){
 &lt;/body&gt;  
 &lt;/html&gt;
 </code></pre>
-<p>上面的 HTML 将会被解析成下面的DOM树<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fq6vahHSu_NZGyeWGuhZ8dFmBS0O.png" alt="DOM树"><br>HTML的优点在于它不必等待整个页面加载完成才呈现页面，可以解析一部分，显示一部分。但是像CSS、JavaScript等其他资源会阻止页面渲染。</p>
+<p>上面的 HTML 将会被解析成下面的DOM树<br><img src="http://img.xiangzhangshugongyi.com/Fq6vahHSu_NZGyeWGuhZ8dFmBS0O.png" alt="DOM树"><br>HTML的优点在于它不必等待整个页面加载完成才呈现页面，可以解析一部分，显示一部分。但是像CSS、JavaScript等其他资源会阻止页面渲染。</p>
 <h2 id="构建CSSOM树"><a href="#构建CSSOM树" class="headerlink" title="构建CSSOM树"></a>构建CSSOM树</h2><p>CSSOM（CSS Object Model） 是一个跟DOM相关的样式对象。它跟DOM的表示方法是相似的，但是不论显式声明还是隐式继承，每个节点都存在关联样式。</p>
 <p>In the style.css file from the document mentioned above, we have the folowing styles<br>在上面提到的html页面的<code>style.css</code>中的样式如下</p>
 <pre><code class="css">body { font-size: 18px; }
@@ -5040,7 +5040,7 @@ h2 { font-size: 20px; }
 
 footer { display: none; }
 </code></pre>
-<p>它会被构建成下面的CSSOM树<br><img src="http://oncj6b2vl.bkt.clouddn.com/FqMiZIUxvPBV4X-PnDFh6iGrdxy0.png" alt="CSSOM树"><br>CSS 被认为是 “渲染阻塞资源”，它意味着如果不首先完全解析资源，渲染树是无法构建的。CSS由于它的层叠继承的性质，不能像HTML一样解析一部分，显示一部分。定义在文档后面的样式会覆盖或改写之前定义的样式，因为在整个样式表都被解析之前，如果我们使用了在样式表中较早定义的样式，那错误的样式将被应用。这意味着CSS必须被全部解析之后，才能开始下一步。</p>
+<p>它会被构建成下面的CSSOM树<br><img src="http://img.xiangzhangshugongyi.com/FqMiZIUxvPBV4X-PnDFh6iGrdxy0.png" alt="CSSOM树"><br>CSS 被认为是 “渲染阻塞资源”，它意味着如果不首先完全解析资源，渲染树是无法构建的。CSS由于它的层叠继承的性质，不能像HTML一样解析一部分，显示一部分。定义在文档后面的样式会覆盖或改写之前定义的样式，因为在整个样式表都被解析之前，如果我们使用了在样式表中较早定义的样式，那错误的样式将被应用。这意味着CSS必须被全部解析之后，才能开始下一步。</p>
 <p>如果CSS文件适用于当前设备的话，仅仅只是会阻塞渲染。<code>&lt;link rel=&quot;stylesheet&quot;&gt;</code>标签可以使用<code>media</code>属性，用来指定特定样式宽度的特定媒体查询。</p>
 <p>举个例子，如果我们有一个包含媒体属性<code>orientation:landscape</code>的样式，我们使用纵向模式（portrait mode）查看页面，这个资源将不会阻塞渲染。</p>
 <p>CSS 也会导致脚本阻塞。这是因为JavaScript文件必须等待CSSOM被构建后才能运行。</p>
@@ -5050,7 +5050,7 @@ footer { display: none; }
 <pre><code class="JavaScript">&lt;script async src=&quot;script.js&quot;&gt;
 </code></pre>
 <h2 id="创建渲染树"><a href="#创建渲染树" class="headerlink" title="创建渲染树"></a>创建渲染树</h2><p>渲染树是DOM和CSSOM的结合体，它代表最终会渲染在页面上的元素的结构对象。这意味着它只关注可见内容，对于被隐藏或者CSS属性 display:none 的属性，不会被包含在结构内。</p>
-<p>使用上面例子的DOM和CSSOM，渲染树被创建如下：<br><img src="http://oncj6b2vl.bkt.clouddn.com/FvhQ0k653cDvORFIiEbYxufNjZa4.png" alt="渲染树"></p>
+<p>使用上面例子的DOM和CSSOM，渲染树被创建如下：<br><img src="http://img.xiangzhangshugongyi.com/FvhQ0k653cDvORFIiEbYxufNjZa4.png" alt="渲染树"></p>
 <h2 id="生成布局"><a href="#生成布局" class="headerlink" title="生成布局"></a>生成布局</h2><p>布局决定了浏览器视窗的大小,它提供了上下文依赖的CSS样式，如百分比或窗口的单位。视窗尺寸通常通过 <code>&lt;head&gt;</code> 标签中的 <code>&lt;meta&gt;</code> 中的 viewport 设定来决定。如果不存在该标签，则通常默认为 980px</p>
 <p>例如，最常用的 <code>meta veiwport</code> 的值将会被设置为和设备宽度相符：</p>
 <pre><code class="HTML">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
@@ -5080,7 +5080,7 @@ footer { display: none; }
 &lt;/body&gt;  
 &lt;/html&gt;
 </code></pre>
-<p>可以看关于页面加载时的事件日志，以下是我们获得的：<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fro6Rduywm-txP3EEtak-E5T826l.png" alt="时间轴"></p>
+<p>可以看关于页面加载时的事件日志，以下是我们获得的：<br><img src="http://img.xiangzhangshugongyi.com/Fro6Rduywm-txP3EEtak-E5T826l.png" alt="时间轴"></p>
 <ol>
 <li><strong>Send Request</strong> - 发送到index.html的GET请求</li>
 <li><strong>Parse HTML</strong> and <strong>Send Request</strong> - 开始解析HTML并构建DOM，然后发送 GET 请求style.css和main.js</li>
@@ -5118,15 +5118,15 @@ footer { display: none; }
 <p>笔者从去年开始通过hexo写blog，使用了yilia主题，但是随着文章数量的上升，检索等操作就显得特别笨重。</p>
 <p>在遍寻无果的情况下，就写下了<a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank" rel="noopener">3-hexo</a>主题。Demo:<a href="http://yelog.org">http://yelog.org</a></p>
 <p>多图预警 ↓↓↓</p>
-<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><h3 id="整体设计"><a href="#整体设计" class="headerlink" title="整体设计"></a>整体设计</h3><p><strong>三段式设计:</strong><br><img src="http://oncj6b2vl.bkt.clouddn.com/Fl2tl1Is5zx-D0DAt03bg0WkWXhO.png" alt="三段式设计"></p>
-<h3 id="通过分类过滤"><a href="#通过分类过滤" class="headerlink" title="通过分类过滤"></a>通过分类过滤</h3><p><img src="http://oncj6b2vl.bkt.clouddn.com/FmooXnOPeRPGBts5V5W7CV0AHuIo.gif" alt="分类过滤文章"></p>
-<h3 id="通过标题关键字搜索"><a href="#通过标题关键字搜索" class="headerlink" title="通过标题关键字搜索"></a>通过标题关键字搜索</h3><p><img src="http://oncj6b2vl.bkt.clouddn.com/FkF9lgTJoLdmNlYbTVokSNB3zdS4.gif" alt="文章标题关键字搜索"></p>
-<h3 id="通过作者搜索"><a href="#通过作者搜索" class="headerlink" title="通过作者搜索"></a>通过作者搜索</h3><p><strong>若开启了多作者模式，则可以通过输入@，进行作者搜索，如下所示</strong><br><img src="http://oncj6b2vl.bkt.clouddn.com/FhbFRRPIDuz1pEKH-dr-RWDHVvXn.gif" alt="通过作者搜索"></p>
-<h3 id="通过标签搜索"><a href="#通过标签搜索" class="headerlink" title="通过标签搜索"></a>通过标签搜索</h3><p><strong>输入#，就会出现标签提示</strong><br><img src="http://oncj6b2vl.bkt.clouddn.com/FoJsDnsoLWKo7ECSzcLmzUX_uWgw.gif" alt="通过标签搜索"></p>
-<h3 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h3><p><img src="http://oncj6b2vl.bkt.clouddn.com/FtDD77YX_xenS-AZQW56qrwrQc4D.gif" alt="测试一下评论"></p>
-<h3 id="打赏功能"><a href="#打赏功能" class="headerlink" title="打赏功能"></a>打赏功能</h3><p><img src="http://oncj6b2vl.bkt.clouddn.com/FhlNgOF7ipEIVrrztFdRam3WRikw.gif" alt="打赏功能"></p>
-<h3 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h3><p><img src="http://oncj6b2vl.bkt.clouddn.com/FhQLLqrRCr4yFGl9nDb_9oc4yME-.png" alt="文章置顶"></p>
-<h3 id="返回头部"><a href="#返回头部" class="headerlink" title="返回头部"></a>返回头部</h3><p><img src="http://oncj6b2vl.bkt.clouddn.com/FjpVByJViwYEWHHMTeayiQ-FD_qG.gif" alt="返回头部"></p>
+<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><h3 id="整体设计"><a href="#整体设计" class="headerlink" title="整体设计"></a>整体设计</h3><p><strong>三段式设计:</strong><br><img src="http://img.xiangzhangshugongyi.com/Fl2tl1Is5zx-D0DAt03bg0WkWXhO.png" alt="三段式设计"></p>
+<h3 id="通过分类过滤"><a href="#通过分类过滤" class="headerlink" title="通过分类过滤"></a>通过分类过滤</h3><p><img src="http://img.xiangzhangshugongyi.com/FmooXnOPeRPGBts5V5W7CV0AHuIo.gif" alt="分类过滤文章"></p>
+<h3 id="通过标题关键字搜索"><a href="#通过标题关键字搜索" class="headerlink" title="通过标题关键字搜索"></a>通过标题关键字搜索</h3><p><img src="http://img.xiangzhangshugongyi.com/FkF9lgTJoLdmNlYbTVokSNB3zdS4.gif" alt="文章标题关键字搜索"></p>
+<h3 id="通过作者搜索"><a href="#通过作者搜索" class="headerlink" title="通过作者搜索"></a>通过作者搜索</h3><p><strong>若开启了多作者模式，则可以通过输入@，进行作者搜索，如下所示</strong><br><img src="http://img.xiangzhangshugongyi.com/FhbFRRPIDuz1pEKH-dr-RWDHVvXn.gif" alt="通过作者搜索"></p>
+<h3 id="通过标签搜索"><a href="#通过标签搜索" class="headerlink" title="通过标签搜索"></a>通过标签搜索</h3><p><strong>输入#，就会出现标签提示</strong><br><img src="http://img.xiangzhangshugongyi.com/FoJsDnsoLWKo7ECSzcLmzUX_uWgw.gif" alt="通过标签搜索"></p>
+<h3 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h3><p><img src="http://img.xiangzhangshugongyi.com/FtDD77YX_xenS-AZQW56qrwrQc4D.gif" alt="测试一下评论"></p>
+<h3 id="打赏功能"><a href="#打赏功能" class="headerlink" title="打赏功能"></a>打赏功能</h3><p><img src="http://img.xiangzhangshugongyi.com/FhlNgOF7ipEIVrrztFdRam3WRikw.gif" alt="打赏功能"></p>
+<h3 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h3><p><img src="http://img.xiangzhangshugongyi.com/FhQLLqrRCr4yFGl9nDb_9oc4yME-.png" alt="文章置顶"></p>
+<h3 id="返回头部"><a href="#返回头部" class="headerlink" title="返回头部"></a>返回头部</h3><p><img src="http://img.xiangzhangshugongyi.com/FjpVByJViwYEWHHMTeayiQ-FD_qG.gif" alt="返回头部"></p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h3><pre><code class="bash">$ git clone https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo
 </code></pre>
 <h3 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h3><p>1） 修改hexo根目录的<code>_config.yml</code>的两处，如下</p>
@@ -6073,8 +6073,8 @@ tags:
 - reading
 ---
 </code></pre>
-<p><strong>效果：</strong><br><img src="http://oncj6b2vl.bkt.clouddn.com/Fjq0M7pBzl6fsnC3ivpqMsdLdXc0.png" alt=""></p>
-<h2 id="搜索某个作者的所有文章"><a href="#搜索某个作者的所有文章" class="headerlink" title="搜索某个作者的所有文章"></a>搜索某个作者的所有文章</h2><p>在搜索栏中输入<code>@小马哥</code>就可以显示出所有小马哥的文章。<br>如果你在_config.xml中配置了作者名，就可以出现<code>提示</code>,具体看第一部分<br><strong>效果如下：</strong><br><img src="http://oncj6b2vl.bkt.clouddn.com/Fm2PK5W9Rd6ojYq055zZoWcbioAn.gif" alt=""></p>
+<p><strong>效果：</strong><br><img src="http://img.xiangzhangshugongyi.com/Fjq0M7pBzl6fsnC3ivpqMsdLdXc0.png" alt=""></p>
+<h2 id="搜索某个作者的所有文章"><a href="#搜索某个作者的所有文章" class="headerlink" title="搜索某个作者的所有文章"></a>搜索某个作者的所有文章</h2><p>在搜索栏中输入<code>@小马哥</code>就可以显示出所有小马哥的文章。<br>如果你在_config.xml中配置了作者名，就可以出现<code>提示</code>,具体看第一部分<br><strong>效果如下：</strong><br><img src="http://img.xiangzhangshugongyi.com/Fm2PK5W9Rd6ojYq055zZoWcbioAn.gif" alt=""></p>
 ]]></content>
       
         <categories>
@@ -6115,7 +6115,7 @@ date: 2016-09-27 11:31:01
 <h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><blockquote>
 <p><a href="http://yelog.org/举个404例子">http://yelog.org/举个404例子</a></p>
 </blockquote>
-<p> <img src="http://oncj6b2vl.bkt.clouddn.com/FjSPGVPAu_7d0aMPqErpI1HN_985.png" alt="404"></p>
+<p> <img src="http://img.xiangzhangshugongyi.com/FjSPGVPAu_7d0aMPqErpI1HN_985.png" alt="404"></p>
 ]]></content>
       
         <categories>
@@ -6209,10 +6209,10 @@ tags:
 <p>这个教程将会说明内存泄露是什么？它为什么会发生？我们如何防止它？</p>
 <h2 id="内存泄露是什么"><a href="#内存泄露是什么" class="headerlink" title="内存泄露是什么"></a>内存泄露是什么</h2><p>内存泄露的定义：对象不再被应用程序使用，但是由于它们还在被引用，垃圾收集器不能清除掉它们。</p>
 <p>为了理解这个定义，我们需要理解对象在内存中的状态；下面的图表说明什么是未被使用和未被引用。</p>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/FgwzTgT7v_YeTJ0Y_pWnoJXyfeHg.jpeg" alt=""></p>
+<p><img src="http://img.xiangzhangshugongyi.com/FgwzTgT7v_YeTJ0Y_pWnoJXyfeHg.jpeg" alt=""></p>
 <p>图表中，有被引用的对象和未被引用的对象；未被引用的对象将会被当做垃圾回收，而被引用的对象将不会被当做垃圾回收；未被引用的对象由于没有被其他对象引用，它当然也是不被使用的对象，然而，不被使用的对象不全是不被引用的，它们中的一些是被引用的！这就是内存泄露的来源。</p>
 <h2 id="内存泄露为什么会发生"><a href="#内存泄露为什么会发生" class="headerlink" title="内存泄露为什么会发生"></a>内存泄露为什么会发生</h2><p>让我们来看一下下面这个例子，它说明了内存泄露为什么会发生。在下面这个列子中，对象A引用了对象B，A的生命周期（t1~t4）是比B（t2~t3）的长；当B不再被应用程序使用时，A仍然在引用它；在这种情况下，垃圾收集器不能从内存中移除B；如果A引用了很多类似B这样的对象，它们不能被回收，又消耗着内存空间的资源，这样很有可能造成内存不足的问题。</p>
-<p>还有一种可能的事情，B又引用了一些对象，这些被B引用的对象也不能被回收，那所有这些不被使用的对象将消耗大量宝贵的内存空间。<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fm3d2a94sdbY4mb5ua-_BjAusKbq.jpeg" alt=""></p>
+<p>还有一种可能的事情，B又引用了一些对象，这些被B引用的对象也不能被回收，那所有这些不被使用的对象将消耗大量宝贵的内存空间。<br><img src="http://img.xiangzhangshugongyi.com/Fm3d2a94sdbY4mb5ua-_BjAusKbq.jpeg" alt=""></p>
 <h2 id="如何防止内存泄露"><a href="#如何防止内存泄露" class="headerlink" title="如何防止内存泄露"></a>如何防止内存泄露</h2><p>下面有一些防止内存泄露的快速实践技巧</p>
 <ol>
 <li>注意集合类，如：HashMap、ArrayList等等，因为它们是在常见的地方发生内存泄露；当它们被<code>static</code>声明时，它们和应用程序的生命周期是一样长的。</li>
@@ -7592,21 +7592,21 @@ Draw me a sheep!
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示当前月份日历</strong></p>
 <pre><code class="bash">$ cal
 </code></pre>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/Fo959HUHU7DyFEaargV5_4n6nsNi.png" alt="日历"><br><strong><code>例二</code>：显示指定月份的日历</strong></p>
+<p><img src="http://img.xiangzhangshugongyi.com/Fo959HUHU7DyFEaargV5_4n6nsNi.png" alt="日历"><br><strong><code>例二</code>：显示指定月份的日历</strong></p>
 <pre><code class="bash">$ cal 6 2016
 </code></pre>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/Fhjcoswylnxplt5CjFHlfb55va4M.png" alt="2016年6月"><br><strong><code>例三</code>：显示2016年的日历</strong></p>
+<p><img src="http://img.xiangzhangshugongyi.com/Fhjcoswylnxplt5CjFHlfb55va4M.png" alt="2016年6月"><br><strong><code>例三</code>：显示2016年的日历</strong></p>
 <pre><code class="bash">$ cal -y 2016
 $ cal 2016
 </code></pre>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/Fnloz8dl1VKyVgn32hjCM0lPGkJI.png" alt="2016年日历"><br><strong><code>例四</code>：显示自1月1日的天数</strong></p>
+<p><img src="http://img.xiangzhangshugongyi.com/Fnloz8dl1VKyVgn32hjCM0lPGkJI.png" alt="2016年日历"><br><strong><code>例四</code>：显示自1月1日的天数</strong></p>
 <pre><code class="bash">$ cal -j
 </code></pre>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/FsQNZEvW5UEJHd3IV2sF19OlOjvs.png" alt="本年的第几天"></p>
+<p><img src="http://img.xiangzhangshugongyi.com/FsQNZEvW5UEJHd3IV2sF19OlOjvs.png" alt="本年的第几天"></p>
 <p><strong><code>例五</code>：星期一显示在第一列</strong></p>
 <pre><code class="bash">$ cal -m
 </code></pre>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/Ft9YOB5-L4fauP9TWqQLCpAOYwlY.png" alt="本机deepin不支持这个参数，登陆到服务器截了一张图=="></p>
+<p><img src="http://img.xiangzhangshugongyi.com/Ft9YOB5-L4fauP9TWqQLCpAOYwlY.png" alt="本机deepin不支持这个参数，登陆到服务器截了一张图=="></p>
 ]]></content>
       
         <categories>
@@ -9990,7 +9990,7 @@ $ iostat 2 3
     <entry>
       <title><![CDATA[人生若只如初见-《围城》]]></title>
       <url>/2017/01/03/Fortress-Besieged/</url>
-      <content type="html"><![CDATA[<p><img src="http://oncj6b2vl.bkt.clouddn.com/Fg0jOuF4-dBp5moIX00V4Q0X5C11.jpg" alt="围城"></p>
+      <content type="html"><![CDATA[<p><img src="http://img.xiangzhangshugongyi.com/Fg0jOuF4-dBp5moIX00V4Q0X5C11.jpg" alt="围城"></p>
 <blockquote>
 <p>婚姻是被围困的城堡，城外的人想冲进去，城里的人想逃出来  –法国谚语</p>
 </blockquote>
@@ -10019,7 +10019,7 @@ $ iostat 2 3
 <div style="text-align:right;width:100%">–杨绛先生</div>
 
 </blockquote>
-<p><img src="http://oncj6b2vl.bkt.clouddn.com/Fp_ZMZN4lHRo5ojcpIn11qoATUt3.jpg" alt="钱老和杨先生"><br>《围城》写出了婚姻的一方面，但不是全部，很多人要冲进这座城，自有其道理，城中有争吵，但更有温情。愿诸位在现实生活中，相互欣赏，相敬如宾，如初见一样，相互爱戴，生活一定更加美好</p>
+<p><img src="http://img.xiangzhangshugongyi.com/Fp_ZMZN4lHRo5ojcpIn11qoATUt3.jpg" alt="钱老和杨先生"><br>《围城》写出了婚姻的一方面，但不是全部，很多人要冲进这座城，自有其道理，城中有争吵，但更有温情。愿诸位在现实生活中，相互欣赏，相敬如宾，如初见一样，相互爱戴，生活一定更加美好</p>
 <p>在新春佳节祝大家幸福美满，阖家欢乐。</p>
 ]]></content>
       
@@ -10397,7 +10397,7 @@ $ free -s 10
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示进程信息</strong></p>
 <pre><code class="bash">$ top
 </code></pre>
-<p><strong>top讲解</strong><br><img src="http://oncj6b2vl.bkt.clouddn.com/FmYyrG-z1EdQG0FMO2c3dKfc5rnA.jpg" alt="top命令"><br><strong>其他技巧</strong></p>
+<p><strong>top讲解</strong><br><img src="http://img.xiangzhangshugongyi.com/FmYyrG-z1EdQG0FMO2c3dKfc5rnA.jpg" alt="top命令"><br><strong>其他技巧</strong></p>
 <ol>
 <li>数字<code>1</code>，可监控每个逻辑CPU的状况</li>
 <li>键盘<code>b</code>（打开/关闭加亮效果），运行状态的进程</li>
@@ -11297,18 +11297,18 @@ $ git ls-tree -r HEAD
 
 1 directory, 3 files
 </code></pre>
-<h2 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h2><p>Git 主要的目的是通过操纵这三棵树来以更加连续的状态记录项目的快照。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FuPJ7H7NQ32SfOF8kjbnzLk6vmEH.png" alt="工作流程"><br>让我们来可视化这个过程：假设我们进入到一个新目录，其中有一个文件。 我们称其为该文件的 <strong>v1</strong> 版本，将它标记为蓝色。 现在运行 <code>git init</code>，这会创建一个 Git 仓库，其中的 HEAD 引用指向未创建的分支（<code>master</code> 还不存在）。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FrD7WIEaHU-3MqVa7jIeHVh_j2sf.png" alt="git初始化情况"><br>此时，只有工作目录有内容。</p>
-<p>现在我们想要提交这个文件，所以用 <code>git add</code> 来获取工作目录中的内容，并将其复制到索引中。<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fqoqvx7xoY0Ok-U_dSUNdPcrk43t.png" alt="git add之后情况"><br>接着运行 <code>git commit</code>，它首先会移除索引中的内容并将它保存为一个永久的快照，然后创建一个指向该快照的提交对象，最后更新 <code>master</code> 来指向本次提交。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FqPDbSnfFD3LM_3-tSY7OLwtCGSa.png" alt="git commit之后情况"><br>此时如果我们运行 <code>git status</code>，会发现没有任何改动，因为现在三棵树完全相同。</p>
-<p>现在我们想要对文件进行修改然后提交它。 我们将会经历同样的过程；首先在工作目录中修改文件。 我们称其为该文件的 <strong>v2</strong> 版本，并将它标记为红色。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FoJPPHbaxpKomYmGALsLPgg1NlbZ.png" alt="编辑文件"><br>如果现在运行 <code>git status</code>，我们会看到文件显示在 “Changes not staged for commit,” 下面并被标记为红色，因为该条目在索引与工作目录之间存在不同。 接着我们运行 <code>git add</code> 来将它暂存到索引中。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FuF8tzqKZfm6enCohAFGL5rSY8pR.png" alt="git add之后情况"><br>此时，由于索引和 HEAD 不同，若运行 <code>git status</code> 的话就会看到 “Changes to be committed” 下的该文件变为绿色 ——也就是说，现在预期的下一次提交与上一次提交不同。 最后，我们运行 <code>git commit</code> 来完成提交。<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fvsca5WLZmAr_ApYX3-dHk312zw8.png" alt="git add之后情况"><br>现在运行 <code>git status</code> 会没有输出，因为三棵树又变得相同了。</p>
+<h2 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h2><p>Git 主要的目的是通过操纵这三棵树来以更加连续的状态记录项目的快照。<br><img src="http://img.xiangzhangshugongyi.com/FuPJ7H7NQ32SfOF8kjbnzLk6vmEH.png" alt="工作流程"><br>让我们来可视化这个过程：假设我们进入到一个新目录，其中有一个文件。 我们称其为该文件的 <strong>v1</strong> 版本，将它标记为蓝色。 现在运行 <code>git init</code>，这会创建一个 Git 仓库，其中的 HEAD 引用指向未创建的分支（<code>master</code> 还不存在）。<br><img src="http://img.xiangzhangshugongyi.com/FrD7WIEaHU-3MqVa7jIeHVh_j2sf.png" alt="git初始化情况"><br>此时，只有工作目录有内容。</p>
+<p>现在我们想要提交这个文件，所以用 <code>git add</code> 来获取工作目录中的内容，并将其复制到索引中。<br><img src="http://img.xiangzhangshugongyi.com/Fqoqvx7xoY0Ok-U_dSUNdPcrk43t.png" alt="git add之后情况"><br>接着运行 <code>git commit</code>，它首先会移除索引中的内容并将它保存为一个永久的快照，然后创建一个指向该快照的提交对象，最后更新 <code>master</code> 来指向本次提交。<br><img src="http://img.xiangzhangshugongyi.com/FqPDbSnfFD3LM_3-tSY7OLwtCGSa.png" alt="git commit之后情况"><br>此时如果我们运行 <code>git status</code>，会发现没有任何改动，因为现在三棵树完全相同。</p>
+<p>现在我们想要对文件进行修改然后提交它。 我们将会经历同样的过程；首先在工作目录中修改文件。 我们称其为该文件的 <strong>v2</strong> 版本，并将它标记为红色。<br><img src="http://img.xiangzhangshugongyi.com/FoJPPHbaxpKomYmGALsLPgg1NlbZ.png" alt="编辑文件"><br>如果现在运行 <code>git status</code>，我们会看到文件显示在 “Changes not staged for commit,” 下面并被标记为红色，因为该条目在索引与工作目录之间存在不同。 接着我们运行 <code>git add</code> 来将它暂存到索引中。<br><img src="http://img.xiangzhangshugongyi.com/FuF8tzqKZfm6enCohAFGL5rSY8pR.png" alt="git add之后情况"><br>此时，由于索引和 HEAD 不同，若运行 <code>git status</code> 的话就会看到 “Changes to be committed” 下的该文件变为绿色 ——也就是说，现在预期的下一次提交与上一次提交不同。 最后，我们运行 <code>git commit</code> 来完成提交。<br><img src="http://img.xiangzhangshugongyi.com/Fvsca5WLZmAr_ApYX3-dHk312zw8.png" alt="git add之后情况"><br>现在运行 <code>git status</code> 会没有输出，因为三棵树又变得相同了。</p>
 <p>切换分支或克隆的过程也类似。 当检出一个分支时，它会修改 <strong>HEAD</strong> 指向新的分支引用，将 <strong>索引</strong> 填充为该次提交的快照，然后将 <strong>索引</strong> 的内容复制到 工作目录 中。</p>
 <h2 id="重置的作用"><a href="#重置的作用" class="headerlink" title="重置的作用"></a>重置的作用</h2><p>在以下情景中观察 <code>reset</code> 命令会更有意义。</p>
-<p>为了演示这些例子，假设我们再次修改了 <code>file.txt</code> 文件并第三次提交它。 现在的历史看起来是这样的：<br><img src="http://oncj6b2vl.bkt.clouddn.com/Ft27dwjZotq0XD5tYdVqc7tq-ibP.png" alt=""><br>让我们跟着 <code>reset</code> 看看它都做了什么。 它以一种简单可预见的方式直接操纵这三棵树。 它做了三个基本操作。</p>
-<h3 id="1-移动-HEAD"><a href="#1-移动-HEAD" class="headerlink" title="1.移动 HEAD"></a>1.移动 HEAD</h3><p><code>reset</code> 做的第一件事是移动 HEAD 的指向。 这与改变 HEAD 自身不同（<code>checkout</code> 所做的）；<code>reset</code> 移动 HEAD 指向的分支。 这意味着如果 HEAD 设置为 <code>master</code> 分支（例如，你正在 <code>master</code> 分支上），运行 <code>git reset 9e5e64a</code> 将会使 <code>master</code> 指向 <code>9e5e64a</code>。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FnlCclgtQ-6JbFSLYJ5aOzZCY7Re.png" alt="git reset --soft"><br>无论你调用了何种形式的带有一个提交的 <code>reset</code>，它首先都会尝试这样做。 使用 <code>reset --soft</code>，它将仅仅停在那儿。</p>
+<p>为了演示这些例子，假设我们再次修改了 <code>file.txt</code> 文件并第三次提交它。 现在的历史看起来是这样的：<br><img src="http://img.xiangzhangshugongyi.com/Ft27dwjZotq0XD5tYdVqc7tq-ibP.png" alt=""><br>让我们跟着 <code>reset</code> 看看它都做了什么。 它以一种简单可预见的方式直接操纵这三棵树。 它做了三个基本操作。</p>
+<h3 id="1-移动-HEAD"><a href="#1-移动-HEAD" class="headerlink" title="1.移动 HEAD"></a>1.移动 HEAD</h3><p><code>reset</code> 做的第一件事是移动 HEAD 的指向。 这与改变 HEAD 自身不同（<code>checkout</code> 所做的）；<code>reset</code> 移动 HEAD 指向的分支。 这意味着如果 HEAD 设置为 <code>master</code> 分支（例如，你正在 <code>master</code> 分支上），运行 <code>git reset 9e5e64a</code> 将会使 <code>master</code> 指向 <code>9e5e64a</code>。<br><img src="http://img.xiangzhangshugongyi.com/FnlCclgtQ-6JbFSLYJ5aOzZCY7Re.png" alt="git reset --soft"><br>无论你调用了何种形式的带有一个提交的 <code>reset</code>，它首先都会尝试这样做。 使用 <code>reset --soft</code>，它将仅仅停在那儿。</p>
 <p>现在看一眼上图，理解一下发生的事情：它本质上是撤销了上一次 <code>git commit</code> 命令。 当你在运行 <code>git commit</code> 时，Git 会创建一个新的提交，并移动 HEAD 所指向的分支来使其指向该提交。 当你将它 <code>reset</code> 回 <code>HEAD~</code>（HEAD 的父结点）时，其实就是把该分支移动回原来的位置，而不会改变索引和工作目录。 现在你可以更新索引并再次运行 <code>git commit</code> 来完成 <code>git commit --amend</code> 所要做的事情了。</p>
 <h3 id="2-更新索引-–mixed"><a href="#2-更新索引-–mixed" class="headerlink" title="2.更新索引(–mixed)"></a>2.更新索引(–mixed)</h3><p>注意，如果你现在运行 <code>git status</code> 的话，就会看到新的 HEAD 和以绿色标出的它和索引之间的区别。</p>
-<p>接下来，<code>reset</code> 会用 HEAD 指向的当前快照的内容来更新索引。<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fp_egv7ERkdtOGOcillcEgBnvFh7.png" alt="git reset --mixed"><br>如果指定 <code>--mixed</code> 选项，<code>reset</code> 将会在这时停止。 这也是默认行为，所以如果没有指定任何选项（在本例中只是 <code>git reset HEAD~</code>），这就是命令将会停止的地方。</p>
+<p>接下来，<code>reset</code> 会用 HEAD 指向的当前快照的内容来更新索引。<br><img src="http://img.xiangzhangshugongyi.com/Fp_egv7ERkdtOGOcillcEgBnvFh7.png" alt="git reset --mixed"><br>如果指定 <code>--mixed</code> 选项，<code>reset</code> 将会在这时停止。 这也是默认行为，所以如果没有指定任何选项（在本例中只是 <code>git reset HEAD~</code>），这就是命令将会停止的地方。</p>
 <p>现在再看一眼上图，理解一下发生的事情：它依然会撤销一上次 提交，但还会 取消暂存 所有的东西。 于是，我们回滚到了所有 <code>git add</code> 和 <code>git commit</code> 的命令执行之前。</p>
-<h3 id="3-更新工作目录"><a href="#3-更新工作目录" class="headerlink" title="3.更新工作目录"></a>3.更新工作目录</h3><p><code>reset</code> 要做的的第三件事情就是让工作目录看起来像索引。 如果使用 –hard 选项，它将会继续这一步。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FisVYp5vIOXZTy1w9t_NPBcHdr8h.png" alt="git reset --hard"><br>现在让我们回想一下刚才发生的事情。 你撤销了最后的提交、<code>git add</code> 和 <code>git commit</code> 命令以及工作目录中的所有工作。</p>
+<h3 id="3-更新工作目录"><a href="#3-更新工作目录" class="headerlink" title="3.更新工作目录"></a>3.更新工作目录</h3><p><code>reset</code> 要做的的第三件事情就是让工作目录看起来像索引。 如果使用 –hard 选项，它将会继续这一步。<br><img src="http://img.xiangzhangshugongyi.com/FisVYp5vIOXZTy1w9t_NPBcHdr8h.png" alt="git reset --hard"><br>现在让我们回想一下刚才发生的事情。 你撤销了最后的提交、<code>git add</code> 和 <code>git commit</code> 命令以及工作目录中的所有工作。</p>
 <p>必须注意，<code>--hard</code> 标记是 <code>reset</code> 命令唯一的危险用法，它也是 Git 会真正地销毁数据的仅有的几个操作之一。 其他任何形式的 reset 调用都可以轻松撤消，但是 <code>--hard</code> 选项不能，因为它强制覆盖了工作目录中的文件。 在这种特殊情况下，我们的 Git 数据库中的一个提交内还留有该文件的 <strong>v3</strong> 版本，我们可以通过 <code>reflog</code> 来找回它。但是若该文件还未提交，Git 仍会覆盖它从而导致无法恢复。</p>
 <h3 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h3><p>reset 命令会以特定的顺序重写这三棵树，在你指定以下选项时停止：</p>
 <ol>
@@ -11322,19 +11322,19 @@ $ git ls-tree -r HEAD
 <li>移动 HEAD 分支的指向 （已跳过）</li>
 <li>让索引看起来像 HEAD （到此处停止）</li>
 </ol>
-<p>所以它本质上只是将 <code>file.txt</code> 从 HEAD 复制到索引中。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FnXU5yA8N-Xjt7dTPqD0U6ZuNmkf.png" alt="git reset"><br>它还有 <em>取消暂存文件</em> 的实际效果。 如果我们查看该命令的示意图，然后再想想 <code>git add</code> 所做的事，就会发现它们正好相反。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FsgUtPndZWzdhH1uYJLmX6ts7k99.png" alt="git add"></p>
+<p>所以它本质上只是将 <code>file.txt</code> 从 HEAD 复制到索引中。<br><img src="http://img.xiangzhangshugongyi.com/FnXU5yA8N-Xjt7dTPqD0U6ZuNmkf.png" alt="git reset"><br>它还有 <em>取消暂存文件</em> 的实际效果。 如果我们查看该命令的示意图，然后再想想 <code>git add</code> 所做的事，就会发现它们正好相反。<br><img src="http://img.xiangzhangshugongyi.com/FsgUtPndZWzdhH1uYJLmX6ts7k99.png" alt="git add"></p>
 <p>这就是为什么 <code>git status</code> 命令的输出会建议运行此命令来取消暂存一个文件。 （查看 取消暂存的文件 来了解更多。）</p>
-<p>我们可以不让 Git 从 HEAD 拉取数据，而是通过具体指定一个提交来拉取该文件的对应版本。 我们只需运行类似于 <code>git reset eb43bf file.txt</code> 的命令即可。<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fp5Cq3mjN7l3br62FjGcBfvXIy2b.png" alt="git reset eb43 -- file.txt"><br>它其实做了同样的事情，也就是把工作目录中的文件恢复到 <strong>v1</strong> 版本，运行 <code>git add</code> 添加它，然后再将它恢复到 <strong>v3</strong> 版本（只是不用真的过一遍这些步骤）。 如果我们现在运行 <code>git commit</code>，它就会记录一条“将该文件恢复到 <strong>v1</strong> 版本”的更改，尽管我们并未在工作目录中真正地再次拥有它。</p>
+<p>我们可以不让 Git 从 HEAD 拉取数据，而是通过具体指定一个提交来拉取该文件的对应版本。 我们只需运行类似于 <code>git reset eb43bf file.txt</code> 的命令即可。<br><img src="http://img.xiangzhangshugongyi.com/Fp5Cq3mjN7l3br62FjGcBfvXIy2b.png" alt="git reset eb43 -- file.txt"><br>它其实做了同样的事情，也就是把工作目录中的文件恢复到 <strong>v1</strong> 版本，运行 <code>git add</code> 添加它，然后再将它恢复到 <strong>v3</strong> 版本（只是不用真的过一遍这些步骤）。 如果我们现在运行 <code>git commit</code>，它就会记录一条“将该文件恢复到 <strong>v1</strong> 版本”的更改，尽管我们并未在工作目录中真正地再次拥有它。</p>
 <p>还有一点同 <code>git add</code> 一样，就是 <code>reset</code> 命令也可以接受一个 <code>--patch</code> 选项来一块一块地取消暂存的内容。 这样你就可以根据选择来取消暂存或恢复内容了。</p>
 <h3 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h3><p>我们来看看如何利用这种新的功能来做一些有趣的事情 - 压缩提交。</p>
 <p>假设你的一系列提交信息中有 “oops.”、“WIP” 和 “forgot this file”， 聪明的你就能使用 <code>reset</code> 来轻松快速地将它们压缩成单个提交，也显出你的聪明。 （压缩提交 展示了另一种方式，不过在本例中用 <code>reset</code> 更简单。）</p>
-<p>假设你有一个项目，第一次提交中有一个文件，第二次提交增加了一个新的文件并修改了第一个文件，第三次提交再次修改了第一个文件。 由于第二次提交是一个未完成的工作，因此你想要压缩它。<br><img src="http://oncj6b2vl.bkt.clouddn.com/Ft27dwjZotq0XD5tYdVqc7tq-ibP.png" alt="git reset --hard"><br>那么可以运行 <code>git reset --soft HEAD~2</code> 来将 HEAD 分支移动到一个旧一点的提交上（即你想要保留的第一个提交）：<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fmv1H8vky1f0AnvlQmFFVphIn5ae.png" alt="git reset --soft HEAD~2"><br>然后只需再次运行 <code>git commit</code>：<br><img src="http://oncj6b2vl.bkt.clouddn.com/FgODKQfa32czRawEZ64luzMM3TRa.png" alt="git commit"><br>现在你可以查看可到达的历史，即将会推送的历史，现在看起来有个 <strong>v1</strong> 版 <code>file-a.txt</code> 的提交，接着第二个提交将 <code>file-a.txt</code> 修改成了 <strong>v3</strong> 版并增加了 <code>file-b.txt</code>。 包含 <strong>v2</strong> 版本的文件已经不在历史中了。</p>
+<p>假设你有一个项目，第一次提交中有一个文件，第二次提交增加了一个新的文件并修改了第一个文件，第三次提交再次修改了第一个文件。 由于第二次提交是一个未完成的工作，因此你想要压缩它。<br><img src="http://img.xiangzhangshugongyi.com/Ft27dwjZotq0XD5tYdVqc7tq-ibP.png" alt="git reset --hard"><br>那么可以运行 <code>git reset --soft HEAD~2</code> 来将 HEAD 分支移动到一个旧一点的提交上（即你想要保留的第一个提交）：<br><img src="http://img.xiangzhangshugongyi.com/Fmv1H8vky1f0AnvlQmFFVphIn5ae.png" alt="git reset --soft HEAD~2"><br>然后只需再次运行 <code>git commit</code>：<br><img src="http://img.xiangzhangshugongyi.com/FgODKQfa32czRawEZ64luzMM3TRa.png" alt="git commit"><br>现在你可以查看可到达的历史，即将会推送的历史，现在看起来有个 <strong>v1</strong> 版 <code>file-a.txt</code> 的提交，接着第二个提交将 <code>file-a.txt</code> 修改成了 <strong>v3</strong> 版并增加了 <code>file-b.txt</code>。 包含 <strong>v2</strong> 版本的文件已经不在历史中了。</p>
 <h2 id="checkout"><a href="#checkout" class="headerlink" title="checkout"></a>checkout</h2><p>最后，你大概还想知道 <code>checkout</code> 和 <code>reset</code> 之间的区别。 和 reset 一样，checkout 也操纵三棵树，不过它有一点不同，这取决于你是否传给该命令一个文件路径。</p>
 <h3 id="不带路径"><a href="#不带路径" class="headerlink" title="不带路径"></a>不带路径</h3><p>运行 <code>git checkout [branch]</code> 与运行 <code>git reset --hard [branch]</code> 非常相似，它会更新所有三棵树使其看起来像 [branch]，不过有两点重要的区别。</p>
 <p>首先不同于 <code>reset --hard，checkout</code> 对工作目录是安全的，它会通过检查来确保不会将已更改的文件吹走。 其实它还更聪明一些。它会在工作目录中先试着简单合并一下，这样所有_还未修改过的_文件都会被更新。 而 <code>reset --hard</code> 则会不做检查就全面地替换所有东西。</p>
 <p>第二个重要的区别是如何更新 HEAD。 reset 会移动 HEAD 分支的指向，而 checkout 只会移动 HEAD 自身来指向另一个分支。</p>
 <p>例如，假设我们有 master 和 develop 分支，它们分别指向不同的提交；我们现在在 develop 上（所以 HEAD 指向它）。 如果我们运行 <code>git reset master</code>，那么 develop 自身现在会和 master 指向同一个提交。 而如果我们运行 <code>git checkout master</code> 的话，develop 不会移动，HEAD 自身会移动。 现在 HEAD 将会指向 master。</p>
-<p>所以，虽然在这两种情况下我们都移动 HEAD 使其指向了提交 A，但_做法_是非常不同的。 reset 会移动 HEAD 分支的指向，而 checkout 则移动 HEAD 自身。<br><img src="http://oncj6b2vl.bkt.clouddn.com/Fpp-EOuRWOiTBtBWkjrvBIGHAlGm.png" alt=""></p>
+<p>所以，虽然在这两种情况下我们都移动 HEAD 使其指向了提交 A，但_做法_是非常不同的。 reset 会移动 HEAD 分支的指向，而 checkout 则移动 HEAD 自身。<br><img src="http://img.xiangzhangshugongyi.com/Fpp-EOuRWOiTBtBWkjrvBIGHAlGm.png" alt=""></p>
 <h3 id="带路径"><a href="#带路径" class="headerlink" title="带路径"></a>带路径</h3><p>运行 <code>checkout</code> 的另一种方式就是指定一个文件路径，这会像 reset 一样不会移动 HEAD。 它就像 <code>git reset [branch] file</code> 那样用该次提交中的那个文件来更新索引，但是它也会覆盖工作目录中对应的文件。 它就像是 <code>git reset --hard [branch] file</code>（如果 reset 允许你这样运行的话）- 这样对工作目录并不安全，它也不会移动 HEAD。</p>
 <p>此外，同 <code>git reset</code> 和 <code>git add</code> 一样，<code>checkout</code> 也接受一个 –patch 选项，允许你根据选择一块一块地恢复文件内容。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>希望你现在熟悉并理解了 <code>reset</code> 命令，不过关于它和 <code>checkout</code> 之间的区别，你可能还是会有点困惑，毕竟不太可能记住不同调用的所有规则。</p>
@@ -14508,7 +14508,7 @@ callback(可选)  请求完成的回调函数
       <title><![CDATA[Hexo+Git服务器搭建blog]]></title>
       <url>/2016/10/23/hexo-git-server-blog/</url>
       <content type="html"><![CDATA[<p>博主最近在服务器上搭建Hexo发布平台，感觉整个搭建过程和搭建思想蛮有意思，在此记录一下，供猿友参考<br>Hexo 是一个快速，简单，功能强大，主题社区特别庞大的开源blog框架-》<a href="https://hexo.io/" target="_blank" rel="noopener">官网</a><br>本次搭建是通过在服务器上搭建Git服务器来实现一键发布blog<br><a id="more"></a></p>
-<h2 id="搭建思路"><a href="#搭建思路" class="headerlink" title="搭建思路"></a>搭建思路</h2><p><img src="http://oncj6b2vl.bkt.clouddn.com/FjUDxVksbmykVH1wvQJc4h57wMrQ.jpg" alt="图解"></p>
+<h2 id="搭建思路"><a href="#搭建思路" class="headerlink" title="搭建思路"></a>搭建思路</h2><p><img src="http://img.xiangzhangshugongyi.com/FjUDxVksbmykVH1wvQJc4h57wMrQ.jpg" alt="图解"></p>
 <ol>
 <li>客户端就是自己的电脑,可以把hexo的静态资源目录当成一个git仓库.</li>
 <li>首先配置好远程git仓库,通过 hexo d 将静态网站资源push到远程git仓库</li>
@@ -15628,7 +15628,7 @@ m-n位的数字 = &quot;^\d{m,n}$&quot;;
       <title><![CDATA[Git常用命令]]></title>
       <url>/2016/10/02/Git-command/</url>
       <content type="html"><![CDATA[<p>经常用到Git，但是很多命令记不住，将其整理于此。（大量摘自网络）</p>
-<p>一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要要记住60~100个命令。<br><img src="http://oncj6b2vl.bkt.clouddn.com/FlWMWzIX9WE7PW-7eyeq8uaEJ_3p.png" alt="git常用命令"><br><a id="more"></a><br>下面整理的 Git 命令清单。几个专业名词的译名如下。</p>
+<p>一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要要记住60~100个命令。<br><img src="http://img.xiangzhangshugongyi.com/FlWMWzIX9WE7PW-7eyeq8uaEJ_3p.png" alt="git常用命令"><br><a id="more"></a><br>下面整理的 Git 命令清单。几个专业名词的译名如下。</p>
 <pre><code class="xml">Workspace：工作区
 Index / Stage：暂存区
 Repository：仓库区（本地仓库）
