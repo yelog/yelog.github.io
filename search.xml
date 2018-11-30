@@ -4107,9 +4107,9 @@ MimeType=text/plain;
         
         <tags>
             
-            <tag> deepin </tag>
-            
             <tag> 运维 </tag>
+            
+            <tag> deepin </tag>
             
         </tags>
         
@@ -4635,7 +4635,11 @@ limit: 20
     <entry>
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
-      <content type="html"><![CDATA[<h2 id="2018年8月"><a href="#2018年8月" class="headerlink" title="2018年8月"></a>2018年8月</h2><h3 id="08-08-修复"><a href="#08-08-修复" class="headerlink" title="08-08 修复"></a>08-08 修复</h3><ol>
+      <content type="html"><![CDATA[<h2 id="2018年11月"><a href="#2018年11月" class="headerlink" title="2018年11月"></a>2018年11月</h2><h3 id="11-30"><a href="#11-30" class="headerlink" title="11-30"></a>11-30</h3><ol>
+<li><code>add</code> 应用彩色图标，新增简书、知乎、csdn、oschina等图标<br><img src="http://img.xiangzhangshugongyi.com/Fgw7J7Ab6BGl09e-qHo5ZmY5D4lW.png" alt="应用彩色图标"></li>
+<li><code>fix</code> 修复 gitment 登录报错的问题</li>
+</ol>
+<h2 id="2018年8月"><a href="#2018年8月" class="headerlink" title="2018年8月"></a>2018年8月</h2><h3 id="08-08-修复"><a href="#08-08-修复" class="headerlink" title="08-08 修复"></a>08-08 修复</h3><ol>
 <li><code>fix</code> : 修复左侧栏出现滚动条的问题</li>
 </ol>
 <h2 id="2018年4月"><a href="#2018年4月" class="headerlink" title="2018年4月"></a>2018年4月</h2><h3 id="04-18-修复"><a href="#04-18-修复" class="headerlink" title="04-18 修复"></a>04-18 修复</h3><ol>
