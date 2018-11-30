@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>叶落阁</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yelog.org/"/>
+  <updated>2018-09-08T05:56:52.751Z</updated>
+  <id>http://yelog.org/</id>
+  
+  <author>
+    <name>叶落阁</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>shell速查表</title>
+    <link href="http://yelog.org/2018/09/08/shell-command/"/>
+    <id>http://yelog.org/2018/09/08/shell-command/</id>
+    <published>2018-09-08T03:48:24.000Z</published>
+    <updated>2018-09-08T05:56:52.751Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h2><pre><code class="bash">#!/bin/bashmsg=&quot;hello world&quot;echo $msg</code></pre><blockquote><p><strong>变量名的命名须遵循如下规则：</strong></p><ul><li>命名只能使用英文字母，数字和下划线，首个字符不能以数字开头。</li><li>中间不能有空格，可以使用下划线（_）。</li><li>不能使用标点符号。</li><li>不能使用bash里的关键字（可用help命令查看保留关键字）。</li></ul></blockquote><h2 id="2-传参"><a href="#2-传参" class="headerlink" title="2. 传参"></a>2. 传参</h2><pre><code class="bash">#!/bin/bashecho &quot;执行的文件名：$0&quot;;echo &quot;第一个参数为：$1&quot;;echo &quot;第二个参数为：$2&quot;;echo &quot;第三个参数为：$3&quot;;</code></pre><blockquote><p><strong>脚本内获取参数的格式为：</strong><br>$n。n 代表一个数字，1 为执行脚本的第一个参数，2 为执行脚本的第二个参数，以此类推……<br><strong>另外，还有几个特殊字符用来处理参数：</strong></p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td><code>$#</code></td><td>传递到脚本的参数个数</td></tr><tr><td><code>$*</code></td><td>以一个单字符串显示所有向脚本传递的参数。<br>如<code>&quot;$*&quot;</code>用「”」括起来的情况、以”$1 $2 … $n”的形式输出所有参数。</td></tr><tr><td><code>$$</code></td><td>脚本运行的当前进程ID号</td></tr><tr><td><code>$!</code></td><td>后台运行的最后一个进程的ID号</td></tr><tr><td><code>$@</code></td><td>与<code>$*</code>相同，但是使用时加引号，并在引号中返回每个参数。<br>如”$@”用「”」括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数。</td></tr><tr><td><code>$-</code></td><td>显示Shell使用的当前选项，与set命令功能相同。</td></tr><tr><td><code>$?</code></td><td>显示最后命令的退出状态。0表示没有错误，其他任何值表明有错误。</td></tr></tbody></table></blockquote><h2 id="3-数组"><a href="#3-数组" class="headerlink" title="3. 数组"></a>3. 数组</h2><pre><code class="bash">#!/bin/bashmy_array=(A B &quot;C&quot; D)echo &quot;第一个元素为: ${my_array[0]}&quot;echo &quot;第二个元素为: ${my_array[1]}&quot;echo &quot;第三个元素为: ${my_array[2]}&quot;echo &quot;第四个元素为: ${my_array[3]}&quot;echo &quot;数组的元素为: ${my_array[*]}&quot;echo &quot;数组的元素为: ${my_array[@]}&quot;echo &quot;数组元素个数为: ${#my_array[*]}&quot;echo &quot;数组元素个数为: ${#my_array[@]}&quot;</code></pre><p>执行结果如下：</p><pre><code class="yml">第一个元素为: A第二个元素为: B第三个元素为: C第四个元素为: D数组的元素为: A B C D数组的元素为: A B C D数组元素个数为: 4数组元素个数为: 4</code></pre><h2 id="4-基本运算符"><a href="#4-基本运算符" class="headerlink" title="4. 基本运算符"></a>4. 基本运算符</h2><blockquote><p>原生 bash 不支持简单的数学运算，但是可以通过其他命令来实现，例如 awk 和 expr，expr 最常用。</p></blockquote><p>expr 是一款表达式计算工具，使用它能完成表达式的求值操作。</p><h3 id="①-算数运算符"><a href="#①-算数运算符" class="headerlink" title="① 算数运算符"></a>① 算数运算符</h3><pre><code class="bash">#!/bin/bashecho &quot;2加2等于&quot;`expr 2 + 2`echo &quot;2减2等于&quot;`expr 2 - 2`echo &quot;2乘2等于&quot;`expr 2 \* 2`echo &quot;2除2等于&quot;`expr 2 / 2`echo &quot;2除2取余&quot;`expr 2 % 2`</code></pre><h3 id="②-关系运算符"><a href="#②-关系运算符" class="headerlink" title="② 关系运算符"></a>② 关系运算符</h3><pre><code class="bash">#!/bin/basha=10b=20if [ $a -eq $b ] # 检测两个数是否相等，相等返回 true。if [ $a -ne $b ] # 检测两个数是否不相等，不相等返回 true。if [ $a -gt $b ] # 检测左边的数是否大于右边的，如果是，则返回 true。if [ $a -lt $b ] # 检测左边的数是否小于右边的，如果是，则返回 true。if [ $a -ge $b ] # 检测左边的数是否大于等于右边的，如果是，则返回 true。if [ $a -le $b ] # 检测左边的数是否小于等于右边的，如果是，则返回 true。</code></pre><h3 id="③-布尔运算符"><a href="#③-布尔运算符" class="headerlink" title="③ 布尔运算符"></a>③ 布尔运算符</h3><pre><code class="bash">#!/bin/bashif [ ! false ]       # 非运算，返回 trueif [ true -o false ] # 或运算，返回 trueif [ true -a false ] # 与运算，返回 false</code></pre><h3 id="④-逻辑运算符"><a href="#④-逻辑运算符" class="headerlink" title="④ 逻辑运算符"></a>④ 逻辑运算符</h3><pre><code class="bash">#!/bin/basha=10b=20if [[ $a -lt $b &amp;&amp; $a -gt $b ]]   # 逻辑的 AND, 返回 falseif [ $a -lt $b ] &amp;&amp; [ $a -gt $b ] # 逻辑的 AND, 返回 falseif [[ $a -lt $b || $a -gt $b ]]   # 逻辑的 OR, 返回 trueif [ $a -lt $b ] || [ $a -gt $b ] # 逻辑的 OR, 返回 true</code></pre><h3 id="⑤-字符串运算符"><a href="#⑤-字符串运算符" class="headerlink" title="⑤ 字符串运算符"></a>⑤ 字符串运算符</h3><pre><code class="bash">#!/bin/basha=&quot;abc&quot;b=&quot;efg&quot;if [ $a = $b ]   # 检测两个字符串是否相等，相等返回 true。if [ $a != $b ]  # 检测两个字符串是否相等，不相等返回 true。if [ -z $a ]     # 检测字符串长度是否为0，为0返回 true。if [ -n &quot;$a&quot; ]   # 检测字符串长度是否为0，不为0返回 true。if [ $a ]        # 检测字符串是否为空，不为空返回 true。</code></pre><h3 id="⑥-文件测试运算符"><a href="#⑥-文件测试运算符" class="headerlink" title="⑥ 文件测试运算符"></a>⑥ 文件测试运算符</h3><p>文件测试运算符用于检测 Unix 文件的各种属性。</p><table><thead><tr><th>操作符</th><th>说明</th></tr></thead><tbody><tr><td>-b file</td><td>检测文件是否是块设备文件，如果是，则返回 true。</td></tr><tr><td>-c file</td><td>检测文件是否是字符设备文件，如果是，则返回 true。</td></tr><tr><td>-d file</td><td>检测文件是否是目录，如果是，则返回 true。</td></tr><tr><td>-f file</td><td>检测文件是否是普通文件（既不是目录，也不是设备文件），如果是，则返回 true。</td></tr><tr><td>-g file</td><td>检测文件是否设置了 SGID 位，如果是，则返回 true。</td></tr><tr><td>-k file</td><td>检测文件是否设置了粘着位(Sticky Bit)，如果是，则返回 true。</td></tr><tr><td>-p file</td><td>检测文件是否是有名管道，如果是，则返回 true。</td></tr><tr><td>-u file</td><td>检测文件是否设置了 SUID 位，如果是，则返回 true。</td></tr><tr><td>-r file</td><td>检测文件是否可读，如果是，则返回 true。</td></tr><tr><td>-w file</td><td>检测文件是否可写，如果是，则返回 true。</td></tr><tr><td>-x file</td><td>检测文件是否可执行，如果是，则返回 true。</td></tr><tr><td>-s file</td><td>检测文件是否为空（文件大小是否大于0），不为空返回 true。</td></tr><tr><td>-e file</td><td>检测文件（包括目录）是否存在，如果是，则返回 true。</td></tr></tbody></table><h2 id="5-echo"><a href="#5-echo" class="headerlink" title="5. echo"></a>5. echo</h2><h3 id="①-命令格式"><a href="#①-命令格式" class="headerlink" title="① 命令格式"></a>① 命令格式</h3><pre><code class="bash">#!/bin/bashecho &quot;It is a test&quot;echo It is a testecho &quot;\&quot;It is a test\&quot;&quot;      # 转义name=Chrisecho &quot;$name is handsome&quot;echo -e &quot;OK! \n&quot;             # 显示换行 -e 开启转义echo &quot;It is a test&quot; &gt; myfile # 显示结果定向至文件echo &#39;$name\&quot;&#39;               # 原样输入字符串，不进行转义或取变量（使用单引号）echo `date`                  # 显示命令执行结构</code></pre><h3 id="②-颜色显示"><a href="#②-颜色显示" class="headerlink" title="② 颜色显示"></a>② 颜色显示</h3><pre><code class="bash">echo -e &quot;\033[字背景颜色；文字颜色m字符串\033[0m&quot;echo -e “\033[30m 黑色字 \033[0m”echo -e “\033[31m 红色字 \033[0m”echo -e “\033[32m 绿色字 \033[0m”echo -e “\033[33m 黄色字 \033[0m”echo -e “\033[34m 蓝色字 \033[0m”echo -e “\033[35m 紫色字 \033[0m”echo -e “\033[36m 天蓝字 \033[0m”echo -e “\033[37m 白色字 \033[0m”echo -e “\033[40;37m 黑底白字 \033[0m”echo -e “\033[41;37m 红底白字 \033[0m”echo -e “\033[42;37m 绿底白字 \033[0m”echo -e “\033[43;37m 黄底白字 \033[0m”echo -e “\033[44;37m 蓝底白字 \033[0m”echo -e “\033[45;37m 紫底白字 \033[0m”echo -e “\033[46;37m 天蓝底白字 \033[0m”echo -e “\033[47;30m 白底黑字 \033[0m”\33[0m 关闭所有属性\33[1m 设置高亮度\33[4m 下划线\33[5m 闪烁\33[7m 反显\33[8m 消隐\33[30m — \33[37m 设置前景色\33[40m — \33[47m 设置背景色\33[nA 光标上移n行\33[nB 光标下移n行\33[nC 光标右移n行\33[nD 光标左移n行\33[y;xH设置光标位置\33[2J 清屏\33[K 清除从光标到行尾的内容\33[s 保存光标位置\33[u 恢复光标位置\33[?25l 隐藏光标\33[?25h 显示光标</code></pre><h2 id="6-sprintf"><a href="#6-sprintf" class="headerlink" title="6. sprintf"></a>6. sprintf</h2><pre><code class="bash">#!/bin/bashprintf &quot;%-10s %-8s %-4s\n&quot; 姓名 性别 体重kg  printf &quot;%-10s %-8s %-4.2f\n&quot; 郭靖 男 66.1234printf &quot;%-10s %-8s %-4.2f\n&quot; 杨过 男 48.6543printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876</code></pre><p>结果：</p><pre><code>姓名     性别   体重kg郭靖     男      66.12杨过     男      48.65郭芙     女      47.99</code></pre><blockquote><p><code>%s %c %d %f</code> 都是格式替代符<br><code>d</code>: Decimal 十进制整数 – 对应位置参数必须是十进制整数，否则报错！<br><code>s</code>: String 字符串 – 对应位置参数必须是字符串或者字符型，否则报错！<br><code>c</code>: Char 字符 – 对应位置参数必须是字符串或者字符型，否则报错！<br><code>f</code>: Float 浮点 – 对应位置参数必须是数字型，否则报错！<br><code>%-10s</code> 指一个宽度为10个字符（-表示左对齐，没有则表示右对齐）,任何字符都会被显示在10个字符宽的字符内，如果不足则自动以空格填充，超过也会将内容全部显示出来。<br><code>%-4.2f</code> 指格式化为小数，其中.2指保留2位小数。</p></blockquote><h2 id="7-test"><a href="#7-test" class="headerlink" title="7. test"></a>7. test</h2><p>Shell中的 test 命令用于检查某个条件是否成立，它可以进行数值、字符和文件三个方面的测试。</p><pre><code class="bash">#!/bin/bashnum1=100num2=100if test $[num1] -eq $[num2]</code></pre><h2 id="8-流程控制"><a href="#8-流程控制" class="headerlink" title="8. 流程控制"></a>8. 流程控制</h2><h3 id="①-if-else"><a href="#①-if-else" class="headerlink" title="① if-else"></a>① if-else</h3><pre><code class="bash">#!/bin/basha=10b=20if [ $a == $b ]then   echo &quot;a 等于 b&quot;elif [ $a -gt $b ]then   echo &quot;a 大于 b&quot;elif [ $a -lt $b ]then   echo &quot;a 小于 b&quot;else   echo &quot;没有符合的条件&quot;fi</code></pre><h3 id="②-for"><a href="#②-for" class="headerlink" title="② for"></a>② for</h3><pre><code class="bash">#!/bin/bashfor loop in 1 2 3 4 5do    echo &quot;The value is: $loop&quot;done</code></pre><h3 id="③-while"><a href="#③-while" class="headerlink" title="③ while"></a>③ while</h3><pre><code class="bash">#!/bin/bashint=1while(( $int&lt;=5 ))do    echo $int    let &quot;int++&quot;done</code></pre><h3 id="④-case"><a href="#④-case" class="headerlink" title="④ case"></a>④ case</h3><pre><code class="bash">#!/bin/bashecho &#39;输入 1 到 4 之间的数字:&#39;echo &#39;你输入的数字为:&#39;read aNumcase $aNum in    1)  echo &#39;你选择了 1&#39;    ;;    2)  echo &#39;你选择了 2&#39;    ;;    3)  echo &#39;你选择了 3&#39;    ;;    4)  echo &#39;你选择了 4&#39;    ;;    *)  echo &#39;你没有输入 1 到 4 之间的数字&#39;    ;;esac</code></pre><h3 id="⑤-break"><a href="#⑤-break" class="headerlink" title="⑤ break"></a>⑤ break</h3><p>break命令允许跳出所有循环（终止执行后面的所有循环）。</p><pre><code class="bash">#!/bin/bashwhile :do    echo -n &quot;输入 1 到 5 之间的数字:&quot;    read aNum    case $aNum in        1|2|3|4|5) echo &quot;你输入的数字为 $aNum!&quot;        ;;        *) echo &quot;你输入的数字不是 1 到 5 之间的! 游戏结束&quot;            break        ;;    esacdone</code></pre><h3 id="⑥-continue"><a href="#⑥-continue" class="headerlink" title="⑥ continue"></a>⑥ continue</h3><p>跳出当前循环。</p><pre><code class="bash">#!/bin/bashwhile :do    echo -n &quot;输入 1 到 5 之间的数字: &quot;    read aNum    case $aNum in        1|2|3|4|5) echo &quot;你输入的数字为 $aNum!&quot;        ;;        *) echo &quot;你输入的数字不是 1 到 5 之间的!&quot;            continue            echo &quot;游戏结束&quot;        ;;    esacdone</code></pre><h3 id="⑦-until"><a href="#⑦-until" class="headerlink" title="⑦ until"></a>⑦ until</h3><pre><code class="bash">#!/bin/basha=0until [ ! $a -lt 10 ]do   echo $a   a=`expr $a + 1`done</code></pre><h2 id="9-函数"><a href="#9-函数" class="headerlink" title="9. 函数"></a>9. 函数</h2><pre><code class="bash">#!/bin/bashfunWithParam(){    echo &quot;第一个参数为 $1 !&quot;    echo &quot;第二个参数为 $2 !&quot;    echo &quot;第十个参数为 $10 !&quot;    echo &quot;第十个参数为 ${10} !&quot;    echo &quot;第十一个参数为 ${11} !&quot;    echo &quot;参数总数有 $# 个!&quot;    echo &quot;作为一个字符串输出所有参数 $* !&quot;}funWithParam 1 2 3 4 5 6 7 8 9 34 73</code></pre><p>结果：</p><pre><code>第一个参数为 1 !第二个参数为 2 !第十个参数为 10 !第十个参数为 34 !第十一个参数为 73 !参数总数有 11 个!作为一个字符串输出所有参数 1 2 3 4 5 6 7 8 9 34 73 !</code></pre><h2 id="10-输入输出"><a href="#10-输入输出" class="headerlink" title="10. 输入输出"></a>10. 输入输出</h2><pre><code class="bash">#!/bin/bashwho &gt; today.log # 执行结果覆盖到文件 today.logecho &quot;菜鸟教程：www.runoob.com&quot; &gt;&gt; today.log # 执行结果追加到文件 today.logwc -l &lt; today.log # 统计 today.log 行数wc -l &lt;&lt; EOF    李白    苏轼    王勃EOF</code></pre><h2 id="11-文件包含"><a href="#11-文件包含" class="headerlink" title="11. 文件包含"></a>11. 文件包含</h2><p>test1.sh</p><pre><code class="bash">#!/bin/bashname=&quot;Chris&quot;</code></pre><p>test2.sh</p><pre><code class="bash">#!/bin/bash#使用 . 号来引用test1.sh 文件. ./test1.sh# 或者使用以下包含文件代码# source ./test1.shecho $name</code></pre><blockquote><p>注：被包含的文件 test1.sh 不需要可执行权限。</p></blockquote><h2 id="reference"><a href="#reference" class="headerlink" title="reference:"></a>reference:</h2><p>[1] <a href="http://www.runoob.com/linux/linux-shell.html" target="_blank" rel="noopener">http://www.runoob.com/linux/linux-shell.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-变量&quot;&gt;&lt;a href=&quot;#1-变量&quot; class=&quot;headerlink&quot; title=&quot;1. 变量&quot;&gt;&lt;/a&gt;1. 变量&lt;/h2&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;#!/bin/bash
+msg=&amp;quot;hello world&amp;quot;
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
+    
+      <category term="shell" scheme="http://yelog.org/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx配置记录</title>
+    <link href="http://yelog.org/2018/02/08/nginx-config/"/>
+    <id>http://yelog.org/2018/02/08/nginx-config/</id>
+    <published>2018-02-08T01:19:09.000Z</published>
+    <updated>2018-11-29T03:23:34.891Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="启用https"><a href="#启用https" class="headerlink" title="启用https"></a>启用https</h2><h3 id="1-购买免费证书"><a href="#1-购买免费证书" class="headerlink" title="1.购买免费证书"></a>1.购买免费证书</h3><p>登录阿里云 -&gt; 控制台 -&gt; 安全（云盾） -&gt; CA证书服务 -&gt; 购买证书<br><img src="http://img.xiangzhangshugongyi.com/Fr8xZ-Z1ylYPcoN1PCTk_5SDm6TM.png" alt="购买免费证书"></p><h3 id="2-补全证书信息"><a href="#2-补全证书信息" class="headerlink" title="2.补全证书信息"></a>2.补全证书信息</h3><p>点击补全，绑定域名</p><h3 id="3-下载并配置"><a href="#3-下载并配置" class="headerlink" title="3.下载并配置"></a>3.下载并配置</h3><p>选择下载 证书for nginx<br><img src="http://img.xiangzhangshugongyi.com/FnMUOU4IZY2ZbMZcqggp4v7JHtej.png" alt="下载证书"></p><p>上面这个页面有相关的配置信息，下面简单介绍：</p><p>① 将下载文件中的 <code>*.pem</code>、<code>*.key</code>, 拷贝到 nginx 目录下 的 <code>cert</code> , 当然也可以是其他目录<br>② 修改 <code>nginx.conf</code></p><pre><code class="conf">server {      listen       443 ssl;      server_name  xiangzhangshugongyi.com;      ssl_certificate      cert/214487958220243.pem;      ssl_certificate_key  cert/214487958220243.key;      ssl_session_cache    shared:SSL:1m;      ssl_session_timeout  5m;      ssl_ciphers  HIGH:!aNULL:!MD5;      ssl_prefer_server_ciphers  on;      location / {          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;          proxy_set_header Host $http_host;          proxy_set_header X-Forwarded-Proto https;          proxy_redirect off;          proxy_connect_timeout      240;          proxy_send_timeout         240;          proxy_read_timeout         240;          # note, there is not SSL here! plain HTTP is used          proxy_pass http://127.0.0.1:8080;      }  }</code></pre><p>③ 重启 nginx，通过 证书绑定域名进行 https 访问到 服务器跑在 8080 的服务<br><img src="http://img.xiangzhangshugongyi.com/FtTXB9QIYoZOlPFKsGg-ImxbL58N.png" alt="通过https访问"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;启用https&quot;&gt;&lt;a href=&quot;#启用https&quot; class=&quot;headerlink&quot; title=&quot;启用https&quot;&gt;&lt;/a&gt;启用https&lt;/h2&gt;&lt;h3 id=&quot;1-购买免费证书&quot;&gt;&lt;a href=&quot;#1-购买免费证书&quot; class=&quot;headerli
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="nginx" scheme="http://yelog.org/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac神器-BTT(BetterTouchTool)不完全教程</title>
+    <link href="http://yelog.org/2017/12/13/Mac-BetterTouchTool/"/>
+    <id>http://yelog.org/2017/12/13/Mac-BetterTouchTool/</id>
+    <published>2017-12-13T09:04:25.000Z</published>
+    <updated>2018-11-29T03:23:34.903Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><img src="http://img.xiangzhangshugongyi.com/Fm6s-GR0yVJgdndJwftdj9eXL7LB.png" alt="BetterTouchTool"><br>BetterTouchTool 是一款专为Mac用户开发的 窗口管理/<code>Trackpad</code>(触控板)/<code>Magic Mouse</code>(苹果鼠标)/<code>Keyboard</code>(键盘)/<code>TouchBar</code> 功能增强制作的软件。</p><p>这款软件不但可以设置全局的 手势/快捷键/TouchBar ，还可以给不同的应用定义不同的姿势，再配合上 Alfred 的 workflow，简直各种高难度姿势都能玩的出来。</p><p>本文主要介绍以下功能：</p><ol><li>窗口管理</li><li>帮 Trackpad 定义各种姿势</li><li>帮 Magic Mouse 定义各种姿势</li><li>帮 Keyboard 定义各种姿势</li><li>帮任何应用自定义 TouchBar</li></ol><p><em>本文以 macbook pro 2017 touchbar 版为例</em></p><h2 id="1-窗口管理"><a href="#1-窗口管理" class="headerlink" title="1. 窗口管理"></a>1. 窗口管理</h2><p>这个功能无需过多配置，默认配置即可很好使用（和windows的理念相似）</p><ul><li>将窗口移到左右边缘，最大化至半屏</li><li>将窗口移到上边缘，最大化至全屏</li></ul><p><img src="http://img.xiangzhangshugongyi.com/lhfTY9ysdWOzOOKprnh0X6MTfoT8.gif" alt="窗口管理"><br>如果对默认配置不满意，也可以在如下图所示的位置来调整窗口展示：<br><img src="http://img.xiangzhangshugongyi.com/FkluTBqX_n2UXj2ICsOE1tW1yFan.png" alt="窗口管理配置"></p><h2 id="2-帮-Trackpad-定义各种姿势"><a href="#2-帮-Trackpad-定义各种姿势" class="headerlink" title="2. 帮 Trackpad 定义各种姿势"></a>2. 帮 Trackpad 定义各种姿势</h2><h3 id="姿势选择"><a href="#姿势选择" class="headerlink" title="姿势选择"></a>姿势选择</h3><p>在界面选择 Trackpad（触摸板） -&gt; Add New Gesture（添加一个新姿势）</p><p>左边可以选择生效的范围：全局或者某个应用</p><p><img src="http://img.xiangzhangshugongyi.com/FsPEIn9TlNOwHkWHgyD32snaT7bY.jpg" alt="选择触摸板姿势"><br>如上图所示，姿势包括但不限于如：</p><ol><li>单指：左下角单击、单指轻拍右上角、单指轻拍上边中点</li><li>双指：两个手指捏、张开两指以两指中心为圆轴逆时针、中指拍住中央食指轻拍面板、双指从上边缘下滑</li><li>三指：三指轻拍、三指拍顶端、三指点击并向上滑、两指轻拍住，拍左、右二指固定拍住，左一下滑</li><li>四指：四指双轻拍、中指无名小拍住，食单击、食中指无名拍住，小单击</li><li>五指：五手指轻拍、五手指上滑</li></ol><p>上面只是列一些典型，更多姿势可以在上图中浏览。</p><h3 id="绑定功能"><a href="#绑定功能" class="headerlink" title="绑定功能"></a>绑定功能</h3><p><img src="http://img.xiangzhangshugongyi.com/FjNWJgoefc34vGaUhruvWQr2R--5.png" alt="定义姿势功能"></p><p>选择过姿势之后，也可以选择在按住某个功能键的时候才能使用（左下角）。</p><p>右边是绑定功能：快捷键或动作。</p><ul><li><p>绑定快捷键举例：<br>比如 给chrome 设置 姿势（两指从触控板下边缘滑入），弹出开发者模式（快捷键绑定：command+option+i），如下图：<br><img src="http://img.xiangzhangshugongyi.com/Fnuaa2qtpdf28autM22l3RPRtCau.jpg" alt="给chrome设置姿势，弹出开发者模式"></p></li><li><p>绑定动作举例：<br>设置 在任何应用内，五指下滑 锁屏，如下图<br><img src="http://img.xiangzhangshugongyi.com/FuTHBQJRvDVem9c14G608eXKtR7R.png" alt="五指下滑锁屏"></p></li></ul><h2 id="3-帮-Magic-Mouse-定义各种姿势"><a href="#3-帮-Magic-Mouse-定义各种姿势" class="headerlink" title="3. 帮 Magic Mouse 定义各种姿势"></a>3. 帮 Magic Mouse 定义各种姿势</h2><p>这个功能设置和 Trackpad 设置 大同小异，所以这边就不多讲，直接图示几个功能。<br><img src="http://img.xiangzhangshugongyi.com/FgwGsolKj59jVnOkgI5vb4zdxNwm.png" alt="两指上滑呼出Mission Control"></p><p>我快捷键设置了 option+E 鼠标取词翻译（欧陆词典），然后绑定到双指轻拍鼠标，即可触发翻译。<br><img src="http://img.xiangzhangshugongyi.com/FsuJ3xU8k5ANQkuXdgpy0Xxkhdme.png" alt="双指轻拍-取词翻译"></p><h2 id="4-帮-Keyboard-定义各种姿势"><a href="#4-帮-Keyboard-定义各种姿势" class="headerlink" title="4. 帮 Keyboard 定义各种姿势"></a>4. 帮 Keyboard 定义各种姿势</h2><p>这个功能比较简单，设置一些 键盘快捷键或录制案件序列 来触发 一些动作或者其他快捷键功能。</p><h2 id="5-帮任何应用自定义-TouchBar"><a href="#5-帮任何应用自定义-TouchBar" class="headerlink" title="5. 帮任何应用自定义 TouchBar"></a>5. 帮任何应用自定义 TouchBar</h2><p>这个重磅功能，可以帮助不支持touchbar的软件定制 TouchBar，是不是有点厉害。</p><p>下面就以我给 IntelliJ IDEA 定制 TouchBar 为例 (没有F1 ~ F12 功能键，debug真的很痛苦，这个软件真的是雪中送炭)，展示一下使用效果</p><p><img src="http://img.xiangzhangshugongyi.com/Fl0oSr-rNLr3f23_E_ZTlMEo46l1.png" alt="定制 TouchBar"></p><p>如上图所示，我给 IntelliJ IDEA 添加了 四个功能 step over/step into/resume/evaluate</p><p>添加完之后，切到 IntelliJ IDEA 软件中时，TouchBar 就显示我们添加的四个功能键， 如下图所示<br><img src="http://img.xiangzhangshugongyi.com/Fi4MOmPsZDPj0Z2UEUxOqCbeIV1o.png" alt="IntelliJ IDEA 定制 TouchBar"></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>BTT还有其他很方便的功能，这盘就介绍到这里，等之后更新了 Alfred 的 workflow 开发指南之后，再一起更新一篇有意思的 BTT+Alfred 效率流。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://img.xiangzhangshugongyi.com/Fm6s-GR0yVJgdndJwftdj9eXL
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="mac" scheme="http://yelog.org/tags/mac/"/>
+    
+      <category term="efficiency" scheme="http://yelog.org/tags/efficiency/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[转]谈谈Java中的语法糖</title>
+    <link href="http://yelog.org/2017/11/27/java-grammatical-sugar/"/>
+    <id>http://yelog.org/2017/11/27/java-grammatical-sugar/</id>
+    <published>2017-11-27T14:51:45.000Z</published>
+    <updated>2018-04-18T02:25:57.117Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>语法糖（Syntactic Sugar），也称糖衣语法，指在计算机语言中添加的某种语法，这种语法对语言本身功能来说没有什么影响，只是为了方便程序员的开发，提高开发效率。说白了，语法糖就是对现有语法的一个封装。</p></blockquote><p>Java作为一种与平台无关的高级语言，当然也含有语法糖，这些语法糖并不被虚拟机所支持，在编译成字节码阶段就自动转换成简单常用语法。一般来说Java中的语法糖主要有以下几种：</p><ol><li>泛型与类型擦除</li><li>自动装箱与拆箱，变长参数、</li><li>增强for循环</li><li>内部类与枚举类</li></ol><h2 id="泛型与类型擦除"><a href="#泛型与类型擦除" class="headerlink" title="泛型与类型擦除"></a>泛型与类型擦除</h2><p>Java语言并不是一开始就支持泛型的。在早期的JDK中，只能通过Object类是所有类型的父类和强制类型转换来实现泛型的功能。强制类型转换的缺点就是把编译期间的问题延迟到运行时，JVM并不能为我们提供编译期间的检查。</p><p>在JDK1.5中，Java语言引入了泛型机制。但是这种泛型机制是通过类型擦除来实现的，即Java中的泛型只在程序源代码中有效（源代码阶段提供类型检查），在编译后的字节码中自动用强制类型转换进行替代。也就是说，Java语言中的泛型机制其实就是一颗语法糖，相较与C++、C#相比，其泛型实现实在是不那么优雅。</p><pre><code class="java">/*** 在源代码中存在泛型*/public static void main(String[] args) {    Map&lt;String,String&gt; map = new HashMap&lt;String,String&gt;();    map.put(&quot;hello&quot;,&quot;你好&quot;);    String hello = map.get(&quot;hello&quot;);    System.out.println(hello);}</code></pre><p>当上述源代码被编译为class文件后，泛型被擦除且引入强制类型转换</p><pre><code class="java">public static void main(String[] args) {    HashMap map = new HashMap(); //类型擦除    map.put(&quot;hello&quot;, &quot;你好&quot;);    String hello = (String)map.get(&quot;hello&quot;);//强制转换    System.out.println(hello);}</code></pre><h2 id="自动装箱与拆箱"><a href="#自动装箱与拆箱" class="headerlink" title="自动装箱与拆箱"></a>自动装箱与拆箱</h2><blockquote><p>Java中的自动装箱与拆箱指的是基本数据类型与他们的包装类型之间的相互转换。</p></blockquote><p>我们知道Java是一门面向对象的语言，在Java世界中有一句话是这么说的：“万物皆对象”。但是Java中的基本数据类型却不是对象，他们不需要进行new操作，也不能调用任何方法，这在使用的时候有诸多不便。因此Java为这些基本类型提供了包装类，并且为了使用方便，提供了自动装箱与拆箱功能。自动装箱与拆箱在使用的过程中，其实是一个语法糖，内部还是调用了相应的函数进行转换。</p><p>下面代码演示了自动装箱和拆箱功能</p><pre><code class="java">public static void main(String[] args) {    Integer a = 1;    int b = 2;    int c = a + b;    System.out.println(c);}</code></pre><p>经过编译后，代码如下</p><pre><code class="java">public static void main(String[] args) {    Integer a = Integer.valueOf(1); // 自动装箱    byte b = 2;    int c = a.intValue() + b;//自动拆箱    System.out.println(c);}</code></pre><h2 id="变长参数"><a href="#变长参数" class="headerlink" title="变长参数"></a>变长参数</h2><blockquote><p>所谓变长参数，就是方法可以接受长度不定确定的参数</p></blockquote><p>变长参数特性是在JDK1.5中引入的，使用变长参数有两个条件，一是变长的那一部分参数具有相同的类型，二是变长参数必须位于方法参数列表的最后面。变长参数同样是Java中的语法糖，其内部实现是Java数组。</p><pre><code class="java">public class Varargs {    public static void print(String... args) {        for(String str : args){            System.out.println(str);        }    }    public static void main(String[] args) {        print(&quot;hello&quot;, &quot;world&quot;);    }}</code></pre><p>编译为class文件后如下，从中可以很明显的看出变长参数内部是通过数组实现的</p><pre><code class="java">public class Varargs {    public Varargs() {    }    public static void print(String... args) {        String[] var1 = args;        int var2 = args.length;        //增强for循环的数组实现方式        for(int var3 = 0; var3 &lt; var2; ++var3) {            String str = var1[var3];            System.out.println(str);        }    }    public static void main(String[] args) {        //变长参数转换为数组        print(new String[]{&quot;hello&quot;, &quot;world&quot;});    }}</code></pre><h2 id="增强for循环"><a href="#增强for循环" class="headerlink" title="增强for循环"></a>增强for循环</h2><blockquote><p>增强for循环与普通for循环相比，功能更强并且代码更简洁</p></blockquote><p>增强for循环的对象要么是一个数组，要么实现了Iterable接口。这个语法糖主要用来对数组或者集合进行遍历，其在循环过程中不能改变集合的大小。</p><pre><code class="java">public static void main(String[] args) {    String[] params = new String[]{&quot;hello&quot;,&quot;world&quot;};    //增强for循环对象为数组    for(String str : params){        System.out.println(str);    }    List&lt;String&gt; lists = Arrays.asList(&quot;hello&quot;,&quot;world&quot;);    //增强for循环对象实现Iterable接口    for(String str : lists){        System.out.println(str);    }}</code></pre><p>编译后的class文件为</p><pre><code class="java">public static void main(String[] args) {   String[] params = new String[]{&quot;hello&quot;, &quot;world&quot;};   String[] lists = params;   int var3 = params.length;   //数组形式的增强for退化为普通for   for(int str = 0; str &lt; var3; ++str) {       String str1 = lists[str];       System.out.println(str1);   }   List var6 = Arrays.asList(new String[]{&quot;hello&quot;, &quot;world&quot;});   Iterator var7 = var6.iterator();   //实现Iterable接口的增强for使用iterator接口进行遍历   while(var7.hasNext()) {       String var8 = (String)var7.next();       System.out.println(var8);   }}</code></pre><h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><blockquote><p>内部类就是定义在一个类内部的类</p></blockquote><p>Java语言中之所以引入内部类，是因为有些时候一个类只在另一个类中有用，我们不想让其在另外一个地方被使用。内部类之所以是语法糖，是因为其只是一个编译时的概念，一旦编译完成，编译器就会为内部类生成一个单独的class文件，名为outer$innter.class。</p><pre><code class="java">public class Outer {    class Inner{    }}</code></pre><p>使用javac编译后，生成两个class文件Outer.class和Outer$Inner.class，其中Outer$Inner.class的内容如下：</p><pre><code class="java">class Outer$Inner {    Outer$Inner(Outer var1) {        this.this$0 = var1;    }}</code></pre><p>内部类分为四种：成员内部类、局部内部类、匿名内部类、静态内部类，每一种都有其用法，这里就不介绍了</p><h2 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h2><blockquote><p>枚举类型就是一些具有相同特性的类常量</p></blockquote><p>java中类的定义使用class，枚举类的定义使用enum。在Java的字节码结构中，其实并没有枚举类型，枚举类型只是一个语法糖，在编译完成后被编译成一个普通的类。这个类继承java.lang.Enum，并被final关键字修饰。</p><pre><code class="java">public enum Fruit {    APPLE,ORINGE}</code></pre><p>使用jad对编译后的class文件进行反编译后得到</p><pre><code class="java">//继承java.lang.Enum并声明为finalpublic final class Fruit extends Enum{    public static Fruit[] values()    {        return (Fruit[])$VALUES.clone();    }    public static Fruit valueOf(String s)    {        return (Fruit)Enum.valueOf(Fruit, s);    }    private Fruit(String s, int i)    {        super(s, i);    }    //枚举类型常量    public static final Fruit APPLE;    public static final Fruit ORANGE;    private static final Fruit $VALUES[];//使用数组进行维护    static    {        APPLE = new Fruit(&quot;APPLE&quot;, 0);        ORANGE = new Fruit(&quot;ORANGE&quot;, 1);        $VALUES = (new Fruit[] {            APPLE, ORANGE        });    }}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;语法糖（Syntactic Sugar），也称糖衣语法，指在计算机语言中添加的某种语法，这种语法对语言本身功能来说没有什么影响，只是为了方便程序员的开发，提高开发效率。说白了，语法糖就是对现有语法的一个封装。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;
+      
+    
+    </summary>
+    
+      <category term="后端" scheme="http://yelog.org/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="java" scheme="http://yelog.org/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PostgreSQL事务及隔离级别</title>
+    <link href="http://yelog.org/2017/11/09/PostgreSQL%E4%BA%8B%E7%89%A9%E5%8F%8A%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/"/>
+    <id>http://yelog.org/2017/11/09/PostgreSQL事物及隔离级别/</id>
+    <published>2017-11-08T16:07:33.000Z</published>
+    <updated>2017-11-08T16:17:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>PostgreSQL中提供了多种数据完整性的保证机制。如：约束、触发器、事务和锁管理等。</p><p>事务主要是为了保证一组相关数据库的操作能全部执行成功，从而保证数据的完整性。锁机制主要是控制多个用户对同一数据进行操作，使用锁机制可以解决并发问题。</p><h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>事务是用户对一个数据库操作的一个序列，这些操作要么全做，要么全不做，是一个不可分割的单位。</p><p>事务管理的常用语句如下：</p><pre><code class="sql">BEGIN;SQL语句1;SQL语句2;...COMMIT;</code></pre><p>事务块是指包围在BEGIN和COMMIT之间的语句。在PostgreSQL9中，常用的事务块管理语句含义如下：</p><blockquote><p><strong>START TRANSACTION</strong>：此命令表示开始一个新的事务块.<br><strong>BEGIN</strong>：初始化一个事务块。在BEGIN命令后的语句都将在一个事务里面执行，知道遇见COMMIT或ROLLBACK。它和START TRANSACTION是一样的。<br><strong>COMMIT</strong>：提交事务。<br><strong>ROLLBACK</strong>：事务失败时执行回滚操作。<br><strong>SET TRANSACTION</strong>：设置当前事务的特性。对后面的事务没有影响。</p></blockquote><h3 id="事务隔离及并发控制"><a href="#事务隔离及并发控制" class="headerlink" title="事务隔离及并发控制"></a>事务隔离及并发控制</h3><p>PostgreSQL是一个支持多用户的数据库，当多个用户操作同一数据库时，并发控制要保证所有用户可以高效的访问的同时不破坏数据的完整性。</p><p>数据库中数据的并发操作经常发生，而对数据的并发操作会带来下面的一些问题：</p><ol><li>脏读<br>一个事务读取了另一个未提交事务写入的数据。</li><li>不可重复读<br>一个事务重新读取前面读取过的数据，发现该数据已经被另一个已经提交的事务修改。</li><li>幻读<br>一个事务重新执行一个查询，返回符合查询条件的行的集合，发现满足查询条件的行的集合因为其它最近提交的事务而发生了改变。</li></ol><p>SQL标准定义了四个级别的事务隔离。</p><table><thead><tr><th style="text-align:left">隔离级别</th><th style="text-align:left">脏读</th><th>幻读</th><th>不可重复性读取</th></tr></thead><tbody><tr><td style="text-align:left">读未提交</td><td style="text-align:left">可能</td><td>可能</td><td>可能</td></tr><tr><td style="text-align:left">读已提交</td><td style="text-align:left">不可能</td><td>可能</td><td>可能</td></tr><tr><td style="text-align:left">可重复读</td><td style="text-align:left">不可能</td><td>可能</td><td>不可能</td></tr><tr><td style="text-align:left">可串行读</td><td style="text-align:left">不可能</td><td>不可能</td><td>不可能</td></tr></tbody></table><p>在PostgreSQL中，可以请求4种隔离级别中的任意一种。但是在内部，实际上只有两种独立的隔离级别，分别对应已提交和可串行化。如果选择了读未提交的级别，实际上使用的是读已提交，在选择可重复读级别的时候，实际上用的是可串行化，所以实际的隔离级别可能比选择的更严格。这是SQL标准允许的：4种隔离级别只定义了哪种现象不能发生，但是没有定义哪种现象一定发生。</p><p>PostgreSQL只提供两种隔离级别的原因是，这是把标准的隔离级别与多版本并发控制架构映射相关的唯一合理方法。</p><ol><li>读已提交<br>这是PostgreSQL中默认的隔离级别，当一个事务运行在这个隔离级别时，一个SELECT查询只能看到查询开始前已提交的数据，而无法看到未提交的数据或者在查询期间其他的事务已提交的数据。</li><li>可串行化<br>可串行化提供最严格的事务隔离。这个级别模拟串行的事务执行，就好像事务是一个接着一个串行的执行。不过，这个级别的应用必须准备在串行化失败的时候重新启动事务。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;PostgreSQL中提供了多种数据完整性的保证机制。如：约束、触发器、事务和锁管理等。&lt;/p&gt;
+&lt;p&gt;事务主要是为了保证一组相关数据库的操
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://yelog.org/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="PostgreSQL" scheme="http://yelog.org/tags/PostgreSQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</title>
+    <link href="http://yelog.org/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"/>
+    <id>http://yelog.org/2017/10/20/linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R/</id>
+    <published>2017-10-20T09:38:49.000Z</published>
+    <updated>2018-11-29T03:23:34.891Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用 <code>vim</code> 过程中发现 <code>esc</code> 和 <code>ctrl</code> 按键很难按，小拇指没有那么长啊～～，而 <code>caps_lock</code> 和 <code>alt_r</code>(右alt) 很少用。</p><p>本教程将 <code>esc</code> 和 <code>caps_lock</code> 两个按键交换， <code>alt_r</code>(右alt) 改为 <code>ctrl</code>。</p><h2 id="一、-esc-与-caps-lock-按键交换"><a href="#一、-esc-与-caps-lock-按键交换" class="headerlink" title="一、 esc 与 caps_lock 按键交换"></a>一、 esc 与 caps_lock 按键交换</h2><p>①. 创建 <code>.xmodmaprc</code> 文件。<br>②. 加入以下内容：</p><pre><code class="bash">remove Lock = Caps_Lockadd Lock = Escapekeysym Caps_Lock = Escapekeysym Escape = Caps_Lock</code></pre><p>③. 执行 <code>xmodmap .xmodmaprc</code> 使之生效。</p><h2 id="二、-将-右alt-改为-ctrl"><a href="#二、-将-右alt-改为-ctrl" class="headerlink" title="二、 将 右alt 改为 ctrl"></a>二、 将 右alt 改为 ctrl</h2><p>①. 查看需要修改键位的 keysym<br>通过 <code>xev | grep keycode</code> 获取右 <code>alt</code> 的 keysym 为 <code>Alt_R</code>。如下图所示：<br><img src="http://img.xiangzhangshugongyi.com/FvuqjLi5czeBluMTyIfv_xUOcu5k.png" alt="通过xev获取右alt的keysym"></p><p>②. 查看 <code>Alt_R</code> 是哪个 modifier 使用的<br>通过 <code>xmodmap -pm</code> 查看，发现 <code>Alt_R</code> 是作为 modifier <code>mod1</code> 使用的。如下图所示：<br><img src="http://img.xiangzhangshugongyi.com/Fib8QjT-Ccx30DCf2rF4WkzHsbOH.png" alt="查看 Alt_R 是作为 mode1 使用的"></p><p>③. 修改 modifier</p><pre><code class="bash">xmodmap -e &#39;remove mod1 = Alt_R&#39; # 解除原来绑定xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;使用 &lt;code&gt;vim&lt;/code&gt; 过程中发现 &lt;code&gt;esc&lt;/code&gt; 和 &lt;code&gt;ctrl&lt;/code&gt; 按键很难按，小拇指没有那么长啊～～，而 &lt;code&gt;caps_lock&lt;/code&gt; 和 &lt;code&gt;alt_r&lt;/code&gt;(右alt) 很少用。
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="vim" scheme="http://yelog.org/tags/vim/"/>
+    
+      <category term="keybord" scheme="http://yelog.org/tags/keybord/"/>
+    
+      <category term="emacs" scheme="http://yelog.org/tags/emacs/"/>
+    
+      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</title>
+    <link href="http://yelog.org/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"/>
+    <id>http://yelog.org/2017/09/25/ascii-ansi-unicode-utf-8）/</id>
+    <published>2017-09-25T11:15:00.000Z</published>
+    <updated>2018-04-18T02:25:57.118Z</updated>
+    
+    <content type="html"><![CDATA[<p>很久很久以前，有一群人，他们决定用8个可以开合的晶体管来组合成不同的状态，以表示世界上的万物。他们认为8个开关状态作为原子单位很好，于是他们把这称为”字节”。</p><p>再后来，他们又做了一些可以处理这些字节的机器，机器开动了，可以用字节来组合出更多的状态，状态开始变来变去。他们看到这样是好的，于是它们就这机器称为”计算机”。</p><p>开始计算机只在美国用。八位的字节一共可以组合出256（2的8次方）种不同的状态。</p><p>他们把其中的编号从0开始的32种状态分别规定了特殊的用途，一但终端设备或者打印机遇上这些约定好的字节时，就要做一些约定的动作。遇上 00x10, 终端就换行，遇上0x07, 终端就向人们嘟嘟叫，例好遇上0x1b, 打印机就打印反白的字，对于终端就用彩色显示字母。他们看到这样很好，于是就把这些0x20（十进制32）以下的字节状态称为”控制码”。</p><p>他们又把所有的空格、标点符号、数字、大小写字母分别用连续的字节状态表示，一直编到了第127号，这样计算机就可以用不同字节来存储英语的 文字了。大家看到这样，都感觉很好，于是大家都把这个方案叫做 ANSI 的”Ascii”编码（American Standard Code for Information Interchange，美国信息互换标准代码）。当时世界上所有的计算机都用同样的ASCII方案来保存英文文字。</p><p>后来，就像建造巴比伦塔一样，世界各地的都开始使用计算机，但是很多国家用的不是英文，他们用到的许多字母在ASCII中根本没有，为了也可以在计算机中保存他们的文字，他们决定采用127号之后的空位来表示这些新的字母、符号，还加入了很多画表格时需要用下到的横线、竖线、交叉等形状，一直把序号编到了最后一个状态255。从128到255这一页的字符集被称”扩展字符集”。从此之后，贪婪的人类再没有新的状态可以用了，美帝国主义可能没有想到还有第三世界国家的人们也希望可以用到计算机吧！</p><p>等中国人们得到计算机时，已经没有可以利用的字节状态来表示汉字，况且有6000多个常用汉字需要保存呢。但是这难不倒智慧的中国人民，我们不客气地把那些127号之后的奇异符号们直接取消掉，并且规定：一个小于127的字符的意义与原来相同，但两个大于127的字符连在一起时，就表示一个汉字，前面的一个字节（他称之为高字节）从0xA1用到 0xF7，后面一个字节（低字节）从0xA1到0xFE，这样我们就可以组合出大约7000多个简体汉字了。在这些编码里，我们还把数学符号、罗马希腊的字母、日文的假名们都编进去了，连在 ASCII 里本来就有的数字、标点、字母都统统重新编了两个字节长的编码，这就是常说的”全角”字符，而原来在127号以下的那些就叫”半角”字符了。</p><p>中国人民看到这样很不错，于是就把这种汉字方案叫做”GB2312”。GB2312 是对 ASCII 的中文扩展。</p><p>但是中国的汉字太多了，我们很快就就发现有许多人的人名没有办法在这里打出来，特别是某些很会麻烦别人的国家领导人（如朱镕基的“镕”字）。于是我们不得不继续把 GB2312 没有用到的码位找出来老实不客气地用上。</p><p>后来还是不够用，于是干脆不再要求低字节一定是127号之后的内码，只要第一个字节是大于127就固定表示这是一个汉字的开始，不管后面跟的是不是扩展字符集里的内容。结果扩展之后的编码方案被称为 GBK 标准，GBK 包括了 GB2312 的所有内容，同时又增加了近20000个新的汉字（包括繁体字）和符号。</p><p>后来少数民族也要用电脑了，于是我们再扩展，又加了几千个新的少数民族的字，GBK 扩成了 GB18030。从此之后，中华民族的文化就可以在计算机时代中传承了。</p><p>中国的程序员们看到这一系列汉字编码的标准是好的，于是通称他们叫做 “DBCS”（Double Byte Charecter Set 双字节字符集）。在DBCS系列标准里，最大的特点是两字节长的汉字字符和一字节长的英文字符并存于同一套编码方案里，因此他们写的程序为了支持中文处理，必须要注意字串里的每一个字节的值，如果这个值是大于127的，那么就认为一个双字节字符集里的字符出现了。那时候凡是受过加持，会编程的计算机僧侣们都要每天念下面这个咒语数百遍：</p><p>“一个汉字算两个英文字符！一个汉字算两个英文字符……”</p><p>因为当时各个国家都像中国这样搞出一套自己的编码标准，结果互相之间谁也不懂谁的编码，谁也不支持别人的编码，连大陆和台湾这样只相隔了150海里，使用着同一种语言的兄弟地区，也分别采用了不同的 DBCS 编码方案——当时的中国人想让电脑显示汉字，就必须装上一个”汉字系统”，专门用来处理汉字的显示、输入的问题，但是那个台湾的愚昧封建人士写的算命程序就必须加装另一套支持 BIG5 编码的什么”倚天汉字系统”才可以用，装错了字符系统，显示就会乱了套！这怎么办？而且世界民族之林中还有那些一时用不上电脑的穷苦人民，他们的文字又怎么办？</p><p>真是计算机的巴比伦塔命题啊！</p><p>正在这时，大天使加百列及时出现了——一个叫 ISO （国际标谁化组织）的国际组织决定着手解决这个问题。他们采用的方法很简单：废了所有的地区性编码方案，重新搞一个包括了地球上所有文化、所有字母和符号的编码！他们打算叫它”Universal Multiple-Octet Coded Character Set”，简称 UCS, 俗称 “UNICODE”。</p><p>UNICODE 开始制订时，计算机的存储器容量极大地发展了，空间再也不成为问题了。于是 ISO 就直接规定必须用两个字节，也就是16位来统一表示所有的字符，对于ascii里的那些”半角”字符，UNICODE 包持其原编码不变，只是将其长度由原来的8位扩展为16位，而其他文化和语言的字符则全部重新统一编码。由于”半角”英文符号只需要用到低8位，所以其高 8位永远是0，因此这种大气的方案在保存英文文本时会多浪费一倍的空间。</p><p>这时候，从旧社会里走过来的程序员开始发现一个奇怪的现象：他们的strlen函数靠不住了，一个汉字不再是相当于两个字符了，而是一个！是 的，从 UNICODE 开始，无论是半角的英文字母，还是全角的汉字，它们都是统一的”一个字符”！同时，也都是统一的”两个字节”，请注意”字符”和”字节”两个术语的不同， “字节”是一个8位的物理存贮单元，而”字符”则是一个文化相关的符号。在UNICODE 中，一个字符就是两个字节。一个汉字算两个英文字符的时代已经快过去了。</p><p>从前多种字符集存在时，那些做多语言软件的公司遇上过很大麻烦，他们为了在不同的国家销售同一套软件，就不得不在区域化软件时也加持那个双字节字符集咒语，不仅要处处小心不要搞错，还要把软件中的文字在不同的字符集中转来转去。UNICODE 对于他们来说是一个很好的一揽子解决方案，于是从 Windows NT 开始，MS 趁机把它们的操作系统改了一遍，把所有的核心代码都改成了用 UNICODE 方式工作的版本，从这时开始，WINDOWS 系统终于无需要加装各种本土语言系统，就可以显示全世界上所有文化的字符了。</p><p>但是，UNICODE 在制订时没有考虑与任何一种现有的编码方案保持兼容，这使得 GBK 与UNICODE 在汉字的内码编排上完全是不一样的，没有一种简单的算术方法可以把文本内容从UNICODE编码和另一种编码进行转换，这种转换必须通过查表来进行。</p><p>如前所述，UNICODE 是用两个字节来表示为一个字符，他总共可以组合出65535不同的字符，这大概已经可以覆盖世界上所有文化的符号。如果还不够也没有关系，ISO已经准备了UCS-4方案，说简单了就是四个字节来表示一个字符，这样我们就可以组合出21亿个不同的字符出来（最高位有其他用途），这大概可以用到银河联邦成立那一天吧！</p><p>UNICODE 来到时，一起到来的还有计算机网络的兴起，UNICODE 如何在网络上传输也是一个必须考虑的问题，于是面向传输的众多 UTF（UCS Transfer Format）标准出现了，顾名思义，UTF8就是每次8个位传输数据，而UTF16就是每次16个位，只不过为了传输时的可靠性，从UNICODE到 UTF时并不是直接的对应，而是要过一些算法和规则来转换。</p><p>受到过网络编程加持的计算机僧侣们都知道，在网络里传递信息时有一个很重要的问题，就是对于数据高低位的解读方式，一些计算机是采用低位先发送的方法，例如我们PC机采用的 INTEL 架构；而另一些是采用高位先发送的方式。在网络中交换数据时，为了核对双方对于高低位的认识是否是一致的，采用了一种很简便的方法，就是在文本流的开始时向对方发送一个标志符——如果之后的文本是高位在位，那就发送”FEFF”，反之，则发送”FFFE”。不信你可以用二进制方式打开一个UTF-X格式的文件，看看开头两个字节是不是这两个字节？</p><p>下面是Unicode和UTF-8转换的规则</p><pre><code class="xml">UnicodeUTF-80000 - 007F0xxxxxxx0080 - 07FF110xxxxx 10xxxxxx0800 - FFFF1110xxxx 10xxxxxx 10xxxxxx</code></pre><p>例如”汉”字的Unicode编码是6C49。6C49在0800-FFFF之间，所以要用3字节模板：1110xxxx 10xxxxxx 10xxxxxx。将6C49写成二进制是：0110 1100 0100 1001，将这个比特流按三字节模板的分段方法分为0110 110001 001001，依次代替模板中的x，得到：1110-0110 10-110001 10-001001，即E6 B1 89，这就是其UTF8的编码。</p><p>讲到这里，我们再顺便说说一个很著名的奇怪现象：当你在 windows 的记事本里新建一个文件，输入”联通”两个字之后，保存，关闭，然后再次打开，你会发现这两个字已经消失了，代之的是几个乱码！呵呵，有人说这就是联通之所以拼不过移动的原因。</p><p>其实这是因为GB2312编码与UTF8编码产生了编码冲撞的原因。</p><p>当一个软件打开一个文本时，它要做的第一件事是决定这个文本究竟是使用哪种字符集的哪种编码保存的。软件一般采用三种方式来决定文本的字符集和编码：</p><p>检测文件头标识，提示用户选择，根据一定的规则猜测</p><p>最标准的途径是检测文本最开头的几个字节，开头字节 Charset/encoding,如下表：</p><pre><code class="xml">EF BB BF UTF-8FF FE UTF-16/UCS-2, little endianFE FF UTF-16/UCS-2, big endianFF FE 00 00 UTF-32/UCS-4, little endian.00 00 FE FF UTF-32/UCS-4, big-endian.</code></pre><p>当你新建一个文本文件时，记事本的编码默认是ANSI（代表系统默认编码，在中文系统中一般是GB系列编码）, 如果你在ANSI的编码输入汉字，那么他实际就是GB系列的编码方式，在这种编码下，”联通”的内码是：</p><pre><code class="xml">c1 1100 0001aa 1010 1010cd 1100 1101a8 1010 1000</code></pre><p>注意到了吗？第一二个字节、第三四个字节的起始部分的都是”110”和”10”，正好与UTF8规则里的两字节模板是一致的，</p><p>于是当我们再次打开记事本时，记事本就误认为这是一个UTF8编码的文件，让我们把第一个字节的110和第二个字节的10去掉，我们就得到了”00001 101010”，再把各位对齐，补上前导的0，就得到了”0000 0000 0110 1010”，不好意思，这是UNICODE的006A，也就是小写的字母”j”，而之后的两字节用UTF8解码之后是0368，这个字符什么也不是。这就是只有”联通”两个字的文件没有办法在记事本里正常显示的原因。</p><p>而如果你在”联通”之后多输入几个字，其他的字的编码不见得又恰好是110和10开始的字节，这样再次打开时，记事本就不会坚持这是一个utf8编码的文件，而会用ANSI的方式解读之，这时乱码又不出现了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;很久很久以前，有一群人，他们决定用8个可以开合的晶体管来组合成不同的状态，以表示世界上的万物。他们认为8个开关状态作为原子单位很好，于是他们把这称为”字节”。&lt;/p&gt;
+&lt;p&gt;再后来，他们又做了一些可以处理这些字节的机器，机器开动了，可以用字节来组合出更多的状态，状态开始变来
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="encoding" scheme="http://yelog.org/tags/encoding/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建dubbo+zookeeper平台</title>
+    <link href="http://yelog.org/2017/09/25/%E6%90%AD%E5%BB%BAdubbo+zookeeper%E5%B9%B3%E5%8F%B0/"/>
+    <id>http://yelog.org/2017/09/25/搭建dubbo+zookeeper平台/</id>
+    <published>2017-09-25T08:29:07.000Z</published>
+    <updated>2018-11-29T03:23:34.893Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文将介绍在SpringMVC+Spring+Mybatis项目中添加 <code>dubbo</code> 作为 <code>rpc</code> 服务。</p><p>文末有项目代码地址。</p><h2 id="一-搭建zookeeper"><a href="#一-搭建zookeeper" class="headerlink" title="一.搭建zookeeper"></a>一.搭建zookeeper</h2><p>使用 docker 一句话创建：</p><pre><code class="bash">docker run -dit --name zookeeper --hostname zookeeper-host -v /data:/data -p 2181:2181 jplock/zookeeper:latest</code></pre><h2 id="二-安装zkui（非必须）"><a href="#二-安装zkui（非必须）" class="headerlink" title="二.安装zkui（非必须）"></a>二.安装zkui（非必须）</h2><p>这个项目为 zookeeper 提供一个 web 的管理界面。当然我们也可以直接在zookeeper中使用命令查看，所以此步骤可以忽略</p><p>在开始前需要安装 Java 环境、Maven 环境。</p><ol><li>到 <a href="https://github.com/DeemOpen/zkui" target="_blank" rel="noopener">zkui</a> 的项目中下载代码。<pre><code class="bash">git clone https://github.com/DeemOpen/zkui.git</code></pre></li><li>执行 <code>mvn clean install</code> 生成jar文件。</li><li>将config.cfg复制到上一步生成的jar文件所在目录，然后修改配置文件中的zookeeper地址。</li><li>执行 <code>nohup java -jar zkui-2.0-SNAPSHOT-jar-with-dependencies.jar &amp;</code></li><li>测试 <code>http://localhost:9090</code>，如果能看到如下页面，表示安装成功。</li></ol><p><img src="http://img.xiangzhangshugongyi.com/Fherw3peRgh-grmGz6qkNri5J1aG.png" alt="登录页面"><br><img src="http://img.xiangzhangshugongyi.com/FvEVMOzSZBP4N4-Q14noQT_VsKF6.png" alt="首页"></p><h2 id="三-使用dubbo"><a href="#三-使用dubbo" class="headerlink" title="三.使用dubbo"></a>三.使用dubbo</h2><ol><li>在原来 SpringMVC+Spring+Mybatis 项目中，除了原来 spring 相关依赖外，还需要加入以下依赖<pre><code class="xml">&lt;dependency&gt;     &lt;groupId&gt;com.alibaba&lt;/groupId&gt;     &lt;artifactId&gt;dubbo&lt;/artifactId&gt;     &lt;version&gt;2.5.5&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt;     &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;     &lt;artifactId&gt;zookeeper&lt;/artifactId&gt;     &lt;version&gt;3.4.9&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt;     &lt;groupId&gt;com.101tec&lt;/groupId&gt;     &lt;artifactId&gt;zkclient&lt;/artifactId&gt;     &lt;version&gt;0.2&lt;/version&gt;&lt;/dependency&gt;</code></pre></li><li>定义服务接口<pre><code class="java">public interface IPersonService { List&lt;Person&gt; listAll(); Person getById(Integer id); Integer delById(Person person); Integer updatePerson(Person person);}</code></pre></li><li><p>定义服务实现类</p><pre><code class="java">@Servicepublic class PersonService implements IPersonService { @Autowired PersonMapper personMapper; public List&lt;Person&gt; listAll() {     return personMapper.findAll(); } public Person getById(Integer id) {     return personMapper.findOneById(id); } public Integer delById(Person person) {     return personMapper.del(person); } public Integer updatePerson(Person person) {     return personMapper.update(person); }}</code></pre></li><li><p>配置生产者，注册服务信息</p><pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;beans xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    xmlns:dubbo=&quot;http://code.alibabatech.com/schema/dubbo&quot;    xmlns=&quot;http://www.springframework.org/schema/beans&quot;    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd&quot;&gt; &lt;!--定义了提供方应用信息，用于计算依赖关系；--&gt; &lt;dubbo:application name=&quot;demotest-provider&quot; /&gt; &lt;!-- 使用 zookeeper 注册中心暴露服务地址 --&gt; &lt;dubbo:registry address=&quot;zookeeper://192.168.0.86:2181&quot;/&gt; &lt;!-- 用dubbo协议在20880端口暴露服务 --&gt; &lt;dubbo:protocol name=&quot;dubbo&quot; port=&quot;20880&quot;/&gt; &lt;!-- 和本地bean一样实现服务 --&gt; &lt;bean id=&quot;personService&quot; class=&quot;com.ssm.service.PersonService&quot;/&gt; &lt;!-- 声明需要暴露的服务接口 --&gt; &lt;dubbo:service interface=&quot;com.ssm.iservice.IPersonService&quot; ref=&quot;personService&quot;/&gt;&lt;/beans&gt;</code></pre></li><li><p>配置消费者，订阅服务</p><pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;beans xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    xmlns:dubbo=&quot;http://code.alibabatech.com/schema/dubbo&quot;    xmlns=&quot;http://www.springframework.org/schema/beans&quot;    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd&quot;&gt; &lt;!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 --&gt; &lt;dubbo:application name=&quot;demo-consumer&quot;/&gt; &lt;!-- 使用 zookeeper 注册中心暴露发现服务地址 --&gt; &lt;dubbo:registry address=&quot;zookeeper://192.168.0.86:2181&quot;/&gt; &lt;!-- 生成远程服务代理，可以和本地bean一样使用demoService --&gt; &lt;dubbo:reference id=&quot;personService&quot; check=&quot;false&quot; interface=&quot;com.ssm.iservice.IPersonService&quot;/&gt;&lt;/beans&gt;</code></pre></li><li><p>调用远程服务<br>配置完成后，我们就可以像使用本地 bean 一样，使用 rpc 的 service；</p><pre><code class="java">@Controllerpublic class IndexController { @Autowired IPersonService personService; @RequestMapping(&quot;/index.html&quot;) public String index(Model model) {     RpcContext.getContext().setAttachment(&quot;index&quot;, &quot;1&quot;);//测试ThreadLocal     List&lt;Person&gt; list = personService.listAll();     model.addAttribute(&quot;command&quot;,list);     return &quot;index&quot;; }}</code></pre></li></ol><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>至此，单机运行的 rpc 服务已搭建完成。</p><p>代码传送文 <a href="https://github.com/yelog/ssm" target="_blank" rel="noopener">ssm</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本文将介绍在SpringMVC+Spring+Mybatis项目中添加 &lt;code&gt;dubbo&lt;/code&gt; 作为 &lt;code&gt;rpc&lt;/c
+      
+    
+    </summary>
+    
+      <category term="后端" scheme="http://yelog.org/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+      <category term="dubbo" scheme="http://yelog.org/tags/dubbo/"/>
+    
+      <category term="zookeeper" scheme="http://yelog.org/tags/zookeeper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker报错集锦</title>
+    <link href="http://yelog.org/2017/09/25/docker-errors/"/>
+    <id>http://yelog.org/2017/09/25/docker-errors/</id>
+    <published>2017-09-25T02:03:50.000Z</published>
+    <updated>2017-11-06T02:20:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="docker创建容器"><a href="#docker创建容器" class="headerlink" title="docker创建容器"></a>docker创建容器</h2><h3 id="1-iptables-failed"><a href="#1-iptables-failed" class="headerlink" title="1. iptables failed"></a>1. iptables failed</h3><p>创建 <code>tale</code> 容器时，如下命令：</p><pre><code class="bash">docker run -d --privileged --hostname tale --name tale \-v /etc/localtime:/etc/localtime:ro \-v /home/tale:/var/tale_home -p 127.0.0.1:234:9000 \-m 1024m --memory-swap -1 tale:1.0</code></pre><p>然后就报了以下错误：</p><pre><code class="bash">docker: Error response from daemon: driver failed programming external connectivity on endpoint tale (263775ff559176224428ec44dcec416a1c20e6c69198d9760b38f35849914260): iptables failed: iptables --wait -t nat -A DOCKER -p tcp -d 127.0.0.1 --dport 234 -j DNAT --to-destination 172.17.0.4:9000 ! -i docker0: iptables: No chain/target/match by that name. (exit status 1).</code></pre><p>解决办法：重启 docker 服务：</p><pre><code class="bash">$ service docker restart</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;docker创建容器&quot;&gt;&lt;a href=&quot;#docker创建容器&quot; class=&quot;headerlink&quot; title=&quot;docker创建容器&quot;&gt;&lt;/a&gt;docker创建容器&lt;/h2&gt;&lt;h3 id=&quot;1-iptables-failed&quot;&gt;&lt;a href=&quot;#1-ip
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="docker" scheme="http://yelog.org/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo加速渲染速度之fragment_cache</title>
+    <link href="http://yelog.org/2017/09/21/hexo-fragment_cache/"/>
+    <id>http://yelog.org/2017/09/21/hexo-fragment_cache/</id>
+    <published>2017-09-21T11:34:37.000Z</published>
+    <updated>2017-11-06T02:20:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前文"><a href="#前文" class="headerlink" title="前文"></a>前文</h2><p>从开发 <code>3-hexo</code> 主题到现在已过去 9 个月时间了，累计在博客中写 132 篇文章了。</p><p>现在发现了严重的问题，<code>hexo generate</code> 渲染的速度越来越慢，现在132篇左右，每次渲染时间到达了 50+ s，相当不爽。</p><p>今日抽时间，查看了官方api，看到了 <code>fragment_cache</code> 局部缓存这个东西，解决了渲染速度的问题。</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p>局部缓存。它储存局部内容，下次使用时就能直接使用缓存。</p><pre><code class="javascript">&lt;%- fragment_cache(id, fn); %&gt;</code></pre><h3 id="替换简单文本区域"><a href="#替换简单文本区域" class="headerlink" title="替换简单文本区域"></a>替换简单文本区域</h3><p>a. 我们可以将所有页面都一样的区域，如下所示，缓存下来。当下一篇文章在渲染到这个位置时，将不再渲染，直接拿缓存数据。</p><pre><code class="js">&lt;%- fragment_cache(&#39;header&#39;, function(){    return partial(&#39;&lt;head&gt;&lt;/head&gt;&#39;);}) %&gt;</code></pre><p>b. 文章模块也可以使用，原来公共引用部分（没有和当前文章耦合的内容）使用下面的方式：</p><pre><code class="js">&lt;%- partial(&#39;_partial/header&#39;); %&gt;</code></pre><p>改进为以下代码：</p><pre><code class="js">&lt;%- fragment_cache(&#39;header&#39;, function(){    return partial(&#39;_partial/header&#39;);}) %&gt;</code></pre><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>这个语法只适用于所有页面都相同，不随文章内容变化的部分。</p><p>作者在 <code>3-hexo</code> 中加入了此语法，渲染132篇文章的速度已从 50+s 到现在 3s 左右了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前文&quot;&gt;&lt;a href=&quot;#前文&quot; class=&quot;headerlink&quot; title=&quot;前文&quot;&gt;&lt;/a&gt;前文&lt;/h2&gt;&lt;p&gt;从开发 &lt;code&gt;3-hexo&lt;/code&gt; 主题到现在已过去 9 个月时间了，累计在博客中写 132 篇文章了。&lt;/p&gt;
+&lt;p&gt;现在发现
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="hexo" scheme="http://yelog.org/tags/hexo/"/>
+    
+      <category term="fragment_cache" scheme="http://yelog.org/tags/fragment-cache/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[转]浏览器前进/后退缓存（BF Cache）</title>
+    <link href="http://yelog.org/2017/09/21/bf-cache/"/>
+    <id>http://yelog.org/2017/09/21/bf-cache/</id>
+    <published>2017-09-21T07:35:24.000Z</published>
+    <updated>2018-11-29T03:23:34.891Z</updated>
+    
+    <content type="html"><![CDATA[<p><hr><br><a href="https://developer.mozilla.org/en-US/docs/Working_with_BFCache" target="_blank" rel="noopener">浏览器前进/后退缓存</a>（Backward/Forward Cache，BF Cache）是指浏览器在前进后退过程中， 会应用更强的缓存策略，表现为 DOM、window、甚至 JavaScript 对象被缓存，以及同步 XHR 也被缓存。 这一现象在移动端浏览器尤为常见，除 Chrome for Android、Android Browser 之外的浏览器基本都会触发。</p><p>BF Cache 本来是一项浏览器优化，但在某些情况下（比如前端路由的 Web App）会引起困惑。 本文主要讨论 BF Cache 的行为、如何检测 BF Cache 缓存、以及如何 workaround。</p><h3 id="缓存行为"><a href="#缓存行为" class="headerlink" title="缓存行为"></a>缓存行为</h3><p>BF Cache 是一种浏览器优化，HTML 标准并未指定其如何进行缓存，因此缓存行为是与浏览器实现相关的。</p><blockquote><p>User agents may discard the Document objects of entries other than the current entry that are not referenced from any script, reloading the pages afresh when the user or script navigates back to such pages. This specification does not specify when user agents should discard Document objects and when they should cache them. – <a href="https://html.spec.whatwg.org/multipage/browsers.html#history" target="_blank" rel="noopener">Session history and navigation</a>, WHATWG</p></blockquote><ul><li>Desktop Chrome：阻塞的资源和同步发出的 XHR 都会被缓存，但不缓存渲染结果。因此可以看到明显的载入过程，此时脚本也会重新执行。</li><li>Chrome for Android：有些情况下不会缓存，缓存时与 Desktop Chrome 行为一致。</li><li>Desktop Firefox：页面会被 Frozen，定时器会被暂停，DOM、Window、JavaScript 对象会被缓存，返回时页面脚本重新开始运行。</li><li>iOS Safari：渲染结果也会被缓存，因此才能支持左右滑动手势来前进/后退。</li></ul><p>Desktop Firefox 暂停计时器的行为非常有趣，以下 HTML 中显示一个每秒加一的数字。 当页面导航时就会暂停，返回时继续增加（因此直接使用 setInterval 倒计时不仅不精确，而且不可靠）：</p><pre><code class="html">&lt;span id=&quot;timer-tick&quot;&gt;&lt;/span&gt;&lt;a href=&quot;http://harttle.com&quot;&gt;External Link&lt;/a&gt;&lt;script&gt;  var i = 0  setInterval(() =&gt; document.querySelector(&#39;#timer-tick&#39;).innerHTML = i++, 1000)&lt;/script&gt;</code></pre><h3 id="pagehide-pageshow-事件"><a href="#pagehide-pageshow-事件" class="headerlink" title="pagehide/pageshow 事件"></a>pagehide/pageshow 事件</h3><p>会话（Session）中的某一个页面显示/隐藏时，会触发 <code>pagehide</code> 和 <code>pageshow</code> 事件。 这两个事件都有一个 <code>persisted</code> 属性用来指示当前页面是否被 BF Cache 缓存。 因此可以通过 <code>persisted</code> 属性来达到禁用 BF Cache 的效果：</p><pre><code class="javascript">window.onpageshow = function(event) {    if (event.persisted) {        window.location.reload()    }};</code></pre><p>注意无论页面是否被缓存 <code>pageshow</code> 总会触发，因此需要检测器 <code>persisted</code> 属性。 另外 <code>pageshow</code> 的时机总是在 <code>load</code> 事件之后。 这一点很容易检测，下面的 <code>pageshow</code> 日志总在 <code>load</code> 之前：</p><pre><code class="javascript">window.addEventListener(&#39;pageshow&#39;, function () {  console.log(&#39;on pageshow&#39;)})window.addEventListener(&#39;load&#39;, function () {  console.log(&#39;load&#39;)})</code></pre><h3 id="XHR-缓存"><a href="#XHR-缓存" class="headerlink" title="XHR 缓存"></a>XHR 缓存</h3><p>同步（阻塞加载的）脚本发出的 XMLHttpRequest 也会被 Chrome 强制缓存， 因此即使在断网的情况下后退到访问过的页面仍然是可以完美渲染的。 如果页面中有这样一段外部脚本：</p><pre><code class="javascript">sendXHR();function sendXHR () {  var xhr = new XMLHttpRequest()  xhr.open(&#39;GET&#39;, &#39;/data.json&#39;)  xhr.onreadystatechange = function () {    if (xhr.readyState === XMLHttpRequest.DONE &amp;&amp;     xhr.status === 200) {      console.log(&#39;xhr arrived&#39;, xhr.responseText)    }  }  xhr.send()}</code></pre><p>超链接跳转后回来，该 xhr 也会被缓存。注意下图中的 XHR 一项 size 为 “from disk cache”：<br><img src="http://img.xiangzhangshugongyi.com/FiUT28A3DCpwPiyvJpsvhkdFQai1.png" alt=""></p><p>为了强制发送 xhr，可以将 xhr 改为异步发送，或者加一个不重要的 query。</p><pre><code class="javascript">setTimeout(sendXHR, 1000)</code></pre><p>这样就能看到 xhr 真正发送出去了 :) 异步 xhr 缓存时机未经兼容性测试， 还是建议读者使用一个随机产生的 query。<br><img src="http://img.xiangzhangshugongyi.com/FjwUrogpYSRjC5EGPGIH2x1t2Eff.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;hr&gt;&lt;br&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Working_with_BFCache&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;浏览器前进/后退缓存&lt;/a&gt;（Backward/Fo
+      
+    
+    </summary>
+    
+      <category term="大前端" scheme="http://yelog.org/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="js" scheme="http://yelog.org/tags/js/"/>
+    
+      <category term="浏览器" scheme="http://yelog.org/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决iphone下后退不执行js的问题</title>
+    <link href="http://yelog.org/2017/09/21/iphone-bf-no-run-js/"/>
+    <id>http://yelog.org/2017/09/21/iphone-bf-no-run-js/</id>
+    <published>2017-09-21T07:25:32.000Z</published>
+    <updated>2017-11-06T02:20:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="直接上解决方法"><a href="#直接上解决方法" class="headerlink" title="直接上解决方法"></a>直接上解决方法</h2><p>不论页面是否被缓存，都会触发 <code>pageshow</code>，所以后退后需要执行的方法可以都放在下面事件内：</p><pre><code class="javascript">window.addEventListener(&#39;pageshow&#39;, function () {  console.log(&#39;on pageshow&#39;)})</code></pre><p><code>浏览器缓存行为</code> 的详细介绍可以参考： <a href="/2017/09/21/bf-cache/" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;直接上解决方法&quot;&gt;&lt;a href=&quot;#直接上解决方法&quot; class=&quot;headerlink&quot; title=&quot;直接上解决方法&quot;&gt;&lt;/a&gt;直接上解决方法&lt;/h2&gt;&lt;p&gt;不论页面是否被缓存，都会触发 &lt;code&gt;pageshow&lt;/code&gt;，所以后退后需要执行的方法可
+      
+    
+    </summary>
+    
+      <category term="大前端" scheme="http://yelog.org/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="js" scheme="http://yelog.org/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS7使用Firewalld</title>
+    <link href="http://yelog.org/2017/09/19/CentOS7%E4%BD%BF%E7%94%A8Firewalld/"/>
+    <id>http://yelog.org/2017/09/19/CentOS7使用Firewalld/</id>
+    <published>2017-09-19T01:53:53.000Z</published>
+    <updated>2018-04-18T02:25:57.117Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>FirewallD 提供了支持网络/防火墙区域(zone)定义网络链接以及接口安全等级的动态防火墙管理工具。它支持 IPv4, IPv6 防火墙设置以及以太网桥接，并且拥有运行时配置和永久配置选项。它也支持允许服务或者应用程序直接添加防火墙规则的接口。</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code class="bash">$ yum install firewalld# 如果需要图形界面的话，则再安装$ yum install firewall-config</code></pre><h3 id="zone"><a href="#zone" class="headerlink" title="zone"></a>zone</h3><p>Firewall 能将不同的网络连接归类到不同的信任级别。</p><pre><code class="bash">$ firewall-cmd --list-all-zones    #查看所有zone信息</code></pre><p>Zone 提供了以下几个级别：</p><ul><li>drop: 丢弃所有进入的包，而不给出任何响应</li><li>block: 拒绝所有外部发起的连接，允许内部发起的连接</li><li>public: 允许指定的进入连接</li><li>external: 同上，对伪装的进入连接，一般用于路由转发</li><li>dmz: 允许受限制的进入连接</li><li>work: 允许受信任的计算机被限制的进入连接，类似 workgroup</li><li>home: 同上，类似 homegroup</li><li>internal: 同上，范围针对所有互联网用户</li><li>trusted: 信任所有连接</li></ul><h3 id="过滤规则"><a href="#过滤规则" class="headerlink" title="过滤规则"></a>过滤规则</h3><ul><li>source: 根据源地址过滤</li><li>interface: 根据网卡过滤</li><li>service: 根据服务名过滤</li><li>port: 根据端口过滤</li><li>icmp-block: icmp 报文过滤，按照 icmp 类型配置</li><li>masquerade: ip 地址伪装</li><li>forward-port: 端口转发</li><li>rule: 自定义规则</li></ul><p><em>过滤规则的优先级遵循如下顺序</em></p><ol><li>source</li><li>interface</li><li>firewalld.conf</li></ol><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre><code class="bash">$ systemctl start firewalld         # 启动$ systemctl stop firewalld          # 关闭$ systemctl enable firewalld        # 开机启动$ systemctl disable firewalld       # 取消开机启动</code></pre><p>具体的规则管理，可以使用 <code>firewall-cmd</code>,具体的使用方法</p><pre><code class="bash">$ firewall-cmd --help--zone=NAME                         # 指定 zone--permanent                         # 永久修改，--reload 后生效--timeout=seconds                   # 持续效果，到期后自动移除，用于调试，不能与 --permanent 同时使用</code></pre><h3 id="查看规则"><a href="#查看规则" class="headerlink" title="查看规则"></a>查看规则</h3><p>查看运行状态</p><pre><code class="bash">$ firewall-cmd --state</code></pre><p>查看已被激活的 Zone 信息</p><pre><code class="bash">$ firewall-cmd --get-active-zonespublic  interfaces: eth0 eth1</code></pre><p>查看指定接口的 Zone 信息</p><pre><code class="bash">$ firewall-cmd --get-zone-of-interface=eth0public</code></pre><p>查看指定级别的接口</p><pre><code class="bash">$ firewall-cmd --zone=public --list-interfaceseth0</code></pre><p>查看指定级别的所有信息，譬如 public</p><pre><code class="bash">$ firewall-cmd --zone=public --list-allpublic (default, active)  interfaces: eth0  sources:  services: dhcpv6-client http ssh  ports:  masquerade: no  forward-ports:  icmp-blocks:  rich rules:</code></pre><p>查看所有级别被允许的信息</p><pre><code class="bash">$ firewall-cmd --get-service</code></pre><p>查看重启后所有 Zones 级别中被允许的服务，即永久放行的服务</p><pre><code class="bash">$ firewall-cmd --get-service --permanent</code></pre><h3 id="管理规则"><a href="#管理规则" class="headerlink" title="管理规则"></a>管理规则</h3><pre><code class="bash">$ firewall-cmd --panic-on           # 丢弃$ firewall-cmd --panic-off          # 取消丢弃$ firewall-cmd --query-panic        # 查看丢弃状态$ firewall-cmd --reload             # 更新规则，不重启服务$ firewall-cmd --complete-reload    # 更新规则，重启服务</code></pre><p>添加某接口至某信任等级，譬如添加 eth0 至 public，永久修改</p><pre><code class="bash">$ firewall-cmd --zone=public --add-interface=eth0 --permanent</code></pre><p>设置 public 为默认的信任级别</p><pre><code class="bash">$ firewall-cmd --set-default-zone=public</code></pre><p><strong><code>a. 管理端口</code></strong><br>列出 dmz 级别的被允许的进入端口</p><pre><code class="bash">$ firewall-cmd --zone=dmz --list-ports</code></pre><p>允许 tcp 端口 8080 至 dmz 级别</p><pre><code class="bash">$ firewall-cmd --zone=dmz --add-port=8080/tcp</code></pre><p>允许某范围的 udp 端口至 public 级别，并永久生效</p><pre><code class="bash">$ firewall-cmd --zone=public --add-port=5060-5059/udp --permanent</code></pre><p><strong><code>b. 网卡接口</code></strong><br>列出 public zone 所有网卡</p><pre><code class="bash">$ firewall-cmd --zone=public --list-interfaces</code></pre><p>将 eth0 添加至 public zone，永久</p><pre><code class="bash">$ firewall-cmd --zone=public --permanent --add-interface=eth0</code></pre><p>eth0 存在与 public zone，将该网卡添加至 work zone，并将之从 public zone 中删除</p><pre><code class="bash">$ firewall-cmd --zone=work --permanent --change-interface=eth0</code></pre><p>删除 public zone 中的 eth0，永久</p><pre><code class="bash">$ firewall-cmd --zone=public --permanent --remove-interface=eth0</code></pre><p><strong><code>c. 管理服务</code></strong><br>添加 smtp 服务至 work zone</p><pre><code class="bash">$ firewall-cmd --zone=work --add-service=smtp</code></pre><p>移除 work zone 中的 smtp 服务</p><pre><code class="bash">$ firewall-cmd --zone=work --remove-service=smtp</code></pre><p><strong><code>d. 配置 external zone 中的 ip 地址伪装</code></strong><br>查看</p><pre><code class="bash">$ firewall-cmd --zone=external --query-masquerade</code></pre><p>打开伪装</p><pre><code class="bash">$ firewall-cmd --zone=external --add-masquerade</code></pre><p>关闭伪装</p><pre><code class="bash">$ firewall-cmd --zone=external --remove-masquerade</code></pre><p><strong><code>e. 配置 public zone 的端口转发</code></strong><br>要打开端口转发，则需要先</p><pre><code class="bash">$ firewall-cmd --zone=public --add-masquerade</code></pre><p>然后转发 tcp 22 端口至 3753</p><pre><code class="bash">$ firewall-cmd --zone=public --add-forward-port=port=22:proto=tcp:toport=3753</code></pre><p>转发 22 端口数据至另一个 ip 的相同端口上</p><pre><code class="bash">$ firewall-cmd --zone=public --add-forward-port=port=22:proto=tcp:toaddr=192.168.1.100</code></pre><p>转发 22 端口数据至另一 ip 的 2055 端口上</p><pre><code class="bash">$ firewall-cmd --zone=public --add-forward-port=port=22:proto=tcp:toport=2055:toaddr=192.168.1.100</code></pre><p><strong><code>f. 配置 public zone 的 icmp</code></strong><br>查看所有支持的 icmp 类型</p><pre><code class="bash">$ firewall-cmd --get-icmptypesdestination-unreachable echo-reply echo-request parameter-problem redirect router-advertisement router-solicitation source-quench time-exceeded</code></pre><p>列出</p><pre><code class="bash">$ firewall-cmd --zone=public --list-icmp-blocks</code></pre><p>添加 echo-request 屏蔽</p><pre><code class="bash">$ firewall-cmd --zone=public --add-icmp-block=echo-request [--timeout=seconds]</code></pre><p>移除 echo-reply 屏蔽</p><pre><code class="bash">$ firewall-cmd --zone=public --remove-icmp-block=echo-reply</code></pre><p><strong><code>g. IP 封禁</code></strong></p><pre><code class="bash">$ firewall-cmd --permanent --add-rich-rule=&quot;rule family=&#39;ipv4&#39; source address=&#39;222.222.222.222&#39; reject&quot;</code></pre><p>当然，我们仍然可以通过 ipset 来封禁 ip</p><p>封禁 ip</p><pre><code class="bash">$ firewall-cmd --permanent --zone=public --new-ipset=blacklist --type=hash:ip$ firewall-cmd --permanent --zone=public --ipset=blacklist --add-entry=222.222.222.222</code></pre><p>封禁网段</p><pre><code class="bash">$ firewall-cmd --permanent --zone=public --new-ipset=blacklist --type=hash:net$ firewall-cmd --permanent --zone=public --ipset=blacklist --add-entry=222.222.222.0/24</code></pre><p>倒入 ipset 规则</p><pre><code class="bash">$ firewall-cmd --permanent --zone=public --new-ipset-from-file=/path/blacklist.xml</code></pre><p>然后封禁 blacklist</p><pre><code class="bash">$ firewall-cmd --permanent --zone=public --add-rich-rule=&#39;rule source ipset=blacklist drop&#39;</code></pre><p>重新载入以生效</p><pre><code class="bash">$ firewall-cmd --reload</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;FirewallD 提供了支持网络/防火墙区域(zone)定义网络链接以及接口安全等级的动态防火墙管理工具。它支持 IPv4, IPv6 防
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="firewall" scheme="http://yelog.org/tags/firewall/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker备份恢复之save与export</title>
+    <link href="http://yelog.org/2017/09/18/docker-save-export/"/>
+    <id>http://yelog.org/2017/09/18/docker-save-export/</id>
+    <published>2017-09-18T14:38:52.000Z</published>
+    <updated>2017-11-06T02:20:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="docker-save"><a href="#docker-save" class="headerlink" title="docker save"></a>docker save</h2><h3 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h3><p><code>docker save</code> 命令用于持久化 <strong>镜像</strong>，先获得镜像名称，再执行保存：</p><pre><code class="bash"># 通过此命令查出要持久化的镜像名称$ docker images# 持久化镜像名为 image_name 的镜像，$ docker save image_name -o ~/save.tar</code></pre><blockquote><p><strong>注意：</strong> 如果镜像是在远程仓库，执行保存镜像的时候可能会报 <code>Cowardly refusing to save to a terminal. Use the -o flag or redirect.</code> 的错，可以通过 <code>docker save image_name &gt; image_name.tar</code> 将镜像从远程仓库持久化到本地。</p></blockquote><h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><pre><code class="bash"># 导入 save.tar$ docker load &lt; ~/save.tar# 查看镜像$ docker images images</code></pre><h2 id="docker-export"><a href="#docker-export" class="headerlink" title="docker export"></a>docker export</h2><h3 id="导出-1"><a href="#导出-1" class="headerlink" title="导出"></a>导出</h3><p><code>docker export</code> 命令用于持久化 <strong>容器</strong>，先获取容器ID，再执行保存。</p><pre><code class="bash"># 通过此命令查出要持久化的容器ID$ docker ps -a# 持久化容器id为 container_id 的容器$ docker export container_id &gt; ~/export.tar</code></pre><h3 id="导入-1"><a href="#导入-1" class="headerlink" title="导入"></a>导入</h3><pre><code class="bash"># 从 export.tar 导入镜像$ cat ~/export.tar | docker import - my-images:latest# 查看镜像$ sudo docker images</code></pre><h2 id="不同"><a href="#不同" class="headerlink" title="不同"></a>不同</h2><p>通过 <code>sudo docker images --tree</code> 可以查看到镜像的所有层，就会发现， <code>docker export</code> 丢失了所有的历史，而<code>docker save</code> 则会保存所有历史。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;docker-save&quot;&gt;&lt;a href=&quot;#docker-save&quot; class=&quot;headerlink&quot; title=&quot;docker save&quot;&gt;&lt;/a&gt;docker save&lt;/h2&gt;&lt;h3 id=&quot;导出&quot;&gt;&lt;a href=&quot;#导出&quot; class=&quot;head
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="docker" scheme="http://yelog.org/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sudo命令免密码设置</title>
+    <link href="http://yelog.org/2017/09/11/sudo%E5%91%BD%E4%BB%A4%E5%85%8D%E5%AF%86%E7%A0%81%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://yelog.org/2017/09/11/sudo命令免密码设置/</id>
+    <published>2017-09-11T01:30:55.000Z</published>
+    <updated>2017-11-06T02:20:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>如果某台linux只有自己在使用，比如个人系统，每次调用 <code>sudo</code> 时都需要输入密码，长期下来着实厌烦，因此本文介绍如何配置 <code>sudo</code> 命令，使其在运行时不需要输入密码。</p></blockquote><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol><li><p>执行命令</p><pre><code class="bash">$ sudo visudo</code></pre></li><li><p>添加以下两行， 下面的 sys 表示 sys 组成员不用密码使用sudo</p><pre><code class="bash">aaronkilik ALL=(ALL) NOPASSWD: ALL%sys ALL=(ALL) NOPASSWD: ALL</code></pre></li></ol><p>现在在使用 <code>sudo</code> 命令， 将不再需要输入密码。</p><h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>如果只允许用户使用 <code>kill</code> 和 <code>rm</code> 命令时，不需要输入密码，见如下配置</p><pre><code>%sys ALL=(ALL) NOPASSWD: /bin/kill, /bin/rm</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;如果某台linux只有自己在使用，比如个人系统，每次调用 &lt;code&gt;sudo&lt;/code&gt; 时都需要输入密码，长期下来着实厌烦，因此本文介绍如何配置 &lt;code&gt;sudo&lt;/code&gt; 命令，使其在运行时不需要输入密码。&lt;/p&gt;
+&lt;/blockq
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建Maven私服-Nexus</title>
+    <link href="http://yelog.org/2017/09/06/build-Maven-Nexus/"/>
+    <id>http://yelog.org/2017/09/06/build-Maven-Nexus/</id>
+    <published>2017-09-06T15:01:31.000Z</published>
+    <updated>2018-11-29T03:23:34.891Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Maven 私服，可以代理远程仓库和部署自己或第三方构件。本文介绍使用最广泛搭建 Maven 私服的工具： Sonatype Nexus。</p></blockquote><h2 id="作者环境"><a href="#作者环境" class="headerlink" title="作者环境"></a>作者环境</h2><p>  本次搭建私服是在局域网的一台服务器上，操作系统为 CentOS 。<br>  需要部署到私服的项目 <code>soul</code><br>  <code>ssm</code> 项目需要引用 <code>soul</code></p><h2 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h2><p>  确保服务器已经安装了 java 环境，这个过程不是本文重点，安装过程自行百度。</p><h2 id="安装Nexus"><a href="#安装Nexus" class="headerlink" title="安装Nexus"></a>安装Nexus</h2><blockquote><p>官网 pro 版本的是需要付费的。所以我们使用免费的 OSS 版本，下载地址 (<a href="https://www.sonatype.com/download-oss-sonatype" target="_blank" rel="noopener">https://www.sonatype.com/download-oss-sonatype</a>)</p></blockquote><pre><code class="bash"># 上传到服务器并解压$ tar xvf nexus-3.5.1-02-unix.tar.gz</code></pre><h3 id="启动Nexus"><a href="#启动Nexus" class="headerlink" title="启动Nexus"></a>启动Nexus</h3><pre><code class="bash"># 启动服务$ cd /nexus-3.5.1-02/bin/$ ./nexus start</code></pre><h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>打开网址：(<a href="http://192.168.0.86:8081/" target="_blank" rel="noopener">http://192.168.0.86:8081/</a>) , ip 为搭建私服的服务器 ip 。<br>用户名/密码： admin/admin123<br>出现一下画面，就说明安装成功了。<br><img src="http://img.xiangzhangshugongyi.com/FkIlJRDdMC2yJFT9huIk9gBuCe15.png" alt="nexus"></p><h2 id="发布soul项目到私服"><a href="#发布soul项目到私服" class="headerlink" title="发布soul项目到私服"></a>发布soul项目到私服</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><ol><li>创建yelog-release仓库（<em>名字自定义</em>）, type选择 ： release<br><img src="http://img.xiangzhangshugongyi.com/Fk5UboZXVf4aegz63N4TDrITMh4V.png" alt="①.创建宿主仓库"><br><img src="http://img.xiangzhangshugongyi.com/FjAz8w445FFeVqDDzLLTLitOkZyV.png" alt="②.选择hosted类型"><br><img src="http://img.xiangzhangshugongyi.com/Ft2u5UPqdAFxldkkwAC2uVBtjDhF.png" alt="③.创建release类型仓库"></li><li>创建yelog-snapshot仓库（<em>名字自定义</em>）， type选择 ： snapshot<br>重复上面 ① 和 ② 步，根据下图选择类型:<br><img src="http://img.xiangzhangshugongyi.com/FgX10ufvTV_YUK2vjrdRN3InKN1i.png" alt="创建snapshot类型仓库"></li></ol><p>两个都创建完成后，效果如下：<br><img src="http://img.xiangzhangshugongyi.com/FjcMrajAM3anymLemHA2OoZZUut-.png" alt="创建自定义release和snapshot仓库"></p><h3 id="pom中添加部署配置"><a href="#pom中添加部署配置" class="headerlink" title="pom中添加部署配置"></a>pom中添加部署配置</h3><p>url 复制上图中新建的仓库的 copy 按钮，复制url。</p><pre><code class="xml">&lt;distributionManagement&gt;    &lt;repository&gt;        &lt;id&gt;yelog-release&lt;/id&gt;        &lt;name&gt;Release Repository of yelog&lt;/name&gt;        &lt;url&gt;http://192.168.0.86:8081/repository/yelog-release/&lt;/url&gt;    &lt;/repository&gt;    &lt;snapshotRepository&gt;        &lt;id&gt;yelog-snapshot&lt;/id&gt;        &lt;name&gt;Snapshot Repository of yelog&lt;/name&gt;        &lt;url&gt;http://192.168.0.86:8081/repository/yelog-snapshot/&lt;/url&gt;    &lt;/snapshotRepository&gt;&lt;/distributionManagement&gt;</code></pre><h3 id="在maven的-settings-xml-中配置"><a href="#在maven的-settings-xml-中配置" class="headerlink" title="在maven的 settings.xml 中配置"></a>在maven的 settings.xml 中配置</h3><p>这里配置 maven 的账号密码，id 要与 distributionManagement 中的id一致。默认账号/密码：admin/admin123</p><pre><code class="xml">&lt;servers&gt;    &lt;server&gt;      &lt;id&gt;yelog-realease&lt;/id&gt;      &lt;username&gt;admin&lt;/username&gt;      &lt;password&gt;admin123&lt;/password&gt;    &lt;/server&gt;    &lt;server&gt;      &lt;id&gt;yelog-snapshot&lt;/id&gt;      &lt;username&gt;admin&lt;/username&gt;      &lt;password&gt;admin123&lt;/password&gt;    &lt;/server&gt;&lt;/servers&gt;</code></pre><h3 id="执行maven命令部署项目到私服上"><a href="#执行maven命令部署项目到私服上" class="headerlink" title="执行maven命令部署项目到私服上"></a>执行maven命令部署项目到私服上</h3><p>我这里直接使用IDE的插件执行<br><img src="http://img.xiangzhangshugongyi.com/Frs7jSIClJvF31AnyAAz5JXL-IAP.png" alt="部署项目到私服"><br>部署完成后，可以在 yelog-snapshot 仓库中，查看部署的情况，如下图所示<br><img src="http://img.xiangzhangshugongyi.com/Fi1YtOKOAK7KMigjAc4S7ZfwLLjl.png" alt="查看部署情况"></p><h2 id="从私服拉去依赖库"><a href="#从私服拉去依赖库" class="headerlink" title="从私服拉去依赖库"></a>从私服拉去依赖库</h2><blockquote><p>上一步我们已经将项目 <code>soul</code> 部署到私服上了，这一步介绍项目 <code>ssm</code> 如何依赖引用 <code>soul</code>。<br>私服中的 maven-central 可以链接远程仓库。这样，当有依赖在私服中找不到后，就可以通过远程仓库自动下载依赖。</p></blockquote><h3 id="pom-文件中添加如下配置"><a href="#pom-文件中添加如下配置" class="headerlink" title="pom 文件中添加如下配置"></a>pom 文件中添加如下配置</h3><ol><li>public库成员仓库中添加我们自定义的仓库<br><img src="http://img.xiangzhangshugongyi.com/FlmsId2u1z_vQ__zlfzoAIytujm3.png" alt="public库设置成员仓库"></li><li>配置远程仓库为私服地址。<pre><code class="xml">&lt;repositories&gt; &lt;repository&gt;     &lt;id&gt;public&lt;/id&gt;     &lt;name&gt;public Repository&lt;/name&gt;     &lt;url&gt;http://192.168.0.86:8081/repository/maven-public/&lt;/url&gt;     &lt;releases&gt;         &lt;enabled&gt;true&lt;/enabled&gt;     &lt;/releases&gt;     &lt;snapshots&gt;         &lt;enabled&gt;true&lt;/enabled&gt;     &lt;/snapshots&gt; &lt;/repository&gt;&lt;/repositories&gt;&lt;pluginRepositories&gt; &lt;pluginRepository&gt;     &lt;id&gt;public&lt;/id&gt;     &lt;name&gt;Public Repositories&lt;/name&gt;     &lt;url&gt;http://192.168.0.86:8081/repository/maven-public/&lt;/url&gt; &lt;/pluginRepository&gt;&lt;/pluginRepositories&gt;</code></pre></li><li>引入依赖<pre><code class="xml">&lt;dependency&gt; &lt;groupId&gt;org.soul&lt;/groupId&gt; &lt;artifactId&gt;commons&lt;/artifactId&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;&lt;/dependency&gt;</code></pre></li><li>ssm项目就可以引用到soul代码<br><img src="http://img.xiangzhangshugongyi.com/FvVCRBtMwy5ckbase3E3wM9JUXp6.png" alt="在代码中就可以直接引用到部署到私服的soul项目代码"></li></ol><p>本文结束。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Maven 私服，可以代理远程仓库和部署自己或第三方构件。本文介绍使用最广泛搭建 Maven 私服的工具： Sonatype Nexus。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;作者环境&quot;&gt;&lt;a href=&quot;#作者环境&quot; class=
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="java" scheme="http://yelog.org/tags/java/"/>
+    
+      <category term="maven" scheme="http://yelog.org/tags/maven/"/>
+    
+      <category term="nexus" scheme="http://yelog.org/tags/nexus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mybatis常用Mapper语句</title>
+    <link href="http://yelog.org/2017/08/04/mybatis-Mapper/"/>
+    <id>http://yelog.org/2017/08/04/mybatis-Mapper/</id>
+    <published>2017-08-04T07:54:47.000Z</published>
+    <updated>2017-11-20T03:06:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><pre><code class="sql">/* 简单插入 */&lt;insert id=&quot;insertOne&quot; parameterType=&quot;Person&quot;&gt;    insert into person (id, name, age) VALUES(#{id}, #{name}, #{age});&lt;/insert&gt;/* 插入并返回对象的主键（数据库序列） */&lt;insert id=&quot;insertOne&quot; parameterType=&quot;Person&quot; useGeneratedKeys=&quot;true&quot; keyProperty=&quot;id&quot;&gt;    insert into person (name, age) VALUES(#{name}, #{age});&lt;/insert&gt;</code></pre><h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><pre><code class="sql">/* 简单更新 */&lt;update id=&quot;updateName&quot;&gt;     update person set name = #{name} where id = #{id};&lt;/update&gt;/* 更新值并返回 */&lt;select id=&quot;updateAge&quot; parameterType=&quot;Person&quot;&gt;    update person set age = age + #{age} where id = #{id} returning age;&lt;/select&gt;</code></pre><h3 id="插入或更新"><a href="#插入或更新" class="headerlink" title="插入或更新"></a>插入或更新</h3><p>记录玩家在某种类型游戏下的统计记录：</p><blockquote><p>如果没有记录，则从插入，count字段为1；<br>如果有记录，则更新count字段+1；</p></blockquote><ol><li><p>方式一</p><pre><code class="sql">&lt;insert id=&quot;addCount&quot; parameterType=&quot;CountRecord&quot;&gt; /*如果有记录，则更新；无记录，则noting*/ update   count_record set   &quot;count&quot; = &quot;count&quot;+1 where   type_id = #{typeId} and   user_id = #{userId}; /*如果有记录，则noting；无记录，则插入*/ insert into   count_record(type_id, user_id, &quot;count&quot;)   select     #{typeId}, #{userId}, 1   where not exists       (select           *        from           count        where           type_id = #{typeId}        and           user_id = #{userId});&lt;/insert&gt;</code></pre></li><li><p>方式二</p><pre><code class="sql">/* 利用 PostgreSQL 的 conflic 特性 */&lt;insert id=&quot;addCount&quot; parameterType=&quot;CountRecord&quot;&gt; insert into   count_record(type_id, user_id, &quot;count&quot;) VALUES   (#{typeId}, #{userId}, #{count}) on   conflict(type_id,user_id) do update set   &quot;count&quot; = count_record.&quot;count&quot; + 1&lt;/insert&gt;</code></pre></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;插入&quot;&gt;&lt;a href=&quot;#插入&quot; class=&quot;headerlink&quot; title=&quot;插入&quot;&gt;&lt;/a&gt;插入&lt;/h3&gt;&lt;pre&gt;&lt;code class=&quot;sql&quot;&gt;/* 简单插入 */
+&amp;lt;insert id=&amp;quot;insertOne&amp;quot; par
+      
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://yelog.org/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="mybatis" scheme="http://yelog.org/tags/mybatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MathJax适配Pjax</title>
+    <link href="http://yelog.org/2017/07/05/MathJax-pjax/"/>
+    <id>http://yelog.org/2017/07/05/MathJax-pjax/</id>
+    <published>2017-07-05T11:24:10.000Z</published>
+    <updated>2017-11-06T02:20:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>hexo 添加 MathJax 的过程网上很多，这里就不细讲，这里贴一张写的不错的文章 <a href="http://masikkk.com/article/hexo-13-MathJax/" target="_blank" rel="noopener">Hexo博客(13)添加MathJax数学公式渲染</a></p><p>由于 <code>3-hexo</code> 这个主题使用了 <code>pjax</code> ，刷新和第一次加载没有问题，但是点到其他文章，再点回来，渲染就无效了。</p><p>这个问题和之前适配多说和高亮时，是同样的问题，只需要在下面配置即可。</p><pre><code class="js">$(document).on({    /*pjax请求回来页面后触发的事件*/    &#39;pjax:end&#39;: function () {        /*渲染MathJax数学公式*/        $.getScript(&#39;//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML&#39;,function () {            MathJax.Hub.Typeset();        });    }});</code></pre><p>这样就解决了pjax的适配问题。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;hexo 添加 MathJax 的过程网上很多，这里就不细讲，这里贴一张写的不错的文章 &lt;a href=&quot;http://masikkk.com/article/hexo-13-MathJax/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo博客(1
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="mathjax" scheme="http://yelog.org/tags/mathjax/"/>
+    
+      <category term="pjax" scheme="http://yelog.org/tags/pjax/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3-hexo配置MathJax数学公式渲染</title>
+    <link href="http://yelog.org/2017/07/05/3-hexo-mathjax/"/>
+    <id>http://yelog.org/2017/07/05/3-hexo-mathjax/</id>
+    <published>2017-07-05T07:09:42.000Z</published>
+    <updated>2018-02-07T06:31:45.414Z</updated>
+    
+    <content type="html"><![CDATA[<p><hr><br>在用 markdown 写文档时，免不了碰到数学公式。</p><h2 id="处理hexo的MarkDown渲染器与MathJax的冲突"><a href="#处理hexo的MarkDown渲染器与MathJax的冲突" class="headerlink" title="处理hexo的MarkDown渲染器与MathJax的冲突"></a>处理hexo的MarkDown渲染器与MathJax的冲突</h2><p>由于hexo的MarkDown渲染器与MathJax有冲突，所以在使用之前需要修改两个地方。</p><p>编辑 <code>node_modules\marked\lib\marked.js</code> 脚本</p><ol><li>将451行 ，这一步取消了对 <code>\\,\{,\}</code> 的转义(escape)<pre><code class="js">escape: /^\\([\\`*{}\[\]()# +\-.!_&gt;])/,改为escape: /^\\([`*\[\]()# +\-.!_&gt;])/,</code></pre></li><li>将459行，这一步取消了对斜体标记 <code>_</code> 的转义<pre><code class="js">em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,改为em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</code></pre></li></ol><h2 id="开启MathJax"><a href="#开启MathJax" class="headerlink" title="开启MathJax"></a>开启MathJax</h2><p>修改 <code>3-hexo/_config.yml</code></p><pre><code class="xml"># MathJax 数学公式支持mathjax:  on: true #是否启用  per_page: false # 若只渲染单个页面，此选项设为false，页面内加入 mathjax: true</code></pre><p>考虑到页面的加载速度，支持渲染单个页面。</p><p>设置 <code>per_page: false</code> ,在需要渲染的页面内 加入 <code>mathjax: true</code></p><p>这样，就可以在页面内写MathJax公式了。</p><h2 id="MathJax公式书写"><a href="#MathJax公式书写" class="headerlink" title="MathJax公式书写"></a>MathJax公式书写</h2><p>公式书写依然按照MarkDown语法来，基本上也和LaTeX相同，单 <code>$</code> 符引住的是行内公式，双$符引住的是行间公式。</p><ul><li>MathJax公式书写参考<br><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a></li></ul><h3 id="1-MathJax行内公式"><a href="#1-MathJax行内公式" class="headerlink" title="1.MathJax行内公式"></a>1.MathJax行内公式</h3><p>含有下划线 <code>_</code> 的公式 <code>$x_mu$</code> ： $x_mu$</p><p>希腊字符 <code>$\sigma$</code> ： $\sigma$</p><p>双 <code>\\</code> 公式内换行</p><pre><code class="js">$$f(n) =\begin{cases}n/2,  &amp; \text{if $n$ is even} \\3n+1, &amp; \text{if $n$ is odd}\end{cases}$$</code></pre><p>$$<br>f(n) =<br>\begin{cases}<br>n/2,  &amp; \text{if $n$ is even} \\<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p><p>行内公式 <code>$y=ax+b$</code>：$y=ax+b$</p><p>行内公式 <code>$\cos 2\theta = \cos^2 \theta - \sin^2 \theta = 2 \cos^2 \theta$</code>：$\cos 2\theta = \cos^2 \theta - \sin^2 \theta = 2 \cos^2 \theta$</p><p>行内公式 <code>$M(\beta^{\ast}(D),D) \subseteq C$</code> ： $M(\beta^{\ast}(D),D) \subseteq C$</p><h3 id="2-MathJax行间公式"><a href="#2-MathJax行间公式" class="headerlink" title="2.MathJax行间公式"></a>2.MathJax行间公式</h3><p>行间公式<code>$$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$</code>：<br>$$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$</p><p>行间公式<code>$$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</code>：<br>$$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p><h3 id="3-MathJax公式自动编号"><a href="#3-MathJax公式自动编号" class="headerlink" title="3.MathJax公式自动编号"></a>3.MathJax公式自动编号</h3><p>书写时使用</p><pre><code>$$\begin{equation}\end{equation}$$</code></pre><p>进行公式自动编号，同时会自动连续编号，例如：</p><pre><code class="xml">$$\begin{equation}\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 )\end{equation}$$$$\begin{equation}\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i))\end{equation}$$</code></pre><p>$$<br>\begin{equation}<br>\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 )<br>\end{equation}<br>$$<br>$$<br>\begin{equation}<br>\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i))<br>\end{equation}<br>$$</p><h2 id="MathJax公式手动编号"><a href="#MathJax公式手动编号" class="headerlink" title="MathJax公式手动编号"></a>MathJax公式手动编号</h2><p>可以在公式书写时使用 <code>\tag{手动编号}</code> 添加手动编号，例如：</p><pre><code>$$\begin{equation}\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 ) \tag{1.2.3}\end{equation}$$</code></pre><p>$$<br>\begin{equation}<br>\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 ) \tag{1.2.3}<br>\end{equation}<br>$$</p><p>不加 <code>\begin{equation} \end{equation}</code> 也可以，例如：</p><pre><code>$$\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i)) \tag{我的公式3}$$</code></pre><p>$$<br>\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i)) \tag{我的公式3}<br>$$</p><p>行内公式加\tag{}后会自动成为行间公式，例如： <code>$z = (p_0, ..... , p_n) \tag{公式21} $</code><br>$z = (p_0, ….. , p_n) \tag{公式21} $</p><h3 id="4-其他公式书写技巧"><a href="#4-其他公式书写技巧" class="headerlink" title="4.其他公式书写技巧"></a>4.其他公式书写技巧</h3><p><strong>如何将下标放到正下方？</strong><br>① 如果是数学符号，那么直接用 <code>\limits</code> 命令放在正下方，如Max函数下面的取值范围，需要放在Max的正下方。可以如下实现：<br><code>$ \max \limits_{a&lt;x&lt;b}\{f(x)\} $</code><br>$ \max \limits_{a&lt;x&lt;b}\{f(x)\} $</p><p>② 若是普通符号，那么要用 <code>\mathop</code> 先转成数学符号再用 <code>\limits</code>，如<br><code>$ \mathop{a}\limits_{i=1} $</code><br>$ \mathop{a}\limits_{i=1} $</p><p><strong>MathJax矩阵输入</strong><br>无括号矩阵：</p><pre><code>$$\begin{matrix}1 &amp; x &amp; x^2 \\1 &amp; y &amp; y^2 \\1 &amp; z &amp; z^2 \\\end{matrix}$$</code></pre><p>$$<br>\begin{matrix}<br>1 &amp; x &amp; x^2 \\<br>1 &amp; y &amp; y^2 \\<br>1 &amp; z &amp; z^2 \\<br>\end{matrix}<br>$$</p><p>有括号有竖线矩阵：</p><pre><code>$$\left[    \begin{array}{cc|c}      1&amp;2&amp;3\\      4&amp;5&amp;6    \end{array}\right]$$</code></pre><p>$$<br>\left[<br>    \begin{array}{cc|c}<br>      1&amp;2&amp;3\\<br>      4&amp;5&amp;6<br>    \end{array}<br>\right]<br>$$</p><p>行内小矩阵：<br><code>$\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)$</code><br>$\bigl( \begin{smallmatrix} a &amp; b \ c &amp; d \end{smallmatrix} \bigr)$</p><p>这里有个问题，上面的写法在矩阵内没有换行，我看了下源码，双反斜杠\\又被MarkDown渲染引擎转义为单个反斜杠了，解决方法是写三个反斜杠\\\或在双反斜杠后换行即可：</p><p><code>$\bigl( \begin{smallmatrix} a &amp; b \\\ c &amp; d \end{smallmatrix} \bigr)$</code><br>$\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)$</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://masikkk.com/article/hexo-13-MathJax/" target="_blank" rel="noopener">Hexo博客(13)添加MathJax数学公式渲染</a><br><a href="http://www.jianshu.com/p/7ab21c7f0674" target="_blank" rel="noopener">在Hexo中渲染MathJax数学公式</a><br><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;hr&gt;&lt;br&gt;在用 markdown 写文档时，免不了碰到数学公式。&lt;/p&gt;
+&lt;h2 id=&quot;处理hexo的MarkDown渲染器与MathJax的冲突&quot;&gt;&lt;a href=&quot;#处理hexo的MarkDown渲染器与MathJax的冲突&quot; class=&quot;headerlink
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="mathjax" scheme="http://yelog.org/tags/mathjax/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS7安装配置匿名访问Samba</title>
+    <link href="http://yelog.org/2017/07/03/CentOS7-anonymous-Samba/"/>
+    <id>http://yelog.org/2017/07/03/CentOS7-anonymous-Samba/</id>
+    <published>2017-07-03T11:40:14.000Z</published>
+    <updated>2017-11-06T02:20:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><blockquote><p><strong>Samba</strong>，是种用来让UNIX系列的操作系统与微软Windows操作系统的SMB/CIFS（Server Message Block/Common Internet File System）网络协议做链接的自由软件   –wikipedia</p></blockquote><p>本文就以 CentOS7 搭建 Samba 匿名完全访问（读/写）为目标，实现一个局域网内的文件共享平台。</p><h2 id="1-安装Samba服务"><a href="#1-安装Samba服务" class="headerlink" title="1.安装Samba服务"></a>1.安装Samba服务</h2><p>使用 yum 工具进行安装</p><pre><code class="bash">$ yum install samba samba-client</code></pre><h2 id="2-检查是否安装成功"><a href="#2-检查是否安装成功" class="headerlink" title="2.检查是否安装成功"></a>2.检查是否安装成功</h2><pre><code class="bash">$ rpm -qa | grep samba</code></pre><h2 id="3-防火墙开放端口"><a href="#3-防火墙开放端口" class="headerlink" title="3.防火墙开放端口"></a>3.防火墙开放端口</h2><p>在 <code>/etc/sysconfig/iptables</code> 中添加配置</p><pre><code class="xml">-A INPUT -p tcp -m state --state NEW -m tcp --dport 137 -j ACCEPT-A INPUT -p tcp -m state --state NEW -m tcp --dport 138 -j ACCEPT-A INPUT -p tcp -m state --state NEW -m tcp --dport 139 -j ACCEPT-A INPUT -p tcp -m state --state NEW -m tcp --dport 389 -j ACCEPT-A INPUT -p tcp -m state --state NEW -m tcp --dport 445 -j ACCEPT-A INPUT -p tcp -m state --state NEW -m tcp --dport 901 -j ACCEPT</code></pre><p>重启 iptables 服务</p><pre><code class="bash">$ service iptables restart</code></pre><p>设置开机自启动</p><pre><code class="bash">$ chkconfig --level 35 smb on</code></pre><h2 id="4-共享配置"><a href="#4-共享配置" class="headerlink" title="4.共享配置"></a>4.共享配置</h2><p>Samba Server的验证方式有四种：</p><ul><li>share：匿名访问共享，不需要提供用户名和口令, 安全性能较低。</li><li>user：共享目录只能被授权的用户访问,由Samba Server负责检查账号和密码的正确性。账号和密码要在本Samba Server中建立。</li><li>server：依靠其他Windows Server或Samba Server来验证用户的账号和密码,是一种代理验证。此种安全模式下,系统管理员可以把所有的Windows用户和口令集中到一个Server系统上,使用 Windows Server进行Samba认证, 远程服务器可以自动认证全部用户和口令,如果认证失败,Samba将使用用户级安全模式作为替代的方式。</li><li>domain：域安全级别,使用主域控制器(PDC)来完成认证。</li></ul><blockquote><p>创建一个匿名共享访问，需要使用share模式，但在CentOS安装的samba4中share 和 server验证方式已被弃用</p></blockquote><p>配置如下：</p><pre><code class="xml">[global]        workgroup = MYGROUP        server string = Samba Server Version %v        log file = /var/log/samba/log.%m        max log size = 50        security = user        map to guest = Bad User        load printers = yes        cups options = raw[share]        comment = share        path = /home/samba          directory mask = 0777          create mask = 0777          #不可视目录        #browseable = yes        guest ok=yes        writable=yes</code></pre><p>创建 <code>/home/samba</code> 共享目录</p><pre><code class="bash">$ mkdir /home/samba</code></pre><p>重启 smb 服务</p><pre><code class="bash">$ service smb restart</code></pre><p>检查服务是否在运行</p><pre><code class="bash">$ pgrep smbd</code></pre><p>检查配置参数</p><pre><code class="bash">$ testparmLoad smb config files from /etc/samba/smb.confProcessing section &quot;[share]&quot;Loaded services file OK.Server role: ROLE_STANDALONEPress enter to see a dump of your service definitions# Global parameters[global]    server string = Samba Server Version %v    workgroup = MYGROUP    log file = /var/log/samba/log.%m    max log size = 50    map to guest = Bad User    security = USER    idmap config * : backend = tdb    cups options = raw[share]    comment = share    path = /home/samba    create mask = 0777    directory mask = 0777    guest ok = Yes    read only = No</code></pre><h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><p>以上就配置完成，如服务器地址为192.168.0.87</p><p>windows 系统访问，直接运行 <code>\\192.168.0.87\share</code></p><p>linux 系统访问， <code>smb://192.168.0.87/share</code></p><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ul><li>linux 系统可以正常读写修改，但 windows 系统只可以读写，直接打开修改时就，就为只读文件了。<br><strong>解决办法</strong>：修改 <code>/etc/samba/smb.conf</code> ,在 <code>[share]</code> 中加入以下内容<pre><code class="xml">create mask = 0777</code></pre></li><li>访问部分文件可以正常访问，但部分文件无法访问。<br><strong>解决方法</strong>：修改文件访问权限<pre><code class="bash">$ chmod -R 1777 /home/samba$ chown nobody:nobody</code></pre></li></ul><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="http://www.cnblogs.com/lion382/p/4078931.html" target="_blank" rel="noopener">CentOS7 安装Samba服务</a></li><li><a href="http://blog.leanote.com/post/dapingxia@163.com/CentOS7-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E5%8C%BF%E5%90%8D%E8%AE%BF%E9%97%AESamba" target="_blank" rel="noopener">CentOS7 安装配置匿名访问Samba</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Samba&lt;/strong&gt;，是种用来让UNIX系列的操作系统与微软Windows操作系统的SMB
+      
+    
+    </summary>
+    
+      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="samba" scheme="http://yelog.org/tags/samba/"/>
+    
+  </entry>
+  
+</feed>
