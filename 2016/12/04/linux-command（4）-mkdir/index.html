@@ -184,9 +184,9 @@
     
     <li data-rel="读书"> 读书 </li>
     
-    <li data-rel="运维"> 运维 </li>
-    
     <li data-rel="工具"> 工具 </li>
+    
+    <li data-rel="运维"> 运维 </li>
     
 </ul>
 <div class="left-bottom">
@@ -292,6 +292,14 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">jsp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">jstl</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">freemarker</a>
     </li>
     
@@ -301,14 +309,6 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">node</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">jsp</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">jstl</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -328,15 +328,67 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">3-hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">mathjax</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">Git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">GitHub</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">fragment_cache</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">mac</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">efficiency</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">pjax</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">deepin</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">运维</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">IntellijIDEA</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">tale</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">regex</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">samba</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color4">firewall</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">运维</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -397,58 +449,6 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color4">encoding</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">3-hexo</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mathjax</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">Git</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">git</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">GitHub</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">fragment_cache</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">mac</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">efficiency</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">pjax</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">deepin</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">IntellijIDEA</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">tale</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">regex</a>
     </li>
     
     <div class="clearfix"></div>
@@ -791,7 +791,7 @@
         
         <a  class="工具 "
            href="/2017/03/30/deepin-linux/"
-           data-tag="运维,deepin"
+           data-tag="deepin,运维"
            data-author="" >
             <span class="post-title" title="deepin系统使用记录">deepin系统使用记录</span>
             <span class="post-date" title="2017-03-30 18:58:50">2017/03/30</span>
@@ -1847,7 +1847,7 @@ scf/
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#spring','#springmvc','#mybatis','#PostgreSQL','#postgres','#sql','#AngularJs','#freemarker','#jQuery','#node','#jsp','#jstl','#hexo','#js','#浏览器','#reading','#samba','#firewall','#运维','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#nginx','#shell','#ftp','#maven','#nexus','#linux命令','#encoding','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#IntellijIDEA','#tale','#regex',],
+            'data': ['#java','#translation','#javaee','#encryption','#dubbo','#zookeeper','#spring','#springmvc','#mybatis','#PostgreSQL','#postgres','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#reading','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#regex','#samba','#firewall','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#nginx','#shell','#ftp','#maven','#nexus','#linux命令','#encoding',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
