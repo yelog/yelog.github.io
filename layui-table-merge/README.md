@@ -1,4 +1,4 @@
-## 为 layui 扩展的 表格列自动合并
+## 为 layui 扩展的 表格列自动合并[独立模块版]
 当前 `layui` 版本为 **2.3.0**
 
 在线demo： [http://yelog.org/layui-table-merge/](http://yelog.org/layui-table-merge/)    
@@ -10,10 +10,17 @@
 ## 参数说明
 <table><thead><tr><th>属性名</th><th>属性值</th><th>例子</th><th>描述</th></tr></thead><tbody><tr><td rowspan="3">merge</td><td>boolean</td><td>merge: true</td><td>开启合并，并根据 当前列 相同值 自动合并</td></tr><tr><td>string</td><td>merge: 'name'</td><td>开启合并，并根据 指定列 相同值 自动合并</td></tr><tr><td>array</td><td>merge: ['name', 'type']</td><td>开启合并，并先根据 name值 分组后，再以 type值 相同的合并对应行<br>注：数组无数量限制</td></tr></tbody></table>
 
-## 使用
-替换 `table.js` 即可使用
+## 引入
+引入 tableMerge 模块即可
+```js
+// 自定义模块
+layui.config({
+    base: 'module/'
+}).extend({
+    tableMerge: 'tableMerge'
+});
+```
 
-> 想要知道修改了那些代码，可以查看 `table.js` 提交日志。 日志：`init: 初始化项目` 为引入layui官方代码，后续提交为扩展代码。 
 
 ## 使用实例
 ```js
@@ -37,6 +44,9 @@ table.render({
         ,{field:'sentences', title:'名句', width:400}
         ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
     ]]
+    ,done: function () {
+        tableMerge.render(this)
+    }
 });
 ```
 

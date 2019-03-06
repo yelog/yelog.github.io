@@ -41,12 +41,18 @@
         b {
             color: red;
         }
+        .little-code {
+            font-size: 12px;
+            background-color: #F7FBFF;
+            color: #881280;
+            font-family: Courier New;
+        }
     </style>
 </head>
 <body >
 <h1 class="site-h1">layui表格列合并</h1>
 <blockquote class="layui-elem-quote">
-    扩展了layui table，可以相同值列合并 。当前使用的layui版本：<b>2.3.0</b>
+    扩展了layui table，可以相同值列合并 。当前使用的layui版本：<b>2.4.5</b>
 </blockquote>
 
 <fieldset class="layui-elem-field layui-field-title site-title">
@@ -87,6 +93,9 @@ table.render({
         ,{field:'sentences', title:'名句', width:400}
         ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
     ]]
+    ,done: function(){
+        <b>tableMerge.render(this)</b>
+    }
 });
             </pre>
         </div>
@@ -101,13 +110,32 @@ table.render({
     <legend><a name="use">如何使用</a></legend>
 </fieldset>
 <blockquote class="layui-elem-quote layui-quote-nm">
-    替换 table.js 文件即可。 <a target="_blank" style="color: #1e9fff" href="https://github.com/yelog/layui-table-merge">点我到达项目地址</a>
+     1、将模块 tableMerge.js 引入项目中：
+    <pre class="little-code">
+// 自定义模块
+layui.config({
+    base: 'module/'
+}).extend({
+    tableMerge: 'tableMerge'
+});
+    </pre>
+    2、点击<b>查看代码</b>有使用示例，当然也可下载源码查看<a target="_blank" style="color: #1e9fff" href="https://github.com/yelog/layui-table-merge">点我到达项目地址</a><br>
+
 </blockquote>
 
 <script type="text/javascript" src="layui/layui.js"></script>
 <script>
-    layui.use(['table','element'], function () {
-        var table = layui.table;
+
+    // 自定义模块
+    layui.config({
+        base: 'module/'
+    }).extend({
+        tableMerge: 'tableMerge'
+    });
+
+    layui.use(['table','element','tableMerge'], function () {
+        var table = layui.table,
+            tableMerge = layui.tableMerge;
 
         /**
          * 自动合并表格
@@ -132,6 +160,9 @@ table.render({
                 ,{field:'sentences', title:'名句', width:400}
                 ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
             ]]
+            ,done: function () {
+                tableMerge.render(this)
+            }
         });
 
         layui.element.on('tab(change)', function(data){
