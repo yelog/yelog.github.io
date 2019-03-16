@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui-soul-table</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="animate.min.css" media="all"/>
+    <link rel="stylesheet" href="soulTable.css" media="all"/>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+        .layui-tab-item {
+            height: calc(100vh - 121px);
+        }
+    </style>
+</head>
+<body class="childrenBody">
+<h1>当前使用layui版本：v2.4.5</h1>
+<div class="layui-tab layui-tab-brief" lay-filter="tableClass">
+    <ul class="layui-tab-title">
+        <li class="layui-this">不分页</li>
+        <li>前台分页</li>
+        <li>子表</li>
+        <li>后台分页</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show"><iframe src="font-table.html"></iframe></div>
+        <div class="layui-tab-item"><iframe data-src="font-table-page.html"></iframe></div>
+        <div class="layui-tab-item"><iframe data-src="font-table-child.html"></iframe></div>
+        <div class="layui-tab-item"><iframe data-src="https://soultable.xiangzhangshugongyi.com"></iframe></div>
+    </div>
+</div>
+<script type="text/javascript" src="layui/layui.js"></script>
+<script>
+
+    layui.use(['element'], function () {
+        var element = layui.element,
+            $ = layui.$;
+
+        element.on('tab(tableClass)', function(){
+            var curIframe = $('.layui-tab-content>.layui-tab-item:eq('+$(this).index()+')>iframe');
+            if (!curIframe.attr('src')) {
+                curIframe.attr('src', curIframe.data('src'));
+            }
+        });
+
+    })
+</script>
+</body>
+</html>
