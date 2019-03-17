@@ -308,9 +308,9 @@ msg=&amp;quot;hello world&amp;quot;
       <category term="大前端" scheme="http://yelog.org/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="js" scheme="http://yelog.org/tags/js/"/>
-    
       <category term="浏览器" scheme="http://yelog.org/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+      <category term="js" scheme="http://yelog.org/tags/js/"/>
     
   </entry>
   
