@@ -15,7 +15,7 @@ layui.define(['table'], function (exports) {
          * @param myTable
          */
         render: function (myTable) {
-            var tableBox = $('#'+myTable.id).next().children('.layui-table-box'),
+            var tableBox = $(myTable.elem).next().children('.layui-table-box'),
                 $main = $(tableBox.children('.layui-table-body').children('table').children('tbody').children('tr').toArray().reverse()),
                 $fixLeft = $(tableBox.children('.layui-table-fixed-l').children('.layui-table-body').children('table').children('tbody').children('tr').toArray().reverse()),
                 $fixRight = $(tableBox.children('.layui-table-fixed-r').children('.layui-table-body').children('table').children('tbody').children('tr').toArray().reverse()),
@@ -40,9 +40,9 @@ layui.define(['table'], function (exports) {
 
                 for (var item in mergeRecord) {
                     if (i==$main.length-1 || isMaster(i, item)) {
-                        $(this).children('[data-key$="-'+item+'"]').attr('rowspan', mergeRecord[item].rowspan);
-                        $fixLeft.eq(i).children('[data-key$="-'+item+'"]').attr('rowspan', mergeRecord[item].rowspan);
-                        $fixRight.eq(i).children('[data-key$="-'+item+'"]').attr('rowspan', mergeRecord[item].rowspan);
+                        $(this).children('[data-key$="-'+item+'"]').attr('rowspan', mergeRecord[item].rowspan).css('position','static');
+                        $fixLeft.eq(i).children('[data-key$="-'+item+'"]').attr('rowspan', mergeRecord[item].rowspan).css('position','static');
+                        $fixRight.eq(i).children('[data-key$="-'+item+'"]').attr('rowspan', mergeRecord[item].rowspan).css('position','static');
                         mergeRecord[item].rowspan = 1;
                     } else {
                         $(this).children('[data-key$="-'+item+'"]').remove();
