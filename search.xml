@@ -413,9 +413,9 @@ echo $name
         
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> shell </tag>
+            
+            <tag> linux </tag>
             
         </tags>
         
@@ -862,11 +862,11 @@ xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用
             
             <tag> vim </tag>
             
+            <tag> linux </tag>
+            
             <tag> keybord </tag>
             
             <tag> emacs </tag>
-            
-            <tag> linux </tag>
             
         </tags>
         
@@ -4107,9 +4107,9 @@ MimeType=text/plain;
         
         <tags>
             
-            <tag> deepin </tag>
-            
             <tag> 运维 </tag>
+            
+            <tag> deepin </tag>
             
         </tags>
         
