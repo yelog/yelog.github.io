@@ -38,9 +38,9 @@ msg=&amp;quot;hello world&amp;quot;
       <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
-      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
-    
       <category term="shell" scheme="http://yelog.org/tags/shell/"/>
+    
+      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
     
   </entry>
   
@@ -173,11 +173,11 @@ msg=&amp;quot;hello world&amp;quot;
     
       <category term="vim" scheme="http://yelog.org/tags/vim/"/>
     
+      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
+    
       <category term="keybord" scheme="http://yelog.org/tags/keybord/"/>
     
       <category term="emacs" scheme="http://yelog.org/tags/emacs/"/>
-    
-      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
     
   </entry>
   
