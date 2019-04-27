@@ -413,9 +413,9 @@ echo $name
         
         <tags>
             
-            <tag> shell </tag>
-            
             <tag> linux </tag>
+            
+            <tag> shell </tag>
             
         </tags>
         
@@ -862,11 +862,11 @@ xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用
             
             <tag> vim </tag>
             
-            <tag> linux </tag>
-            
             <tag> keybord </tag>
             
             <tag> emacs </tag>
+            
+            <tag> linux </tag>
             
         </tags>
         
@@ -4107,9 +4107,9 @@ MimeType=text/plain;
         
         <tags>
             
-            <tag> deepin </tag>
-            
             <tag> 运维 </tag>
+            
+            <tag> deepin </tag>
             
         </tags>
         
@@ -6573,8 +6573,10 @@ $(document).pjax(&#39;.#menu a&#39;, &#39;.pjax&#39;, {fragment:&#39;.pjax&#39;,
 <li><strong>《一颗心的沦亡》</strong> by 茨威格  2017年1月 ★ ★ ★ ★ ☆ ☆ ☆</li>
 <li><strong>《情感的迷茫》</strong> by 茨威格  2017年1月 ★ ★ ★ ★ ★ ☆ ☆</li>
 <li><strong>《一个女人一生中的二十四个小时》</strong> by 茨威格  2017年1月 ★ ★ ★ ★ ☆ ☆ ☆</li>
-<li><strong>《摆渡人》</strong> by 克莱尔·麦克福尔 2019年3月28 ★ ★ ☆ ☆ ☆ ☆ ☆</li>
+<li><strong>《摆渡人》</strong> by 克莱尔·麦克福尔 2019年3月28 ★ ☆ ☆ ☆ ☆ ☆ ☆</li>
 <li><strong>《悟空传》</strong> by 今何在  2016年8月 ★ ★ ★ ★ ★ ☆ ☆</li>
+<li><strong>《岛上书店》</strong> by 加·泽文 2019年4月 ★ ★ ★ ★ ☆ ☆ ☆</li>
+<li><strong>《月亮与六便士》</strong> by 毛姆 2019年4月 ★ ★ ★ ★ ★ ☆ ☆</li>
 </ol>
 <h2 id="旅行"><a href="#旅行" class="headerlink" title="旅行"></a>旅行</h2><ol>
 <li><strong>《不去会死》</strong> by 石田裕辅 2017年2月 ★ ★ ★ ☆ ☆ ☆ ☆</li>
@@ -6608,7 +6610,6 @@ $(document).pjax(&#39;.#menu a&#39;, &#39;.pjax&#39;, {fragment:&#39;.pjax&#39;,
 </ol>
 <h2 id="待读-在读"><a href="#待读-在读" class="headerlink" title="待读/在读"></a>待读/在读</h2><ol>
 <li><strong>《基督山伯爵》</strong> by 大仲马</li>
-<li><strong>《岛上书店》</strong> by 加·泽文</li>
 </ol>
 ]]></content>
       

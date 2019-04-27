@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>layui-soul-table</title>
+    <meta name="keywords" content="layui,table,表头筛选,tablefilter,tableChild,子表,表格筛选"/>
+    <meta name="description" content="layui表头筛选,tablefilter,tableChild,子表,表格筛选"/>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -68,8 +70,8 @@
             ,page: true
             ,cols: [[
                 {type: 'checkbox', fixed: 'left'},
-                {field: 'title', title: '诗词', fixed:'left', width: 200, sort: true, filter: true},
-                {field: 'dynasty', title: '朝代', width: 100, sort: true, filter: true},
+                {field: 'title', title: '诗词', fixed:'left', width: 200, sort: true, filter: true, totalRowText: '合集'},
+                {field: 'dynasty', title: '朝代',fixed: 'left', width: 100, sort: true, filter: true},
                 {field: 'author', title: '作者', width: 165 , filter: true},
                 {field: 'content', title: '内容', width: 123, filter: true},
                 {field: 'type', title: '类型', width: 112,  filter: {split:','}, sort:true},
@@ -77,6 +79,10 @@
                 {field: 'createTime', title: '录入时间', width: 165,fixed:'right',  filter: {type: 'date[yyyy-MM-dd HH:mm:ss]'}, sort:true},
                 {title: '操作', width: 156,fixed:'right',  templet: '#bar'}
             ]]
+            , filter: {
+                items:['column','data','condition','editCondition','excel'] //用于控制表头下拉显示，可以控制顺序、显示
+                ,bottom: true // 是否显示底部筛选区域，默认为true
+            }
             ,done: function () {
                 soulTable.render(this)
             }
