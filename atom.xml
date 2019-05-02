@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yelog.org/"/>
-  <updated>2018-09-08T05:56:52.751Z</updated>
+  <updated>2019-05-02T11:29:57.754Z</updated>
   <id>http://yelog.org/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人们在一本叫《活着》的书中纷纷死去</title>
+    <link href="http://yelog.org/2019/05/02/to-live/"/>
+    <id>http://yelog.org/2019/05/02/to-live/</id>
+    <published>2019-05-02T09:46:16.000Z</published>
+    <updated>2019-05-02T11:29:57.754Z</updated>
+    
+    <content type="html"><![CDATA[<p>有那么一个年代，离我们很近，它腥风血雨，连活着都是一件奢侈的事。</p><p>在富贵的一生中，每次出现看似被上天眷顾的福气后（如有庆长跑第一、凤霞嫁了人并怀了孩子），读者还在替富贵开心的时候，他们却以各种方式迅速死去，最终富贵亲手埋葬了他所有的亲人。</p><p>一本 12w 左右的小说，但是在没有华丽词藻的情况下，在顺畅流利的写作手法、跌宕起伏的剧情、第一人称的代入感下一口气读完了。期间多次痛哭流涕（一点儿没夸张），不得不放下书本，洗过脸后才能继续阅读。所以已经多年没写书评的我，还是忍不住为她写下书评。</p><blockquote><p>人是为了活着本身而活着，而不是为了活着之外的任何事物所活着。</p></blockquote><p>这是作者在中文序言中的一句话，在当今生活着的我，初读序言中的这句话，并无任何共鸣，甚至还行吐槽两句。随着富贵将他的”一生”娓娓道来，你就会明白在那样的时代背景下，活着已经是一件不容易的事。 所以作者在日文版序言中说到：</p><blockquote><p>在旁人眼中富贵的一生是苦熬的一生；可是对于富贵自己，我相信他更多地感受到了幸福。</p></blockquote><p>因为他相信自己的妻子是世上最好的妻子，他相信自己的子女也是世上最好的子女，还有他的女婿他的外孙，还有他的那头也叫富贵的牛，还有一起上火锅的朋友们，还有生活的点点滴滴……</p><p>富贵的真是一路跌下去的一生，从”富家少爷”赌光了家产、气死了爹爹。由于母亲生病，为母亲求医路上被国民党抓壮丁，被俘虏后，放回家中。却发现母亲已死，女儿也由于生病变成了聋哑人。本想着大难之后必有后福，却只是悲惨一生的开端。儿子有庆由于和县长夫人血型匹配，遭抽血而亡、女儿凤霞产子大出血而亡、妻子家珍失去儿女后，失去了最后与病魔争斗的信念，也走了、女婿二喜在工地被水泥板拍死、外孙苦根难得吃到豆子，却被豆子撑死。最后只剩下自己和一个也叫作富贵的老牛。</p><p>春生想自杀前，找到富贵告别，在被家珍原谅，并答应不会自杀，在这种情况下坚持了一个月，最终还是自杀了。那种时代背景下的无奈，那种窒息感。。。</p><p>富贵的一生跨越了地主、解放战争、人民公社运动、大炼钢铁、自然灾害和文化大革命，从一个人的视角看到每个时代下的一个小小的缩影，但却比任何其他的描述更让人深刻了解到这些时代背景下人们的生活状态。</p><p>在那时，活着不仅是幸运，也更需要勇气。</p><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1556806574463&amp;di=868e65579acfc800020db78de3c07ac4&amp;imgtype=0&amp;src=http%3A%2F%2Fs1.sinaimg.cn%2Flarge%2F001Pe7mxzy76VARpXvdc3" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;有那么一个年代，离我们很近，它腥风血雨，连活着都是一件奢侈的事。&lt;/p&gt;
+&lt;p&gt;在富贵的一生中，每次出现看似被上天眷顾的福气后（如有庆长跑第一、凤霞嫁了人并怀了孩子），读者还在替富贵开心的时候，他们却以各种方式迅速死去，最终富贵亲手埋葬了他所有的亲人。&lt;/p&gt;
+&lt;p&gt;一本 
+      
+    
+    </summary>
+    
+      <category term="读书" scheme="http://yelog.org/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="reading" scheme="http://yelog.org/tags/reading/"/>
+    
+  </entry>
   
   <entry>
     <title>shell速查表</title>
@@ -173,11 +200,11 @@ msg=&amp;quot;hello world&amp;quot;
     
       <category term="vim" scheme="http://yelog.org/tags/vim/"/>
     
+      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
+    
       <category term="keybord" scheme="http://yelog.org/tags/keybord/"/>
     
       <category term="emacs" scheme="http://yelog.org/tags/emacs/"/>
-    
-      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
     
   </entry>
   
@@ -524,32 +551,6 @@ msg=&amp;quot;hello world&amp;quot;
     
     
       <category term="mathjax" scheme="http://yelog.org/tags/mathjax/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS7安装配置匿名访问Samba</title>
-    <link href="http://yelog.org/2017/07/03/CentOS7-anonymous-Samba/"/>
-    <id>http://yelog.org/2017/07/03/CentOS7-anonymous-Samba/</id>
-    <published>2017-07-03T11:40:14.000Z</published>
-    <updated>2017-11-06T02:20:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><blockquote><p><strong>Samba</strong>，是种用来让UNIX系列的操作系统与微软Windows操作系统的SMB/CIFS（Server Message Block/Common Internet File System）网络协议做链接的自由软件   –wikipedia</p></blockquote><p>本文就以 CentOS7 搭建 Samba 匿名完全访问（读/写）为目标，实现一个局域网内的文件共享平台。</p><h2 id="1-安装Samba服务"><a href="#1-安装Samba服务" class="headerlink" title="1.安装Samba服务"></a>1.安装Samba服务</h2><p>使用 yum 工具进行安装</p><pre><code class="bash">$ yum install samba samba-client</code></pre><h2 id="2-检查是否安装成功"><a href="#2-检查是否安装成功" class="headerlink" title="2.检查是否安装成功"></a>2.检查是否安装成功</h2><pre><code class="bash">$ rpm -qa | grep samba</code></pre><h2 id="3-防火墙开放端口"><a href="#3-防火墙开放端口" class="headerlink" title="3.防火墙开放端口"></a>3.防火墙开放端口</h2><p>在 <code>/etc/sysconfig/iptables</code> 中添加配置</p><pre><code class="xml">-A INPUT -p tcp -m state --state NEW -m tcp --dport 137 -j ACCEPT-A INPUT -p tcp -m state --state NEW -m tcp --dport 138 -j ACCEPT-A INPUT -p tcp -m state --state NEW -m tcp --dport 139 -j ACCEPT-A INPUT -p tcp -m state --state NEW -m tcp --dport 389 -j ACCEPT-A INPUT -p tcp -m state --state NEW -m tcp --dport 445 -j ACCEPT-A INPUT -p tcp -m state --state NEW -m tcp --dport 901 -j ACCEPT</code></pre><p>重启 iptables 服务</p><pre><code class="bash">$ service iptables restart</code></pre><p>设置开机自启动</p><pre><code class="bash">$ chkconfig --level 35 smb on</code></pre><h2 id="4-共享配置"><a href="#4-共享配置" class="headerlink" title="4.共享配置"></a>4.共享配置</h2><p>Samba Server的验证方式有四种：</p><ul><li>share：匿名访问共享，不需要提供用户名和口令, 安全性能较低。</li><li>user：共享目录只能被授权的用户访问,由Samba Server负责检查账号和密码的正确性。账号和密码要在本Samba Server中建立。</li><li>server：依靠其他Windows Server或Samba Server来验证用户的账号和密码,是一种代理验证。此种安全模式下,系统管理员可以把所有的Windows用户和口令集中到一个Server系统上,使用 Windows Server进行Samba认证, 远程服务器可以自动认证全部用户和口令,如果认证失败,Samba将使用用户级安全模式作为替代的方式。</li><li>domain：域安全级别,使用主域控制器(PDC)来完成认证。</li></ul><blockquote><p>创建一个匿名共享访问，需要使用share模式，但在CentOS安装的samba4中share 和 server验证方式已被弃用</p></blockquote><p>配置如下：</p><pre><code class="xml">[global]        workgroup = MYGROUP        server string = Samba Server Version %v        log file = /var/log/samba/log.%m        max log size = 50        security = user        map to guest = Bad User        load printers = yes        cups options = raw[share]        comment = share        path = /home/samba          directory mask = 0777          create mask = 0777          #不可视目录        #browseable = yes        guest ok=yes        writable=yes</code></pre><p>创建 <code>/home/samba</code> 共享目录</p><pre><code class="bash">$ mkdir /home/samba</code></pre><p>重启 smb 服务</p><pre><code class="bash">$ service smb restart</code></pre><p>检查服务是否在运行</p><pre><code class="bash">$ pgrep smbd</code></pre><p>检查配置参数</p><pre><code class="bash">$ testparmLoad smb config files from /etc/samba/smb.confProcessing section &quot;[share]&quot;Loaded services file OK.Server role: ROLE_STANDALONEPress enter to see a dump of your service definitions# Global parameters[global]    server string = Samba Server Version %v    workgroup = MYGROUP    log file = /var/log/samba/log.%m    max log size = 50    map to guest = Bad User    security = USER    idmap config * : backend = tdb    cups options = raw[share]    comment = share    path = /home/samba    create mask = 0777    directory mask = 0777    guest ok = Yes    read only = No</code></pre><h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><p>以上就配置完成，如服务器地址为192.168.0.87</p><p>windows 系统访问，直接运行 <code>\\192.168.0.87\share</code></p><p>linux 系统访问， <code>smb://192.168.0.87/share</code></p><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ul><li>linux 系统可以正常读写修改，但 windows 系统只可以读写，直接打开修改时就，就为只读文件了。<br><strong>解决办法</strong>：修改 <code>/etc/samba/smb.conf</code> ,在 <code>[share]</code> 中加入以下内容<pre><code class="xml">create mask = 0777</code></pre></li><li>访问部分文件可以正常访问，但部分文件无法访问。<br><strong>解决方法</strong>：修改文件访问权限<pre><code class="bash">$ chmod -R 1777 /home/samba$ chown nobody:nobody</code></pre></li></ul><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="http://www.cnblogs.com/lion382/p/4078931.html" target="_blank" rel="noopener">CentOS7 安装Samba服务</a></li><li><a href="http://blog.leanote.com/post/dapingxia@163.com/CentOS7-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E5%8C%BF%E5%90%8D%E8%AE%BF%E9%97%AESamba" target="_blank" rel="noopener">CentOS7 安装配置匿名访问Samba</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Samba&lt;/strong&gt;，是种用来让UNIX系列的操作系统与微软Windows操作系统的SMB
-      
-    
-    </summary>
-    
-      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-      <category term="samba" scheme="http://yelog.org/tags/samba/"/>
     
   </entry>
   
