@@ -34,6 +34,8 @@
             
             <tag> reading </tag>
             
+            <tag> 活着 </tag>
+            
         </tags>
         
     </entry>
@@ -898,11 +900,11 @@ xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用
             
             <tag> vim </tag>
             
-            <tag> linux </tag>
-            
             <tag> keybord </tag>
             
             <tag> emacs </tag>
+            
+            <tag> linux </tag>
             
         </tags>
         
@@ -6613,6 +6615,7 @@ $(document).pjax(&#39;.#menu a&#39;, &#39;.pjax&#39;, {fragment:&#39;.pjax&#39;,
 <li><strong>《悟空传》</strong> by 今何在  2016年8月 ★ ★ ★ ★ ★ ☆ ☆</li>
 <li><strong>《岛上书店》</strong> by 加·泽文 2019年4月 ★ ★ ★ ★ ☆ ☆ ☆</li>
 <li><strong>《月亮与六便士》</strong> by 毛姆 2019年4月 ★ ★ ★ ★ ★ ☆ ☆</li>
+<li><strong>《活着》</strong> by 余华 2019年5月★ ★ ★ ★ ★ ★ ☆</li>
 </ol>
 <h2 id="旅行"><a href="#旅行" class="headerlink" title="旅行"></a>旅行</h2><ol>
 <li><strong>《不去会死》</strong> by 石田裕辅 2017年2月 ★ ★ ★ ☆ ☆ ☆ ☆</li>

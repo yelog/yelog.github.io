@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yelog.org/"/>
-  <updated>2019-05-02T11:29:57.754Z</updated>
+  <updated>2019-05-03T09:11:15.993Z</updated>
   <id>http://yelog.org/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yelog.org/2019/05/02/to-live/"/>
     <id>http://yelog.org/2019/05/02/to-live/</id>
     <published>2019-05-02T09:46:16.000Z</published>
-    <updated>2019-05-02T11:29:57.754Z</updated>
+    <updated>2019-05-03T09:11:15.993Z</updated>
     
     <content type="html"><![CDATA[<p>有那么一个年代，离我们很近，它腥风血雨，连活着都是一件奢侈的事。</p><p>在富贵的一生中，每次出现看似被上天眷顾的福气后（如有庆长跑第一、凤霞嫁了人并怀了孩子），读者还在替富贵开心的时候，他们却以各种方式迅速死去，最终富贵亲手埋葬了他所有的亲人。</p><p>一本 12w 左右的小说，但是在没有华丽词藻的情况下，在顺畅流利的写作手法、跌宕起伏的剧情、第一人称的代入感下一口气读完了。期间多次痛哭流涕（一点儿没夸张），不得不放下书本，洗过脸后才能继续阅读。所以已经多年没写书评的我，还是忍不住为她写下书评。</p><blockquote><p>人是为了活着本身而活着，而不是为了活着之外的任何事物所活着。</p></blockquote><p>这是作者在中文序言中的一句话，在当今生活着的我，初读序言中的这句话，并无任何共鸣，甚至还行吐槽两句。随着富贵将他的”一生”娓娓道来，你就会明白在那样的时代背景下，活着已经是一件不容易的事。 所以作者在日文版序言中说到：</p><blockquote><p>在旁人眼中富贵的一生是苦熬的一生；可是对于富贵自己，我相信他更多地感受到了幸福。</p></blockquote><p>因为他相信自己的妻子是世上最好的妻子，他相信自己的子女也是世上最好的子女，还有他的女婿他的外孙，还有他的那头也叫富贵的牛，还有一起上火锅的朋友们，还有生活的点点滴滴……</p><p>富贵的真是一路跌下去的一生，从”富家少爷”赌光了家产、气死了爹爹。由于母亲生病，为母亲求医路上被国民党抓壮丁，被俘虏后，放回家中。却发现母亲已死，女儿也由于生病变成了聋哑人。本想着大难之后必有后福，却只是悲惨一生的开端。儿子有庆由于和县长夫人血型匹配，遭抽血而亡、女儿凤霞产子大出血而亡、妻子家珍失去儿女后，失去了最后与病魔争斗的信念，也走了、女婿二喜在工地被水泥板拍死、外孙苦根难得吃到豆子，却被豆子撑死。最后只剩下自己和一个也叫作富贵的老牛。</p><p>春生想自杀前，找到富贵告别，在被家珍原谅，并答应不会自杀，在这种情况下坚持了一个月，最终还是自杀了。那种时代背景下的无奈，那种窒息感。。。</p><p>富贵的一生跨越了地主、解放战争、人民公社运动、大炼钢铁、自然灾害和文化大革命，从一个人的视角看到每个时代下的一个小小的缩影，但却比任何其他的描述更让人深刻了解到这些时代背景下人们的生活状态。</p><p>在那时，活着不仅是幸运，也更需要勇气。</p><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1556806574463&amp;di=868e65579acfc800020db78de3c07ac4&amp;imgtype=0&amp;src=http%3A%2F%2Fs1.sinaimg.cn%2Flarge%2F001Pe7mxzy76VARpXvdc3" alt=""></p>]]></content>
     
@@ -40,6 +40,8 @@
     
     
       <category term="reading" scheme="http://yelog.org/tags/reading/"/>
+    
+      <category term="活着" scheme="http://yelog.org/tags/%E6%B4%BB%E7%9D%80/"/>
     
   </entry>
   
@@ -200,11 +202,11 @@ msg=&amp;quot;hello world&amp;quot;
     
       <category term="vim" scheme="http://yelog.org/tags/vim/"/>
     
-      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
-    
       <category term="keybord" scheme="http://yelog.org/tags/keybord/"/>
     
       <category term="emacs" scheme="http://yelog.org/tags/emacs/"/>
+    
+      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
     
   </entry>
   
