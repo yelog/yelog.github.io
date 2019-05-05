@@ -4686,7 +4686,10 @@ limit: 20
     <entry>
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
-      <content type="html"><![CDATA[<h2 id="2019年1月"><a href="#2019年1月" class="headerlink" title="2019年1月"></a>2019年1月</h2><h3 id="01-05"><a href="#01-05" class="headerlink" title="01-05"></a>01-05</h3><ol>
+      <content type="html"><![CDATA[<h2 id="2019年5月"><a href="#2019年5月" class="headerlink" title="2019年5月"></a>2019年5月</h2><h3 id="05-05"><a href="#05-05" class="headerlink" title="05-05"></a>05-05</h3><ol>
+<li><code>add</code> 添加代码段高亮样式配置，对应 markdown 语法 `` ，位置：<code>_config.yml</code> 关键字 <code>code</code></li>
+</ol>
+<h2 id="2019年1月"><a href="#2019年1月" class="headerlink" title="2019年1月"></a>2019年1月</h2><h3 id="01-05"><a href="#01-05" class="headerlink" title="01-05"></a>01-05</h3><ol>
 <li><code>fix</code> 修复Firefox下，Tags 图标失效问题</li>
 </ol>
 <h2 id="2018年11月"><a href="#2018年11月" class="headerlink" title="2018年11月"></a>2018年11月</h2><h3 id="11-30"><a href="#11-30" class="headerlink" title="11-30"></a>11-30</h3><ol>

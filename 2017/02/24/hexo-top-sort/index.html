@@ -25,7 +25,7 @@
 
 <link rel="stylesheet" href="/css/style.css">
 
-<link rel="stylesheet" href="/css/hl_theme/atom-light.css">
+<link rel="stylesheet" href="/css/hl_theme/github.css">
 
 <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -176,9 +176,9 @@
 <ul>
     <li class="all active">全部文章</li>
     
-    <li data-rel="数据库"> 数据库 </li>
-    
     <li data-rel="后端"> 后端 </li>
+    
+    <li data-rel="数据库"> 数据库 </li>
     
     <li data-rel="大前端"> 大前端 </li>
     
@@ -242,22 +242,6 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">PostgreSQL</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">postgres</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">sql</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">java</a>
     </li>
     
@@ -278,7 +262,27 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">mybatis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">PostgreSQL</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">postgres</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">sql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">AngularJs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">freemarker</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -290,15 +294,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">freemarker</a>
+        <a href="javascript:" class="color5">node</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color2">jQuery</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">node</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -334,19 +334,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">git</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">GitHub</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">fragment_cache</a>
+        <a href="javascript:" class="color4">git</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">pjax</a>
+        <a href="javascript:" class="color5">fragment_cache</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -358,6 +354,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">pjax</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">deepin</a>
     </li>
     
@@ -366,11 +366,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">tale</a>
+        <a href="javascript:" class="color3">IntellijIDEA</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">IntellijIDEA</a>
+        <a href="javascript:" class="color5">tale</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -386,11 +386,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">docker</a>
+        <a href="javascript:" class="color4">vim</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">vim</a>
+        <a href="javascript:" class="color2">docker</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -410,11 +410,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">ftp</a>
+        <a href="javascript:" class="color1">nginx</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">nginx</a>
+        <a href="javascript:" class="color4">ftp</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -1789,7 +1789,7 @@ tags:
 
     </div>
     <div class="copyright">
-        <p class="footer-entry">©2017 Yelog</p>
+        <p class="footer-entry">©2016-2019 Yelog</p>
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
@@ -1832,7 +1832,7 @@ tags:
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#mybatis','#PostgreSQL','#postgres','#sql','#java','#translation','#javaee','#dubbo','#zookeeper','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#reading','#活着','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#pjax','#mac','#efficiency','#deepin','#运维','#tale','#IntellijIDEA','#samba','#firewall','#centos','#docker','#vim','#keybord','#emacs','#linux','#磁盘分区','#ftp','#nginx','#maven','#nexus','#linux命令','#encryption','#docker仓库','#shell','#encoding','#spring','#springmvc','#regex',],
+            'data': ['#java','#translation','#javaee','#dubbo','#zookeeper','#mybatis','#PostgreSQL','#postgres','#sql','#AngularJs','#freemarker','#jsp','#jstl','#node','#jQuery','#hexo','#js','#浏览器','#reading','#活着','#3-hexo','#mathjax','#Git','#GitHub','#git','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#samba','#firewall','#centos','#vim','#docker','#keybord','#emacs','#linux','#磁盘分区','#nginx','#ftp','#maven','#nexus','#linux命令','#encryption','#docker仓库','#shell','#encoding','#spring','#springmvc','#regex',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
@@ -1913,7 +1913,7 @@ tags:
         border-right: 1px solid #C3CCD0;
         text-align: right;
         color: #AAA;
-        background-color: #fafafa;
+        background-color: ;
     }
 </style>
 
@@ -1980,7 +1980,10 @@ tags:
         background-size: cover;
     }
     
+
+    
 </style>
+
 
 
 
