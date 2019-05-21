@@ -707,6 +707,7 @@ div.ac > ul > li:before,
 .nav-left ul.sub {
   transition: height 0.3s, border-top 0.3s;
   border-left: solid 2px #f00;
+  overflow-y: hidden;
 }
 .nav-left ul.sub.hide {
   height: 0 !important;

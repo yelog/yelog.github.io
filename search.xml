@@ -4715,8 +4715,23 @@ limit: 20
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
       <content type="html"><![CDATA[<h2 id="2019年5月"><a href="#2019年5月" class="headerlink" title="2019年5月"></a>2019年5月</h2><h3 id="05-21"><a href="#05-21" class="headerlink" title="05-21"></a>05-21</h3><ol>
-<li><code>add</code> 文章分类可以显示文章数 <code>category&gt;num</code></li>
-<li><code>add</code> 文章分类支持多级显示 <code>category&gt;sub</code></li>
+<li><p><code>add</code> 文章分类可以显示文章数 <code>category&gt;num</code></p>
+</li>
+<li><p><code>add</code> 文章分类支持多级显示 <code>category&gt;sub</code></p>
+</li>
+<li><p><code>fix</code> 修复<code>gitalk</code>显示评论数错误的问题</p>
+</li>
+<li><p>添加背景图设置：</p>
+<blockquote>
+<p>① <code>_config.xml</code> 配置默认背景图片</p>
+<p>首页背景图： <code>index_bg_img: xxx.jpg</code></p>
+<p>文章页面背景图：<code>other_bg_img: xxx.jpg</code></p>
+<p>② 我们还可以单独给某篇文章设置背景图（优先级最高）</p>
+<pre><code class="yml">title: 3-hexo开发日志-持续更新
+bgImg: xxx.jpg  #设置这篇文章的背景图
+</code></pre>
+</blockquote>
+</li>
 </ol>
 <h3 id="05-05"><a href="#05-05" class="headerlink" title="05-05"></a>05-05</h3><ol>
 <li><code>add</code> 添加代码段高亮样式配置，对应 markdown 语法 `` ，位置：<code>_config.yml</code> 关键字 <code>code</code></li>
