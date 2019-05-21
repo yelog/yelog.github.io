@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>代码高亮效果 | 叶落阁</title>
-  <meta name="keywords" content=" hexo ">
-  <meta name="description" content="代码高亮效果 | 叶落阁">
+  <title>叶落阁</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http://yelog.org/layui-select-multiple/ 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注     multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   l">
 <meta property="og:type" content="website">
@@ -23,15 +23,16 @@
 
 <link rel="icon" href="/img/avatar.jpg">
 
-<link rel="stylesheet" href="/css/style.css">
+<link href="/css/style.css" rel="stylesheet">
 
-<link rel="stylesheet" href="/css/hl_theme/github.css">
+<link href="/css/hl_theme/atom-light.css" rel="stylesheet">
 
 <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="/js/jquery.autocomplete.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js" ></script>
+
 <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script>
     hljs.initHighlightingOnLoad();
@@ -44,13 +45,16 @@
 <script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
 
 <script src="/js/iconfont.js" ></script>
+
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
 </div>
+
 <body>
-<aside class="nav">
+<aside class="nav mobile">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/avatar.jpg" />
@@ -173,20 +177,105 @@
 
 
 
+
 <ul>
-    <li class="all active">全部文章</li>
+    <li class="all active"><div>全部文章<small>(141)</small></div></li>
     
-    <li data-rel="后端"> 后端 </li>
+        
+            
+            <li><div data-rel="后端">后端<small>(6)</small></div>
+                
+            </li>
+            
+        
     
-    <li data-rel="数据库"> 数据库 </li>
+        
+            
+            <li><div data-rel="数据库">数据库<small>(6)</small></div>
+                
+            </li>
+            
+        
     
-    <li data-rel="大前端"> 大前端 </li>
+        
+            
+            <li><div data-rel="大前端">大前端<small>(12)</small></div>
+                
+            </li>
+            
+        
     
-    <li data-rel="读书"> 读书 </li>
+        
+            
+            <li><div data-rel="读书"><i class="fold iconfont icon-right"></i>读书<small>(3)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="书单">书单<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="阅读笔记">阅读笔记<small>(2)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
     
-    <li data-rel="工具"> 工具 </li>
+        
+            
+        
     
-    <li data-rel="运维"> 运维 </li>
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="工具"><i class="fold iconfont icon-right"></i>工具<small>(32)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="hexo">hexo<small>(18)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="git">git<small>(8)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="软件记录">软件记录<small>(5)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="运维">运维<small>(82)</small></div>
+                
+            </li>
+            
+        
     
 </ul>
 <div class="left-bottom">
@@ -198,12 +287,13 @@
     </div>
     <div><a style="border-right: 1px solid #fff; width: 49%"  class="about site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="142">
-<input type="hidden" id="yelog_site_word_count" value="133.6k">
+<input type="hidden" id="yelog_site_posts_number" value="141">
+<input type="hidden" id="yelog_site_word_count" value="133.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
 </div>
+
     </div>
     <div class="nav-right">
         <div class="friends-area">
@@ -262,11 +352,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">mybatis</a>
+        <a href="javascript:" class="color1">PostgreSQL</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">PostgreSQL</a>
+        <a href="javascript:" class="color3">mybatis</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -282,10 +372,6 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">freemarker</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">jsp</a>
     </li>
     
@@ -294,11 +380,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">node</a>
+        <a href="javascript:" class="color1">freemarker</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color2">jQuery</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">node</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -322,6 +412,10 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">encryption</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color2">3-hexo</a>
     </li>
     
@@ -334,11 +428,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">GitHub</a>
+        <a href="javascript:" class="color4">git</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">git</a>
+        <a href="javascript:" class="color2">GitHub</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -406,15 +500,19 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">磁盘分区</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">nginx</a>
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">磁盘分区</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color4">ftp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">linux命令</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -426,11 +524,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">linux命令</a>
+        <a href="javascript:" class="color2">spring</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">encryption</a>
+        <a href="javascript:" class="color5">springmvc</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -443,14 +541,6 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color4">encoding</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">spring</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">springmvc</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -467,7 +557,7 @@
     
     <nav id="title-list-nav">
         
-        <a id="top" class="工具 "
+        <a id="top" class="工具 hexo "
            href="/2017/03/13/3-hexo-logs/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -475,7 +565,7 @@
             <span class="post-date" title="2017-03-13 15:44:57">2017/03/13</span>
         </a>
         
-        <a id="top" class="工具 "
+        <a id="top" class="工具 hexo "
            href="/2017/03/23/3-hexo-instruction/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -483,7 +573,7 @@
             <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
         </a>
         
-        <a  class="读书 "
+        <a  class="读书 阅读笔记 "
            href="/2019/05/02/to-live/"
            data-tag="reading,活着"
            data-author="" >
@@ -507,7 +597,7 @@
             <span class="post-date" title="2018-02-08 09:19:09">2018/02/08</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 软件记录 "
            href="/2017/12/13/Mac-BetterTouchTool/"
            data-tag="mac,efficiency"
            data-author="" >
@@ -563,7 +653,7 @@
             <span class="post-date" title="2017-09-25 10:03:50">2017/09/25</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/09/21/hexo-fragment_cache/"
            data-tag="hexo,fragment_cache"
            data-author="" >
@@ -627,7 +717,7 @@
             <span class="post-date" title="2017-08-04 15:54:47">2017/08/04</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/07/05/MathJax-pjax/"
            data-tag="mathjax,pjax"
            data-author="" >
@@ -635,7 +725,7 @@
             <span class="post-date" title="2017-07-05 19:24:10">2017/07/05</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/07/05/3-hexo-mathjax/"
            data-tag="mathjax"
            data-author="" >
@@ -651,7 +741,7 @@
             <span class="post-date" title="2017-07-03 19:40:14">2017/07/03</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/06/26/gitment/"
            data-tag="hexo"
            data-author="" >
@@ -675,7 +765,7 @@
             <span class="post-date" title="2017-06-01 17:25:11">2017/06/01</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 软件记录 "
            href="/2017/05/24/tale-build-experience/"
            data-tag="tale"
            data-author="" >
@@ -755,7 +845,7 @@
             <span class="post-date" title="2017-05-17 22:00:42">2017/05/17</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 git "
            href="/2017/05/16/Git统计操作/"
            data-tag="git"
            data-author="" >
@@ -791,7 +881,7 @@
            href="/2017/04/15/SpringMVC-implementation-process/"
            data-tag="java,spring,springmvc"
            data-author="" >
-            <span class="post-title" title=""></span>
+            <span class="post-title" title="[转]SpringMVC执行流程及源码解析">[转]SpringMVC执行流程及源码解析</span>
             <span class="post-date" title="2017-04-15 10:22:05">2017/04/15</span>
         </a>
         
@@ -803,7 +893,7 @@
             <span class="post-date" title="2017-04-14 16:37:24">2017/04/14</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 软件记录 "
            href="/2017/03/30/deepin-linux/"
            data-tag="deepin,运维"
            data-author="" >
@@ -811,7 +901,7 @@
             <span class="post-date" title="2017-03-30 18:58:50">2017/03/30</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/03/27/hexo-error-collection/"
            data-tag="hexo"
            data-author="" >
@@ -819,7 +909,7 @@
             <span class="post-date" title="2017-03-27 19:40:42">2017/03/27</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/03/24/3-hexo-shortcuts/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -835,7 +925,7 @@
             <span class="post-date" title="2017-03-23 11:59:50">2017/03/23</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/03/17/windows-hexo/"
            data-tag="hexo"
            data-author="" >
@@ -851,7 +941,7 @@
             <span class="post-date" title="2017-03-16 20:09:48">2017/03/16</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/03/14/Hexo-RSS-Sitemap/"
            data-tag="hexo"
            data-author="" >
@@ -859,7 +949,7 @@
             <span class="post-date" title="2017-03-14 09:44:29">2017/03/14</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/03/13/3-hexo-homepage/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -883,7 +973,7 @@
             <span class="post-date" title="2017-03-09 19:50:45">2017/03/09</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/03/09/Hexo-WordCount/"
            data-tag="hexo"
            data-author="" >
@@ -899,7 +989,7 @@
             <span class="post-date" title="2017-03-08 08:58:21">2017/03/08</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/03/07/3-hexo/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -939,7 +1029,7 @@
             <span class="post-date" title="2017-03-04 08:40:58">2017/03/04</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/02/28/3-hexo-multiple-author/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -947,7 +1037,7 @@
             <span class="post-date" title="2017-02-28 10:55:31">2017/02/28</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/02/25/hexo-create-404-page/"
            data-tag="hexo"
            data-author="" >
@@ -955,7 +1045,7 @@
             <span class="post-date" title="2017-02-25 15:18:39">2017/02/25</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2017/02/24/hexo-top-sort/"
            data-tag="hexo"
            data-author="" >
@@ -987,7 +1077,7 @@
             <span class="post-date" title="2017-02-08 20:18:54">2017/02/08</span>
         </a>
         
-        <a  class="读书 "
+        <a  class="读书 书单 "
            href="/2017/01/31/reading-list/"
            data-tag="reading"
            data-author="" >
@@ -1171,7 +1261,7 @@
             <span class="post-date" title="2017-01-04 10:10:02">2017/01/04</span>
         </a>
         
-        <a  class="读书 "
+        <a  class="读书 阅读笔记 "
            href="/2017/01/03/Fortress-Besieged/"
            data-tag="reading"
            data-author="" >
@@ -1259,7 +1349,7 @@
             <span class="post-date" title="2016-12-25 16:55:15">2016/12/25</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 git "
            href="/2016/12/24/git-reset/"
            data-tag="Git"
            data-author="" >
@@ -1275,7 +1365,7 @@
             <span class="post-date" title="2016-12-24 10:24:17">2016/12/24</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 git "
            href="/2016/12/23/git-master/"
            data-tag="Git"
            data-author="" >
@@ -1299,7 +1389,7 @@
             <span class="post-date" title="2016-12-22 11:44:14">2016/12/22</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 git "
            href="/2016/12/21/Git-SSH-HTTPS-verify-configuration/"
            data-tag="Git"
            data-author="" >
@@ -1491,7 +1581,7 @@
             <span class="post-date" title="2016-11-22 17:11:48">2016/11/22</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 软件记录 "
            href="/2016/11/05/idea-shortcuts/"
            data-tag="IntellijIDEA"
            data-author="" >
@@ -1507,7 +1597,7 @@
             <span class="post-date" title="2016-10-24 10:10:45">2016/10/24</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2016/10/23/hexo-git-server-blog/"
            data-tag="hexo,Git"
            data-author="" >
@@ -1515,7 +1605,7 @@
             <span class="post-date" title="2016-10-23 09:24:03">2016/10/23</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 hexo "
            href="/2016/10/22/hexo-gitHub-pages-create-own-blog/"
            data-tag="hexo,Git,GitHub"
            data-author="" >
@@ -1523,7 +1613,7 @@
             <span class="post-date" title="2016-10-22 21:24:05">2016/10/22</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 git "
            href="/2016/10/22/set-up-git-server-on-vps/"
            data-tag="Git"
            data-author="" >
@@ -1531,20 +1621,12 @@
             <span class="post-date" title="2016-10-22 20:08:04">2016/10/22</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 git "
            href="/2016/10/13/contributing-to-open-source-on-github/"
            data-tag="Git,GitHub"
            data-author="" >
             <span class="post-title" title="如何给GitHub上的项目贡献代码">如何给GitHub上的项目贡献代码</span>
             <span class="post-date" title="2016-10-13 15:44:07">2016/10/13</span>
-        </a>
-        
-        <a  class="工具 "
-           href="/2016/10/13/highlight-effect/"
-           data-tag="hexo"
-           data-author="" >
-            <span class="post-title" title="代码高亮效果">代码高亮效果</span>
-            <span class="post-date" title="2016-10-13 14:00:41">2016/10/13</span>
         </a>
         
         <a  class="数据库 "
@@ -1579,7 +1661,7 @@
             <span class="post-date" title="2016-10-05 11:58:50">2016/10/05</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 软件记录 "
            href="/2016/10/04/regular-expression/"
            data-tag="regex"
            data-author="" >
@@ -1587,7 +1669,7 @@
             <span class="post-date" title="2016-10-04 09:41:40">2016/10/04</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 git "
            href="/2016/10/02/Git-command/"
            data-tag="Git"
            data-author="" >
@@ -1595,7 +1677,7 @@
             <span class="post-date" title="2016-10-02 17:15:39">2016/10/02</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="工具 git "
            href="/2016/09/30/computer-mutiple-github-account/"
            data-tag="Git,GitHub"
            data-author="" >
@@ -1615,66 +1697,10 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-highlight-effect" class="article article-type-post" itemscope itemprop="blogPost">
+        <article class="index">
+            <div class="toc-ref">
     
-        <h1 class="article-title">代码高亮效果</h1>
-    
-    <div class="article-meta">
-        
-        
-        
-        <span class="book">
-            
-            <a href="javascript:" data-rel="工具">工具</a>
-            
-        </span>
-        
-        
-        <span class="tag">
-            
-            <a href="javascript:" class="color5">hexo</a>
-            
-        </span>
-        
-    </div>
-    <div class="article-meta">
-        
-        创建时间:<time class="date" title='更新时间: 2017-11-06 10:20:12'>2016-10-13 14:00</time>
-        
-    </div>
-    <div class="article-meta">
-        
-        <span>字数:434</span>
-        
-        
-        <span id="busuanzi_container_page_pv">
-            阅读:<span id="busuanzi_value_page_pv">
-                <span class="count-comment">
-                    <span class="spinner">
-                      <div class="cube1"></div>
-                      <div class="cube2"></div>
-                    </span>
-                </span>
-            </span>
-        </span>
-        
-        
-        <span class="top-comment" title="跳转至评论区">
-            <a href="#comments">
-                评论:<span class="count-comment">
-                    <span class="spinner">
-                      <div class="cube1"></div>
-                      <div class="cube2"></div>
-                    </span>
-                </span>
-            </a>
-        </span>
-        
-    </div>
-    
-    <div class="toc-ref">
-    
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java"><span class="toc-text">Java</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#普通java类"><span class="toc-text">普通java类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSP"><span class="toc-text">JSP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FreeMarker"><span class="toc-text">FreeMarker</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-CSS-JAVASCRIPT"><span class="toc-text">HTML/CSS/JAVASCRIPT</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML"><span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JAVASCRIPT"><span class="toc-text">JAVASCRIPT</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PYTHON"><span class="toc-text">PYTHON</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sql"><span class="toc-text">sql</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于叶落阁"><span class="toc-text">关于叶落阁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客平台"><span class="toc-text">博客平台</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1687,168 +1713,32 @@
     }
 </style>
 </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>想要扩展hexo的代码高亮支持，所以写下效果供自己参考<br><a id="more"></a></p>
-<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="普通java类"><a href="#普通java类" class="headerlink" title="普通java类"></a>普通java类</h3><pre><code class="java">package com.yyj.day3;
+            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
+<blockquote>
+<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
+<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
+<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
+</blockquote>
+<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
+<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
+<h2 id="关于叶落阁"><a href="#关于叶落阁" class="headerlink" title="关于叶落阁"></a>关于叶落阁</h2><p><strong>叶落阁</strong> 是阿杰（杨玉杰）的个人站。</p>
+<p>到目前为止已经写了<code class="article_number"></code>篇文章， 共<code class="site_word_count"></code>字。</p>
+<p>本站访问人数：<code class="site_uv"></code>人次 ， 访问量：<code class="site_pv"></code>次</p>
+<h2 id="博客平台"><a href="#博客平台" class="headerlink" title="博客平台"></a>博客平台</h2><p>这个博客通过 <a href="https://hexo.io/">Hexo</a> 生成，部署在 <a href="https://pages.github.com/">GitHub Pages</a>，主题 <a href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a> 已经在github上开源</p>
+<p>主要功能：</p>
+<ul>
+<li>搜索支持文章标题、标签(#标签)、作者(@作者)</li>
+<li>pad/手机等移动端适配</li>
+<li>页面全局快捷键 <a href='http://yelog.org/2017/03/24/3-hexo-shortcuts/'>3-hexo快捷键说明</a></li>
+</ul>
 
-/**
- * Created by Yelog on 27/08/16.
- */
-public class Person {
-
-    private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    //重写String方法 by Yelog
-    @Override
-    public String toString() {
-        return &quot;Person{&quot; +
-                &quot;name=&#39;&quot; + name + &#39;\&#39;&#39; +
-                &quot;, age=&quot; + age +
-                &#39;}&#39;;
-    }
-}
-</code></pre>
-<h3 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h3><pre><code class="jsp">&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
-&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
-&lt;%@ include file=&quot;/include/include.inc.jsp&quot; %&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;主页&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;c:forEach var=&quot;i&quot; begin=&quot;1&quot; end=&quot;5&quot;&gt;
-    Item &lt;c:out value=&quot;${i}&quot;/&gt;&lt;br&gt;
-&lt;/c:forEach&gt;
-&lt;/body&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
-&lt;/html&gt;
-</code></pre>
-<h3 id="FreeMarker"><a href="#FreeMarker" class="headerlink" title="FreeMarker"></a>FreeMarker</h3><pre><code class="java">&lt;#include &quot;top.ftl&quot; &gt;
-&lt;#assign hrefs={&quot;1&quot;:&quot;index.html&quot;,&quot;2&quot;:&quot;about.html&quot;,&quot;3&quot;:&quot;contact.html&quot;}&gt;
-&lt;#list hrefs as href&gt;
-    &lt;li class=&quot;nav-item dropdown mega-fluid&quot;&gt;
-        &lt;#if href==&quot;1&quot;&gt;
-        ${href}
-        &lt;#else&gt;
-        &lt;b&gt;${href}&lt;/b&gt;
-        &lt;/#if&gt;
-    &lt;/li&gt;
-&lt;/#list&gt;
-</code></pre>
-<h2 id="HTML-CSS-JAVASCRIPT"><a href="#HTML-CSS-JAVASCRIPT" class="headerlink" title="HTML/CSS/JAVASCRIPT"></a>HTML/CSS/JAVASCRIPT</h2><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;test&lt;/title&gt;
-    &lt;style&gt;
-        a{
-            color: rebeccapurple;
-            margin-top: 100px;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;b&gt;hello&lt;/b&gt;
-&lt;h1&gt;Word&lt;/h1&gt;
-&lt;a class=&quot;btn&quot; href=&quot;javascript:hello();&quot;&gt;哈哈&lt;/a&gt;
-&lt;/body&gt;
-&lt;script&gt;
-    function hello() {
-        alert(&quot;hello&quot;);
-    }
-&lt;/script&gt;
-&lt;/html&gt;
-</code></pre>
-<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code class="CSS">.flat-btn.-gray:before{background-color:#445862;}
-.btn.-sm{font-size:14px;padding:7px 20px 6px 20px;}
-.btn.-xs{font-size:12px;padding:5px 13px;}
-.btn.-lg{font-size:18px;padding:12px 40px;}
-</code></pre>
-<h3 id="JAVASCRIPT"><a href="#JAVASCRIPT" class="headerlink" title="JAVASCRIPT"></a>JAVASCRIPT</h3><pre><code class="javascript">function hello(){
-  alert(&quot;hello&quot;);
-  console.log(&quot;hello&quot;);
-}
-function startTime()
-{
-var today=new Date()
-var h=today.getHours()
-var m=today.getMinutes()
-var s=today.getSeconds()
-// add a zero in front of numbers&lt;10
-m=checkTime(m)
-s=checkTime(s)
-document.getElementById(&#39;txt&#39;).innerHTML=h+&quot;:&quot;+m+&quot;:&quot;+s
-t=setTimeout(&#39;startTime()&#39;,500)
-}
-
-function checkTime(i)
-{
-if (i&lt;10)
-  {i=&quot;0&quot; + i}
-  return i
-}
-</code></pre>
-<h2 id="PYTHON"><a href="#PYTHON" class="headerlink" title="PYTHON"></a>PYTHON</h2><pre><code class="PYTHON">from multiprocessing import Process, Lock
-
-def f(lock, n) :
-    lock.acquire()
-    print(&quot;hello world %d&quot; % n)
-    lock.release()
-
-if __name__ == &quot;__main__&quot; :
-    lock = Lock()
-    for num in range(10):
-        Process(target=f, args=(lock, num)).start()
-</code></pre>
-<h2 id="sql"><a href="#sql" class="headerlink" title="sql"></a>sql</h2><pre><code class="SQL">#说明：创建数据库
-CREATE DATABASE database-name;
-#说明：删除数据库
-drop database dbname;
-#说明：创建新表
-create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..);
-#查询
-select * from table1 where 范围;
-#插入
-insert into table1(field1,field2) values(value1,value2);
-#删除
-delete from table1 where 范围
-#更新
-update table1 set field1=value1 where 范围
-</code></pre>
-
-      
-       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
-    </div>
-</article>
-
-
-<p>
-    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
-</p>
-
-
-<div class="article_copyright">
-    <p><span>文章标题:</span>代码高亮效果</p>
-    <p><span>文章字数:</span><span class="post-count">434</span></p>
-    <p><span>本文作者:</span><a href="javascript:void(0)" title="叶落阁">叶落阁</a></p>
-    <p><span>发布时间:</span>2016-10-13, 14:00:41</p>
-    <p><span>最后更新:</span>2017-11-06, 10:20:12</p>
-    <span>原始链接:</span><a class="post-url" href="/2016/10/13/highlight-effect/" title="代码高亮效果">http://yelog.org/2016/10/13/highlight-effect/</a>
-    <p>
-        <span>版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-    </p>
-</div>
-
-
+        </article>
+        
+        <p>
+            <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+        </p>
+        
+        
     <div id="comments"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 
@@ -1868,10 +1758,6 @@ update table1 set field1=value1 where 范围
         gitalk.render('comments')
     })
 </script>
-
-
-
-    
 
     </div>
     <div class="copyright">
@@ -1909,16 +1795,17 @@ update table1 set field1=value1 where 范围
     </div>
 </div>
 
+
 </body>
 <script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 
-<script src="/js/script.js"></script>
+<script src="/js/script.js" ></script>
 <script>
     var img_resize = 'default';
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#java','#translation','#javaee','#dubbo','#zookeeper','#mybatis','#PostgreSQL','#postgres','#sql','#AngularJs','#freemarker','#jsp','#jstl','#node','#jQuery','#hexo','#js','#浏览器','#reading','#活着','#3-hexo','#mathjax','#Git','#GitHub','#git','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#samba','#firewall','#centos','#vim','#docker','#keybord','#emacs','#linux','#磁盘分区','#nginx','#ftp','#maven','#nexus','#linux命令','#encryption','#docker仓库','#shell','#encoding','#spring','#springmvc','#regex',],
+            'data': ['#java','#translation','#javaee','#dubbo','#zookeeper','#PostgreSQL','#mybatis','#postgres','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#reading','#活着','#encryption','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#samba','#firewall','#centos','#vim','#docker','#keybord','#emacs','#linux','#nginx','#磁盘分区','#ftp','#linux命令','#maven','#nexus','#spring','#springmvc','#docker仓库','#shell','#encoding','#regex',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
@@ -1999,7 +1886,7 @@ update table1 set field1=value1 where 范围
         border-right: 1px solid #C3CCD0;
         text-align: right;
         color: #AAA;
-        background-color: ;
+        background-color: #fafafa;
     }
 </style>
 

@@ -27,6 +27,8 @@
             
             <category> 读书 </category>
             
+            <category> 阅读笔记 </category>
+            
         </categories>
         
         
@@ -565,6 +567,8 @@ echo $name
         <categories>
             
             <category> 工具 </category>
+            
+            <category> 软件记录 </category>
             
         </categories>
         
@@ -1201,6 +1205,8 @@ public class IndexController {
             
             <category> 工具 </category>
             
+            <category> hexo </category>
+            
         </categories>
         
         
@@ -1818,6 +1824,8 @@ $ ./nexus start
             
             <category> 工具 </category>
             
+            <category> hexo </category>
+            
         </categories>
         
         
@@ -1940,6 +1948,8 @@ $$
         <categories>
             
             <category> 工具 </category>
+            
+            <category> hexo </category>
             
         </categories>
         
@@ -2105,6 +2115,8 @@ $ chown nobody:nobody
             
             <category> 工具 </category>
             
+            <category> hexo </category>
+            
         </categories>
         
         
@@ -2266,6 +2278,8 @@ $ mv tale /home
         <categories>
             
             <category> 工具 </category>
+            
+            <category> 软件记录 </category>
             
         </categories>
         
@@ -3345,6 +3359,8 @@ $ git log --format=&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;
             
             <category> 工具 </category>
             
+            <category> git </category>
+            
         </categories>
         
         
@@ -3520,7 +3536,7 @@ rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
     </entry>
     
     <entry>
-      <title></title>
+      <title><![CDATA[[转]SpringMVC执行流程及源码解析]]></title>
       <url>/2017/04/15/SpringMVC-implementation-process/</url>
       <content type="html"><![CDATA[<p>在SpringMVC中主要是围绕着DispatcherServlet来设计，可以把它当做指挥中心。这里先说明一下SpringMVC文档给出的执行流程，然后是我们稍微具体的执行流程，最后是流程大致的源码跟踪。关于很很很详细的源码解析，这里暂先不做。</p>
 <h2 id="官方文档中的流程"><a href="#官方文档中的流程" class="headerlink" title="官方文档中的流程"></a>官方文档中的流程</h2><p>首先看下SpringMVC文档上给的流程图：<br><img src="http://img.xiangzhangshugongyi.com/DispatcherServlet.png" alt="官方流程图"><br>这张图片给了我们大概的执行流程：</p>
@@ -4140,6 +4156,8 @@ MimeType=text/plain;
             
             <category> 工具 </category>
             
+            <category> 软件记录 </category>
+            
         </categories>
         
         
@@ -4164,6 +4182,8 @@ MimeType=text/plain;
         <categories>
             
             <category> 工具 </category>
+            
+            <category> hexo </category>
             
         </categories>
         
@@ -4251,6 +4271,8 @@ MimeType=text/plain;
         <categories>
             
             <category> 工具 </category>
+            
+            <category> hexo </category>
             
         </categories>
         
@@ -4444,6 +4466,8 @@ alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add 
             
             <category> 工具 </category>
             
+            <category> hexo </category>
+            
         </categories>
         
         
@@ -4576,6 +4600,8 @@ $ hexo s
             
             <category> 工具 </category>
             
+            <category> hexo </category>
+            
         </categories>
         
         
@@ -4672,6 +4698,8 @@ limit: 20
             
             <category> 工具 </category>
             
+            <category> hexo </category>
+            
         </categories>
         
         
@@ -4686,7 +4714,11 @@ limit: 20
     <entry>
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
-      <content type="html"><![CDATA[<h2 id="2019年5月"><a href="#2019年5月" class="headerlink" title="2019年5月"></a>2019年5月</h2><h3 id="05-05"><a href="#05-05" class="headerlink" title="05-05"></a>05-05</h3><ol>
+      <content type="html"><![CDATA[<h2 id="2019年5月"><a href="#2019年5月" class="headerlink" title="2019年5月"></a>2019年5月</h2><h3 id="05-21"><a href="#05-21" class="headerlink" title="05-21"></a>05-21</h3><ol>
+<li><code>add</code> 文章分类可以显示文章数 <code>category&gt;num</code></li>
+<li><code>add</code> 文章分类支持多级显示 <code>category&gt;sub</code></li>
+</ol>
+<h3 id="05-05"><a href="#05-05" class="headerlink" title="05-05"></a>05-05</h3><ol>
 <li><code>add</code> 添加代码段高亮样式配置，对应 markdown 语法 `` ，位置：<code>_config.yml</code> 关键字 <code>code</code></li>
 </ol>
 <h2 id="2019年1月"><a href="#2019年1月" class="headerlink" title="2019年1月"></a>2019年1月</h2><h3 id="01-05"><a href="#01-05" class="headerlink" title="01-05"></a>01-05</h3><ol>
@@ -4876,6 +4908,8 @@ limit: 20
             
             <category> 工具 </category>
             
+            <category> hexo </category>
+            
         </categories>
         
         
@@ -4917,6 +4951,8 @@ limit: 20
         <categories>
             
             <category> 工具 </category>
+            
+            <category> hexo </category>
             
         </categories>
         
@@ -5043,6 +5079,8 @@ function pajx_loadDuodsuo(){
         <categories>
             
             <category> 工具 </category>
+            
+            <category> hexo </category>
             
         </categories>
         
@@ -5209,6 +5247,8 @@ $ git pull
         <categories>
             
             <category> 工具 </category>
+            
+            <category> hexo </category>
             
         </categories>
         
@@ -6143,6 +6183,8 @@ tags:
             
             <category> 工具 </category>
             
+            <category> hexo </category>
+            
         </categories>
         
         
@@ -6183,6 +6225,8 @@ date: 2016-09-27 11:31:01
         <categories>
             
             <category> 工具 </category>
+            
+            <category> hexo </category>
             
         </categories>
         
@@ -6252,6 +6296,8 @@ tags:
         <categories>
             
             <category> 工具 </category>
+            
+            <category> hexo </category>
             
         </categories>
         
@@ -6658,6 +6704,8 @@ $(document).pjax(&#39;.#menu a&#39;, &#39;.pjax&#39;, {fragment:&#39;.pjax&#39;,
         <categories>
             
             <category> 读书 </category>
+            
+            <category> 书单 </category>
             
         </categories>
         
@@ -10092,6 +10140,8 @@ $ iostat 2 3
             
             <category> 读书 </category>
             
+            <category> 阅读笔记 </category>
+            
         </categories>
         
         
@@ -11411,6 +11461,8 @@ $ git ls-tree -r HEAD
             
             <category> 工具 </category>
             
+            <category> git </category>
+            
         </categories>
         
         
@@ -11742,6 +11794,8 @@ $ find . -name &quot;*.iml&quot; | xargs rm -f
             
             <category> 工具 </category>
             
+            <category> git </category>
+            
         </categories>
         
         
@@ -11982,6 +12036,8 @@ $ vim ~/.git-credentials
         <categories>
             
             <category> 工具 </category>
+            
+            <category> git </category>
             
         </categories>
         
@@ -14454,6 +14510,8 @@ callback(可选)  请求完成的回调函数
             
             <category> 工具 </category>
             
+            <category> 软件记录 </category>
+            
         </categories>
         
         
@@ -14627,6 +14685,8 @@ git pull origin master #拉取最新代码
             
             <category> 工具 </category>
             
+            <category> hexo </category>
+            
         </categories>
         
         
@@ -14687,6 +14747,8 @@ $ hexo server
         <categories>
             
             <category> 工具 </category>
+            
+            <category> hexo </category>
             
         </categories>
         
@@ -14750,6 +14812,8 @@ $ hexo server
             
             <category> 工具 </category>
             
+            <category> git </category>
+            
         </categories>
         
         
@@ -14785,6 +14849,8 @@ $ hexo server
             
             <category> 工具 </category>
             
+            <category> git </category>
+            
         </categories>
         
         
@@ -14793,161 +14859,6 @@ $ hexo server
             <tag> Git </tag>
             
             <tag> GitHub </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[代码高亮效果]]></title>
-      <url>/2016/10/13/highlight-effect/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>想要扩展hexo的代码高亮支持，所以写下效果供自己参考<br><a id="more"></a></p>
-<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="普通java类"><a href="#普通java类" class="headerlink" title="普通java类"></a>普通java类</h3><pre><code class="java">package com.yyj.day3;
-
-/**
- * Created by Yelog on 27/08/16.
- */
-public class Person {
-
-    private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    //重写String方法 by Yelog
-    @Override
-    public String toString() {
-        return &quot;Person{&quot; +
-                &quot;name=&#39;&quot; + name + &#39;\&#39;&#39; +
-                &quot;, age=&quot; + age +
-                &#39;}&#39;;
-    }
-}
-</code></pre>
-<h3 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h3><pre><code class="jsp">&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
-&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
-&lt;%@ include file=&quot;/include/include.inc.jsp&quot; %&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;主页&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;c:forEach var=&quot;i&quot; begin=&quot;1&quot; end=&quot;5&quot;&gt;
-    Item &lt;c:out value=&quot;${i}&quot;/&gt;&lt;br&gt;
-&lt;/c:forEach&gt;
-&lt;/body&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
-&lt;/html&gt;
-</code></pre>
-<h3 id="FreeMarker"><a href="#FreeMarker" class="headerlink" title="FreeMarker"></a>FreeMarker</h3><pre><code class="java">&lt;#include &quot;top.ftl&quot; &gt;
-&lt;#assign hrefs={&quot;1&quot;:&quot;index.html&quot;,&quot;2&quot;:&quot;about.html&quot;,&quot;3&quot;:&quot;contact.html&quot;}&gt;
-&lt;#list hrefs as href&gt;
-    &lt;li class=&quot;nav-item dropdown mega-fluid&quot;&gt;
-        &lt;#if href==&quot;1&quot;&gt;
-        ${href}
-        &lt;#else&gt;
-        &lt;b&gt;${href}&lt;/b&gt;
-        &lt;/#if&gt;
-    &lt;/li&gt;
-&lt;/#list&gt;
-</code></pre>
-<h2 id="HTML-CSS-JAVASCRIPT"><a href="#HTML-CSS-JAVASCRIPT" class="headerlink" title="HTML/CSS/JAVASCRIPT"></a>HTML/CSS/JAVASCRIPT</h2><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;test&lt;/title&gt;
-    &lt;style&gt;
-        a{
-            color: rebeccapurple;
-            margin-top: 100px;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;b&gt;hello&lt;/b&gt;
-&lt;h1&gt;Word&lt;/h1&gt;
-&lt;a class=&quot;btn&quot; href=&quot;javascript:hello();&quot;&gt;哈哈&lt;/a&gt;
-&lt;/body&gt;
-&lt;script&gt;
-    function hello() {
-        alert(&quot;hello&quot;);
-    }
-&lt;/script&gt;
-&lt;/html&gt;
-</code></pre>
-<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code class="CSS">.flat-btn.-gray:before{background-color:#445862;}
-.btn.-sm{font-size:14px;padding:7px 20px 6px 20px;}
-.btn.-xs{font-size:12px;padding:5px 13px;}
-.btn.-lg{font-size:18px;padding:12px 40px;}
-</code></pre>
-<h3 id="JAVASCRIPT"><a href="#JAVASCRIPT" class="headerlink" title="JAVASCRIPT"></a>JAVASCRIPT</h3><pre><code class="javascript">function hello(){
-  alert(&quot;hello&quot;);
-  console.log(&quot;hello&quot;);
-}
-function startTime()
-{
-var today=new Date()
-var h=today.getHours()
-var m=today.getMinutes()
-var s=today.getSeconds()
-// add a zero in front of numbers&lt;10
-m=checkTime(m)
-s=checkTime(s)
-document.getElementById(&#39;txt&#39;).innerHTML=h+&quot;:&quot;+m+&quot;:&quot;+s
-t=setTimeout(&#39;startTime()&#39;,500)
-}
-
-function checkTime(i)
-{
-if (i&lt;10)
-  {i=&quot;0&quot; + i}
-  return i
-}
-</code></pre>
-<h2 id="PYTHON"><a href="#PYTHON" class="headerlink" title="PYTHON"></a>PYTHON</h2><pre><code class="PYTHON">from multiprocessing import Process, Lock
-
-def f(lock, n) :
-    lock.acquire()
-    print(&quot;hello world %d&quot; % n)
-    lock.release()
-
-if __name__ == &quot;__main__&quot; :
-    lock = Lock()
-    for num in range(10):
-        Process(target=f, args=(lock, num)).start()
-</code></pre>
-<h2 id="sql"><a href="#sql" class="headerlink" title="sql"></a>sql</h2><pre><code class="SQL">#说明：创建数据库
-CREATE DATABASE database-name;
-#说明：删除数据库
-drop database dbname;
-#说明：创建新表
-create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..);
-#查询
-select * from table1 where 范围;
-#插入
-insert into table1(field1,field2) values(value1,value2);
-#删除
-delete from table1 where 范围
-#更新
-update table1 set field1=value1 where 范围
-</code></pre>
-]]></content>
-      
-        <categories>
-            
-            <category> 工具 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> hexo </tag>
             
         </tags>
         
@@ -15678,6 +15589,8 @@ m-n位的数字 = &quot;^\d{m,n}$&quot;;
             
             <category> 工具 </category>
             
+            <category> 软件记录 </category>
+            
         </categories>
         
         
@@ -16048,6 +15961,8 @@ $ git archive
             
             <category> 工具 </category>
             
+            <category> git </category>
+            
         </categories>
         
         
@@ -16154,6 +16069,8 @@ $ git push
         <categories>
             
             <category> 工具 </category>
+            
+            <category> git </category>
             
         </categories>
         

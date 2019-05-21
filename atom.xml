@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yelog.org/"/>
-  <updated>2019-05-03T09:11:15.993Z</updated>
+  <updated>2019-05-17T14:13:22.706Z</updated>
   <id>http://yelog.org/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yelog.org/2019/05/02/to-live/"/>
     <id>http://yelog.org/2019/05/02/to-live/</id>
     <published>2019-05-02T09:46:16.000Z</published>
-    <updated>2019-05-03T09:11:15.993Z</updated>
+    <updated>2019-05-17T14:13:22.706Z</updated>
     
     <content type="html"><![CDATA[<p>有那么一个年代，离我们很近，它腥风血雨，连活着都是一件奢侈的事。</p><p>在富贵的一生中，每次出现看似被上天眷顾的福气后（如有庆长跑第一、凤霞嫁了人并怀了孩子），读者还在替富贵开心的时候，他们却以各种方式迅速死去，最终富贵亲手埋葬了他所有的亲人。</p><p>一本 12w 左右的小说，但是在没有华丽词藻的情况下，在顺畅流利的写作手法、跌宕起伏的剧情、第一人称的代入感下一口气读完了。期间多次痛哭流涕（一点儿没夸张），不得不放下书本，洗过脸后才能继续阅读。所以已经多年没写书评的我，还是忍不住为她写下书评。</p><blockquote><p>人是为了活着本身而活着，而不是为了活着之外的任何事物所活着。</p></blockquote><p>这是作者在中文序言中的一句话，在当今生活着的我，初读序言中的这句话，并无任何共鸣，甚至还行吐槽两句。随着富贵将他的”一生”娓娓道来，你就会明白在那样的时代背景下，活着已经是一件不容易的事。 所以作者在日文版序言中说到：</p><blockquote><p>在旁人眼中富贵的一生是苦熬的一生；可是对于富贵自己，我相信他更多地感受到了幸福。</p></blockquote><p>因为他相信自己的妻子是世上最好的妻子，他相信自己的子女也是世上最好的子女，还有他的女婿他的外孙，还有他的那头也叫富贵的牛，还有一起上火锅的朋友们，还有生活的点点滴滴……</p><p>富贵的真是一路跌下去的一生，从”富家少爷”赌光了家产、气死了爹爹。由于母亲生病，为母亲求医路上被国民党抓壮丁，被俘虏后，放回家中。却发现母亲已死，女儿也由于生病变成了聋哑人。本想着大难之后必有后福，却只是悲惨一生的开端。儿子有庆由于和县长夫人血型匹配，遭抽血而亡、女儿凤霞产子大出血而亡、妻子家珍失去儿女后，失去了最后与病魔争斗的信念，也走了、女婿二喜在工地被水泥板拍死、外孙苦根难得吃到豆子，却被豆子撑死。最后只剩下自己和一个也叫作富贵的老牛。</p><p>春生想自杀前，找到富贵告别，在被家珍原谅，并答应不会自杀，在这种情况下坚持了一个月，最终还是自杀了。那种时代背景下的无奈，那种窒息感。。。</p><p>富贵的一生跨越了地主、解放战争、人民公社运动、大炼钢铁、自然灾害和文化大革命，从一个人的视角看到每个时代下的一个小小的缩影，但却比任何其他的描述更让人深刻了解到这些时代背景下人们的生活状态。</p><p>在那时，活着不仅是幸运，也更需要勇气。</p><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1556806574463&amp;di=868e65579acfc800020db78de3c07ac4&amp;imgtype=0&amp;src=http%3A%2F%2Fs1.sinaimg.cn%2Flarge%2F001Pe7mxzy76VARpXvdc3" alt=""></p>]]></content>
     
@@ -37,6 +37,8 @@
     </summary>
     
       <category term="读书" scheme="http://yelog.org/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+      <category term="阅读笔记" scheme="http://yelog.org/categories/%E8%AF%BB%E4%B9%A6/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="reading" scheme="http://yelog.org/tags/reading/"/>
@@ -103,7 +105,7 @@ msg=&amp;quot;hello world&amp;quot;
     <link href="http://yelog.org/2017/12/13/Mac-BetterTouchTool/"/>
     <id>http://yelog.org/2017/12/13/Mac-BetterTouchTool/</id>
     <published>2017-12-13T09:04:25.000Z</published>
-    <updated>2018-11-29T03:23:34.903Z</updated>
+    <updated>2019-05-21T02:51:05.679Z</updated>
     
     <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><img src="http://img.xiangzhangshugongyi.com/Fm6s-GR0yVJgdndJwftdj9eXL7LB.png" alt="BetterTouchTool"><br>BetterTouchTool 是一款专为Mac用户开发的 窗口管理/<code>Trackpad</code>(触控板)/<code>Magic Mouse</code>(苹果鼠标)/<code>Keyboard</code>(键盘)/<code>TouchBar</code> 功能增强制作的软件。</p><p>这款软件不但可以设置全局的 手势/快捷键/TouchBar ，还可以给不同的应用定义不同的姿势，再配合上 Alfred 的 workflow，简直各种高难度姿势都能玩的出来。</p><p>本文主要介绍以下功能：</p><ol><li>窗口管理</li><li>帮 Trackpad 定义各种姿势</li><li>帮 Magic Mouse 定义各种姿势</li><li>帮 Keyboard 定义各种姿势</li><li>帮任何应用自定义 TouchBar</li></ol><p><em>本文以 macbook pro 2017 touchbar 版为例</em></p><h2 id="1-窗口管理"><a href="#1-窗口管理" class="headerlink" title="1. 窗口管理"></a>1. 窗口管理</h2><p>这个功能无需过多配置，默认配置即可很好使用（和windows的理念相似）</p><ul><li>将窗口移到左右边缘，最大化至半屏</li><li>将窗口移到上边缘，最大化至全屏</li></ul><p><img src="http://img.xiangzhangshugongyi.com/lhfTY9ysdWOzOOKprnh0X6MTfoT8.gif" alt="窗口管理"><br>如果对默认配置不满意，也可以在如下图所示的位置来调整窗口展示：<br><img src="http://img.xiangzhangshugongyi.com/FkluTBqX_n2UXj2ICsOE1tW1yFan.png" alt="窗口管理配置"></p><h2 id="2-帮-Trackpad-定义各种姿势"><a href="#2-帮-Trackpad-定义各种姿势" class="headerlink" title="2. 帮 Trackpad 定义各种姿势"></a>2. 帮 Trackpad 定义各种姿势</h2><h3 id="姿势选择"><a href="#姿势选择" class="headerlink" title="姿势选择"></a>姿势选择</h3><p>在界面选择 Trackpad（触摸板） -&gt; Add New Gesture（添加一个新姿势）</p><p>左边可以选择生效的范围：全局或者某个应用</p><p><img src="http://img.xiangzhangshugongyi.com/FsPEIn9TlNOwHkWHgyD32snaT7bY.jpg" alt="选择触摸板姿势"><br>如上图所示，姿势包括但不限于如：</p><ol><li>单指：左下角单击、单指轻拍右上角、单指轻拍上边中点</li><li>双指：两个手指捏、张开两指以两指中心为圆轴逆时针、中指拍住中央食指轻拍面板、双指从上边缘下滑</li><li>三指：三指轻拍、三指拍顶端、三指点击并向上滑、两指轻拍住，拍左、右二指固定拍住，左一下滑</li><li>四指：四指双轻拍、中指无名小拍住，食单击、食中指无名拍住，小单击</li><li>五指：五手指轻拍、五手指上滑</li></ol><p>上面只是列一些典型，更多姿势可以在上图中浏览。</p><h3 id="绑定功能"><a href="#绑定功能" class="headerlink" title="绑定功能"></a>绑定功能</h3><p><img src="http://img.xiangzhangshugongyi.com/FjNWJgoefc34vGaUhruvWQr2R--5.png" alt="定义姿势功能"></p><p>选择过姿势之后，也可以选择在按住某个功能键的时候才能使用（左下角）。</p><p>右边是绑定功能：快捷键或动作。</p><ul><li><p>绑定快捷键举例：<br>比如 给chrome 设置 姿势（两指从触控板下边缘滑入），弹出开发者模式（快捷键绑定：command+option+i），如下图：<br><img src="http://img.xiangzhangshugongyi.com/Fnuaa2qtpdf28autM22l3RPRtCau.jpg" alt="给chrome设置姿势，弹出开发者模式"></p></li><li><p>绑定动作举例：<br>设置 在任何应用内，五指下滑 锁屏，如下图<br><img src="http://img.xiangzhangshugongyi.com/FuTHBQJRvDVem9c14G608eXKtR7R.png" alt="五指下滑锁屏"></p></li></ul><h2 id="3-帮-Magic-Mouse-定义各种姿势"><a href="#3-帮-Magic-Mouse-定义各种姿势" class="headerlink" title="3. 帮 Magic Mouse 定义各种姿势"></a>3. 帮 Magic Mouse 定义各种姿势</h2><p>这个功能设置和 Trackpad 设置 大同小异，所以这边就不多讲，直接图示几个功能。<br><img src="http://img.xiangzhangshugongyi.com/FgwGsolKj59jVnOkgI5vb4zdxNwm.png" alt="两指上滑呼出Mission Control"></p><p>我快捷键设置了 option+E 鼠标取词翻译（欧陆词典），然后绑定到双指轻拍鼠标，即可触发翻译。<br><img src="http://img.xiangzhangshugongyi.com/FsuJ3xU8k5ANQkuXdgpy0Xxkhdme.png" alt="双指轻拍-取词翻译"></p><h2 id="4-帮-Keyboard-定义各种姿势"><a href="#4-帮-Keyboard-定义各种姿势" class="headerlink" title="4. 帮 Keyboard 定义各种姿势"></a>4. 帮 Keyboard 定义各种姿势</h2><p>这个功能比较简单，设置一些 键盘快捷键或录制案件序列 来触发 一些动作或者其他快捷键功能。</p><h2 id="5-帮任何应用自定义-TouchBar"><a href="#5-帮任何应用自定义-TouchBar" class="headerlink" title="5. 帮任何应用自定义 TouchBar"></a>5. 帮任何应用自定义 TouchBar</h2><p>这个重磅功能，可以帮助不支持touchbar的软件定制 TouchBar，是不是有点厉害。</p><p>下面就以我给 IntelliJ IDEA 定制 TouchBar 为例 (没有F1 ~ F12 功能键，debug真的很痛苦，这个软件真的是雪中送炭)，展示一下使用效果</p><p><img src="http://img.xiangzhangshugongyi.com/Fl0oSr-rNLr3f23_E_ZTlMEo46l1.png" alt="定制 TouchBar"></p><p>如上图所示，我给 IntelliJ IDEA 添加了 四个功能 step over/step into/resume/evaluate</p><p>添加完之后，切到 IntelliJ IDEA 软件中时，TouchBar 就显示我们添加的四个功能键， 如下图所示<br><img src="http://img.xiangzhangshugongyi.com/Fi4MOmPsZDPj0Z2UEUxOqCbeIV1o.png" alt="IntelliJ IDEA 定制 TouchBar"></p><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>BTT还有其他很方便的功能，这盘就介绍到这里，等之后更新了 Alfred 的 workflow 开发指南之后，再一起更新一篇有意思的 BTT+Alfred 效率流。</p>]]></content>
     
@@ -117,6 +119,8 @@ msg=&amp;quot;hello world&amp;quot;
     </summary>
     
       <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="软件记录" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/%E8%BD%AF%E4%BB%B6%E8%AE%B0%E5%BD%95/"/>
     
     
       <category term="mac" scheme="http://yelog.org/tags/mac/"/>
@@ -293,7 +297,7 @@ msg=&amp;quot;hello world&amp;quot;
     <link href="http://yelog.org/2017/09/21/hexo-fragment_cache/"/>
     <id>http://yelog.org/2017/09/21/hexo-fragment_cache/</id>
     <published>2017-09-21T11:34:37.000Z</published>
-    <updated>2017-11-06T02:20:12.000Z</updated>
+    <updated>2019-05-21T02:48:31.579Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前文"><a href="#前文" class="headerlink" title="前文"></a>前文</h2><p>从开发 <code>3-hexo</code> 主题到现在已过去 9 个月时间了，累计在博客中写 132 篇文章了。</p><p>现在发现了严重的问题，<code>hexo generate</code> 渲染的速度越来越慢，现在132篇左右，每次渲染时间到达了 50+ s，相当不爽。</p><p>今日抽时间，查看了官方api，看到了 <code>fragment_cache</code> 局部缓存这个东西，解决了渲染速度的问题。</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p>局部缓存。它储存局部内容，下次使用时就能直接使用缓存。</p><pre><code class="javascript">&lt;%- fragment_cache(id, fn); %&gt;</code></pre><h3 id="替换简单文本区域"><a href="#替换简单文本区域" class="headerlink" title="替换简单文本区域"></a>替换简单文本区域</h3><p>a. 我们可以将所有页面都一样的区域，如下所示，缓存下来。当下一篇文章在渲染到这个位置时，将不再渲染，直接拿缓存数据。</p><pre><code class="js">&lt;%- fragment_cache(&#39;header&#39;, function(){    return partial(&#39;&lt;head&gt;&lt;/head&gt;&#39;);}) %&gt;</code></pre><p>b. 文章模块也可以使用，原来公共引用部分（没有和当前文章耦合的内容）使用下面的方式：</p><pre><code class="js">&lt;%- partial(&#39;_partial/header&#39;); %&gt;</code></pre><p>改进为以下代码：</p><pre><code class="js">&lt;%- fragment_cache(&#39;header&#39;, function(){    return partial(&#39;_partial/header&#39;);}) %&gt;</code></pre><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>这个语法只适用于所有页面都相同，不随文章内容变化的部分。</p><p>作者在 <code>3-hexo</code> 中加入了此语法，渲染132篇文章的速度已从 50+s 到现在 3s 左右了。</p>]]></content>
     
@@ -308,6 +312,8 @@ msg=&amp;quot;hello world&amp;quot;
     </summary>
     
       <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="hexo" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/hexo/"/>
     
     
       <category term="hexo" scheme="http://yelog.org/tags/hexo/"/>
@@ -508,7 +514,7 @@ msg=&amp;quot;hello world&amp;quot;
     <link href="http://yelog.org/2017/07/05/MathJax-pjax/"/>
     <id>http://yelog.org/2017/07/05/MathJax-pjax/</id>
     <published>2017-07-05T11:24:10.000Z</published>
-    <updated>2017-11-06T02:20:12.000Z</updated>
+    <updated>2019-05-21T02:48:52.594Z</updated>
     
     <content type="html"><![CDATA[<p>hexo 添加 MathJax 的过程网上很多，这里就不细讲，这里贴一张写的不错的文章 <a href="http://masikkk.com/article/hexo-13-MathJax/" target="_blank" rel="noopener">Hexo博客(13)添加MathJax数学公式渲染</a></p><p>由于 <code>3-hexo</code> 这个主题使用了 <code>pjax</code> ，刷新和第一次加载没有问题，但是点到其他文章，再点回来，渲染就无效了。</p><p>这个问题和之前适配多说和高亮时，是同样的问题，只需要在下面配置即可。</p><pre><code class="js">$(document).on({    /*pjax请求回来页面后触发的事件*/    &#39;pjax:end&#39;: function () {        /*渲染MathJax数学公式*/        $.getScript(&#39;//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML&#39;,function () {            MathJax.Hub.Typeset();        });    }});</code></pre><p>这样就解决了pjax的适配问题。</p>]]></content>
     
@@ -523,6 +529,8 @@ msg=&amp;quot;hello world&amp;quot;
     
       <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
     
+      <category term="hexo" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/hexo/"/>
+    
     
       <category term="mathjax" scheme="http://yelog.org/tags/mathjax/"/>
     
@@ -535,7 +543,7 @@ msg=&amp;quot;hello world&amp;quot;
     <link href="http://yelog.org/2017/07/05/3-hexo-mathjax/"/>
     <id>http://yelog.org/2017/07/05/3-hexo-mathjax/</id>
     <published>2017-07-05T07:09:42.000Z</published>
-    <updated>2019-01-07T06:43:02.590Z</updated>
+    <updated>2019-05-21T02:48:05.535Z</updated>
     
     <content type="html"><![CDATA[<p><hr><br>在用 markdown 写文档时，免不了碰到数学公式。</p><h2 id="处理hexo的MarkDown渲染器与MathJax的冲突"><a href="#处理hexo的MarkDown渲染器与MathJax的冲突" class="headerlink" title="处理hexo的MarkDown渲染器与MathJax的冲突"></a>处理hexo的MarkDown渲染器与MathJax的冲突</h2><p>由于hexo的MarkDown渲染器与MathJax有冲突，所以在使用之前需要修改两个地方。</p><p>编辑 <code>node_modules\marked\lib\marked.js</code> 脚本</p><ol><li>将451行 ，这一步取消了对 <code>\\,\{,\}</code> 的转义(escape)<pre><code class="js">escape: /^\\([\\`*{}\[\]()# +\-.!_&gt;])/,改为escape: /^\\([`*\[\]()# +\-.!_&gt;])/,</code></pre></li><li>将459行，这一步取消了对斜体标记 <code>_</code> 的转义<pre><code class="js">em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,改为em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</code></pre></li></ol><h2 id="开启MathJax"><a href="#开启MathJax" class="headerlink" title="开启MathJax"></a>开启MathJax</h2><p>修改 <code>3-hexo/_config.yml</code></p><pre><code class="xml"># MathJax 数学公式支持mathjax:  on: true #是否启用  per_page: false # 若只渲染单个页面，此选项设为false，页面内加入 mathjax: true</code></pre><p>考虑到页面的加载速度，支持渲染单个页面。</p><p>设置 <code>per_page: false</code> ,在需要渲染的页面内 加入 <code>mathjax: true</code></p><p>这样，就可以在页面内写MathJax公式了。</p><h2 id="MathJax公式书写"><a href="#MathJax公式书写" class="headerlink" title="MathJax公式书写"></a>MathJax公式书写</h2><p>公式书写依然按照MarkDown语法来，基本上也和LaTeX相同，单 <code>$</code> 符引住的是行内公式，双$符引住的是行间公式。</p><ul><li>MathJax公式书写参考<br><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a></li></ul><h3 id="1-MathJax行内公式"><a href="#1-MathJax行内公式" class="headerlink" title="1.MathJax行内公式"></a>1.MathJax行内公式</h3><p>含有下划线 <code>_</code> 的公式 <code>$x_mu$</code> ： $x_mu$</p><p>希腊字符 <code>$\sigma$</code> ： $\sigma$</p><p>双 <code>\\</code> 公式内换行</p><pre><code class="js">$$f(n) =\begin{cases}n/2,  &amp; \text{if $n$ is even} \\3n+1, &amp; \text{if $n$ is odd}\end{cases}$$</code></pre><p>$$<br>f(n) =<br>\begin{cases}<br>n/2,  &amp; \text{if $n$ is even} \\<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p><p>行内公式 <code>$y=ax+b$</code>：$y=ax+b$</p><p>行内公式 <code>$\cos 2\theta = \cos^2 \theta - \sin^2 \theta = 2 \cos^2 \theta$</code>：$\cos 2\theta = \cos^2 \theta - \sin^2 \theta = 2 \cos^2 \theta$</p><p>行内公式 <code>$M(\beta^{\ast}(D),D) \subseteq C$</code> ： $M(\beta^{\ast}(D),D) \subseteq C$</p><h3 id="2-MathJax行间公式"><a href="#2-MathJax行间公式" class="headerlink" title="2.MathJax行间公式"></a>2.MathJax行间公式</h3><p>行间公式<code>$$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$</code>：<br>$$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$</p><p>行间公式<code>$$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</code>：<br>$$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</p><h3 id="3-MathJax公式自动编号"><a href="#3-MathJax公式自动编号" class="headerlink" title="3.MathJax公式自动编号"></a>3.MathJax公式自动编号</h3><p>书写时使用</p><pre><code>$$\begin{equation}\end{equation}$$</code></pre><p>进行公式自动编号，同时会自动连续编号，例如：</p><pre><code class="xml">$$\begin{equation}\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 )\end{equation}$$$$\begin{equation}\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i))\end{equation}$$</code></pre><p>$$<br>\begin{equation}<br>\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 )<br>\end{equation}<br>$$<br>$$<br>\begin{equation}<br>\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i))<br>\end{equation}<br>$$</p><h2 id="MathJax公式手动编号"><a href="#MathJax公式手动编号" class="headerlink" title="MathJax公式手动编号"></a>MathJax公式手动编号</h2><p>可以在公式书写时使用 <code>\tag{手动编号}</code> 添加手动编号，例如：</p><pre><code>$$\begin{equation}\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 ) \tag{1.2.3}\end{equation}$$</code></pre><p>$$<br>\begin{equation}<br>\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 ) \tag{1.2.3}<br>\end{equation}<br>$$</p><p>不加 <code>\begin{equation} \end{equation}</code> 也可以，例如：</p><pre><code>$$\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i)) \tag{我的公式3}$$</code></pre><p>$$<br>\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i)) \tag{我的公式3}<br>$$</p><p>行内公式加\tag{}后会自动成为行间公式，例如： <code>$z = (p_0, ..... , p_n) \tag{公式21} $</code><br>$z = (p_0, ….. , p_n) \tag{公式21} $</p><h3 id="4-其他公式书写技巧"><a href="#4-其他公式书写技巧" class="headerlink" title="4.其他公式书写技巧"></a>4.其他公式书写技巧</h3><p><strong>如何将下标放到正下方？</strong><br>① 如果是数学符号，那么直接用 <code>\limits</code> 命令放在正下方，如Max函数下面的取值范围，需要放在Max的正下方。可以如下实现：<br><code>$ \max \limits_{a&lt;x&lt;b}\{f(x)\} $</code><br>$ \max \limits_{a&lt;x&lt;b}\{f(x)\} $</p><p>② 若是普通符号，那么要用 <code>\mathop</code> 先转成数学符号再用 <code>\limits</code>，如<br><code>$ \mathop{a}\limits_{i=1} $</code><br>$ \mathop{a}\limits_{i=1} $</p><p><strong>MathJax矩阵输入</strong><br>无括号矩阵：</p><pre><code>$$\begin{matrix}1 &amp; x &amp; x^2 \\1 &amp; y &amp; y^2 \\1 &amp; z &amp; z^2 \\\end{matrix}$$</code></pre><p>$$<br>\begin{matrix}<br>1 &amp; x &amp; x^2 \\<br>1 &amp; y &amp; y^2 \\<br>1 &amp; z &amp; z^2 \\<br>\end{matrix}<br>$$</p><p>有括号有竖线矩阵：</p><pre><code>$$\left[    \begin{array}{cc|c}      1&amp;2&amp;3\\      4&amp;5&amp;6    \end{array}\right]$$</code></pre><p>$$<br>\left[<br>    \begin{array}{cc|c}<br>      1&amp;2&amp;3\\<br>      4&amp;5&amp;6<br>    \end{array}<br>\right]<br>$$</p><p>行内小矩阵：<br><code>$\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)$</code><br>$\bigl( \begin{smallmatrix} a &amp; b \ c &amp; d \end{smallmatrix} \bigr)$</p><p>这里有个问题，上面的写法在矩阵内没有换行，我看了下源码，双反斜杠\\又被MarkDown渲染引擎转义为单个反斜杠了，解决方法是写三个反斜杠\\\或在双反斜杠后换行即可：</p><p><code>$\bigl( \begin{smallmatrix} a &amp; b \\\ c &amp; d \end{smallmatrix} \bigr)$</code><br>$\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)$</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://masikkk.com/article/hexo-13-MathJax/" target="_blank" rel="noopener">Hexo博客(13)添加MathJax数学公式渲染</a><br><a href="http://www.jianshu.com/p/7ab21c7f0674" target="_blank" rel="noopener">在Hexo中渲染MathJax数学公式</a><br><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax basic tutorial and quick reference</a></p>]]></content>
     
@@ -550,6 +558,8 @@ msg=&amp;quot;hello world&amp;quot;
     </summary>
     
       <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="hexo" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/hexo/"/>
     
     
       <category term="mathjax" scheme="http://yelog.org/tags/mathjax/"/>

@@ -704,22 +704,53 @@ div.ac > ul > li:before,
   list-style: none;
   overflow-y: auto;
 }
+.nav-left ul.sub {
+  transition: height 0.3s, border-top 0.3s;
+  border-left: solid 2px #f00;
+}
+.nav-left ul.sub.hide {
+  height: 0 !important;
+  border-top: hidden;
+}
+.nav-left ul.sub li {
+  line-height: 25px;
+  font-size: 14px;
+}
+.nav-left ul.sub li:last-child {
+  border-bottom: hidden;
+}
+.nav-left ul.sub li>div {
+  height: 25px;
+}
 .nav-left ul li {
-  color: rgba(255,255,255,0.7);
   line-height: 40px;
   text-align: center;
   border-bottom: 1px solid #fff;
   cursor: pointer;
-  transition: color 0.15s linear, box-shadow 0.3s cubic-bezier(0.77, 0, 0.175, 1);
 }
-.nav-left ul li:hover {
+.nav-left ul li>div {
+  height: 40px;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.15s linear, box-shadow 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative;
+}
+.nav-left ul li>div:hover {
   color: #f7f7f7;
   box-shadow: inset 6px 0 0 #fff;
 }
-.nav-left ul li.active {
+.nav-left ul li>div.active {
   color: #020202;
   box-shadow: inset 165px 0 0 #fff;
   position: relative;
+}
+.nav-left ul li>div>.fold {
+  left: 4px;
+  font-size: 0.7em;
+  position: absolute;
+  transition: transform 0.3s;
+}
+.nav-left ul li>div>.fold.unfold {
+  transform: rotate(90deg);
 }
 .nav-left .left-bottom {
   position: absolute;
