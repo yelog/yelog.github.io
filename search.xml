@@ -1289,9 +1289,9 @@ function sendXHR () {
         
         <tags>
             
-            <tag> js </tag>
-            
             <tag> 浏览器 </tag>
+            
+            <tag> js </tag>
             
         </tags>
         
@@ -4163,9 +4163,9 @@ MimeType=text/plain;
         
         <tags>
             
-            <tag> 运维 </tag>
-            
             <tag> deepin </tag>
+            
+            <tag> 运维 </tag>
             
         </tags>
         
