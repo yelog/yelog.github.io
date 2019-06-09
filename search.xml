@@ -4747,7 +4747,11 @@ limit: 20
     <entry>
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
-      <content type="html"><![CDATA[<h2 id="2019年5月"><a href="#2019年5月" class="headerlink" title="2019年5月"></a>2019年5月</h2><h3 id="05-21"><a href="#05-21" class="headerlink" title="05-21"></a>05-21</h3><ol>
+      <content type="html"><![CDATA[<h2 id="2019年6月"><a href="#2019年6月" class="headerlink" title="2019年6月"></a>2019年6月</h2><h3 id="06-09"><a href="#06-09" class="headerlink" title="06-09"></a>06-09</h3><ol>
+<li><code>fix</code> 修复了标签按钮在某些分辨率下错位问题。</li>
+<li><code>fix</code> 修复了代码行数超百行时，行号溢出的问题</li>
+</ol>
+<h2 id="2019年5月"><a href="#2019年5月" class="headerlink" title="2019年5月"></a>2019年5月</h2><h3 id="05-21"><a href="#05-21" class="headerlink" title="05-21"></a>05-21</h3><ol>
 <li><p><code>add</code> 文章分类可以显示文章数 <code>category&gt;num</code></p>
 </li>
 <li><p><code>add</code> 文章分类支持多级显示 <code>category&gt;sub</code></p>
