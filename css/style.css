@@ -852,7 +852,7 @@ div.ac > ul > li:before,
   width: 14px;
   height: 14px;
   position: absolute;
-  top: 8px;
+  top: 10px;
   -webkit-transform: translateY(-50%);
   border-radius: 100%;
   background-color: #91c0f1;
@@ -877,7 +877,7 @@ div.ac > ul > li:before,
   width: 14px;
   height: 14px;
   position: absolute;
-  top: 8px;
+  top: 10px;
   -webkit-transform: translateY(-50%);
   border-radius: 100%;
   background-color: #91c0f1;
