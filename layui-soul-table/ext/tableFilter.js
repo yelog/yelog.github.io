@@ -79,6 +79,7 @@ layui.define(['table', 'form', 'laydate', 'util', 'excel'], function (exports) {
         render: function (myTable) {
             var _this = this,
                 $table = $(myTable.elem),
+                $tableMain = $table.next().children('.layui-table-box').children('.layui-table-main'),
                 $tableHead = $table.next().children('.layui-table-box').children('.layui-table-header').children('table'),
                 $fixedLeftTableHead = $table.next().children('.layui-table-box').children('.layui-table-fixed-l').children('.layui-table-header').children('table'),
                 $fixedRigthTableHead = $table.next().children('.layui-table-box').children('.layui-table-fixed-r').children('.layui-table-header').children('table'),
@@ -124,7 +125,8 @@ layui.define(['table', 'form', 'laydate', 'util', 'excel'], function (exports) {
                 var changeHeight = $table.next().children('.layui-table-box').children('.layui-table-body').outerHeight() - $table.next().children('.soul-bottom-contion').outerHeight();
                 if (myTable.page && $table.next().children('.layui-table-page').hasClass('layui-hide')) {changeHeight += $table.next().children('.layui-table-page').outerHeight()}
                 $table.next().children('.layui-table-box').children('.layui-table-body').css('height', changeHeight)
-                $table.next().children('.layui-table-box').children('.layui-table-fixed').children('.layui-table-body').css('height', changeHeight-getScrollWidth())
+                var fixHeight = changeHeight-_this.getScrollWidth($tableMain[0]), layMainTableHeight = $tableMain.children('table').height()
+                $table.next().children('.layui-table-box').children('.layui-table-fixed').children('.layui-table-body').css('height',layMainTableHeight >= fixHeight ? fixHeight : 'auto')
                 $table.next().children('.soul-bottom-contion').children('.condition-items').css('width', ($table.next().children('.soul-bottom-contion').width() - $table.next().children('.soul-bottom-contion').children('.editCondtion').width()) + 'px');
                 $table.next().children('.soul-bottom-contion').children('.editCondtion').children('a').on('click', function () {
                     _this.showConditionBoard(myTable);
@@ -132,24 +134,11 @@ layui.define(['table', 'form', 'laydate', 'util', 'excel'], function (exports) {
             }
 
             /**
-             * 获取滚动条宽度
-             * @returns {number}
-             */
-            function getScrollWidth() {
-                var noScroll, scroll, oDiv = document.createElement("DIV");
-                oDiv.style.cssText = "position:absolute; top:-1000px; width:100px; height:100px; overflow:hidden;";
-                noScroll = document.body.appendChild(oDiv).clientWidth;
-                oDiv.style.overflowY = "scroll";
-                scroll = oDiv.clientWidth;
-                document.body.removeChild(oDiv);
-                return noScroll-scroll;
-            }
-
-            /**
              * 不重载表头数据，重新绑定事件后结束
              */
             if (!initFilter || isFilterReload[myTable.id] || myTable.isSoulFrontFilter) {
                 isFilterReload[myTable.id] = false
+                myTable['isSoulFrontFilter'] = false
                 this.bindFilterClick(myTable);
                 return;
             } else {
@@ -773,7 +762,7 @@ layui.define(['table', 'form', 'laydate', 'util', 'excel'], function (exports) {
                                 var uls = [];
                                 for (var key in result) {
                                     var list = result[key];
-                                    if (!(list.length == 1 && list[0] == '')) {
+                                    if (!((list.length === 1 && list[0] === '') || list.length === 0)) {
                                         var ul = [];
                                         ul.push("<ul class='" + key + "DropList' data-value='" + key + "'>");
 
@@ -1386,6 +1375,7 @@ layui.define(['table', 'form', 'laydate', 'util', 'excel'], function (exports) {
         , bindFilterClick: function (myTable) {
             var _this = this,
                 $table = $(myTable.elem),
+                $tableMain = $table.next().children('.layui-table-box').children('.layui-table-main'),
                 $tableHead = $table.next().children('.layui-table-box').children('.layui-table-header').children('table'),
                 $fixedLeftTableHead = $table.next().children('.layui-table-box').children('.layui-table-fixed-l').children('.layui-table-header').children('table'),
                 $fixedRigthTableHead = $table.next().children('.layui-table-box').children('.layui-table-fixed-r').children('.layui-table-header').children('table'),
@@ -1522,6 +1512,8 @@ layui.define(['table', 'form', 'laydate', 'util', 'excel'], function (exports) {
                         bodyHeight = bodyHeight - $table.next().children('.layui-table-box').children('.layui-table-header').outerHeight();
 
                         $table.next().children('.layui-table-box').children('.layui-table-body').height(bodyHeight)
+                        var fixHeight = bodyHeight - _this.getScrollWidth($tableMain[0]), layMainTableHeight = $tableMain.children('table').height()
+                        $table.next().children('.layui-table-box').children('.layui-table-fixed').children('.layui-table-body').height(layMainTableHeight >= fixHeight ? fixHeight : 'auto')
                     }, 300)
                 }
             })
@@ -2632,7 +2624,24 @@ layui.define(['table', 'form', 'laydate', 'util', 'excel'], function (exports) {
                 return value;
             });
         }
+        /* layui table 中原生的方法 */
+        ,getScrollWidth(elem) {
+            var width = 0;
+            if (elem) {
+                width = elem.offsetWidth - elem.clientWidth;
+            } else {
+                elem = document.createElement('div');
+                elem.style.width = '100px';
+                elem.style.height = '100px';
+                elem.style.overflowY = 'scroll';
 
+                document.body.appendChild(elem);
+                width = elem.offsetWidth - elem.clientWidth;
+                document.body.removeChild(elem);
+            }
+            return width;
+        }
+        ,cache: cache
     };
 
     // 输出
