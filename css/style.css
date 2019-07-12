@@ -455,6 +455,15 @@ div.ac > ul > li:before,
 .icon-reddit:before {
   content: "\e60c";
 }
+.icon-qq:before {
+  content: "\e626";
+}
+.icon-kugou:before {
+  content: "\e6ce";
+}
+.neteasemusic:before {
+  content: "\e607";
+}
 .iconfont-svg {
   width: 1em;
   height: 1em;
@@ -695,6 +704,15 @@ div.ac > ul > li:before,
 }
 .nav-left .icon a.reddit:before {
   content: "\eac6";
+}
+.nav-left .icon a.qq:before {
+  content: "\e626";
+}
+.nav-left .icon a.neteasemusic:before {
+  content: "\e607";
+}
+.nav-left .icon a.kugou:before {
+  content: "\e6ce";
 }
 .nav-left ul {
   margin: 0;
@@ -1606,9 +1624,16 @@ div.ac > ul > li:before,
   background-color: #83b3c1;
   border-radius: 8px;
   font-weight: 700;
-  line-height: 7px;
+  line-height: 22px;
   color: #444;
   font-size: 16px;
+}
+.post .article_copyright .copy-title {
+  color: #000;
+  margin-right: 10px;
+}
+.post .article_copyright>p {
+  margin: 0;
 }
 .post .article_copyright a {
   color: #595f67;
@@ -1981,7 +2006,7 @@ img.pswp__img {
     font-size: 1.6em;
   }
   .post .article_copyright {
-    font-size: 8px;
+    font-size: 14px;
   }
   .full-toc .full {
     top: 0px;
