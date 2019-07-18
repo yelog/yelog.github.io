@@ -935,9 +935,9 @@ xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用
         
         <tags>
             
-            <tag> vim </tag>
-            
             <tag> keybord </tag>
+            
+            <tag> vim </tag>
             
             <tag> emacs </tag>
             
@@ -1322,9 +1322,9 @@ function sendXHR () {
         
         <tags>
             
-            <tag> js </tag>
-            
             <tag> 浏览器 </tag>
+            
+            <tag> js </tag>
             
         </tags>
         
@@ -4196,9 +4196,9 @@ MimeType=text/plain;
         
         <tags>
             
-            <tag> 运维 </tag>
-            
             <tag> deepin </tag>
+            
+            <tag> 运维 </tag>
             
         </tags>
         
