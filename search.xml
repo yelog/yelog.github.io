@@ -4363,7 +4363,7 @@ about:  # &#39;关于&#39; 按钮
 </code></pre>
 </li>
 </ol>
-<h2 id="配置评论系统"><a href="#配置评论系统" class="headerlink" title="配置评论系统"></a>配置评论系统</h2><p>目前添加了三种评论系统 <strong>disqus、多说、网易云跟帖</strong></p>
+<h2 id="配置评论系统"><a href="#配置评论系统" class="headerlink" title="配置评论系统"></a>配置评论系统</h2><p>目前添加了三种评论系统 <strong>disqus、多说、网易云跟帖、gitment、gitalk</strong></p>
 <blockquote>
 <p><code>日志：</code> 2017-03-21：多说将于2017-06-01正式关停服务</p>
 </blockquote>
@@ -4747,7 +4747,17 @@ limit: 20
     <entry>
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
-      <content type="html"><![CDATA[<h2 id="2019年6月"><a href="#2019年6月" class="headerlink" title="2019年6月"></a>2019年6月</h2><h3 id="06-09"><a href="#06-09" class="headerlink" title="06-09"></a>06-09</h3><ol>
+      <content type="html"><![CDATA[<h2 id="2019年7月"><a href="#2019年7月" class="headerlink" title="2019年7月"></a>2019年7月</h2><h3 id="07-22"><a href="#07-22" class="headerlink" title="07-22"></a>07-22</h3><ol>
+<li><code>add</code> 新增修改文章列表颜色的参数</li>
+</ol>
+<h3 id="07-15"><a href="#07-15" class="headerlink" title="07-15"></a>07-15</h3><ol>
+<li><code>fix</code> 修复 <strong>gitalk</strong> 由于作者停止了跨域的服务，借用其他人的跨域服务解决问题</li>
+</ol>
+<h3 id="07-12"><a href="#07-12" class="headerlink" title="07-12"></a>07-12</h3><ol>
+<li><code>add</code> 新增图标：<strong>qq、酷狗、网易云音乐</strong></li>
+<li><code>fix</code> 修复文末声明跨行的问题</li>
+</ol>
+<h2 id="2019年6月"><a href="#2019年6月" class="headerlink" title="2019年6月"></a>2019年6月</h2><h3 id="06-09"><a href="#06-09" class="headerlink" title="06-09"></a>06-09</h3><ol>
 <li><code>fix</code> 修复了标签按钮在某些分辨率下错位问题。</li>
 <li><code>fix</code> 修复了代码行数超百行时，行号溢出的问题</li>
 </ol>
