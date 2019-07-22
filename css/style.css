@@ -813,7 +813,7 @@ div.ac > ul > li:before,
   user-select: none;
 }
 .nav-right .title-list {
-  margin-left: 0px;
+  margin-left: 0;
   transition: margin-left 0.5s;
 }
 .nav-right .title-list.friend {
@@ -823,7 +823,7 @@ div.ac > ul > li:before,
   height: 65px;
   border-bottom: 1px solid #e5e8ec;
   position: absolute;
-  top: 0px;
+  top: 0;
   width: 100%;
 }
 .nav-right .title-list form .cross {
@@ -841,8 +841,8 @@ div.ac > ul > li:before,
 .nav-right .title-list form .search {
   width: 250px;
   margin-top: 12px;
-  padding: 20px 0px 0px 20px;
-  color: #2eb695;
+  padding: 20px 0 0 20px;
+  color: #383636;
   font-size: 18px;
   font-family: inherit;
   background: inherit;
@@ -890,7 +890,7 @@ div.ac > ul > li:before,
   outline: 0;
 }
 .nav-right .title-list form span #tagsWitchIcon:after {
-  left: 0px;
+  left: 0;
   content: '';
   width: 14px;
   height: 14px;
@@ -1091,7 +1091,7 @@ div.ac > ul > li:before,
 .nav-right .title-list nav a .post-date,
 .nav-right .title-list #local-search-result a .post-date {
   font-size: 15px;
-  margin: 8px 0px;
+  margin: 8px 0;
   padding-right: 3px;
   color: #9aa4af;
   float: right;
@@ -1103,7 +1103,7 @@ div.ac > ul > li:before,
   position: absolute;
 }
 .nav-right .friends-area.friend {
-  margin-left: 0px;
+  margin-left: 0;
 }
 .nav-right .friends-area .friends-title {
   height: 66px;
