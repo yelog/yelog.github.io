@@ -179,7 +179,10 @@
   .nav-right .title-list nav a .post-title {
     width: calc(100vw - 32px);
   }
-  .nav-right .friends-content ul {
+  .nav-right .friends-area .friends-content {
+    height: calc(100vh - 232px);
+  }
+  .nav-right .friends-area .friends-content ul {
     margin-left: 30px;
   }
   .nav-right nav a .post-title {
