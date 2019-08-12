@@ -4747,7 +4747,13 @@ limit: 20
     <entry>
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
-      <content type="html"><![CDATA[<h2 id="2019年7月"><a href="#2019年7月" class="headerlink" title="2019年7月"></a>2019年7月</h2><h3 id="07-22"><a href="#07-22" class="headerlink" title="07-22"></a>07-22</h3><ol>
+      <content type="html"><![CDATA[<h2 id="2019年8月"><a href="#2019年8月" class="headerlink" title="2019年8月"></a>2019年8月</h2><h3 id="08-13"><a href="#08-13" class="headerlink" title="08-13"></a>08-13</h3><ol>
+<li><code>add</code> 添加自定义左侧分类栏宽度 <code>category.width</code>，详情见 <code>_config.yml</code></li>
+</ol>
+<h3 id="08-01"><a href="#08-01" class="headerlink" title="08-01"></a>08-01</h3><ol>
+<li><code>fix</code> 修复 友链 区域超出不滚动的问题</li>
+</ol>
+<h2 id="2019年7月"><a href="#2019年7月" class="headerlink" title="2019年7月"></a>2019年7月</h2><h3 id="07-22"><a href="#07-22" class="headerlink" title="07-22"></a>07-22</h3><ol>
 <li><code>add</code> 新增修改文章列表颜色的参数</li>
 </ol>
 <h3 id="07-15"><a href="#07-15" class="headerlink" title="07-15"></a>07-15</h3><ol>
