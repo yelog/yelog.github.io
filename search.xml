@@ -4747,7 +4747,8 @@ limit: 20
     <entry>
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
-      <content type="html"><![CDATA[<h2 id="2019年8月"><a href="#2019年8月" class="headerlink" title="2019年8月"></a>2019年8月</h2><h3 id="08-13"><a href="#08-13" class="headerlink" title="08-13"></a>08-13</h3><ol>
+      <content type="html"><![CDATA[<h2 id="2019年8月"><a href="#2019年8月" class="headerlink" title="2019年8月"></a>2019年8月</h2><h3 id="08-20"><a href="#08-20" class="headerlink" title="08-20"></a>08-20</h3><p>1.<code>fix</code>: 左下角菜单个数为一个时，在移动端出现的位置错乱的问题</p>
+<h3 id="08-13"><a href="#08-13" class="headerlink" title="08-13"></a>08-13</h3><ol>
 <li><code>add</code> 添加自定义左侧分类栏宽度 <code>category.width</code>，详情见 <code>_config.yml</code></li>
 </ol>
 <h3 id="08-01"><a href="#08-01" class="headerlink" title="08-01"></a>08-01</h3><ol>
@@ -5068,9 +5069,9 @@ bgImg: xxx.jpg  #设置这篇文章的背景图
         
         <tags>
             
-            <tag> jQuery </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> jQuery </tag>
             
         </tags>
         
@@ -5121,9 +5122,9 @@ function pajx_loadDuodsuo(){
         
         <tags>
             
-            <tag> jQuery </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> jQuery </tag>
             
         </tags>
         

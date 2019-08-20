@@ -91,7 +91,7 @@ table.render({
         ,{field:'sentences', title:'名句', width:400}
         ,{field:'sentences', title:'名句', width:400}
         ,{field:'sentences', title:'名句', width:400}
-        ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
+        ,{fixed: 'right', title:'操作', merge: 'name', toolbar: '#barDemo', width:150}
     ]]
     ,done: function(){
         <b>tableMerge.render(this)</b>
@@ -158,7 +158,7 @@ layui.config({
                 ,{field:'sentences', title:'名句', width:400}
                 ,{field:'sentences', title:'名句', width:400}
                 ,{field:'sentences', title:'名句', width:400}
-                ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
+                ,{fixed: 'right', field:'sentences', title:'操作', merge: 'name', toolbar: '#barDemo', width:150}
             ]]
             ,done: function () {
                 tableMerge.render(this)

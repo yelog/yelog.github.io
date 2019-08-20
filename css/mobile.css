@@ -118,8 +118,12 @@
     color: #fff;
     display: block;
     z-index: 100;
-    bottom: 5px;
-    right: 30px;
+    bottom: 32px;
+    right: 0;
+    border: solid 1px;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    line-height: 20px;
   }
   .nav-left .left-bottom {
     top: 108px;
@@ -132,6 +136,10 @@
     border-top: none;
     border-right: none !important;
     display: inline;
+    margin-right: 126px;
+  }
+  .nav-left .left-bottom a.about.hasFriend {
+    margin-right: 0;
   }
   .nav-left .left-bottom a.about:after {
     content: '·';
