@@ -1322,9 +1322,9 @@ function sendXHR () {
         
         <tags>
             
-            <tag> js </tag>
-            
             <tag> 浏览器 </tag>
+            
+            <tag> js </tag>
             
         </tags>
         
@@ -4196,9 +4196,9 @@ MimeType=text/plain;
         
         <tags>
             
-            <tag> deepin </tag>
-            
             <tag> 运维 </tag>
+            
+            <tag> deepin </tag>
             
         </tags>
         
@@ -5069,9 +5069,9 @@ bgImg: xxx.jpg  #设置这篇文章的背景图
         
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> jQuery </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
         
@@ -5122,9 +5122,9 @@ function pajx_loadDuodsuo(){
         
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> jQuery </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
         
