@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yelog.org/"/>
-  <updated>2019-07-24T14:40:48.289Z</updated>
+  <updated>2019-09-24T02:12:06.749Z</updated>
   <id>http://yelog.org/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3-hexo支持jsfiddle渲染</title>
+    <link href="http://yelog.org/2019/09/24/3-hexo-jsfiddle/"/>
+    <id>http://yelog.org/2019/09/24/3-hexo-jsfiddle/</id>
+    <published>2019-09-24T01:59:37.000Z</published>
+    <updated>2019-09-24T02:12:06.749Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-canvas-粒子效果"><a href="#1-canvas-粒子效果" class="headerlink" title="1. canvas 粒子效果"></a>1. canvas 粒子效果</h3><script async src="//jsfiddle.net/yelog/eqc7zdLo/embed/result,js,html,css/"></script><h3 id="2-复选框动画"><a href="#2-复选框动画" class="headerlink" title="2. 复选框动画"></a>2. 复选框动画</h3><script async src="//jsfiddle.net/yelog/5g9jf31t/1/embed/result,html,css/"></script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-canvas-粒子效果&quot;&gt;&lt;a href=&quot;#1-canvas-粒子效果&quot; class=&quot;headerlink&quot; title=&quot;1. canvas 粒子效果&quot;&gt;&lt;/a&gt;1. canvas 粒子效果&lt;/h3&gt;&lt;script async src=&quot;//jsfidd
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="hexo" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yelog.org/tags/hexo/"/>
+    
+      <category term="3-hexo" scheme="http://yelog.org/tags/3-hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3-hexo文章内toc生成</title>
+    <link href="http://yelog.org/2019/09/24/3-hexo-toc/"/>
+    <id>http://yelog.org/2019/09/24/3-hexo-toc/</id>
+    <published>2019-09-24T01:48:20.000Z</published>
+    <updated>2019-09-24T02:01:01.465Z</updated>
+    
+    <content type="html"><![CDATA[<p>@[toc]</p><h2 id="1-如何使用"><a href="#1-如何使用" class="headerlink" title="1. 如何使用"></a>1. 如何使用</h2><h3 id="1-1-关键字"><a href="#1-1-关键字" class="headerlink" title="1.1 关键字"></a>1.1 关键字</h3><p>只要在在文章中使用如下关键字，不区分大小写，便可以在相应位置显示目录导航，效果文章开头<br><img src="https://i.loli.net/2019/09/24/qPEhN34FIdeCLOv.png" alt=""></p><h3 id="1-2-小标题2"><a href="#1-2-小标题2" class="headerlink" title="1.2 小标题2"></a>1.2 小标题2</h3><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p><h2 id="2-标题二"><a href="#2-标题二" class="headerlink" title="2. 标题二"></a>2. 标题二</h2><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p><h3 id="2-1-小标题1"><a href="#2-1-小标题1" class="headerlink" title="2.1 小标题1"></a>2.1 小标题1</h3><p>占位<br><br>占位<br><br>占位<br><br>占位<br></p><h3 id="2-2-小标题2"><a href="#2-2-小标题2" class="headerlink" title="2.2 小标题2"></a>2.2 小标题2</h3><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p><h2 id="文末"><a href="#文末" class="headerlink" title="文末"></a>文末</h2><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;@[toc]&lt;/p&gt;
+&lt;h2 id=&quot;1-如何使用&quot;&gt;&lt;a href=&quot;#1-如何使用&quot; class=&quot;headerlink&quot; title=&quot;1. 如何使用&quot;&gt;&lt;/a&gt;1. 如何使用&lt;/h2&gt;&lt;h3 id=&quot;1-1-关键字&quot;&gt;&lt;a href=&quot;#1-1-关键字&quot; class
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="hexo" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yelog.org/tags/hexo/"/>
+    
+      <category term="3-hexo" scheme="http://yelog.org/tags/3-hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>[记]《知识分子的不幸》-王小波</title>
@@ -508,61 +567,6 @@ msg=&amp;quot;hello world&amp;quot;
       <category term="maven" scheme="http://yelog.org/tags/maven/"/>
     
       <category term="nexus" scheme="http://yelog.org/tags/nexus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mybatis常用Mapper语句</title>
-    <link href="http://yelog.org/2017/08/04/mybatis-Mapper/"/>
-    <id>http://yelog.org/2017/08/04/mybatis-Mapper/</id>
-    <published>2017-08-04T07:54:47.000Z</published>
-    <updated>2017-11-20T03:06:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><pre><code class="sql">/* 简单插入 */&lt;insert id=&quot;insertOne&quot; parameterType=&quot;Person&quot;&gt;    insert into person (id, name, age) VALUES(#{id}, #{name}, #{age});&lt;/insert&gt;/* 插入并返回对象的主键（数据库序列） */&lt;insert id=&quot;insertOne&quot; parameterType=&quot;Person&quot; useGeneratedKeys=&quot;true&quot; keyProperty=&quot;id&quot;&gt;    insert into person (name, age) VALUES(#{name}, #{age});&lt;/insert&gt;</code></pre><h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><pre><code class="sql">/* 简单更新 */&lt;update id=&quot;updateName&quot;&gt;     update person set name = #{name} where id = #{id};&lt;/update&gt;/* 更新值并返回 */&lt;select id=&quot;updateAge&quot; parameterType=&quot;Person&quot;&gt;    update person set age = age + #{age} where id = #{id} returning age;&lt;/select&gt;</code></pre><h3 id="插入或更新"><a href="#插入或更新" class="headerlink" title="插入或更新"></a>插入或更新</h3><p>记录玩家在某种类型游戏下的统计记录：</p><blockquote><p>如果没有记录，则从插入，count字段为1；<br>如果有记录，则更新count字段+1；</p></blockquote><ol><li><p>方式一</p><pre><code class="sql">&lt;insert id=&quot;addCount&quot; parameterType=&quot;CountRecord&quot;&gt; /*如果有记录，则更新；无记录，则noting*/ update   count_record set   &quot;count&quot; = &quot;count&quot;+1 where   type_id = #{typeId} and   user_id = #{userId}; /*如果有记录，则noting；无记录，则插入*/ insert into   count_record(type_id, user_id, &quot;count&quot;)   select     #{typeId}, #{userId}, 1   where not exists       (select           *        from           count        where           type_id = #{typeId}        and           user_id = #{userId});&lt;/insert&gt;</code></pre></li><li><p>方式二</p><pre><code class="sql">/* 利用 PostgreSQL 的 conflic 特性 */&lt;insert id=&quot;addCount&quot; parameterType=&quot;CountRecord&quot;&gt; insert into   count_record(type_id, user_id, &quot;count&quot;) VALUES   (#{typeId}, #{userId}, #{count}) on   conflict(type_id,user_id) do update set   &quot;count&quot; = count_record.&quot;count&quot; + 1&lt;/insert&gt;</code></pre></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;插入&quot;&gt;&lt;a href=&quot;#插入&quot; class=&quot;headerlink&quot; title=&quot;插入&quot;&gt;&lt;/a&gt;插入&lt;/h3&gt;&lt;pre&gt;&lt;code class=&quot;sql&quot;&gt;/* 简单插入 */
-&amp;lt;insert id=&amp;quot;insertOne&amp;quot; par
-      
-    
-    </summary>
-    
-      <category term="数据库" scheme="http://yelog.org/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="mybatis" scheme="http://yelog.org/tags/mybatis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MathJax适配Pjax</title>
-    <link href="http://yelog.org/2017/07/05/MathJax-pjax/"/>
-    <id>http://yelog.org/2017/07/05/MathJax-pjax/</id>
-    <published>2017-07-05T11:24:10.000Z</published>
-    <updated>2019-05-21T02:48:52.594Z</updated>
-    
-    <content type="html"><![CDATA[<p>hexo 添加 MathJax 的过程网上很多，这里就不细讲，这里贴一张写的不错的文章 <a href="http://masikkk.com/article/hexo-13-MathJax/" target="_blank" rel="noopener">Hexo博客(13)添加MathJax数学公式渲染</a></p><p>由于 <code>3-hexo</code> 这个主题使用了 <code>pjax</code> ，刷新和第一次加载没有问题，但是点到其他文章，再点回来，渲染就无效了。</p><p>这个问题和之前适配多说和高亮时，是同样的问题，只需要在下面配置即可。</p><pre><code class="js">$(document).on({    /*pjax请求回来页面后触发的事件*/    &#39;pjax:end&#39;: function () {        /*渲染MathJax数学公式*/        $.getScript(&#39;//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML&#39;,function () {            MathJax.Hub.Typeset();        });    }});</code></pre><p>这样就解决了pjax的适配问题。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;hexo 添加 MathJax 的过程网上很多，这里就不细讲，这里贴一张写的不错的文章 &lt;a href=&quot;http://masikkk.com/article/hexo-13-MathJax/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo博客(1
-      
-    
-    </summary>
-    
-      <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="hexo" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/hexo/"/>
-    
-    
-      <category term="mathjax" scheme="http://yelog.org/tags/mathjax/"/>
-    
-      <category term="pjax" scheme="http://yelog.org/tags/pjax/"/>
     
   </entry>
   

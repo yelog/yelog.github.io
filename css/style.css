@@ -1498,6 +1498,17 @@ div.ac > ul > li:before,
 .post .pjax article p {
   margin: 0 0 16px;
 }
+.post .pjax article .inner-toc {
+  border: #e2dede solid 1px;
+  border-radius: 10px;
+}
+.post .pjax article .inner-toc h2 {
+  border-bottom: none;
+  margin: 10px 20px;
+}
+.post .pjax article .inner-toc ol {
+  list-style: none;
+}
 .post .pjax article ol>li {
   margin-bottom: 10px;
   margin-left: -9px;
