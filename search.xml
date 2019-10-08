@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[3-hexo 添加音乐插件]]></title>
+      <url>/2019/10/08/3-hexo-add-music/</url>
+      <content type="html"><![CDATA[<h2 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h2><h3 id="1-复制网易云音乐插件代码"><a href="#1-复制网易云音乐插件代码" class="headerlink" title="1. 复制网易云音乐插件代码"></a>1. 复制网易云音乐插件代码</h3><p>前往网易云音乐官网，搜索一个作为背景音乐的歌曲，并进入播放页面，点击 <strong>生成外链播放器</strong><br><img src="https://i.loli.net/2019/10/08/RgSUj1i8vXNk5IP.png" alt="生成外链播放器"></p>
+<p>设置好想要显示的样式后，复制 html 代码</p>
+<p><img src="https://i.loli.net/2019/10/08/rbHRZEoB4mzip75.png" alt=""></p>
+<p>最好外层在加一个 <code>div</code>，如下，可直接将上一步复制的 <code>iframe</code> 替换下方里面的 <code>iframe</code></p>
+<pre><code class="html">&lt;div style=&quot;position:absolute; bottom: 0; right: 0;&quot;&gt;
+    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=38592976&amp;auto=1&amp;height=66&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="2-将插件引入到主题中"><a href="#2-将插件引入到主题中" class="headerlink" title="2. 将插件引入到主题中"></a>2. 将插件引入到主题中</h3><p>将上一步加过 <code>div</code> 的代码粘贴到主题下 <code>layout/_partial/footer.ejs</code> 的最后面<br><img src="https://i.loli.net/2019/10/08/FRJOKxLECcvinmf.png" alt="效果"></p>
+<h3 id="3-调整位置"><a href="#3-调整位置" class="headerlink" title="3. 调整位置"></a>3. 调整位置</h3><p>默认给的样式是显示在右下角，可以通过调整上一步粘贴的 <code>div</code> 的 <code>style</code> 中 <code>bottom</code> 和 <code>right</code> 来调整位置。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 工具 </category>
+            
+            <category> hexo </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> 3-hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[3-hexo支持jsfiddle渲染]]></title>
       <url>/2019/09/24/3-hexo-jsfiddle/</url>
       <content type="html"><![CDATA[<h3 id="1-canvas-粒子效果"><a href="#1-canvas-粒子效果" class="headerlink" title="1. canvas 粒子效果"></a>1. canvas 粒子效果</h3><script async src="//jsfiddle.net/yelog/eqc7zdLo/embed/result,js,html,css/"></script>
@@ -4421,6 +4455,7 @@ about:  # &#39;关于&#39; 按钮
 </code></pre>
 </li>
 </ol>
+<h2 id="添加音乐插件"><a href="#添加音乐插件" class="headerlink" title="添加音乐插件"></a>添加音乐插件</h2><a href="/2019/10/08/3-hexo-add-music/" title="3-hexo 添加音乐插件">3-hexo 添加音乐插件</a>
 <h2 id="配置评论系统"><a href="#配置评论系统" class="headerlink" title="配置评论系统"></a>配置评论系统</h2><p>目前添加了三种评论系统 <strong>disqus、多说、网易云跟帖、gitment、gitalk</strong></p>
 <blockquote>
 <p><code>日志：</code> 2017-03-21：多说将于2017-06-01正式关停服务</p>

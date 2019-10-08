@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yelog.org/"/>
-  <updated>2019-09-24T02:12:06.749Z</updated>
+  <updated>2019-10-08T03:03:31.907Z</updated>
   <id>http://yelog.org/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3-hexo 添加音乐插件</title>
+    <link href="http://yelog.org/2019/10/08/3-hexo-add-music/"/>
+    <id>http://yelog.org/2019/10/08/3-hexo-add-music/</id>
+    <published>2019-10-08T02:44:30.000Z</published>
+    <updated>2019-10-08T03:03:31.907Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h2><h3 id="1-复制网易云音乐插件代码"><a href="#1-复制网易云音乐插件代码" class="headerlink" title="1. 复制网易云音乐插件代码"></a>1. 复制网易云音乐插件代码</h3><p>前往网易云音乐官网，搜索一个作为背景音乐的歌曲，并进入播放页面，点击 <strong>生成外链播放器</strong><br><img src="https://i.loli.net/2019/10/08/RgSUj1i8vXNk5IP.png" alt="生成外链播放器"></p><p>设置好想要显示的样式后，复制 html 代码</p><p><img src="https://i.loli.net/2019/10/08/rbHRZEoB4mzip75.png" alt=""></p><p>最好外层在加一个 <code>div</code>，如下，可直接将上一步复制的 <code>iframe</code> 替换下方里面的 <code>iframe</code></p><pre><code class="html">&lt;div style=&quot;position:absolute; bottom: 0; right: 0;&quot;&gt;    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=38592976&amp;auto=1&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</code></pre><h3 id="2-将插件引入到主题中"><a href="#2-将插件引入到主题中" class="headerlink" title="2. 将插件引入到主题中"></a>2. 将插件引入到主题中</h3><p>将上一步加过 <code>div</code> 的代码粘贴到主题下 <code>layout/_partial/footer.ejs</code> 的最后面<br><img src="https://i.loli.net/2019/10/08/FRJOKxLECcvinmf.png" alt="效果"></p><h3 id="3-调整位置"><a href="#3-调整位置" class="headerlink" title="3. 调整位置"></a>3. 调整位置</h3><p>默认给的样式是显示在右下角，可以通过调整上一步粘贴的 <code>div</code> 的 <code>style</code> 中 <code>bottom</code> 和 <code>right</code> 来调整位置。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;网易云音乐&quot;&gt;&lt;a href=&quot;#网易云音乐&quot; class=&quot;headerlink&quot; title=&quot;网易云音乐&quot;&gt;&lt;/a&gt;网易云音乐&lt;/h2&gt;&lt;h3 id=&quot;1-复制网易云音乐插件代码&quot;&gt;&lt;a href=&quot;#1-复制网易云音乐插件代码&quot; class=&quot;header
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="hexo" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yelog.org/tags/hexo/"/>
+    
+      <category term="3-hexo" scheme="http://yelog.org/tags/3-hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>3-hexo支持jsfiddle渲染</title>
@@ -535,38 +564,6 @@ msg=&amp;quot;hello world&amp;quot;
     
     
       <category term="linux" scheme="http://yelog.org/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建Maven私服-Nexus</title>
-    <link href="http://yelog.org/2017/09/06/build-Maven-Nexus/"/>
-    <id>http://yelog.org/2017/09/06/build-Maven-Nexus/</id>
-    <published>2017-09-06T15:01:31.000Z</published>
-    <updated>2019-09-25T08:29:48.337Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>Maven 私服，可以代理远程仓库和部署自己或第三方构件。本文介绍使用最广泛搭建 Maven 私服的工具： Sonatype Nexus。</p></blockquote><h2 id="作者环境"><a href="#作者环境" class="headerlink" title="作者环境"></a>作者环境</h2><p>  本次搭建私服是在局域网的一台服务器上，操作系统为 CentOS 。<br>  需要部署到私服的项目 <code>soul</code><br>  <code>ssm</code> 项目需要引用 <code>soul</code></p><h2 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h2><p>  确保服务器已经安装了 java 环境，这个过程不是本文重点，安装过程自行百度。</p><h2 id="安装Nexus"><a href="#安装Nexus" class="headerlink" title="安装Nexus"></a>安装Nexus</h2><blockquote><p>官网 pro 版本的是需要付费的。所以我们使用免费的 OSS 版本，下载地址 (<a href="https://www.sonatype.com/download-oss-sonatype" target="_blank" rel="noopener">https://www.sonatype.com/download-oss-sonatype</a>)</p></blockquote><pre><code class="bash"># 上传到服务器并解压$ tar xvf nexus-3.5.1-02-unix.tar.gz</code></pre><h3 id="启动Nexus"><a href="#启动Nexus" class="headerlink" title="启动Nexus"></a>启动Nexus</h3><pre><code class="bash"># 启动服务$ cd /nexus-3.5.1-02/bin/$ ./nexus start</code></pre><h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>打开网址：(<a href="http://192.168.0.86:8081/" target="_blank" rel="noopener">http://192.168.0.86:8081/</a>) , ip 为搭建私服的服务器 ip 。<br>用户名/密码： admin/admin123<br>出现一下画面，就说明安装成功了。<br><img src="http://img.saodiyang.com/FkIlJRDdMC2yJFT9huIk9gBuCe15.png" alt="nexus"></p><h2 id="发布soul项目到私服"><a href="#发布soul项目到私服" class="headerlink" title="发布soul项目到私服"></a>发布soul项目到私服</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><ol><li>创建yelog-release仓库（<em>名字自定义</em>）, type选择 ： release<br><img src="http://img.saodiyang.com/Fk5UboZXVf4aegz63N4TDrITMh4V.png" alt="①.创建宿主仓库"><br><img src="http://img.saodiyang.com/FjAz8w445FFeVqDDzLLTLitOkZyV.png" alt="②.选择hosted类型"><br><img src="http://img.saodiyang.com/Ft2u5UPqdAFxldkkwAC2uVBtjDhF.png" alt="③.创建release类型仓库"></li><li>创建yelog-snapshot仓库（<em>名字自定义</em>）， type选择 ： snapshot<br>重复上面 ① 和 ② 步，根据下图选择类型:<br><img src="http://img.saodiyang.com/FgX10ufvTV_YUK2vjrdRN3InKN1i.png" alt="创建snapshot类型仓库"></li></ol><p>两个都创建完成后，效果如下：<br><img src="http://img.saodiyang.com/FjcMrajAM3anymLemHA2OoZZUut-.png" alt="创建自定义release和snapshot仓库"></p><h3 id="pom中添加部署配置"><a href="#pom中添加部署配置" class="headerlink" title="pom中添加部署配置"></a>pom中添加部署配置</h3><p>url 复制上图中新建的仓库的 copy 按钮，复制url。</p><pre><code class="xml">&lt;distributionManagement&gt;    &lt;repository&gt;        &lt;id&gt;yelog-release&lt;/id&gt;        &lt;name&gt;Release Repository of yelog&lt;/name&gt;        &lt;url&gt;http://192.168.0.86:8081/repository/yelog-release/&lt;/url&gt;    &lt;/repository&gt;    &lt;snapshotRepository&gt;        &lt;id&gt;yelog-snapshot&lt;/id&gt;        &lt;name&gt;Snapshot Repository of yelog&lt;/name&gt;        &lt;url&gt;http://192.168.0.86:8081/repository/yelog-snapshot/&lt;/url&gt;    &lt;/snapshotRepository&gt;&lt;/distributionManagement&gt;</code></pre><h3 id="在maven的-settings-xml-中配置"><a href="#在maven的-settings-xml-中配置" class="headerlink" title="在maven的 settings.xml 中配置"></a>在maven的 settings.xml 中配置</h3><p>这里配置 maven 的账号密码，id 要与 distributionManagement 中的id一致。默认账号/密码：admin/admin123</p><pre><code class="xml">&lt;servers&gt;    &lt;server&gt;      &lt;id&gt;yelog-realease&lt;/id&gt;      &lt;username&gt;admin&lt;/username&gt;      &lt;password&gt;admin123&lt;/password&gt;    &lt;/server&gt;    &lt;server&gt;      &lt;id&gt;yelog-snapshot&lt;/id&gt;      &lt;username&gt;admin&lt;/username&gt;      &lt;password&gt;admin123&lt;/password&gt;    &lt;/server&gt;&lt;/servers&gt;</code></pre><h3 id="执行maven命令部署项目到私服上"><a href="#执行maven命令部署项目到私服上" class="headerlink" title="执行maven命令部署项目到私服上"></a>执行maven命令部署项目到私服上</h3><p>我这里直接使用IDE的插件执行<br><img src="http://img.saodiyang.com/Frs7jSIClJvF31AnyAAz5JXL-IAP.png" alt="部署项目到私服"><br>部署完成后，可以在 yelog-snapshot 仓库中，查看部署的情况，如下图所示<br><img src="http://img.saodiyang.com/Fi1YtOKOAK7KMigjAc4S7ZfwLLjl.png" alt="查看部署情况"></p><h2 id="从私服拉去依赖库"><a href="#从私服拉去依赖库" class="headerlink" title="从私服拉去依赖库"></a>从私服拉去依赖库</h2><blockquote><p>上一步我们已经将项目 <code>soul</code> 部署到私服上了，这一步介绍项目 <code>ssm</code> 如何依赖引用 <code>soul</code>。<br>私服中的 maven-central 可以链接远程仓库。这样，当有依赖在私服中找不到后，就可以通过远程仓库自动下载依赖。</p></blockquote><h3 id="pom-文件中添加如下配置"><a href="#pom-文件中添加如下配置" class="headerlink" title="pom 文件中添加如下配置"></a>pom 文件中添加如下配置</h3><ol><li>public库成员仓库中添加我们自定义的仓库<br><img src="http://img.saodiyang.com/FlmsId2u1z_vQ__zlfzoAIytujm3.png" alt="public库设置成员仓库"></li><li>配置远程仓库为私服地址。<pre><code class="xml">&lt;repositories&gt; &lt;repository&gt;     &lt;id&gt;public&lt;/id&gt;     &lt;name&gt;public Repository&lt;/name&gt;     &lt;url&gt;http://192.168.0.86:8081/repository/maven-public/&lt;/url&gt;     &lt;releases&gt;         &lt;enabled&gt;true&lt;/enabled&gt;     &lt;/releases&gt;     &lt;snapshots&gt;         &lt;enabled&gt;true&lt;/enabled&gt;     &lt;/snapshots&gt; &lt;/repository&gt;&lt;/repositories&gt;&lt;pluginRepositories&gt; &lt;pluginRepository&gt;     &lt;id&gt;public&lt;/id&gt;     &lt;name&gt;Public Repositories&lt;/name&gt;     &lt;url&gt;http://192.168.0.86:8081/repository/maven-public/&lt;/url&gt; &lt;/pluginRepository&gt;&lt;/pluginRepositories&gt;</code></pre></li><li>引入依赖<pre><code class="xml">&lt;dependency&gt; &lt;groupId&gt;org.soul&lt;/groupId&gt; &lt;artifactId&gt;commons&lt;/artifactId&gt; &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;&lt;/dependency&gt;</code></pre></li><li>ssm项目就可以引用到soul代码<br><img src="http://img.saodiyang.com/FvVCRBtMwy5ckbase3E3wM9JUXp6.png" alt="在代码中就可以直接引用到部署到私服的soul项目代码"></li></ol><p>本文结束。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;Maven 私服，可以代理远程仓库和部署自己或第三方构件。本文介绍使用最广泛搭建 Maven 私服的工具： Sonatype Nexus。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;作者环境&quot;&gt;&lt;a href=&quot;#作者环境&quot; class=
-      
-    
-    </summary>
-    
-      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-      <category term="java" scheme="http://yelog.org/tags/java/"/>
-    
-      <category term="maven" scheme="http://yelog.org/tags/maven/"/>
-    
-      <category term="nexus" scheme="http://yelog.org/tags/nexus/"/>
     
   </entry>
   
