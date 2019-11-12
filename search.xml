@@ -24,7 +24,7 @@ options: # 更多配置信息可以参考 https://mermaidjs.github.io/#/mermaidA
 </li>
 <li>在markdown中，像写代码块一样写图表<br><img src="//img.saodiyang.com/FuBTJvG5xIOIcKZPnO9UX5GCwthK.png" alt=""></li>
 </ol>
-<h2 id="二、示例"><a href="#二、示例" class="headerlink" title="二、示例"></a>二、示例</h2><p>以下示例源码可以在这边查看 <a href="https://github.com/yelog/blog/blob/master/source/_posts/tools/3-hexo-%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%8F%92%E4%BB%B6.md" target="_blank" rel="noopener">文章备份</a><br>更多示例可以查看官网：<a href="https://mermaidjs.github.io" target="_blank" rel="noopener">https://mermaidjs.github.io</a></p>
+<h2 id="二、示例"><a href="#二、示例" class="headerlink" title="二、示例"></a>二、示例</h2><p>以下示例源码可以在这边查看 <a href="https://github.com/yelog/blog/blob/master/source/_posts/tools/3-hexo%E6%94%AF%E6%8C%81mermaid%E5%9B%BE%E8%A1%A8.md" target="_blank" rel="noopener">本文源码</a><br>更多示例可以查看官网：<a href="https://mermaidjs.github.io" target="_blank" rel="noopener">https://mermaidjs.github.io</a></p>
 <h3 id="1-flowchart"><a href="#1-flowchart" class="headerlink" title="1. flowchart"></a>1. flowchart</h3><pre class="mermaid">graph TD;
     A-->B;
     A-->C;
@@ -4432,9 +4432,9 @@ MimeType=text/plain;
         
         <tags>
             
-            <tag> 运维 </tag>
-            
             <tag> deepin </tag>
+            
+            <tag> 运维 </tag>
             
         </tags>
         
@@ -4984,7 +4984,7 @@ limit: 20
     <entry>
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
-      <content type="html"><![CDATA[<h2 id="2019年11月"><a href="#2019年11月" class="headerlink" title="2019年11月"></a>2019年11月</h2><h3 id="11-12"><a href="#11-12" class="headerlink" title="11-12"></a>11-12</h3><p>1.<code>fix</code>: 修复 hexo4.0 版本链接外跳的问题</p>
+      <content type="html"><![CDATA[<h2 id="2019年11月"><a href="#2019年11月" class="headerlink" title="2019年11月"></a>2019年11月</h2><h3 id="11-12"><a href="#11-12" class="headerlink" title="11-12"></a>11-12</h3><p>1.<code>fix</code>: 修复 hexo4.0 版本链接外跳的问题<br>2.<code>add</code>: 支持 mermaid <a href="/2019/11/12/3-hexo-support-mermaid/" title="3-hexo支持mermaid图表">3-hexo支持mermaid图表</a></p>
 <h3 id="09-24"><a href="#09-24" class="headerlink" title="09-24"></a>09-24</h3><p>1.<code>add</code>: 支持文章内 toc 生成 <a href="/2019/09/24/3-hexo-toc/" title="3-hexo文章内toc生成">3-hexo文章内toc生成</a></p>
 <h3 id="09-05"><a href="#09-05" class="headerlink" title="09-05"></a>09-05</h3><p>1.<code>fix</code>: <code>pjax</code> 兼容 <code>jsfiddle</code> 的渲染 <a href="/2019/09/24/3-hexo-jsfiddle/" title="3-hexo支持jsfiddle渲染">3-hexo支持jsfiddle渲染</a></p>
 <h2 id="2019年8月"><a href="#2019年8月" class="headerlink" title="2019年8月"></a>2019年8月</h2><h3 id="08-20"><a href="#08-20" class="headerlink" title="08-20"></a>08-20</h3><p>1.<code>fix</code>: 左下角菜单个数为一个时，在移动端出现的位置错乱的问题</p>
