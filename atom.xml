@@ -472,7 +472,7 @@ msg=&amp;quot;hello world&amp;quot;
     <published>2017-09-21T07:25:32.000Z</published>
     <updated>2017-11-06T02:20:12.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="直接上解决方法"><a href="#直接上解决方法" class="headerlink" title="直接上解决方法"></a>直接上解决方法</h2><p>不论页面是否被缓存，都会触发 <code>pageshow</code>，所以后退后需要执行的方法可以都放在下面事件内：</p><pre><code class="javascript">window.addEventListener(&#39;pageshow&#39;, function () {  console.log(&#39;on pageshow&#39;)})</code></pre><p><code>浏览器缓存行为</code> 的详细介绍可以参考： <a href="/2017/09/21/bf-cache/" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="直接上解决方法"><a href="#直接上解决方法" class="headerlink" title="直接上解决方法"></a>直接上解决方法</h2><p>不论页面是否被缓存，都会触发 <code>pageshow</code>，所以后退后需要执行的方法可以都放在下面事件内：</p><pre><code class="javascript">window.addEventListener(&#39;pageshow&#39;, function () {  console.log(&#39;on pageshow&#39;)})</code></pre><p><code>浏览器缓存行为</code> 的详细介绍可以参考： <a href="/2017/09/21/bf-cache/" title="[转]浏览器前进&#x2F;后退缓存（BF Cache）">[转]浏览器前进&#x2F;后退缓存（BF Cache）</a></p>]]></content>
     
     <summary type="html">
     
