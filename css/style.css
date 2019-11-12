@@ -1571,6 +1571,10 @@ div.ac > ul > li:before,
   color: #bf1827;
   font-family: sans-serif;
 }
+.post .pjax article pre.mermaid {
+  border: none;
+  text-align: center;
+}
 .post .pjax article pre > code {
   font-size: 15px;
   border-radius: 3px;

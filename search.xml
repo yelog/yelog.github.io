@@ -3,6 +3,150 @@
   
     
     <entry>
+      <title><![CDATA[3-hexo支持mermaid图表]]></title>
+      <url>/2019/11/12/3-hexo-support-mermaid/</url>
+      <content type="html"><![CDATA[<h2 id="一、说明"><a href="#一、说明" class="headerlink" title="一、说明"></a>一、说明</h2><h3 id="开启"><a href="#开启" class="headerlink" title="开启"></a>开启</h3><ol>
+<li>安装hexo插件<pre><code class="bash">npm install hexo-filter-mermaid-diagrams
+</code></pre>
+</li>
+<li>修改<code>themes/3-hexo/_config.yml</code> 的 <code>mermaid.on</code>，开启主题支持<pre><code class="yml"># Mermaid 支持
+mermaid:
+on: true
+cdn: //cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js
+#cdn: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.1/mermaid.min.js
+options: # 更多配置信息可以参考 https://mermaidjs.github.io/#/mermaidAPI
+ theme: &#39;default&#39;
+ startOnLoad: true
+ flowchart:
+   useMaxWidth: false
+   htmlLabels: true
+</code></pre>
+</li>
+<li>在markdown中，像写代码块一样写图表<br><img src="//img.saodiyang.com/FuBTJvG5xIOIcKZPnO9UX5GCwthK.png" alt=""></li>
+</ol>
+<h2 id="二、示例"><a href="#二、示例" class="headerlink" title="二、示例"></a>二、示例</h2><p>以下示例源码可以在这边查看 <a href="https://github.com/yelog/blog/blob/master/source/_posts/tools/3-hexo-%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%8F%92%E4%BB%B6.md" target="_blank" rel="noopener">文章备份</a><br>更多示例可以查看官网：<a href="https://mermaidjs.github.io" target="_blank" rel="noopener">https://mermaidjs.github.io</a></p>
+<h3 id="1-flowchart"><a href="#1-flowchart" class="headerlink" title="1. flowchart"></a>1. flowchart</h3><pre class="mermaid">graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;</pre>
+<pre class="mermaid">graph TB
+    c1-->a2
+    subgraph one
+    a1-->a2
+    end
+    subgraph two
+    b1-->b2
+    end
+    subgraph three
+    c1-->c2
+    end</pre>
+
+<h3 id="2-Sequence-diagrams"><a href="#2-Sequence-diagrams" class="headerlink" title="2.Sequence diagrams"></a>2.Sequence diagrams</h3><pre class="mermaid">sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!</pre>
+
+<h3 id="3-Class-diagrams"><a href="#3-Class-diagrams" class="headerlink" title="3.Class diagrams"></a>3.Class diagrams</h3><pre class="mermaid">classDiagram
+     Animal <|-- Duck
+     Animal <|-- Fish
+     Animal <|-- Zebra
+     Animal : +int age
+     Animal : +String gender
+     Animal: +isMammal()
+     Animal: +mate()
+     class Duck{
+         +String beakColor
+         +swim()
+         +quack()
+     }
+     class Fish{
+         -int sizeInFeet
+         -canEat()
+     }
+     class Zebra{
+         +bool is_wild
+         +run()
+     }</pre>
+
+<h3 id="4-State-diagrams"><a href="#4-State-diagrams" class="headerlink" title="4.State diagrams"></a>4.State diagrams</h3><pre class="mermaid">stateDiagram
+       [*] --> Active
+
+       state Active {
+           [*] --> NumLockOff
+           NumLockOff --> NumLockOn : EvNumLockPressed
+           NumLockOn --> NumLockOff : EvNumLockPressed
+           --
+           [*] --> CapsLockOff
+           CapsLockOff --> CapsLockOn : EvCapsLockPressed
+           CapsLockOn --> CapsLockOff : EvCapsLockPressed
+           --
+           [*] --> ScrollLockOff
+           ScrollLockOff --> ScrollLockOn : EvCapsLockPressed
+           ScrollLockOn --> ScrollLockOff : EvCapsLockPressed
+       }</pre>
+
+<h3 id="5-Gantt-diagrams"><a href="#5-Gantt-diagrams" class="headerlink" title="5.Gantt diagrams"></a>5.Gantt diagrams</h3><pre class="mermaid">gantt
+       dateFormat  YYYY-MM-DD
+       title Adding GANTT diagram functionality to mermaid
+
+       section A section
+       Completed task            :done,    des1, 2014-01-06,2014-01-08
+       Active task               :active,  des2, 2014-01-09, 3d
+       Future task               :         des3, after des2, 5d
+       Future task2              :         des4, after des3, 5d
+
+       section Critical tasks
+       Completed task in the critical line :crit, done, 2014-01-06,24h
+       Implement parser and jison          :crit, done, after des1, 2d
+       Create tests for parser             :crit, active, 3d
+       Future task in critical line        :crit, 5d
+       Create tests for renderer           :2d
+       Add to mermaid                      :1d
+
+       section Documentation
+       Describe gantt syntax               :active, a1, after des1, 3d
+       Add gantt diagram to demo page      :after a1  , 20h
+       Add another diagram to demo page    :doc1, after a1  , 48h
+
+       section Last section
+       Describe gantt syntax               :after doc1, 3d
+       Add gantt diagram to demo page      :20h
+       Add another diagram to demo page    :48h</pre>
+
+<h3 id="6-Pie-chart-diagrams"><a href="#6-Pie-chart-diagrams" class="headerlink" title="6.Pie chart diagrams"></a>6.Pie chart diagrams</h3><pre class="mermaid">pie
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15</pre>
+]]></content>
+      
+        <categories>
+            
+            <category> 工具 </category>
+            
+            <category> hexo </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> 3-hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[3-hexo 添加音乐插件]]></title>
       <url>/2019/10/08/3-hexo-add-music/</url>
       <content type="html"><![CDATA[<h2 id="网易云音乐"><a href="#网易云音乐" class="headerlink" title="网易云音乐"></a>网易云音乐</h2><h3 id="1-复制网易云音乐插件代码"><a href="#1-复制网易云音乐插件代码" class="headerlink" title="1. 复制网易云音乐插件代码"></a>1. 复制网易云音乐插件代码</h3><p>前往网易云音乐官网，搜索一个作为背景音乐的歌曲，并进入播放页面，点击 <strong>生成外链播放器</strong><br><img src="https://i.loli.net/2019/10/08/RgSUj1i8vXNk5IP.png" alt="生成外链播放器"></p>
