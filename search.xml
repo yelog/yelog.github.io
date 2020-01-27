@@ -210,7 +210,7 @@ options: # 更多配置信息可以参考 https://mermaidjs.github.io/#/mermaidA
     <entry>
       <title><![CDATA[3-hexo文章内toc生成]]></title>
       <url>/2019/09/24/3-hexo-toc/</url>
-      <content type="html"><![CDATA[<p>@[toc]</p>
+      <content type="html"><![CDATA[<p>@[TOC]</p>
 <h2 id="1-如何使用"><a href="#1-如何使用" class="headerlink" title="1. 如何使用"></a>1. 如何使用</h2><h3 id="1-1-关键字"><a href="#1-1-关键字" class="headerlink" title="1.1 关键字"></a>1.1 关键字</h3><p>只要在在文章中使用如下关键字，不区分大小写，便可以在相应位置显示目录导航，效果文章开头<br><img src="https://i.loli.net/2019/09/24/qPEhN34FIdeCLOv.png" alt=""></p>
 <h3 id="1-2-小标题2"><a href="#1-2-小标题2" class="headerlink" title="1.2 小标题2"></a>1.2 小标题2</h3><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p>
 <h2 id="2-标题二"><a href="#2-标题二" class="headerlink" title="2. 标题二"></a>2. 标题二</h2><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p>
@@ -1558,9 +1558,9 @@ function sendXHR () {
         
         <tags>
             
-            <tag> js </tag>
-            
             <tag> 浏览器 </tag>
+            
+            <tag> js </tag>
             
         </tags>
         
@@ -4432,9 +4432,9 @@ MimeType=text/plain;
         
         <tags>
             
-            <tag> deepin </tag>
-            
             <tag> 运维 </tag>
+            
+            <tag> deepin </tag>
             
         </tags>
         
