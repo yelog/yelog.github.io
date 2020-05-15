@@ -4432,9 +4432,9 @@ MimeType=text/plain;
         
         <tags>
             
-            <tag> 运维 </tag>
-            
             <tag> deepin </tag>
+            
+            <tag> 运维 </tag>
             
         </tags>
         
@@ -14141,154 +14141,154 @@ $ cd ~
 <h3 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">说明</th>
+<th>参数</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">-a,–all</td>
-<td style="text-align:left">列出目录下的所有文件，包括以 . 开头的隐含文件</td>
+<td>-a,–all</td>
+<td>列出目录下的所有文件，包括以 . 开头的隐含文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-A</td>
-<td style="text-align:left">同-a，但不列出“.”(表示当前目录)和“..”(表示当前目录的父目录)。</td>
+<td>-A</td>
+<td>同-a，但不列出“.”(表示当前目录)和“..”(表示当前目录的父目录)。</td>
 </tr>
 <tr>
-<td style="text-align:left">-c  配合 -lt</td>
-<td style="text-align:left">根据 ctime 排序及显示 ctime (文件状态最后更改的时间)配合 -lt：显示 ctime 但根据名称排序否则：根据 ctime 排序</td>
+<td>-c  配合 -lt</td>
+<td>根据 ctime 排序及显示 ctime (文件状态最后更改的时间)配合 -lt：显示 ctime 但根据名称排序否则：根据 ctime 排序</td>
 </tr>
 <tr>
-<td style="text-align:left">-C</td>
-<td style="text-align:left">每栏由上至下列出项目</td>
+<td>-C</td>
+<td>每栏由上至下列出项目</td>
 </tr>
 <tr>
-<td style="text-align:left">-color[=WHEN]</td>
-<td style="text-align:left">控制是否使用色彩分辨文件。WHEN 可以是’never’、’always’或’auto’其中之一</td>
+<td>-color[=WHEN]</td>
+<td>控制是否使用色彩分辨文件。WHEN 可以是’never’、’always’或’auto’其中之一</td>
 </tr>
 <tr>
-<td style="text-align:left">-d,–directory</td>
-<td style="text-align:left">将目录象文件一样显示，而不是显示其下的文件。</td>
+<td>-d,–directory</td>
+<td>将目录象文件一样显示，而不是显示其下的文件。</td>
 </tr>
 <tr>
-<td style="text-align:left">-D,–dired</td>
-<td style="text-align:left">产生适合 Emacs 的 dired 模式使用的结果</td>
+<td>-D,–dired</td>
+<td>产生适合 Emacs 的 dired 模式使用的结果</td>
 </tr>
 <tr>
-<td style="text-align:left">-f</td>
-<td style="text-align:left">对输出的文件不进行排序，-aU 选项生效，-lst 选项失效</td>
+<td>-f</td>
+<td>对输出的文件不进行排序，-aU 选项生效，-lst 选项失效</td>
 </tr>
 <tr>
-<td style="text-align:left">-g</td>
-<td style="text-align:left">类似 -l,但不列出所有者</td>
+<td>-g</td>
+<td>类似 -l,但不列出所有者</td>
 </tr>
 <tr>
-<td style="text-align:left">-G, –no-group</td>
-<td style="text-align:left">不列出任何有关组的信息</td>
+<td>-G, –no-group</td>
+<td>不列出任何有关组的信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-h,–human-readable</td>
-<td style="text-align:left">以容易理解的格式列出文件大小 (例如 1K 234M 2G)</td>
+<td>-h,–human-readable</td>
+<td>以容易理解的格式列出文件大小 (例如 1K 234M 2G)</td>
 </tr>
 <tr>
-<td style="text-align:left">–si</td>
-<td style="text-align:left">类似 -h,但文件大小取 1000 的次方而不是 1024</td>
+<td>–si</td>
+<td>类似 -h,但文件大小取 1000 的次方而不是 1024</td>
 </tr>
 <tr>
-<td style="text-align:left">-H, –dereference-command-line</td>
-<td style="text-align:left">使用命令列中的符号链接指示的真正目的地</td>
+<td>-H, –dereference-command-line</td>
+<td>使用命令列中的符号链接指示的真正目的地</td>
 </tr>
 <tr>
-<td style="text-align:left">–indicator-style=&lt;方式&gt;</td>
-<td style="text-align:left">指定在每个项目名称后加上指示符号&lt;方式&gt;：none (默认)，classify (-F)，file-type (-p)</td>
+<td>–indicator-style=&lt;方式&gt;</td>
+<td>指定在每个项目名称后加上指示符号&lt;方式&gt;：none (默认)，classify (-F)，file-type (-p)</td>
 </tr>
 <tr>
-<td style="text-align:left">-i, –inode</td>
-<td style="text-align:left">印出每个文件的 inode 号</td>
+<td>-i, –inode</td>
+<td>印出每个文件的 inode 号</td>
 </tr>
 <tr>
-<td style="text-align:left">-I,–ignore=样式</td>
-<td style="text-align:left">不印出任何符合 shell 万用字符&lt;样式&gt;的项目</td>
+<td>-I,–ignore=样式</td>
+<td>不印出任何符合 shell 万用字符&lt;样式&gt;的项目</td>
 </tr>
 <tr>
-<td style="text-align:left">-k</td>
-<td style="text-align:left">即 –block-size=1K,以 k 字节的形式表示文件的大小</td>
+<td>-k</td>
+<td>即 –block-size=1K,以 k 字节的形式表示文件的大小</td>
 </tr>
 <tr>
-<td style="text-align:left">-l</td>
-<td style="text-align:left">除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来。</td>
+<td>-l</td>
+<td>除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来。</td>
 </tr>
 <tr>
-<td style="text-align:left">-L, –dereference</td>
-<td style="text-align:left"></td>
+<td>-L, –dereference</td>
+<td></td>
 </tr>
 <tr>
-<td style="text-align:left">-m</td>
-<td style="text-align:left">所有项目以逗号分隔，并填满整行行宽</td>
+<td>-m</td>
+<td>所有项目以逗号分隔，并填满整行行宽</td>
 </tr>
 <tr>
-<td style="text-align:left">-o</td>
-<td style="text-align:left">类似 -l,显示文件的除组信息外的详细信息。</td>
+<td>-o</td>
+<td>类似 -l,显示文件的除组信息外的详细信息。</td>
 </tr>
 <tr>
-<td style="text-align:left">-r, –reverse</td>
-<td style="text-align:left">依相反次序排列</td>
+<td>-r, –reverse</td>
+<td>依相反次序排列</td>
 </tr>
 <tr>
-<td style="text-align:left">-R, –recursive</td>
-<td style="text-align:left">同时列出所有子目录层</td>
+<td>-R, –recursive</td>
+<td>同时列出所有子目录层</td>
 </tr>
 <tr>
-<td style="text-align:left">-s,–size</td>
-<td style="text-align:left">以块大小为单位列出所有文件的大小</td>
+<td>-s,–size</td>
+<td>以块大小为单位列出所有文件的大小</td>
 </tr>
 <tr>
-<td style="text-align:left">-S</td>
-<td style="text-align:left">根据文件大小排序</td>
+<td>-S</td>
+<td>根据文件大小排序</td>
 </tr>
 <tr>
-<td style="text-align:left">–sort=WORD</td>
-<td style="text-align:left">可选用的 WORD 和它们代表的相应选项： <br>extension -X status -c<br>none -U time -t<br>size -S atime -u<br>time -t access -u<br>version -v use -u</td>
+<td>–sort=WORD</td>
+<td>可选用的 WORD 和它们代表的相应选项： <br>extension -X status -c<br>none -U time -t<br>size -S atime -u<br>time -t access -u<br>version -v use -u</td>
 </tr>
 <tr>
-<td style="text-align:left">-t</td>
-<td style="text-align:left">以文件修改时间排序</td>
+<td>-t</td>
+<td>以文件修改时间排序</td>
 </tr>
 <tr>
-<td style="text-align:left">-u</td>
-<td style="text-align:left">配合 -lt:显示访问时间而且依访问时间排序<br>配合 -l:显示访问时间但根据名称排序<br>否则：根据访问时间排序</td>
+<td>-u</td>
+<td>配合 -lt:显示访问时间而且依访问时间排序<br>配合 -l:显示访问时间但根据名称排序<br>否则：根据访问时间排序</td>
 </tr>
 <tr>
-<td style="text-align:left">-U</td>
-<td style="text-align:left">不进行排序;依文件系统原有的次序列出项目</td>
+<td>-U</td>
+<td>不进行排序;依文件系统原有的次序列出项目</td>
 </tr>
 <tr>
-<td style="text-align:left">-v</td>
-<td style="text-align:left">根据版本进行排序</td>
+<td>-v</td>
+<td>根据版本进行排序</td>
 </tr>
 <tr>
-<td style="text-align:left">-w, –width=COLS</td>
-<td style="text-align:left">自行指定屏幕宽度而不使用目前的数值</td>
+<td>-w, –width=COLS</td>
+<td>自行指定屏幕宽度而不使用目前的数值</td>
 </tr>
 <tr>
-<td style="text-align:left">-x</td>
-<td style="text-align:left">逐行列出项目而不是逐栏列出</td>
+<td>-x</td>
+<td>逐行列出项目而不是逐栏列出</td>
 </tr>
 <tr>
-<td style="text-align:left">-X</td>
-<td style="text-align:left">根据扩展名排序</td>
+<td>-X</td>
+<td>根据扩展名排序</td>
 </tr>
 <tr>
-<td style="text-align:left">-1</td>
-<td style="text-align:left">每行只列出一个文件</td>
+<td>-1</td>
+<td>每行只列出一个文件</td>
 </tr>
 <tr>
-<td style="text-align:left">–help</td>
-<td style="text-align:left">显示此帮助信息并离开</td>
+<td>–help</td>
+<td>显示此帮助信息并离开</td>
 </tr>
 <tr>
-<td style="text-align:left">–version</td>
-<td style="text-align:left">显示版本信息并离开</td>
+<td>–version</td>
+<td>显示版本信息并离开</td>
 </tr>
 </tbody>
 </table>
