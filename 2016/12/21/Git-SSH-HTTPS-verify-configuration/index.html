@@ -43,6 +43,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
+<script src="/js/scrollspy.js?v=1.0.1" ></script>
 
 </head>
 <div style="display: none">
@@ -207,11 +208,11 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(146)</small></div></li>
+    <li><div class="all active" data-rel="全部文章">全部文章<small>(146)</small></div></li>
     
         
             
-            <li><div data-rel="数据库">数据库<small>(6)</small></div>
+            <li><div data-rel="后端">后端<small>(6)</small></div>
                 
             </li>
             
@@ -227,7 +228,7 @@
     
         
             
-            <li><div data-rel="后端">后端<small>(6)</small></div>
+            <li><div data-rel="数据库">数据库<small>(6)</small></div>
                 
             </li>
             
@@ -254,6 +255,18 @@
         
     
         
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="运维">运维<small>(82)</small></div>
+                
+            </li>
             
         
     
@@ -293,18 +306,6 @@
             
         
     
-        
-            
-        
-    
-        
-            
-            <li><div data-rel="运维">运维<small>(82)</small></div>
-                
-            </li>
-            
-        
-    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -327,7 +328,7 @@
         <div class="friends-area">
     <div class="friends-title">
         友情链接
-        <i class="back-title-list"></i>
+        <i class="iconfont icon-left"></i>
     </div>
     <div class="friends-content">
         <ul>
@@ -352,75 +353,35 @@
     </div>
 </div>
         <div class="title-list">
-    <form onkeydown="if(event.keyCode === 13){return false;}">
-        <input id="local-search-input" class="search" type="text" placeholder="以 in: 开头进行全文搜索" />
-        <i class="cross"></i>
-        <span>
-            <label for="tagswitch">Tags:</label>
-            <input id="tagswitch" type="checkbox" style="display: none" />
-            <i id="tagsWitchIcon"></i>
-        </span>
-    </form>
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" title="搜索"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" title="切换到大纲视图"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left"></i>
+            <input id="local-search-input" />
+            <label class="border-line" for="input"></label>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" title="切换到文章列表"></i>
+        </div>
+    </div>
+
     <div class="tags-list">
-    
-    <li class="article-tag-list-item">
-        <a class="color1">PostgreSQL</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">mybatis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">AngularJs</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">jsp</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">jstl</a>
-    </li>
     
     <li class="article-tag-list-item">
         <a class="color5">java</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color1">freemarker</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">jQuery</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">postgres</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">sql</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">node</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">hexo</a>
+        <a class="color2">javaee</a>
     </li>
     
     <li class="article-tag-list-item">
         <a class="color2">translation</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">js</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">javaee</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -436,11 +397,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color4">浏览器</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">reading</a>
+        <a class="color5">AngularJs</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -452,67 +409,59 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a class="color4">jsp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">jstl</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">freemarker</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">jQuery</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">node</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">浏览器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">mybatis</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">PostgreSQL</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">postgres</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">sql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">reading</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a class="color3">活着</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">3-hexo</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">Git</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">GitHub</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">git</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">mathjax</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">fragment_cache</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">pjax</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">deepin</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">运维</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">IntellijIDEA</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">tale</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">mac</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">efficiency</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">regex</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">samba</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -520,15 +469,23 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a class="color1">samba</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">运维</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a class="color2">centos</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color4">vim</a>
+        <a class="color2">docker</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color2">docker</a>
+        <a class="color4">vim</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -548,15 +505,7 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color5">磁盘分区</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a class="color1">nginx</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">ftp</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -564,7 +513,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a class="color3">linux命令</a>
+        <a class="color4">ftp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">磁盘分区</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -576,7 +529,63 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a class="color3">linux命令</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a class="color4">encoding</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">3-hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">mathjax</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">Git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">git</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">GitHub</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">fragment_cache</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">mac</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">efficiency</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">pjax</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color2">deepin</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">IntellijIDEA</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">tale</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">regex</a>
     </li>
     
     <div class="clearfix"></div>
@@ -589,7 +598,7 @@
     
     <nav id="title-list-nav">
         
-        <a id="top" class="工具 hexo "
+        <a id="top" class="全部文章 工具 hexo "
            href="/2017/03/13/3-hexo-logs/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -597,7 +606,7 @@
             <span class="post-date" title="2017-03-13 15:44:57">2017/03/13</span>
         </a>
         
-        <a id="top" class="工具 hexo "
+        <a id="top" class="全部文章 工具 hexo "
            href="/2017/03/23/3-hexo-instruction/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -605,7 +614,7 @@
             <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2019/11/12/3-hexo-support-mermaid/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -613,7 +622,7 @@
             <span class="post-date" title="2019-11-12 09:55:37">2019/11/12</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2019/10/08/3-hexo-add-music/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -621,7 +630,7 @@
             <span class="post-date" title="2019-10-08 10:44:30">2019/10/08</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2019/09/24/3-hexo-jsfiddle/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -629,7 +638,7 @@
             <span class="post-date" title="2019-09-24 09:59:37">2019/09/24</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2019/09/24/3-hexo-toc/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -637,7 +646,7 @@
             <span class="post-date" title="2019-09-24 09:48:20">2019/09/24</span>
         </a>
         
-        <a  class="读书 阅读笔记 "
+        <a  class="全部文章 读书 阅读笔记 "
            href="/2019/06/09/misfortune-intellectual/"
            data-tag="reading"
            data-author="" >
@@ -645,7 +654,7 @@
             <span class="post-date" title="2019-06-09 21:31:09">2019/06/09</span>
         </a>
         
-        <a  class="读书 阅读笔记 "
+        <a  class="全部文章 读书 阅读笔记 "
            href="/2019/05/02/to-live/"
            data-tag="reading,活着"
            data-author="" >
@@ -653,7 +662,7 @@
             <span class="post-date" title="2019-05-02 17:46:16">2019/05/02</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2018/09/08/shell-command/"
            data-tag="linux,shell"
            data-author="" >
@@ -661,7 +670,7 @@
             <span class="post-date" title="2018-09-08 11:48:24">2018/09/08</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2018/02/08/nginx-config/"
            data-tag="nginx"
            data-author="" >
@@ -669,7 +678,7 @@
             <span class="post-date" title="2018-02-08 09:19:09">2018/02/08</span>
         </a>
         
-        <a  class="工具 软件记录 "
+        <a  class="全部文章 工具 软件记录 "
            href="/2017/12/13/Mac-BetterTouchTool/"
            data-tag="mac,efficiency"
            data-author="" >
@@ -677,7 +686,7 @@
             <span class="post-date" title="2017-12-13 17:04:25">2017/12/13</span>
         </a>
         
-        <a  class="后端 "
+        <a  class="全部文章 后端 "
            href="/2017/11/27/java-grammatical-sugar/"
            data-tag="java"
            data-author="" >
@@ -685,7 +694,7 @@
             <span class="post-date" title="2017-11-27 22:51:45">2017/11/27</span>
         </a>
         
-        <a  class="数据库 "
+        <a  class="全部文章 数据库 "
            href="/2017/11/09/PostgreSQL%E4%BA%8B%E7%89%A9%E5%8F%8A%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/"
            data-tag="PostgreSQL"
            data-author="" >
@@ -693,7 +702,7 @@
             <span class="post-date" title="2017-11-09 00:07:33">2017/11/09</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
            data-tag="vim,keybord,emacs,linux"
            data-author="" >
@@ -701,7 +710,7 @@
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
            data-tag="encoding"
            data-author="" >
@@ -709,7 +718,7 @@
             <span class="post-date" title="2017-09-25 19:15:00">2017/09/25</span>
         </a>
         
-        <a  class="后端 "
+        <a  class="全部文章 后端 "
            href="/2017/09/25/%E6%90%AD%E5%BB%BAdubbo+zookeeper%E5%B9%B3%E5%8F%B0/"
            data-tag="dubbo,zookeeper"
            data-author="" >
@@ -717,7 +726,7 @@
             <span class="post-date" title="2017-09-25 16:29:07">2017/09/25</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/09/25/docker-errors/"
            data-tag="docker"
            data-author="" >
@@ -725,7 +734,7 @@
             <span class="post-date" title="2017-09-25 10:03:50">2017/09/25</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/09/21/hexo-fragment_cache/"
            data-tag="hexo,fragment_cache"
            data-author="" >
@@ -733,7 +742,7 @@
             <span class="post-date" title="2017-09-21 19:34:37">2017/09/21</span>
         </a>
         
-        <a  class="大前端 "
+        <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
            data-tag="js,浏览器"
            data-author="" >
@@ -741,7 +750,7 @@
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
         </a>
         
-        <a  class="大前端 "
+        <a  class="全部文章 大前端 "
            href="/2017/09/21/iphone-bf-no-run-js/"
            data-tag="js"
            data-author="" >
@@ -749,7 +758,7 @@
             <span class="post-date" title="2017-09-21 15:25:32">2017/09/21</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/09/19/CentOS7%E4%BD%BF%E7%94%A8Firewalld/"
            data-tag="firewall"
            data-author="" >
@@ -757,7 +766,7 @@
             <span class="post-date" title="2017-09-19 09:53:53">2017/09/19</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/09/18/docker-save-export/"
            data-tag="docker"
            data-author="" >
@@ -765,7 +774,7 @@
             <span class="post-date" title="2017-09-18 22:38:52">2017/09/18</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/09/11/sudo%E5%91%BD%E4%BB%A4%E5%85%8D%E5%AF%86%E7%A0%81%E8%AE%BE%E7%BD%AE/"
            data-tag="linux"
            data-author="" >
@@ -773,7 +782,7 @@
             <span class="post-date" title="2017-09-11 09:30:55">2017/09/11</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/09/06/build-Maven-Nexus/"
            data-tag="java,maven,nexus"
            data-author="" >
@@ -781,7 +790,7 @@
             <span class="post-date" title="2017-09-06 23:01:31">2017/09/06</span>
         </a>
         
-        <a  class="数据库 "
+        <a  class="全部文章 数据库 "
            href="/2017/08/04/mybatis-Mapper/"
            data-tag="mybatis"
            data-author="" >
@@ -789,7 +798,7 @@
             <span class="post-date" title="2017-08-04 15:54:47">2017/08/04</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/07/05/MathJax-pjax/"
            data-tag="mathjax,pjax"
            data-author="" >
@@ -797,7 +806,7 @@
             <span class="post-date" title="2017-07-05 19:24:10">2017/07/05</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/07/05/3-hexo-mathjax/"
            data-tag="mathjax"
            data-author="" >
@@ -805,7 +814,7 @@
             <span class="post-date" title="2017-07-05 15:09:42">2017/07/05</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/07/03/CentOS7-anonymous-Samba/"
            data-tag="samba"
            data-author="" >
@@ -813,7 +822,7 @@
             <span class="post-date" title="2017-07-03 19:40:14">2017/07/03</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/06/26/gitment/"
            data-tag="hexo"
            data-author="" >
@@ -821,7 +830,7 @@
             <span class="post-date" title="2017-06-26 12:08:13">2017/06/26</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/06/01/vim-paste/"
            data-tag="vim"
            data-author="" >
@@ -829,7 +838,7 @@
             <span class="post-date" title="2017-06-01 19:45:24">2017/06/01</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/06/01/entering-docker/"
            data-tag="docker"
            data-author="" >
@@ -837,7 +846,7 @@
             <span class="post-date" title="2017-06-01 17:25:11">2017/06/01</span>
         </a>
         
-        <a  class="工具 软件记录 "
+        <a  class="全部文章 工具 软件记录 "
            href="/2017/05/24/tale-build-experience/"
            data-tag="tale"
            data-author="" >
@@ -845,7 +854,7 @@
             <span class="post-date" title="2017-05-24 11:29:30">2017/05/24</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/05/23/docker-data-manager/"
            data-tag="docker"
            data-author="" >
@@ -853,7 +862,7 @@
             <span class="post-date" title="2017-05-23 21:43:06">2017/05/23</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/05/23/docker-container/"
            data-tag="docker"
            data-author="" >
@@ -861,7 +870,7 @@
             <span class="post-date" title="2017-05-23 21:29:38">2017/05/23</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/05/23/docker-registry/"
            data-tag="docker,docker仓库"
            data-author="" >
@@ -869,7 +878,7 @@
             <span class="post-date" title="2017-05-23 21:15:52">2017/05/23</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/05/23/linux-command%EF%BC%8857%EF%BC%89-sort/"
            data-tag="linux命令"
            data-author="" >
@@ -877,7 +886,7 @@
             <span class="post-date" title="2017-05-23 11:44:12">2017/05/23</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/05/23/CentOS-DNS-GW-IP/"
            data-tag="运维,centos"
            data-author="" >
@@ -885,7 +894,7 @@
             <span class="post-date" title="2017-05-23 09:53:52">2017/05/23</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/05/22/Dockerfile/"
            data-tag="docker"
            data-author="" >
@@ -893,7 +902,7 @@
             <span class="post-date" title="2017-05-22 19:11:42">2017/05/22</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/05/19/docker-image/"
            data-tag="docker"
            data-author="" >
@@ -901,7 +910,7 @@
             <span class="post-date" title="2017-05-19 16:47:33">2017/05/19</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/05/19/docker-first/"
            data-tag="docker"
            data-author="" >
@@ -909,7 +918,7 @@
             <span class="post-date" title="2017-05-19 16:32:23">2017/05/19</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/05/17/linux%E6%97%A0%E6%8D%9F%E8%B0%83%E6%95%B4%E5%88%86%E5%8C%BA%E5%A4%A7%E5%B0%8F/"
            data-tag="运维,磁盘分区"
            data-author="" >
@@ -917,7 +926,7 @@
             <span class="post-date" title="2017-05-17 22:00:42">2017/05/17</span>
         </a>
         
-        <a  class="工具 git "
+        <a  class="全部文章 工具 git "
            href="/2017/05/16/Git%E7%BB%9F%E8%AE%A1%E6%93%8D%E4%BD%9C/"
            data-tag="git"
            data-author="" >
@@ -925,7 +934,7 @@
             <span class="post-date" title="2017-05-16 09:26:11">2017/05/16</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/04/25/%E8%A7%A3%E5%86%B3linux%E4%B8%8Bzip%E6%96%87%E4%BB%B6%E8%A7%A3%E5%8E%8B%E4%B9%B1%E7%A0%81/"
            data-tag="linux命令"
            data-author="" >
@@ -933,7 +942,7 @@
             <span class="post-date" title="2017-04-25 09:10:40">2017/04/25</span>
         </a>
         
-        <a  class="后端 "
+        <a  class="全部文章 后端 "
            href="/2017/04/22/encryption-algorithm/"
            data-tag="encryption"
            data-author="" >
@@ -941,7 +950,7 @@
             <span class="post-date" title="2017-04-22 09:30:41">2017/04/22</span>
         </a>
         
-        <a  class="大前端 "
+        <a  class="全部文章 大前端 "
            href="/2017/04/21/jsp-use-record/"
            data-tag="jsp,jstl"
            data-author="" >
@@ -949,7 +958,7 @@
             <span class="post-date" title="2017-04-21 11:22:12">2017/04/21</span>
         </a>
         
-        <a  class="后端 "
+        <a  class="全部文章 后端 "
            href="/2017/04/15/SpringMVC-implementation-process/"
            data-tag="java,spring,springmvc"
            data-author="" >
@@ -957,7 +966,7 @@
             <span class="post-date" title="2017-04-15 10:22:05">2017/04/15</span>
         </a>
         
-        <a  class="数据库 "
+        <a  class="全部文章 数据库 "
            href="/2017/04/14/postgres-sql-use/"
            data-tag="postgres,sql"
            data-author="" >
@@ -965,15 +974,15 @@
             <span class="post-date" title="2017-04-14 16:37:24">2017/04/14</span>
         </a>
         
-        <a  class="工具 软件记录 "
+        <a  class="全部文章 工具 软件记录 "
            href="/2017/03/30/deepin-linux/"
-           data-tag="deepin,运维"
+           data-tag="运维,deepin"
            data-author="" >
             <span class="post-title" title="deepin系统使用记录">deepin系统使用记录</span>
             <span class="post-date" title="2017-03-30 18:58:50">2017/03/30</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/03/27/hexo-error-collection/"
            data-tag="hexo"
            data-author="" >
@@ -981,7 +990,7 @@
             <span class="post-date" title="2017-03-27 19:40:42">2017/03/27</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/03/24/3-hexo-shortcuts/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -989,7 +998,7 @@
             <span class="post-date" title="2017-03-24 16:45:31">2017/03/24</span>
         </a>
         
-        <a  class="工具 "
+        <a  class="全部文章 工具 "
            href="/2017/03/23/the-third-comment/"
            data-tag="hexo"
            data-author="" >
@@ -997,7 +1006,7 @@
             <span class="post-date" title="2017-03-23 11:59:50">2017/03/23</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/03/17/windows-hexo/"
            data-tag="hexo"
            data-author="" >
@@ -1005,7 +1014,7 @@
             <span class="post-date" title="2017-03-17 14:02:55">2017/03/17</span>
         </a>
         
-        <a  class="大前端 "
+        <a  class="全部文章 大前端 "
            href="/2017/03/16/npm/"
            data-tag="node"
            data-author="" >
@@ -1013,7 +1022,7 @@
             <span class="post-date" title="2017-03-16 20:09:48">2017/03/16</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/03/14/Hexo-RSS-Sitemap/"
            data-tag="hexo"
            data-author="" >
@@ -1021,7 +1030,7 @@
             <span class="post-date" title="2017-03-14 09:44:29">2017/03/14</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/03/13/3-hexo-homepage/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -1029,7 +1038,7 @@
             <span class="post-date" title="2017-03-13 09:56:07">2017/03/13</span>
         </a>
         
-        <a  class="大前端 "
+        <a  class="全部文章 大前端 "
            href="/2017/03/09/busuanzi-pjax/"
            data-tag="jQuery,hexo"
            data-author="" >
@@ -1037,7 +1046,7 @@
             <span class="post-date" title="2017-03-09 20:15:51">2017/03/09</span>
         </a>
         
-        <a  class="大前端 "
+        <a  class="全部文章 大前端 "
            href="/2017/03/09/duoshuo-pjax/"
            data-tag="jQuery,hexo"
            data-author="" >
@@ -1045,7 +1054,7 @@
             <span class="post-date" title="2017-03-09 19:50:45">2017/03/09</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/03/09/Hexo-WordCount/"
            data-tag="hexo"
            data-author="" >
@@ -1053,7 +1062,7 @@
             <span class="post-date" title="2017-03-09 16:57:10">2017/03/09</span>
         </a>
         
-        <a  class="大前端 "
+        <a  class="全部文章 大前端 "
            href="/2017/03/08/understanding-the-critical-rendering-path/"
            data-tag="translation"
            data-author="" >
@@ -1061,7 +1070,7 @@
             <span class="post-date" title="2017-03-08 08:58:21">2017/03/08</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/03/07/3-hexo/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -1069,7 +1078,7 @@
             <span class="post-date" title="2017-03-07 11:15:50">2017/03/07</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/03/06/Vim-command/"
            data-tag="vim"
            data-author="" >
@@ -1077,7 +1086,7 @@
             <span class="post-date" title="2017-03-06 11:23:36">2017/03/06</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/03/06/linux-ftp/"
            data-tag="ftp"
            data-author="" >
@@ -1085,7 +1094,7 @@
             <span class="post-date" title="2017-03-06 08:47:48">2017/03/06</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/03/05/linux-command%EF%BC%8857%EF%BC%89-sftp/"
            data-tag="linux命令"
            data-author="" >
@@ -1093,7 +1102,7 @@
             <span class="post-date" title="2017-03-05 16:29:38">2017/03/05</span>
         </a>
         
-        <a  class="大前端 "
+        <a  class="全部文章 大前端 "
            href="/2017/03/04/AngularJs/"
            data-tag="AngularJs"
            data-author="" >
@@ -1101,7 +1110,7 @@
             <span class="post-date" title="2017-03-04 08:40:58">2017/03/04</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/02/28/3-hexo-multiple-author/"
            data-tag="hexo,3-hexo"
            data-author="" >
@@ -1109,7 +1118,7 @@
             <span class="post-date" title="2017-02-28 10:55:31">2017/02/28</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/02/25/hexo-create-404-page/"
            data-tag="hexo"
            data-author="" >
@@ -1117,7 +1126,7 @@
             <span class="post-date" title="2017-02-25 15:18:39">2017/02/25</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2017/02/24/hexo-top-sort/"
            data-tag="hexo"
            data-author="" >
@@ -1125,7 +1134,7 @@
             <span class="post-date" title="2017-02-24 15:50:38">2017/02/24</span>
         </a>
         
-        <a  class="后端 "
+        <a  class="全部文章 后端 "
            href="/2017/02/21/the-introduction-of-memory-leak-what-why-and-how/"
            data-tag="java,translation"
            data-author="" >
@@ -1133,7 +1142,7 @@
             <span class="post-date" title="2017-02-21 15:05:39">2017/02/21</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/02/20/linux-command%EF%BC%8856%EF%BC%89-tailf/"
            data-tag="linux命令"
            data-author="" >
@@ -1141,7 +1150,7 @@
             <span class="post-date" title="2017-02-20 15:11:06">2017/02/20</span>
         </a>
         
-        <a  class="大前端 "
+        <a  class="全部文章 大前端 "
            href="/2017/02/08/pjax/"
            data-tag="jQuery"
            data-author="" >
@@ -1149,7 +1158,7 @@
             <span class="post-date" title="2017-02-08 20:18:54">2017/02/08</span>
         </a>
         
-        <a  class="读书 书单 "
+        <a  class="全部文章 读书 书单 "
            href="/2017/01/31/reading-list/"
            data-tag="reading"
            data-author="" >
@@ -1157,7 +1166,7 @@
             <span class="post-date" title="2017-01-31 15:29:32">2017/01/31</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/23/linux-command/"
            data-tag="linux命令"
            data-author="" >
@@ -1165,7 +1174,7 @@
             <span class="post-date" title="2017-01-23 11:41:48">2017/01/23</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/23/linux-command%EF%BC%8855%EF%BC%89-crontab/"
            data-tag="linux命令"
            data-author="" >
@@ -1173,7 +1182,7 @@
             <span class="post-date" title="2017-01-23 10:44:50">2017/01/23</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/22/linux-command%EF%BC%8854%EF%BC%89-at/"
            data-tag="linux命令"
            data-author="" >
@@ -1181,7 +1190,7 @@
             <span class="post-date" title="2017-01-22 10:23:44">2017/01/22</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/21/linux-command%EF%BC%8853%EF%BC%89-watch/"
            data-tag="linux命令"
            data-author="" >
@@ -1189,7 +1198,7 @@
             <span class="post-date" title="2017-01-21 10:12:30">2017/01/21</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/20/linux-command%EF%BC%8852%EF%BC%89-ps/"
            data-tag="linux命令"
            data-author="" >
@@ -1197,7 +1206,7 @@
             <span class="post-date" title="2017-01-20 09:46:16">2017/01/20</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/19/linux-command%EF%BC%8851%EF%BC%89-wc/"
            data-tag="linux命令"
            data-author="" >
@@ -1205,7 +1214,7 @@
             <span class="post-date" title="2017-01-19 09:33:59">2017/01/19</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/18/linux-command%EF%BC%8850%EF%BC%89-grep/"
            data-tag="linux命令"
            data-author="" >
@@ -1213,7 +1222,7 @@
             <span class="post-date" title="2017-01-18 10:12:46">2017/01/18</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/17/linux-command%EF%BC%8849%EF%BC%89-cal/"
            data-tag="linux命令"
            data-author="" >
@@ -1221,7 +1230,7 @@
             <span class="post-date" title="2017-01-17 09:38:32">2017/01/17</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/16/linux-command%EF%BC%8848%EF%BC%89-date/"
            data-tag="linux命令"
            data-author="" >
@@ -1229,7 +1238,7 @@
             <span class="post-date" title="2017-01-16 14:39:27">2017/01/16</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/15/linux-command%EF%BC%8847%EF%BC%89-diff/"
            data-tag="linux命令"
            data-author="" >
@@ -1237,7 +1246,7 @@
             <span class="post-date" title="2017-01-15 14:08:08">2017/01/15</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/14/linux-command%EF%BC%8846%EF%BC%89-ln/"
            data-tag="linux命令"
            data-author="" >
@@ -1245,7 +1254,7 @@
             <span class="post-date" title="2017-01-14 11:00:33">2017/01/14</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/13/linux-command%EF%BC%8845%EF%BC%89-scp/"
            data-tag="linux命令"
            data-author="" >
@@ -1253,7 +1262,7 @@
             <span class="post-date" title="2017-01-13 10:53:48">2017/01/13</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/12/linux-command%EF%BC%8844%EF%BC%89-rcp/"
            data-tag="linux命令"
            data-author="" >
@@ -1261,7 +1270,7 @@
             <span class="post-date" title="2017-01-12 10:36:06">2017/01/12</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/12/linux-command%EF%BC%8843%EF%BC%89-telnet/"
            data-tag="linux命令"
            data-author="" >
@@ -1269,7 +1278,7 @@
             <span class="post-date" title="2017-01-12 09:24:01">2017/01/12</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/11/linux-command%EF%BC%8842%EF%BC%89-ss/"
            data-tag="linux命令"
            data-author="" >
@@ -1277,7 +1286,7 @@
             <span class="post-date" title="2017-01-11 10:34:47">2017/01/11</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/10/linux-command%EF%BC%8841%EF%BC%89-netstat/"
            data-tag="linux命令"
            data-author="" >
@@ -1285,7 +1294,7 @@
             <span class="post-date" title="2017-01-10 09:54:16">2017/01/10</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/09/linux-command%EF%BC%8840%EF%BC%89-traceroute/"
            data-tag="linux命令"
            data-author="" >
@@ -1293,7 +1302,7 @@
             <span class="post-date" title="2017-01-09 10:56:53">2017/01/09</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/08/linux-command%EF%BC%8839%EF%BC%89-ping/"
            data-tag="linux命令"
            data-author="" >
@@ -1301,7 +1310,7 @@
             <span class="post-date" title="2017-01-08 10:24:50">2017/01/08</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/07/linux-command%EF%BC%8838%EF%BC%89-route/"
            data-tag="linux命令"
            data-author="" >
@@ -1309,7 +1318,7 @@
             <span class="post-date" title="2017-01-07 10:16:34">2017/01/07</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/06/linux-command%EF%BC%8837%EF%BC%89-ifconfig/"
            data-tag="linux命令"
            data-author="" >
@@ -1317,7 +1326,7 @@
             <span class="post-date" title="2017-01-06 09:57:01">2017/01/06</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/05/linux-command%EF%BC%8836%EF%BC%89-lsof/"
            data-tag="linux命令"
            data-author="" >
@@ -1325,7 +1334,7 @@
             <span class="post-date" title="2017-01-05 10:28:13">2017/01/05</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/04/linux-command%EF%BC%8835%EF%BC%89-iostat/"
            data-tag="linux命令"
            data-author="" >
@@ -1333,7 +1342,7 @@
             <span class="post-date" title="2017-01-04 10:10:02">2017/01/04</span>
         </a>
         
-        <a  class="读书 阅读笔记 "
+        <a  class="全部文章 读书 阅读笔记 "
            href="/2017/01/03/Fortress-Besieged/"
            data-tag="reading"
            data-author="" >
@@ -1341,7 +1350,7 @@
             <span class="post-date" title="2017-01-03 11:27:04">2017/01/03</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/03/linux-command%EF%BC%8834%EF%BC%89-vmstat/"
            data-tag="linux命令"
            data-author="" >
@@ -1349,7 +1358,7 @@
             <span class="post-date" title="2017-01-03 09:46:57">2017/01/03</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/02/linux-command%EF%BC%8833%EF%BC%89-free/"
            data-tag="linux命令"
            data-author="" >
@@ -1357,7 +1366,7 @@
             <span class="post-date" title="2017-01-02 21:43:26">2017/01/02</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2017/01/01/linux-command%EF%BC%8832%EF%BC%89-top/"
            data-tag="linux命令"
            data-author="" >
@@ -1365,7 +1374,7 @@
             <span class="post-date" title="2017-01-01 19:31:28">2017/01/01</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/31/linux-command%EF%BC%8831%EF%BC%89-du/"
            data-tag="linux命令"
            data-author="" >
@@ -1373,7 +1382,7 @@
             <span class="post-date" title="2016-12-31 14:36:01">2016/12/31</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/30/linux-command%EF%BC%8830%EF%BC%89-df/"
            data-tag="linux命令"
            data-author="" >
@@ -1381,7 +1390,7 @@
             <span class="post-date" title="2016-12-30 14:23:31">2016/12/30</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/29/linux-command%EF%BC%8829%EF%BC%89-/etc/group%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/"
            data-tag="linux命令"
            data-author="" >
@@ -1389,7 +1398,7 @@
             <span class="post-date" title="2016-12-29 14:13:05">2016/12/29</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/28/linux-command%EF%BC%8828%EF%BC%89-chown/"
            data-tag="linux命令"
            data-author="" >
@@ -1397,7 +1406,7 @@
             <span class="post-date" title="2016-12-28 09:51:30">2016/12/28</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/27/linux-command%EF%BC%8827%EF%BC%89-chgrp/"
            data-tag="linux命令"
            data-author="" >
@@ -1405,7 +1414,7 @@
             <span class="post-date" title="2016-12-27 09:40:06">2016/12/27</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/26/linux-command%EF%BC%8826%EF%BC%89-chmod/"
            data-tag="linux命令"
            data-author="" >
@@ -1413,7 +1422,7 @@
             <span class="post-date" title="2016-12-26 20:22:43">2016/12/26</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/25/linux-command%EF%BC%8825%EF%BC%89-gzip/"
            data-tag="linux命令"
            data-author="" >
@@ -1421,7 +1430,7 @@
             <span class="post-date" title="2016-12-25 16:55:15">2016/12/25</span>
         </a>
         
-        <a  class="工具 git "
+        <a  class="全部文章 工具 git "
            href="/2016/12/24/git-reset/"
            data-tag="Git"
            data-author="" >
@@ -1429,7 +1438,7 @@
             <span class="post-date" title="2016-12-24 11:19:24">2016/12/24</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/24/linux-command%EF%BC%8824%EF%BC%89-tar/"
            data-tag="linux命令"
            data-author="" >
@@ -1437,7 +1446,7 @@
             <span class="post-date" title="2016-12-24 10:24:17">2016/12/24</span>
         </a>
         
-        <a  class="工具 git "
+        <a  class="全部文章 工具 git "
            href="/2016/12/23/git-master/"
            data-tag="Git"
            data-author="" >
@@ -1445,7 +1454,7 @@
             <span class="post-date" title="2016-12-23 10:59:01">2016/12/23</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/23/linux-command%EF%BC%8823%EF%BC%89-%E7%94%A8SecureCRT%E6%9D%A5%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/"
            data-tag="linux命令"
            data-author="" >
@@ -1453,7 +1462,7 @@
             <span class="post-date" title="2016-12-23 09:48:15">2016/12/23</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/22/linux-command%EF%BC%8822%EF%BC%89-find%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/"
            data-tag="linux命令"
            data-author="" >
@@ -1461,7 +1470,7 @@
             <span class="post-date" title="2016-12-22 11:44:14">2016/12/22</span>
         </a>
         
-        <a  class="工具 git "
+        <a  class="全部文章 工具 git "
            href="/2016/12/21/Git-SSH-HTTPS-verify-configuration/"
            data-tag="Git"
            data-author="" >
@@ -1469,7 +1478,7 @@
             <span class="post-date" title="2016-12-21 15:31:55">2016/12/21</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/21/linux-command%EF%BC%8821%EF%BC%89-find%E5%91%BD%E4%BB%A4%E4%B9%8Bxargs/"
            data-tag="linux命令"
            data-author="" >
@@ -1477,7 +1486,7 @@
             <span class="post-date" title="2016-12-21 11:08:01">2016/12/21</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/20/linux-command%EF%BC%8820%EF%BC%89-find%E5%91%BD%E4%BB%A4%E4%B9%8Bexec/"
            data-tag="linux命令"
            data-author="" >
@@ -1485,7 +1494,7 @@
             <span class="post-date" title="2016-12-20 10:47:32">2016/12/20</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/19/linux-command%EF%BC%8819%EF%BC%89-find%E5%91%BD%E4%BB%A4%E6%A6%82%E8%A7%88/"
            data-tag="linux命令"
            data-author="" >
@@ -1493,7 +1502,7 @@
             <span class="post-date" title="2016-12-19 15:19:10">2016/12/19</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/18/linux-command%EF%BC%8818%EF%BC%89-locate/"
            data-tag="linux命令"
            data-author="" >
@@ -1501,7 +1510,7 @@
             <span class="post-date" title="2016-12-18 15:09:28">2016/12/18</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/17/linux-command%EF%BC%8817%EF%BC%89-whereis/"
            data-tag="linux命令"
            data-author="" >
@@ -1509,7 +1518,7 @@
             <span class="post-date" title="2016-12-17 10:42:58">2016/12/17</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/16/linux-command%EF%BC%8816%EF%BC%89-which/"
            data-tag="linux命令"
            data-author="" >
@@ -1517,7 +1526,7 @@
             <span class="post-date" title="2016-12-16 11:25:49">2016/12/16</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/15/linux-command%EF%BC%8815%EF%BC%89-tail/"
            data-tag="linux命令"
            data-author="" >
@@ -1525,7 +1534,7 @@
             <span class="post-date" title="2016-12-15 15:00:26">2016/12/15</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/14/linux-command%EF%BC%8814%EF%BC%89-head/"
            data-tag="linux命令"
            data-author="" >
@@ -1533,7 +1542,7 @@
             <span class="post-date" title="2016-12-14 14:35:49">2016/12/14</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/13/linux-command%EF%BC%8813%EF%BC%89-less/"
            data-tag="linux命令"
            data-author="" >
@@ -1541,7 +1550,7 @@
             <span class="post-date" title="2016-12-13 21:46:14">2016/12/13</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/12/linux-command%EF%BC%8812%EF%BC%89-more/"
            data-tag="linux命令"
            data-author="" >
@@ -1549,7 +1558,7 @@
             <span class="post-date" title="2016-12-12 21:29:39">2016/12/12</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/11/linux-command%EF%BC%8811%EF%BC%89-nl/"
            data-tag="linux命令"
            data-author="" >
@@ -1557,7 +1566,7 @@
             <span class="post-date" title="2016-12-11 21:11:48">2016/12/11</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/10/linux-command%EF%BC%8810%EF%BC%89-cat/"
            data-tag="linux命令"
            data-author="" >
@@ -1565,7 +1574,7 @@
             <span class="post-date" title="2016-12-10 10:52:50">2016/12/10</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/09/linux-command%EF%BC%889%EF%BC%89-touch/"
            data-tag="linux命令"
            data-author="" >
@@ -1573,7 +1582,7 @@
             <span class="post-date" title="2016-12-09 07:15:12">2016/12/09</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/08/linux-command%EF%BC%888%EF%BC%89-cp/"
            data-tag="linux命令"
            data-author="" >
@@ -1581,7 +1590,7 @@
             <span class="post-date" title="2016-12-08 16:31:43">2016/12/08</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/07/linux-command%EF%BC%887%EF%BC%89-mv/"
            data-tag="linux命令"
            data-author="" >
@@ -1589,7 +1598,7 @@
             <span class="post-date" title="2016-12-07 15:55:20">2016/12/07</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/06/linux-command%EF%BC%886%EF%BC%89-rmdir/"
            data-tag="linux命令"
            data-author="" >
@@ -1597,7 +1606,7 @@
             <span class="post-date" title="2016-12-06 15:24:32">2016/12/06</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/05/linux-command%EF%BC%885%EF%BC%89-rm/"
            data-tag="linux命令"
            data-author="" >
@@ -1605,7 +1614,7 @@
             <span class="post-date" title="2016-12-05 13:40:38">2016/12/05</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/04/linux-command%EF%BC%884%EF%BC%89-mkdir/"
            data-tag="linux命令"
            data-author="" >
@@ -1613,7 +1622,7 @@
             <span class="post-date" title="2016-12-04 09:27:32">2016/12/04</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/03/linux-command%EF%BC%883%EF%BC%89-pwd/"
            data-tag="linux命令"
            data-author="" >
@@ -1621,7 +1630,7 @@
             <span class="post-date" title="2016-12-03 09:15:52">2016/12/03</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/02/linux-command%EF%BC%882%EF%BC%89-cd/"
            data-tag="linux命令"
            data-author="" >
@@ -1629,7 +1638,7 @@
             <span class="post-date" title="2016-12-02 11:04:55">2016/12/02</span>
         </a>
         
-        <a  class="运维 "
+        <a  class="全部文章 运维 "
            href="/2016/12/01/linux-command%EF%BC%881%EF%BC%89-ls/"
            data-tag="linux命令"
            data-author="" >
@@ -1637,7 +1646,7 @@
             <span class="post-date" title="2016-12-01 09:38:59">2016/12/01</span>
         </a>
         
-        <a  class="大前端 "
+        <a  class="全部文章 大前端 "
            href="/2016/11/23/jQuery-checkbox-radio-select/"
            data-tag="jQuery"
            data-author="" >
@@ -1645,7 +1654,7 @@
             <span class="post-date" title="2016-11-23 16:19:34">2016/11/23</span>
         </a>
         
-        <a  class="大前端 "
+        <a  class="全部文章 大前端 "
            href="/2016/11/22/jQuery-selector/"
            data-tag="jQuery"
            data-author="" >
@@ -1653,7 +1662,7 @@
             <span class="post-date" title="2016-11-22 17:11:48">2016/11/22</span>
         </a>
         
-        <a  class="工具 软件记录 "
+        <a  class="全部文章 工具 软件记录 "
            href="/2016/11/05/idea-shortcuts/"
            data-tag="IntellijIDEA"
            data-author="" >
@@ -1661,7 +1670,7 @@
             <span class="post-date" title="2016-11-05 15:22:48">2016/11/05</span>
         </a>
         
-        <a  class="后端 "
+        <a  class="全部文章 后端 "
            href="/2016/10/24/web-xml/"
            data-tag="java,javaee"
            data-author="" >
@@ -1669,7 +1678,7 @@
             <span class="post-date" title="2016-10-24 10:10:45">2016/10/24</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2016/10/23/hexo-git-server-blog/"
            data-tag="hexo,Git"
            data-author="" >
@@ -1677,7 +1686,7 @@
             <span class="post-date" title="2016-10-23 09:24:03">2016/10/23</span>
         </a>
         
-        <a  class="工具 hexo "
+        <a  class="全部文章 工具 hexo "
            href="/2016/10/22/hexo-gitHub-pages-create-own-blog/"
            data-tag="hexo,Git,GitHub"
            data-author="" >
@@ -1685,7 +1694,7 @@
             <span class="post-date" title="2016-10-22 21:24:05">2016/10/22</span>
         </a>
         
-        <a  class="工具 git "
+        <a  class="全部文章 工具 git "
            href="/2016/10/22/set-up-git-server-on-vps/"
            data-tag="Git"
            data-author="" >
@@ -1693,7 +1702,7 @@
             <span class="post-date" title="2016-10-22 20:08:04">2016/10/22</span>
         </a>
         
-        <a  class="工具 git "
+        <a  class="全部文章 工具 git "
            href="/2016/10/13/contributing-to-open-source-on-github/"
            data-tag="Git,GitHub"
            data-author="" >
@@ -1701,7 +1710,7 @@
             <span class="post-date" title="2016-10-13 15:44:07">2016/10/13</span>
         </a>
         
-        <a  class="数据库 "
+        <a  class="全部文章 数据库 "
            href="/2016/10/12/PostgreSQL-2/"
            data-tag="PostgreSQL"
            data-author="" >
@@ -1709,7 +1718,7 @@
             <span class="post-date" title="2016-10-12 20:27:07">2016/10/12</span>
         </a>
         
-        <a  class="数据库 "
+        <a  class="全部文章 数据库 "
            href="/2016/10/12/PostgreSQL-1/"
            data-tag="PostgreSQL"
            data-author="" >
@@ -1717,7 +1726,7 @@
             <span class="post-date" title="2016-10-12 19:49:40">2016/10/12</span>
         </a>
         
-        <a  class="数据库 "
+        <a  class="全部文章 数据库 "
            href="/2016/10/12/PostgreSQL-3/"
            data-tag="PostgreSQL"
            data-author="" >
@@ -1725,7 +1734,7 @@
             <span class="post-date" title="2016-10-12 15:44:16">2016/10/12</span>
         </a>
         
-        <a  class="大前端 "
+        <a  class="全部文章 大前端 "
            href="/2016/10/05/FreeMarker/"
            data-tag="java,freemarker"
            data-author="" >
@@ -1733,7 +1742,7 @@
             <span class="post-date" title="2016-10-05 11:58:50">2016/10/05</span>
         </a>
         
-        <a  class="工具 软件记录 "
+        <a  class="全部文章 工具 软件记录 "
            href="/2016/10/04/regular-expression/"
            data-tag="regex"
            data-author="" >
@@ -1741,7 +1750,7 @@
             <span class="post-date" title="2016-10-04 09:41:40">2016/10/04</span>
         </a>
         
-        <a  class="工具 git "
+        <a  class="全部文章 工具 git "
            href="/2016/10/02/Git-command/"
            data-tag="Git"
            data-author="" >
@@ -1749,7 +1758,7 @@
             <span class="post-date" title="2016-10-02 17:15:39">2016/10/02</span>
         </a>
         
-        <a  class="工具 git "
+        <a  class="全部文章 工具 git "
            href="/2016/09/30/computer-mutiple-github-account/"
            data-tag="Git,GitHub"
            data-author="" >
@@ -1757,7 +1766,12 @@
             <span class="post-date" title="2016-09-30 16:42:48">2016/09/30</span>
         </a>
         
+        <div id="no-item-tips">
+
+        </div>
     </nav>
+    <div id="outline-list">
+    </div>
 </div>
     </div>
     <div class="hide-list">
@@ -1887,18 +1901,6 @@ $ vim ~/.git-credentials
 </p>
 
 
-<div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>Git之SSH与HTTPS免密码配置</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">651</span></p>
-    <p><span class="copy-title">本文作者:</span><a  title="叶落阁">叶落阁</a></p>
-    <p><span class="copy-title">发布时间:</span>2016-12-21, 15:31:55</p>
-    <p><span class="copy-title">最后更新:</span>2019-05-21, 10:49:13</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2016/12/21/Git-SSH-HTTPS-verify-configuration/" title="Git之SSH与HTTPS免密码配置">http://yelog.org/2016/12/21/Git-SSH-HTTPS-verify-configuration/</a>
-    <p>
-        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
-    </p>
-</div>
-
 
 
     <div id="comments"></div>
@@ -1937,12 +1939,6 @@ $ vim ~/.git-credentials
     </div>
     <div class="full-toc">
         <button class="full"><span class="min "></span></button>
-<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
-<div class="post-toc"><span class="post-toc-title">目录</span>
-    <div class="post-toc-content">
-
-    </div>
-</div>
 <a class="" id="rocket" ></a>
 
     </div>
@@ -1975,11 +1971,13 @@ $ vim ~/.git-credentials
     var img_resize = 'default';
     /*作者、标签的自动补全*/
     $(function () {
-        $('.search').AutoComplete({
-            'data': ['#PostgreSQL','#mybatis','#AngularJs','#jsp','#jstl','#java','#freemarker','#jQuery','#postgres','#sql','#node','#hexo','#translation','#js','#javaee','#dubbo','#zookeeper','#encryption','#浏览器','#reading','#spring','#springmvc','#活着','#3-hexo','#Git','#GitHub','#git','#mathjax','#fragment_cache','#pjax','#deepin','#运维','#IntellijIDEA','#tale','#mac','#efficiency','#regex','#samba','#firewall','#centos','#vim','#docker','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#nginx','#ftp','#shell','#linux命令','#maven','#nexus','#encoding',],
-            'itemHeight': 20,
-            'width': 418
-        }).AutoComplete('show');
+        $('#local-search-input').AutoComplete({
+            data: ['#java','#javaee','#translation','#dubbo','#zookeeper','#encryption','#AngularJs','#spring','#springmvc','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#浏览器','#mybatis','#PostgreSQL','#postgres','#sql','#reading','#活着','#firewall','#samba','#运维','#centos','#docker','#vim','#docker仓库','#keybord','#emacs','#linux','#nginx','#shell','#ftp','#磁盘分区','#maven','#nexus','#linux命令','#encoding','#3-hexo','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#deepin','#IntellijIDEA','#tale','#regex',],
+            itemHeight: 20,
+            width: $('.nav-right').width() - 47,
+            left: $('.nav-right').offset().left,
+			selectFirst: true
+        });
     })
     function initArticle() {
         /*渲染对应的表格样式*/
@@ -2074,7 +2072,7 @@ $ vim ~/.git-credentials
         margin-left: 35px;
     }
     .pre-numbering{
-        margin: 0px;
+        margin: 0;
         position: absolute;
         top: 0;
         left: 0;
@@ -2187,25 +2185,6 @@ $ vim ~/.git-credentials
     
 
     /*文章列表背景图*/
-    
-    .nav-right:before {
-        content: ' ';
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.3;
-        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        -ms-background-size: cover;
-        -o-background-size: cover;
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        background-size: cover;
-    }
     
 
     
