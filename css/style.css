@@ -917,6 +917,15 @@ div.ac > ul > li:before,
   width: 100%;
   padding: 0 25px;
   box-sizing: border-box;
+  height: calc(100vh - 45px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.nav-right .title-list #outline-list::-webkit-scrollbar {
+  width: 3px;
+}
+.nav-right .title-list #outline-list::-webkit-scrollbar-thumb {
+  background: #309e85;
 }
 .nav-right .title-list #outline-list .toc {
   list-style-type: none;
@@ -985,6 +994,7 @@ div.ac > ul > li:before,
 .nav-right .title-list #local-search-result {
   clear: both;
   width: 100%;
+  height: calc(100vh - 45px);
   padding-bottom: 10px;
   color: #64717f;
   text-shadow: -1px 1px 0 rgba(125,139,153,0.1);
@@ -1007,6 +1017,7 @@ div.ac > ul > li:before,
 .nav-right .title-list #local-search-result #no-item-tips {
   display: none;
   height: 32px;
+  line-height: 1.5;
   padding: 15px;
 }
 .nav-right .title-list nav #no-item-tips span,
@@ -1980,6 +1991,9 @@ img.pswp__img {
   }
   .nav-right .title-list nav a .post-title {
     width: calc(100vw - 32px);
+  }
+  .nav-right .title-list #outline-list {
+    height: calc(100vh - 214px);
   }
   .nav-right .friends-area .friends-content {
     height: calc(100vh - 232px);
