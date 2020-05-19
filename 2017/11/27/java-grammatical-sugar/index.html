@@ -29,6 +29,7 @@
 <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js" rel="stylesheet">
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.0.1" ></script>
 <script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/highlight.min.js"></script>
@@ -255,14 +256,6 @@
     
         
             
-        
-    
-        
-            
-        
-    
-        
-            
             <li><div data-rel="工具"><i class="fold iconfont icon-right"></i>工具<small>(36)</small></div>
                 
                     <ul class="sub hide">
@@ -282,6 +275,14 @@
                     </ul>
                 
             </li>
+            
+        
+    
+        
+            
+        
+    
+        
             
         
     
@@ -354,240 +355,245 @@
         <div class="title-list">
     <div class="right-top">
         <div id="default-panel">
-            <i class="iconfont icon-search" title="搜索"></i>
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
             <div class="right-title">全部文章</div>
-            <i class="iconfont icon-file-tree" title="切换到大纲视图"></i>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
         </div>
         <div id="search-panel">
-            <i class="iconfont icon-left"></i>
+            <i class="iconfont icon-left" data-title="返回"></i>
             <input id="local-search-input" />
             <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
         </div>
         <div id="outline-panel" style="display: none">
             <div class="right-title">大纲</div>
-            <i class="iconfont icon-list" title="切换到文章列表"></i>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
         </div>
     </div>
 
     <div class="tags-list">
-    
-    <li class="article-tag-list-item">
-        <a class="color1">encryption</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">java</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">translation</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">javaee</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">spring</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">springmvc</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">dubbo</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">zookeeper</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">mybatis</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">PostgreSQL</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">postgres</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">sql</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">AngularJs</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">jsp</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">jstl</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">freemarker</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">jQuery</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">node</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">hexo</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">js</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">reading</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">浏览器</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">活着</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">3-hexo</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">mathjax</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">Git</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">GitHub</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">git</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">fragment_cache</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">deepin</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">运维</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">mac</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">efficiency</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">pjax</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">IntellijIDEA</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">tale</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">regex</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">samba</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">centos</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">firewall</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color2">docker</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">docker仓库</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">vim</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">keybord</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">emacs</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">linux</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">磁盘分区</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">nginx</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">ftp</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">shell</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">linux命令</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">maven</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color1">nexus</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">encoding</a>
-    </li>
-    
-    <div class="clearfix"></div>
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color5">java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color2">translation</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">encryption</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">dubbo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color5">zookeeper</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color3">mybatis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color2">spring</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color5">springmvc</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">PostgreSQL</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color2">javaee</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color4">postgres</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color4">sql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color4">jsp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color5">jstl</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color5">AngularJs</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color2">jQuery</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color5">node</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">freemarker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color5">hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color3">js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color4">浏览器</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color3">reading</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color2">3-hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color3">活着</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color3">mathjax</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color4">Git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color4">git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color2">GitHub</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color5">fragment_cache</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color4">mac</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">efficiency</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color5">pjax</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color3">IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color2">deepin</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color3">运维</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color5">tale</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">regex</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">samba</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color4">firewall</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color2">docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color2">centos</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color4">vim</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color4">docker仓库</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color3">keybord</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">emacs</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color5">磁盘分区</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color4">ftp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">nginx</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">maven</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">nexus</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color3">linux命令</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color1">shell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a class="color4">encoding</a>
+            </li>
+        
+    </div>
+
 </div>
 
     
@@ -1774,7 +1780,7 @@
 </div>
     </div>
     <div class="hide-list">
-        <div class="semicircle" title="按键 s 快速切换全屏">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
@@ -2102,7 +2108,7 @@ public final class Fruit extends Enum
 
     </div>
     <div class="full-toc">
-        <button class="full" title="按键 s 快速切换全屏"><span class="min "></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>
@@ -2136,7 +2142,7 @@ public final class Fruit extends Enum
     /*作者、标签的自动补全*/
     $(function () {
         $('#local-search-input').AutoComplete({
-            data: ['#encryption','#java','#translation','#javaee','#spring','#springmvc','#dubbo','#zookeeper','#mybatis','#PostgreSQL','#postgres','#sql','#AngularJs','#jsp','#jstl','#freemarker','#jQuery','#node','#hexo','#js','#reading','#浏览器','#活着','#3-hexo','#mathjax','#Git','#GitHub','#git','#fragment_cache','#deepin','#运维','#mac','#efficiency','#pjax','#IntellijIDEA','#tale','#regex','#samba','#centos','#firewall','#docker','#docker仓库','#vim','#keybord','#emacs','#linux','#磁盘分区','#nginx','#ftp','#shell','#linux命令','#maven','#nexus','#encoding',],
+            data: ['#java','#translation','#encryption','#dubbo','#zookeeper','#mybatis','#spring','#springmvc','#PostgreSQL','#javaee','#postgres','#sql','#jsp','#jstl','#AngularJs','#jQuery','#node','#freemarker','#hexo','#js','#浏览器','#reading','#3-hexo','#活着','#mathjax','#Git','#git','#GitHub','#fragment_cache','#mac','#efficiency','#pjax','#IntellijIDEA','#deepin','#运维','#tale','#regex','#samba','#firewall','#docker','#centos','#vim','#docker仓库','#keybord','#emacs','#linux','#磁盘分区','#ftp','#nginx','#maven','#nexus','#linux命令','#shell','#encoding',],
             itemHeight: 20,
             width: $('.nav-right').width() - 47,
             left: $('.nav-right').offset().left,
