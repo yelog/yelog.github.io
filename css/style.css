@@ -298,8 +298,6 @@
   font-style: normal;
 }
 .article .article-meta .date:before,
-.article .article-meta .tag:before,
-.article .article-meta .book:before,
 .nav-right nav a:before,
 #local-search-result a:before,
 .nav-right form .cross:before,
@@ -324,8 +322,8 @@
 }
 @font-face {
   font-family: 'iconfont'; /* project id 236002 */
-  src: url("//at.alicdn.com/t/font_236002_7zblp9ry4jj.eot");
-  src: url("//at.alicdn.com/t/font_236002_7zblp9ry4jj.eot?#iefix") format('embedded-opentype'), url("//at.alicdn.com/t/font_236002_7zblp9ry4jj.woff2") format('woff2'), url("//at.alicdn.com/t/font_236002_7zblp9ry4jj.woff") format('woff'), url("//at.alicdn.com/t/font_236002_7zblp9ry4jj.ttf") format('truetype'), url("//at.alicdn.com/t/font_236002_7zblp9ry4jj.svg#iconfont") format('svg');
+  src: url("//at.alicdn.com/t/font_236002_600u3zzht94.eot");
+  src: url("//at.alicdn.com/t/font_236002_600u3zzht94.eot?#iefix") format('embedded-opentype'), url("//at.alicdn.com/t/font_236002_600u3zzht94.woff2") format('woff2'), url("//at.alicdn.com/t/font_236002_600u3zzht94.woff") format('woff'), url("//at.alicdn.com/t/font_236002_600u3zzht94.ttf") format('truetype'), url("//at.alicdn.com/t/font_236002_600u3zzht94.svg#iconfont") format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;
@@ -405,6 +403,9 @@
 }
 .icon-list:before {
   content: "\e619";
+}
+.icon-category:before {
+  content: "\e62c";
 }
 .icon-tag:before {
   content: "\e7a3";
@@ -1205,14 +1206,15 @@
 }
 .post {
   height: 100%;
-  font-size: 18px;
-  line-height: 1.6;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
   background: #f4f5f5;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
   color: #2f2f2f;
-  font-weight: normal;
   margin-left: 1px;
 }
 .post ::selection {
@@ -1221,8 +1223,9 @@
   text-shadow: none;
 }
 .post .pjax {
+  max-width: 900px;
   min-height: calc(100vh - 143px);
-  margin: 0 20px;
+  margin: 0 auto;
   overflow-y: auto;
   transition: padding-right 0.5s;
   opacity: 1;
@@ -1254,6 +1257,9 @@
   color: #bcc1c4;
   border-left: 3px solid #b4b4b4;
   padding-left: 10px;
+}
+.post .pjax article .article-meta > span {
+  margin-right: 8px;
 }
 .post .pjax article .article-meta .origin a {
   color: inherit;
@@ -1293,19 +1299,15 @@
 .post .pjax article .article-meta .author a:hover {
   text-decoration: none;
 }
-.post .pjax article .article-meta .book:before {
-  content: "\f02d";
-}
 .post .pjax article .article-meta .book a {
   cursor: pointer;
-  margin-left: -6px;
   color: inherit;
 }
 .post .pjax article .article-meta .book a:hover {
   color: #4078c0;
 }
-.post .pjax article .article-meta .tag:before {
-  content: "\e936";
+.post .pjax article .article-meta .tag {
+  margin-left: 8px;
 }
 .post .pjax article .article-meta .tag a {
   height: 18px;
@@ -1384,9 +1386,9 @@
   display: none;
 }
 .post .pjax article a {
-  color: #4078c0;
+  color: #0269c8;
   word-break: break-all;
-  font-family: sans-serif;
+  border-bottom: 1px solid #d1e9ff;
 }
 .post .pjax article a:hover {
   text-decoration: underline;
@@ -1415,20 +1417,22 @@
   display: inline-block;
 }
 .post .pjax article blockquote {
-  padding: 20px;
-  margin: 1em 0;
-  background-color: #f7f7f7;
-  border-left: 0.25em solid #b4b4b4;
-  word-break: break-word;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 30px;
+  color: #666;
+  padding: 1px 23px;
+  margin: 22px 0;
+  border-left: 4px solid #cbcbcb;
+  background-color: #f8f8f8;
 }
 .post .pjax article blockquote p {
-  margin-bottom: 0;
+  margin: 10px 0;
+}
+.post .pjax article strong {
+  font-weight: 700;
 }
 .post .pjax article p {
-  margin: 0 0 16px;
+  line-height: inherit;
+  margin-top: 22px;
+  margin-bottom: 22px;
 }
 .post .pjax article .inner-toc {
   border: #e2dede solid 1px;
@@ -1441,9 +1445,8 @@
 .post .pjax article .inner-toc ol {
   list-style: none;
 }
-.post .pjax article ol>li {
-  margin-bottom: 10px;
-  margin-left: -9px;
+.post .pjax article ol {
+  padding-left: 28px;
 }
 .post .pjax article ul:not(.pre-numbering)>li {
   margin-bottom: 10px;
@@ -1500,16 +1503,20 @@
   background-color: #009688;
 }
 .post .pjax article :not(pre) > code {
-  color: #bf1827;
-  font-family: sans-serif;
+  background-color: #fff5f5;
+  color: #ff502c;
+  font-size: 0.87em;
+  padding: 0.065em 0.4em;
 }
 .post .pjax article pre.mermaid {
   border: none;
   text-align: center;
 }
 .post .pjax article pre > code {
-  font-size: 15px;
+  font-size: 14px;
   border-radius: 3px;
+  padding: 18px 15px 12px;
+  font-family: Menlo, Monaco, Consolas, Courier New, monospace;
 /* 滚动条 */
 }
 .post .pjax article pre > code::-webkit-scrollbar-thumb:horizontal {
@@ -1561,7 +1568,6 @@
 .post .copyright {
   margin-top: 50px;
   padding-bottom: 30px;
-  font-size: 16px;
   line-height: 14px;
   text-align: center;
   color: #bcc1c4;
@@ -1626,15 +1632,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: inherit;
-  font-weight: normal;
-  margin-top: 30px;
-  color: #283444;
-  text-rendering: optimizelegibility;
-  border-bottom: 1px solid #eee;
+  color: #333;
+  line-height: 1.5;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 h1 {
-  font-size: 1.8em;
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  padding-bottom: 12px;
+  font-size: 24px;
+  border-bottom: 1px solid #ececec;
 }
 .nav {
   width: 542px;
@@ -1788,13 +1799,10 @@ img.pswp__img {
   .nav .hide-list.fullscreen {
     left: 0;
   }
-  .post {
-    font-size: 17px;
-  }
 }
 @media screen and (max-width: 1366px) {
   .post > .pjax {
-    margin: 0;
+    margin: 0 auto;
   }
   .full-toc > .full {
     right: 30px;
@@ -1954,10 +1962,10 @@ img.pswp__img {
     display: none;
   }
   .post {
-    font-size: 16px;
+    font-size: 15px;
   }
   .post .pjax article {
-    padding-top: 1em;
+    padding: 1em;
   }
   .post .pjax article .article-meta {
     font-size: 0.9em;
@@ -1975,6 +1983,9 @@ img.pswp__img {
   }
   .post .pjax article .article-title {
     font-size: 1.6em;
+  }
+  .post .pjax article pre > code {
+    font-size: 13px;
   }
   .post .article_copyright {
     font-size: 14px;
