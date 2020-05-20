@@ -1558,9 +1558,9 @@ function sendXHR () {
         
         <tags>
             
-            <tag> js </tag>
-            
             <tag> 浏览器 </tag>
+            
+            <tag> js </tag>
             
         </tags>
         
@@ -4432,9 +4432,9 @@ MimeType=text/plain;
         
         <tags>
             
-            <tag> deepin </tag>
-            
             <tag> 运维 </tag>
+            
+            <tag> deepin </tag>
             
         </tags>
         
@@ -4569,12 +4569,12 @@ MimeType=text/plain;
 <li>替换 <code>source/img/avatar.jpg</code> 图片。</li>
 <li>修改 <code>_config.yml</code> 中头像的配置记录</li>
 </ol>
-<pre><code class="xml"># 你的头像url
+<pre><code class="yaml"># 你的头像url
 avatar: /img/avatar.jpg
 favicon: /img/avatar.jpg
 </code></pre>
 <h2 id="设置链接图标"><a href="#设置链接图标" class="headerlink" title="设置链接图标"></a>设置链接图标</h2><p>如下，如果没有连接，则不展示图标。</p>
-<pre><code class="xml">#链接图标，链接为空则不显示
+<pre><code class="yaml">#链接图标，链接为空则不显示
 link:
   rss: /atom.xml
   github: https://github.com/yelog
@@ -4612,12 +4612,12 @@ about:  # &#39;关于&#39; 按钮
 <li>重启 <code>hexo</code>。</li>
 </ol>
 <h3 id="meta区显示评论数"><a href="#meta区显示评论数" class="headerlink" title="meta区显示评论数"></a>meta区显示评论数</h3><p>开启设置 <code>_config.yml</code></p>
-<pre><code class="xml">comment_count: true
+<pre><code class="yaml">comment_count: true
 # 文章标题下方显示评论数
 </code></pre>
 <p><img src="http://img.saodiyang.com/FlDHXpVnJ-ECFCehRBoKkQMlqj_R.png" alt="开启效果"></p>
 <h3 id="评论区预加载"><a href="#评论区预加载" class="headerlink" title="评论区预加载"></a>评论区预加载</h3><p>开启设置 <code>_config.yml</code></p>
-<pre><code class="xml">preload_comment: false
+<pre><code class="yaml">preload_comment: false
 </code></pre>
 <ol>
 <li>false: 当点击评论条等区域时再加载评论模块</li>
@@ -4625,11 +4625,11 @@ about:  # &#39;关于&#39; 按钮
 </ol>
 <p><img src="http://img.saodiyang.com/FrYn2xsPMLBizQZ_p_mCa-hJYTG_.png" alt="关闭效果"></p>
 <h2 id="样式设置"><a href="#样式设置" class="headerlink" title="样式设置"></a>样式设置</h2><h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p>首先要关闭hexo根目录下<code>_config.yml</code>中的高亮设置：</p>
-<pre><code class="xml">highlight:
+<pre><code class="yaml">highlight:
   enable: false
 </code></pre>
 <p>配置主题下<code>_config.yml</code>中的高亮设置：<br>可以根据提示，配置喜欢的高亮主题</p>
-<pre><code class="xml">highlight:
+<pre><code class="yaml">highlight:
   on: true # true开启代码高亮
   lineNum: true # true显示行号
   theme: darcula
@@ -4652,7 +4652,7 @@ about:  # &#39;关于&#39; 按钮
 # school-book : 纸张效果
 </code></pre>
 <h3 id="MathJax数学公式"><a href="#MathJax数学公式" class="headerlink" title="MathJax数学公式"></a>MathJax数学公式</h3><p>修改 <code>_config.yml</code></p>
-<pre><code class="xml"># MathJax 数学公式支持
+<pre><code class="yaml"># MathJax 数学公式支持
 mathjax:
   on: true #是否启用
   per_page: false # 若只渲染单个页面，此选项设为false，页面内加入 mathjax: true
@@ -4674,14 +4674,14 @@ em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 </li>
 </ol>
 <h3 id="表格样式"><a href="#表格样式" class="headerlink" title="表格样式"></a>表格样式</h3><p>目前提供了3中样式，修改 <code>_config.yml</code></p>
-<pre><code class="xml">table: green_title
+<pre><code class="yaml">table: green_title
 # table 的样式
 # 为空时类似github的table样式
 # green 绿色样式
 # green_title 头部为青色的table样式
 </code></pre>
 <h3 id="文章列表的hover样式"><a href="#文章列表的hover样式" class="headerlink" title="文章列表的hover样式"></a>文章列表的hover样式</h3><p>鼠标移入的背景色和文字颜色变动，设置 <code>_config.yml</code></p>
-<pre><code class="xml">#文章列表 鼠标移上去的样式, 为空时使用默认效果
+<pre><code class="yaml">#文章列表 鼠标移上去的样式, 为空时使用默认效果
 article_list:
   hover:
     background: &#39;#e2e0e0&#39;  # 背景色:提供几种：&#39;#c1bfc1&#39;  &#39;#fbf4a8&#39;
@@ -4692,12 +4692,40 @@ article_list:
 <li>开启此功能需先安装插件，在 hexo根目录 执行 <code>npm i hexo-wordcount --save</code></li>
 <li>修改 <code>_config.yml</code></li>
 </ol>
-<pre><code class="xml">word_count: true
+<pre><code class="yaml">word_count: true
 </code></pre>
 <h2 id="多作者模式"><a href="#多作者模式" class="headerlink" title="多作者模式"></a>多作者模式</h2><p>可查看这篇文章： <a href="/2017/02/28/3-hexo-multiple-author/" title="3-hexo多作者模式">3-hexo多作者模式</a></p>
-<h2 id="文章排序及置顶"><a href="#文章排序及置顶" class="headerlink" title="文章排序及置顶"></a>文章排序及置顶</h2><p>可查看这篇文章： <a href="/2017/02/24/hexo-top-sort/" title="Hexo置顶及排序问题">Hexo置顶及排序问题</a></p>
+<h2 id="排序及置顶"><a href="#排序及置顶" class="headerlink" title="排序及置顶"></a>排序及置顶</h2><h3 id="1-分类排序"><a href="#1-分类排序" class="headerlink" title="1.分类排序"></a>1.分类排序</h3><p>默认按照首字母正序排序，由于中文在 <code>nodejs</code> 环境下不能按照拼音首字母排序，所以添加了自定义排序方式，在主题下 <code>_config.yml</code> 中找到如下配置，<code>category.sort</code>则是定义分类顺序的。</p>
+<p><strong>规则：</strong>在 <code>sort</code>中定义的 <code>category</code> 比 没有在 <code>sort</code> 中定义的更靠前</p>
+<pre><code class="yaml"># 文章分类设置
+category:
+  num: true # 分类显示文章数
+  sub: true # 开启多级分类
+  sort:
+    - 读书
+    - 大前端
+    - 后端
+    - 数据库
+    - 工具
+    - 运维
+</code></pre>
+<h3 id="2-文章排序"><a href="#2-文章排序" class="headerlink" title="2. 文章排序"></a>2. 文章排序</h3><blockquote>
+<p>2020-05-20 更新：无需安装插件或修改源码，主题以内置排序算法</p>
+</blockquote>
+<p>文章列表默认按照创建时间（如下文章内定义的<code>date</code>）倒序。</p>
+<p>使用 <code>top</code> 将会置顶文章，多个置顶文章时，<code>top</code> 定义的值越大，越靠前。</p>
+<pre><code class="yml">---
+title: 每天一个linux命令
+date: 2017-01-23 11:41:48
+top: 1
+categories:
+- 运维
+tags:
+- linux命令
+---
+</code></pre>
 <h2 id="关于写文章"><a href="#关于写文章" class="headerlink" title="关于写文章"></a>关于写文章</h2><h3 id="如何写"><a href="#如何写" class="headerlink" title="如何写"></a>如何写</h3><p>每篇文章最好写上文集和标签，方便筛选和查看。<br>一般推荐一篇文章设置一个文集，一个或多个标签<br><code>categories</code>:文集，为左侧列表<br><code>tags</code>:标签，通过#来筛选<br>例如 本篇文章的设置</p>
-<pre><code class="xml">---
+<pre><code class="yaml">---
 title: 3-hexo使用说明
 date: 2017-03-23 15:13:47
 categories:
@@ -4708,7 +4736,7 @@ tags:
 ---
 </code></pre>
 <h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><p>1.设置模板，blog根目录 <code>scaffolds/post.md</code><br>加入categories,tags等，这样以后通过 <code>hexo new</code> 生成的模板就不用写这两个单词了。<br>当然，你也可以写入任何你每个文章中都会有的部分。</p>
-<pre><code class="xml">---
+<pre><code class="yaml">---
 title: {{ title }}
 date: {{ date }}
 categories:
@@ -4984,7 +5012,11 @@ limit: 20
     <entry>
       <title><![CDATA[3-hexo开发日志-持续更新]]></title>
       <url>/2017/03/13/3-hexo-logs/</url>
-      <content type="html"><![CDATA[<h2 id="2020年2月"><a href="#2020年2月" class="headerlink" title="2020年2月"></a>2020年2月</h2><h3 id="05-19"><a href="#05-19" class="headerlink" title="05-19"></a>05-19</h3><ol>
+      <content type="html"><![CDATA[<h2 id="2020年2月"><a href="#2020年2月" class="headerlink" title="2020年2月"></a>2020年2月</h2><h3 id="05-20"><a href="#05-20" class="headerlink" title="05-20"></a>05-20</h3><ol>
+<li><code>enhance</code> 内置文章排序，无需再引入排序插件或修改源代码</li>
+<li><code>enhance</code> 支持自定义分类的顺序， 具体可以查看 <a href="/2017/03/23/3-hexo-instruction/" title="3-hexo使用说明">3-hexo使用说明</a> 中的排序相关内容</li>
+</ol>
+<h3 id="05-19"><a href="#05-19" class="headerlink" title="05-19"></a>05-19</h3><ol>
 <li><code>change</code> 重做了文章大纲</li>
 <li><code>change</code> 重做了搜索/标签页</li>
 <li><code>style</code> 优化了整体界面风格</li>
@@ -6606,7 +6638,8 @@ tags:
 ---
 </code></pre>
 <p>如果存在多个置顶文章，top后的参数越大，越靠前。</p>
-<p>References<br>　　Netcan 的 <a href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/" target="_blank" rel="noopener">解决Hexo置顶问题</a></p>
+<h2 id="2020-05-20-更新"><a href="#2020-05-20-更新" class="headerlink" title="2020-05-20 更新"></a>2020-05-20 更新</h2><p>3-hexo 主题已经内置排序算法，无需上面下载插件或修改源码，可以直接使用，具体可看 <a href="/2017/03/23/3-hexo-instruction/" title="3-hexo使用说明">3-hexo使用说明</a> 中的排序相关内容</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>　　Netcan 的 <a href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/" target="_blank" rel="noopener">解决Hexo置顶问题</a></p>
 ]]></content>
       
         <categories>
