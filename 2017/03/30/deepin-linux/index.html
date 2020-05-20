@@ -6,13 +6,19 @@
   <meta name="keywords" content=" 运维 , deepin ">
   <meta name="description" content="deepin系统使用记录 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1819,7 +1826,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:445</span>
+        <span>字数:450</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1872,14 +1879,11 @@
 <li><a href="https://wiki.deepin.org/index.php?title=Deepin%E5%BA%94%E7%94%A8%E7%AE%A1%E7%90%86" target="_blank" rel="noopener">Deepin应用列表</a></li>
 </ul>
 <h2 id="输入法"><a href="#输入法" class="headerlink" title="输入法"></a>输入法</h2><p>安装输入法，除了商店下载（好多输入法没有被收录进deepin商店），可以使用fcitx安装。<br>如安装google拼音输入法：</p>
-<pre><code class="bash">$ sudo aptitude install fcitx fcitx-googlepinyin
-</code></pre>
+<pre><code class="bash">$ sudo aptitude install fcitx fcitx-googlepinyin</code></pre>
 <p>如果当前在使用ibus，而不是fcitx的话，看下面<br>1）安装fcitx，并安装google拼音</p>
-<pre><code class="bash">$ sudo apt-get install fcitx fcitx-googlepinyin im-config
-</code></pre>
+<pre><code class="bash">$ sudo apt-get install fcitx fcitx-googlepinyin im-config</code></pre>
 <p>2）打开输入法配置</p>
-<pre><code class="bash">$ im-config
-</code></pre>
+<pre><code class="bash">$ im-config</code></pre>
 <p>依次：<code>ok</code>-&gt;<code>yes</code>,选择fcitx为默认输入法框架,<code>ok</code>-&gt;<code>ok</code></p>
 <h2 id="制作启动器图标"><a href="#制作启动器图标" class="headerlink" title="制作启动器图标"></a>制作启动器图标</h2><p>以创建 <code>atom</code> 这款编辑器的启动器图标为例。<br>1）进入 <code>/usr/share/applications/</code> 目录，创建 <code>atom.desktop</code> 文件<br>2）编辑 <code>atom.desktop</code> 文件</p>
 <pre><code class="xml">[Desktop Entry]
@@ -1890,75 +1894,69 @@ Icon=/opt/atom/atom.png
 Type=Application
 StartupNotify=true
 Categories=TextEditor;Development;Utility;
-MimeType=text/plain;
-</code></pre>
+MimeType=text/plain;</code></pre>
 <blockquote>
 <p>解释：<br><code>Name</code>：创建的图标名称<br><code>Comment</code>：备注，随便填<br><code>Exec</code>：启动文件的位置<br><code>Icon</code>：图标位置<br><code>Type</code>：类型，启动程序就填Application<br><code>StartupNotify</code>: 启动通知，填true就行了。详细可查 <a href="https://developer.gnome.org/integration-guide/stable/startup-notification.html.en" target="_blank" rel="noopener">Startup notification</a><br><code>Categories</code>： 分类，随便填，比如：Application;<br><code>MimeType</code>： 打开文件类型</p>
 </blockquote>
 <h2 id="修改apt源"><a href="#修改apt源" class="headerlink" title="修改apt源"></a>修改apt源</h2><p>修改 <code>/etc/apt/sources.list</code><br>默认的源</p>
-<pre><code class="bash">deb [by-hash=force] http://packages.deepin.com/deepin/ unstable main contrib non-free
-</code></pre>
+<pre><code class="bash">deb [by-hash=force] http://packages.deepin.com/deepin/ unstable main contrib non-free</code></pre>
 <p>阿里云的源</p>
-<pre><code class="bash">deb [by-hash=force] http://mirrors.aliyun.com/deepin unstable main contrib non-free
-</code></pre>
+<pre><code class="bash">deb [by-hash=force] http://mirrors.aliyun.com/deepin unstable main contrib non-free</code></pre>
 <h2 id="更换文件管理器"><a href="#更换文件管理器" class="headerlink" title="更换文件管理器"></a>更换文件管理器</h2><h3 id="Nautilus"><a href="#Nautilus" class="headerlink" title="Nautilus"></a>Nautilus</h3><p>1) 深度商店下载安装 Nautilus<br>2）卸载深度任务管理器</p>
-<pre><code class="bash">$ sudo apt remove dde-file-manager
-</code></pre>
+<pre><code class="bash">$ sudo apt remove dde-file-manager</code></pre>
 <p>Nautilus 常用的快捷键</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">快捷键</th>
-<th style="text-align:left">作用</th>
+<th align="left">快捷键</th>
+<th align="left">作用</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">F2</td>
-<td style="text-align:left">重命名</td>
+<tbody><tr>
+<td align="left">F2</td>
+<td align="left">重命名</td>
 </tr>
 <tr>
-<td style="text-align:left">Ctrl + 1</td>
-<td style="text-align:left">图标视图</td>
+<td align="left">Ctrl + 1</td>
+<td align="left">图标视图</td>
 </tr>
 <tr>
-<td style="text-align:left">Ctrl + 2</td>
-<td style="text-align:left">列表视图</td>
+<td align="left">Ctrl + 2</td>
+<td align="left">列表视图</td>
 </tr>
 <tr>
-<td style="text-align:left">Ctrl + T</td>
-<td style="text-align:left">新建标签页</td>
+<td align="left">Ctrl + T</td>
+<td align="left">新建标签页</td>
 </tr>
 <tr>
-<td style="text-align:left">Ctrl + W</td>
-<td style="text-align:left">关闭标签页</td>
+<td align="left">Ctrl + W</td>
+<td align="left">关闭标签页</td>
 </tr>
 <tr>
-<td style="text-align:left">Alt + 数字</td>
-<td style="text-align:left">切换到指定标签页</td>
+<td align="left">Alt + 数字</td>
+<td align="left">切换到指定标签页</td>
 </tr>
 <tr>
-<td style="text-align:left">Ctrl + D</td>
-<td style="text-align:left">收藏到当前文件夹到书签</td>
+<td align="left">Ctrl + D</td>
+<td align="left">收藏到当前文件夹到书签</td>
 </tr>
 <tr>
-<td style="text-align:left">Shift + F10</td>
-<td style="text-align:left">打开鼠标右键菜单</td>
+<td align="left">Shift + F10</td>
+<td align="left">打开鼠标右键菜单</td>
 </tr>
 <tr>
-<td style="text-align:left">Alt + 左方向键</td>
-<td style="text-align:left">后退</td>
+<td align="left">Alt + 左方向键</td>
+<td align="left">后退</td>
 </tr>
 <tr>
-<td style="text-align:left">Alt + 右方向键</td>
-<td style="text-align:left">前进</td>
+<td align="left">Alt + 右方向键</td>
+<td align="left">前进</td>
 </tr>
 <tr>
-<td style="text-align:left">Ctrl + Q</td>
-<td style="text-align:left">退出</td>
+<td align="left">Ctrl + Q</td>
+<td align="left">退出</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -2008,7 +2006,7 @@ MimeType=text/plain;
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

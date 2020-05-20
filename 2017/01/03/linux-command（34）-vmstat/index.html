@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（34）: vmstat | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:2,717</span>
+        <span>字数:2.7k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1861,7 +1868,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　vmstat是Virtual Meomory Statistics（虚拟内存统计）的缩写，可对操作系统的虚拟内存、进程、CPU活动进行监控。他是对系统的整体情况进行统计，不足之处是无法对某个进程进行深入分析。vmstat 工具提供了一种低开销的系统性能观察方式。因为 vmstat 本身就是低开销工具，在非常高负荷的服务器上，你需要查看并监控系统的健康情况,在控制窗口还是能够使用vmstat 输出结果。在学习vmstat命令前，我们先了解一下Linux系统中关于物理内存和虚拟内存相关信息。<br><a id="more"></a></p>
+        <p>　　vmstat是Virtual Meomory Statistics（虚拟内存统计）的缩写，可对操作系统的虚拟内存、进程、CPU活动进行监控。他是对系统的整体情况进行统计，不足之处是无法对某个进程进行深入分析。vmstat 工具提供了一种低开销的系统性能观察方式。因为 vmstat 本身就是低开销工具，在非常高负荷的服务器上，你需要查看并监控系统的健康情况,在控制窗口还是能够使用vmstat 输出结果。在学习vmstat命令前，我们先了解一下Linux系统中关于物理内存和虚拟内存相关信息。</p>
+<a id="more"></a>
 <h3 id="物理内存和虚拟内存区别"><a href="#物理内存和虚拟内存区别" class="headerlink" title="物理内存和虚拟内存区别"></a>物理内存和虚拟内存区别</h3><p>　　我们知道，直接从物理内存读写数据要比从硬盘读写数据要快的多，因此，我们希望所有数据的读取和写入都在内存完成，而内存是有限的，这样就引出了物理内存与虚拟内存的概念。</p>
 <p>　　物理内存就是系统硬件提供的内存大小，是真正的内存，相对于物理内存，在linux下还有一个虚拟内存的概念，虚拟内存就是为了满足物理内存的不足而提出的策略，它是利用磁盘空间虚拟出的一块逻辑内存，用作虚拟内存的磁盘空间被称为交换空间（Swap Space）。</p>
 <p>　　作为物理内存的扩展，linux会在物理内存不足时，使用交换分区的虚拟内存，更详细的说，就是内核会将暂时不用的内存块信息写到交换空间，这样以来，物理内存得到了释放，这块内存就可以用于其它目的，当需要用到原始的内容时，这些信息会被重新从交换空间读入物理内存。</p>
@@ -1881,105 +1889,95 @@ $ vmstat [-m] [-n] [delay [ count]]
 $ vmstat [-d] [-n] [delay [ count]]
 $ vmstat [-p disk partition] [-n] [delay [ count]]
 $ vmstat [-f]
-$ vmstat [-V]
-</code></pre>
+$ vmstat [-V]</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　用来显示虚拟内存的信息</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">命令</th>
-<th style="text-align:left">描述</th>
+<th align="left">命令</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-a</td>
-<td style="text-align:left">显示活跃和非活跃内存</td>
+<tbody><tr>
+<td align="left">-a</td>
+<td align="left">显示活跃和非活跃内存</td>
 </tr>
 <tr>
-<td style="text-align:left">-f</td>
-<td style="text-align:left">显示从系统启动至今的fork数量</td>
+<td align="left">-f</td>
+<td align="left">显示从系统启动至今的fork数量</td>
 </tr>
 <tr>
-<td style="text-align:left">-m</td>
-<td style="text-align:left">显示slabinfo</td>
+<td align="left">-m</td>
+<td align="left">显示slabinfo</td>
 </tr>
 <tr>
-<td style="text-align:left">-n</td>
-<td style="text-align:left">只在开始时显示一次各字段名称</td>
+<td align="left">-n</td>
+<td align="left">只在开始时显示一次各字段名称</td>
 </tr>
 <tr>
-<td style="text-align:left">-s</td>
-<td style="text-align:left">显示内存相关统计信息及多种系统活动数量</td>
+<td align="left">-s</td>
+<td align="left">显示内存相关统计信息及多种系统活动数量</td>
 </tr>
 <tr>
-<td style="text-align:left">delay</td>
-<td style="text-align:left">刷新时间间隔。如果不指定，只显示一条结果</td>
+<td align="left">delay</td>
+<td align="left">刷新时间间隔。如果不指定，只显示一条结果</td>
 </tr>
 <tr>
-<td style="text-align:left">count</td>
-<td style="text-align:left">刷新次数。如果不指定刷新次数，但指定了刷新时间间隔，这时刷新次数为无穷</td>
+<td align="left">count</td>
+<td align="left">刷新次数。如果不指定刷新次数，但指定了刷新时间间隔，这时刷新次数为无穷</td>
 </tr>
 <tr>
-<td style="text-align:left">-d</td>
-<td style="text-align:left">显示磁盘相关统计信息</td>
+<td align="left">-d</td>
+<td align="left">显示磁盘相关统计信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-p</td>
-<td style="text-align:left">显示指定磁盘分区统计信息</td>
+<td align="left">-p</td>
+<td align="left">显示指定磁盘分区统计信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-S</td>
-<td style="text-align:left">使用指定单位显示。参数有 k 、K 、m 、M ，分别代表1000、1024、1000000、1048576字节（byte）。默认单位为K（1024 bytes）</td>
+<td align="left">-S</td>
+<td align="left">使用指定单位显示。参数有 k 、K 、m 、M ，分别代表1000、1024、1000000、1048576字节（byte）。默认单位为K（1024 bytes）</td>
 </tr>
 <tr>
-<td style="text-align:left">-V</td>
-<td style="text-align:left">显示vmstat版本信息</td>
+<td align="left">-V</td>
+<td align="left">显示vmstat版本信息</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示虚拟内存使用情况</strong></p>
 <pre><code class="bash">$ vmstat
 procs   -----------memory----------  ---swap-- -----io---  --system--- -----cpu---
  r  b   swpd    free   buff   cache   si   so    bi    bo   in   cs us sy id wa st
- 0  0      0 7108340 129544 3155916    0    0   184    53  203  995  4  1 95  0  0
-</code></pre>
+ 0  0      0 7108340 129544 3155916    0    0   184    53  203  995  4  1 95  0  0</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br><code>Procs（进程）：</code><br>r: 运行队列中进程数量<br>b: 等待IO的进程数量<br>Memory（内存）：<br>swpd: 使用虚拟内存大小<br>free: 可用内存大小<br>buff: 用作缓冲的内存大小<br>cache: 用作缓存的内存大小<br><code>Swap：</code><br>si: 每秒从交换区写到内存的大小<br>so: 每秒写入交换区的内存大小<br>IO：（现在的Linux版本块的大小为1024bytes）<br>bi: 每秒读取的块数<br>bo: 每秒写入的块数<br><code>系统：</code><br>in: 每秒中断数，包括时钟中断。<br>cs: 每秒上下文切换数。<br>CPU（以百分比表示）：<br>us: 用户进程执行时间(user time)<br>sy: 系统进程执行时间(system time)<br>id: 空闲时间(包括IO等待时间),中央处理器的空闲时间 。以百分比表示。<br>wa: 等待IO时间<br><strong>备注：</strong> 如果 r经常大于 4 ，且id经常少于40，表示cpu的负荷很重。如果pi，po 长期不等于0，表示内存不足。如果disk 经常不等于0， 且在 b中的队列 大于3， 表示 io性能不好。Linux在具有高稳定性、可靠性的同时，具有很好的可伸缩性和扩展性，能够针对不同的应用和硬件环境调整，优化出满足当前应用需要的最佳性能。因此企业在维护Linux系统、进行系统调优时，了解系统性能分析工具是至关重要的。<br>命令：vmstat 5 5<br>表示在5秒时间内进行5次采样。将得到一个数据汇总他能够反映真正的系统情况。</p>
 </blockquote>
 <p><strong><code>例二</code>：显示活跃和非活跃内存</strong></p>
-<pre><code class="bash">$ vmstat -a 2 5
-</code></pre>
+<pre><code class="bash">$ vmstat -a 2 5</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>使用-a选项显示活跃和非活跃内存时，所显示的内容除增加inact和active外，其他显示内容与例子1相同。<br>Memory（内存）：<br>inact: 非活跃内存大小（当使用-a选项时显示）<br>active: 活跃的内存大小（当使用-a选项时显示）</p>
 </blockquote>
 <p><strong><code>例三</code>：查看系统已经fork了多少次</strong></p>
-<pre><code class="bash">$ vmstat -f
-</code></pre>
+<pre><code class="bash">$ vmstat -f</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>这个数据是从/proc/stat中的processes字段里取得的</p>
 </blockquote>
 <p><strong><code>例四</code>：查看内存使用的详细信息</strong></p>
-<pre><code class="bash">$ vmstat -s
-</code></pre>
+<pre><code class="bash">$ vmstat -s</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>这些信息的分别来自于/proc/meminfo,/proc/stat和/proc/vmstat。</p>
 </blockquote>
 <p><strong><code>例五</code>：查看磁盘的读/写</strong></p>
-<pre><code class="bash">$ vmstat -d
-</code></pre>
+<pre><code class="bash">$ vmstat -d</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>这些信息主要来自于/proc/diskstats.<br>merged:表示一次来自于合并的写/读请求,一般系统会把多个连接/邻近的读/写请求合并到一起来操作.</p>
 </blockquote>
 <p><strong><code>例六</code>：查看/dev/sda1磁盘的读/写</strong></p>
-<pre><code class="bash">$ vmstat -p /dev/sda1
-</code></pre>
+<pre><code class="bash">$ vmstat -p /dev/sda1</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>这些信息主要来自于/proc/diskstats。<br>reads:来自于这个分区的读的次数。<br>read sectors:来自于这个分区的读扇区的次数。<br>writes:来自于这个分区的写的次数。<br>requested writes:来自于这个分区的写请求次数。</p>
 </blockquote>
 <p><strong><code>例七</code>：查看系统的slab信息</strong></p>
-<pre><code class="bash">$ vmstat -m
-</code></pre>
+<pre><code class="bash">$ vmstat -m</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>这组信息来自于/proc/slabinfo。<br>slab:由于内核会有许多小对象，这些对象构造销毁十分频繁，比如i-node，dentry，这些对象如果每次构建的时候就向内存要一个页(4kb)，而其实只有几个字节，这样就会非常浪费，为了解决这个问题，就引入了一种新的机制来处理在同一个页框中如何分配小存储区，而slab可以对小对象进行分配,这样就不用为每一个对象分配页框，从而节省了空间，内核对一些小对象创建析构很频繁，slab对这些小对象进行缓冲,可以重复利用,减少内存分配次数。</p>
 </blockquote>
@@ -2032,7 +2030,7 @@ procs   -----------memory----------  ---swap-- -----io---  --system--- -----cpu-
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

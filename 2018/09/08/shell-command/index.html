@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux , shell ">
   <meta name="description" content="shell速查表 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1817,7 +1824,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:2,614</span>
+        <span>字数:2.8k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1865,8 +1872,7 @@
       
         <h2 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h2><pre><code class="bash">#!/bin/bash
 msg=&quot;hello world&quot;
-echo $msg
-</code></pre>
+echo $msg</code></pre>
 <blockquote>
 <p><strong>变量名的命名须遵循如下规则：</strong></p>
 <ul>
@@ -1880,8 +1886,7 @@ echo $msg
 echo &quot;执行的文件名：$0&quot;;
 echo &quot;第一个参数为：$1&quot;;
 echo &quot;第二个参数为：$2&quot;;
-echo &quot;第三个参数为：$3&quot;;
-</code></pre>
+echo &quot;第三个参数为：$3&quot;;</code></pre>
 <blockquote>
 <p><strong>脚本内获取参数的格式为：</strong><br>$n。n 代表一个数字，1 为执行脚本的第一个参数，2 为执行脚本的第二个参数，以此类推……<br><strong>另外，还有几个特殊字符用来处理参数：</strong></p>
 <table>
@@ -1891,8 +1896,7 @@ echo &quot;第三个参数为：$3&quot;;
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>$#</code></td>
 <td>传递到脚本的参数个数</td>
 </tr>
@@ -1920,8 +1924,7 @@ echo &quot;第三个参数为：$3&quot;;
 <td><code>$?</code></td>
 <td>显示最后命令的退出状态。0表示没有错误，其他任何值表明有错误。</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 </blockquote>
 <h2 id="3-数组"><a href="#3-数组" class="headerlink" title="3. 数组"></a>3. 数组</h2><pre><code class="bash">#!/bin/bash
 my_array=(A B &quot;C&quot; D)
@@ -1934,8 +1937,7 @@ echo &quot;数组的元素为: ${my_array[*]}&quot;
 echo &quot;数组的元素为: ${my_array[@]}&quot;
 
 echo &quot;数组元素个数为: ${#my_array[*]}&quot;
-echo &quot;数组元素个数为: ${#my_array[@]}&quot;
-</code></pre>
+echo &quot;数组元素个数为: ${#my_array[@]}&quot;</code></pre>
 <p>执行结果如下：</p>
 <pre><code class="yml">第一个元素为: A
 第二个元素为: B
@@ -1944,8 +1946,7 @@ echo &quot;数组元素个数为: ${#my_array[@]}&quot;
 数组的元素为: A B C D
 数组的元素为: A B C D
 数组元素个数为: 4
-数组元素个数为: 4
-</code></pre>
+数组元素个数为: 4</code></pre>
 <h2 id="4-基本运算符"><a href="#4-基本运算符" class="headerlink" title="4. 基本运算符"></a>4. 基本运算符</h2><blockquote>
 <p>原生 bash 不支持简单的数学运算，但是可以通过其他命令来实现，例如 awk 和 expr，expr 最常用。</p>
 </blockquote>
@@ -1955,8 +1956,7 @@ echo &quot;2加2等于&quot;`expr 2 + 2`
 echo &quot;2减2等于&quot;`expr 2 - 2`
 echo &quot;2乘2等于&quot;`expr 2 \* 2`
 echo &quot;2除2等于&quot;`expr 2 / 2`
-echo &quot;2除2取余&quot;`expr 2 % 2`
-</code></pre>
+echo &quot;2除2取余&quot;`expr 2 % 2`</code></pre>
 <h3 id="②-关系运算符"><a href="#②-关系运算符" class="headerlink" title="② 关系运算符"></a>② 关系运算符</h3><pre><code class="bash">#!/bin/bash
 a=10
 b=20
@@ -1965,21 +1965,18 @@ if [ $a -ne $b ] # 检测两个数是否不相等，不相等返回 true。
 if [ $a -gt $b ] # 检测左边的数是否大于右边的，如果是，则返回 true。
 if [ $a -lt $b ] # 检测左边的数是否小于右边的，如果是，则返回 true。
 if [ $a -ge $b ] # 检测左边的数是否大于等于右边的，如果是，则返回 true。
-if [ $a -le $b ] # 检测左边的数是否小于等于右边的，如果是，则返回 true。
-</code></pre>
+if [ $a -le $b ] # 检测左边的数是否小于等于右边的，如果是，则返回 true。</code></pre>
 <h3 id="③-布尔运算符"><a href="#③-布尔运算符" class="headerlink" title="③ 布尔运算符"></a>③ 布尔运算符</h3><pre><code class="bash">#!/bin/bash
 if [ ! false ]       # 非运算，返回 true
 if [ true -o false ] # 或运算，返回 true
-if [ true -a false ] # 与运算，返回 false
-</code></pre>
+if [ true -a false ] # 与运算，返回 false</code></pre>
 <h3 id="④-逻辑运算符"><a href="#④-逻辑运算符" class="headerlink" title="④ 逻辑运算符"></a>④ 逻辑运算符</h3><pre><code class="bash">#!/bin/bash
 a=10
 b=20
 if [[ $a -lt $b &amp;&amp; $a -gt $b ]]   # 逻辑的 AND, 返回 false
 if [ $a -lt $b ] &amp;&amp; [ $a -gt $b ] # 逻辑的 AND, 返回 false
 if [[ $a -lt $b || $a -gt $b ]]   # 逻辑的 OR, 返回 true
-if [ $a -lt $b ] || [ $a -gt $b ] # 逻辑的 OR, 返回 true
-</code></pre>
+if [ $a -lt $b ] || [ $a -gt $b ] # 逻辑的 OR, 返回 true</code></pre>
 <h3 id="⑤-字符串运算符"><a href="#⑤-字符串运算符" class="headerlink" title="⑤ 字符串运算符"></a>⑤ 字符串运算符</h3><pre><code class="bash">#!/bin/bash
 a=&quot;abc&quot;
 b=&quot;efg&quot;
@@ -1987,8 +1984,7 @@ if [ $a = $b ]   # 检测两个字符串是否相等，相等返回 true。
 if [ $a != $b ]  # 检测两个字符串是否相等，不相等返回 true。
 if [ -z $a ]     # 检测字符串长度是否为0，为0返回 true。
 if [ -n &quot;$a&quot; ]   # 检测字符串长度是否为0，不为0返回 true。
-if [ $a ]        # 检测字符串是否为空，不为空返回 true。
-</code></pre>
+if [ $a ]        # 检测字符串是否为空，不为空返回 true。</code></pre>
 <h3 id="⑥-文件测试运算符"><a href="#⑥-文件测试运算符" class="headerlink" title="⑥ 文件测试运算符"></a>⑥ 文件测试运算符</h3><p>文件测试运算符用于检测 Unix 文件的各种属性。</p>
 <table>
 <thead>
@@ -1997,8 +1993,7 @@ if [ $a ]        # 检测字符串是否为空，不为空返回 true。
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>-b file</td>
 <td>检测文件是否是块设备文件，如果是，则返回 true。</td>
 </tr>
@@ -2050,8 +2045,7 @@ if [ $a ]        # 检测字符串是否为空，不为空返回 true。
 <td>-e file</td>
 <td>检测文件（包括目录）是否存在，如果是，则返回 true。</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h2 id="5-echo"><a href="#5-echo" class="headerlink" title="5. echo"></a>5. echo</h2><h3 id="①-命令格式"><a href="#①-命令格式" class="headerlink" title="① 命令格式"></a>① 命令格式</h3><pre><code class="bash">#!/bin/bash
 echo &quot;It is a test&quot;
 echo It is a test
@@ -2061,8 +2055,7 @@ echo &quot;$name is handsome&quot;
 echo -e &quot;OK! \n&quot;             # 显示换行 -e 开启转义
 echo &quot;It is a test&quot; &gt; myfile # 显示结果定向至文件
 echo &#39;$name\&quot;&#39;               # 原样输入字符串，不进行转义或取变量（使用单引号）
-echo `date`                  # 显示命令执行结构
-</code></pre>
+echo `date`                  # 显示命令执行结构</code></pre>
 <h3 id="②-颜色显示"><a href="#②-颜色显示" class="headerlink" title="② 颜色显示"></a>② 颜色显示</h3><pre><code class="bash">echo -e &quot;\033[字背景颜色；文字颜色m字符串\033[0m&quot;
 
 echo -e “\033[30m 黑色字 \033[0m”
@@ -2101,28 +2094,24 @@ echo -e “\033[47;30m 白底黑字 \033[0m”
 \33[s 保存光标位置
 \33[u 恢复光标位置
 \33[?25l 隐藏光标
-\33[?25h 显示光标
-</code></pre>
+\33[?25h 显示光标</code></pre>
 <h2 id="6-sprintf"><a href="#6-sprintf" class="headerlink" title="6. sprintf"></a>6. sprintf</h2><pre><code class="bash">#!/bin/bash
 printf &quot;%-10s %-8s %-4s\n&quot; 姓名 性别 体重kg  
 printf &quot;%-10s %-8s %-4.2f\n&quot; 郭靖 男 66.1234
 printf &quot;%-10s %-8s %-4.2f\n&quot; 杨过 男 48.6543
-printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876
-</code></pre>
+printf &quot;%-10s %-8s %-4.2f\n&quot; 郭芙 女 47.9876</code></pre>
 <p>结果：</p>
 <pre><code>姓名     性别   体重kg
 郭靖     男      66.12
 杨过     男      48.65
-郭芙     女      47.99
-</code></pre><blockquote>
+郭芙     女      47.99</code></pre><blockquote>
 <p><code>%s %c %d %f</code> 都是格式替代符<br><code>d</code>: Decimal 十进制整数 – 对应位置参数必须是十进制整数，否则报错！<br><code>s</code>: String 字符串 – 对应位置参数必须是字符串或者字符型，否则报错！<br><code>c</code>: Char 字符 – 对应位置参数必须是字符串或者字符型，否则报错！<br><code>f</code>: Float 浮点 – 对应位置参数必须是数字型，否则报错！<br><code>%-10s</code> 指一个宽度为10个字符（-表示左对齐，没有则表示右对齐）,任何字符都会被显示在10个字符宽的字符内，如果不足则自动以空格填充，超过也会将内容全部显示出来。<br><code>%-4.2f</code> 指格式化为小数，其中.2指保留2位小数。</p>
 </blockquote>
 <h2 id="7-test"><a href="#7-test" class="headerlink" title="7. test"></a>7. test</h2><p>Shell中的 test 命令用于检查某个条件是否成立，它可以进行数值、字符和文件三个方面的测试。</p>
 <pre><code class="bash">#!/bin/bash
 num1=100
 num2=100
-if test $[num1] -eq $[num2]
-</code></pre>
+if test $[num1] -eq $[num2]</code></pre>
 <h2 id="8-流程控制"><a href="#8-流程控制" class="headerlink" title="8. 流程控制"></a>8. 流程控制</h2><h3 id="①-if-else"><a href="#①-if-else" class="headerlink" title="① if-else"></a>① if-else</h3><pre><code class="bash">#!/bin/bash
 a=10
 b=20
@@ -2137,22 +2126,19 @@ then
    echo &quot;a 小于 b&quot;
 else
    echo &quot;没有符合的条件&quot;
-fi
-</code></pre>
+fi</code></pre>
 <h3 id="②-for"><a href="#②-for" class="headerlink" title="② for"></a>② for</h3><pre><code class="bash">#!/bin/bash
 for loop in 1 2 3 4 5
 do
     echo &quot;The value is: $loop&quot;
-done
-</code></pre>
+done</code></pre>
 <h3 id="③-while"><a href="#③-while" class="headerlink" title="③ while"></a>③ while</h3><pre><code class="bash">#!/bin/bash
 int=1
 while(( $int&lt;=5 ))
 do
     echo $int
     let &quot;int++&quot;
-done
-</code></pre>
+done</code></pre>
 <h3 id="④-case"><a href="#④-case" class="headerlink" title="④ case"></a>④ case</h3><pre><code class="bash">#!/bin/bash
 echo &#39;输入 1 到 4 之间的数字:&#39;
 echo &#39;你输入的数字为:&#39;
@@ -2168,8 +2154,7 @@ case $aNum in
     ;;
     *)  echo &#39;你没有输入 1 到 4 之间的数字&#39;
     ;;
-esac
-</code></pre>
+esac</code></pre>
 <h3 id="⑤-break"><a href="#⑤-break" class="headerlink" title="⑤ break"></a>⑤ break</h3><p>break命令允许跳出所有循环（终止执行后面的所有循环）。</p>
 <pre><code class="bash">#!/bin/bash
 while :
@@ -2183,8 +2168,7 @@ do
             break
         ;;
     esac
-done
-</code></pre>
+done</code></pre>
 <h3 id="⑥-continue"><a href="#⑥-continue" class="headerlink" title="⑥ continue"></a>⑥ continue</h3><p>跳出当前循环。</p>
 <pre><code class="bash">#!/bin/bash
 while :
@@ -2199,8 +2183,7 @@ do
             echo &quot;游戏结束&quot;
         ;;
     esac
-done
-</code></pre>
+done</code></pre>
 <h3 id="⑦-until"><a href="#⑦-until" class="headerlink" title="⑦ until"></a>⑦ until</h3><pre><code class="bash">#!/bin/bash
 
 a=0
@@ -2209,8 +2192,7 @@ until [ ! $a -lt 10 ]
 do
    echo $a
    a=`expr $a + 1`
-done
-</code></pre>
+done</code></pre>
 <h2 id="9-函数"><a href="#9-函数" class="headerlink" title="9. 函数"></a>9. 函数</h2><pre><code class="bash">#!/bin/bash
 
 funWithParam(){
@@ -2222,8 +2204,7 @@ funWithParam(){
     echo &quot;参数总数有 $# 个!&quot;
     echo &quot;作为一个字符串输出所有参数 $* !&quot;
 }
-funWithParam 1 2 3 4 5 6 7 8 9 34 73
-</code></pre>
+funWithParam 1 2 3 4 5 6 7 8 9 34 73</code></pre>
 <p>结果：</p>
 <pre><code>第一个参数为 1 !
 第二个参数为 2 !
@@ -2231,8 +2212,7 @@ funWithParam 1 2 3 4 5 6 7 8 9 34 73
 第十个参数为 34 !
 第十一个参数为 73 !
 参数总数有 11 个!
-作为一个字符串输出所有参数 1 2 3 4 5 6 7 8 9 34 73 !
-</code></pre><h2 id="10-输入输出"><a href="#10-输入输出" class="headerlink" title="10. 输入输出"></a>10. 输入输出</h2><pre><code class="bash">#!/bin/bash
+作为一个字符串输出所有参数 1 2 3 4 5 6 7 8 9 34 73 !</code></pre><h2 id="10-输入输出"><a href="#10-输入输出" class="headerlink" title="10. 输入输出"></a>10. 输入输出</h2><pre><code class="bash">#!/bin/bash
 who &gt; today.log # 执行结果覆盖到文件 today.log
 echo &quot;菜鸟教程：www.runoob.com&quot; &gt;&gt; today.log # 执行结果追加到文件 today.log
 wc -l &lt; today.log # 统计 today.log 行数
@@ -2240,12 +2220,10 @@ wc -l &lt;&lt; EOF
     李白
     苏轼
     王勃
-EOF
-</code></pre>
+EOF</code></pre>
 <h2 id="11-文件包含"><a href="#11-文件包含" class="headerlink" title="11. 文件包含"></a>11. 文件包含</h2><p>test1.sh</p>
 <pre><code class="bash">#!/bin/bash
-name=&quot;Chris&quot;
-</code></pre>
+name=&quot;Chris&quot;</code></pre>
 <p>test2.sh</p>
 <pre><code class="bash">#!/bin/bash
 #使用 . 号来引用test1.sh 文件
@@ -2254,8 +2232,7 @@ name=&quot;Chris&quot;
 # 或者使用以下包含文件代码
 # source ./test1.sh
 
-echo $name
-</code></pre>
+echo $name</code></pre>
 <blockquote>
 <p>注：被包含的文件 test1.sh 不需要可执行权限。</p>
 </blockquote>
@@ -2309,7 +2286,7 @@ echo $name
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

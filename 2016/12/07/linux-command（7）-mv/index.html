@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（7）: mv | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:813</span>
+        <span>字数:817</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1845,7 +1852,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-text">命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令功能"><span class="toc-text">命令功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令参数"><span class="toc-text">命令参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令实例"><span class="toc-text">命令实例</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-text">命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令功能"><span class="toc-text">命令功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令参数"><span class="toc-text">命令参数</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1861,76 +1868,191 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　mv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录<br><a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ mv [选项] 源文件或目录 目标文件或目录
-</code></pre>
+        <p>　　mv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ mv [选项] 源文件或目录 目标文件或目录</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　视mv命令中第二个参数类型的不同（是目标文件还是目标目录），mv命令将文件重命名或将其移至一个新的目录中。当第二个参数类型是文件时，mv命令完成文件重命名，此时，源文件只能有一个（也可以是源目录名），它将所给的源文件或目录重命名为给定的目标文件名。当第二个参数是已存在的目录名称时，源文件或目录参数可以有多个，mv命令将各参数指定的源文件均移至目标目录中。在跨文件系统移动文件时，mv先拷贝，再将原有文件删除，而链至该文件的链接也将丢失。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-b</td>
-<td style="text-align:left">若需覆盖文件，则覆盖前先行备份。</td>
+<tbody><tr>
+<td align="left">-b</td>
+<td align="left">若需覆盖文件，则覆盖前先行备份。</td>
 </tr>
 <tr>
-<td style="text-align:left">-f</td>
-<td style="text-align:left">force 强制的意思，如果目标文件已经存在，不会询问而直接覆盖</td>
+<td align="left">-f</td>
+<td align="left">force 强制的意思，如果目标文件已经存在，不会询问而直接覆盖</td>
 </tr>
 <tr>
-<td style="text-align:left">-i</td>
-<td style="text-align:left">若目标文件 (destination) 已经存在时，就会询问是否覆盖！</td>
+<td align="left">-i</td>
+<td align="left">若目标文件 (destination) 已经存在时，就会询问是否覆盖！</td>
 </tr>
 <tr>
-<td style="text-align:left">-u</td>
-<td style="text-align:left">若目标文件已经存在，且 source 比较新，才会更新(update)</td>
+<td align="left">-u</td>
+<td align="left">若目标文件已经存在，且 source 比较新，才会更新(update)</td>
 </tr>
 <tr>
-<td style="text-align:left">-t</td>
-<td style="text-align:left">–target-directory=DIRECTORY move all SOURCE arguments into DIRECTORY，即指定mv的目标目录，该选项适用于移动多个源文件到一个目录的情况，此时目标目录在前，源文件在后。</td>
+<td align="left">-t</td>
+<td align="left">–target-directory=DIRECTORY move all SOURCE arguments into DIRECTORY，即指定mv的目标目录，该选项适用于移动多个源文件到一个目录的情况，此时目标目录在前，源文件在后。</td>
 </tr>
-</tbody>
-</table>
-<h3 id="命令实例"><a href="#命令实例" class="headerlink" title="命令实例"></a>命令实例</h3><p><strong><code>例一</code>：文件改名</strong></p>
-<pre><code class="bash">$ mv test.txt test1.txt
-</code></pre>
-<p><strong><code>例二</code>：移动文件</strong></p>
-<pre><code class="bash">#将文件test.txt 移动到/usr/doc目录下
-$ mv test.txt /usr/doc
-</code></pre>
-<p><strong><code>例三</code>：将文件log1.txt,log2.txt,log3.txt移动到目录/usr/doc中</strong></p>
-<pre><code class="bash">$ mv log1.txt log2.txt log3.txt /usr/doc
-$ mv -t /usr/doc log1.txt log2.txt log3.txt
-</code></pre>
-<p><strong><code>例四</code>：将文件file1改名为file2，如果file2已经存在，则询问是否覆盖</strong></p>
-<pre><code class="bash">$ mv -i log1.txt log2.txt
-</code></pre>
-<p><strong><code>例五</code>：将文件file1改名为file2，即使file2存在，也是直接覆盖掉</strong></p>
-<pre><code class="bash">$ mv -f log3.txt log2.txt
-</code></pre>
-<p><strong><code>例六</code>：目录的移动</strong></p>
-<pre><code class="bash">#将doc下的product目录移动到/usr/doc目录下
-$ mv doc/product /usr/doc
-</code></pre>
-<p><strong><code>例七</code>：移动当前文件夹下的所有文件到上一级目录</strong></p>
-<pre><code class="bash">$ mv * ../
-</code></pre>
-<p><strong><code>例八</code>：文件被覆盖前做简单备份，前面加参数-b</strong></p>
-<pre><code class="bash">$ mv log1.txt -b log2.txt
-</code></pre>
+<tr>
+<td align="left">### 命令实例</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例一</code>：文件改名</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ mv test.txt test1.txt</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例二</code>：移动文件</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">#将文件test.txt 移动到/usr/doc目录下</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ mv test.txt /usr/doc</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例三</code>：将文件log1.txt,log2.txt,log3.txt移动到目录/usr/doc中</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ mv log1.txt log2.txt log3.txt /usr/doc</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ mv -t /usr/doc log1.txt log2.txt log3.txt</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例四</code>：将文件file1改名为file2，如果file2已经存在，则询问是否覆盖</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ mv -i log1.txt log2.txt</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例五</code>：将文件file1改名为file2，即使file2存在，也是直接覆盖掉</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ mv -f log3.txt log2.txt</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例六</code>：目录的移动</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">#将doc下的product目录移动到/usr/doc目录下</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ mv doc/product /usr/doc</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例七</code>：移动当前文件夹下的所有文件到上一级目录</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ mv * ../</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例八</code>：文件被覆盖前做简单备份，前面加参数-b</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ mv log1.txt -b log2.txt</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
 <blockquote>
 <p>-b不接受参数，mv会去读取环境变量VERSION_CONTROL来作为备份策略。<br>–backup该选项指定如果目标文件存在时的动作，共有四种备份策略：</p>
+</blockquote>
 <ol>
 <li>CONTROL=none或off : 不备份。</li>
 <li>CONTROL=numbered或t：数字编号的备份</li>
-<li>CONTROL=existing或nil：如果存在以数字编号的备份，则继续编号备份m+1…n：执行mv操作前已存在以数字编号的文件log2.txt.~1~，那么再次执行将产生log2.txt~2~，以次类推。如果之前没有以数字编号的文件，则使用下面讲到的简单备份。</li>
+<li>CONTROL=existing或nil：如果存在以数字编号的备份，则继续编号备份m+1…n：执行mv操作前已存在以数字编号的文件log2.txt.<del>1</del>，那么再次执行将产生log2.txt<del>2</del>，以次类推。如果之前没有以数字编号的文件，则使用下面讲到的简单备份。</li>
 <li>CONTROL=simple或never：使用简单备份：在被覆盖前进行了简单备份，简单备份只能有一份，再次被覆盖时，简单备份也会被覆盖。</li>
 </ol>
-</blockquote>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -1980,7 +2102,7 @@ $ mv doc/product /usr/doc
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

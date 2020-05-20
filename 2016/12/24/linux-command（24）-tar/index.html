@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（24）: tar | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:1,309</span>
+        <span>字数:1.3k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1861,203 +1868,185 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　通过SSH访问服务器，难免会要用到压缩，解压缩，打包，解包等，这时候tar命令就是是必不可少的一个功能强大的工具。linux中最流行的tar是麻雀虽小，五脏俱全，功能强大。<br><a id="more"></a></p>
+        <p>　　通过SSH访问服务器，难免会要用到压缩，解压缩，打包，解包等，这时候tar命令就是是必不可少的一个功能强大的工具。linux中最流行的tar是麻雀虽小，五脏俱全，功能强大。</p>
+<a id="more"></a>
+
 <p>　　tar命令可以为linux的文件和目录创建档案。利用tar，可以为某一特定文件创建档案（备份文件），也可以在档案中改变文件，或者向档案中加入新的文件。tar最初被用来在磁带上创建档案，现在，用户可以在任何设备上创建档案。利用tar命令，可以把一大堆的文件和目录全部打包成一个文件，这对于备份文件或将几个文件组合成为一个文件以便于网络传输是非常有用的。</p>
 <p>　　首先要弄清两个概念：打包和压缩。打包是指将一大堆文件或目录变成一个总的文件；压缩则是将一个大的文件通过一些压缩算法变成一个小文件。</p>
 <p>　　为什么要区分这两个概念呢？这源于Linux中很多压缩程序只能针对一个文件进行压缩，这样当你想要压缩一大堆文件时，你得先将这一大堆文件先打成一个包（tar命令），然后再用压缩程序进行压缩（gzip bzip2命令）。</p>
 <p>　　linux下最常用的打包程序就是tar了，使用tar程序打出来的包我们常称为tar包，tar包文件的命令通常都是以.tar结尾的。生成tar包后，就可以用其它的程序来进行压缩。</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ tar [必要参数] [选择参数] [文件]
-</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ tar [必要参数] [选择参数] [文件]</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　用来压缩和解压文件。tar本身不具有压缩功能。他是调用压缩功能实现的</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><p><span><strong>必要参数</strong></span></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-A</td>
-<td style="text-align:left">新增压缩文件到已存在的压缩</td>
+<tbody><tr>
+<td align="left">-A</td>
+<td align="left">新增压缩文件到已存在的压缩</td>
 </tr>
 <tr>
-<td style="text-align:left">-B</td>
-<td style="text-align:left">设置区块大小</td>
+<td align="left">-B</td>
+<td align="left">设置区块大小</td>
 </tr>
 <tr>
-<td style="text-align:left">-c</td>
-<td style="text-align:left">建立新的压缩文件</td>
+<td align="left">-c</td>
+<td align="left">建立新的压缩文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-d</td>
-<td style="text-align:left">记录文件的差别</td>
+<td align="left">-d</td>
+<td align="left">记录文件的差别</td>
 </tr>
 <tr>
-<td style="text-align:left">-r</td>
-<td style="text-align:left">添加文件到已经压缩的文件</td>
+<td align="left">-r</td>
+<td align="left">添加文件到已经压缩的文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-u</td>
-<td style="text-align:left">添加改变了和现有的文件到已经存在的压缩文件</td>
+<td align="left">-u</td>
+<td align="left">添加改变了和现有的文件到已经存在的压缩文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-x</td>
-<td style="text-align:left">从压缩的文件中提取文件</td>
+<td align="left">-x</td>
+<td align="left">从压缩的文件中提取文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-t</td>
-<td style="text-align:left">显示压缩文件的内容</td>
+<td align="left">-t</td>
+<td align="left">显示压缩文件的内容</td>
 </tr>
 <tr>
-<td style="text-align:left">-z</td>
-<td style="text-align:left">支持gzip解压文件</td>
+<td align="left">-z</td>
+<td align="left">支持gzip解压文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-j</td>
-<td style="text-align:left">支持bzip2解压文件</td>
+<td align="left">-j</td>
+<td align="left">支持bzip2解压文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-Z</td>
-<td style="text-align:left">支持compress解压文件</td>
+<td align="left">-Z</td>
+<td align="left">支持compress解压文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-v</td>
-<td style="text-align:left">显示操作过程</td>
+<td align="left">-v</td>
+<td align="left">显示操作过程</td>
 </tr>
 <tr>
-<td style="text-align:left">-l</td>
-<td style="text-align:left">文件系统边界设置</td>
+<td align="left">-l</td>
+<td align="left">文件系统边界设置</td>
 </tr>
 <tr>
-<td style="text-align:left">-k</td>
-<td style="text-align:left">保留原有文件不覆盖</td>
+<td align="left">-k</td>
+<td align="left">保留原有文件不覆盖</td>
 </tr>
 <tr>
-<td style="text-align:left">-m</td>
-<td style="text-align:left">保留文件不被覆盖</td>
+<td align="left">-m</td>
+<td align="left">保留文件不被覆盖</td>
 </tr>
 <tr>
-<td style="text-align:left">-W</td>
-<td style="text-align:left">确认压缩文件的正确性</td>
+<td align="left">-W</td>
+<td align="left">确认压缩文件的正确性</td>
 </tr>
-</tbody>
-</table>
-<p><strong>可选参数</strong></p>
+<tr>
+<td align="left"><strong>可选参数</strong></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-b</td>
-<td style="text-align:left">设置区块数目</td>
+<tbody><tr>
+<td align="left">-b</td>
+<td align="left">设置区块数目</td>
 </tr>
 <tr>
-<td style="text-align:left">-C</td>
-<td style="text-align:left">切换到指定目录</td>
+<td align="left">-C</td>
+<td align="left">切换到指定目录</td>
 </tr>
 <tr>
-<td style="text-align:left">-f</td>
-<td style="text-align:left">指定压缩文件</td>
+<td align="left">-f</td>
+<td align="left">指定压缩文件</td>
 </tr>
 <tr>
-<td style="text-align:left">–help</td>
-<td style="text-align:left">显示帮助信息</td>
+<td align="left">–help</td>
+<td align="left">显示帮助信息</td>
 </tr>
 <tr>
-<td style="text-align:left">–version</td>
-<td style="text-align:left">显示版本信息</td>
+<td align="left">–version</td>
+<td align="left">显示版本信息</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="使常见解压-压缩命令"><a href="#使常见解压-压缩命令" class="headerlink" title="使常见解压/压缩命令"></a>使常见解压/压缩命令</h3><p><strong><code>例一</code>：.tar文件</strong></p>
 <pre><code class="bash">$ tar xvf FileName.tar # 解包
 $ tar cvf FileName.tar DirName # 打包
-# 注：tar是打包，不是压缩！
-</code></pre>
+# 注：tar是打包，不是压缩！</code></pre>
 <p><strong><code>例二</code>：.gz文件</strong></p>
 <pre><code class="bash"># 解压
 $ gunzip FileName.gz
 $ gzip -d FileName.gz
 
 # 压缩
-gzip FileName
-</code></pre>
+gzip FileName</code></pre>
 <p><strong><code>例三</code>：.tar.gz和.tgz文件</strong></p>
 <pre><code class="bash">$ tar xvf FileName.tar.gz # 解包
 $ tar cvf FileName.tar.gz DirName # 打包
-# 注：tar是打包，不是压缩！
-</code></pre>
+# 注：tar是打包，不是压缩！</code></pre>
 <p><strong><code>例四</code>：.bz2文件</strong></p>
 <pre><code class="bash"># 解压
 $ bzip2 -d FileName.bz2
 $ bunzip2 FileName.bz2
 # 压缩
-$ bzip2 -z FileName
-</code></pre>
+$ bzip2 -z FileName</code></pre>
 <p><strong><code>例五</code>：.tar.bz2文件</strong></p>
 <pre><code class="bash">$ tar jxvf FileName.tar.bz2 # 解压
-$ tar jcvf FileName.tar.bz2 DirName # 压缩
-</code></pre>
+$ tar jcvf FileName.tar.bz2 DirName # 压缩</code></pre>
 <p><strong><code>例六</code>：.bz文件</strong></p>
 <pre><code class="bash"># 解压
 $ bzip2 -d FileName.bz
-$ bunzip2 FileName.bz
-</code></pre>
+$ bunzip2 FileName.bz</code></pre>
 <p><strong><code>例七</code>：.tar.bz文件</strong></p>
-<pre><code class="bash">$ tar jxvf FileName.tar.bz # 解压
-</code></pre>
+<pre><code class="bash">$ tar jxvf FileName.tar.bz # 解压</code></pre>
 <p><strong><code>例八</code>：.Z文件</strong></p>
 <pre><code class="bash">$ uncompress FileName.Z # 解压
-$ compress FileName # 压缩
-</code></pre>
+$ compress FileName # 压缩</code></pre>
 <p><strong><code>例九</code>：.tar.Z文件</strong></p>
 <pre><code class="bash">$ tar Zxvf FileName.tar.Z # 解压
-$ tar Zcvf FileName.tar.Z DirName # 压缩
-</code></pre>
+$ tar Zcvf FileName.tar.Z DirName # 压缩</code></pre>
 <p><strong><code>例十</code>：.zip文件</strong></p>
 <pre><code class="bash">$ unzip FileName.zip # 解压
-$ zip FileName.zip DirName # 压缩
-</code></pre>
+$ zip FileName.zip DirName # 压缩</code></pre>
 <p><strong><code>例十一</code>：.rar文件</strong></p>
 <pre><code class="bash">$ rar x FileName.rar # 解压
-$ rar a FileName.rar DirName # 压缩
-</code></pre>
+$ rar a FileName.rar DirName # 压缩</code></pre>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：将文件全部打包成tar包</strong></p>
 <pre><code class="bash">$ tar -cvf log.tar log2012.log   # 仅打包，不压缩！
 $ tar -zcvf log.tar.gz log2012.log # 打包后，以 gzip 压缩
-$ tar -jcvf log.tar.bz2 log2012.log # 打包后，以 bzip2 压缩
-</code></pre>
+$ tar -jcvf log.tar.bz2 log2012.log # 打包后，以 bzip2 压缩</code></pre>
 <blockquote>
 <p>在参数 f 之后的文件档名是自己取的，我们习惯上都用 .tar 来作为辨识。 如果加 z 参数，则以 .tar.gz 或 .tgz 来代表 gzip 压缩过的 tar包； 如果加 j 参数，则以 .tar.bz2 来作为tar包名。</p>
 </blockquote>
 <p><strong><code>例二</code>：查阅上述 tar包内有哪些文件</strong></p>
 <pre><code class="bash">$ tar -ztvf log.tar.gz
-# 由于我们使用 gzip 压缩的log.tar.gz，所以要查阅log.tar.gz包内的文件时，就得要加上 z 这个参数了
-</code></pre>
+# 由于我们使用 gzip 压缩的log.tar.gz，所以要查阅log.tar.gz包内的文件时，就得要加上 z 这个参数了</code></pre>
 <p><strong><code>例三</code>：将tar 包解压缩</strong></p>
 <pre><code class="bash">$ tar -zxvf /opt/soft/test/log.tar.gz
-# 在预设的情况下，我们可以将压缩档在任何地方解开的
-</code></pre>
+# 在预设的情况下，我们可以将压缩档在任何地方解开的</code></pre>
 <p><strong><code>例四</code>：只将 /tar 内的 部分文件解压出来</strong></p>
 <pre><code class="bash">$ tar -zxvf /opt/soft/test/log30.tar.gz log2013.log
-# 我可以透过 tar -ztvf 来查阅 tar 包内的文件名称，如果单只要一个文件，就可以透过这个方式来解压部分文件！
-</code></pre>
+# 我可以透过 tar -ztvf 来查阅 tar 包内的文件名称，如果单只要一个文件，就可以透过这个方式来解压部分文件！</code></pre>
 <p><strong><code>例五</code>：文件备份下来，并且保存其权限</strong></p>
 <pre><code class="bash">$ tar -zcvpf log31.tar.gz log2014.log log2015.log log2016.log
-# 这个 -p 的属性是很重要的，尤其是当您要保留原本文件的属性时
-</code></pre>
+# 这个 -p 的属性是很重要的，尤其是当您要保留原本文件的属性时</code></pre>
 <p><strong><code>例六</code>：在 文件夹当中，比某个日期新的文件才备份</strong></p>
-<pre><code class="bash">$ tar -N &quot;2012/11/13&quot; -zcvf log17.tar.gz test
-</code></pre>
+<pre><code class="bash">$ tar -N &quot;2012/11/13&quot; -zcvf log17.tar.gz test</code></pre>
 <p><strong><code>例七</code>：备份文件夹内容是排除部分文件</strong></p>
-<pre><code class="bash">$ tar --exclude scf/service -zcvf scf.tar.gz scf/*
-</code></pre>
+<pre><code class="bash">$ tar --exclude scf/service -zcvf scf.tar.gz scf/*</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -2107,7 +2096,7 @@ $ tar -jcvf log.tar.bz2 log2012.log # 打包后，以 bzip2 压缩
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

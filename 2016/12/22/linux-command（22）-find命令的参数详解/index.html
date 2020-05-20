@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（22）: find命令的参数详解 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:1,739</span>
+        <span>字数:1.8k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1861,7 +1868,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　find一些常用参数的一些常用实例和一些具体用法和注意事项。<br><a id="more"></a></p>
+        <p>　　find一些常用参数的一些常用实例和一些具体用法和注意事项。</p>
+<a id="more"></a>
 <h3 id="使用name选项"><a href="#使用name选项" class="headerlink" title="使用name选项"></a>使用name选项</h3><p>　　文件名选项是find命令最常用的选项，要么单独使用该选项，要么和其他选项一起使用。可以使用某种文件名模式来匹配文件，记住要用引号将文件名模式引起来。</p>
 <pre><code class="bash"># 在自己的根目录$HOME中查找文件名符合*.log的文件，使用~作为 &#39;pathname&#39;参数，波浪号~代表了你的$HOME目录。
 $ find ~ -name &quot;*.log&quot; -print
@@ -1883,31 +1891,24 @@ $ find . -print
 $ find / -name &quot;*&quot; -print
 
 # 在当前目录查找文件名以一个个小写字母开头，最后是4到9加上.log结束的文件
-$ find . -name &quot;[a-z]*[4-9].log&quot; -print
-</code></pre>
+$ find . -name &quot;[a-z]*[4-9].log&quot; -print</code></pre>
 <h3 id="用perm选项"><a href="#用perm选项" class="headerlink" title="用perm选项"></a>用perm选项</h3><p>　　按照文件权限模式用-perm选项,按文件权限模式来查找文件的话。最好使用八进制的权限表示法</p>
 <pre><code class="bash"># 在当前目录下查找文件权限位为755的文件
-$ find . -perm 755 -print
-</code></pre>
+$ find . -perm 755 -print</code></pre>
 <p>　　还有一种表达方法：在八进制数字前面要加一个横杠-，表示都匹配，如-007就相当于777，-005相当于555,</p>
-<pre><code class="bash">$ find . -perm -005
-</code></pre>
+<pre><code class="bash">$ find . -perm -005</code></pre>
 <h3 id="忽略某个目录"><a href="#忽略某个目录" class="headerlink" title="忽略某个目录"></a>忽略某个目录</h3><p>　　如果在查找文件时希望忽略某个目录，因为你知道那个目录中没有你所要查找的文件，那么可以使用-prune选项来指出需要忽略的目录。在使用-prune选项时要当心，因为如果你同时使用了-depth选项，那么-prune选项就会被find命令忽略。如果希望在test目录下查找文件，但不希望在test/test3目录下查找，可以用:</p>
-<pre><code class="bash">$ find test -path &quot;test/test3&quot; -prune -o -print
-</code></pre>
+<pre><code class="bash">$ find test -path &quot;test/test3&quot; -prune -o -print</code></pre>
 <h3 id="使用find查找文件的时候怎么避开某个文件目录"><a href="#使用find查找文件的时候怎么避开某个文件目录" class="headerlink" title="使用find查找文件的时候怎么避开某个文件目录"></a>使用find查找文件的时候怎么避开某个文件目录</h3><p><strong><code>例一</code>：在test 目录下查找不在test4子目录之内的所有文件</strong></p>
-<pre><code class="bash">$ find test -path &quot;test/test4&quot; -prune -o -print
-</code></pre>
+<pre><code class="bash">$ find test -path &quot;test/test4&quot; -prune -o -print</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>find [-path ..] [expression]<br>在路径列表的后面的是表达式<br>-path “test” -prune -o -print 是 -path “test” -a -prune -o -print 的简写表达式按顺序求值, -a 和 -o 都是短路求值，与 shell 的 &amp;&amp; 和 || 类似如果<br>-path “test” 为真，则求值 -prune , -prune 返回真，与逻辑表达式为真；否则不求值 -prune，与逻辑表达式为假。如果 -path “test” -a -prune 为假，则求值 -print ，-print返回真，或逻辑表达式为真；否则不求值 -print，或逻辑表达式为真。<br>这个表达式组合特例可以用伪码写为:<br>if -path “test” then<br>-prune<br>else<br>-print  </p>
 </blockquote>
 <p><strong><code>例二</code>：避开多个文件夹</strong></p>
 <pre><code class="bash"># 圆括号表示表达式的结合。\ 表示引用，即指示 shell 不对后面的字符作特殊解释，而留给 find 命令去解释其意义
-$ find test \( -path test/test4 -o -path test/test3 \) -prune -o -print
-</code></pre>
+$ find test \( -path test/test4 -o -path test/test3 \) -prune -o -print</code></pre>
 <p><strong><code>例三</code>：查找某一确定文件，-name等选项加在-o 之后</strong></p>
-<pre><code class="bash">$ find test \(-path test/test4 -o -path test/test3 \) -prune -o -name &quot;*.log&quot; -print
-</code></pre>
+<pre><code class="bash">$ find test \(-path test/test4 -o -path test/test3 \) -prune -o -name &quot;*.log&quot; -print</code></pre>
 <h3 id="使用user和nouser选项"><a href="#使用user和nouser选项" class="headerlink" title="使用user和nouser选项"></a>使用user和nouser选项</h3><pre><code class="bash"># 在$HOME目录中查找文件属主为peida的文件
 $ find ~ -user peida -print
 
@@ -1915,8 +1916,7 @@ $ find ~ -user peida -print
 $ find /etc -user peida -print
 
 # 为了查找属主帐户已经被删除的文件，可以使用-nouser选项。在/home目录下查找所有的这类文件
-$ find /home -nouser -print
-</code></pre>
+$ find /home -nouser -print</code></pre>
 <h3 id="使用group和nogroup选项"><a href="#使用group和nogroup选项" class="headerlink" title="使用group和nogroup选项"></a>使用group和nogroup选项</h3><pre><code class="bash"># 在/apps目录下查找属于gem用户组的文件
 $ find /apps -group gem -print
 
@@ -1928,8 +1928,7 @@ $ find / -nogroup-print
 $ find / -mtime -5 -print
 
 # 在/var/adm目录下查找更改时间在3日以前的文件
-$ find /var/adm -mtime +3 -print
-</code></pre>
+$ find /var/adm -mtime +3 -print</code></pre>
 <h3 id="查找比某个文件新或旧的文件"><a href="#查找比某个文件新或旧的文件" class="headerlink" title="查找比某个文件新或旧的文件"></a>查找比某个文件新或旧的文件</h3><p>　　如果希望查找更改时间比某个文件新但比另一个文件旧的所有文件，可以使用-newer选项。</p>
 <pre><code class="bash"># 查找更改时间比文件log2012.log新但比文件log2017.log旧的文件
 $ find -newer log2012.log ! -newer log2017.log
@@ -1944,8 +1943,7 @@ $ find /etc -type d -print
 $ find . ! -type d -print
 
 # 在/etc目录下查找所有的符号链接文件
-$ find /etc -type l -print
-</code></pre>
+$ find /etc -type l -print</code></pre>
 <h3 id="使用size选项"><a href="#使用size选项" class="headerlink" title="使用size选项"></a>使用size选项</h3><p>　　可以按照文件长度来查找文件，这里所指的文件长度既可以用块（block）来计量，也可以用字节来计量。以字节计量文件长度的表达形式为N c；以块计量文件长度只用数字表示即可。<br>在按照文件长度查找文件时，一般使用这种以字节表示的文件长度，在查看文件系统的大小，因为这时使用块来计量更容易转换。</p>
 <pre><code class="bash"># 在当前目录下查找文件长度大于1 M字节的文件
 $ find . -size +1000000c -print
@@ -1954,17 +1952,14 @@ $ find . -size +1000000c -print
 $ find /home/apache -size 100c -print
 
 # 在当前目录下查找长度超过10块的文件（一块等于512字节）
-$ find . -size +10 -print
-</code></pre>
+$ find . -size +10 -print</code></pre>
 <h3 id="使用depth选项"><a href="#使用depth选项" class="headerlink" title="使用depth选项"></a>使用depth选项</h3><p>　　在使用find命令时，可能希望先匹配所有的文件，再在子目录中查找。使用depth选项就可以使find命令这样做。这样做的一个原因就是，当在使用find命令向磁带上备份文件系统时，希望首先备份所有的文件，其次再备份子目录中的文件。</p>
 <pre><code class="bash"># find命令从文件系统的根目录开始，查找一个名为CON.FILE的文件
 # 它将首先匹配所有的文件然后再进入子目录中查找
-$ find / -name &quot;CON.FILE&quot; -depth -print
-</code></pre>
+$ find / -name &quot;CON.FILE&quot; -depth -print</code></pre>
 <h3 id="使用mount选项"><a href="#使用mount选项" class="headerlink" title="使用mount选项"></a>使用mount选项</h3><p>　　在当前的文件系统中查找文件（不进入其他文件系统），可以使用find命令的mount选项</p>
 <pre><code class="bash"># 从当前目录开始查找位于本文件系统中文件名以XC结尾的文件
-$ find . -name &quot;*.XC&quot; -mount -print
-</code></pre>
+$ find . -name &quot;*.XC&quot; -mount -print</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -2014,7 +2009,7 @@ $ find . -name &quot;*.XC&quot; -mount -print
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

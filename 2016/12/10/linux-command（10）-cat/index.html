@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（10）: cat | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:479</span>
+        <span>字数:487</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1861,9 +1868,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　cat命令的用途是连接文件或标准输入并打印。这个命令常用来显示文件内容，或者将几个文件连接起来显示，或者从标准输入读取内容并显示，它常与重定向符号配合使用。<br><a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ cat [选项] [文件]...
-</code></pre>
+        <p>　　cat命令的用途是连接文件或标准输入并打印。这个命令常用来显示文件内容，或者将几个文件连接起来显示，或者从标准输入读取内容并显示，它常与重定向符号配合使用。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ cat [选项] [文件]...</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p><strong>cat主要有三大功能</strong></p>
 <ol>
 <li>一次显示整个文件:<code>cat filename</code></li>
@@ -1873,77 +1880,70 @@
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-A, –show-all</td>
-<td style="text-align:left">等价于 -vET</td>
+<tbody><tr>
+<td align="left">-A, –show-all</td>
+<td align="left">等价于 -vET</td>
 </tr>
 <tr>
-<td style="text-align:left">-b, –number-nonblank</td>
-<td style="text-align:left">对非空输出行编号</td>
+<td align="left">-b, –number-nonblank</td>
+<td align="left">对非空输出行编号</td>
 </tr>
 <tr>
-<td style="text-align:left">-e</td>
-<td style="text-align:left">等价于 -vE</td>
+<td align="left">-e</td>
+<td align="left">等价于 -vE</td>
 </tr>
 <tr>
-<td style="text-align:left">-E, –show-ends</td>
-<td style="text-align:left">在每行结束处显示 $</td>
+<td align="left">-E, –show-ends</td>
+<td align="left">在每行结束处显示 $</td>
 </tr>
 <tr>
-<td style="text-align:left">-n, –number</td>
-<td style="text-align:left">对输出的所有行编号,由1开始对所有输出的行数编号</td>
+<td align="left">-n, –number</td>
+<td align="left">对输出的所有行编号,由1开始对所有输出的行数编号</td>
 </tr>
 <tr>
-<td style="text-align:left">-s, –squeeze-blank</td>
-<td style="text-align:left">有连续两行以上的空白行，就代换为一行的空白行</td>
+<td align="left">-s, –squeeze-blank</td>
+<td align="left">有连续两行以上的空白行，就代换为一行的空白行</td>
 </tr>
 <tr>
-<td style="text-align:left">-t</td>
-<td style="text-align:left">与 -vT 等价</td>
+<td align="left">-t</td>
+<td align="left">与 -vT 等价</td>
 </tr>
 <tr>
-<td style="text-align:left">-T, –show-tabs</td>
-<td style="text-align:left">将跳格字符显示为 ^I</td>
+<td align="left">-T, –show-tabs</td>
+<td align="left">将跳格字符显示为 ^I</td>
 </tr>
 <tr>
-<td style="text-align:left">-u</td>
-<td style="text-align:left">(被忽略)</td>
+<td align="left">-u</td>
+<td align="left">(被忽略)</td>
 </tr>
 <tr>
-<td style="text-align:left">-v, –show-nonprinting</td>
-<td style="text-align:left">使用 ^ 和 M- 引用，除了 LFD 和 TAB 之外</td>
+<td align="left">-v, –show-nonprinting</td>
+<td align="left">使用 ^ 和 M- 引用，除了 LFD 和 TAB 之外</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="命令实例"><a href="#命令实例" class="headerlink" title="命令实例"></a>命令实例</h3><p><strong><code>例一</code>：把 log2012.log 的文件内容加上行号后输入 log2013.log 这个文件里</strong></p>
-<pre><code class="bash">$ cat -n log2012.log log2013.log
-</code></pre>
+<pre><code class="bash">$ cat -n log2012.log log2013.log</code></pre>
 <p><strong><code>例二</code>：把 log2012.log 和 log2013.log 的文件内容加上行号（空白行不加）之后将内容附加到 log.log 里</strong></p>
-<pre><code class="bash">$ cat -b log2012.log log2013.log log.log
-</code></pre>
+<pre><code class="bash">$ cat -b log2012.log log2013.log log.log</code></pre>
 <p><strong><code>例三</code>：把 log2012.log 的文件内容加上行号后输入 log.log 这个文件里</strong></p>
-<pre><code class="bash">$ cat -n log2012.log &gt; log.log
-</code></pre>
+<pre><code class="bash">$ cat -n log2012.log &gt; log.log</code></pre>
 <p><strong><code>例四</code>：使用here doc来生成文件</strong></p>
 <pre><code class="bash">$ cat &gt;log.txt &lt;&lt;EOF
 &gt; Hello
 &gt; World
 &gt; Linux
 &gt; PWD=$(pwd)
-&gt; EOF
-</code></pre>
+&gt; EOF</code></pre>
 <p><strong><code>例五</code>：tac (反向列示)</strong></p>
 <pre><code class="bash">$ tac log.txt
 PWD=/opt/soft/test
 Linux
 World
-Hello
-</code></pre>
+Hello</code></pre>
 <blockquote>
 <p>tac 是将 cat 反写过来，所以他的功能就跟 cat 相反， cat 是由第一行到最后一行连续显示在萤幕上，而 tac 则是由最后一行到第一行反向在萤幕上显示出来！</p>
 </blockquote>
@@ -1996,7 +1996,7 @@ Hello
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

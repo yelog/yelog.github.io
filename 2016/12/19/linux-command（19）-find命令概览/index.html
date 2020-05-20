@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（19）: find命令概览 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:1,126</span>
+        <span>字数:1.1k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1845,7 +1852,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-text">命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令功能"><span class="toc-text">命令功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令参数"><span class="toc-text">命令参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令选项"><span class="toc-text">命令选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用实例"><span class="toc-text">使用实例</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-text">命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令功能"><span class="toc-text">命令功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令参数"><span class="toc-text">命令参数</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1861,153 +1868,250 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　Linux下find命令在目录结构中搜索文件，并执行指定的操作。Linux下find命令提供了相当多的查找条件，功能很强大。由于find具有强大的功能，所以它的选项也很多，其中大部分选项都值得我们花时间来了解一下。即使系统中含有网络文件系统( NFS)，find命令在该文件系统中同样有效，只你具有相应的权限。 在运行一个非常消耗资源的find命令时，很多人都倾向于把它放在后台执行，因为遍历一个大的文件系统可能会花费很长的时间(这里是指30G字节以上的文件系统)。<br><a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ find pathname -options [-print -exec -ok ...]
-</code></pre>
+        <p>　　Linux下find命令在目录结构中搜索文件，并执行指定的操作。Linux下find命令提供了相当多的查找条件，功能很强大。由于find具有强大的功能，所以它的选项也很多，其中大部分选项都值得我们花时间来了解一下。即使系统中含有网络文件系统( NFS)，find命令在该文件系统中同样有效，只你具有相应的权限。 在运行一个非常消耗资源的find命令时，很多人都倾向于把它放在后台执行，因为遍历一个大的文件系统可能会花费很长的时间(这里是指30G字节以上的文件系统)。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ find pathname -options [-print -exec -ok ...]</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　用于在文件树种查找文件，并作出相应的处理</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">pathname</td>
-<td style="text-align:left">find命令所查找的目录路径。例如用.来表示当前目录，用/来表示系统根目录</td>
+<tbody><tr>
+<td align="left">pathname</td>
+<td align="left">find命令所查找的目录路径。例如用.来表示当前目录，用/来表示系统根目录</td>
 </tr>
 <tr>
-<td style="text-align:left">-print</td>
-<td style="text-align:left">find命令将匹配的文件输出到标准输出</td>
+<td align="left">-print</td>
+<td align="left">find命令将匹配的文件输出到标准输出</td>
 </tr>
 <tr>
-<td style="text-align:left">-exec</td>
-<td style="text-align:left">find命令对匹配的文件执行该参数所给出的shell命令。相应命令的形式为’command’ {  } \;，注意{   }和\；之间的空格</td>
+<td align="left">-exec</td>
+<td align="left">find命令对匹配的文件执行该参数所给出的shell命令。相应命令的形式为’command’ {  } ;，注意{   }和\；之间的空格</td>
 </tr>
 <tr>
-<td style="text-align:left">-ok</td>
-<td style="text-align:left">和-exec的作用相同，只不过以一种更为安全的模式来执行该参数所给出的shell命令，在执行每一个命令之前，都会给出提示，让用户来确定是否执行</td>
-</tr>
-</tbody>
-</table>
-<h3 id="命令选项"><a href="#命令选项" class="headerlink" title="命令选项"></a>命令选项</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">选项</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">-name</td>
-<td style="text-align:left">按照文件名查找文件</td>
+<td align="left">-ok</td>
+<td align="left">和-exec的作用相同，只不过以一种更为安全的模式来执行该参数所给出的shell命令，在执行每一个命令之前，都会给出提示，让用户来确定是否执行</td>
 </tr>
 <tr>
-<td style="text-align:left">-perm</td>
-<td style="text-align:left">按照文件权限来查找文件</td>
+<td align="left">### 命令选项</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">-prune</td>
-<td style="text-align:left">使用这一选项可以使find命令不在当前指定的目录中查找，如果同时使用-depth选项，那么-prune将被find命令忽略</td>
+<td align="left">选项</td>
+<td align="left">描述</td>
 </tr>
 <tr>
-<td style="text-align:left">-user</td>
-<td style="text-align:left">按照文件属主来查找文件</td>
+<td align="left">:————-</td>
+<td align="left">:————-</td>
 </tr>
 <tr>
-<td style="text-align:left">-group</td>
-<td style="text-align:left">按照文件所属的组来查找文件</td>
+<td align="left">-name</td>
+<td align="left">按照文件名查找文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-mtime -n +n</td>
-<td style="text-align:left">按照文件的更改时间来查找文件， - n表示文件更改时间距现在n天以内，+ n表示文件更改时间距现在n天以前。<br>find命令还有-atime和-ctime 选项，但它们都和-m time选项</td>
+<td align="left">-perm</td>
+<td align="left">按照文件权限来查找文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-nogroup</td>
-<td style="text-align:left">查找无有效所属组的文件，即该文件所属的组在/etc/groups中不存在</td>
+<td align="left">-prune</td>
+<td align="left">使用这一选项可以使find命令不在当前指定的目录中查找，如果同时使用-depth选项，那么-prune将被find命令忽略</td>
 </tr>
 <tr>
-<td style="text-align:left">-nouser</td>
-<td style="text-align:left">查找无有效属主的文件，即该文件的属主在/etc/passwd中不存在</td>
+<td align="left">-user</td>
+<td align="left">按照文件属主来查找文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-newer file1 ! file2</td>
-<td style="text-align:left">查找更改时间比文件file1新但比文件file2旧的文件</td>
+<td align="left">-group</td>
+<td align="left">按照文件所属的组来查找文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-type</td>
-<td style="text-align:left">查找某一类型的文件,诸如：<br>b - 块设备文件<br>d - 目录<br>c - 字符设备文件<br>p - 管道文件<br>l - 符号链接文件<br>f - 普通文件</td>
+<td align="left">-mtime -n +n</td>
+<td align="left">按照文件的更改时间来查找文件， - n表示文件更改时间距现在n天以内，+ n表示文件更改时间距现在n天以前。<br>find命令还有-atime和-ctime 选项，但它们都和-m time选项</td>
 </tr>
 <tr>
-<td style="text-align:left">-size n：[c]</td>
-<td style="text-align:left">查找文件长度为n块的文件，带有c时表示文件长度以字节计。-depth：在查找文件时，首先查找当前目录中的文件，然后再在其子目录中查找</td>
+<td align="left">-nogroup</td>
+<td align="left">查找无有效所属组的文件，即该文件所属的组在/etc/groups中不存在</td>
 </tr>
 <tr>
-<td style="text-align:left">-fstype</td>
-<td style="text-align:left">查找位于某一类型文件系统中的文件，这些文件系统类型通常可以在配置文件/etc/fstab中找到，该配置文件中包含了本系统中有关文件系统的信息</td>
+<td align="left">-nouser</td>
+<td align="left">查找无有效属主的文件，即该文件的属主在/etc/passwd中不存在</td>
 </tr>
 <tr>
-<td style="text-align:left">-mount</td>
-<td style="text-align:left">在查找文件时不跨越文件系统mount点</td>
+<td align="left">-newer file1 ! file2</td>
+<td align="left">查找更改时间比文件file1新但比文件file2旧的文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-follow</td>
-<td style="text-align:left">如果find命令遇到符号链接文件，就跟踪至链接所指向的文件</td>
+<td align="left">-type</td>
+<td align="left">查找某一类型的文件,诸如：<br>b - 块设备文件<br>d - 目录<br>c - 字符设备文件<br>p - 管道文件<br>l - 符号链接文件<br>f - 普通文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-cpio</td>
-<td style="text-align:left">对匹配的文件使用cpio命令，将这些文件备份到磁带设备中</td>
+<td align="left">-size n：[c]</td>
+<td align="left">查找文件长度为n块的文件，带有c时表示文件长度以字节计。-depth：在查找文件时，首先查找当前目录中的文件，然后再在其子目录中查找</td>
 </tr>
 <tr>
-<td style="text-align:left">-amin n</td>
-<td style="text-align:left">查找系统中最后N分钟访问的文件</td>
+<td align="left">-fstype</td>
+<td align="left">查找位于某一类型文件系统中的文件，这些文件系统类型通常可以在配置文件/etc/fstab中找到，该配置文件中包含了本系统中有关文件系统的信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-atime n</td>
-<td style="text-align:left">查找系统中最后n*24小时访问的文件</td>
+<td align="left">-mount</td>
+<td align="left">在查找文件时不跨越文件系统mount点</td>
 </tr>
 <tr>
-<td style="text-align:left">-cmin n</td>
-<td style="text-align:left">查找系统中最后N分钟被改变文件状态的文件</td>
+<td align="left">-follow</td>
+<td align="left">如果find命令遇到符号链接文件，就跟踪至链接所指向的文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-ctime n</td>
-<td style="text-align:left">查找系统中最后n*24小时被改变文件状态的文件</td>
+<td align="left">-cpio</td>
+<td align="left">对匹配的文件使用cpio命令，将这些文件备份到磁带设备中</td>
 </tr>
 <tr>
-<td style="text-align:left">-mmin n</td>
-<td style="text-align:left">查找系统中最后N分钟被改变文件数据的文件</td>
+<td align="left">-amin n</td>
+<td align="left">查找系统中最后N分钟访问的文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-mtime n</td>
-<td style="text-align:left">查找系统中最后n*24小时被改变文件数据的文件</td>
+<td align="left">-atime n</td>
+<td align="left">查找系统中最后n*24小时访问的文件</td>
 </tr>
-</tbody>
-</table>
-<h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：查找指定时间内修改过的文件</strong></p>
-<pre><code class="bash"># 查找48小时内修改过的文件
-$ find -atime -2
-</code></pre>
-<p><strong><code>例二</code>：根据关键字查找</strong></p>
-<pre><code class="bash"># 在当前目录查找一.log结尾的文件。 &quot;. &quot;代表当前目录
-$ find . -name &quot;*.log&quot;
-</code></pre>
-<p><strong><code>例三</code>：按照目录或文件的权限来查找文件</strong></p>
-<pre><code class="bash"># 查找/opt/soft/test/目录下 权限为 777的文件
-$ find /opt/soft/test/ -perm 777
-</code></pre>
-<p><strong><code>例四</code>：按类型查找</strong></p>
-<pre><code class="bash"># 查找当目录，以.log结尾的普通文件
-$ find . -type f -name &quot;*.log&quot;
-</code></pre>
-<p><strong><code>例五</code>：查找当前所有目录并排序</strong></p>
-<pre><code class="bash">$ find . -type d | sort
-</code></pre>
-<p><strong><code>例六</code>：按大小查找文件</strong></p>
-<pre><code class="bash"># 查找当前目录大于1K的文件
-$ find . -size +1000c -print
-</code></pre>
+<tr>
+<td align="left">-cmin n</td>
+<td align="left">查找系统中最后N分钟被改变文件状态的文件</td>
+</tr>
+<tr>
+<td align="left">-ctime n</td>
+<td align="left">查找系统中最后n*24小时被改变文件状态的文件</td>
+</tr>
+<tr>
+<td align="left">-mmin n</td>
+<td align="left">查找系统中最后N分钟被改变文件数据的文件</td>
+</tr>
+<tr>
+<td align="left">-mtime n</td>
+<td align="left">查找系统中最后n*24小时被改变文件数据的文件</td>
+</tr>
+<tr>
+<td align="left">### 使用实例</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例一</code>：查找指定时间内修改过的文件</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"># 查找48小时内修改过的文件</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ find -atime -2</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例二</code>：根据关键字查找</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"># 在当前目录查找一.log结尾的文件。 “. “代表当前目录</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ find . -name “*.log”</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例三</code>：按照目录或文件的权限来查找文件</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"># 查找/opt/soft/test/目录下 权限为 777的文件</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ find /opt/soft/test/ -perm 777</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例四</code>：按类型查找</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"># 查找当目录，以.log结尾的普通文件</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ find . -type f -name “*.log”</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例五</code>：查找当前所有目录并排序</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ find . -type d</td>
+<td align="left">sort</td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例六</code>：按大小查找文件</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"># 查找当前目录大于1K的文件</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ find . -size +1000c -print</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -2057,7 +2161,7 @@ $ find . -size +1000c -print
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

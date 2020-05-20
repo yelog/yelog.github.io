@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（26）: chmod | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:1,550</span>
+        <span>字数:1.6k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1861,156 +1868,142 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　chmod命令用于改变linux系统文件或目录的访问权限。用它控制文件或目录的访问权限。该命令有两种用法。一种是包含字母和操作符表达式的文字设定法；另一种是包含数字的数字设定法。<br><a id="more"></a><br>　　Linux系统中的每个文件和目录都有访问许可权限，用它来确定谁可以通过何种方式对文件和目录进行访问和操作。</p>
+        <p>　　chmod命令用于改变linux系统文件或目录的访问权限。用它控制文件或目录的访问权限。该命令有两种用法。一种是包含字母和操作符表达式的文字设定法；另一种是包含数字的数字设定法。</p>
+<a id="more"></a>
+<p>　　Linux系统中的每个文件和目录都有访问许可权限，用它来确定谁可以通过何种方式对文件和目录进行访问和操作。</p>
 <p>　　文件或目录的访问权限分为只读，只写和可执行三种。以文件为例，只读权限表示只允许读其内容，而禁止对其做任何的更改操作。可执行权限表示允许将该文件作为一个程序执行。文件被创建时，文件所有者自动拥有对该文件的读、写和可执行权限，以便于对文件的阅读和修改。用户也可根据需要把访问权限设置为需要的任何组合。</p>
 <p>　　有三种不同类型的用户可对文件或目录进行访问：文件所有者，同组用户、其他用户。所有者一般是文件的创建者。所有者可以允许同组用户有权访问文件，还可以将文件的访问权限赋予系统中的其他用户。在这种情况下，系统中每一位用户都能访问该用户拥有的文件或目录。</p>
 <p>　　每一文件或目录的访问权限都有三组，每组用三位表示，分别为文件属主的读、写和执行权限；与属主同组的用户的读、写和执行权限；系统中其他用户的读、写和执行权限。当用ls -l命令显示文件或目录的详细信息时，最左边的一列为文件的访问权限。 例如：</p>
 <pre><code class="bash">$ ls -al
--rw-r--r-- 1 root root 296K 11-13 06:03 log2012.log
-</code></pre>
+-rw-r--r-- 1 root root 296K 11-13 06:03 log2012.log</code></pre>
 <p>　　第一列共有10个位置，第一个字符指定了文件类型。在通常意义上，一个目录也是一个文件。如果第一个字符是横线，表示是一个非目录的文件。如果是d，表示是一个目录。从第二个字符开始到第十个共9个字符，3个字符一组，分别表示了3组用户对文件或者目录的权限。权限字符用横线代表空许可，r代表只读，w代表写，x代表可执行。</p>
-<pre><code class="bash">- rw- r-- r--
-</code></pre>
+<pre><code class="bash">- rw- r-- r--</code></pre>
 <p>　　表示log2012.log是一个普通文件；log2012.log的属主有读写权限；与log2012.log属主同组的用户只有读权限；其他用户也只有读权限。</p>
 <p>　　确定了一个文件的访问权限后，用户可以利用Linux系统提供的chmod命令来重新设定不同的访问权限。也可以利用chown命令来更改某个文件或目录的所有者。利用chgrp命令来更改某个文件或目录的用户组。</p>
 <p>　　chmod命令是非常重要的，用于改变文件或目录的访问权限。用户用它控制文件或目录的访问权限。chmod命令详细情况如下。</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ chmod [-cfvR] [--help] [--version] mode file
-</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ chmod [-cfvR] [--help] [--version] mode file</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>用于改变文件或目录的访问权限，用它控制文件或目录的访问权限。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><p><strong>必要参数</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-c</td>
-<td style="text-align:left">当发生改变时，报告处理信息</td>
+<tbody><tr>
+<td align="left">-c</td>
+<td align="left">当发生改变时，报告处理信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-f</td>
-<td style="text-align:left">错误信息不输出</td>
+<td align="left">-f</td>
+<td align="left">错误信息不输出</td>
 </tr>
 <tr>
-<td style="text-align:left">-R</td>
-<td style="text-align:left">处理指定目录以及其子目录下的所有文件</td>
+<td align="left">-R</td>
+<td align="left">处理指定目录以及其子目录下的所有文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-v</td>
-<td style="text-align:left">运行时显示详细处理信息</td>
+<td align="left">-v</td>
+<td align="left">运行时显示详细处理信息</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>选择参数</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">–reference=&lt;目录或者文件&gt;</td>
-<td style="text-align:left">设置成具有指定目录或者文件具有相同的权限</td>
+<tbody><tr>
+<td align="left">–reference=&lt;目录或者文件&gt;</td>
+<td align="left">设置成具有指定目录或者文件具有相同的权限</td>
 </tr>
 <tr>
-<td style="text-align:left">–version</td>
-<td style="text-align:left">显示版本信息</td>
+<td align="left">–version</td>
+<td align="left">显示版本信息</td>
 </tr>
 <tr>
-<td style="text-align:left">&lt;权限范围&gt;+&lt;权限设置&gt;</td>
-<td style="text-align:left">使权限范围内的目录或者文件具有指定的权限</td>
+<td align="left">&lt;权限范围&gt;+&lt;权限设置&gt;</td>
+<td align="left">使权限范围内的目录或者文件具有指定的权限</td>
 </tr>
 <tr>
-<td style="text-align:left">&lt;权限范围&gt;-&lt;权限设置&gt;</td>
-<td style="text-align:left">删除权限范围的目录或者文件的指定权限</td>
+<td align="left">&lt;权限范围&gt;-&lt;权限设置&gt;</td>
+<td align="left">删除权限范围的目录或者文件的指定权限</td>
 </tr>
 <tr>
-<td style="text-align:left">&lt;权限范围&gt;=&lt;权限设置&gt;</td>
-<td style="text-align:left">设置权限范围内的目录或者文件的权限为指定的值</td>
+<td align="left">&lt;权限范围&gt;=&lt;权限设置&gt;</td>
+<td align="left">设置权限范围内的目录或者文件的权限为指定的值</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>权限范围</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">u</td>
-<td style="text-align:left">目录或者文件的当前的用户</td>
+<tbody><tr>
+<td align="left">u</td>
+<td align="left">目录或者文件的当前的用户</td>
 </tr>
 <tr>
-<td style="text-align:left">g</td>
-<td style="text-align:left">目录或者文件的当前的群组</td>
+<td align="left">g</td>
+<td align="left">目录或者文件的当前的群组</td>
 </tr>
 <tr>
-<td style="text-align:left">o</td>
-<td style="text-align:left">除了目录或者文件的当前用户或群组之外的用户或者群组</td>
+<td align="left">o</td>
+<td align="left">除了目录或者文件的当前用户或群组之外的用户或者群组</td>
 </tr>
 <tr>
-<td style="text-align:left">a</td>
-<td style="text-align:left">所有的用户及群组</td>
+<td align="left">a</td>
+<td align="left">所有的用户及群组</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>权限代号</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">r</td>
-<td style="text-align:left">读权限，用数字4表示</td>
+<tbody><tr>
+<td align="left">r</td>
+<td align="left">读权限，用数字4表示</td>
 </tr>
 <tr>
-<td style="text-align:left">w</td>
-<td style="text-align:left">写权限，用数字2表示</td>
+<td align="left">w</td>
+<td align="left">写权限，用数字2表示</td>
 </tr>
 <tr>
-<td style="text-align:left">x</td>
-<td style="text-align:left">执行权限，用数字1表示</td>
+<td align="left">x</td>
+<td align="left">执行权限，用数字1表示</td>
 </tr>
 <tr>
-<td style="text-align:left">-</td>
-<td style="text-align:left">删除权限，用数字0表示</td>
+<td align="left">-</td>
+<td align="left">删除权限，用数字0表示</td>
 </tr>
 <tr>
-<td style="text-align:left">s</td>
-<td style="text-align:left">特殊权限》该命令有两种用法。一种是包含字母和操作符表达式的文字设定法；另一种是包含数字的数字设定法。</td>
+<td align="left">s</td>
+<td align="left">特殊权限》该命令有两种用法。一种是包含字母和操作符表达式的文字设定法；另一种是包含数字的数字设定法。</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <blockquote>
 <p><strong>文字设定法</strong></p>
-<pre><code class="bash">$ chmod ［who］ ［+ | - | =］ ［mode］ 文件名
-</code></pre>
-<p><strong>数字设定法</strong><br>　　我们必须首先了解用数字表示的属性的含义：0表示没有权限，1表示可执行权限，2表示可写权限，4表示可读权限，然后将其相加。所以数字属性的格式应为3个从0到7的八进制数，其顺序是（u）（g）（o）。<br>    例如，如果想让某个文件的属主有“读/写”二种权限，需要把4（可读）+2（可写）＝6（读/写）。<br>　　数字设定法的一般形式为：<br>　　    <code>chmod ［mode］ 文件名</code><br><strong>数字与字符对应关系如下：</strong><br>r=4，w=2，x=1<br>若要rwx属性则4+2+1=7<br>若要rw-属性则4+2=6；<br>若要r-x属性则4+1=7。</p>
 </blockquote>
+<pre><code class="bash">$ chmod ［who］ ［+ | - | =］ ［mode］ 文件名</code></pre>
+<p><strong>数字设定法</strong><br>　　我们必须首先了解用数字表示的属性的含义：0表示没有权限，1表示可执行权限，2表示可写权限，4表示可读权限，然后将其相加。所以数字属性的格式应为3个从0到7的八进制数，其顺序是（u）（g）（o）。<br>    例如，如果想让某个文件的属主有“读/写”二种权限，需要把4（可读）+2（可写）＝6（读/写）。<br>　　数字设定法的一般形式为：<br>　　    <code>chmod ［mode］ 文件名</code><br><strong>数字与字符对应关系如下：</strong><br>r=4，w=2，x=1<br>若要rwx属性则4+2+1=7<br>若要rw-属性则4+2=6；<br>若要r-x属性则4+1=7。</p>
 <h3 id="命令实例"><a href="#命令实例" class="headerlink" title="命令实例"></a>命令实例</h3><p><strong><code>例一</code>：增加文件所有用户组可执行权限</strong></p>
-<pre><code class="bash">$ chmod a+x log2012.log
-</code></pre>
+<pre><code class="bash">$ chmod a+x log2012.log</code></pre>
 <p><strong><code>例二</code>：同时修改不同用户权限</strong></p>
-<pre><code class="bash">$ chmod ug+w,o-x log2012.log
-</code></pre>
+<pre><code class="bash">$ chmod ug+w,o-x log2012.log</code></pre>
 <p><strong><code>例三</code>：删除文件权限</strong></p>
-<pre><code class="bash">$ chmod a-x log2012.log
-</code></pre>
+<pre><code class="bash">$ chmod a-x log2012.log</code></pre>
 <p><strong><code>例四</code>：使用“=”设置权限</strong></p>
-<pre><code class="bash">$ chmod u=x log2012.log
-</code></pre>
+<pre><code class="bash">$ chmod u=x log2012.log</code></pre>
 <p><strong><code>例五</code>：其他</strong></p>
 <pre><code class="bash"># 给file的属主分配读、写、执行(7)的权限，给file的所在组分配读、执行(5)的权限，给其他用户分配执行(1)的权限
 $ chmod 751 file
@@ -2025,8 +2018,7 @@ $ chmod =r file
 $ chmod 444 file
 
 # 同上例
-$ chmod a-wx,a+r   file
-</code></pre>
+$ chmod a-wx,a+r   file</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -2076,7 +2068,7 @@ $ chmod a-wx,a+r   file
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

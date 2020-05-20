@@ -14,7 +14,7 @@
     
   </author>
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
     <title>3-hexo支持mermaid图表</title>
@@ -33,6 +33,7 @@
       
     
     </summary>
+    
     
       <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
     
@@ -63,6 +64,7 @@
     
     </summary>
     
+    
       <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="hexo" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/hexo/"/>
@@ -91,6 +93,7 @@
       
     
     </summary>
+    
     
       <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
     
@@ -122,6 +125,7 @@
     
     </summary>
     
+    
       <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="hexo" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/hexo/"/>
@@ -140,7 +144,7 @@
     <published>2019-06-09T13:31:09.000Z</published>
     <updated>2019-07-24T14:40:48.289Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这篇文章发表于1996年第二期《东方》杂志，同样收录于《沉默的大多数》一书中。</p><h2 id="所想"><a href="#所想" class="headerlink" title="所想"></a>所想</h2><p>文章一开头就抛出了一个问题：什么是知识分子最害怕的事？想起了高晓松在晓说中提到过这个问题，晓松肯定是看过这篇文章的。</p><p>王小波说：“<strong>知识分子最怕活在不理智的年代。”所谓不理智的年代，就是伽利略低头认罪，承认地球不转的年代，也是拉瓦斯上断头台的年代；是茨威格服毒自杀的年代，也是老舍跳太平湖的年代。</strong>“</p><p>王小波和他的美国老师谈论了一个问题：”有信仰比无信仰要好。“，由于王小波是经历过文革的，所以王小波一开始是抵触这种思想的，尤其是 <strong>课间祷告 </strong>让王小波想起了文革中的 <strong>早请示</strong>。但老师最终说服了他，“<strong>不管是信神，还是自珍自重，人活在世界上总得有点信念才成。就我个人而言，虽是无神论者，我也有个人操守，从不逾越。</strong>”</p><p>国内的学者，只搞学术研究，不搞意识形态，这由不了自己。有朝一日它成了意识形态，你的话就是罪状。言论不自由，不理智，民族狂热，这不就是知识分子最怕的事情吗？</p><p>王小波崇拜墨子：其一，他思维缜密，其二，他敢赤裸裸地谈利害。（有了他，我也敢说自己是中华民族的赤诚分子，不怕国学家说我是全盘西化了。）</p><p>营造意识形态则是灭绝思想额丰饶。中国的人文知识分子，有种以天下为己任的使命感，总觉得自己该搞出些老百姓当信仰的东西。</p><p>国学，这种东西实在厉害。最可怕之处就在于那个“国”字。顶着这个字，谁敢有不同意见？抢到了这个制高点，就可以压制一切不同意见；所以很容易落入思想流氓的手中变成一种凶器。</p><p>目前正值 “<strong>中美贸易战</strong>”，各种自媒体为了点击量、关注度。煽动民族狂热情绪，导致民众根本容不得半点不同意见，不讲道理，“盲目爱国“。</p><p>认真思索，真诚的明辨是非，有这种态度大概就可算是善良了吧。</p><p>人活在世上，自会形成信念，一种学问、一本书，假如不对我的价值观发生变化，就不值得一学，不值得一看。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这篇文章发表于1996年第二期《东方》杂志，同样收录于《沉默的大多数》一书中。</p><h2 id="所想"><a href="#所想" class="headerlink" title="所想"></a>所想</h2><p>文章一开头就抛出了一个问题：什么是知识分子最害怕的事？想起了高晓松在晓说中提到过这个问题，晓松肯定是看过这篇文章的。</p><p>王小波说：“<strong>知识分子最怕活在不理智的年代。”所谓不理智的年代，就是伽利略低头认罪，承认地球不转的年代，也是拉瓦斯上断头台的年代；是茨威格服毒自杀的年代，也是老舍跳太平湖的年代。</strong>“</p><p>王小波和他的美国老师谈论了一个问题：”有信仰比无信仰要好。“，由于王小波是经历过文革的，所以王小波一开始是抵触这种思想的，尤其是 <strong>课间祷告 *<em>让王小波想起了文革中的 *</em>早请示</strong>。但老师最终说服了他，“<strong>不管是信神，还是自珍自重，人活在世界上总得有点信念才成。就我个人而言，虽是无神论者，我也有个人操守，从不逾越。</strong>”</p><p>国内的学者，只搞学术研究，不搞意识形态，这由不了自己。有朝一日它成了意识形态，你的话就是罪状。言论不自由，不理智，民族狂热，这不就是知识分子最怕的事情吗？</p><p>王小波崇拜墨子：其一，他思维缜密，其二，他敢赤裸裸地谈利害。（有了他，我也敢说自己是中华民族的赤诚分子，不怕国学家说我是全盘西化了。）</p><p>营造意识形态则是灭绝思想额丰饶。中国的人文知识分子，有种以天下为己任的使命感，总觉得自己该搞出些老百姓当信仰的东西。</p><p>国学，这种东西实在厉害。最可怕之处就在于那个“国”字。顶着这个字，谁敢有不同意见？抢到了这个制高点，就可以压制一切不同意见；所以很容易落入思想流氓的手中变成一种凶器。</p><p>目前正值 “<strong>中美贸易战</strong>”，各种自媒体为了点击量、关注度。煽动民族狂热情绪，导致民众根本容不得半点不同意见，不讲道理，“盲目爱国“。</p><p>认真思索，真诚的明辨是非，有这种态度大概就可算是善良了吧。</p><p>人活在世上，自会形成信念，一种学问、一本书，假如不对我的价值观发生变化，就不值得一学，不值得一看。</p>]]></content>
     
     <summary type="html">
     
@@ -151,6 +155,7 @@
       
     
     </summary>
+    
     
       <category term="读书" scheme="http://yelog.org/categories/%E8%AF%BB%E4%B9%A6/"/>
     
@@ -168,7 +173,7 @@
     <published>2019-05-02T09:46:16.000Z</published>
     <updated>2019-07-31T05:12:12.544Z</updated>
     
-    <content type="html"><![CDATA[<p>有那么一个年代，离我们很近，它腥风血雨，连活着都是一件奢侈的事。</p><p>在富贵的一生中，每次出现看似被上天眷顾的福气后（如有庆长跑第一、凤霞嫁了人并怀了孩子），读者还在替富贵开心的时候，他们却以各种方式迅速死去，最终富贵亲手埋葬了他所有的亲人。</p><p>一本 12w 左右的小说，但是在没有华丽词藻的情况下，在顺畅流利的写作手法、跌宕起伏的剧情、第一人称的代入感下一口气读完了。期间多次痛哭流涕（一点儿没夸张），不得不放下书本，洗过脸后才能继续阅读。所以已经多年没写书评的我，还是忍不住为她写下书评。</p><blockquote><p>人是为了活着本身而活着，而不是为了活着之外的任何事物所活着。</p></blockquote><p>这是作者在中文序言中的一句话，在当今生活着的我，初读序言中的这句话，并无任何共鸣，甚至还行吐槽两句。随着富贵将他的”一生”娓娓道来，你就会明白在那样的时代背景下，活着已经是一件不容易的事。 所以作者在日文版序言中说到：</p><blockquote><p>在旁人眼中富贵的一生是苦熬的一生；可是对于富贵自己，我相信他更多地感受到了幸福。</p></blockquote><p>因为他相信自己的妻子是世上最好的妻子，他相信自己的子女也是世上最好的子女，还有他的女婿他的外孙，还有他的那头也叫富贵的牛，还有一起上火锅的朋友们，还有生活的点点滴滴……</p><p>富贵的真是一路跌下去的一生，从”富家少爷”赌光了家产、气死了爹爹。由于母亲生病，为母亲求医路上被国民党抓壮丁，被俘虏后，放回家中。却发现母亲已死，女儿也由于生病变成了聋哑人。本想着大难之后必有后福，却只是悲惨一生的开端。儿子有庆由于和县长夫人血型匹配，遭抽血而亡、女儿凤霞产子大出血而亡、妻子家珍失去儿女后，失去了最后与病魔争斗的信念，也走了、女婿二喜在工地被水泥板拍死、外孙苦根难得吃到豆子，却被豆子撑死。最后只剩下自己和一个也叫作富贵的老牛。</p><p>春生想自杀前，找到富贵告别，在被家珍原谅，并答应不会自杀，在这种情况下坚持了一个月，最终还是自杀了。那种时代背景下的无奈，那种窒息感。。。</p><p>富贵的一生跨越了地主、解放战争、人民公社运动、大炼钢铁、自然灾害和文化大革命，从一个人的视角看到每个时代下的一个小小的缩影，但却比任何其他的描述更让人深刻了解到这些时代背景下人们的生活状态。</p><p>在那时，活着不仅是幸运，也更需要勇气。</p><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1556806574463&amp;di=868e65579acfc800020db78de3c07ac4&amp;imgtype=0&amp;src=http%3A%2F%2Fs1.sinaimg.cn%2Flarge%2F001Pe7mxzy76VARpXvdc3" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p>有那么一个年代，离我们很近，它腥风血雨，连活着都是一件奢侈的事。</p><p>在富贵的一生中，每次出现看似被上天眷顾的福气后（如有庆长跑第一、凤霞嫁了人并怀了孩子），读者还在替富贵开心的时候，他们却以各种方式迅速死去，最终富贵亲手埋葬了他所有的亲人。</p><p>一本 12w 左右的小说，但是在没有华丽词藻的情况下，在顺畅流利的写作手法、跌宕起伏的剧情、第一人称的代入感下一口气读完了。期间多次痛哭流涕（一点儿没夸张），不得不放下书本，洗过脸后才能继续阅读。所以已经多年没写书评的我，还是忍不住为她写下书评。</p><blockquote><p>人是为了活着本身而活着，而不是为了活着之外的任何事物所活着。</p></blockquote><p>这是作者在中文序言中的一句话，在当今生活着的我，初读序言中的这句话，并无任何共鸣，甚至还行吐槽两句。随着富贵将他的”一生”娓娓道来，你就会明白在那样的时代背景下，活着已经是一件不容易的事。 所以作者在日文版序言中说到：</p><blockquote><p>在旁人眼中富贵的一生是苦熬的一生；可是对于富贵自己，我相信他更多地感受到了幸福。</p></blockquote><p>因为他相信自己的妻子是世上最好的妻子，他相信自己的子女也是世上最好的子女，还有他的女婿他的外孙，还有他的那头也叫富贵的牛，还有一起上火锅的朋友们，还有生活的点点滴滴……</p><p>富贵的真是一路跌下去的一生，从”富家少爷”赌光了家产、气死了爹爹。由于母亲生病，为母亲求医路上被国民党抓壮丁，被俘虏后，放回家中。却发现母亲已死，女儿也由于生病变成了聋哑人。本想着大难之后必有后福，却只是悲惨一生的开端。儿子有庆由于和县长夫人血型匹配，遭抽血而亡、女儿凤霞产子大出血而亡、妻子家珍失去儿女后，失去了最后与病魔争斗的信念，也走了、女婿二喜在工地被水泥板拍死、外孙苦根难得吃到豆子，却被豆子撑死。最后只剩下自己和一个也叫作富贵的老牛。</p><p>春生想自杀前，找到富贵告别，在被家珍原谅，并答应不会自杀，在这种情况下坚持了一个月，最终还是自杀了。那种时代背景下的无奈，那种窒息感。。。</p><p>富贵的一生跨越了地主、解放战争、人民公社运动、大炼钢铁、自然灾害和文化大革命，从一个人的视角看到每个时代下的一个小小的缩影，但却比任何其他的描述更让人深刻了解到这些时代背景下人们的生活状态。</p><p>在那时，活着不仅是幸运，也更需要勇气。</p><p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556806574463&di=868e65579acfc800020db78de3c07ac4&imgtype=0&src=http%3A%2F%2Fs1.sinaimg.cn%2Flarge%2F001Pe7mxzy76VARpXvdc3" alt=""></p>]]></content>
     
     <summary type="html">
     
@@ -180,6 +185,7 @@
       
     
     </summary>
+    
     
       <category term="读书" scheme="http://yelog.org/categories/%E8%AF%BB%E4%B9%A6/"/>
     
@@ -211,6 +217,7 @@ msg=&amp;quot;hello world&amp;quot;
     
     </summary>
     
+    
       <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
@@ -238,6 +245,7 @@ msg=&amp;quot;hello world&amp;quot;
     
     </summary>
     
+    
       <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
@@ -262,6 +270,7 @@ msg=&amp;quot;hello world&amp;quot;
       
     
     </summary>
+    
     
       <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
     
@@ -295,6 +304,7 @@ msg=&amp;quot;hello world&amp;quot;
     
     </summary>
     
+    
       <category term="后端" scheme="http://yelog.org/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
@@ -305,11 +315,11 @@ msg=&amp;quot;hello world&amp;quot;
   <entry>
     <title>PostgreSQL事务及隔离级别</title>
     <link href="http://yelog.org/2017/11/09/PostgreSQL%E4%BA%8B%E7%89%A9%E5%8F%8A%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/"/>
-    <id>http://yelog.org/2017/11/09/PostgreSQL事物及隔离级别/</id>
+    <id>http://yelog.org/2017/11/09/PostgreSQL%E4%BA%8B%E7%89%A9%E5%8F%8A%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/</id>
     <published>2017-11-08T16:07:33.000Z</published>
     <updated>2019-08-19T16:47:44.299Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>PostgreSQL中提供了多种数据完整性的保证机制。如：约束、触发器、事务和锁管理等。</p><p>事务主要是为了保证一组相关数据库的操作能全部执行成功，从而保证数据的完整性。锁机制主要是控制多个用户对同一数据进行操作，使用锁机制可以解决并发问题。</p><h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>事务是用户对一个数据库操作的一个序列，这些操作要么全做，要么全不做，是一个不可分割的单位。</p><p>事务管理的常用语句如下：</p><pre><code class="sql">BEGIN;SQL语句1;SQL语句2;...COMMIT;</code></pre><p>事务块是指包围在BEGIN和COMMIT之间的语句。在PostgreSQL9中，常用的事务块管理语句含义如下：</p><blockquote><p><strong>START TRANSACTION</strong>：此命令表示开始一个新的事务块.<br><strong>BEGIN</strong>：初始化一个事务块。在BEGIN命令后的语句都将在一个事务里面执行，知道遇见COMMIT或ROLLBACK。它和START TRANSACTION是一样的。<br><strong>COMMIT</strong>：提交事务。<br><strong>ROLLBACK</strong>：事务失败时执行回滚操作。<br><strong>SET TRANSACTION</strong>：设置当前事务的特性。对后面的事务没有影响。</p></blockquote><h3 id="事务隔离及并发控制"><a href="#事务隔离及并发控制" class="headerlink" title="事务隔离及并发控制"></a>事务隔离及并发控制</h3><p>PostgreSQL是一个支持多用户的数据库，当多个用户操作同一数据库时，并发控制要保证所有用户可以高效的访问的同时不破坏数据的完整性。</p><p>数据库中数据的并发操作经常发生，而对数据的并发操作会带来下面的一些问题：</p><ol><li>脏读<br>一个事务读取了另一个未提交事务写入的数据。</li><li>不可重复读<br>一个事务重新读取前面读取过的数据，发现该数据已经被另一个已经提交的事务修改。</li><li>幻读<br>一个事务重新执行一个查询，返回符合查询条件的行的集合，发现满足查询条件的行的集合因为其它最近提交的事务而发生了改变。</li></ol><p>SQL标准定义了四个级别的事务隔离。</p><table><thead><tr><th style="text-align:left">隔离级别</th><th style="text-align:left">脏读</th><th>幻读</th><th>不可重复性读取</th></tr></thead><tbody><tr><td style="text-align:left">读未提交</td><td style="text-align:left">可能</td><td>可能</td><td>可能</td></tr><tr><td style="text-align:left">读已提交</td><td style="text-align:left">不可能</td><td>可能</td><td>可能</td></tr><tr><td style="text-align:left">可重复读</td><td style="text-align:left">不可能</td><td>可能</td><td>不可能</td></tr><tr><td style="text-align:left">可串行读</td><td style="text-align:left">不可能</td><td>不可能</td><td>不可能</td></tr></tbody></table><p>在PostgreSQL中，可以请求4种隔离级别中的任意一种。但是在内部，实际上只有两种独立的隔离级别，分别对应已提交和可串行化。如果选择了读未提交的级别，实际上使用的是读已提交，在选择可重复读级别的时候，实际上用的是可串行化，所以实际的隔离级别可能比选择的更严格。这是SQL标准允许的：4种隔离级别只定义了哪种现象不能发生，但是没有定义哪种现象一定发生。</p><p>PostgreSQL只提供两种隔离级别的原因是，这是把标准的隔离级别与多版本并发控制架构映射相关的唯一合理方法。</p><ol><li>读已提交<br>这是PostgreSQL中默认的隔离级别，当一个事务运行在这个隔离级别时，一个SELECT查询只能看到查询开始前已提交的数据，而无法看到未提交的数据或者在查询期间其他的事务已提交的数据。</li><li>可串行化<br>可串行化提供最严格的事务隔离。这个级别模拟串行的事务执行，就好像事务是一个接着一个串行的执行。不过，这个级别的应用必须准备在串行化失败的时候重新启动事务。</li></ol>]]></content>
+    <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>PostgreSQL中提供了多种数据完整性的保证机制。如：约束、触发器、事务和锁管理等。</p><p>事务主要是为了保证一组相关数据库的操作能全部执行成功，从而保证数据的完整性。锁机制主要是控制多个用户对同一数据进行操作，使用锁机制可以解决并发问题。</p><h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><p>事务是用户对一个数据库操作的一个序列，这些操作要么全做，要么全不做，是一个不可分割的单位。</p><p>事务管理的常用语句如下：</p><pre><code class="sql">BEGIN;SQL语句1;SQL语句2;...COMMIT;</code></pre><p>事务块是指包围在BEGIN和COMMIT之间的语句。在PostgreSQL9中，常用的事务块管理语句含义如下：</p><blockquote><p><strong>START TRANSACTION</strong>：此命令表示开始一个新的事务块.<br><strong>BEGIN</strong>：初始化一个事务块。在BEGIN命令后的语句都将在一个事务里面执行，知道遇见COMMIT或ROLLBACK。它和START TRANSACTION是一样的。<br><strong>COMMIT</strong>：提交事务。<br><strong>ROLLBACK</strong>：事务失败时执行回滚操作。<br><strong>SET TRANSACTION</strong>：设置当前事务的特性。对后面的事务没有影响。</p></blockquote><h3 id="事务隔离及并发控制"><a href="#事务隔离及并发控制" class="headerlink" title="事务隔离及并发控制"></a>事务隔离及并发控制</h3><p>PostgreSQL是一个支持多用户的数据库，当多个用户操作同一数据库时，并发控制要保证所有用户可以高效的访问的同时不破坏数据的完整性。</p><p>数据库中数据的并发操作经常发生，而对数据的并发操作会带来下面的一些问题：</p><ol><li>脏读<br>一个事务读取了另一个未提交事务写入的数据。</li><li>不可重复读<br>一个事务重新读取前面读取过的数据，发现该数据已经被另一个已经提交的事务修改。</li><li>幻读<br>一个事务重新执行一个查询，返回符合查询条件的行的集合，发现满足查询条件的行的集合因为其它最近提交的事务而发生了改变。</li></ol><p>SQL标准定义了四个级别的事务隔离。</p><p>| 隔离级别 | 脏读 | 幻读 | 不可重复性读取 |<br>| :- | :- |<br>|读未提交    |可能    |可能    |可能|<br>|读已提交    |不可能|    可能    |可能|<br>|可重复读    |不可能    |可能    |不可能|<br>|可串行读    |不可能    |不可能    |不可能|</p><p>在PostgreSQL中，可以请求4种隔离级别中的任意一种。但是在内部，实际上只有两种独立的隔离级别，分别对应已提交和可串行化。如果选择了读未提交的级别，实际上使用的是读已提交，在选择可重复读级别的时候，实际上用的是可串行化，所以实际的隔离级别可能比选择的更严格。这是SQL标准允许的：4种隔离级别只定义了哪种现象不能发生，但是没有定义哪种现象一定发生。</p><p>PostgreSQL只提供两种隔离级别的原因是，这是把标准的隔离级别与多版本并发控制架构映射相关的唯一合理方法。</p><ol><li>读已提交<br>这是PostgreSQL中默认的隔离级别，当一个事务运行在这个隔离级别时，一个SELECT查询只能看到查询开始前已提交的数据，而无法看到未提交的数据或者在查询期间其他的事务已提交的数据。</li><li>可串行化<br>可串行化提供最严格的事务隔离。这个级别模拟串行的事务执行，就好像事务是一个接着一个串行的执行。不过，这个级别的应用必须准备在串行化失败的时候重新启动事务。</li></ol>]]></content>
     
     <summary type="html">
     
@@ -321,6 +331,7 @@ msg=&amp;quot;hello world&amp;quot;
     
     </summary>
     
+    
       <category term="数据库" scheme="http://yelog.org/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
@@ -331,7 +342,7 @@ msg=&amp;quot;hello world&amp;quot;
   <entry>
     <title>linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</title>
     <link href="http://yelog.org/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"/>
-    <id>http://yelog.org/2017/10/20/linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R/</id>
+    <id>http://yelog.org/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/</id>
     <published>2017-10-20T09:38:49.000Z</published>
     <updated>2019-09-25T08:29:48.337Z</updated>
     
@@ -345,6 +356,7 @@ msg=&amp;quot;hello world&amp;quot;
       
     
     </summary>
+    
     
       <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
     
@@ -362,7 +374,7 @@ msg=&amp;quot;hello world&amp;quot;
   <entry>
     <title>[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</title>
     <link href="http://yelog.org/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"/>
-    <id>http://yelog.org/2017/09/25/ascii-ansi-unicode-utf-8）/</id>
+    <id>http://yelog.org/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/</id>
     <published>2017-09-25T11:15:00.000Z</published>
     <updated>2018-04-18T02:25:57.118Z</updated>
     
@@ -378,6 +390,7 @@ msg=&amp;quot;hello world&amp;quot;
     
     </summary>
     
+    
       <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
@@ -388,11 +401,11 @@ msg=&amp;quot;hello world&amp;quot;
   <entry>
     <title>搭建dubbo+zookeeper平台</title>
     <link href="http://yelog.org/2017/09/25/%E6%90%AD%E5%BB%BAdubbo+zookeeper%E5%B9%B3%E5%8F%B0/"/>
-    <id>http://yelog.org/2017/09/25/搭建dubbo+zookeeper平台/</id>
+    <id>http://yelog.org/2017/09/25/%E6%90%AD%E5%BB%BAdubbo+zookeeper%E5%B9%B3%E5%8F%B0/</id>
     <published>2017-09-25T08:29:07.000Z</published>
     <updated>2019-09-25T08:29:48.338Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文将介绍在SpringMVC+Spring+Mybatis项目中添加 <code>dubbo</code> 作为 <code>rpc</code> 服务。</p><p>文末有项目代码地址。</p><h2 id="一-搭建zookeeper"><a href="#一-搭建zookeeper" class="headerlink" title="一.搭建zookeeper"></a>一.搭建zookeeper</h2><p>使用 docker 一句话创建：</p><pre><code class="bash">docker run -dit --name zookeeper --hostname zookeeper-host -v /data:/data -p 2181:2181 jplock/zookeeper:latest</code></pre><h2 id="二-安装zkui（非必须）"><a href="#二-安装zkui（非必须）" class="headerlink" title="二.安装zkui（非必须）"></a>二.安装zkui（非必须）</h2><p>这个项目为 zookeeper 提供一个 web 的管理界面。当然我们也可以直接在zookeeper中使用命令查看，所以此步骤可以忽略</p><p>在开始前需要安装 Java 环境、Maven 环境。</p><ol><li>到 <a href="https://github.com/DeemOpen/zkui" target="_blank" rel="noopener">zkui</a> 的项目中下载代码。<pre><code class="bash">git clone https://github.com/DeemOpen/zkui.git</code></pre></li><li>执行 <code>mvn clean install</code> 生成jar文件。</li><li>将config.cfg复制到上一步生成的jar文件所在目录，然后修改配置文件中的zookeeper地址。</li><li>执行 <code>nohup java -jar zkui-2.0-SNAPSHOT-jar-with-dependencies.jar &amp;</code></li><li>测试 <code>http://localhost:9090</code>，如果能看到如下页面，表示安装成功。</li></ol><p><img src="http://img.saodiyang.com/Fherw3peRgh-grmGz6qkNri5J1aG.png" alt="登录页面"><br><img src="http://img.saodiyang.com/FvEVMOzSZBP4N4-Q14noQT_VsKF6.png" alt="首页"></p><h2 id="三-使用dubbo"><a href="#三-使用dubbo" class="headerlink" title="三.使用dubbo"></a>三.使用dubbo</h2><ol><li>在原来 SpringMVC+Spring+Mybatis 项目中，除了原来 spring 相关依赖外，还需要加入以下依赖<pre><code class="xml">&lt;dependency&gt;     &lt;groupId&gt;com.alibaba&lt;/groupId&gt;     &lt;artifactId&gt;dubbo&lt;/artifactId&gt;     &lt;version&gt;2.5.5&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt;     &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;     &lt;artifactId&gt;zookeeper&lt;/artifactId&gt;     &lt;version&gt;3.4.9&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt;     &lt;groupId&gt;com.101tec&lt;/groupId&gt;     &lt;artifactId&gt;zkclient&lt;/artifactId&gt;     &lt;version&gt;0.2&lt;/version&gt;&lt;/dependency&gt;</code></pre></li><li>定义服务接口<pre><code class="java">public interface IPersonService { List&lt;Person&gt; listAll(); Person getById(Integer id); Integer delById(Person person); Integer updatePerson(Person person);}</code></pre></li><li><p>定义服务实现类</p><pre><code class="java">@Servicepublic class PersonService implements IPersonService { @Autowired PersonMapper personMapper; public List&lt;Person&gt; listAll() {     return personMapper.findAll(); } public Person getById(Integer id) {     return personMapper.findOneById(id); } public Integer delById(Person person) {     return personMapper.del(person); } public Integer updatePerson(Person person) {     return personMapper.update(person); }}</code></pre></li><li><p>配置生产者，注册服务信息</p><pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;beans xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    xmlns:dubbo=&quot;http://code.alibabatech.com/schema/dubbo&quot;    xmlns=&quot;http://www.springframework.org/schema/beans&quot;    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd&quot;&gt; &lt;!--定义了提供方应用信息，用于计算依赖关系；--&gt; &lt;dubbo:application name=&quot;demotest-provider&quot; /&gt; &lt;!-- 使用 zookeeper 注册中心暴露服务地址 --&gt; &lt;dubbo:registry address=&quot;zookeeper://192.168.0.86:2181&quot;/&gt; &lt;!-- 用dubbo协议在20880端口暴露服务 --&gt; &lt;dubbo:protocol name=&quot;dubbo&quot; port=&quot;20880&quot;/&gt; &lt;!-- 和本地bean一样实现服务 --&gt; &lt;bean id=&quot;personService&quot; class=&quot;com.ssm.service.PersonService&quot;/&gt; &lt;!-- 声明需要暴露的服务接口 --&gt; &lt;dubbo:service interface=&quot;com.ssm.iservice.IPersonService&quot; ref=&quot;personService&quot;/&gt;&lt;/beans&gt;</code></pre></li><li><p>配置消费者，订阅服务</p><pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;beans xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    xmlns:dubbo=&quot;http://code.alibabatech.com/schema/dubbo&quot;    xmlns=&quot;http://www.springframework.org/schema/beans&quot;    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd&quot;&gt; &lt;!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 --&gt; &lt;dubbo:application name=&quot;demo-consumer&quot;/&gt; &lt;!-- 使用 zookeeper 注册中心暴露发现服务地址 --&gt; &lt;dubbo:registry address=&quot;zookeeper://192.168.0.86:2181&quot;/&gt; &lt;!-- 生成远程服务代理，可以和本地bean一样使用demoService --&gt; &lt;dubbo:reference id=&quot;personService&quot; check=&quot;false&quot; interface=&quot;com.ssm.iservice.IPersonService&quot;/&gt;&lt;/beans&gt;</code></pre></li><li><p>调用远程服务<br>配置完成后，我们就可以像使用本地 bean 一样，使用 rpc 的 service；</p><pre><code class="java">@Controllerpublic class IndexController { @Autowired IPersonService personService; @RequestMapping(&quot;/index.html&quot;) public String index(Model model) {     RpcContext.getContext().setAttachment(&quot;index&quot;, &quot;1&quot;);//测试ThreadLocal     List&lt;Person&gt; list = personService.listAll();     model.addAttribute(&quot;command&quot;,list);     return &quot;index&quot;; }}</code></pre></li></ol><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>至此，单机运行的 rpc 服务已搭建完成。</p><p>代码传送文 <a href="https://github.com/yelog/ssm" target="_blank" rel="noopener">ssm</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文将介绍在SpringMVC+Spring+Mybatis项目中添加 <code>dubbo</code> 作为 <code>rpc</code> 服务。</p><p>文末有项目代码地址。</p><h2 id="一-搭建zookeeper"><a href="#一-搭建zookeeper" class="headerlink" title="一.搭建zookeeper"></a>一.搭建zookeeper</h2><p>使用 docker 一句话创建：</p><pre><code class="bash">docker run -dit --name zookeeper --hostname zookeeper-host -v /data:/data -p 2181:2181 jplock/zookeeper:latest</code></pre><h2 id="二-安装zkui（非必须）"><a href="#二-安装zkui（非必须）" class="headerlink" title="二.安装zkui（非必须）"></a>二.安装zkui（非必须）</h2><p>这个项目为 zookeeper 提供一个 web 的管理界面。当然我们也可以直接在zookeeper中使用命令查看，所以此步骤可以忽略</p><p>在开始前需要安装 Java 环境、Maven 环境。</p><ol><li>到 <a href="https://github.com/DeemOpen/zkui" target="_blank" rel="noopener">zkui</a> 的项目中下载代码。<pre><code class="bash">git clone https://github.com/DeemOpen/zkui.git</code></pre></li><li>执行 <code>mvn clean install</code> 生成jar文件。</li><li>将config.cfg复制到上一步生成的jar文件所在目录，然后修改配置文件中的zookeeper地址。</li><li>执行 <code>nohup java -jar zkui-2.0-SNAPSHOT-jar-with-dependencies.jar &amp;</code></li><li>测试 <code>http://localhost:9090</code>，如果能看到如下页面，表示安装成功。</li></ol><p><img src="http://img.saodiyang.com/Fherw3peRgh-grmGz6qkNri5J1aG.png" alt="登录页面"><br><img src="http://img.saodiyang.com/FvEVMOzSZBP4N4-Q14noQT_VsKF6.png" alt="首页"></p><h2 id="三-使用dubbo"><a href="#三-使用dubbo" class="headerlink" title="三.使用dubbo"></a>三.使用dubbo</h2><ol><li><p>在原来 SpringMVC+Spring+Mybatis 项目中，除了原来 spring 相关依赖外，还需要加入以下依赖</p><pre><code class="xml">&lt;dependency&gt;     &lt;groupId&gt;com.alibaba&lt;/groupId&gt;     &lt;artifactId&gt;dubbo&lt;/artifactId&gt;     &lt;version&gt;2.5.5&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt;     &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;     &lt;artifactId&gt;zookeeper&lt;/artifactId&gt;     &lt;version&gt;3.4.9&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt;     &lt;groupId&gt;com.101tec&lt;/groupId&gt;     &lt;artifactId&gt;zkclient&lt;/artifactId&gt;     &lt;version&gt;0.2&lt;/version&gt;&lt;/dependency&gt;</code></pre></li><li><p>定义服务接口</p><pre><code class="java">public interface IPersonService { List&lt;Person&gt; listAll(); Person getById(Integer id); Integer delById(Person person); Integer updatePerson(Person person);}</code></pre></li><li><p>定义服务实现类</p><pre><code class="java">@Servicepublic class PersonService implements IPersonService { @Autowired PersonMapper personMapper; public List&lt;Person&gt; listAll() {     return personMapper.findAll(); } public Person getById(Integer id) {     return personMapper.findOneById(id); } public Integer delById(Person person) {     return personMapper.del(person); } public Integer updatePerson(Person person) {     return personMapper.update(person); }}</code></pre></li><li><p>配置生产者，注册服务信息</p><pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;beans xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    xmlns:dubbo=&quot;http://code.alibabatech.com/schema/dubbo&quot;    xmlns=&quot;http://www.springframework.org/schema/beans&quot;    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd&quot;&gt; &lt;!--定义了提供方应用信息，用于计算依赖关系；--&gt; &lt;dubbo:application name=&quot;demotest-provider&quot; /&gt; &lt;!-- 使用 zookeeper 注册中心暴露服务地址 --&gt; &lt;dubbo:registry address=&quot;zookeeper://192.168.0.86:2181&quot;/&gt; &lt;!-- 用dubbo协议在20880端口暴露服务 --&gt; &lt;dubbo:protocol name=&quot;dubbo&quot; port=&quot;20880&quot;/&gt; &lt;!-- 和本地bean一样实现服务 --&gt; &lt;bean id=&quot;personService&quot; class=&quot;com.ssm.service.PersonService&quot;/&gt; &lt;!-- 声明需要暴露的服务接口 --&gt; &lt;dubbo:service interface=&quot;com.ssm.iservice.IPersonService&quot; ref=&quot;personService&quot;/&gt;&lt;/beans&gt;</code></pre></li><li><p>配置消费者，订阅服务</p><pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;beans xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;    xmlns:dubbo=&quot;http://code.alibabatech.com/schema/dubbo&quot;    xmlns=&quot;http://www.springframework.org/schema/beans&quot;    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd&quot;&gt; &lt;!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 --&gt; &lt;dubbo:application name=&quot;demo-consumer&quot;/&gt; &lt;!-- 使用 zookeeper 注册中心暴露发现服务地址 --&gt; &lt;dubbo:registry address=&quot;zookeeper://192.168.0.86:2181&quot;/&gt; &lt;!-- 生成远程服务代理，可以和本地bean一样使用demoService --&gt; &lt;dubbo:reference id=&quot;personService&quot; check=&quot;false&quot; interface=&quot;com.ssm.iservice.IPersonService&quot;/&gt;&lt;/beans&gt;</code></pre></li><li><p>调用远程服务<br>配置完成后，我们就可以像使用本地 bean 一样，使用 rpc 的 service；</p><pre><code class="java">@Controllerpublic class IndexController { @Autowired IPersonService personService; @RequestMapping(&quot;/index.html&quot;) public String index(Model model) {     RpcContext.getContext().setAttachment(&quot;index&quot;, &quot;1&quot;);//测试ThreadLocal     List&lt;Person&gt; list = personService.listAll();     model.addAttribute(&quot;command&quot;,list);     return &quot;index&quot;; }}</code></pre></li></ol><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>至此，单机运行的 rpc 服务已搭建完成。</p><p>代码传送文 <a href="https://github.com/yelog/ssm" target="_blank" rel="noopener">ssm</a></p>]]></content>
     
     <summary type="html">
     
@@ -402,6 +415,7 @@ msg=&amp;quot;hello world&amp;quot;
       
     
     </summary>
+    
     
       <category term="后端" scheme="http://yelog.org/categories/%E5%90%8E%E7%AB%AF/"/>
     
@@ -430,6 +444,7 @@ msg=&amp;quot;hello world&amp;quot;
     
     </summary>
     
+    
       <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
@@ -456,6 +471,7 @@ msg=&amp;quot;hello world&amp;quot;
     
     </summary>
     
+    
       <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="hexo" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/hexo/"/>
@@ -474,23 +490,25 @@ msg=&amp;quot;hello world&amp;quot;
     <published>2017-09-21T07:35:24.000Z</published>
     <updated>2019-09-25T08:29:48.338Z</updated>
     
-    <content type="html"><![CDATA[<p><hr><br><a href="https://developer.mozilla.org/en-US/docs/Working_with_BFCache" target="_blank" rel="noopener">浏览器前进/后退缓存</a>（Backward/Forward Cache，BF Cache）是指浏览器在前进后退过程中， 会应用更强的缓存策略，表现为 DOM、window、甚至 JavaScript 对象被缓存，以及同步 XHR 也被缓存。 这一现象在移动端浏览器尤为常见，除 Chrome for Android、Android Browser 之外的浏览器基本都会触发。</p><p>BF Cache 本来是一项浏览器优化，但在某些情况下（比如前端路由的 Web App）会引起困惑。 本文主要讨论 BF Cache 的行为、如何检测 BF Cache 缓存、以及如何 workaround。</p><h3 id="缓存行为"><a href="#缓存行为" class="headerlink" title="缓存行为"></a>缓存行为</h3><p>BF Cache 是一种浏览器优化，HTML 标准并未指定其如何进行缓存，因此缓存行为是与浏览器实现相关的。</p><blockquote><p>User agents may discard the Document objects of entries other than the current entry that are not referenced from any script, reloading the pages afresh when the user or script navigates back to such pages. This specification does not specify when user agents should discard Document objects and when they should cache them. – <a href="https://html.spec.whatwg.org/multipage/browsers.html#history" target="_blank" rel="noopener">Session history and navigation</a>, WHATWG</p></blockquote><ul><li>Desktop Chrome：阻塞的资源和同步发出的 XHR 都会被缓存，但不缓存渲染结果。因此可以看到明显的载入过程，此时脚本也会重新执行。</li><li>Chrome for Android：有些情况下不会缓存，缓存时与 Desktop Chrome 行为一致。</li><li>Desktop Firefox：页面会被 Frozen，定时器会被暂停，DOM、Window、JavaScript 对象会被缓存，返回时页面脚本重新开始运行。</li><li>iOS Safari：渲染结果也会被缓存，因此才能支持左右滑动手势来前进/后退。</li></ul><p>Desktop Firefox 暂停计时器的行为非常有趣，以下 HTML 中显示一个每秒加一的数字。 当页面导航时就会暂停，返回时继续增加（因此直接使用 setInterval 倒计时不仅不精确，而且不可靠）：</p><pre><code class="html">&lt;span id=&quot;timer-tick&quot;&gt;&lt;/span&gt;&lt;a href=&quot;http://harttle.com&quot;&gt;External Link&lt;/a&gt;&lt;script&gt;  var i = 0  setInterval(() =&gt; document.querySelector(&#39;#timer-tick&#39;).innerHTML = i++, 1000)&lt;/script&gt;</code></pre><h3 id="pagehide-pageshow-事件"><a href="#pagehide-pageshow-事件" class="headerlink" title="pagehide/pageshow 事件"></a>pagehide/pageshow 事件</h3><p>会话（Session）中的某一个页面显示/隐藏时，会触发 <code>pagehide</code> 和 <code>pageshow</code> 事件。 这两个事件都有一个 <code>persisted</code> 属性用来指示当前页面是否被 BF Cache 缓存。 因此可以通过 <code>persisted</code> 属性来达到禁用 BF Cache 的效果：</p><pre><code class="javascript">window.onpageshow = function(event) {    if (event.persisted) {        window.location.reload()    }};</code></pre><p>注意无论页面是否被缓存 <code>pageshow</code> 总会触发，因此需要检测器 <code>persisted</code> 属性。 另外 <code>pageshow</code> 的时机总是在 <code>load</code> 事件之后。 这一点很容易检测，下面的 <code>pageshow</code> 日志总在 <code>load</code> 之前：</p><pre><code class="javascript">window.addEventListener(&#39;pageshow&#39;, function () {  console.log(&#39;on pageshow&#39;)})window.addEventListener(&#39;load&#39;, function () {  console.log(&#39;load&#39;)})</code></pre><h3 id="XHR-缓存"><a href="#XHR-缓存" class="headerlink" title="XHR 缓存"></a>XHR 缓存</h3><p>同步（阻塞加载的）脚本发出的 XMLHttpRequest 也会被 Chrome 强制缓存， 因此即使在断网的情况下后退到访问过的页面仍然是可以完美渲染的。 如果页面中有这样一段外部脚本：</p><pre><code class="javascript">sendXHR();function sendXHR () {  var xhr = new XMLHttpRequest()  xhr.open(&#39;GET&#39;, &#39;/data.json&#39;)  xhr.onreadystatechange = function () {    if (xhr.readyState === XMLHttpRequest.DONE &amp;&amp;     xhr.status === 200) {      console.log(&#39;xhr arrived&#39;, xhr.responseText)    }  }  xhr.send()}</code></pre><p>超链接跳转后回来，该 xhr 也会被缓存。注意下图中的 XHR 一项 size 为 “from disk cache”：<br><img src="http://img.saodiyang.com/FiUT28A3DCpwPiyvJpsvhkdFQai1.png" alt=""></p><p>为了强制发送 xhr，可以将 xhr 改为异步发送，或者加一个不重要的 query。</p><pre><code class="javascript">setTimeout(sendXHR, 1000)</code></pre><p>这样就能看到 xhr 真正发送出去了 :) 异步 xhr 缓存时机未经兼容性测试， 还是建议读者使用一个随机产生的 query。<br><img src="http://img.saodiyang.com/FjwUrogpYSRjC5EGPGIH2x1t2Eff.png" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<hr>[浏览器前进/后退缓存](https://developer.mozilla.org/en-US/docs/Working_with_BFCache)（Backward/Forward Cache，BF Cache）是指浏览器在前进后退过程中， 会应用更强的缓存策略，表现为 DOM、window、甚至 JavaScript 对象被缓存，以及同步 XHR 也被缓存。 这一现象在移动端浏览器尤为常见，除 Chrome for Android、Android Browser 之外的浏览器基本都会触发。<p>BF Cache 本来是一项浏览器优化，但在某些情况下（比如前端路由的 Web App）会引起困惑。 本文主要讨论 BF Cache 的行为、如何检测 BF Cache 缓存、以及如何 workaround。</p><h3 id="缓存行为"><a href="#缓存行为" class="headerlink" title="缓存行为"></a>缓存行为</h3><p>BF Cache 是一种浏览器优化，HTML 标准并未指定其如何进行缓存，因此缓存行为是与浏览器实现相关的。</p><blockquote><p>User agents may discard the Document objects of entries other than the current entry that are not referenced from any script, reloading the pages afresh when the user or script navigates back to such pages. This specification does not specify when user agents should discard Document objects and when they should cache them. – <a href="https://html.spec.whatwg.org/multipage/browsers.html#history" target="_blank" rel="noopener">Session history and navigation</a>, WHATWG</p></blockquote><ul><li>Desktop Chrome：阻塞的资源和同步发出的 XHR 都会被缓存，但不缓存渲染结果。因此可以看到明显的载入过程，此时脚本也会重新执行。</li><li>Chrome for Android：有些情况下不会缓存，缓存时与 Desktop Chrome 行为一致。</li><li>Desktop Firefox：页面会被 Frozen，定时器会被暂停，DOM、Window、JavaScript 对象会被缓存，返回时页面脚本重新开始运行。</li><li>iOS Safari：渲染结果也会被缓存，因此才能支持左右滑动手势来前进/后退。</li></ul><p>Desktop Firefox 暂停计时器的行为非常有趣，以下 HTML 中显示一个每秒加一的数字。 当页面导航时就会暂停，返回时继续增加（因此直接使用 setInterval 倒计时不仅不精确，而且不可靠）：</p><pre><code class="html">&lt;span id=&quot;timer-tick&quot;&gt;&lt;/span&gt;&lt;a href=&quot;http://harttle.com&quot;&gt;External Link&lt;/a&gt;&lt;script&gt;  var i = 0  setInterval(() =&gt; document.querySelector(&#39;#timer-tick&#39;).innerHTML = i++, 1000)&lt;/script&gt;</code></pre><h3 id="pagehide-pageshow-事件"><a href="#pagehide-pageshow-事件" class="headerlink" title="pagehide/pageshow 事件"></a>pagehide/pageshow 事件</h3><p>会话（Session）中的某一个页面显示/隐藏时，会触发 <code>pagehide</code> 和 <code>pageshow</code> 事件。 这两个事件都有一个 <code>persisted</code> 属性用来指示当前页面是否被 BF Cache 缓存。 因此可以通过 <code>persisted</code> 属性来达到禁用 BF Cache 的效果：</p><pre><code class="javascript">window.onpageshow = function(event) {    if (event.persisted) {        window.location.reload()    }};</code></pre><p>注意无论页面是否被缓存 <code>pageshow</code> 总会触发，因此需要检测器 <code>persisted</code> 属性。 另外 <code>pageshow</code> 的时机总是在 <code>load</code> 事件之后。 这一点很容易检测，下面的 <code>pageshow</code> 日志总在 <code>load</code> 之前：</p><pre><code class="javascript">window.addEventListener(&#39;pageshow&#39;, function () {  console.log(&#39;on pageshow&#39;)})window.addEventListener(&#39;load&#39;, function () {  console.log(&#39;load&#39;)})</code></pre><h3 id="XHR-缓存"><a href="#XHR-缓存" class="headerlink" title="XHR 缓存"></a>XHR 缓存</h3><p>同步（阻塞加载的）脚本发出的 XMLHttpRequest 也会被 Chrome 强制缓存， 因此即使在断网的情况下后退到访问过的页面仍然是可以完美渲染的。 如果页面中有这样一段外部脚本：</p><pre><code class="javascript">sendXHR();function sendXHR () {  var xhr = new XMLHttpRequest()  xhr.open(&#39;GET&#39;, &#39;/data.json&#39;)  xhr.onreadystatechange = function () {    if (xhr.readyState === XMLHttpRequest.DONE &amp;&amp;     xhr.status === 200) {      console.log(&#39;xhr arrived&#39;, xhr.responseText)    }  }  xhr.send()}</code></pre><p>超链接跳转后回来，该 xhr 也会被缓存。注意下图中的 XHR 一项 size 为 “from disk cache”：<br><img src="http://img.saodiyang.com/FiUT28A3DCpwPiyvJpsvhkdFQai1.png" alt=""></p><p>为了强制发送 xhr，可以将 xhr 改为异步发送，或者加一个不重要的 query。</p><pre><code class="javascript">setTimeout(sendXHR, 1000)</code></pre><p>这样就能看到 xhr 真正发送出去了 :) 异步 xhr 缓存时机未经兼容性测试， 还是建议读者使用一个随机产生的 query。<br><img src="http://img.saodiyang.com/FjwUrogpYSRjC5EGPGIH2x1t2Eff.png" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;hr&gt;&lt;br&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Working_with_BFCache&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;浏览器前进/后退缓存&lt;/a&gt;（Backward/Fo
+        &lt;hr&gt;
+[浏览器前进/后退缓存](https://developer.mozilla.org/en-US/docs/Working_with_BFCache)（Backward/Forward Cache，BF Cache）是指浏览器在前进后退过程中， 会应用更强的缓存策略，表
       
     
     </summary>
     
+    
       <category term="大前端" scheme="http://yelog.org/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="js" scheme="http://yelog.org/tags/js/"/>
-    
       <category term="浏览器" scheme="http://yelog.org/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+      <category term="js" scheme="http://yelog.org/tags/js/"/>
     
   </entry>
   
@@ -512,6 +530,7 @@ msg=&amp;quot;hello world&amp;quot;
     
     </summary>
     
+    
       <category term="大前端" scheme="http://yelog.org/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/"/>
     
     
@@ -522,7 +541,7 @@ msg=&amp;quot;hello world&amp;quot;
   <entry>
     <title>CentOS7使用Firewalld</title>
     <link href="http://yelog.org/2017/09/19/CentOS7%E4%BD%BF%E7%94%A8Firewalld/"/>
-    <id>http://yelog.org/2017/09/19/CentOS7使用Firewalld/</id>
+    <id>http://yelog.org/2017/09/19/CentOS7%E4%BD%BF%E7%94%A8Firewalld/</id>
     <published>2017-09-19T01:53:53.000Z</published>
     <updated>2018-04-18T02:25:57.117Z</updated>
     
@@ -536,6 +555,7 @@ msg=&amp;quot;hello world&amp;quot;
       
     
     </summary>
+    
     
       <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
     
@@ -561,6 +581,7 @@ msg=&amp;quot;hello world&amp;quot;
       
     
     </summary>
+    
     
       <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
     

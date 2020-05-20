@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（20）: find命令之exec | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:531</span>
+        <span>字数:541</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1861,29 +1868,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　find是我们很常用的一个Linux命令，但是我们一般查找出来的并不仅仅是看看而已，还会有进一步的操作，这个时候exec的作用就显现出来了<br><a id="more"></a></p>
+        <p>　　find是我们很常用的一个Linux命令，但是我们一般查找出来的并不仅仅是看看而已，还会有进一步的操作，这个时候exec的作用就显现出来了</p>
+<a id="more"></a>
 <h3 id="命令介绍"><a href="#命令介绍" class="headerlink" title="命令介绍"></a>命令介绍</h3><p>　　<code>-exec</code>  参数后面跟的是command命令，它的终止是以;为结束标志的，所以这句命令后面的分号是不可缺少的，考虑到各个系统中分号会有不同的意义，所以前面加反斜杠。</p>
 <p>　　<code>{}</code>  花括号代表前面find查找出来的文件名。</p>
 <p>　　使用find时，只要把想要的操作写在一个文件里，就可以用exec来配合find查找，很方便的。在有些操作系统中只允许-exec选项执行诸如ls或ls -l这样的命令。大多数用户使用这一选项是为了查找旧文件并删除它们。建议在真正执行rm命令删除文件之前，最好先用ls命令看一下，确认它们是所要删除的文件。 exec选项后面跟随着所要执行的命令或脚本，然后是一对儿{ }，一个空格和一个\，最后是一个分号。为了使用exec选项，必须要同时使用print选项。如果验证一下find命令，会发现该命令只输出从当前路径起的相对路径及文件名。</p>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：ls -l命令放在find命令的-exec选项中</strong></p>
 <pre><code class="bash"># find命令匹配到了当前目录下的所有普通文件，并在-exec选项中使用ls -l命令将它们列出
-$ find . -type f -exec ls -l {} \;
-</code></pre>
+$ find . -type f -exec ls -l {} \;</code></pre>
 <p><strong><code>例二</code>：在目录中查找更改时间在n日以前的文件并删除它们</strong></p>
-<pre><code class="bash">$ find . -type f -mtime +14 -exec rm {} \;
-</code></pre>
+<pre><code class="bash">$ find . -type f -mtime +14 -exec rm {} \;</code></pre>
 <p><strong><code>例三</code>：在目录中查找更改时间在n日以前的文件并删除它们，在删除之前先给出提示</strong></p>
-<pre><code class="bash">$ find . -name &quot;*.log&quot; -mtime +5 -ok rm {} \;
-</code></pre>
+<pre><code class="bash">$ find . -name &quot;*.log&quot; -mtime +5 -ok rm {} \;</code></pre>
 <p><strong><code>例四</code>：-exec中使用grep命令</strong></p>
-<pre><code class="bash">$ find /etc -name &quot;passwd*&quot; -exec grep &quot;root&quot; {} \;
-</code></pre>
+<pre><code class="bash">$ find /etc -name &quot;passwd*&quot; -exec grep &quot;root&quot; {} \;</code></pre>
 <p><strong><code>例五</code>：查找文件移动到指定目录</strong></p>
-<pre><code class="bash">$ find . -name &quot;*.log&quot; -exec mv {} .. \;
-</code></pre>
+<pre><code class="bash">$ find . -name &quot;*.log&quot; -exec mv {} .. \;</code></pre>
 <p><strong><code>例六</code>：用exec选项执行cp命令</strong></p>
-<pre><code class="bash">$ find . -name &quot;*.log&quot; -exec cp {} test3 \;
-</code></pre>
+<pre><code class="bash">$ find . -name &quot;*.log&quot; -exec cp {} test3 \;</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -1933,7 +1935,7 @@ $ find . -type f -exec ls -l {} \;
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

@@ -6,13 +6,19 @@
   <meta name="keywords" content=" hexo , fragment_cache ">
   <meta name="description" content="Hexo加速渲染速度之fragment_cache | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1819,7 +1826,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:321</span>
+        <span>字数:343</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1869,21 +1876,17 @@
 <p>现在发现了严重的问题，<code>hexo generate</code> 渲染的速度越来越慢，现在132篇左右，每次渲染时间到达了 50+ s，相当不爽。</p>
 <p>今日抽时间，查看了官方api，看到了 <code>fragment_cache</code> 局部缓存这个东西，解决了渲染速度的问题。</p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p>局部缓存。它储存局部内容，下次使用时就能直接使用缓存。</p>
-<pre><code class="javascript">&lt;%- fragment_cache(id, fn); %&gt;
-</code></pre>
+<pre><code class="javascript">&lt;%- fragment_cache(id, fn); %&gt;</code></pre>
 <h3 id="替换简单文本区域"><a href="#替换简单文本区域" class="headerlink" title="替换简单文本区域"></a>替换简单文本区域</h3><p>a. 我们可以将所有页面都一样的区域，如下所示，缓存下来。当下一篇文章在渲染到这个位置时，将不再渲染，直接拿缓存数据。</p>
 <pre><code class="js">&lt;%- fragment_cache(&#39;header&#39;, function(){
     return partial(&#39;&lt;head&gt;&lt;/head&gt;&#39;);
-}) %&gt;
-</code></pre>
+}) %&gt;</code></pre>
 <p>b. 文章模块也可以使用，原来公共引用部分（没有和当前文章耦合的内容）使用下面的方式：</p>
-<pre><code class="js">&lt;%- partial(&#39;_partial/header&#39;); %&gt;
-</code></pre>
+<pre><code class="js">&lt;%- partial(&#39;_partial/header&#39;); %&gt;</code></pre>
 <p>改进为以下代码：</p>
 <pre><code class="js">&lt;%- fragment_cache(&#39;header&#39;, function(){
     return partial(&#39;_partial/header&#39;);
-}) %&gt;
-</code></pre>
+}) %&gt;</code></pre>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>这个语法只适用于所有页面都相同，不随文章内容变化的部分。</p>
 <p>作者在 <code>3-hexo</code> 中加入了此语法，渲染132篇文章的速度已从 50+s 到现在 3s 左右了。</p>
 
@@ -1935,7 +1938,7 @@
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

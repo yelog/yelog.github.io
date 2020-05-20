@@ -6,13 +6,19 @@
   <meta name="keywords" content=" Git ">
   <meta name="description" content="Git操作之高手过招 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1817,7 +1824,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:842</span>
+        <span>字数:886</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1863,25 +1870,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在使用git的过程中，总有一天你会遇到下面的问题：）<br>这些也是在开发过程中很常见的问题，以下也是作者的经验之谈，有不对的地方还请指出。<br><a id="more"></a></p>
+        <p>在使用git的过程中，总有一天你会遇到下面的问题：）<br>这些也是在开发过程中很常见的问题，以下也是作者的经验之谈，有不对的地方还请指出。</p>
+<a id="more"></a>
 <h3 id="最后一次commit信息写错了"><a href="#最后一次commit信息写错了" class="headerlink" title="最后一次commit信息写错了"></a>最后一次commit信息写错了</h3><p>如果只是提交信息写错了信息，可以通过以下命令单独修改提交信息</p>
-<pre><code class="bash">$ git commit --amend
-</code></pre>
+<pre><code class="bash">$ git commit --amend</code></pre>
 <blockquote>
 <p><strong>注意：</strong> 通过这样的过程修改提交信息后，相当于删除原来的提交，重新提交了一次。所有如果你在修改前已经将错误的那次提交push到服务端，那在修改后就需要通过 git pull 来合并代码（类似于两个分支了）。<br>通过 <code>git log --graph --oneline</code> 查看就会发现两个分支合并的痕迹</p>
 </blockquote>
 <h3 id="最后一次commit少添加一个文件"><a href="#最后一次commit少添加一个文件" class="headerlink" title="最后一次commit少添加一个文件"></a>最后一次commit少添加一个文件</h3><pre><code class="bash">$ git add file1
-$ git commit --amend
-</code></pre>
+$ git commit --amend</code></pre>
 <h3 id="最后一次commit多添加一个文件"><a href="#最后一次commit多添加一个文件" class="headerlink" title="最后一次commit多添加一个文件"></a>最后一次commit多添加一个文件</h3><pre><code class="bash">$ git rm --cached file1
-$ git commit --amend
-</code></pre>
+$ git commit --amend</code></pre>
 <h3 id="移除add过的文件"><a href="#移除add过的文件" class="headerlink" title="移除add过的文件"></a>移除add过的文件</h3><pre><code class="bash">#方法一
 $ git rm --cache [文件名]
 
 #方法二
-$ git reset head [文件/文件夹]
-</code></pre>
+$ git reset head [文件/文件夹]</code></pre>
 <h3 id="回退本地commit（还未push）"><a href="#回退本地commit（还未push）" class="headerlink" title="回退本地commit（还未push）"></a>回退本地commit（还未push）</h3><p>这种情况发生在你的本地仓库，可能你add，commit以后发现代码有点问题，打算取消提交，用到下面命令</p>
 <pre><code class="bash">#只会保留源码（工作区），回退commit(本地仓库)与index（暂存区）到某个版本
 $ git reset &lt;commit_id&gt;   #默认为 --mixed模式
@@ -1891,16 +1895,14 @@ $ git reset --mixed &lt;commit_id&gt;
 $ git reset --soft &lt;commit_id&gt;
 
 #源码（工作区）、commit（本地仓库）与index（暂存区）都回退到某个版本
-$ git reset --hard &lt;commit_id&gt;
-</code></pre>
+$ git reset --hard &lt;commit_id&gt;</code></pre>
 <p>当然有人在push代码以后，也是用reset –hard回退代码到某个版本之前，但是这样会有一个问题，你线上的代码没有变化。</p>
 <blockquote>
 <p>!!!可以通过 git push –force 将本地的回退推送到服务端,但是除非你很清楚在这么做, 不推荐.</p>
 </blockquote>
 <p>所以，这种情况你要使用下面的方式了。</p>
 <h3 id="回退本地commit（已经push）"><a href="#回退本地commit（已经push）" class="headerlink" title="回退本地commit（已经push）"></a>回退本地commit（已经push）</h3><p>对于已经把代码push到线上仓库,你回退本地代码其实也想同时回退线上代码,回滚到某个指定的版本,线上,线下代码保持一致.你要用到下面的命令</p>
-<pre><code class="bash">$ git revert &lt;commit_id&gt;
-</code></pre>
+<pre><code class="bash">$ git revert &lt;commit_id&gt;</code></pre>
 <p><strong>注意：</strong></p>
 <ol>
 <li>git revert 用于反转提交，执行命令时要求工作树必须是干净的。</li>
@@ -1914,8 +1916,7 @@ git reset [commit_id] 1.txt
 git checkout 1.txt
 
 #提交
-git commit -m &quot;回退1.txt的历史版本&quot;
-</code></pre>
+git commit -m &quot;回退1.txt的历史版本&quot;</code></pre>
 <h3 id="修改提交历史中的author和email"><a href="#修改提交历史中的author和email" class="headerlink" title="修改提交历史中的author和email"></a>修改提交历史中的author和email</h3><p>旧的：author:<code>Old-Author</code> email:<code>old@mail.com</code><br>新的：author:<code>New-Author</code> email:<code>new@mail.com</code><br>1.在git仓库内创建下面的脚本，如<code>change.sh</code></p>
 <pre><code class="shell"># !/bin/sh
 
@@ -1940,24 +1941,19 @@ export GIT_AUTHOR_NAME=&quot;$an&quot;
 export GIT_AUTHOR_EMAIL=&quot;$am&quot;
 export GIT_COMMITTER_NAME=&quot;$cn&quot;
 export GIT_COMMITTER_EMAIL=&quot;$cm&quot;
-&#39;
-</code></pre>
+&#39;</code></pre>
 <p>2.运行脚本</p>
-<pre><code class="bash">$ sh change.sh
-</code></pre>
+<pre><code class="bash">$ sh change.sh</code></pre>
 <h3 id="忽略已提交的文件（-iml）"><a href="#忽略已提交的文件（-iml）" class="headerlink" title="忽略已提交的文件（.iml）"></a>忽略已提交的文件（.iml）</h3><ol>
 <li>删除已提交的文件<pre><code class="bash"># 删除项目中所有的.iml后缀的文件
-$ find . -name &quot;*.iml&quot; | xargs rm -f
-</code></pre>
+$ find . -name &quot;*.iml&quot; | xargs rm -f</code></pre>
 </li>
-<li>添加<code>.gitignore</code>文件<pre><code class="bash">*.iml
-/**/*.iml
-</code></pre>
-</li>
+<li>添加<code>.gitignore</code>文件<br>```bash</li>
 </ol>
-<hr>
-<p>持续更新中～～～</p>
-
+<p><em>.iml<br>/**/</em>.iml</p>
+<pre><code>
+---
+持续更新中～～～</code></pre>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
@@ -2006,7 +2002,7 @@ $ find . -name &quot;*.iml&quot; | xargs rm -f
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

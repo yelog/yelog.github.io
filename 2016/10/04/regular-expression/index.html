@@ -6,13 +6,19 @@
   <meta name="keywords" content=" regex ">
   <meta name="description" content="正则表达式详解 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1817,7 +1824,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:4,610</span>
+        <span>字数:4.7k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1869,46 +1876,46 @@
 <a id="more"></a>
 <h2 id="简介及语法"><a href="#简介及语法" class="headerlink" title="简介及语法"></a>简介及语法</h2><h3 id="正则表达式是什么"><a href="#正则表达式是什么" class="headerlink" title="正则表达式是什么"></a>正则表达式是什么</h3><blockquote>
 <p>在编写处理字符串的程序或网页时，经常会有查找符合某些复杂规则的字符串的需要。正则表达式就是用于描述这些规则的工具。换句话说，正则表达式就是记录文本规则的代码。</p>
+</blockquote>
+<blockquote>
 <p>正则表达式语言由两种基本字符类型组成：原义（正常）<code>文本字符</code>和<code>元字符</code>。元字符使正则表达式具有处理能力。</p>
 </blockquote>
 <h3 id="常用元字符"><a href="#常用元字符" class="headerlink" title="常用元字符"></a>常用元字符</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">元字符</th>
-<th style="text-align:left">做什么用</th>
+<th align="left">元字符</th>
+<th align="left">做什么用</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>.</code></td>
-<td style="text-align:left">匹配除换行符以外的任意字符</td>
+<tbody><tr>
+<td align="left"><code>.</code></td>
+<td align="left">匹配除换行符以外的任意字符</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\w</code></td>
-<td style="text-align:left">匹配字母或数字或下划线或汉字</td>
+<td align="left"><code>\w</code></td>
+<td align="left">匹配字母或数字或下划线或汉字</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\s</code></td>
-<td style="text-align:left">匹配任意的空白符，包括空格，制表符（Tab），换行符，中文全角空格等）</td>
+<td align="left"><code>\s</code></td>
+<td align="left">匹配任意的空白符，包括空格，制表符（Tab），换行符，中文全角空格等）</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\d</code></td>
-<td style="text-align:left">匹配数字</td>
+<td align="left"><code>\d</code></td>
+<td align="left">匹配数字</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\b</code></td>
-<td style="text-align:left">匹配单词的开始或结束</td>
+<td align="left"><code>\b</code></td>
+<td align="left">匹配单词的开始或结束</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>^</code></td>
-<td style="text-align:left">匹配字符串的开始</td>
+<td align="left"><code>^</code></td>
+<td align="left">匹配字符串的开始</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>$</code></td>
-<td style="text-align:left">匹配字符串的结束</td>
+<td align="left"><code>$</code></td>
+<td align="left">匹配字符串的结束</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a>字符转义</h3><blockquote>
 <p>如果你想查找元字符本身的话，比如你查找 <code>.</code> ,或者 <code>*</code> ,就出现了问题：你没办法指定它们，因为它们会被解释成别的意思。这时你就得使用 <code>\</code> 来取消这些字符的特殊意义。因此，你应该使用 <code>\.</code> 和 <code>\*</code> 。当然，要查找 <code>\</code> 本身，你也得用 <code>\\</code> .<br>例如： <code>deerchao\.net</code> 匹配 <strong>deerchao.net</strong>，<code>C:\\Windows</code> 匹配 <strong>C:\Windows</strong> 。</p>
 </blockquote>
@@ -1918,37 +1925,35 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:left">元字符</th>
-<th style="text-align:left">做什么用</th>
+<th align="left">元字符</th>
+<th align="left">做什么用</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>*</code></td>
-<td style="text-align:left">重复零次或更多次</td>
+<tbody><tr>
+<td align="left"><code>*</code></td>
+<td align="left">重复零次或更多次</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>+</code></td>
-<td style="text-align:left">重复一次或更多次</td>
+<td align="left"><code>+</code></td>
+<td align="left">重复一次或更多次</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>?</code></td>
-<td style="text-align:left">重复零次或一次</td>
+<td align="left"><code>?</code></td>
+<td align="left">重复零次或一次</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>{n}</code></td>
-<td style="text-align:left">重复n次</td>
+<td align="left"><code>{n}</code></td>
+<td align="left">重复n次</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>{n,}</code></td>
-<td style="text-align:left">重复n次或更多次</td>
+<td align="left"><code>{n,}</code></td>
+<td align="left">重复n次或更多次</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>{n,m}</code></td>
-<td style="text-align:left">重复n到m次</td>
+<td align="left"><code>{n,m}</code></td>
+<td align="left">重复n到m次</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <blockquote>
 <p>下面是一些重复的示例：<br><code>Windows\d+</code> 匹配Windows后面跟1个或更多数字<br><code>^\w+</code> 匹配一行的第一个单词(或整个字符串的第一个单词，具体匹配哪个意思得看选项设置)</p>
 </blockquote>
@@ -1967,37 +1972,35 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:left">元字符</th>
-<th style="text-align:left">做什么用</th>
+<th align="left">元字符</th>
+<th align="left">做什么用</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>\W</code></td>
-<td style="text-align:left">匹配任意不是字母，数字，下划线，汉字的字符</td>
+<tbody><tr>
+<td align="left"><code>\W</code></td>
+<td align="left">匹配任意不是字母，数字，下划线，汉字的字符</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\S</code></td>
-<td style="text-align:left">匹配任意不是空白符的字符</td>
+<td align="left"><code>\S</code></td>
+<td align="left">匹配任意不是空白符的字符</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\D</code></td>
-<td style="text-align:left">匹配任意非数字的字符</td>
+<td align="left"><code>\D</code></td>
+<td align="left">匹配任意非数字的字符</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\B</code></td>
-<td style="text-align:left">匹配不是单词开头或结束的位置</td>
+<td align="left"><code>\B</code></td>
+<td align="left">匹配不是单词开头或结束的位置</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>[^x]</code></td>
-<td style="text-align:left">匹配除了x以外的任意字符</td>
+<td align="left"><code>[^x]</code></td>
+<td align="left">匹配除了x以外的任意字符</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>[^aeiou]</code></td>
-<td style="text-align:left">匹配除了aeiou这几个字母以外的任意字符</td>
+<td align="left"><code>[^aeiou]</code></td>
+<td align="left">匹配除了aeiou这几个字母以外的任意字符</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <blockquote>
 <p>示例： <code>\S+</code> 匹配不包含空白符的字符串。 <code>&lt;a[^&gt;]+&gt;</code> 匹配用尖括号括起来的以a开头的字符串。</p>
 </blockquote>
@@ -2008,7 +2011,7 @@
 <p>接下来的四个用于查找在某些内容(但并不包括这些内容)之前或之后的东西，也就是说它们像\b,^,$那样用于指定一个位置，这个位置应该满足一定的条件(即断言)，因此它们也被称为 <strong>零宽断言</strong>。<br><code>(?=exp)</code> 也叫 <strong>零宽度正预测先行断言</strong>，它断言自身出现的位置的后面能匹配表达式exp。比如<code>\b\w+(?=ing\b)</code>，匹配以ing结尾的单词的前面部分(除了ing以外的部分)，如查找 <em>I’m singing while you’re dancing.</em> 时，它会匹配 sing 和 danc 。<br><code>(?&lt;=exp)</code> 也叫 <strong>零宽度正回顾后发断言</strong> ，它断言自身出现的位置的前面能匹配表达式exp。比如 <code>(?&lt;=\bre)\w+\b</code> 会匹配以re开头的单词的后半部分(除了re以外的部分)，例如在查找 <em>reading a book</em> 时，它匹配ading。<br>假如你想要给一个很长的数字中每三位间加一个逗号(当然是从右边加起了)，你可以这样查找需要在前面和里面添加逗号的部分： <code>((?&lt;=\d)\d{3})+\b</code> ，用它对1234567890进行查找时结果是234567890。<br>下面这个示例同时使用了这两种断言： <code>(?&lt;=\s)\d+(?=\s)</code> 匹配以空白符间隔的数字( <strong>再次强调，不包括这些空白符</strong> )。</p>
 </blockquote>
 <h3 id="负向零宽断言"><a href="#负向零宽断言" class="headerlink" title="负向零宽断言"></a>负向零宽断言</h3><blockquote>
-<p>前面我们提到过怎么查找不是某个字符或不在某个字符类里的字符的方法(反义)。但是如果我们只是想要确保某个字符没有出现，但并不想去匹配它时怎么办？例如，如果我们想查找这样的单词–它里面出现了字母q,但是q后面跟的不是字母u,我们可以尝试这样：<br><code>\b\w*q[^u]\w*\b</code> 匹配 <em>包含后面不是字母u的字母q的单词</em> 。但是如果多做测试(或者你思维足够敏锐，直接就观察出来了)，你会发现，如果q出现在单词的结尾的话，像Iraq,Benq，这个表达式就会出错。这是因为[^u]总要匹配一个字符，所以如果q是单词的最后一个字符的话，后面的[^u]将会匹配q后面的单词分隔符(可能是空格，或者是句号或其它的什么)，后面的 <code>\w*\b</code> 将会匹配下一个单词，于是 <code>\b\w*q[^u]\w*\b</code> 就能匹配整个Iraq fighting。<strong>负向零宽断言</strong> 能解决这样的问题，因为它只匹配一个位置，并不消费任何字符。现在，我们可以这样来解决这个问题： <code>\b\w*q(?!u)\w*\b</code> 。<br><strong>零宽度负预测先行断言</strong>(?!exp)，断言此位置的后面不能匹配表达式exp。例如： <code>\d{3}(?!\d)</code> 匹配三位数字，而且这三位数字的后面不能是数字； <code>\b((?!abc)\w)+\b</code> 匹配不包含连续字符串abc的单词。<br>同理，我们可以用(?&lt;!exp),<strong>零宽度负回顾后发断言来断言</strong> 此位置的前面不能匹配表达式exp：(?&lt;![a-z])\d{7}匹配前面不是小写字母的七位数字。<br>一个更复杂的示例：<code>(?&lt;=&lt;(\w+)&gt;).*(?=&lt;\/\1&gt;)</code> 匹配不包含属性的简单HTML标签内里的内容。<code>(?&lt;=&lt;(\w+)&gt;)</code> 指定了这样的 <strong>前缀</strong>：被尖括号括起来的单词(比如可能是<b>)，然后是. <code>*</code> (任意的字符串),最后是一个 <strong>后缀</strong> <code>(?=&lt;\/\1&gt;)</code>。注意后缀里的 \/ ，它用到了前面提过的字符转义；\1则是一个反向引用，引用的正是捕获的第一组，前面的 <code>(\w+)</code> 匹配的内容，这样如果前缀实际上是<b>的话，后缀就是</b>了。整个表达式匹配的是<b>和</b>之间的内容(再次提醒，不包括前缀和后缀本身)。</p>
+<p>前面我们提到过怎么查找不是某个字符或不在某个字符类里的字符的方法(反义)。但是如果我们只是想要确保某个字符没有出现，但并不想去匹配它时怎么办？例如，如果我们想查找这样的单词–它里面出现了字母q,但是q后面跟的不是字母u,我们可以尝试这样：<br><code>\b\w*q[^u]\w*\b</code> 匹配 <em>包含后面不是字母u的字母q的单词</em> 。但是如果多做测试(或者你思维足够敏锐，直接就观察出来了)，你会发现，如果q出现在单词的结尾的话，像Iraq,Benq，这个表达式就会出错。这是因为[^u]总要匹配一个字符，所以如果q是单词的最后一个字符的话，后面的[^u]将会匹配q后面的单词分隔符(可能是空格，或者是句号或其它的什么)，后面的 <code>\w*\b</code> 将会匹配下一个单词，于是 <code>\b\w*q[^u]\w*\b</code> 就能匹配整个Iraq fighting。<strong>负向零宽断言</strong> 能解决这样的问题，因为它只匹配一个位置，并不消费任何字符。现在，我们可以这样来解决这个问题： <code>\b\w*q(?!u)\w*\b</code> 。<br><strong>零宽度负预测先行断言</strong>(?!exp)，断言此位置的后面不能匹配表达式exp。例如： <code>\d{3}(?!\d)</code> 匹配三位数字，而且这三位数字的后面不能是数字； <code>\b((?!abc)\w)+\b</code> 匹配不包含连续字符串abc的单词。<br>同理，我们可以用(?&lt;!exp),<strong>零宽度负回顾后发断言来断言</strong> 此位置的前面不能匹配表达式exp：(?&lt;![a-z])\d{7}匹配前面不是小写字母的七位数字。<br>一个更复杂的示例：<code>(?&lt;=&lt;(\w+)&gt;).*(?=&lt;\/\1&gt;)</code> 匹配不包含属性的简单HTML标签内里的内容。<code>(?&lt;=&lt;(\w+)&gt;)</code> 指定了这样的 <strong>前缀</strong>：被尖括号括起来的单词(比如可能是<b>)，然后是. <code>*</code> (任意的字符串),最后是一个 <strong>后缀</strong> <code>(?=&lt;\/\1&gt;)</code>。注意后缀里的 / ，它用到了前面提过的字符转义；\1则是一个反向引用，引用的正是捕获的第一组，前面的 <code>(\w+)</code> 匹配的内容，这样如果前缀实际上是<b>的话，后缀就是</b>了。整个表达式匹配的是<b>和</b>之间的内容(再次提醒，不包括前缀和后缀本身)。</p>
 </blockquote>
 <h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><blockquote>
 <p>小括号的另一种用途是通过语法(?#comment)来包含注释。例如：<code>2[0-4]\d(?#200-249)|25[0-5](?#250-255)|[01]?\d\d?(?#0-199)</code>。<br>要包含注释的话，最好是启用“忽略模式里的空白符”选项，这样在编写表达式时能任意的添加空格，Tab，换行，而实际使用时这些都将被忽略。启用这个选项后，在#后面到这一行结束的所有文本都将被当成注释忽略掉。例如，我们可以前面的一个表达式写成这样：<br>      <code>(?&lt;=</code>    # 断言要匹配的文本的前缀<br>      <code>&lt;(\w+)&gt;</code> # 查找尖括号括起来的字母或数字(即HTML/XML标签)<br>      <code>)</code>       # 前缀结束<br>      <code>.*</code>      # 匹配任意文本<br>      <code>(?=</code>     # 断言要匹配的文本的后缀<br>      <code>&lt;\/\1&gt;</code>  # 查找尖括号括起来的内容：前面是一个”/“，后面是先前捕获的标签<br>      <code>)</code>       # 后缀结束</p>
@@ -2019,151 +2022,144 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:left">语法</th>
-<th style="text-align:left">做什么用</th>
+<th align="left">语法</th>
+<th align="left">做什么用</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>*?</code></td>
-<td style="text-align:left">重复任意次，但尽可能少重复</td>
+<tbody><tr>
+<td align="left"><code>*?</code></td>
+<td align="left">重复任意次，但尽可能少重复</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>+?</code></td>
-<td style="text-align:left">重复1次或更多次，但尽可能少重复</td>
+<td align="left"><code>+?</code></td>
+<td align="left">重复1次或更多次，但尽可能少重复</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>??</code></td>
-<td style="text-align:left">重复0次或1次，但尽可能少重复</td>
+<td align="left"><code>??</code></td>
+<td align="left">重复0次或1次，但尽可能少重复</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>{n,m}?</code></td>
-<td style="text-align:left">重复n到m次，但尽可能少重复</td>
+<td align="left"><code>{n,m}?</code></td>
+<td align="left">重复n到m次，但尽可能少重复</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>{n,}?</code></td>
-<td style="text-align:left">重复n次以上，但尽可能少重复</td>
+<td align="left"><code>{n,}?</code></td>
+<td align="left">重复n次以上，但尽可能少重复</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="其他元字符"><a href="#其他元字符" class="headerlink" title="其他元字符"></a>其他元字符</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">元字符</th>
-<th style="text-align:left">做什么用</th>
+<th align="left">元字符</th>
+<th align="left">做什么用</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>\a</code></td>
-<td style="text-align:left">报警字符(打印它的效果是电脑嘀一声)</td>
+<tbody><tr>
+<td align="left"><code>\a</code></td>
+<td align="left">报警字符(打印它的效果是电脑嘀一声)</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\b</code></td>
-<td style="text-align:left">通常是单词分界位置，但如果在字符类里使用代表退格</td>
+<td align="left"><code>\b</code></td>
+<td align="left">通常是单词分界位置，但如果在字符类里使用代表退格</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\t</code></td>
-<td style="text-align:left">制表符，Tab</td>
+<td align="left"><code>\t</code></td>
+<td align="left">制表符，Tab</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\r</code></td>
-<td style="text-align:left">回车</td>
+<td align="left"><code>\r</code></td>
+<td align="left">回车</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\v</code></td>
-<td style="text-align:left">竖向制表符</td>
+<td align="left"><code>\v</code></td>
+<td align="left">竖向制表符</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\f</code></td>
-<td style="text-align:left">换页符</td>
+<td align="left"><code>\f</code></td>
+<td align="left">换页符</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\n</code></td>
-<td style="text-align:left">换行符</td>
+<td align="left"><code>\n</code></td>
+<td align="left">换行符</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\e</code></td>
-<td style="text-align:left">Escape</td>
+<td align="left"><code>\e</code></td>
+<td align="left">Escape</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\0nn</code></td>
-<td style="text-align:left">ASCII代码中八进制代码为nn的字符</td>
+<td align="left"><code>\0nn</code></td>
+<td align="left">ASCII代码中八进制代码为nn的字符</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\xnn</code></td>
-<td style="text-align:left">ASCII代码中十六进制代码为nn的字符</td>
+<td align="left"><code>\xnn</code></td>
+<td align="left">ASCII代码中十六进制代码为nn的字符</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\unnnn</code></td>
-<td style="text-align:left">Unicode代码中十六进制代码为nnnn的字符</td>
+<td align="left"><code>\unnnn</code></td>
+<td align="left">Unicode代码中十六进制代码为nnnn的字符</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\cN</code></td>
-<td style="text-align:left">ASCII控制字符。比如\cC代表Ctrl+C</td>
+<td align="left"><code>\cN</code></td>
+<td align="left">ASCII控制字符。比如\cC代表Ctrl+C</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\A</code></td>
-<td style="text-align:left">字符串开头(类似^，但不受处理多行选项的影响)</td>
+<td align="left"><code>\A</code></td>
+<td align="left">字符串开头(类似^，但不受处理多行选项的影响)</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\Z</code></td>
-<td style="text-align:left">字符串结尾或行尾(不受处理多行选项的影响)</td>
+<td align="left"><code>\Z</code></td>
+<td align="left">字符串结尾或行尾(不受处理多行选项的影响)</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\z</code></td>
-<td style="text-align:left">字符串结尾(类似$，但不受处理多行选项的影响)</td>
+<td align="left"><code>\z</code></td>
+<td align="left">字符串结尾(类似$，但不受处理多行选项的影响)</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\G</code></td>
-<td style="text-align:left">当前搜索的开头</td>
+<td align="left"><code>\G</code></td>
+<td align="left">当前搜索的开头</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>\p{name}</code></td>
-<td style="text-align:left">Unicode中命名为name的字符类，例如\p{IsGreek}</td>
+<td align="left"><code>\p{name}</code></td>
+<td align="left">Unicode中命名为name的字符类，例如\p{IsGreek}</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>(?&gt;exp)</code></td>
-<td style="text-align:left">贪婪子表达式</td>
+<td align="left"><code>(?&gt;exp)</code></td>
+<td align="left">贪婪子表达式</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>(?&lt;x&gt;-&lt;y&gt;exp)</code></td>
-<td style="text-align:left">平衡组</td>
+<td align="left"><code>(?&lt;x&gt;-&lt;y&gt;exp)</code></td>
+<td align="left">平衡组</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>(?im-nsx:exp)</code></td>
-<td style="text-align:left">在子表达式exp中改变处理选项</td>
+<td align="left"><code>(?im-nsx:exp)</code></td>
+<td align="left">在子表达式exp中改变处理选项</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>(?im-nsx)</code></td>
-<td style="text-align:left">为表达式后面的部分改变处理选项</td>
+<td align="left"><code>(?im-nsx)</code></td>
+<td align="left">为表达式后面的部分改变处理选项</td>
 </tr>
 <tr>
-<td style="text-align:left">[1]</td>
-<td style="text-align:left">把exp当作零宽正向先行断言，如果在这个位置能匹配，使用yes作为此组的表达式；否则使用no</td>
+<td align="left"><a href="`(?(exp)yes|no)`">1</a></td>
+<td align="left">把exp当作零宽正向先行断言，如果在这个位置能匹配，使用yes作为此组的表达式；否则使用no</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>(?(exp)yes)</code></td>
-<td style="text-align:left">同上，只是使用空表达式作为no</td>
+<td align="left"><code>(?(exp)yes)</code></td>
+<td align="left">同上，只是使用空表达式作为no</td>
 </tr>
 <tr>
-<td style="text-align:left">[2]</td>
-<td style="text-align:left">如果命名为name的组捕获到了内容，使用yes作为表达式；否则使用no</td>
+<td align="left"><a href="`(?(name)yes|no)`">2</a></td>
+<td align="left">如果命名为name的组捕获到了内容，使用yes作为表达式；否则使用no</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>(?(name)yes)</code></td>
-<td style="text-align:left">同上，只是使用空表达式作为no</td>
+<td align="left"><code>(?(name)yes)</code></td>
+<td align="left">同上，只是使用空表达式作为no</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <blockquote>
-<p>[1]:<code>(?(exp)yes|no)</code></p>
-<p>[2]:<code>(?(name)yes|no)</code></p>
 </blockquote>
 <h2 id="正则表达式常用实例"><a href="#正则表达式常用实例" class="headerlink" title="正则表达式常用实例"></a>正则表达式常用实例</h2><h3 id="账号-密码"><a href="#账号-密码" class="headerlink" title="账号/密码"></a>账号/密码</h3><pre><code class="java">帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线) = &quot;^[a-zA-Z][a-zA-Z0-9_]{4,15}$&quot;
 密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线) = &quot;^[a-zA-Z]\w{5,17}$&quot;
-强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间) = &quot;^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$&quot;
-</code></pre>
+强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间) = &quot;^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$&quot;</code></pre>
 <h3 id="字符串校验"><a href="#字符串校验" class="headerlink" title="字符串校验"></a>字符串校验</h3><pre><code class="java">汉字 = &quot;^[\u4e00-\u9fa5]{0,}$&quot;;
 英文和数字 = &quot;^[A-Za-z0-9]+$ 或 ^[A-Za-z0-9]{4,40}$&quot;;
 长度为3-20的所有字符 = &quot;^.{3,20}$&quot;；
@@ -2174,8 +2170,7 @@
 由数字、26个英文字母或者下划线组成的字符串 = &quot;^\w+$ 或 ^\w{3,20}$&quot;；
 中文、英文、数字包括下划线 = &quot;^[\u4E00-\u9FA5A-Za-z0-9_]+$&quot;；
 中文、英文、数字但不包括下划线等符号 = &quot;^[\u4E00-\u9FA5A-Za-z0-9]+$ 或 ^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$&quot;；
-禁止输入含有~的字符 = &quot;[^~\x22]+&quot;；
-</code></pre>
+禁止输入含有~的字符 = &quot;[^~\x22]+&quot;；</code></pre>
 <h3 id="手机号"><a href="#手机号" class="headerlink" title="手机号"></a>手机号</h3><pre><code class="java">/**
  * 手机号码
  * 移动：134,135,136,137,138,139,147,150,151,152,157,158,159,170,178,182,183,184,187,188
@@ -2197,18 +2192,13 @@ String CU = &quot;^1(3[0-2]|4[5]|5[56]|709|7[1]|7[6]|8[56])\\d{8}$&quot;;
  * 中国电信：China Telecom
  * 133,134,153,1700,177,180,181,189
  */
-String CT = &quot;^1(3[34]|53|77|700|8[019])\\d{8}$&quot;;
-</code></pre>
-<h3 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h3><pre><code class="java">String IPREGEXP = &quot;((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)&quot;;
-</code></pre>
-<h3 id="EMAIL地址"><a href="#EMAIL地址" class="headerlink" title="EMAIL地址"></a>EMAIL地址</h3><pre><code class="java">Email地址 = &quot;^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$&quot;;
-</code></pre>
+String CT = &quot;^1(3[34]|53|77|700|8[019])\\d{8}$&quot;;</code></pre>
+<h3 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h3><pre><code class="java">String IPREGEXP = &quot;((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)&quot;;</code></pre>
+<h3 id="EMAIL地址"><a href="#EMAIL地址" class="headerlink" title="EMAIL地址"></a>EMAIL地址</h3><pre><code class="java">Email地址 = &quot;^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$&quot;;</code></pre>
 <h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><pre><code class="java">域名 = &quot;[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?&quot;;
-InternetURL = &quot;[a-zA-z]+://[^\s]* 或 ^http://([\w-]+\.)+[\w-]+(/[\w-./?%&amp;=]*)?$&quot;
-</code></pre>
+InternetURL = &quot;[a-zA-z]+://[^\s]* 或 ^http://([\w-]+\.)+[\w-]+(/[\w-./?%&amp;=]*)?$&quot;</code></pre>
 <h3 id="身份证"><a href="#身份证" class="headerlink" title="身份证"></a>身份证</h3><pre><code class="java">身份证号(15位、18位数字) = &quot;^\d{15}|\d{18}$&quot;
-短身份证号码(数字、字母x结尾) = &quot;^([0-9]){7,18}(x|X)?$ 或 ^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$&quot;
-</code></pre>
+短身份证号码(数字、字母x结尾) = &quot;^([0-9]){7,18}(x|X)?$ 或 ^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$&quot;</code></pre>
 <h3 id="数字类校验"><a href="#数字类校验" class="headerlink" title="数字类校验"></a>数字类校验</h3><pre><code class="java">数字 = &quot;^[0-9]*$&quot;;
 n位的数字 = &quot;^\d{n}$&quot;;
 至少n位的数字 = &quot;^\d{n,}$&quot;;
@@ -2220,8 +2210,7 @@ m-n位的数字 = &quot;^\d{m,n}$&quot;;
 有两位小数的正实数 = &quot;^[0-9]+(.[0-9]{2})?$&quot;;
 有1~3位小数的正实数 = &quot;^[0-9]+(.[0-9]{1,3})?$&quot;;
 非零的正整数 = &quot;^[1-9]\d*$ 或 ^([1-9][0-9]*){1,3}$ 或 ^\+?[1-9][0-9]*$&quot;;
-非零的负整数 = &quot;^\-[1-9][]0-9&quot;*$&quot; 或 &quot;^-[1-9]\d*$&quot;;
-</code></pre>
+非零的负整数 = &quot;^\-[1-9][]0-9&quot;*$&quot; 或 &quot;^-[1-9]\d*$&quot;;</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -2271,7 +2260,7 @@ m-n位的数字 = &quot;^\d{m,n}$&quot;;
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

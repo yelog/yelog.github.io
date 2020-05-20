@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（49）: cal | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1861,61 +1868,54 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　cal命令可以用来显示公历（阳历）日历。公历是现在国际通用的历法，又称格列历，通称阳历。“阳历”又名“太阳历”，系以地球绕行太阳一周为一年，为西方各国所通用，故又名“西历”。<br><a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ cal [参数][月份][年份]
-</code></pre>
+        <p>　　cal命令可以用来显示公历（阳历）日历。公历是现在国际通用的历法，又称格列历，通称阳历。“阳历”又名“太阳历”，系以地球绕行太阳一周为一年，为西方各国所通用，故又名“西历”。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ cal [参数][月份][年份]</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>用于查看日历等时间信息，如只有一个参数，则表示年份(1-9999)，如有两个参数，则表示月份和年份</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-1</td>
-<td style="text-align:left">显示一个月的月历</td>
+<tbody><tr>
+<td align="left">-1</td>
+<td align="left">显示一个月的月历</td>
 </tr>
 <tr>
-<td style="text-align:left">-3</td>
-<td style="text-align:left">显示系统前一个月，当前月，下一个月的月历</td>
+<td align="left">-3</td>
+<td align="left">显示系统前一个月，当前月，下一个月的月历</td>
 </tr>
 <tr>
-<td style="text-align:left">-s</td>
-<td style="text-align:left">显示星期天为一个星期的第一天，默认的格式</td>
+<td align="left">-s</td>
+<td align="left">显示星期天为一个星期的第一天，默认的格式</td>
 </tr>
 <tr>
-<td style="text-align:left">-m</td>
-<td style="text-align:left">显示星期一为一个星期的第一天</td>
+<td align="left">-m</td>
+<td align="left">显示星期一为一个星期的第一天</td>
 </tr>
 <tr>
-<td style="text-align:left">-j</td>
-<td style="text-align:left">显示在当年中的第几天（一年日期按天算，从1月1号算起，默认显示当前月在一年中的天数）</td>
+<td align="left">-j</td>
+<td align="left">显示在当年中的第几天（一年日期按天算，从1月1号算起，默认显示当前月在一年中的天数）</td>
 </tr>
 <tr>
-<td style="text-align:left">-y</td>
-<td style="text-align:left">显示当前年份的日历</td>
+<td align="left">-y</td>
+<td align="left">显示当前年份的日历</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示当前月份日历</strong></p>
-<pre><code class="bash">$ cal
-</code></pre>
+<pre><code class="bash">$ cal</code></pre>
 <p><img src="http://img.saodiyang.com/Fo959HUHU7DyFEaargV5_4n6nsNi.png" alt="日历"><br><strong><code>例二</code>：显示指定月份的日历</strong></p>
-<pre><code class="bash">$ cal 6 2016
-</code></pre>
+<pre><code class="bash">$ cal 6 2016</code></pre>
 <p><img src="http://img.saodiyang.com/Fhjcoswylnxplt5CjFHlfb55va4M.png" alt="2016年6月"><br><strong><code>例三</code>：显示2016年的日历</strong></p>
 <pre><code class="bash">$ cal -y 2016
-$ cal 2016
-</code></pre>
+$ cal 2016</code></pre>
 <p><img src="http://img.saodiyang.com/Fnloz8dl1VKyVgn32hjCM0lPGkJI.png" alt="2016年日历"><br><strong><code>例四</code>：显示自1月1日的天数</strong></p>
-<pre><code class="bash">$ cal -j
-</code></pre>
+<pre><code class="bash">$ cal -j</code></pre>
 <p><img src="http://img.saodiyang.com/FsQNZEvW5UEJHd3IV2sF19OlOjvs.png" alt="本年的第几天"></p>
 <p><strong><code>例五</code>：星期一显示在第一列</strong></p>
-<pre><code class="bash">$ cal -m
-</code></pre>
+<pre><code class="bash">$ cal -m</code></pre>
 <p><img src="http://img.saodiyang.com/Ft9YOB5-L4fauP9TWqQLCpAOYwlY.png" alt="本机deepin不支持这个参数，登陆到服务器截了一张图=="></p>
 
       
@@ -1966,7 +1966,7 @@ $ cal 2016
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

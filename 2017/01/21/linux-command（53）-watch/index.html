@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（53）: watch | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:500</span>
+        <span>字数:514</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1861,59 +1868,52 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　watch是一个非常实用的命令，基本所有的Linux发行版都带有这个小工具，如同名字一样，watch可以帮你监测一个命令的运行结果，省得你一遍遍的手动运行。在Linux下，watch是周期性的执行下个程序，并全屏显示执行结果。你可以拿他来监测你想要的一切命令的结果变化，比如 tail 一个 log 文件，ls 监测某个文件的大小变化，看你的想象力了！<br><a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ watch[参数][命令]
-</code></pre>
+        <p>　　watch是一个非常实用的命令，基本所有的Linux发行版都带有这个小工具，如同名字一样，watch可以帮你监测一个命令的运行结果，省得你一遍遍的手动运行。在Linux下，watch是周期性的执行下个程序，并全屏显示执行结果。你可以拿他来监测你想要的一切命令的结果变化，比如 tail 一个 log 文件，ls 监测某个文件的大小变化，看你的想象力了！</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ watch[参数][命令]</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　可以将命令的输出结果输出到标准输出设备，多用于周期性执行命令/定时执行命令</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-n或–interval</td>
-<td style="text-align:left">watch缺省每2秒运行一下程序，可以用-n或-interval来指定间隔的时间</td>
+<tbody><tr>
+<td align="left">-n或–interval</td>
+<td align="left">watch缺省每2秒运行一下程序，可以用-n或-interval来指定间隔的时间</td>
 </tr>
 <tr>
-<td style="text-align:left">-d或–differences</td>
-<td style="text-align:left">watch 会高亮显示变化的区域</td>
+<td align="left">-d或–differences</td>
+<td align="left">watch 会高亮显示变化的区域</td>
 </tr>
 <tr>
-<td style="text-align:left">-d=cumulative</td>
-<td style="text-align:left">会把变动过的地方(不管最近的那次有没有变动)都高亮显示出来</td>
+<td align="left">-d=cumulative</td>
+<td align="left">会把变动过的地方(不管最近的那次有没有变动)都高亮显示出来</td>
 </tr>
 <tr>
-<td style="text-align:left">-t 或-no-title</td>
-<td style="text-align:left">会关闭watch命令在顶部的时间间隔,命令，当前时间的输出</td>
+<td align="left">-t 或-no-title</td>
+<td align="left">会关闭watch命令在顶部的时间间隔,命令，当前时间的输出</td>
 </tr>
 <tr>
-<td style="text-align:left">-h, –help</td>
-<td style="text-align:left">查看帮助文档</td>
+<td align="left">-h, –help</td>
+<td align="left">查看帮助文档</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：每隔一秒高亮显示网络链接数的变化情况</strong></p>
-<pre><code class="bash">$ watch -n 1 -d netstat -ant
-</code></pre>
+<pre><code class="bash">$ watch -n 1 -d netstat -ant</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>其它操作：<br>切换终端： Ctrl+x<br>退出watch：Ctrl+g (deepin系统没效果，只能使用Ctrl+c退出了)</p>
 </blockquote>
 <p><strong><code>例二</code>：每隔一秒高亮显示http链接数的变化情况</strong></p>
 <pre><code class="bash"># 每隔一秒高亮显示http链接数的变化情况。 后面接的命令若带有管道符，需要加&#39;&#39;将命令区域归整。
-$ watch -n 1 -d &#39;pstree|grep http&#39;
-</code></pre>
+$ watch -n 1 -d &#39;pstree|grep http&#39;</code></pre>
 <p><strong><code>例三</code>：实时查看模拟攻击客户机建立起来的连接数</strong></p>
-<pre><code class="bash">$ watch &#39;netstat -an | grep:21 | \ grep&lt;模拟攻击客户机的IP&gt;| wc -l&#39;
-</code></pre>
+<pre><code class="bash">$ watch &#39;netstat -an | grep:21 | \ grep&lt;模拟攻击客户机的IP&gt;| wc -l&#39;</code></pre>
 <p><strong><code>例四</code>：监测当前目录中 scf’ 的文件的变化</strong></p>
-<pre><code class="bash">$ watch -d &#39;ls -l|grep scf&#39;
-</code></pre>
+<pre><code class="bash">$ watch -d &#39;ls -l|grep scf&#39;</code></pre>
 <p><strong><code>例五</code>：10秒一次输出系统的平均负载</strong></p>
-<pre><code class="bash">$ watch -n 10 &#39;cat /proc/loadavg&#39;
-</code></pre>
+<pre><code class="bash">$ watch -n 10 &#39;cat /proc/loadavg&#39;</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -1963,7 +1963,7 @@ $ watch -n 1 -d &#39;pstree|grep http&#39;
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

@@ -6,13 +6,19 @@
   <meta name="keywords" content=" Git ">
   <meta name="description" content="Git常用命令 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1817,7 +1824,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:2,407</span>
+        <span>字数:2.4k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1874,12 +1881,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>经常用到Git，但是很多命令记不住，将其整理于此。（大量摘自网络）</p>
-<p>一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要要记住60~100个命令。<br><img src="http://img.saodiyang.com/FlWMWzIX9WE7PW-7eyeq8uaEJ_3p.png" alt="git常用命令"><br><a id="more"></a><br>下面整理的 Git 命令清单。几个专业名词的译名如下。</p>
+<p>一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要要记住60~100个命令。<br><img src="http://img.saodiyang.com/FlWMWzIX9WE7PW-7eyeq8uaEJ_3p.png" alt="git常用命令"></p>
+<a id="more"></a>
+<p>下面整理的 Git 命令清单。几个专业名词的译名如下。</p>
 <pre><code class="xml">Workspace：工作区
 Index / Stage：暂存区
 Repository：仓库区（本地仓库）
-Remote：远程仓库
-</code></pre>
+Remote：远程仓库</code></pre>
 <h2 id="新建版本仓库"><a href="#新建版本仓库" class="headerlink" title="新建版本仓库"></a>新建版本仓库</h2><pre><code class="bash"># 在当前目录新建一个Git代码库
 $ git init
 
@@ -1887,8 +1895,7 @@ $ git init
 $ git init [project-name]
 
 # 下载一个项目和它的整个代码历史, -o 给远程仓库起名:faker,默认origin
-$ git clone [-o faker] [url]
-</code></pre>
+$ git clone [-o faker] [url]</code></pre>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>Git的设置文件为<code>.gitconfig</code>，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
 <pre><code class="bash"># 显示当前的Git配置
 $ git config --list
@@ -1901,8 +1908,7 @@ $ git config [--global] user.name &quot;[name]&quot;
 $ git config [--global] user.email &quot;[email address]&quot;
 
 # 设置大小写敏感（windows不区分大小写的解决办法）
-$ git config core.ignorecase  false
-</code></pre>
+$ git config core.ignorecase  false</code></pre>
 <h2 id="增加-删除文件"><a href="#增加-删除文件" class="headerlink" title="增加/删除文件"></a>增加/删除文件</h2><pre><code class="bash"># 添加指定文件到暂存区
 $ git add [file1] [file2] ...
 
@@ -1923,8 +1929,7 @@ $ git rm [file1] [file2] ...
 $ git rm --cached [file]
 
 # 改名文件，并且将这个改名放入暂存区
-$ git mv [file-original] [file-renamed]
-</code></pre>
+$ git mv [file-original] [file-renamed]</code></pre>
 <h2 id="代码提交"><a href="#代码提交" class="headerlink" title="代码提交"></a>代码提交</h2><pre><code class="bash"># 提交暂存区到仓库区
 $ git commit -m [message]
 
@@ -1942,8 +1947,7 @@ $ git commit -v
 $ git commit --amend -m [message]
 
 # 重做上一次commit，并包括指定文件的新变化
-$ git commit --amend [file1] [file2] ...
-</code></pre>
+$ git commit --amend [file1] [file2] ...</code></pre>
 <h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><pre><code class="bash"># 列出所有本地分支
 $ git branch
 
@@ -2007,8 +2011,7 @@ $ git push origin [branch-name]
 
 # 删除远程分支
 $ git push origin --delete [branch-name]
-$ git branch -dr [remote/branch]
-</code></pre>
+$ git branch -dr [remote/branch]</code></pre>
 <h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><pre><code class="bash"># 列出所有tag
 $ git tag
 
@@ -2034,8 +2037,7 @@ $ git push [remote] [tag]
 $ git push [remote] --tags
 
 # 新建一个分支，指向某个tag
-$ git checkout -b [branch] [tag]
-</code></pre>
+$ git checkout -b [branch] [tag]</code></pre>
 <h2 id="查看信息-搜索"><a href="#查看信息-搜索" class="headerlink" title="查看信息/搜索"></a>查看信息/搜索</h2><pre><code class="bash"># 显示有变更的文件
 $ git status [-sb] #s:short,给一个短格式的展示，b:展示当前分支
 
@@ -2121,8 +2123,7 @@ $ git grep --break --heading [关键字]
 $ git log -SiCheck --oneline
 
 # 查询git_deflate_bound函数每一次的变更
-$ git log -L :git_deflate_bound:zlib.c
-</code></pre>
+$ git log -L :git_deflate_bound:zlib.c</code></pre>
 <h2 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h2><pre><code class="bash"># 下载远程仓库的所有变动 [shortname] 为远程仓库的shortname, 如origin,为空时:默认origin
 $ git fetch [shortname]
 
@@ -2161,8 +2162,7 @@ $ git push [remote] [branch]
 $ git push [remote] --all
 
 # 强行推送当前分支到远程仓库，即使有冲突
-$ git push [remote] --force
-</code></pre>
+$ git push [remote] --force</code></pre>
 <h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><pre><code class="bash"># 恢复暂存区的指定文件到工作区
 $ git checkout [file]
 
@@ -2221,8 +2221,7 @@ $ git stash list
 $ git clean -f -d
 </code></pre>
 <h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><pre><code class="bash"># 生成一个可供发布的压缩包
-$ git archive
-</code></pre>
+$ git archive</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -2272,7 +2271,7 @@ $ git archive
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

@@ -6,13 +6,19 @@
   <meta name="keywords" content=" 运维 , 磁盘分区 ">
   <meta name="description" content="linux无损调整分区大小 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1817,7 +1824,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:620</span>
+        <span>字数:616</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1880,8 +1887,7 @@ $ lvreduce -L 200G /dev/centos/home
 $ lvextend -l +100%FREE /dev/centos/root
 
 # 使用XFS文件系统自带的命令集增加分区空间
-$ xfs_growfs /dev/mapper/centos-root
-</code></pre>
+$ xfs_growfs /dev/mapper/centos-root</code></pre>
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="situation"><a href="#situation" class="headerlink" title="situation"></a>situation</h3><p>挂载在根目录的分区 <code>/dev/mapper/centos-root</code> 爆满，占用100%</p>
 <pre><code class="bash">$ df -h
 Filesystem               Size  Used Avail Use% Mounted on
@@ -1892,8 +1898,7 @@ tmpfs                     32G  2.5G   29G   8% /run
 tmpfs                     32G     0   32G   0% /sys/fs/cgroup
 /dev/mapper/centos-home  476G   33M  476G   1% /home
 /dev/sda1                497M  238M  259M  48% /boot
-tmpfs                    6.3G     0  6.3G   0% /run/user/0
-</code></pre>
+tmpfs                    6.3G     0  6.3G   0% /run/user/0</code></pre>
 <h3 id="analyze"><a href="#analyze" class="headerlink" title="analyze"></a>analyze</h3><p>挂载在根目录的分区空间太小，只有50G，而服务器 <code>home</code> 目录为非常用目录，挂在了近500G的空间。</p>
 <p>思路：从 <code>centos-home</code> 分区划出300G空间到 <code>centos-root</code> 分区。</p>
 <h3 id="operation"><a href="#operation" class="headerlink" title="operation"></a>operation</h3><h4 id="1-查看各分区信息"><a href="#1-查看各分区信息" class="headerlink" title="1.查看各分区信息"></a>1.查看各分区信息</h4><pre><code class="bash">$ lvdisplay
@@ -1929,8 +1934,7 @@ Segments               1
 Allocation             inherit
 Read ahead sectors     auto
 - currently set to     256
-Block device           253:0
-</code></pre>
+Block device           253:0</code></pre>
 <h4 id="2-减少-home分区空间"><a href="#2-减少-home分区空间" class="headerlink" title="2.减少/home分区空间"></a>2.减少/home分区空间</h4><pre><code class="bash"># 释放 /dev/centos/home 分区 300G 的空间
 # 命令设置 /dev/centos/home 分区 200G空间
 $ lvreduce -L 200G /dev/centos/home
@@ -1938,12 +1942,10 @@ WARNING: Reducing active logical volume to 200.00 GiB.
  THIS MAY DESTROY YOUR DATA (filesystem etc.)
 Do you really want to reduce centos/home? [y/n]: y
  Size of logical volume centos/home changed from 475.70 GiB (121778 extents) to 200.00 GiB (51200 extents).
- Logical volume centos/home successfully resized.
-</code></pre>
+ Logical volume centos/home successfully resized.</code></pre>
 <h4 id="3-增加-root分区空间"><a href="#3-增加-root分区空间" class="headerlink" title="3.增加/root分区空间"></a>3.增加/root分区空间</h4><pre><code class="bash">$ lvextend -l +100%FREE /dev/centos/root
 Size of logical volume centos/root changed from 50.06 GiB (12816 extents) to 325.76 GiB (83394 extents).
-Logical volume centos/root successfully resized.
-</code></pre>
+Logical volume centos/root successfully resized.</code></pre>
 <h4 id="4-扩展XFS文件空间大小"><a href="#4-扩展XFS文件空间大小" class="headerlink" title="4.扩展XFS文件空间大小"></a>4.扩展XFS文件空间大小</h4><pre><code class="bash">$ xfs_growfs /dev/mapper/centos-root
 meta-data=/dev/mapper/centos-root isize=256    agcount=4, agsize=3276800 blks
          =                       sectsz=512   attr=2, projid32bit=1
@@ -1954,8 +1956,7 @@ naming   =version 2              bsize=4096   ascii-ci=0 ftype=0
 log      =internal               bsize=4096   blocks=6400, version=2
          =                       sectsz=512   sunit=0 blks, lazy-count=1
 realtime =none                   extsz=4096   blocks=0, rtextents=0
-data blocks changed from 13107200 to 85395456
-</code></pre>
+data blocks changed from 13107200 to 85395456</code></pre>
 <p>完成</p>
 
       
@@ -2006,7 +2007,7 @@ data blocks changed from 13107200 to 85395456
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

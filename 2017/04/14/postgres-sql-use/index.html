@@ -6,13 +6,19 @@
   <meta name="keywords" content=" postgres , sql ">
   <meta name="description" content="PostgreSQL常用SQL操作 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1817,7 +1824,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:452</span>
+        <span>字数:575</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1881,8 +1888,7 @@ grant create on database &quot;sp-boss&quot; to &quot;sp-manager&quot;;
 -- 使用 新用户 登录数据库
 psql -U sp-manager -d sp-boss
 -- 创建自己的 schema
-create schema &quot;sp-manager&quot;;
-</code></pre>
+create schema &quot;sp-manager&quot;;</code></pre>
 <h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><pre><code class="sql">--创建表
 create table user_info (
   id serial primary key,
@@ -1896,8 +1902,7 @@ create table user_info (
 --删除表
 drop table exists user_info;
 --重命名表
-alter table user_info rename to user_infos;
-</code></pre>
+alter table user_info rename to user_infos;</code></pre>
 <h3 id="字段（列）"><a href="#字段（列）" class="headerlink" title="字段（列）"></a>字段（列）</h3><pre><code class="sql">--添加一列
 alter table user_info add [column] username varchar(50);
 --删除一列
@@ -1906,14 +1911,12 @@ alter table user_info drop [column] username;
 alter table user_info rename [column] username to name;
 --修改结构
 alter table user_info alter [column] username set not null;
---
-</code></pre>
+--</code></pre>
 <h3 id="唯一约束"><a href="#唯一约束" class="headerlink" title="唯一约束"></a>唯一约束</h3><pre><code class="SQL">-- 添加名为 uk_name 的联合唯一约束，组合列为column1和column2
 alter table sys_theme add constraint uk_name unique(column1,column2);
 
 -- 删除名为 uk_name 的约束
-alter table sys_theme drop constraint uk_name;
-</code></pre>
+alter table sys_theme drop constraint uk_name;</code></pre>
 <h2 id="DML数据库操作语言"><a href="#DML数据库操作语言" class="headerlink" title="DML数据库操作语言"></a>DML数据库操作语言</h2><h3 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h3><h4 id="查询包含json格式的text类型的数据"><a href="#查询包含json格式的text类型的数据" class="headerlink" title="查询包含json格式的text类型的数据"></a>查询包含json格式的text类型的数据</h4><pre><code class="sql">postgres=# select * from person;
  id |  name  |                          other                           
 ----+--------+----------------------------------------------------------
@@ -1925,8 +1928,7 @@ alter table sys_theme drop constraint uk_name;
   6 | yak    | {&quot;gender&quot;:&quot;female&quot;,&quot;address&quot;:&quot;xiamen&quot;,&quot;college&quot;:&quot;xmut&quot;}
   7 | alice  | {&quot;gender&quot;:&quot;female&quot;,&quot;address&quot;:&quot;shanghai&quot;,&quot;college&quot;:&quot;thu&quot;}
   8 | anita  | {&quot;gender&quot;:&quot;female&quot;,&quot;address&quot;:&quot;xiongan&quot;,&quot;college&quot;:&quot;hku&quot;}
-(8 行记录)
-</code></pre>
+(8 行记录)</code></pre>
 <pre><code class="sql">-- 查询深圳学生的高校分部情况
 select
   other::json-&gt;&gt;&#39;college&#39; college,
@@ -1944,8 +1946,7 @@ ___________________________
   xmut    |     1
  (1 行记录)
 --- 结果可得深圳一共有两个学生，
---- 在深圳大学和厦门理工学院各一个。
-</code></pre>
+--- 在深圳大学和厦门理工学院各一个。</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -1995,7 +1996,7 @@ ___________________________
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

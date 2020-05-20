@@ -6,13 +6,19 @@
   <meta name="keywords" content=" dubbo , zookeeper ">
   <meta name="description" content="搭建dubbo+zookeeper平台 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1817,7 +1824,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:799</span>
+        <span>字数:947</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1866,13 +1873,11 @@
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文将介绍在SpringMVC+Spring+Mybatis项目中添加 <code>dubbo</code> 作为 <code>rpc</code> 服务。</p>
 <p>文末有项目代码地址。</p>
 <h2 id="一-搭建zookeeper"><a href="#一-搭建zookeeper" class="headerlink" title="一.搭建zookeeper"></a>一.搭建zookeeper</h2><p>使用 docker 一句话创建：</p>
-<pre><code class="bash">docker run -dit --name zookeeper --hostname zookeeper-host -v /data:/data -p 2181:2181 jplock/zookeeper:latest
-</code></pre>
+<pre><code class="bash">docker run -dit --name zookeeper --hostname zookeeper-host -v /data:/data -p 2181:2181 jplock/zookeeper:latest</code></pre>
 <h2 id="二-安装zkui（非必须）"><a href="#二-安装zkui（非必须）" class="headerlink" title="二.安装zkui（非必须）"></a>二.安装zkui（非必须）</h2><p>这个项目为 zookeeper 提供一个 web 的管理界面。当然我们也可以直接在zookeeper中使用命令查看，所以此步骤可以忽略</p>
 <p>在开始前需要安装 Java 环境、Maven 环境。</p>
 <ol>
-<li>到 <a href="https://github.com/DeemOpen/zkui" target="_blank" rel="noopener">zkui</a> 的项目中下载代码。<pre><code class="bash">git clone https://github.com/DeemOpen/zkui.git
-</code></pre>
+<li>到 <a href="https://github.com/DeemOpen/zkui" target="_blank" rel="noopener">zkui</a> 的项目中下载代码。<pre><code class="bash">git clone https://github.com/DeemOpen/zkui.git</code></pre>
 </li>
 <li>执行 <code>mvn clean install</code> 生成jar文件。</li>
 <li>将config.cfg复制到上一步生成的jar文件所在目录，然后修改配置文件中的zookeeper地址。</li>
@@ -1881,7 +1886,8 @@
 </ol>
 <p><img src="http://img.saodiyang.com/Fherw3peRgh-grmGz6qkNri5J1aG.png" alt="登录页面"><br><img src="http://img.saodiyang.com/FvEVMOzSZBP4N4-Q14noQT_VsKF6.png" alt="首页"></p>
 <h2 id="三-使用dubbo"><a href="#三-使用dubbo" class="headerlink" title="三.使用dubbo"></a>三.使用dubbo</h2><ol>
-<li>在原来 SpringMVC+Spring+Mybatis 项目中，除了原来 spring 相关依赖外，还需要加入以下依赖<pre><code class="xml">&lt;dependency&gt;
+<li><p>在原来 SpringMVC+Spring+Mybatis 项目中，除了原来 spring 相关依赖外，还需要加入以下依赖</p>
+<pre><code class="xml">&lt;dependency&gt;
      &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
      &lt;artifactId&gt;dubbo&lt;/artifactId&gt;
      &lt;version&gt;2.5.5&lt;/version&gt;
@@ -1895,16 +1901,15 @@
      &lt;groupId&gt;com.101tec&lt;/groupId&gt;
      &lt;artifactId&gt;zkclient&lt;/artifactId&gt;
      &lt;version&gt;0.2&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
+&lt;/dependency&gt;</code></pre>
 </li>
-<li>定义服务接口<pre><code class="java">public interface IPersonService {
+<li><p>定义服务接口</p>
+<pre><code class="java">public interface IPersonService {
  List&lt;Person&gt; listAll();
  Person getById(Integer id);
  Integer delById(Person person);
  Integer updatePerson(Person person);
-}
-</code></pre>
+}</code></pre>
 </li>
 <li><p>定义服务实现类</p>
 <pre><code class="java">@Service
@@ -1928,8 +1933,7 @@ public class PersonService implements IPersonService {
  public Integer updatePerson(Person person) {
      return personMapper.update(person);
  }
-}
-</code></pre>
+}</code></pre>
 </li>
 <li><p>配置生产者，注册服务信息</p>
 <pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -1953,8 +1957,7 @@ public class PersonService implements IPersonService {
 
  &lt;!-- 声明需要暴露的服务接口 --&gt;
  &lt;dubbo:service interface=&quot;com.ssm.iservice.IPersonService&quot; ref=&quot;personService&quot;/&gt;
-&lt;/beans&gt;
-</code></pre>
+&lt;/beans&gt;</code></pre>
 </li>
 <li><p>配置消费者，订阅服务</p>
 <pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -1972,8 +1975,7 @@ public class PersonService implements IPersonService {
 
  &lt;!-- 生成远程服务代理，可以和本地bean一样使用demoService --&gt;
  &lt;dubbo:reference id=&quot;personService&quot; check=&quot;false&quot; interface=&quot;com.ssm.iservice.IPersonService&quot;/&gt;
-&lt;/beans&gt;
-</code></pre>
+&lt;/beans&gt;</code></pre>
 </li>
 <li><p>调用远程服务<br>配置完成后，我们就可以像使用本地 bean 一样，使用 rpc 的 service；</p>
 <pre><code class="java">@Controller
@@ -1989,8 +1991,7 @@ public class IndexController {
      model.addAttribute(&quot;command&quot;,list);
      return &quot;index&quot;;
  }
-}
-</code></pre>
+}</code></pre>
 </li>
 </ol>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>至此，单机运行的 rpc 服务已搭建完成。</p>
@@ -2044,7 +2045,7 @@ public class IndexController {
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

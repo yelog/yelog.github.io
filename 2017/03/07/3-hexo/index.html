@@ -6,13 +6,19 @@
   <meta name="keywords" content=" hexo , 3-hexo ">
   <meta name="description" content="Hexo主题3-hexo | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1882,21 +1889,17 @@
 <h3 id="打赏功能"><a href="#打赏功能" class="headerlink" title="打赏功能"></a>打赏功能</h3><p><img src="http://img.saodiyang.com/FhlNgOF7ipEIVrrztFdRam3WRikw.gif" alt="打赏功能"></p>
 <h3 id="文章置顶"><a href="#文章置顶" class="headerlink" title="文章置顶"></a>文章置顶</h3><p><img src="http://img.saodiyang.com/FhQLLqrRCr4yFGl9nDb_9oc4yME-.png" alt="文章置顶"></p>
 <h3 id="返回头部"><a href="#返回头部" class="headerlink" title="返回头部"></a>返回头部</h3><p><img src="http://img.saodiyang.com/FjpVByJViwYEWHHMTeayiQ-FD_qG.gif" alt="返回头部"></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h3><pre><code class="bash">$ git clone https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo
-</code></pre>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h3><pre><code class="bash">$ git clone https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo</code></pre>
 <h3 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h3><p>1） 修改hexo根目录的<code>_config.yml</code>的两处，如下</p>
 <pre><code class="xml">theme: 3-hexo
 highlight:
-  enable: false #关闭hexo渲染高亮，使用主题代码块高亮
-</code></pre>
+  enable: false #关闭hexo渲染高亮，使用主题代码块高亮</code></pre>
 <p>2） 在hexo 根目录source下添加<code>avatar.jpg</code>文件，作为头像</p>
 <p>3) 安装字数统计(由于主题使用这个插件，必须安装，否则会报错)</p>
-<pre><code class="bash">$ $ npm i --save hexo-wordcount
-</code></pre>
+<pre><code class="bash">$ $ npm i --save hexo-wordcount</code></pre>
 <p><strong>注意：</strong> 如果没有安装会在 <code>hexo g</code> 的时候报错</p>
 <h3 id="3-更新"><a href="#3-更新" class="headerlink" title="3.更新"></a>3.更新</h3><pre><code class="bash">$ cd themes/3-hexo
-$ git pull
-</code></pre>
+$ git pull</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -1946,7 +1949,7 @@ $ git pull
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

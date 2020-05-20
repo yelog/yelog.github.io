@@ -6,13 +6,19 @@
   <meta name="keywords" content=" java , spring , springmvc ">
   <meta name="description" content="[转]SpringMVC执行流程及源码解析 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1819,7 +1826,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:2,615</span>
+        <span>字数:2.6k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1907,8 +1914,7 @@
     else {//其他的请求类型的方法经由父类，也就是HttpServlet处理
         super.service(request, response);
     }
-}
-</code></pre>
+}</code></pre>
 <p>HttpServlet中会根据请求类型的不同分别调用doGet或者doPost等方法，FrameworkServlet中已经重写了这些方法，在这些方法中会调用processRequest进行处理，在processRequest中会调用doService方法，这个doService方法就是在DispatcherServlet中实现的。下面就看下DispatcherServlet中的doService方法的实现。</p>
 <h3 id="请求到达DispatcherServlet"><a href="#请求到达DispatcherServlet" class="headerlink" title="请求到达DispatcherServlet"></a>请求到达DispatcherServlet</h3><p>doService方法：</p>
 <pre><code class="java">protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -1955,8 +1961,7 @@
             restoreAttributesAfterInclude(request, attributesSnapshot);
         }
     }
-}
-</code></pre>
+}</code></pre>
 <p>DispatcherServlet开始真正的处理，doDispatch方法：</p>
 <pre><code class="java">protected void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception {
     HttpServletRequest processedRequest = request;
@@ -2036,14 +2041,12 @@
             cleanupMultipart(processedRequest);
         }
     }
-}
-</code></pre>
+}</code></pre>
 <p>可以看到大概的步骤还是按照我们上面分析的走的。</p>
 <h3 id="查找请求对应的Handler对象"><a href="#查找请求对应的Handler对象" class="headerlink" title="查找请求对应的Handler对象"></a>查找请求对应的Handler对象</h3><p>对应着这句代码 <code>mappedHandler = getHandler(processedRequest, false);</code>，看下具体的getHandler方法：</p>
 <pre><code class="java">protected HandlerExecutionChain getHandler(HttpServletRequest request, boolean cache) throws Exception {
     return getHandler(request);
-}
-</code></pre>
+}</code></pre>
 <p>继续往下看getHandler：</p>
 <pre><code class="java">protected HandlerExecutionChain getHandler(HttpServletRequest request) throws Exception {
     //遍历所有的handlerMappings进行处理
@@ -2055,8 +2058,7 @@
         }
     }
     return null;
-}
-</code></pre>
+}</code></pre>
 <p>继续往下看getHandler，在AbstractHandlerMapping类中：</p>
 <pre><code class="java">public final HandlerExecutionChain getHandler(HttpServletRequest request) throws Exception {
     //根据request获取handler
@@ -2076,8 +2078,7 @@
     }
     //封装Handler执行链
     return getHandlerExecutionChain(handler, request);
-}
-</code></pre>
+}</code></pre>
 <h3 id="根据requrst获取handler"><a href="#根据requrst获取handler" class="headerlink" title="根据requrst获取handler"></a>根据requrst获取handler</h3><p>首先看下根据requrst获取handler步骤getHandlerInternal方法，在AbstractHandlerMethodMapping中：</p>
 <pre><code class="java">protected HandlerMethod getHandlerInternal(HttpServletRequest request) throws Exception {
     //获取request中的url，用来匹配handler
@@ -2086,8 +2087,7 @@
     HandlerMethod handlerMethod = lookupHandlerMethod(lookupPath, request);
     //根据handlerMethod中的bean来实例化Handler并添加进HandlerMethod
     return (handlerMethod != null) ? handlerMethod.createWithResolvedBean() : null;
-}
-</code></pre>
+}</code></pre>
 <p>看下根据路径寻找handler的方法lookupHandlerMethod：</p>
 <pre><code class="java">protected HandlerMethod lookupHandlerMethod(String lookupPath, HttpServletRequest request) throws Exception {
     List&lt;Match&gt; matches = new ArrayList&lt;Match&gt;();
@@ -2127,8 +2127,7 @@
     else {//最后还没有找到，返回null
         return handleNoMatch(handlerMethods.keySet(), lookupPath, request);
     }
-}
-</code></pre>
+}</code></pre>
 <h3 id="获取默认Handler"><a href="#获取默认Handler" class="headerlink" title="获取默认Handler"></a>获取默认Handler</h3><p>如果上面没有获取到Handler，就会获取默认的Handler。如果还获取不到就返回null。</p>
 <h3 id="处理String类型的Handler"><a href="#处理String类型的Handler" class="headerlink" title="处理String类型的Handler"></a>处理String类型的Handler</h3><p>如果上面处理完的Handler是String类型的，就会根据这个handlerName获取bean。</p>
 <h3 id="封装Handler执行链"><a href="#封装Handler执行链" class="headerlink" title="封装Handler执行链"></a>封装Handler执行链</h3><p>上面获取完Handler，就开始封装执行链了，就是将我们配置的拦截器加入到执行链中去，getHandlerExecutionChain：</p>
@@ -2149,8 +2148,7 @@
     }
 
     return chain;
-}
-</code></pre>
+}</code></pre>
 <h3 id="获取对应请求的Handler适配器"><a href="#获取对应请求的Handler适配器" class="headerlink" title="获取对应请求的Handler适配器"></a>获取对应请求的Handler适配器</h3><p>getHandlerAdapter：</p>
 <pre><code class="java">protected HandlerAdapter getHandlerAdapter(Object handler) throws ServletException {
     //遍历所有的HandlerAdapter，找到和当前Handler匹配的就返回
@@ -2160,16 +2158,14 @@
             return ha;
         }
     }
-}
-</code></pre>
+}</code></pre>
 <h3 id="缓存的处理"><a href="#缓存的处理" class="headerlink" title="缓存的处理"></a>缓存的处理</h3><p>也就是对last-modified的处理</p>
 <h3 id="执行拦截器的preHandle方法"><a href="#执行拦截器的preHandle方法" class="headerlink" title="执行拦截器的preHandle方法"></a>执行拦截器的preHandle方法</h3><p>就是遍历所有的我们定义的interceptor，执行preHandle方法</p>
 <h3 id="使用Handler适配器执行当前的Handler"><a href="#使用Handler适配器执行当前的Handler" class="headerlink" title="使用Handler适配器执行当前的Handler"></a>使用Handler适配器执行当前的Handler</h3><p>ha.handle执行当前Handler，我们这里使用的是RequestMappingHandlerAdapter，首先会进入AbstractHandlerMethodAdapter的handle方法：</p>
 <pre><code class="java">public final ModelAndView handle(HttpServletRequest request, HttpServletResponse response, Object handler)
         throws Exception {
     return handleInternal(request, response, (HandlerMethod) handler);
-}
-</code></pre>
+}</code></pre>
 <p>handleInternal方法，在RequestMappingHandlerAdapter中：</p>
 <pre><code class="java">protected final ModelAndView handleInternal(HttpServletRequest request,
         HttpServletResponse response, HandlerMethod handlerMethod) throws Exception {
@@ -2195,8 +2191,7 @@
     }
     //执行方法，封装ModelAndView
     return invokeHandleMethod(request, response, handlerMethod);
-}
-</code></pre>
+}</code></pre>
 <h3 id="组装默认视图名称"><a href="#组装默认视图名称" class="headerlink" title="组装默认视图名称"></a>组装默认视图名称</h3><p>前缀和后缀名都加上</p>
 <h3 id="执行拦截器的postHandle方法"><a href="#执行拦截器的postHandle方法" class="headerlink" title="执行拦截器的postHandle方法"></a>执行拦截器的postHandle方法</h3><p>遍历intercepter的postHandle方法。</p>
 <h3 id="处理最后的结果，渲染之类的"><a href="#处理最后的结果，渲染之类的" class="headerlink" title="处理最后的结果，渲染之类的"></a>处理最后的结果，渲染之类的</h3><p>processDispatchResult方法：</p>
@@ -2235,8 +2230,7 @@
     if (mappedHandler != null) {
         mappedHandler.triggerAfterCompletion(request, response, null);
     }
-}
-</code></pre>
+}</code></pre>
 <p>重点看下render方法，进行渲染：</p>
 <pre><code class="java">protected void render(ModelAndView mv, HttpServletRequest request, HttpServletResponse response) throws Exception {
     //设置本地化
@@ -2259,8 +2253,7 @@
 
     //委托给视图进行渲染
     view.render(mv.getModelInternal(), request, response);
-}
-</code></pre>
+}</code></pre>
 <p>view.render就是进行视图的渲染，然后跳转页面等处理。</p>
 <p>到这里大概的流程就走完了。其中涉及到的东西还有很多，暂先不做详细处理。</p>
 <p>原文：<a href="http://cxis.me/2017/04/06/SpringMVC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%E5%8F%8A%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" target="_blank" rel="noopener">SpringMVC执行流程及源码解析</a></p>
@@ -2313,7 +2306,7 @@
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

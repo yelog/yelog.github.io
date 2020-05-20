@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（48）: date | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:1,680</span>
+        <span>字数:1.7k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1861,184 +1868,180 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　在linux环境中，不管是编程还是其他维护，时间是必不可少的，也经常会用到时间的运算，熟练运用date命令来表示自己想要表示的时间，肯定可以给自己的工作带来诸多方便。<br><a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ date [参数]... [+格式]
-</code></pre>
+        <p>　　在linux环境中，不管是编程还是其他维护，时间是必不可少的，也经常会用到时间的运算，熟练运用date命令来表示自己想要表示的时间，肯定可以给自己的工作带来诸多方便。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ date [参数]... [+格式]</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　date 可以用来显示或设定系统的日期与时间。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><p><strong>命令参数</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">%H</td>
-<td style="text-align:left">小时(以00-23来表示)</td>
+<tbody><tr>
+<td align="left">%H</td>
+<td align="left">小时(以00-23来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%I</td>
-<td style="text-align:left">小时(以01-12来表示)</td>
+<td align="left">%I</td>
+<td align="left">小时(以01-12来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%K</td>
-<td style="text-align:left">小时(以0-23来表示)</td>
+<td align="left">%K</td>
+<td align="left">小时(以0-23来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%l</td>
-<td style="text-align:left">小时(以0-12来表示)</td>
+<td align="left">%l</td>
+<td align="left">小时(以0-12来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%M</td>
-<td style="text-align:left">分钟(以00-59来表示)</td>
+<td align="left">%M</td>
+<td align="left">分钟(以00-59来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%P</td>
-<td style="text-align:left">AM或PM</td>
+<td align="left">%P</td>
+<td align="left">AM或PM</td>
 </tr>
 <tr>
-<td style="text-align:left">%r</td>
-<td style="text-align:left">时间(含时分秒，小时以12小时AM/PM来表示)</td>
+<td align="left">%r</td>
+<td align="left">时间(含时分秒，小时以12小时AM/PM来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%s</td>
-<td style="text-align:left">总秒数。起算时间为1970-01-01 00:00:00 UTC</td>
+<td align="left">%s</td>
+<td align="left">总秒数。起算时间为1970-01-01 00:00:00 UTC</td>
 </tr>
 <tr>
-<td style="text-align:left">%S</td>
-<td style="text-align:left">秒(以本地的惯用法来表示)</td>
+<td align="left">%S</td>
+<td align="left">秒(以本地的惯用法来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%T</td>
-<td style="text-align:left">时间(含时分秒，小时以24小时制来表示)</td>
+<td align="left">%T</td>
+<td align="left">时间(含时分秒，小时以24小时制来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%X</td>
-<td style="text-align:left">时间(以本地的惯用法来表示)</td>
+<td align="left">%X</td>
+<td align="left">时间(以本地的惯用法来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%Z</td>
-<td style="text-align:left">市区</td>
+<td align="left">%Z</td>
+<td align="left">市区</td>
 </tr>
 <tr>
-<td style="text-align:left">%a</td>
-<td style="text-align:left">星期的缩写</td>
+<td align="left">%a</td>
+<td align="left">星期的缩写</td>
 </tr>
 <tr>
-<td style="text-align:left">%A</td>
-<td style="text-align:left">星期的完整名称</td>
+<td align="left">%A</td>
+<td align="left">星期的完整名称</td>
 </tr>
 <tr>
-<td style="text-align:left">%b</td>
-<td style="text-align:left">月份英文名的缩写</td>
+<td align="left">%b</td>
+<td align="left">月份英文名的缩写</td>
 </tr>
 <tr>
-<td style="text-align:left">%B</td>
-<td style="text-align:left">月份的完整英文名称</td>
+<td align="left">%B</td>
+<td align="left">月份的完整英文名称</td>
 </tr>
 <tr>
-<td style="text-align:left">%c</td>
-<td style="text-align:left">日期与时间。只输入date指令也会显示同样的结果</td>
+<td align="left">%c</td>
+<td align="left">日期与时间。只输入date指令也会显示同样的结果</td>
 </tr>
 <tr>
-<td style="text-align:left">%d</td>
-<td style="text-align:left">日期(以01-31来表示)</td>
+<td align="left">%d</td>
+<td align="left">日期(以01-31来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%D</td>
-<td style="text-align:left">日期(含年月日)</td>
+<td align="left">%D</td>
+<td align="left">日期(含年月日)</td>
 </tr>
 <tr>
-<td style="text-align:left">%j</td>
-<td style="text-align:left">该年中的第几天</td>
+<td align="left">%j</td>
+<td align="left">该年中的第几天</td>
 </tr>
 <tr>
-<td style="text-align:left">%m</td>
-<td style="text-align:left">月份(以01-12来表示)</td>
+<td align="left">%m</td>
+<td align="left">月份(以01-12来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%U</td>
-<td style="text-align:left">该年中的周数</td>
+<td align="left">%U</td>
+<td align="left">该年中的周数</td>
 </tr>
 <tr>
-<td style="text-align:left">%w</td>
-<td style="text-align:left">该周的天数，0代表周日，1代表周一，异词类推</td>
+<td align="left">%w</td>
+<td align="left">该周的天数，0代表周日，1代表周一，异词类推</td>
 </tr>
 <tr>
-<td style="text-align:left">%x</td>
-<td style="text-align:left">日期(以本地的惯用法来表示)</td>
+<td align="left">%x</td>
+<td align="left">日期(以本地的惯用法来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%y</td>
-<td style="text-align:left">年份(以00-99来表示)</td>
+<td align="left">%y</td>
+<td align="left">年份(以00-99来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%Y</td>
-<td style="text-align:left">年份(以四位数来表示)</td>
+<td align="left">%Y</td>
+<td align="left">年份(以四位数来表示)</td>
 </tr>
 <tr>
-<td style="text-align:left">%n</td>
-<td style="text-align:left">在显示时，插入新的一行</td>
+<td align="left">%n</td>
+<td align="left">在显示时，插入新的一行</td>
 </tr>
 <tr>
-<td style="text-align:left">%t</td>
-<td style="text-align:left">在显示时，插入tab</td>
+<td align="left">%t</td>
+<td align="left">在显示时，插入tab</td>
 </tr>
 <tr>
-<td style="text-align:left">MM</td>
-<td style="text-align:left">月份(必要)</td>
+<td align="left">MM</td>
+<td align="left">月份(必要)</td>
 </tr>
 <tr>
-<td style="text-align:left">DD</td>
-<td style="text-align:left">日期(必要)</td>
+<td align="left">DD</td>
+<td align="left">日期(必要)</td>
 </tr>
 <tr>
-<td style="text-align:left">hh</td>
-<td style="text-align:left">小时(必要)</td>
+<td align="left">hh</td>
+<td align="left">小时(必要)</td>
 </tr>
 <tr>
-<td style="text-align:left">mm</td>
-<td style="text-align:left">分钟(必要)</td>
+<td align="left">mm</td>
+<td align="left">分钟(必要)</td>
 </tr>
 <tr>
-<td style="text-align:left">ss</td>
-<td style="text-align:left">秒(选择性)</td>
+<td align="left">ss</td>
+<td align="left">秒(选择性)</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>选择参数</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-d&lt;字符串&gt;</td>
-<td style="text-align:left">显示字符串所指的日期与时间。字符串前后必须加上双引号</td>
+<tbody><tr>
+<td align="left">-d&lt;字符串&gt;</td>
+<td align="left">显示字符串所指的日期与时间。字符串前后必须加上双引号</td>
 </tr>
 <tr>
-<td style="text-align:left">-s&lt;字符串&gt;</td>
-<td style="text-align:left">根据字符串来设置日期与时间。字符串前后必须加上双引号</td>
+<td align="left">-s&lt;字符串&gt;</td>
+<td align="left">根据字符串来设置日期与时间。字符串前后必须加上双引号</td>
 </tr>
 <tr>
-<td style="text-align:left">-u</td>
-<td style="text-align:left">显示GMT</td>
+<td align="left">-u</td>
+<td align="left">显示GMT</td>
 </tr>
 <tr>
-<td style="text-align:left">–help</td>
-<td style="text-align:left">在线帮助</td>
+<td align="left">–help</td>
+<td align="left">在线帮助</td>
 </tr>
 <tr>
-<td style="text-align:left">–version</td>
-<td style="text-align:left">显示版本信息</td>
+<td align="left">–version</td>
+<td align="left">显示版本信息</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p><strong>1.在显示方面，使用者可以设定欲显示的格式，格式设定为一个加号后接数个标记，其中可用的标记列表如下: % :  打印出 %</strong><br>%n : 下一行<br>%t : 跳格<br>%H : 小时(00..23)<br>%I : 小时(01..12)<br>%k : 小时(0..23)<br>%l : 小时(1..12)<br>%M : 分钟(00..59)<br>%p : 显示本地 AM 或 PM<br>%r : 直接显示时间 (12 小时制，格式为 hh:mm:ss [AP]M)<br>%s : 从 1970 年 1 月 1 日 00:00:00 UTC 到目前为止的秒数<br>%S : 秒(00..61)<br>%T : 直接显示时间 (24 小时制)<br>%X : 相当于 %H:%M:%S<br>%Z : 显示时区 %a : 星期几 (Sun..Sat)<br>%A : 星期几 (Sunday..Saturday)<br>%b : 月份 (Jan..Dec)<br>%B : 月份 (January..December)<br>%c : 直接显示日期与时间<br>%d : 日 (01..31)<br>%D : 直接显示日期 (mm/dd/yy)<br>%h : 同 %b<br>%j : 一年中的第几天 (001..366)<br>%m : 月份 (01..12)<br>%U : 一年中的第几周 (00..53) (以 Sunday 为一周的第一天的情形)<br>%w : 一周中的第几天 (0..6)<br>%W : 一年中的第几周 (00..53) (以 Monday 为一周的第一天的情形)<br>%x : 直接显示日期 (mm/dd/yy)<br>%y : 年份的最后两位数字 (00.99)<br>%Y : 完整年份 (0000..9999)<br><strong>2.在设定时间方面</strong><br>date -s //设置当前时间，只有root权限才能设置，其他只能查看。<br>date -s 20080523 //设置成20080523，这样会把具体时间设置成空00:00:00<br>date -s 01:01:01 //设置具体时间，不会对日期做更改<br>date -s “01:01:01 2008-05-23″ //这样可以设置全部时间<br>date -s “01:01:01 20080523″ //这样可以设置全部时间<br>date -s “2008-05-23 01:01:01″ //这样可以设置全部时间<br>date -s “20080523 01:01:01″ //这样可以设置全部时间<br><strong>3.加减</strong><br>date +%Y%m%d         //显示前天年月日<br>date +%Y%m%d –date=”+1 day”  //显示前一天的日期<br>date +%Y%m%d –date=”-1 day”  //显示后一天的日期<br>date +%Y%m%d –date=”-1 month”  //显示上一月的日期<br>date +%Y%m%d –date=”+1 month”  //显示下一月的日期<br>date +%Y%m%d –date=”-1 year”  //显示前一年的日期<br>date +%Y%m%d –date=”+1 year”  //显示下一年的日期</p>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示当前时间</strong></p>
 <pre><code class="bash">$ date
@@ -2057,11 +2060,9 @@ $ date &#39;+%T&#39;
 14:52:02
 
 $ date &#39;+%X&#39;
-14时52分06秒
-</code></pre>
+14时52分06秒</code></pre>
 <p><strong><code>例二</code>：显示日期和设定时间</strong></p>
-<pre><code class="bash">$ date --date 08:42:00
-</code></pre>
+<pre><code class="bash">$ date --date 08:42:00</code></pre>
 <p><strong><code>例三</code>：date -d参数使用</strong></p>
 <pre><code class="bash">$ date -d &quot;nov 22&quot;
 2012年 11月 22日 星期四 00:00:00 CST
@@ -2100,20 +2101,17 @@ $ date -d &#39;dec 14 -2 weeks&#39;
 2012年 11月 30日 星期五 00:00:00 CST
 
 $ date -d &#39;50 days&#39;
-2013年 01月 27日 星期日 08:52:27 CST
-</code></pre>
+2013年 01月 27日 星期日 08:52:27 CST</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　date 命令的另一个扩展是 -d 选项，该选项非常有用。使用这个功能强大的选项，通过将日期作为引号括起来的参数提供，您可以快速地查明一个特定的日期。-d 选项还可以告诉您，相对于当前日期若干天的究竟是哪一天，从现在开始的若干天或若干星期以后，或者以前（过去）。通过将这个相对偏移使用引号括起来，作为 -d 选项的参数，就可以完成这项任务。<br>　　具体说明如下：<br>　　　　date -d “nov 22”  今年的 11 月 22 日是星期三<br>　　　　date -d ‘2 weeks’ 2周后的日期<br>　　　　date -d ‘next monday’ (下周一的日期)<br>　　　　date -d next-day +%Y%m%d（明天的日期）或者：date -d tomorrow +%Y%m%d<br>　　　　date -d last-day +%Y%m%d(昨天的日期) 或者：date -d yesterday +%Y%m%d<br>　　　　date -d last-month +%Y%m(上个月是几月)<br>　　　　date -d next-month +%Y%m(下个月是几月)<br>　　使用 ago 指令，您可以得到过去的日期：<br>　　　　date -d ‘30 days ago’ （30天前的日期）<br>　　使用负数以得到相反的日期：<br>　　　　date -d ‘dec 14 -2 weeks’ （相对:dec 14这个日期的两周前的日期）<br>　　　　date -d ‘-100 days’ (100天以前的日期)<br>　　　　date -d ‘50 days’(50天后的日期)</p>
 </blockquote>
 <p><strong><code>例四</code>：显示月份和日数</strong></p>
 <pre><code class="bash">$ date  &#39;+%B %d&#39;
-一月 28
-</code></pre>
+一月 28</code></pre>
 <p><strong><code>例五</code>：显示时间后跳行，再显示目前日期</strong></p>
 <pre><code class="bash">$ date &#39;+%T%n%D&#39;
 14:58:23
-01/28/17
-</code></pre>
+01/28/17</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -2163,7 +2161,7 @@ $ date -d &#39;50 days&#39;
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

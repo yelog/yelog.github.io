@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（30）: df | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:838</span>
+        <span>字数:848</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1861,117 +1868,107 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　linux中df命令的功能是用来检查linux服务器的文件系统的磁盘空间占用情况。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。<br><a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ df [选项] [文件]
-</code></pre>
+        <p>　　linux中df命令的功能是用来检查linux服务器的文件系统的磁盘空间占用情况。可以利用该命令来获取硬盘被占用了多少空间，目前还剩下多少空间等信息。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ df [选项] [文件]</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　显示指定磁盘文件的可用空间。如果没有文件名被指定，则所有当前被挂载的文件系统的可用空间将被显示。默认情况下，磁盘空间将以 1KB 为单位进行显示，除非环境变量 POSIXLY_CORRECT 被指定，那样将以512字节为单位进行显示</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><p><strong>必要参数</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-a</td>
-<td style="text-align:left">全部文件系统列表</td>
+<tbody><tr>
+<td align="left">-a</td>
+<td align="left">全部文件系统列表</td>
 </tr>
 <tr>
-<td style="text-align:left">-h</td>
-<td style="text-align:left">方便阅读方式显示</td>
+<td align="left">-h</td>
+<td align="left">方便阅读方式显示</td>
 </tr>
 <tr>
-<td style="text-align:left">-H</td>
-<td style="text-align:left">等于“-h”，但是计算式，1K=1000，而不是1K=1024</td>
+<td align="left">-H</td>
+<td align="left">等于“-h”，但是计算式，1K=1000，而不是1K=1024</td>
 </tr>
 <tr>
-<td style="text-align:left">-i</td>
-<td style="text-align:left">显示inode信息</td>
+<td align="left">-i</td>
+<td align="left">显示inode信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-k</td>
-<td style="text-align:left">区块为1024字节</td>
+<td align="left">-k</td>
+<td align="left">区块为1024字节</td>
 </tr>
 <tr>
-<td style="text-align:left">-l</td>
-<td style="text-align:left">只显示本地文件系统</td>
+<td align="left">-l</td>
+<td align="left">只显示本地文件系统</td>
 </tr>
 <tr>
-<td style="text-align:left">-m</td>
-<td style="text-align:left">区块为1048576字节</td>
+<td align="left">-m</td>
+<td align="left">区块为1048576字节</td>
 </tr>
 <tr>
-<td style="text-align:left">–no-sync</td>
-<td style="text-align:left">忽略 sync 命令</td>
+<td align="left">–no-sync</td>
+<td align="left">忽略 sync 命令</td>
 </tr>
 <tr>
-<td style="text-align:left">-P</td>
-<td style="text-align:left">输出格式为POSIX</td>
+<td align="left">-P</td>
+<td align="left">输出格式为POSIX</td>
 </tr>
 <tr>
-<td style="text-align:left">–sync</td>
-<td style="text-align:left">在取得磁盘信息前，先执行sync命令</td>
+<td align="left">–sync</td>
+<td align="left">在取得磁盘信息前，先执行sync命令</td>
 </tr>
 <tr>
-<td style="text-align:left">-T</td>
-<td style="text-align:left">文件系统类型</td>
+<td align="left">-T</td>
+<td align="left">文件系统类型</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>选择参数</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">–block-size=&lt;区块大小&gt;</td>
-<td style="text-align:left">指定区块大小</td>
+<tbody><tr>
+<td align="left">–block-size=&lt;区块大小&gt;</td>
+<td align="left">指定区块大小</td>
 </tr>
 <tr>
-<td style="text-align:left">-t&lt;文件系统类型&gt;</td>
-<td style="text-align:left">只显示选定文件系统的磁盘信息</td>
+<td align="left">-t&lt;文件系统类型&gt;</td>
+<td align="left">只显示选定文件系统的磁盘信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-x&lt;文件系统类型&gt;</td>
-<td style="text-align:left">不显示选定文件系统的磁盘信息</td>
+<td align="left">-x&lt;文件系统类型&gt;</td>
+<td align="left">不显示选定文件系统的磁盘信息</td>
 </tr>
 <tr>
-<td style="text-align:left">–help</td>
-<td style="text-align:left">显示帮助信息</td>
+<td align="left">–help</td>
+<td align="left">显示帮助信息</td>
 </tr>
 <tr>
-<td style="text-align:left">–version</td>
-<td style="text-align:left">显示版本信息</td>
+<td align="left">–version</td>
+<td align="left">显示版本信息</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示磁盘使用情况</strong></p>
-<pre><code class="bash">$ df
-</code></pre>
+<pre><code class="bash">$ df</code></pre>
 <blockquote>
 <p><strong>说明：</strong> linux中df命令的输出清单的第1列是代表文件系统对应的设备文件的路径名（一般是硬盘上的分区）；第2列给出分区包含的数据块（1024字节）的数目；第3，4列分别表示已用的和可用的数据块数目。用户也许会感到奇怪的是，第3，4列块数之和不等于第2列中的块数。这是因为缺省的每个分区都留了少量空间供系统管理员使用。即使遇到普通用户空间已满的情况，管理员仍能登录和留有解决问题所需的工作空间。清单中Use% 列表示普通用户空间使用的百分比，即使这一数字达到100％，分区仍然留有系统管理员使用的空间。最后，Mounted on列表示文件系统的挂载点。</p>
 </blockquote>
 <p><strong><code>例二</code>：以inode模式来显示磁盘使用情况</strong></p>
-<pre><code class="bash">$ df -i
-</code></pre>
+<pre><code class="bash">$ df -i</code></pre>
 <p><strong><code>例三</code>：显示指定类型磁盘</strong></p>
-<pre><code class="bash">$ df -t ext3
-</code></pre>
+<pre><code class="bash">$ df -t ext3</code></pre>
 <p><strong><code>例四</code>：列出各文件系统的i节点使用情况</strong></p>
-<pre><code class="bash">$ df -ia
-</code></pre>
+<pre><code class="bash">$ df -ia</code></pre>
 <p><strong><code>例五</code>：列出文件系统的类型</strong></p>
-<pre><code class="bash">$ df -T
-</code></pre>
+<pre><code class="bash">$ df -T</code></pre>
 <p><strong><code>例六</code>：以更易读的方式显示目前磁盘空间和使用情况</strong></p>
-<pre><code class="bash">$ df -h
-</code></pre>
+<pre><code class="bash">$ df -h</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>-h更具目前磁盘空间和使用情况 以更易读的方式显示<br>-H根上面的-h参数相同,不过在根式化的时候,采用1000而不是1024进行容量转换<br>-k以单位显示磁盘的使用情况<br>-l显示本地的分区的磁盘空间使用率,如果服务器nfs了远程服务器的磁盘,那么在df上加上-l后系统显示的是过滤nsf驱动器后的结果<br>-i显示inode的使用情况。linux采用了类似指针的方式管理磁盘空间影射.这也是一个比较关键应用</p>
 </blockquote>
@@ -2024,7 +2021,7 @@
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（32）: top | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:817</span>
+        <span>字数:842</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1845,7 +1852,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-text">命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令功能"><span class="toc-text">命令功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令参数"><span class="toc-text">命令参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#top交互命令"><span class="toc-text">top交互命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用实例"><span class="toc-text">使用实例</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-text">命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令功能"><span class="toc-text">命令功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令参数"><span class="toc-text">命令参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#top交互命令"><span class="toc-text">top交互命令</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1861,165 +1868,193 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　top命令是Linux下常用的性能分析工具，能够实时显示系统中各个进程的资源占用状况，类似于Windows的任务管理器。下面详细介绍它的使用方法。top是一个动态显示过程,即可以通过用户按键来不断刷新当前状态.如果在前台执行该命令,它将独占前台,直到用户终止该程序为止.比较准确的说,top命令提供了实时的对系统处理器的状态监视.它将显示系统中CPU最“敏感”的任务列表.该命令可以按CPU使用.内存使用和执行时间对任务进行排序；而且该命令的很多特性都可以通过交互式命令或者在个人定制文件中进行设定。<br><a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ top [参数]
-</code></pre>
+        <p>　　top命令是Linux下常用的性能分析工具，能够实时显示系统中各个进程的资源占用状况，类似于Windows的任务管理器。下面详细介绍它的使用方法。top是一个动态显示过程,即可以通过用户按键来不断刷新当前状态.如果在前台执行该命令,它将独占前台,直到用户终止该程序为止.比较准确的说,top命令提供了实时的对系统处理器的状态监视.它将显示系统中CPU最“敏感”的任务列表.该命令可以按CPU使用.内存使用和执行时间对任务进行排序；而且该命令的很多特性都可以通过交互式命令或者在个人定制文件中进行设定。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ top [参数]</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　显示当前系统正在执行的进程的相关信息，包括进程ID、内存占用率、CPU占用率等</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-b</td>
-<td style="text-align:left">批处理</td>
+<tbody><tr>
+<td align="left">-b</td>
+<td align="left">批处理</td>
 </tr>
 <tr>
-<td style="text-align:left">-c</td>
-<td style="text-align:left">显示完整的治命令</td>
+<td align="left">-c</td>
+<td align="left">显示完整的治命令</td>
 </tr>
 <tr>
-<td style="text-align:left">-I</td>
-<td style="text-align:left">忽略失效过程</td>
+<td align="left">-I</td>
+<td align="left">忽略失效过程</td>
 </tr>
 <tr>
-<td style="text-align:left">-s</td>
-<td style="text-align:left">保密模式</td>
+<td align="left">-s</td>
+<td align="left">保密模式</td>
 </tr>
 <tr>
-<td style="text-align:left">-S</td>
-<td style="text-align:left">累积模式</td>
+<td align="left">-S</td>
+<td align="left">累积模式</td>
 </tr>
 <tr>
-<td style="text-align:left">-i&lt;时间&gt;</td>
-<td style="text-align:left">设置间隔时间</td>
+<td align="left">-i&lt;时间&gt;</td>
+<td align="left">设置间隔时间</td>
 </tr>
 <tr>
-<td style="text-align:left">-u&lt;用户名&gt;</td>
-<td style="text-align:left">指定用户名</td>
+<td align="left">-u&lt;用户名&gt;</td>
+<td align="left">指定用户名</td>
 </tr>
 <tr>
-<td style="text-align:left">-p&lt;进程号&gt;</td>
-<td style="text-align:left">指定进程</td>
+<td align="left">-p&lt;进程号&gt;</td>
+<td align="left">指定进程</td>
 </tr>
 <tr>
-<td style="text-align:left">-n&lt;次数&gt;</td>
-<td style="text-align:left">循环显示的次数</td>
+<td align="left">-n&lt;次数&gt;</td>
+<td align="left">循环显示的次数</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="top交互命令"><a href="#top交互命令" class="headerlink" title="top交互命令"></a>top交互命令</h3><p>　　在top 命令执行过程中可以使用的一些交互命令。这些命令都是单字母的，如果在命令行中使用了s 选项， 其中一些命令可能会被屏蔽。</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">h</td>
-<td style="text-align:left">显示帮助画面，给出一些简短的命令总结说明</td>
+<tbody><tr>
+<td align="left">h</td>
+<td align="left">显示帮助画面，给出一些简短的命令总结说明</td>
 </tr>
 <tr>
-<td style="text-align:left">k</td>
-<td style="text-align:left">终止一个进程。</td>
+<td align="left">k</td>
+<td align="left">终止一个进程。</td>
 </tr>
 <tr>
-<td style="text-align:left">i</td>
-<td style="text-align:left">忽略闲置和僵死进程。这是一个开关式命令</td>
+<td align="left">i</td>
+<td align="left">忽略闲置和僵死进程。这是一个开关式命令</td>
 </tr>
 <tr>
-<td style="text-align:left">q</td>
-<td style="text-align:left">退出程序</td>
+<td align="left">q</td>
+<td align="left">退出程序</td>
 </tr>
 <tr>
-<td style="text-align:left">r</td>
-<td style="text-align:left">重新安排一个进程的优先级别</td>
+<td align="left">r</td>
+<td align="left">重新安排一个进程的优先级别</td>
 </tr>
 <tr>
-<td style="text-align:left">S</td>
-<td style="text-align:left">切换到累计模式</td>
+<td align="left">S</td>
+<td align="left">切换到累计模式</td>
 </tr>
 <tr>
-<td style="text-align:left">s</td>
-<td style="text-align:left">改变两次刷新之间的延迟时间（单位为s），如果有小数，就换算成m s。输入0值则系统将不断刷新，默认值是5 s</td>
+<td align="left">s</td>
+<td align="left">改变两次刷新之间的延迟时间（单位为s），如果有小数，就换算成m s。输入0值则系统将不断刷新，默认值是5 s</td>
 </tr>
 <tr>
-<td style="text-align:left">f或者F</td>
-<td style="text-align:left">从当前显示中添加或者删除项目</td>
+<td align="left">f或者F</td>
+<td align="left">从当前显示中添加或者删除项目</td>
 </tr>
 <tr>
-<td style="text-align:left">o或者O</td>
-<td style="text-align:left">改变显示项目的顺序</td>
+<td align="left">o或者O</td>
+<td align="left">改变显示项目的顺序</td>
 </tr>
 <tr>
-<td style="text-align:left">l</td>
-<td style="text-align:left">切换显示平均负载和启动时间信息</td>
+<td align="left">l</td>
+<td align="left">切换显示平均负载和启动时间信息</td>
 </tr>
 <tr>
-<td style="text-align:left">m</td>
-<td style="text-align:left">切换显示内存信息</td>
+<td align="left">m</td>
+<td align="left">切换显示内存信息</td>
 </tr>
 <tr>
-<td style="text-align:left">t</td>
-<td style="text-align:left">切换显示进程和CPU状态信息</td>
+<td align="left">t</td>
+<td align="left">切换显示进程和CPU状态信息</td>
 </tr>
 <tr>
-<td style="text-align:left">c</td>
-<td style="text-align:left">切换显示命令名称和完整命令行</td>
+<td align="left">c</td>
+<td align="left">切换显示命令名称和完整命令行</td>
 </tr>
 <tr>
-<td style="text-align:left">M</td>
-<td style="text-align:left">根据驻留内存大小进行排序</td>
+<td align="left">M</td>
+<td align="left">根据驻留内存大小进行排序</td>
 </tr>
 <tr>
-<td style="text-align:left">P</td>
-<td style="text-align:left">根据CPU使用百分比大小进行排序</td>
+<td align="left">P</td>
+<td align="left">根据CPU使用百分比大小进行排序</td>
 </tr>
 <tr>
-<td style="text-align:left">T</td>
-<td style="text-align:left">根据时间/累计时间进行排序</td>
+<td align="left">T</td>
+<td align="left">根据时间/累计时间进行排序</td>
 </tr>
 <tr>
-<td style="text-align:left">W</td>
-<td style="text-align:left">将当前设置写入~/.toprc文件中</td>
+<td align="left">W</td>
+<td align="left">将当前设置写入~/.toprc文件中</td>
 </tr>
-</tbody>
-</table>
-<h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示进程信息</strong></p>
-<pre><code class="bash">$ top
-</code></pre>
-<p><strong>top讲解</strong><br><img src="http://img.saodiyang.com/FmYyrG-z1EdQG0FMO2c3dKfc5rnA.jpg" alt="top命令"><br><strong>其他技巧</strong></p>
-<ol>
-<li>数字<code>1</code>，可监控每个逻辑CPU的状况</li>
-<li>键盘<code>b</code>（打开/关闭加亮效果），运行状态的进程</li>
-<li>键盘<code>x</code> 打开/关闭排序列的加亮效果</li>
-<li><code>shift + &gt;</code>或<code>shift + &lt;</code>改变排序列</li>
-</ol>
+<tr>
+<td align="left">### 使用实例</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例一</code>：显示进程信息</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ top</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>top讲解</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><img src="http://img.saodiyang.com/FmYyrG-z1EdQG0FMO2c3dKfc5rnA.jpg" alt="top命令"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>其他技巧</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">1. 数字<code>1</code>，可监控每个逻辑CPU的状况</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">2. 键盘<code>b</code>（打开/关闭加亮效果），运行状态的进程</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">3. 键盘<code>x</code> 打开/关闭排序列的加亮效果</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">4. <code>shift + &gt;</code>或<code>shift + &lt;</code>改变排序列</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
 <p><strong><code>例二</code>：显示 完整命令</strong></p>
-<pre><code class="bash">$ top -c
-</code></pre>
+<pre><code class="bash">$ top -c</code></pre>
 <p><strong><code>例三</code>：以批处理模式显示程序信息</strong></p>
-<pre><code class="bash">$ top -b
-</code></pre>
+<pre><code class="bash">$ top -b</code></pre>
 <p><strong><code>例四</code>：以累积模式显示程序信息</strong></p>
-<pre><code class="bash">$ top -S
-</code></pre>
+<pre><code class="bash">$ top -S</code></pre>
 <p><strong><code>例五</code>：设置信息更新次数</strong></p>
 <pre><code class="bash"># 表示更新两次后终止更新显示
-$ top -n 2
-</code></pre>
+$ top -n 2</code></pre>
 <p><strong><code>例六</code>：设置信息更新时间</strong></p>
 <pre><code class="bash"># 表示更新周期为3秒
-$ top -d 3
-</code></pre>
+$ top -d 3</code></pre>
 <p><strong><code>例七</code>：显示指定的进程信息</strong></p>
-<pre><code class="bash">$ top -p 574
-</code></pre>
+<pre><code class="bash">$ top -p 574</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -2069,7 +2104,7 @@ $ top -d 3
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

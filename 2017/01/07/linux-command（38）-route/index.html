@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（38）: route | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:1,223</span>
+        <span>字数:1.2k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1861,104 +1868,101 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　Linux系统的route命令用于显示和操作IP路由表（show / manipulate the IP routing table）。要实现两个不同的子网之间的通信，需要一台连接两个网络的路由器，或者同时位于两个网络的网关来实现。在Linux系统中，设置路由通常是为了解决以下问题：该Linux系统在一个局域网中，局域网中有一个网关，能够让机器访问Internet，那么就需要将这台机器的IP地址设置为Linux机器的默认路由。要注意的是，直接在命令行下执行route命令来添加路由，不会永久保存，当网卡重启或者机器重启之后，该路由就失效了；可以在/etc/rc.local中添加route命令来保证该路由设置永久有效。<br><a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">route [-f] [-p] [Command [Destination] [mask Netmask] [Gateway] [metric Metric]] [if Interface]]
-</code></pre>
+        <p>　　Linux系统的route命令用于显示和操作IP路由表（show / manipulate the IP routing table）。要实现两个不同的子网之间的通信，需要一台连接两个网络的路由器，或者同时位于两个网络的网关来实现。在Linux系统中，设置路由通常是为了解决以下问题：该Linux系统在一个局域网中，局域网中有一个网关，能够让机器访问Internet，那么就需要将这台机器的IP地址设置为Linux机器的默认路由。要注意的是，直接在命令行下执行route命令来添加路由，不会永久保存，当网卡重启或者机器重启之后，该路由就失效了；可以在/etc/rc.local中添加route命令来保证该路由设置永久有效。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">route [-f] [-p] [Command [Destination] [mask Netmask] [Gateway] [metric Metric]] [if Interface]]</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　Route命令是用于操作基于内核ip路由表，它的主要作用是创建一个静态路由让指定一个主机或者一个网络通过一个网络接口，如eth0。当使用”add”或者”del”参数时，路由表被修改，如果没有参数，则显示路由表当前的内容。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">命令</th>
-<th style="text-align:left">描述</th>
+<th align="left">命令</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-c</td>
-<td style="text-align:left">显示更多信息</td>
+<tbody><tr>
+<td align="left">-c</td>
+<td align="left">显示更多信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-n</td>
-<td style="text-align:left">不解析名字</td>
+<td align="left">-n</td>
+<td align="left">不解析名字</td>
 </tr>
 <tr>
-<td style="text-align:left">-v</td>
-<td style="text-align:left">显示详细的处理信息</td>
+<td align="left">-v</td>
+<td align="left">显示详细的处理信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-F</td>
-<td style="text-align:left">显示发送信息</td>
+<td align="left">-F</td>
+<td align="left">显示发送信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-C</td>
-<td style="text-align:left">显示路由缓存</td>
+<td align="left">-C</td>
+<td align="left">显示路由缓存</td>
 </tr>
 <tr>
-<td style="text-align:left">-f</td>
-<td style="text-align:left">清除所有网关入口的路由表</td>
+<td align="left">-f</td>
+<td align="left">清除所有网关入口的路由表</td>
 </tr>
 <tr>
-<td style="text-align:left">-p 与 add 命令</td>
-<td style="text-align:left">-p 与 add 命令一起使用时使路由具有永久性。</td>
+<td align="left">-p 与 add 命令</td>
+<td align="left">-p 与 add 命令一起使用时使路由具有永久性。</td>
 </tr>
 <tr>
-<td style="text-align:left">add</td>
-<td style="text-align:left">添加一条新路由</td>
+<td align="left">add</td>
+<td align="left">添加一条新路由</td>
 </tr>
 <tr>
-<td style="text-align:left">del</td>
-<td style="text-align:left">删除一条路由</td>
+<td align="left">del</td>
+<td align="left">删除一条路由</td>
 </tr>
 <tr>
-<td style="text-align:left">-net</td>
-<td style="text-align:left">目标地址是一个网络</td>
+<td align="left">-net</td>
+<td align="left">目标地址是一个网络</td>
 </tr>
 <tr>
-<td style="text-align:left">-host</td>
-<td style="text-align:left">目标地址是一个主机</td>
+<td align="left">-host</td>
+<td align="left">目标地址是一个主机</td>
 </tr>
 <tr>
-<td style="text-align:left">netmask</td>
-<td style="text-align:left">当添加一个网络路由时，需要使用网络掩码</td>
+<td align="left">netmask</td>
+<td align="left">当添加一个网络路由时，需要使用网络掩码</td>
 </tr>
 <tr>
-<td style="text-align:left">gw</td>
-<td style="text-align:left">路由数据包通过网关。注意，你指定的网关必须能够达到</td>
+<td align="left">gw</td>
+<td align="left">路由数据包通过网关。注意，你指定的网关必须能够达到</td>
 </tr>
 <tr>
-<td style="text-align:left">metric</td>
-<td style="text-align:left">设置路由跳数</td>
+<td align="left">metric</td>
+<td align="left">设置路由跳数</td>
 </tr>
 <tr>
-<td style="text-align:left">Command</td>
-<td style="text-align:left">指定您想运行的命令 (Add/Change/Delete/Print)</td>
+<td align="left">Command</td>
+<td align="left">指定您想运行的命令 (Add/Change/Delete/Print)</td>
 </tr>
 <tr>
-<td style="text-align:left">Destination</td>
-<td style="text-align:left">指定该路由的网络目标</td>
+<td align="left">Destination</td>
+<td align="left">指定该路由的网络目标</td>
 </tr>
 <tr>
-<td style="text-align:left">mask Netmask</td>
-<td style="text-align:left">指定与网络目标相关的网络掩码（也被称作子网掩码）</td>
+<td align="left">mask Netmask</td>
+<td align="left">指定与网络目标相关的网络掩码（也被称作子网掩码）</td>
 </tr>
 <tr>
-<td style="text-align:left">Gateway</td>
-<td style="text-align:left">指定网络目标定义的地址集和子网掩码可以到达的前进或下一跃点 IP 地址</td>
+<td align="left">Gateway</td>
+<td align="left">指定网络目标定义的地址集和子网掩码可以到达的前进或下一跃点 IP 地址</td>
 </tr>
 <tr>
-<td style="text-align:left">metric Metric</td>
-<td style="text-align:left">为路由指定一个整数成本值标（从 1 至 9999），当在路由表(与转发的数据包目标地址最匹配)的多个路由中进行选择时可以使用</td>
+<td align="left">metric Metric</td>
+<td align="left">为路由指定一个整数成本值标（从 1 至 9999），当在路由表(与转发的数据包目标地址最匹配)的多个路由中进行选择时可以使用</td>
 </tr>
 <tr>
-<td style="text-align:left">if Interface</td>
-<td style="text-align:left">为可以访问目标的接口指定接口索引。若要获得一个接口列表和它们相应的接口索引，使用 route print 命令的显示功能。可以使用十进制或十六进制值进行接口索引</td>
+<td align="left">if Interface</td>
+<td align="left">为可以访问目标的接口指定接口索引。若要获得一个接口列表和它们相应的接口索引，使用 route print 命令的显示功能。可以使用十进制或十六进制值进行接口索引</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示当前路由</strong></p>
 <pre><code class="bash">$ route
-$ route -n
-</code></pre>
+$ route -n</code></pre>
 <pre><code class="bash">[root@localhost ~]# route
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
@@ -1972,27 +1976,22 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 192.168.120.0   0.0.0.0         255.255.255.0   U     0      0        0 eth0
 192.168.0.0     192.168.120.1   255.255.0.0     UG    0      0        0 eth0
 10.0.0.0        192.168.120.1   255.0.0.0       UG    0      0        0 eth0
-0.0.0.0         192.168.120.240 0.0.0.0         UG    0      0        0 eth0
-</code></pre>
+0.0.0.0         192.168.120.240 0.0.0.0         UG    0      0        0 eth0</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　第一行表示主机所在网络的地址为192.168.120.0，若数据传送目标是在本局域网内通信，则可直接通过eth0转发数据包;<br>　　第四行表示数据传送目的是访问Internet，则由接口eth0，将数据包发送到网关192.168.120.240<br>　　其中Flags为路由标志，标记当前网络节点的状态。<br>　　Flags标志说明：<br>　　U Up表示此路由当前为启动状态<br>　　H Host，表示此网关为一主机<br>　　G Gateway，表示此网关为一路由器<br>　　R Reinstate Route，使用动态路由重新初始化的路由<br>　　D Dynamically,此路由是动态性地写入<br>　　M Modified，此路由是由路由守护程序或导向器动态修改<br>　　! 表示此路由当前为关闭状态<br><strong>备注：</strong><br>　　route -n (-n 表示不解析名字,列出速度会比route 快)</p>
 </blockquote>
 <p><strong><code>例二</code>：添加网关/设置网关</strong></p>
 <pre><code class="bash"># 增加一条 到达244.0.0.0的路由
-$ route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0
-</code></pre>
+$ route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0</code></pre>
 <p><strong><code>例三</code>：屏蔽一条路由</strong></p>
 <pre><code class="bash"># 增加一条屏蔽的路由，目的地址为 224.x.x.x 将被拒绝
-$ route add -net 224.0.0.0 netmask 240.0.0.0 reject
-</code></pre>
+$ route add -net 224.0.0.0 netmask 240.0.0.0 reject</code></pre>
 <p><strong><code>例四</code>：删除路由记录</strong></p>
 <pre><code class="bash">$ route del -net 224.0.0.0 netmask 240.0.0.0
-$ route del -net 224.0.0.0 netmask 240.0.0.0 reject
-</code></pre>
+$ route del -net 224.0.0.0 netmask 240.0.0.0 reject</code></pre>
 <p><strong><code>例五</code>：删除和添加设置默认网关</strong></p>
 <pre><code class="bash">$ route del default gw 192.168.120.240
-$ route add default gw 192.168.120.240
-</code></pre>
+$ route add default gw 192.168.120.240</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -2042,7 +2041,7 @@ $ route add default gw 192.168.120.240
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

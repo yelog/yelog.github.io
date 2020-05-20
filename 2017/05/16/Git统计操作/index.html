@@ -6,13 +6,19 @@
   <meta name="keywords" content=" git ">
   <meta name="description" content="Git统计操作 | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1817,7 +1824,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:1,360</span>
+        <span>字数:1.5k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1883,8 +1890,7 @@ $ git log --pretty=format:%ae | gawk -- &#39;{ ++c[$0]; } END { for(cc in c) pri
 $ git log --pretty=&#39;%aN&#39; | sort -u | wc -l
 
 # 统计提交数量
-$ git log --oneline | wc -l
-</code></pre>
+$ git log --oneline | wc -l</code></pre>
 <h2 id="按代码行数统计"><a href="#按代码行数统计" class="headerlink" title="按代码行数统计"></a>按代码行数统计</h2><pre><code class="bash"># 统计指定作者增删行数
 $ git log --author=&quot;faker&quot; --pretty=tformat: --numstat | awk &#39;{ add += $1; subs += $2; loc += $1 - $2 } END { printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc }&#39; -
 
@@ -1901,11 +1907,14 @@ $ git log --shortstat --pretty=&quot;%cE&quot; | sed &#39;s/\(.*\)@.*/\1/&#39; |
 $ git log --format=&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author=&quot;$name&quot; --pretty=tformat: --numstat | awk &#39;{ add += $1; subs += $2; loc += $1 - $2 } END { printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc }&#39; -; done
 
 # 统计所有作者增删行数 --中文版
-$ git log --format=&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author=&quot;$name&quot; --pretty=tformat: --numstat | awk &#39;{ add += $1; subs += $2; loc += $1 - $2 } END { printf &quot;添加行数: %s, 删除行数: %s, 总行数: %s\n&quot;, add, subs, loc }&#39; -; done
-</code></pre>
+$ git log --format=&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author=&quot;$name&quot; --pretty=tformat: --numstat | awk &#39;{ add += $1; subs += $2; loc += $1 - $2 } END { printf &quot;添加行数: %s, 删除行数: %s, 总行数: %s\n&quot;, add, subs, loc }&#39; -; done</code></pre>
 <h2 id="git-log-说明"><a href="#git-log-说明" class="headerlink" title="git log 说明"></a>git log 说明</h2><blockquote>
 <p>git log 参数说明：<br><code>--</code>author   指定作者<br><code>--</code>stat   显示每次更新的文件修改统计信息，会列出具体文件列表<br><code>--</code>shortstat    统计每个commit 的文件修改行数，包括增加，删除，但不列出文件列表：<br><code>--</code>numstat   统计每个commit 的文件修改行数，包括增加，删除，并列出文件列表：</p>
+</blockquote>
+<blockquote>
 <p>-p 选项展开显示每次提交的内容差异，用 -2 则仅显示最近的两次更新<br>       例如：git log -p  -2<br><code>--</code>name-only 仅在提交信息后显示已修改的文件清单<br><code>--</code>name-status 显示新增、修改、删除的文件清单<br><code>--</code>abbrev-commit 仅显示 SHA-1 的前几个字符，而非所有的 40 个字符<br><code>--</code>relative-date 使用较短的相对时间显示（比如，“2 weeks ago”）<br><code>--</code>graph 显示 ASCII 图形表示的分支合并历史<br><code>--</code>pretty 使用其他格式显示历史提交信息。可用的选项包括 oneline，short，full，fuller 和 format（后跟指定格式）<br>       <strong>例如：</strong><br>       <code>git log --pretty=oneline</code> ;<br>       <code>git log --pretty=short</code> ;<br>        <code>git log --pretty=full</code> ;<br>        git log –pretty=fuller<br><code>--</code>pretty=tformat:   可以定制要显示的记录格式，这样的输出便于后期编程提取分析<br>       <strong>例如：</strong><br>       <code>git log --pretty=format:&quot;&quot;%h - %an, %ar : %s&quot;&quot;</code><br>       下面列出了常用的格式占位符写法及其代表的意义。<br>       选项       说明<br>       %H      提交对象（commit）的完整哈希字串<br>       %h      提交对象的简短哈希字串<br>       %T      树对象（tree）的完整哈希字串<br>       %t      树对象的简短哈希字串<br>       %P      父对象（parent）的完整哈希字串<br>       %p      父对象的简短哈希字串<br>       %an     作者（author）的名字<br>       %ae     作者的电子邮件地址<br>       %ad     作者修订日期（可以用 -date= 选项定制格式）<br>       %ar     作者修订日期，按多久以前的方式显示<br>       %cn     提交者(committer)的名字<br>       %ce     提交者的电子邮件地址<br>       %cd     提交日期<br>       %cr     提交日期，按多久以前的方式显示<br>       %s      提交说明<br><code>--</code>since  限制显示输出的范围，<br>       例如： <code>git log --since=2.weeks</code>    显示最近两周的提交<br>       选项 说明<br>       -(n)    仅显示最近的 n 条提交<br>       <code>--</code>since, <code>--</code>after 仅显示指定时间之后的提交。<br>       <code>--</code>until, <code>--</code>before 仅显示指定时间之前的提交。<br>       <code>--</code>author 仅显示指定作者相关的提交。<br>       <code>--</code>committer 仅显示指定提交者相关的提交。</p>
+</blockquote>
+<blockquote>
 <p>   <strong>一些例子：</strong><br><code>git log --until=1.minute.ago</code> // 一分钟之前的所有 log<br><code>git log --since=1.day.ago</code> //一天之内的log<br><code>git log --since=1.hour.ago</code> //一个小时之内的 log<br><code>git log --since=1.month.ago --until=2.weeks.ago</code> //一个月之前到半个月之前的log<br><code>git log --since ==2013-08.01 --until=2013-09-07</code> //某个时间段的 log<br><code>git blame</code> 看看某一个文件的相关历史记录<br>例如：<code>git blame index.html --date short</code></p>
 </blockquote>
 
@@ -1957,7 +1966,7 @@ $ git log --format=&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

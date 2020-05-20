@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（12）: more | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:561</span>
+        <span>字数:574</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1845,7 +1852,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-text">命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令功能"><span class="toc-text">命令功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令参数"><span class="toc-text">命令参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用操作"><span class="toc-text">常用操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令实例"><span class="toc-text">命令实例</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#命令格式"><span class="toc-text">命令格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令功能"><span class="toc-text">命令功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令参数"><span class="toc-text">命令参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用操作"><span class="toc-text">常用操作</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1861,114 +1868,166 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　more命令，功能类似 cat ，cat命令是整个文件的内容从上到下显示在屏幕上。 more会以一页一页的显示方便使用者逐页阅读，而最基本的指令就是按空白键（space）就往下一页显示，按 b 键就会往回（back）一页显示，而且还有搜寻字串的功能 。more命令从前向后读取文件，因此在启动时就加载整个文件。<br><a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ more [-dlfpcsu ] [-num ] [+/ pattern] [+ linenum] [file ... ]
-</code></pre>
+        <p>　　more命令，功能类似 cat ，cat命令是整个文件的内容从上到下显示在屏幕上。 more会以一页一页的显示方便使用者逐页阅读，而最基本的指令就是按空白键（space）就往下一页显示，按 b 键就会往回（back）一页显示，而且还有搜寻字串的功能 。more命令从前向后读取文件，因此在启动时就加载整个文件。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ more [-dlfpcsu ] [-num ] [+/ pattern] [+ linenum] [file ... ]</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　more命令和cat的功能一样都是查看文件里的内容，但有所不同的是more可以按页来查看文件的内容，还支持直接跳转行等功能。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">参数</th>
-<th style="text-align:left">描述</th>
+<th align="left">参数</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">+n</td>
-<td style="text-align:left">从笫n行开始显示</td>
+<tbody><tr>
+<td align="left">+n</td>
+<td align="left">从笫n行开始显示</td>
 </tr>
 <tr>
-<td style="text-align:left">-n</td>
-<td style="text-align:left">定义屏幕大小为n行</td>
+<td align="left">-n</td>
+<td align="left">定义屏幕大小为n行</td>
 </tr>
 <tr>
-<td style="text-align:left">+/pattern</td>
-<td style="text-align:left">每个档案显示前搜寻该字串（pattern），然后从该字串前两行之后开始显示</td>
+<td align="left">+/pattern</td>
+<td align="left">每个档案显示前搜寻该字串（pattern），然后从该字串前两行之后开始显示</td>
 </tr>
 <tr>
-<td style="text-align:left">-c</td>
-<td style="text-align:left">从顶部清屏，然后显示</td>
+<td align="left">-c</td>
+<td align="left">从顶部清屏，然后显示</td>
 </tr>
 <tr>
-<td style="text-align:left">-d</td>
-<td style="text-align:left">提示“Press space to continue，’q’ to quit（按空格键继续，按q键退出）”，禁用响铃功能</td>
+<td align="left">-d</td>
+<td align="left">提示“Press space to continue，’q’ to quit（按空格键继续，按q键退出）”，禁用响铃功能</td>
 </tr>
 <tr>
-<td style="text-align:left">-l</td>
-<td style="text-align:left">忽略Ctrl+l（换页）字符</td>
+<td align="left">-l</td>
+<td align="left">忽略Ctrl+l（换页）字符</td>
 </tr>
 <tr>
-<td style="text-align:left">-p</td>
-<td style="text-align:left">通过清除窗口而不是滚屏来对文件进行换页，与-c选项相似</td>
+<td align="left">-p</td>
+<td align="left">通过清除窗口而不是滚屏来对文件进行换页，与-c选项相似</td>
 </tr>
 <tr>
-<td style="text-align:left">-s</td>
-<td style="text-align:left">把连续的多个空行显示为一行</td>
+<td align="left">-s</td>
+<td align="left">把连续的多个空行显示为一行</td>
 </tr>
 <tr>
-<td style="text-align:left">-u</td>
-<td style="text-align:left">把文件内容中的下画线去掉</td>
+<td align="left">-u</td>
+<td align="left">把文件内容中的下画线去掉</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">操作</th>
-<th style="text-align:left">描述</th>
+<th align="left">操作</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">Enter</td>
-<td style="text-align:left">向下n行，需要定义。默认为1行</td>
+<tbody><tr>
+<td align="left">Enter</td>
+<td align="left">向下n行，需要定义。默认为1行</td>
 </tr>
 <tr>
-<td style="text-align:left">Ctrl+F</td>
-<td style="text-align:left">向下滚动一屏</td>
+<td align="left">Ctrl+F</td>
+<td align="left">向下滚动一屏</td>
 </tr>
 <tr>
-<td style="text-align:left">空格键</td>
-<td style="text-align:left">向下滚动一屏</td>
+<td align="left">空格键</td>
+<td align="left">向下滚动一屏</td>
 </tr>
 <tr>
-<td style="text-align:left">Ctrl+B</td>
-<td style="text-align:left">返回上一屏</td>
+<td align="left">Ctrl+B</td>
+<td align="left">返回上一屏</td>
 </tr>
 <tr>
-<td style="text-align:left">=</td>
-<td style="text-align:left">输出当前行的行号</td>
+<td align="left">=</td>
+<td align="left">输出当前行的行号</td>
 </tr>
 <tr>
-<td style="text-align:left">：f</td>
-<td style="text-align:left">输出文件名和当前行的行号</td>
+<td align="left">：f</td>
+<td align="left">输出文件名和当前行的行号</td>
 </tr>
 <tr>
-<td style="text-align:left">V</td>
-<td style="text-align:left">调用vi编辑器</td>
+<td align="left">V</td>
+<td align="left">调用vi编辑器</td>
 </tr>
 <tr>
-<td style="text-align:left">!命令</td>
-<td style="text-align:left">调用Shell，并执行命令</td>
+<td align="left">!命令</td>
+<td align="left">调用Shell，并执行命令</td>
 </tr>
 <tr>
-<td style="text-align:left">q</td>
-<td style="text-align:left">退出more</td>
+<td align="left">q</td>
+<td align="left">退出more</td>
 </tr>
-</tbody>
-</table>
-<h3 id="命令实例"><a href="#命令实例" class="headerlink" title="命令实例"></a>命令实例</h3><p><strong><code>例一</code>：显示文件中从第3行起的内容</strong></p>
-<pre><code class="bash">$ more +3 log2012.log
-</code></pre>
-<p><strong><code>例二</code>：从文件中查找第一个出现”day3”字符串的行，并从该处前两行开始显示输出</strong></p>
-<pre><code class="bash">$ more +/day3 log2012.log
-</code></pre>
-<p><strong><code>例三</code>：设定每屏显示行数</strong></p>
-<pre><code class="bash">$ more -5 log2012.log
-</code></pre>
-<p><strong><code>例四</code>：列一个目录下的文件，由于内容太多，我们应该学会用more来分页显示。这得和管道 | 结合起来</strong></p>
-<pre><code class="bash">$ ls -l  | more -5
-</code></pre>
+<tr>
+<td align="left">### 命令实例</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例一</code>：显示文件中从第3行起的内容</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ more +3 log2012.log</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例二</code>：从文件中查找第一个出现”day3”字符串的行，并从该处前两行开始显示输出</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ more +/day3 log2012.log</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong><code>例三</code>：设定每屏显示行数</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ more -5 log2012.log</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">**<code>例四</code>：列一个目录下的文件，由于内容太多，我们应该学会用more来分页显示。这得和管道</td>
+<td align="left">结合起来**</td>
+</tr>
+<tr>
+<td align="left">```bash</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$ ls -l</td>
+<td align="left">more -5</td>
+</tr>
+<tr>
+<td align="left">```</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
 <blockquote>
 <p><strong>说明：</strong>每页显示5个文件信息，按 Ctrl+F 或者 空格键 将会显示下5条文件信息。</p>
 </blockquote>
@@ -2021,7 +2080,7 @@
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>

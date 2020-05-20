@@ -6,13 +6,19 @@
   <meta name="keywords" content=" linux命令 ">
   <meta name="description" content="每天一个linux命令（42）: ss | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
 <meta property="og:title" content="叶落阁">
-<meta property="og:url" content="http://yelog.org/index.html">
+<meta property="og:url" content="http://yelog.org/README.html">
 <meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
 <meta property="article:author" content="叶落阁">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -40,7 +46,8 @@
 
 <script src="/js/iconfont.js?v=1.0.1" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
@@ -313,7 +320,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="146">
-<input type="hidden" id="yelog_site_word_count" value="135.4k">
+<input type="hidden" id="yelog_site_word_count" value="138.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -745,7 +752,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1815,7 +1822,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:1,300</span>
+        <span>字数:1.3k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1861,131 +1868,123 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>　　ss是Socket Statistics的缩写。顾名思义，ss命令可以用来获取socket统计信息，它可以显示和netstat类似的内容。但ss的优势在于它能够显示更多更详细的有关TCP和连接状态的信息，而且比netstat更快速更高效。<br><a id="more"></a><br>　　当服务器的socket连接数量变得非常大时，无论是使用netstat命令还是直接cat /proc/net/tcp，执行速度都会很慢。可能你不会有切身的感受，但请相信我，当服务器维持的连接达到上万个的时候，使用netstat等于浪费 生命，而用ss才是节省时间。</p>
+        <p>　　ss是Socket Statistics的缩写。顾名思义，ss命令可以用来获取socket统计信息，它可以显示和netstat类似的内容。但ss的优势在于它能够显示更多更详细的有关TCP和连接状态的信息，而且比netstat更快速更高效。</p>
+<a id="more"></a>
+<p>　　当服务器的socket连接数量变得非常大时，无论是使用netstat命令还是直接cat /proc/net/tcp，执行速度都会很慢。可能你不会有切身的感受，但请相信我，当服务器维持的连接达到上万个的时候，使用netstat等于浪费 生命，而用ss才是节省时间。</p>
 <p>　　天下武功唯快不破。ss快的秘诀在于，它利用到了TCP协议栈中tcp_diag。tcp_diag是一个用于分析统计的模块，可以获得Linux 内核中第一手的信息，这就确保了ss的快捷高效。当然，如果你的系统中没有tcp_diag，ss也可以正常运行，只是效率会变得稍慢。（但仍然比 netstat要快。）</p>
 <h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ ss [参数]
-$ ss[参数] [过滤]
-</code></pre>
+$ ss[参数] [过滤]</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　ss(Socket Statistics的缩写)命令可以用来获取 socket统计信息，此命令输出的结果类似于 netstat输出的内容，但它能显示更多更详细的 TCP连接状态的信息，且比 netstat 更快速高效。它使用了 TCP协议栈中 tcp_diag（是一个用于分析统计的模块），能直接从获得第一手内核信息，这就使得 ss命令快捷高效。在没有 tcp_diag，ss也可以正常运行。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">命令</th>
-<th style="text-align:left">描述</th>
+<th align="left">命令</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">-h, –help</td>
-<td style="text-align:left">帮助信息</td>
+<tbody><tr>
+<td align="left">-h, –help</td>
+<td align="left">帮助信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-V, –version</td>
-<td style="text-align:left">程序版本信息</td>
+<td align="left">-V, –version</td>
+<td align="left">程序版本信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-n, –numeric</td>
-<td style="text-align:left">不解析服务名称</td>
+<td align="left">-n, –numeric</td>
+<td align="left">不解析服务名称</td>
 </tr>
 <tr>
-<td style="text-align:left">-r, –resolve</td>
-<td style="text-align:left">解析主机名</td>
+<td align="left">-r, –resolve</td>
+<td align="left">解析主机名</td>
 </tr>
 <tr>
-<td style="text-align:left">-a, –all</td>
-<td style="text-align:left">显示所有套接字（sockets）</td>
+<td align="left">-a, –all</td>
+<td align="left">显示所有套接字（sockets）</td>
 </tr>
 <tr>
-<td style="text-align:left">-l, –listening</td>
-<td style="text-align:left">显示监听状态的套接字（sockets）</td>
+<td align="left">-l, –listening</td>
+<td align="left">显示监听状态的套接字（sockets）</td>
 </tr>
 <tr>
-<td style="text-align:left">-o, –options</td>
-<td style="text-align:left">显示计时器信息</td>
+<td align="left">-o, –options</td>
+<td align="left">显示计时器信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-e, –extended</td>
-<td style="text-align:left">显示详细的套接字（sockets）信息</td>
+<td align="left">-e, –extended</td>
+<td align="left">显示详细的套接字（sockets）信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-m, –memory</td>
-<td style="text-align:left">显示套接字（socket）的内存使用情况</td>
+<td align="left">-m, –memory</td>
+<td align="left">显示套接字（socket）的内存使用情况</td>
 </tr>
 <tr>
-<td style="text-align:left">-p, –processes</td>
-<td style="text-align:left">显示使用套接字（socket）的进程</td>
+<td align="left">-p, –processes</td>
+<td align="left">显示使用套接字（socket）的进程</td>
 </tr>
 <tr>
-<td style="text-align:left">-i, –info</td>
-<td style="text-align:left">显示 TCP内部信息</td>
+<td align="left">-i, –info</td>
+<td align="left">显示 TCP内部信息</td>
 </tr>
 <tr>
-<td style="text-align:left">-s, –summary</td>
-<td style="text-align:left">显示套接字（socket）使用概况</td>
+<td align="left">-s, –summary</td>
+<td align="left">显示套接字（socket）使用概况</td>
 </tr>
 <tr>
-<td style="text-align:left">-4, –ipv4</td>
-<td style="text-align:left">仅显示IPv4的套接字（sockets）</td>
+<td align="left">-4, –ipv4</td>
+<td align="left">仅显示IPv4的套接字（sockets）</td>
 </tr>
 <tr>
-<td style="text-align:left">-6, –ipv6</td>
-<td style="text-align:left">仅显示IPv6的套接字（sockets）</td>
+<td align="left">-6, –ipv6</td>
+<td align="left">仅显示IPv6的套接字（sockets）</td>
 </tr>
 <tr>
-<td style="text-align:left">-0, –packet</td>
-<td style="text-align:left">显示 PACKET 套接字（socket）</td>
+<td align="left">-0, –packet</td>
+<td align="left">显示 PACKET 套接字（socket）</td>
 </tr>
 <tr>
-<td style="text-align:left">-t, –tcp</td>
-<td style="text-align:left">仅显示 TCP套接字（sockets）</td>
+<td align="left">-t, –tcp</td>
+<td align="left">仅显示 TCP套接字（sockets）</td>
 </tr>
 <tr>
-<td style="text-align:left">-u, –udp</td>
-<td style="text-align:left">仅显示 UCP套接字（sockets）</td>
+<td align="left">-u, –udp</td>
+<td align="left">仅显示 UCP套接字（sockets）</td>
 </tr>
 <tr>
-<td style="text-align:left">-d, –dccp</td>
-<td style="text-align:left">仅显示 DCCP套接字（sockets）</td>
+<td align="left">-d, –dccp</td>
+<td align="left">仅显示 DCCP套接字（sockets）</td>
 </tr>
 <tr>
-<td style="text-align:left">-w, –raw</td>
-<td style="text-align:left">仅显示 RAW套接字（sockets）</td>
+<td align="left">-w, –raw</td>
+<td align="left">仅显示 RAW套接字（sockets）</td>
 </tr>
 <tr>
-<td style="text-align:left">-x, –unix</td>
-<td style="text-align:left">仅显示 Unix套接字（sockets）</td>
+<td align="left">-x, –unix</td>
+<td align="left">仅显示 Unix套接字（sockets）</td>
 </tr>
 <tr>
-<td style="text-align:left">-f, –family=FAMILY</td>
-<td style="text-align:left">显示 FAMILY类型的套接字（sockets），FAMILY可选，支持  unix, inet, inet6, link, netlink</td>
+<td align="left">-f, –family=FAMILY</td>
+<td align="left">显示 FAMILY类型的套接字（sockets），FAMILY可选，支持  unix, inet, inet6, link, netlink</td>
 </tr>
 <tr>
-<td style="text-align:left">-A, –query=QUERY, –socket=QUERY<br/>QUERY := {all</td>
-<td style="text-align:left">inet</td>
-<td>tcp</td>
-<td>udp</td>
-<td>raw</td>
-<td>unix</td>
-<td>packet</td>
-<td>netlink}[,QUERY]</td>
-<td></td>
+<td align="left">-A, –query=QUERY, –socket=QUERY<br/>QUERY := {all</td>
+<td align="left">inet</td>
 </tr>
 <tr>
-<td style="text-align:left">-D, –diag=FILE</td>
-<td style="text-align:left">将原始TCP套接字（sockets）信息转储到文件</td>
+<td align="left">-D, –diag=FILE</td>
+<td align="left">将原始TCP套接字（sockets）信息转储到文件</td>
 </tr>
 <tr>
-<td style="text-align:left">-F, –filter=FILE</td>
-<td style="text-align:left">从文件中都去过滤器信息</td>
+<td align="left">-F, –filter=FILE</td>
+<td align="left">从文件中都去过滤器信息</td>
 </tr>
 <tr>
-<td style="text-align:left">FILTER := [ state TCP-STATE ] [ EXPRESSION ]</td>
+<td align="left">FILTER := [ state TCP-STATE ] [ EXPRESSION ]</td>
+<td align="left"></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示TCP连接</strong></p>
-<pre><code class="bash">$ ss -t -a
-</code></pre>
+<pre><code class="bash">$ ss -t -a</code></pre>
 <p><strong><code>例二</code>：显示 Sockets 摘要</strong></p>
 <pre><code class="bash">$ ss -s
 Total: 1385 (kernel 0)
@@ -1997,36 +1996,27 @@ RAW      2         1         1
 UDP      29        21        8        
 TCP      123       47        76       
 INET      154       69        85       
-FRAG      0         0         0
-</code></pre>
+FRAG      0         0         0  </code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　列出当前的established, closed, orphaned and waiting TCP sockets</p>
 </blockquote>
 <p><strong><code>例三</code>：列出所有打开的网络连接端口</strong></p>
-<pre><code class="bash">$ ss -l
-</code></pre>
+<pre><code class="bash">$ ss -l</code></pre>
 <p><strong><code>例四</code>：查看进程使用的socket</strong></p>
-<pre><code class="bash">$ ss -pl
-</code></pre>
+<pre><code class="bash">$ ss -pl</code></pre>
 <p><strong><code>例五</code>：找出打开套接字/端口应用程序</strong></p>
-<pre><code class="bash">$ ss -lp | grep 3306
-</code></pre>
+<pre><code class="bash">$ ss -lp | grep 3306</code></pre>
 <p><strong><code>例六</code>：显示所有UDP Sockets</strong></p>
-<pre><code class="bash">$ ss -u -a
-</code></pre>
+<pre><code class="bash">$ ss -u -a</code></pre>
 <p><strong><code>例七</code>：显示所有状态为established的SMTP连接</strong></p>
-<pre><code class="bash">$ ss -o state established &#39;( dport = :smtp or sport = :smtp )&#39;
-</code></pre>
+<pre><code class="bash">$ ss -o state established &#39;( dport = :smtp or sport = :smtp )&#39;</code></pre>
 <p><strong><code>例八</code>：显示所有状态为Established的HTTP连接</strong></p>
-<pre><code class="bash">$ ss -o state established &#39;( dport = :http or sport = :http )&#39;
-</code></pre>
+<pre><code class="bash">$ ss -o state established &#39;( dport = :http or sport = :http )&#39;</code></pre>
 <p><strong><code>例九</code>：列举出处于 FIN-WAIT-1状态的源端口为 80或者 443，目标网络为 193.233.7/24所有 tcp套接字<br>命令</strong></p>
-<pre><code class="bash">$ ss -o state fin-wait-1 &#39;( sport = :http or sport = :https )&#39; dst 193.233.7/24
-</code></pre>
+<pre><code class="bash">$ ss -o state fin-wait-1 &#39;( sport = :http or sport = :https )&#39; dst 193.233.7/24</code></pre>
 <p><strong><code>例十</code>：用TCP 状态过滤Sockets</strong></p>
 <pre><code class="bash">$ ss -4 state FILTER-NAME-HERE
-$ ss -6 state FILTER-NAME-HERE
-</code></pre>
+$ ss -6 state FILTER-NAME-HERE</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>FILTER-NAME-HERE 可以代表以下任何一个：<br>　　established<br>　　syn-sent<br>　　syn-recv<br>　　fin-wait-1<br>　　fin-wait-2<br>　　time-wait<br>　　closed<br>　　close-wait<br>　　last-ack<br>　　listen<br>　　closing<br>　　all : 所有以上状态<br>　　connected : 除了listen and closed的所有状态<br>　　synchronized :所有已连接的状态除了syn-sent<br>　　bucket : 显示状态为maintained as minisockets,如：time-wait和syn-recv.<br>　　big : 和bucket相反.</p>
 </blockquote>
@@ -2035,27 +2025,23 @@ $ ss -6 state FILTER-NAME-HERE
 $ ss dst 192.168.1.5
 $ ss dst 192.168.119.113:http
 $ ss dst 192.168.119.113:smtp
-$ ss dst 192.168.119.113:443
-</code></pre>
+$ ss dst 192.168.119.113:443</code></pre>
 <p><strong><code>例十二</code>：匹配本地地址和端口号</strong></p>
 <pre><code class="bash">$ ss src ADDRESS_PATTERN
 $ ss src 192.168.119.103
 $ ss src 192.168.119.103:http
 $ ss src 192.168.119.103:80
 $ ss src 192.168.119.103:smtp
-$ ss src 192.168.119.103:25
-</code></pre>
+$ ss src 192.168.119.103:25</code></pre>
 <p><strong><code>例十三</code>：将本地或者远程端口和一个数比较</strong></p>
 <pre><code class="bash">$ ss dport OP PORT
-$ ss sport OP PORT
-</code></pre>
+$ ss sport OP PORT</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　ss dport OP PORT 远程端口和一个数比较；ss sport OP PORT 本地端口和一个数比较。<br>　　OP 可以代表以下任意一个:<br>　　　　&lt;= or le : 小于或等于端口号<br>　　　　&gt;= or ge : 大于或等于端口号<br>　　　　== or eq : 等于端口号<br>　　　　!= or ne : 不等于端口号<br>　　　　&lt; or gt : 小于端口号<br>　　　　&gt; or lt : 大于端口号</p>
 </blockquote>
 <p><strong><code>例十四</code>：ss 和 netstat 效率对比</strong></p>
 <pre><code class="bash">$ time netstat -at
-$ time ss
-</code></pre>
+$ time ss</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　用time 命令分别获取通过netstat和ss命令获取程序和概要占用资源所使用的时间。在服务器连接数比较多的时候，netstat的效率完全没法和ss比。</p>
 </blockquote>
@@ -2108,7 +2094,7 @@ $ time ss
 
     </div>
     <div class="full-toc">
-        <button class="full" data-title="切换全屏 快捷键 s"><span class="min mobile"></span></button>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>
