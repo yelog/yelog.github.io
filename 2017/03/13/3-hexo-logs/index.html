@@ -41,13 +41,15 @@
 
 
 
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
-  <input class="theme_preload_comment" value="false">
+  <input class="theme_preload_comment" value="">
   <input class="theme_blog_path" value="">
   <input id="theme_shortcut" value="true" />
 </div>
@@ -754,7 +756,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="浏览器,js"
+           data-tag="js,浏览器"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1825,7 +1827,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-05-23 21:12:09'>2017-03-13 15:44</time>
+            发布时间 : <time class="date" title='最后更新: 2020-05-24 00:05:29'>2017-03-13 15:44</time>
         
     </div>
     <div class="article-meta">
@@ -1881,6 +1883,8 @@
 <li><code>fix</code> 修复文章大纲为空时，同步大纲报错的问题</li>
 <li><code>change</code> 文章内 toc 生成从 <code>@【toc】</code> 改为 <code>【toc】</code> </li>
 <li><code>enhance</code> 快捷键支持关闭 <code>shortcutKey: false</code></li>
+<li><code>add</code> 添加第三方评论 来必力 和 utteranc</li>
+<li><code>remove</code> 移除网易云评论</li>
 </ol>
 <h3 id="05-21"><a href="#05-21" class="headerlink" title="05-21"></a>05-21</h3><ol>
 <li><code>add</code> 添加备案号配置</li>
@@ -2136,16 +2140,25 @@ bgImg: xxx.jpg  #设置这篇文章的背景图</code></pre>
 
 
 
-    <div id="comments">
-    <script src="https://utteranc.es/client.js"
-            repo="yelog/yelog.github.io"
-            issue-term="pathname"
-            theme="github-light"
-            label="utteranc"
-            crossorigin="anonymous"
-            async>
-    </script>
-</div>
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'dc7f8ca729fea878e59c',
+            clientSecret: '67417ddbb12eeebb0de47187099e92ace7bdf90e',
+            repo: 'yelog.github.io',
+            owner: 'yelog',
+            admin: ['yelog'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
 
 
 

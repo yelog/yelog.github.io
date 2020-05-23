@@ -41,13 +41,15 @@
 
 
 
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
-  <input class="theme_preload_comment" value="false">
+  <input class="theme_preload_comment" value="">
   <input class="theme_blog_path" value="">
   <input id="theme_shortcut" value="true" />
 </div>
@@ -754,7 +756,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="浏览器,js"
+           data-tag="js,浏览器"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1821,12 +1823,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-05-23 23:49:01'>2020-05-23 22:26</time>
+            发布时间 : <time class="date" title='最后更新: 2020-05-24 00:04:49'>2020-05-23 22:26</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:430</span>
+        <span>字数:556</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1856,7 +1858,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、在主题内添加一个新的评论"><span class="toc-text">一、在主题内添加一个新的评论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1"><span class="toc-text">1.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、gitalk"><span class="toc-text">一、gitalk</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-登录-github-，注册应用"><span class="toc-text">1. 登录 github ，注册应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-新建存放评论的仓库"><span class="toc-text">2. 新建存放评论的仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-配置主题"><span class="toc-text">3. 配置主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、来必力"><span class="toc-text">二、来必力</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-创建来必力账号，并选择-City-免费版"><span class="toc-text">1. 创建来必力账号，并选择 City 免费版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-主题选择使用来必力评论"><span class="toc-text">2. 主题选择使用来必力评论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、utteranc"><span class="toc-text">三、utteranc</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装-utterances"><span class="toc-text">1. 安装 utterances</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2"><span class="toc-text">2.</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、gitalk"><span class="toc-text">一、gitalk</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-登录-github-，注册应用"><span class="toc-text">1. 登录 github ，注册应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-新建存放评论的仓库"><span class="toc-text">2. 新建存放评论的仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-配置主题"><span class="toc-text">3. 配置主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、来必力"><span class="toc-text">二、来必力</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-创建来必力账号，并选择-City-免费版"><span class="toc-text">1. 创建来必力账号，并选择 City 免费版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-主题选择使用来必力评论"><span class="toc-text">2. 主题选择使用来必力评论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、utteranc"><span class="toc-text">三、utteranc</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装-utterances"><span class="toc-text">1. 安装 utterances</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置主题"><span class="toc-text">2. 配置主题</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1872,8 +1874,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>目前 <code>3-hexo</code> 已经集成了评论系统有 <code>gitalk</code> 、<code>gitment</code>、 <code>disqus</code> 、<code>来必力</code></p>
-<h2 id="一、在主题内添加一个新的评论"><a href="#一、在主题内添加一个新的评论" class="headerlink" title="一、在主题内添加一个新的评论"></a>一、在主题内添加一个新的评论</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><h2 id="一、gitalk"><a href="#一、gitalk" class="headerlink" title="一、gitalk"></a>一、gitalk</h2><p>gitalk 是一款基于 Github Issue 和 Preact 开发的评论插件 官网: <a href="https://gitalk.github.io/" target="_blank" rel="noopener">https://gitalk.github.io/</a></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>目前 <code>3-hexo</code> 已经集成了评论系统有 <code>gitalk</code> 、<code>gitment</code>、 <code>disqus</code> 、<code>来必力</code>、<code>utteranc</code></p>
+<h2 id="一、gitalk"><a href="#一、gitalk" class="headerlink" title="一、gitalk"></a>一、gitalk</h2><p>gitalk 是一款基于 Github Issue 和 Preact 开发的评论插件 官网: <a href="https://gitalk.github.io/" target="_blank" rel="noopener">https://gitalk.github.io/</a></p>
 <h3 id="1-登录-github-，注册应用"><a href="#1-登录-github-，注册应用" class="headerlink" title="1. 登录 github ，注册应用"></a>1. 登录 github ，注册应用</h3><p><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击进行注册</a> ，如下</p>
 <p><img src="https://i.loli.net/2020/05/23/6BmnUbX5gzPHqk1.png" alt="注册应用"></p>
 <p>注册完后，可得到 <code>Client ID</code> 和 <code>Client Secret</code></p>
@@ -1898,17 +1900,29 @@ comment:
 <p>复制获取到的代码中的 <code>data-uid</code></p>
 <p><img src="http://yelog-img.test.upcdn.net/447D431A-998C-4327-9463-A51D7CE91CE3.png" alt="复制 data-uid"></p>
 <h3 id="2-主题选择使用来必力评论"><a href="#2-主题选择使用来必力评论" class="headerlink" title="2. 主题选择使用来必力评论"></a>2. 主题选择使用来必力评论</h3><p>在主题下 <code>_config.yml</code>  </p>
+<p>在找到来必力配置如下，第一步中复制的 <code>data-uid</code> 粘贴到下面 <code>data_uid</code> 处</p>
+<pre><code class="yaml">livere:
+  data_uid: xxxxxx</code></pre>
 <p>找到以下代码， 开启并选择 livere (来必力)</p>
 <pre><code class="yaml">##########评论设置#############
 comment:
   on: true
   type: livere</code></pre>
-<p>在找到来必力配置如下，第一步中复制的 <code>data-uid</code> 粘贴到下面 <code>data_uid</code> 处</p>
-<pre><code class="yaml">livere:
-  data_uid: xxxxxx</code></pre>
 <h2 id="三、utteranc"><a href="#三、utteranc" class="headerlink" title="三、utteranc"></a>三、utteranc</h2><p>官网地址：<a href="https://utteranc.es/" target="_blank" rel="noopener">https://utteranc.es/</a></p>
 <h3 id="1-安装-utterances"><a href="#1-安装-utterances" class="headerlink" title="1. 安装 utterances"></a>1. 安装 utterances</h3><p><a href="https://github.com/apps/utterances" target="_blank" rel="noopener">点我进行安装</a></p>
-<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3>
+<h3 id="2-配置主题"><a href="#2-配置主题" class="headerlink" title="2. 配置主题"></a>2. 配置主题</h3><p>在主题下 <code>_config.yml</code> 中找到 <code>utteranc</code> 的配置 ，修改 <code>repo</code> 为自己的仓库名</p>
+<pre><code class="yaml">utteranc:
+  repo: xxx/xxx.github.io # 承载评论的仓库，填上自己的仓库
+  issue_term: pathname    # Issue 与 博客文章 之间映射关系
+  label: utteranc         # 创建的 Issue 添加的标签
+  theme: github-light     # 主题，可选主题请查看官方文档 https://utteranc.es/#heading-theme
+# 官方文档 https://utteranc.es/
+# 使用说明 https://yelog.org//2020/05/23/3-hexo-comment/</code></pre>
+<p>在主题下 <code>_config.yml</code> 中找到如下配置，启用评论，并使用 <code>utteranc</code></p>
+<pre><code class="yaml">comment:
+  on: true
+  type: utteranc</code></pre>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>
@@ -1922,16 +1936,25 @@ comment:
 
 
 
-    <div id="comments">
-    <script src="https://utteranc.es/client.js"
-            repo="yelog/yelog.github.io"
-            issue-term="pathname"
-            theme="github-light"
-            label="utteranc"
-            crossorigin="anonymous"
-            async>
-    </script>
-</div>
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'dc7f8ca729fea878e59c',
+            clientSecret: '67417ddbb12eeebb0de47187099e92ace7bdf90e',
+            repo: 'yelog.github.io',
+            owner: 'yelog',
+            admin: ['yelog'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
 
 
 

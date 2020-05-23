@@ -41,13 +41,15 @@
 
 
 
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
-  <input class="theme_preload_comment" value="false">
+  <input class="theme_preload_comment" value="">
   <input class="theme_blog_path" value="">
   <input id="theme_shortcut" value="true" />
 </div>
@@ -754,7 +756,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="浏览器,js"
+           data-tag="js,浏览器"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1825,12 +1827,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-05-20 21:01:32'>2017-03-23 15:13</time>
+            发布时间 : <time class="date" title='最后更新: 2020-05-24 00:09:03'>2017-03-23 15:13</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.7k</span>
+        <span>字数:1.6k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1860,7 +1862,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化博客下-config-yml"><span class="toc-text">初始化博客下 _config.yml</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-国际化"><span class="toc-text">1.国际化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-关掉-hexo-自带的代码高亮"><span class="toc-text">2.关掉 hexo 自带的代码高亮</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义首页"><span class="toc-text">自定义首页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#blog快捷键"><span class="toc-text">blog快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更换头像"><span class="toc-text">更换头像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置链接图标"><span class="toc-text">设置链接图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开启关于页面"><span class="toc-text">开启关于页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加音乐插件"><span class="toc-text">添加音乐插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置评论系统"><span class="toc-text">配置评论系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#启用评论"><span class="toc-text">启用评论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#meta区显示评论数"><span class="toc-text">meta区显示评论数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#评论区预加载"><span class="toc-text">评论区预加载</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样式设置"><span class="toc-text">样式设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码高亮"><span class="toc-text">代码高亮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MathJax数学公式"><span class="toc-text">MathJax数学公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表格样式"><span class="toc-text">表格样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文章列表的hover样式"><span class="toc-text">文章列表的hover样式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开启字数统计"><span class="toc-text">开启字数统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多作者模式"><span class="toc-text">多作者模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#排序及置顶"><span class="toc-text">排序及置顶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-分类排序"><span class="toc-text">1.分类排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-文章排序"><span class="toc-text">2. 文章排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于写文章"><span class="toc-text">关于写文章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何写"><span class="toc-text">如何写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写作"><span class="toc-text">写作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技巧"><span class="toc-text">技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#快捷命令"><span class="toc-text">快捷命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#博客备份（快捷命令升级版）"><span class="toc-text">博客备份（快捷命令升级版）</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化博客下-config-yml"><span class="toc-text">初始化博客下 _config.yml</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-国际化"><span class="toc-text">1.国际化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-关掉-hexo-自带的代码高亮"><span class="toc-text">2.关掉 hexo 自带的代码高亮</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自定义首页"><span class="toc-text">自定义首页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#blog快捷键"><span class="toc-text">blog快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更换头像"><span class="toc-text">更换头像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置链接图标"><span class="toc-text">设置链接图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开启关于页面"><span class="toc-text">开启关于页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加音乐插件"><span class="toc-text">添加音乐插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置评论系统"><span class="toc-text">配置评论系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#样式设置"><span class="toc-text">样式设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码高亮"><span class="toc-text">代码高亮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MathJax数学公式"><span class="toc-text">MathJax数学公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表格样式"><span class="toc-text">表格样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文章列表的hover样式"><span class="toc-text">文章列表的hover样式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开启字数统计"><span class="toc-text">开启字数统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多作者模式"><span class="toc-text">多作者模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#排序及置顶"><span class="toc-text">排序及置顶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-分类排序"><span class="toc-text">1.分类排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-文章排序"><span class="toc-text">2. 文章排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于写文章"><span class="toc-text">关于写文章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何写"><span class="toc-text">如何写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写作"><span class="toc-text">写作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技巧"><span class="toc-text">技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#快捷命令"><span class="toc-text">快捷命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#博客备份（快捷命令升级版）"><span class="toc-text">博客备份（快捷命令升级版）</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1918,28 +1920,8 @@ about:  # &#39;关于&#39; 按钮
 </ol>
 <h2 id="添加音乐插件"><a href="#添加音乐插件" class="headerlink" title="添加音乐插件"></a>添加音乐插件</h2><a href="/2019/10/08/3-hexo-add-music/" title="3-hexo 添加音乐插件">3-hexo 添加音乐插件</a>
 
-<h2 id="配置评论系统"><a href="#配置评论系统" class="headerlink" title="配置评论系统"></a>配置评论系统</h2><p>目前添加了三种评论系统 <strong>disqus、多说、网易云跟帖、gitment、gitalk</strong></p>
-<blockquote>
-<p><code>日志：</code> 2017-03-21：多说将于2017-06-01正式关停服务</p>
-</blockquote>
-<h3 id="启用评论"><a href="#启用评论" class="headerlink" title="启用评论"></a>启用评论</h3><p>以 <code>disqus</code> 为例；</p>
-<ol>
-<li>关掉其他两个评论（设置on: false）</li>
-<li>启用 <code>disqus</code> ,设置on: true</li>
-<li>登陆 <code>disqus</code> 注册，得到shortname，填入shortname。</li>
-<li>重启 <code>hexo</code>。</li>
-</ol>
-<h3 id="meta区显示评论数"><a href="#meta区显示评论数" class="headerlink" title="meta区显示评论数"></a>meta区显示评论数</h3><p>开启设置 <code>_config.yml</code></p>
-<pre><code class="yaml">comment_count: true
-# 文章标题下方显示评论数</code></pre>
-<p><img src="http://img.saodiyang.com/FlDHXpVnJ-ECFCehRBoKkQMlqj_R.png" alt="开启效果"></p>
-<h3 id="评论区预加载"><a href="#评论区预加载" class="headerlink" title="评论区预加载"></a>评论区预加载</h3><p>开启设置 <code>_config.yml</code></p>
-<pre><code class="yaml">preload_comment: false</code></pre>
-<ol>
-<li>false: 当点击评论条等区域时再加载评论模块</li>
-<li>true: 页面加载时加载评论区</li>
-</ol>
-<p><img src="http://img.saodiyang.com/FrYn2xsPMLBizQZ_p_mCa-hJYTG_.png" alt="关闭效果"></p>
+<h2 id="配置评论系统"><a href="#配置评论系统" class="headerlink" title="配置评论系统"></a>配置评论系统</h2><a href="/2020/05/23/3-hexo-comment/" title="3-hexo评论设置">3-hexo评论设置</a>
+
 <h2 id="样式设置"><a href="#样式设置" class="headerlink" title="样式设置"></a>样式设置</h2><h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p>首先要关闭hexo根目录下<code>_config.yml</code>中的高亮设置：</p>
 <pre><code class="yaml">highlight:
   enable: false</code></pre>
@@ -2074,16 +2056,25 @@ alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add 
 
 
 
-    <div id="comments">
-    <script src="https://utteranc.es/client.js"
-            repo="yelog/yelog.github.io"
-            issue-term="pathname"
-            theme="github-light"
-            label="utteranc"
-            crossorigin="anonymous"
-            async>
-    </script>
-</div>
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'dc7f8ca729fea878e59c',
+            clientSecret: '67417ddbb12eeebb0de47187099e92ace7bdf90e',
+            repo: 'yelog.github.io',
+            owner: 'yelog',
+            admin: ['yelog'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
 
 
 
