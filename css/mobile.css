@@ -34,15 +34,9 @@
   .nav-right .title-list nav a .post-date {
     font-size: 14px;
   }
-  .nav .hide-list {
-    left: 492px;
-  }
-  .nav .hide-list.fullscreen {
-    left: 0;
-  }
 }
 @media screen and (max-width: 1366px) {
-  .post > .pjax {
+  #post > .pjax {
     margin: 0 auto;
   }
   .full-toc > .full {
@@ -67,14 +61,11 @@
   .nav .hide-list .brackets.first {
     display: none;
   }
-  .nav .hide-list.fullscreen {
-    left: 492px;
-  }
   .nav .hide-list.fullscreen .brackets.first {
     display: block;
   }
-  .post .pjax article .div_img,
-  .post .pjax.fullscreen article .div_img {
+  #post .pjax article .div_img,
+  #post .pjax.fullscreen article .div_img {
     margin: 0 -18px 25px;
   }
   .full-toc .full .min:before {
@@ -202,33 +193,33 @@
   .nav .hide-list {
     display: none;
   }
-  .post {
+  #post {
     font-size: 15px;
   }
-  .post .pjax article {
+  #post .pjax article {
     padding: 1em;
   }
-  .post .pjax article .article-meta {
+  #post .pjax article .article-meta {
     font-size: 0.9em;
   }
-  .post .pjax article .article-meta .tag a {
+  #post .pjax article .article-meta .tag a {
     height: 14px;
     line-height: 14px;
   }
-  .post .pjax article .article-meta .tag a:before {
+  #post .pjax article .article-meta .tag a:before {
     border: 7px solid transparent;
     left: -14px;
   }
-  .post .pjax article .article-meta .tag a:after {
+  #post .pjax article .article-meta .tag a:after {
     top: 4px;
   }
-  .post .pjax article .article-title {
+  #post .pjax article .article-title {
     font-size: 1.6em;
   }
-  .post .pjax article pre > code {
+  #post .pjax article pre > code {
     font-size: 13px;
   }
-  .post .article_copyright {
+  #post .article_copyright {
     font-size: 14px;
   }
   .full-toc .full {
@@ -281,7 +272,7 @@ font-size
   .nav-right form .cross {
     right: 115px;
   }
-  .post .pjax .article_copyright {
+  #post .pjax .article_copyright {
     font-size: 6px;
   }
   .shang_box {

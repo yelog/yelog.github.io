@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yelog.org/"/>
-  <updated>2019-11-12T07:32:43.196Z</updated>
+  <updated>2020-05-23T15:49:01.656Z</updated>
   <id>http://yelog.org/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3-hexo评论设置</title>
+    <link href="http://yelog.org/2020/05/23/3-hexo-comment/"/>
+    <id>http://yelog.org/2020/05/23/3-hexo-comment/</id>
+    <published>2020-05-23T14:26:23.000Z</published>
+    <updated>2020-05-23T15:49:01.656Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>目前 <code>3-hexo</code> 已经集成了评论系统有 <code>gitalk</code> 、<code>gitment</code>、 <code>disqus</code> 、<code>来必力</code></p><h2 id="一、在主题内添加一个新的评论"><a href="#一、在主题内添加一个新的评论" class="headerlink" title="一、在主题内添加一个新的评论"></a>一、在主题内添加一个新的评论</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><h2 id="一、gitalk"><a href="#一、gitalk" class="headerlink" title="一、gitalk"></a>一、gitalk</h2><p>gitalk 是一款基于 Github Issue 和 Preact 开发的评论插件 官网: <a href="https://gitalk.github.io/" target="_blank" rel="noopener">https://gitalk.github.io/</a></p><h3 id="1-登录-github-，注册应用"><a href="#1-登录-github-，注册应用" class="headerlink" title="1. 登录 github ，注册应用"></a>1. 登录 github ，注册应用</h3><p><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">点击进行注册</a> ，如下</p><p><img src="https://i.loli.net/2020/05/23/6BmnUbX5gzPHqk1.png" alt="注册应用"></p><p>注册完后，可得到 <code>Client ID</code> 和 <code>Client Secret</code></p><h3 id="2-新建存放评论的仓库"><a href="#2-新建存放评论的仓库" class="headerlink" title="2. 新建存放评论的仓库"></a>2. 新建存放评论的仓库</h3><p>因为 <code>gitalk</code> 是基于 Github 的 Issue 的，所以需要指定一个仓库，用来承接 gitalk 的评论，我们一般使用 Github Page 来做我们博客的评论，所以，新建仓库名为 <code>xxx.github.io</code>，其中 xxx 为你的 Github 用户名</p><h3 id="3-配置主题"><a href="#3-配置主题" class="headerlink" title="3. 配置主题"></a>3. 配置主题</h3><p>在主题下 <code>_config.yml</code> 中找到如下配置，启用评论，并使用 <code>gitalk</code></p><pre><code class="yaml">##########评论设置#############comment:  on: true  type: gitalk</code></pre><p>在主题下 <code>_config.yml</code> 中找到 gitalk 配置，将 第1步 得到的  <code>Client ID</code> 和 <code>Client Secret</code> 复制到如下位置</p><pre><code class="yaml">gitalk:  githubID:    # 填你的 github 用户名  repo:  xxx.github.io     # 承载评论的仓库，一般使用 Github Page 仓库  ClientID:   # 第1步获得 Client ID  ClientSecret:  # 第1步获得 Client Secret  adminUser:     # Github 用户名  distractionFreeMode: true  language: zh-CN  perPage: 10</code></pre><h2 id="二、来必力"><a href="#二、来必力" class="headerlink" title="二、来必力"></a>二、来必力</h2><h3 id="1-创建来必力账号，并选择-City-免费版"><a href="#1-创建来必力账号，并选择-City-免费版" class="headerlink" title="1. 创建来必力账号，并选择 City 免费版"></a>1. 创建来必力账号，并选择 City 免费版</h3><p>官网<a href="http://livere.com/" target="_blank" rel="noopener">http://livere.com/</a> ，创建账号，点击上面的安装，选择 City 免费版</p><p><img src="https://i.loli.net/2020/05/23/mLYfjrJ1UgOIpiD.png" alt="选择 city 免费版"></p><p>复制获取到的代码中的 <code>data-uid</code></p><p><img src="http://yelog-img.test.upcdn.net/447D431A-998C-4327-9463-A51D7CE91CE3.png" alt="复制 data-uid"></p><h3 id="2-主题选择使用来必力评论"><a href="#2-主题选择使用来必力评论" class="headerlink" title="2. 主题选择使用来必力评论"></a>2. 主题选择使用来必力评论</h3><p>在主题下 <code>_config.yml</code>  </p><p>找到以下代码， 开启并选择 livere (来必力)</p><pre><code class="yaml">##########评论设置#############comment:  on: true  type: livere</code></pre><p>在找到来必力配置如下，第一步中复制的 <code>data-uid</code> 粘贴到下面 <code>data_uid</code> 处</p><pre><code class="yaml">livere:  data_uid: xxxxxx</code></pre><h2 id="三、utteranc"><a href="#三、utteranc" class="headerlink" title="三、utteranc"></a>三、utteranc</h2><p>官网地址：<a href="https://utteranc.es/" target="_blank" rel="noopener">https://utteranc.es/</a></p><h3 id="1-安装-utterances"><a href="#1-安装-utterances" class="headerlink" title="1. 安装 utterances"></a>1. 安装 utterances</h3><p><a href="https://github.com/apps/utterances" target="_blank" rel="noopener">点我进行安装</a></p><h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;目前 &lt;code&gt;3-hexo&lt;/code&gt; 已经集成了评论系统有 &lt;code&gt;gitalk&lt;/code&gt; 、&lt;code&gt;gitment&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="hexo" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/hexo/"/>
+    
+    
+      <category term="3-hexo" scheme="http://yelog.org/tags/3-hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>3-hexo支持mermaid图表</title>
@@ -81,7 +109,7 @@
     <link href="http://yelog.org/2019/09/24/3-hexo-jsfiddle/"/>
     <id>http://yelog.org/2019/09/24/3-hexo-jsfiddle/</id>
     <published>2019-09-24T01:59:37.000Z</published>
-    <updated>2019-09-24T02:12:06.749Z</updated>
+    <updated>2020-05-23T13:10:27.450Z</updated>
     
     <content type="html"><![CDATA[<h3 id="1-canvas-粒子效果"><a href="#1-canvas-粒子效果" class="headerlink" title="1. canvas 粒子效果"></a>1. canvas 粒子效果</h3><script async src="//jsfiddle.net/yelog/eqc7zdLo/embed/result,js,html,css/"></script><h3 id="2-复选框动画"><a href="#2-复选框动画" class="headerlink" title="2. 复选框动画"></a>2. 复选框动画</h3><script async src="//jsfiddle.net/yelog/5g9jf31t/1/embed/result,html,css/"></script>]]></content>
     
@@ -111,16 +139,16 @@
     <link href="http://yelog.org/2019/09/24/3-hexo-toc/"/>
     <id>http://yelog.org/2019/09/24/3-hexo-toc/</id>
     <published>2019-09-24T01:48:20.000Z</published>
-    <updated>2020-01-06T09:38:32.377Z</updated>
+    <updated>2020-05-23T10:38:46.740Z</updated>
     
-    <content type="html"><![CDATA[<p>@[TOC]</p><h2 id="1-如何使用"><a href="#1-如何使用" class="headerlink" title="1. 如何使用"></a>1. 如何使用</h2><h3 id="1-1-关键字"><a href="#1-1-关键字" class="headerlink" title="1.1 关键字"></a>1.1 关键字</h3><p>只要在在文章中使用如下关键字，不区分大小写，便可以在相应位置显示目录导航，效果文章开头<br><img src="https://i.loli.net/2019/09/24/qPEhN34FIdeCLOv.png" alt=""></p><h3 id="1-2-小标题2"><a href="#1-2-小标题2" class="headerlink" title="1.2 小标题2"></a>1.2 小标题2</h3><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p><h2 id="2-标题二"><a href="#2-标题二" class="headerlink" title="2. 标题二"></a>2. 标题二</h2><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p><h3 id="2-1-小标题1"><a href="#2-1-小标题1" class="headerlink" title="2.1 小标题1"></a>2.1 小标题1</h3><p>占位<br><br>占位<br><br>占位<br><br>占位<br></p><h3 id="2-2-小标题2"><a href="#2-2-小标题2" class="headerlink" title="2.2 小标题2"></a>2.2 小标题2</h3><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p><h2 id="文末"><a href="#文末" class="headerlink" title="文末"></a>文末</h2><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p>]]></content>
+    <content type="html"><![CDATA[<p>[toc]</p><h2 id="1-如何使用"><a href="#1-如何使用" class="headerlink" title="1. 如何使用"></a>1. 如何使用</h2><h3 id="1-1-关键字"><a href="#1-1-关键字" class="headerlink" title="1.1 关键字"></a>1.1 关键字</h3><p>只要在在文章中使用如下关键字，不区分大小写，便可以在相应位置显示目录导航，效果文章开头<br><img src="https://i.loli.net/2020/05/23/Zq9jCWfwxNBpcOm.png" alt="toc"></p><h3 id="1-2-小标题2"><a href="#1-2-小标题2" class="headerlink" title="1.2 小标题2"></a>1.2 小标题2</h3><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p><h2 id="2-标题二"><a href="#2-标题二" class="headerlink" title="2. 标题二"></a>2. 标题二</h2><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p><h3 id="2-1-小标题1"><a href="#2-1-小标题1" class="headerlink" title="2.1 小标题1"></a>2.1 小标题1</h3><p>占位<br><br>占位<br><br>占位<br><br>占位<br></p><h3 id="2-2-小标题2"><a href="#2-2-小标题2" class="headerlink" title="2.2 小标题2"></a>2.2 小标题2</h3><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p><h2 id="文末"><a href="#文末" class="headerlink" title="文末"></a>文末</h2><p>占位<br><br>占位<br><br>占位<br><br>占位<br><br>占位<br></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;@[TOC]&lt;/p&gt;
-&lt;h2 id=&quot;1-如何使用&quot;&gt;&lt;a href=&quot;#1-如何使用&quot; class=&quot;headerlink&quot; title=&quot;1. 如何使用&quot;&gt;&lt;/a&gt;1. 如何使用&lt;/h2&gt;&lt;h3 id=&quot;1-1-关键字&quot;&gt;&lt;a href=&quot;#1-1-关键字&quot; class
+        &lt;p&gt;[toc]&lt;/p&gt;
+&lt;h2 id=&quot;1-如何使用&quot;&gt;&lt;a href=&quot;#1-如何使用&quot; class=&quot;headerlink&quot; title=&quot;1. 如何使用&quot;&gt;&lt;/a&gt;1. 如何使用&lt;/h2&gt;&lt;h3 id=&quot;1-1-关键字&quot;&gt;&lt;a href=&quot;#1-1-关键字&quot; class=
       
     
     </summary>
@@ -506,9 +534,9 @@ msg=&amp;quot;hello world&amp;quot;
       <category term="大前端" scheme="http://yelog.org/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="js" scheme="http://yelog.org/tags/js/"/>
-    
       <category term="浏览器" scheme="http://yelog.org/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+      <category term="js" scheme="http://yelog.org/tags/js/"/>
     
   </entry>
   
@@ -561,32 +589,6 @@ msg=&amp;quot;hello world&amp;quot;
     
     
       <category term="firewall" scheme="http://yelog.org/tags/firewall/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker备份恢复之save与export</title>
-    <link href="http://yelog.org/2017/09/18/docker-save-export/"/>
-    <id>http://yelog.org/2017/09/18/docker-save-export/</id>
-    <published>2017-09-18T14:38:52.000Z</published>
-    <updated>2017-11-06T02:20:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="docker-save"><a href="#docker-save" class="headerlink" title="docker save"></a>docker save</h2><h3 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h3><p><code>docker save</code> 命令用于持久化 <strong>镜像</strong>，先获得镜像名称，再执行保存：</p><pre><code class="bash"># 通过此命令查出要持久化的镜像名称$ docker images# 持久化镜像名为 image_name 的镜像，$ docker save image_name -o ~/save.tar</code></pre><blockquote><p><strong>注意：</strong> 如果镜像是在远程仓库，执行保存镜像的时候可能会报 <code>Cowardly refusing to save to a terminal. Use the -o flag or redirect.</code> 的错，可以通过 <code>docker save image_name &gt; image_name.tar</code> 将镜像从远程仓库持久化到本地。</p></blockquote><h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><pre><code class="bash"># 导入 save.tar$ docker load &lt; ~/save.tar# 查看镜像$ docker images images</code></pre><h2 id="docker-export"><a href="#docker-export" class="headerlink" title="docker export"></a>docker export</h2><h3 id="导出-1"><a href="#导出-1" class="headerlink" title="导出"></a>导出</h3><p><code>docker export</code> 命令用于持久化 <strong>容器</strong>，先获取容器ID，再执行保存。</p><pre><code class="bash"># 通过此命令查出要持久化的容器ID$ docker ps -a# 持久化容器id为 container_id 的容器$ docker export container_id &gt; ~/export.tar</code></pre><h3 id="导入-1"><a href="#导入-1" class="headerlink" title="导入"></a>导入</h3><pre><code class="bash"># 从 export.tar 导入镜像$ cat ~/export.tar | docker import - my-images:latest# 查看镜像$ sudo docker images</code></pre><h2 id="不同"><a href="#不同" class="headerlink" title="不同"></a>不同</h2><p>通过 <code>sudo docker images --tree</code> 可以查看到镜像的所有层，就会发现， <code>docker export</code> 丢失了所有的历史，而<code>docker save</code> 则会保存所有历史。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;docker-save&quot;&gt;&lt;a href=&quot;#docker-save&quot; class=&quot;headerlink&quot; title=&quot;docker save&quot;&gt;&lt;/a&gt;docker save&lt;/h2&gt;&lt;h3 id=&quot;导出&quot;&gt;&lt;a href=&quot;#导出&quot; class=&quot;head
-      
-    
-    </summary>
-    
-    
-      <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-      <category term="docker" scheme="http://yelog.org/tags/docker/"/>
     
   </entry>
   

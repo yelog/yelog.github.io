@@ -23,7 +23,7 @@ blog_path= blog_path.lastIndexOf("/") === blog_path.length-1?blog_path.slice(0, 
 
 /*使用pjax加载页面，速度更快，交互更友好*/
 var content = $(".pjax");
-var container = $(".post");
+var container = $("#post");
 var $searchInput = $("#local-search-input");
 var $tagSearchInput = $("#tag-search");
 var $outlineList = $('#outline-list');
@@ -32,6 +32,7 @@ var $titleList = $("nav");
 var $localSearchResult = $("#local-search-result")
 var isFullScreen = $(window).width() <= 1024
 var isFriend = false
+var shortcutKey = $('#theme_shortcut').val() !== 'false'
 $(document).pjax('.nav-right nav a,.nav-left .avatar_target,.site_url', '.pjax', {fragment: '.pjax', timeout: 8000});
 $(document).on({
     /*点击链接后触发的事件*/
@@ -66,9 +67,9 @@ function afterPjax() {
 
     // 文章默认背景
     if (blog_path===''?location.pathname==='/':blog_path === location.pathname.split('/')[1]) {
-       $('.post').addClass('index')
+        container.addClass('index')
     } else {
-        $('.post').removeClass('index')
+        container.removeClass('index')
     }
 
     /*渲染MathJax数学公式*/
@@ -145,60 +146,63 @@ $(".nav-right nav a").mouseleave(function (e) {
 
 /*快捷键/组合键*/
 var publickey = {"shift": false, "ctrl": false, "alt": false, "last": 0};
-$(document).keydown(function (e) {
-    var tobottom = container.prop("scrollHeight") - container.scrollTop() - container.height();
-    var totop = container.scrollTop();
-    if (!$searchInput.is(":focus") && !$tagSearchInput.is(':focus') && !$('#comments textarea').is(':focus')) {
-        if (e.keyCode === 74) { /* J */
-            container.animate({scrollTop: container.prop("scrollHeight") - container.height()}, tobottom, "linear");
-        } else if (e.keyCode === 75) { /* K */
-            container.animate({scrollTop: 0}, totop, "linear");
-        } else if (e.keyCode === 71) { /* G */
-            if (publickey.shift) {
-                container.animate({scrollTop: container.prop("scrollHeight")}, 800);
-            } else if (publickey.last === 71) { /* G */
-                container.animate({scrollTop: 0}, 800);
+if (shortcutKey) {
+    $(document).keydown(function (e) {
+        var tobottom = container.prop("scrollHeight") - container.scrollTop() - container.height();
+        var totop = container.scrollTop();
+        if (!$searchInput.is(":focus") && !$tagSearchInput.is(':focus') && !$('#comments textarea').is(':focus')) {
+            if (e.keyCode === 74) { /* J */
+                container.animate({scrollTop: container.prop("scrollHeight") - container.height()}, tobottom, "linear");
+            } else if (e.keyCode === 75) { /* K */
+                container.animate({scrollTop: 0}, totop, "linear");
+            } else if (e.keyCode === 71) { /* G */
+                if (publickey.shift) {
+                    container.animate({scrollTop: container.prop("scrollHeight")}, 800);
+                } else if (publickey.last === 71) { /* G */
+                    container.animate({scrollTop: 0}, 800);
+                }
+            } else if (e.keyCode === 16) { /* shift */
+                publickey.shift = true;
             }
-        } else if (e.keyCode === 16) { /* shift */
-            publickey.shift = true;
         }
-    }
-})
+    })
 
-$(document).keyup(function (e) {
-    if (!$searchInput.is(":focus") && !$tagSearchInput.is(':focus') && !$('#comments textarea').is(':focus')) {
-        if (e.which === 83) { /* S - 显示/隐藏文章列表 */
-            $fullBtn.trigger("click");
-        } else if ((e.which === 73 || e.which === 105) && ($(".nav").css('margin-left')==='0px') && !$('.title-list').hasClass('friend')) { /* I */
-            inputChange()
-        } else if (e.which === 87) { /* W - 切换大纲视图 */
-            if ($outlineList.is(':visible')) {
-                $('#outline-panel > .icon-list').trigger('click')
-            } else {
-                $('#default-panel').hide()
-                $('#title-list-nav').hide()
-                $('#search-panel').hide()
-                $('#outline-panel').show()
-                $outlineList.show()
-                syncOutline(container[0])
-            }
-            // 如果是全屏，则推出全屏
-            if (isFullScreen) {
+    $(document).keyup(function (e) {
+        if (!$searchInput.is(":focus") && !$tagSearchInput.is(':focus') && !$('#comments textarea').is(':focus')) {
+            if (e.which === 83) { /* S - 显示/隐藏文章列表 */
                 $fullBtn.trigger("click");
-            }
-            // 如果在友链界面，则推出友链
-            if (isFriend) {
-                $('.friends-area .icon-left').trigger('click')
-            }
+            } else if ((e.which === 73 || e.which === 105) && ($(".nav").css('margin-left')==='0px') && !$('.title-list').hasClass('friend')) { /* I */
+                inputChange()
+            } else if (e.which === 87) { /* W - 切换大纲视图 */
+                if ($outlineList.is(':visible')) {
+                    $('#outline-panel > .icon-list').trigger('click')
+                } else {
+                    $('#default-panel').hide()
+                    $('#title-list-nav').hide()
+                    $('#search-panel').hide()
+                    $('#outline-panel').show()
+                    $outlineList.show()
+                    syncOutline(container[0])
+                }
+                // 如果是全屏，则推出全屏
+                if (isFullScreen) {
+                    $fullBtn.trigger("click");
+                }
+                // 如果在友链界面，则推出友链
+                if (isFriend) {
+                    $('.friends-area .icon-left').trigger('click')
+                }
 
-        } else if (e.which === 74 || e.which === 75) { /* J K - 上滑/下滑*/
-            container.stop(true);
-        } else if (e.which === 16) {
-            publickey.shift = false;
+            } else if (e.which === 74 || e.which === 75) { /* J K - 上滑/下滑*/
+                container.stop(true);
+            } else if (e.which === 16) {
+                publickey.shift = false;
+            }
         }
-    }
-    publickey.last = e.keyCode;
-})
+        publickey.last = e.keyCode;
+    })
+}
+
 
 $searchInput.blur(function (e) {
     $(".nav-right nav a.hover").removeClass("hover");
@@ -397,25 +401,25 @@ container.hover(function () {
 })
 var clickScrollTo = false
 function syncOutline(_this) {
-    if (!clickScrollTo) {
+    if ($('#outline-list .toc-link[href!="#"]').length > 0 && !clickScrollTo) {
         var activeIndex = null
-        $('#outline-list .toc-link').each(function (index) {
+        $('#outline-list .toc-link[href!="#"]').each(function (index) {
             var diff = _this.scrollTop - $(_this).find($(this).attr('href'))[0].offsetTop
             if (diff < -20) {
                 activeIndex = index === 0 ? 0 : index - 1
                 return false
             }
         })
-        $('#outline-list .toc-link.active').removeClass('active')
+        $('#outline-list .toc-link[href!="#"].active').removeClass('active')
         if (activeIndex === null) {
-            $('#outline-list .toc-link:last').addClass('active')
+            $('#outline-list .toc-link[href!="#"]:last').addClass('active')
         } else {
-            $('#outline-list .toc-link:eq(' + activeIndex + ')').addClass('active')
+            $('#outline-list .toc-link[href!="#"]:eq(' + activeIndex + ')').addClass('active')
         }
-        if ($('#outline-list .toc-link.active')[0].offsetTop - $outlineList.height() - $outlineList[0].scrollTop > -80) {
-            $outlineList.scrollTop($('#outline-list .toc-link.active')[0].offsetTop + 80 - $outlineList.height())
-        } else if ($('#outline-list .toc-link.active')[0].offsetTop < $outlineList[0].scrollTop) {
-            $outlineList.scrollTop($('#outline-list .toc-link.active')[0].offsetTop)
+        if ($('#outline-list .toc-link[href!="#"].active')[0].offsetTop - $outlineList.height() - $outlineList[0].scrollTop > -80) {
+            $outlineList.scrollTop($('#outline-list .toc-link[href!="#"].active')[0].offsetTop + 80 - $outlineList.height())
+        } else if ($('#outline-list .toc-link[href!="#"].active')[0].offsetTop < $outlineList[0].scrollTop) {
+            $outlineList.scrollTop($('#outline-list .toc-link[href!="#"].active')[0].offsetTop)
         }
     }
 }
@@ -569,10 +573,10 @@ function bind() {
     $("#busuanzi_value_site_pv").bind("DOMNodeInserted", function (e) {
         $(".site_pv").text($(this).text())
     });
-    $(".post .pjax .index").find("br").remove();
-    $(".post .pjax .index h1:eq(0)").addClass("article-title");
+    $("#post .pjax .index").find("br").remove();
+    $("#post .pjax .index h1:eq(0)").addClass("article-title");
     //绑定文章内tag的搜索事件
-    $(".post .pjax article .article-meta .tag a").on("click", function (e) {
+    $("#post .pjax article .article-meta .tag a").on("click", function (e) {
         $searchInput.val("#" + $(this).text().trim()).change();
         if ($(window).width() <= 1024) {
             $fullBtn.trigger("click");
@@ -581,7 +585,7 @@ function bind() {
         }
     });
     //绑定文章内分类的点击事件
-    $(".post .pjax article .article-meta .book a").on("click", function (e) {
+    $("#post .pjax article .article-meta .book a").on("click", function (e) {
         $(".nav-left ul li>div[data-rel='" + $(this).data("rel") + "']").parents('.hide').each(function () {
             var _this = this;
             $(_this).removeClass('hide').prev().children('.fold').addClass('unfold');
@@ -597,7 +601,7 @@ function bind() {
         }
     });
     //绑定文章内作者的点击事件
-    $(".post .pjax article .article-meta .author").on("click", function (e) {
+    $("#post .pjax article .article-meta .author").on("click", function (e) {
         $searchInput.val("@" + $(this).text().trim()).change();
         if ($(window).width() <= 1024) {
             $fullBtn.trigger("click");
@@ -606,14 +610,14 @@ function bind() {
         }
     });
     //初始化文章toc
-    // $(".post-toc-content").html($(".post .pjax article .toc-ref .toc").clone());
-    $("#outline-list").html($(".post .pjax article .toc-ref .toc").clone());
+    // $(".post-toc-content").html($("#post .pjax article .toc-ref .toc").clone());
+    $("#outline-list").html($("#post .pjax article .toc-ref .toc").clone());
     syncOutline(container[0])
     //绑定文章toc的滚动事件
     $("a[href^='#']").click(function () {
         var $this = $(this)
         if ($this.parents('#outline-list').length > 0) {
-            $('#outline-list .toc-link.active').removeClass('active')
+            $('#outline-list .toc-link[href!="#"].active').removeClass('active')
             $this.addClass('active')
         }
         clickScrollTo = true
@@ -640,7 +644,7 @@ function bind() {
         });
     }
     /*给文章中的站内跳转绑定pjax*/
-    $(document).pjax('.post .pjax article a[target!=_blank]', '.pjax', {fragment: '.pjax', timeout: 8000});
+    $(document).pjax('#post .pjax article a[target!=_blank]', '.pjax', {fragment: '.pjax', timeout: 8000});
 
     /*初始化 img*/
     if (img_resize !== 'photoSwipe') {
