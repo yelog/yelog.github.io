@@ -105,11 +105,11 @@ function afterPjax() {
 /*切换文章分类*/
 $(".nav-left ul li>div").on("click", function (e) {
     $('.friend').removeClass('friend'); // 如果当前正在友链页，则先回显
-    $searchInput.val("").change();
     $(".nav-left li>div.active").removeClass("active");
     $(this).addClass("active");
-    inputChange()
-    $('#default-panel > .right-title').text($(this).data('rel'));
+    $searchInput.val("").change();
+    var categories = $(this).data('rel').split('<--->');
+    $('#default-panel > .right-title').text(categories[categories.length - 1]);
     $('#default-panel').show().siblings().hide();
     $outlineList.hide()
 });
@@ -331,8 +331,8 @@ function inputChange() {
         $outlineList.hide();
         $('#title-list-nav').show();
     }
-
-    var activeTitle = $(".nav-left ul li>div.active").data('rel');
+    var categories = $(".nav-left ul li>div.active").data('rel').split('<--->');
+    var activeTitle = categories.join('.');
     var searchType = '';
     var containType = '';
     $('#no-item-tips').hide()
@@ -464,7 +464,7 @@ $(function () {
         var isPhone = $(window).width() <= 426
         $(".nav-right .tags-list").css({'left': isPhone ? 'auto' : (_offset.left - 95) + 'px', 'top': (_offset.top + 30) + 'px', 'right': isPhone ? '0' : 'auto'}).toggle(100);
         setTimeout(function () {
-            $tagSearchInput.val('').focus()
+            $tagSearchInput.val('').change().focus()
         }, 150)
     })
     // 选择 tag
