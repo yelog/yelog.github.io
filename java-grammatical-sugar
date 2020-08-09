@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>[转] 谈谈 Java 中的语法糖 | 叶落阁</title>
+  <meta name="keywords" content=" java ">
+  <meta name="description" content="[转] 谈谈 Java 中的语法糖 | 叶落阁">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选 select在线 demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo 就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感">
+<meta property="og:type" content="website">
+<meta property="og:title" content="叶落阁">
+<meta property="og:url" content="http://yelog.org/README.html">
+<meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选 select在线 demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo 就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:modified_time" content="2018-04-10T07:02:57.270Z">
+<meta property="article:author" content="叶落阁">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>叶落阁</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="github" href="https://github.com/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="facebook" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-facebook"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+        <a title="instagram" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-instagram"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="reddit" href="https://www.reddit.com/user/yelog/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-reddit"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="weibo" href="http://weibo.com/u/2307534817" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-weibo"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/ff56736de7cf" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/jaytp/activities" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="oschina" href="https://my.oschina.net/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-oschina"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:jaytp@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="neteasemusic" href="https://music.163.com/#/user/home?id=88151013" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-neteasemusic"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active" data-rel="全部文章">全部文章<small>(89)</small></div></li>
+    
+        
+            
+            <li><div data-rel="读书"><i class="fold iconfont icon-right"></i>读书<small>(4)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="读书<--->书单">书单<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="读书<--->阅读笔记">阅读笔记<small>(3)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="工具"><i class="fold iconfont icon-right"></i>工具<small>(37)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="工具<--->git">git<small>(8)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="工具<--->hexo">hexo<small>(23)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="工具<--->软件记录">软件记录<small>(5)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="大前端">大前端<small>(12)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="后端">后端<small>(6)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="数据库">数据库<small>(6)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="运维">运维<small>(23)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="运帷">运帷<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="89">
+<input type="hidden" id="yelog_site_word_count" value="83.5k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://qqdie.com">QQ爹博客</a></li>
+            
+            <li><a target="_blank" href="http://www.xtfml.com">系统伐木累</a></li>
+            
+            <li><a target="_blank" href="https://ilxx.gitee.io">Leesin&#39;s Blog</a></li>
+            
+            <li><a target="_blank" href="http://www.zhangxianshengnetgroup.cn">技术小仙</a></li>
+            
+            <li><a target="_blank" href="https://yiluyanxia.site">一路烟霞</a></li>
+            
+            <li><a target="_blank" href="http://panyifei.github.io">林深鹿现</a></li>
+            
+            <li><a target="_blank" href="https://wallleap.cn">wallleap</a></li>
+            
+            <li><a target="_blank" href="https://songtianfa.github.io">惊风随笔</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" />
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>3-hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>AngularJs</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>centos</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>deepin</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker仓库</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>dubbo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>efficiency</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>emacs</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>encoding</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>encryption</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>firewall</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>fragment_cache</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>freemarker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ftp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>GitHub</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>javaee</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>jQuery</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>jsp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>jstl</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>keybord</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux命令</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mac</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mathjax</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>maven</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mybatis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nexus</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nginx</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>node</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>pjax</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>postgres</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>PostgreSQL</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>reading</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>regex</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>samba</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>shell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>spring</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>springmvc</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>sql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>tale</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>translation</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vim</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>zookeeper</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>活着</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>浏览器</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>磁盘分区</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>运维</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a id="top" class="全部文章 工具 hexo "
+           href="/3-hexo-logs"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo 开发日志 - 持续更新">3-hexo 开发日志 - 持续更新</span>
+            <span class="post-date" title="2017-03-13 15:44:57">2017/03/13</span>
+        </a>
+        
+        <a id="top" class="全部文章 工具 hexo "
+           href="/3-hexo-instruction"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo 使用说明">3-hexo 使用说明</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        <a  class="全部文章 运帷 "
+           href="/Docker-summary"
+           data-tag="linux,docker"
+           data-author="" >
+            <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
+            <span class="post-date" title="2020-06-13 14:41:56">2020/06/13</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/3-hexo-comment"
+           data-tag="3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo 评论设置">3-hexo 评论设置</span>
+            <span class="post-date" title="2020-05-23 22:26:23">2020/05/23</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/3-hexo-support-mermaid"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo 支持 mermaid 图表">3-hexo 支持 mermaid 图表</span>
+            <span class="post-date" title="2019-11-12 09:55:37">2019/11/12</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/3-hexo-add-music"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo 添加音乐插件">3-hexo 添加音乐插件</span>
+            <span class="post-date" title="2019-10-08 10:44:30">2019/10/08</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/3-hexo-jsfiddle"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo 支持 jsfiddle 渲染">3-hexo 支持 jsfiddle 渲染</span>
+            <span class="post-date" title="2019-09-24 09:59:37">2019/09/24</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/3-hexo-toc"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo 文章内 toc 生成">3-hexo 文章内 toc 生成</span>
+            <span class="post-date" title="2019-09-24 09:48:20">2019/09/24</span>
+        </a>
+        
+        <a  class="全部文章 读书 阅读笔记 "
+           href="/misfortune-intellectual"
+           data-tag="reading"
+           data-author="" >
+            <span class="post-title" title="[记]《知识分子的不幸》- 王小波">[记]《知识分子的不幸》- 王小波</span>
+            <span class="post-date" title="2019-06-09 21:31:09">2019/06/09</span>
+        </a>
+        
+        <a  class="全部文章 读书 阅读笔记 "
+           href="/to-live"
+           data-tag="reading,活着"
+           data-author="" >
+            <span class="post-title" title="人们在一本叫《活着》的书中纷纷死去">人们在一本叫《活着》的书中纷纷死去</span>
+            <span class="post-date" title="2019-05-02 17:46:16">2019/05/02</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/shell-command"
+           data-tag="linux,shell"
+           data-author="" >
+            <span class="post-title" title="shell 速查表">shell 速查表</span>
+            <span class="post-date" title="2018-09-08 11:48:24">2018/09/08</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/nginx-config"
+           data-tag="nginx"
+           data-author="" >
+            <span class="post-title" title="nginx 配置记录">nginx 配置记录</span>
+            <span class="post-date" title="2018-02-08 09:19:09">2018/02/08</span>
+        </a>
+        
+        <a  class="全部文章 工具 软件记录 "
+           href="/Mac-BetterTouchTool"
+           data-tag="mac,efficiency"
+           data-author="" >
+            <span class="post-title" title="Mac 神器 - BTT (BetterTouchTool) 不完全教程">Mac 神器 - BTT (BetterTouchTool) 不完全教程</span>
+            <span class="post-date" title="2017-12-13 17:04:25">2017/12/13</span>
+        </a>
+        
+        <a  class="全部文章 后端 "
+           href="/java-grammatical-sugar"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="[转] 谈谈 Java 中的语法糖">[转] 谈谈 Java 中的语法糖</span>
+            <span class="post-date" title="2017-11-27 22:51:45">2017/11/27</span>
+        </a>
+        
+        <a  class="全部文章 数据库 "
+           href="/PostgreSQL%E4%BA%8B%E7%89%A9%E5%8F%8A%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"
+           data-tag="PostgreSQL"
+           data-author="" >
+            <span class="post-title" title="PostgreSQL 事务及隔离级别">PostgreSQL 事务及隔离级别</span>
+            <span class="post-date" title="2017-11-09 00:07:33">2017/11/09</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R"
+           data-tag="linux,vim,keybord,emacs"
+           data-author="" >
+            <span class="post-title" title="linux 下修改按键 ESC&lt;=&gt;CAPSLOCK 和 Control=&gt;ALT_R">linux 下修改按键 ESC&lt;=&gt;CAPSLOCK 和 Control=&gt;ALT_R</span>
+            <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/ascii-ansi-unicode-utf-8%EF%BC%89"
+           data-tag="encoding"
+           data-author="" >
+            <span class="post-title" title="[转] 字符编解码的故事（ASCII，ANSI，Unicode，Utf-8 区别）">[转] 字符编解码的故事（ASCII，ANSI，Unicode，Utf-8 区别）</span>
+            <span class="post-date" title="2017-09-25 19:15:00">2017/09/25</span>
+        </a>
+        
+        <a  class="全部文章 后端 "
+           href="/%E6%90%AD%E5%BB%BAdubbo+zookeeper%E5%B9%B3%E5%8F%B0"
+           data-tag="dubbo,zookeeper"
+           data-author="" >
+            <span class="post-title" title="搭建 dubbo+zookeeper 平台">搭建 dubbo+zookeeper 平台</span>
+            <span class="post-date" title="2017-09-25 16:29:07">2017/09/25</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/docker-errors"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker 报错集锦">docker 报错集锦</span>
+            <span class="post-date" title="2017-09-25 10:03:50">2017/09/25</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/hexo-fragment_cache"
+           data-tag="hexo,fragment_cache"
+           data-author="" >
+            <span class="post-title" title="Hexo 加速渲染速度之 fragment_cache">Hexo 加速渲染速度之 fragment_cache</span>
+            <span class="post-date" title="2017-09-21 19:34:37">2017/09/21</span>
+        </a>
+        
+        <a  class="全部文章 大前端 "
+           href="/bf-cache"
+           data-tag="浏览器,js"
+           data-author="" >
+            <span class="post-title" title="[转] 浏览器前进 / 后退缓存（BF Cache）">[转] 浏览器前进 / 后退缓存（BF Cache）</span>
+            <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
+        </a>
+        
+        <a  class="全部文章 大前端 "
+           href="/iphone-bf-no-run-js"
+           data-tag="js"
+           data-author="" >
+            <span class="post-title" title="解决 iphone 下后退不执行 js 的问题">解决 iphone 下后退不执行 js 的问题</span>
+            <span class="post-date" title="2017-09-21 15:25:32">2017/09/21</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/CentOS7%E4%BD%BF%E7%94%A8Firewalld"
+           data-tag="firewall"
+           data-author="" >
+            <span class="post-title" title="CentOS7 使用 Firewalld">CentOS7 使用 Firewalld</span>
+            <span class="post-date" title="2017-09-19 09:53:53">2017/09/19</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/docker-save-export"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker 备份恢复之 save 与 export">docker 备份恢复之 save 与 export</span>
+            <span class="post-date" title="2017-09-18 22:38:52">2017/09/18</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/sudo%E5%91%BD%E4%BB%A4%E5%85%8D%E5%AF%86%E7%A0%81%E8%AE%BE%E7%BD%AE"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="sudo 命令免密码设置">sudo 命令免密码设置</span>
+            <span class="post-date" title="2017-09-11 09:30:55">2017/09/11</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/build-Maven-Nexus"
+           data-tag="java,maven,nexus"
+           data-author="" >
+            <span class="post-title" title="搭建 Maven 私服 - Nexus">搭建 Maven 私服 - Nexus</span>
+            <span class="post-date" title="2017-09-06 23:01:31">2017/09/06</span>
+        </a>
+        
+        <a  class="全部文章 数据库 "
+           href="/mybatis-Mapper"
+           data-tag="mybatis"
+           data-author="" >
+            <span class="post-title" title="Mybatis 常用 Mapper 语句">Mybatis 常用 Mapper 语句</span>
+            <span class="post-date" title="2017-08-04 15:54:47">2017/08/04</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/MathJax-pjax"
+           data-tag="mathjax,pjax"
+           data-author="" >
+            <span class="post-title" title="MathJax 适配 Pjax">MathJax 适配 Pjax</span>
+            <span class="post-date" title="2017-07-05 19:24:10">2017/07/05</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/3-hexo-mathjax"
+           data-tag="mathjax"
+           data-author="" >
+            <span class="post-title" title="3-hexo 配置 MathJax 数学公式渲染">3-hexo 配置 MathJax 数学公式渲染</span>
+            <span class="post-date" title="2017-07-05 15:09:42">2017/07/05</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/CentOS7-anonymous-Samba"
+           data-tag="samba"
+           data-author="" >
+            <span class="post-title" title="CentOS7 安装配置匿名访问 Samba">CentOS7 安装配置匿名访问 Samba</span>
+            <span class="post-date" title="2017-07-03 19:40:14">2017/07/03</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/gitment"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="完美替代多说 - gitment">完美替代多说 - gitment</span>
+            <span class="post-date" title="2017-06-26 12:08:13">2017/06/26</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/vim-paste"
+           data-tag="vim"
+           data-author="" >
+            <span class="post-title" title="解决粘贴到 vim 缩进错乱问题">解决粘贴到 vim 缩进错乱问题</span>
+            <span class="post-date" title="2017-06-01 19:45:24">2017/06/01</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/entering-docker"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="进入 docker 容器命令制作">进入 docker 容器命令制作</span>
+            <span class="post-date" title="2017-06-01 17:25:11">2017/06/01</span>
+        </a>
+        
+        <a  class="全部文章 工具 软件记录 "
+           href="/tale-build-experience"
+           data-tag="tale"
+           data-author="" >
+            <span class="post-title" title="tale 博客搭建及体验">tale 博客搭建及体验</span>
+            <span class="post-date" title="2017-05-24 11:29:30">2017/05/24</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/docker-data-manager"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker 数据管理">docker 数据管理</span>
+            <span class="post-date" title="2017-05-23 21:43:06">2017/05/23</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/docker-container"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker 容器">docker 容器</span>
+            <span class="post-date" title="2017-05-23 21:29:38">2017/05/23</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/docker-registry"
+           data-tag="docker,docker仓库"
+           data-author="" >
+            <span class="post-title" title="docker 仓库">docker 仓库</span>
+            <span class="post-date" title="2017-05-23 21:15:52">2017/05/23</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/CentOS-DNS-GW-IP"
+           data-tag="运维,centos"
+           data-author="" >
+            <span class="post-title" title="CentOS 修改 DNS/GW/IP">CentOS 修改 DNS/GW/IP</span>
+            <span class="post-date" title="2017-05-23 09:53:52">2017/05/23</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/Dockerfile"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="Dockerfile 指令详解">Dockerfile 指令详解</span>
+            <span class="post-date" title="2017-05-22 19:11:42">2017/05/22</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/docker-image"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker 镜像">docker 镜像</span>
+            <span class="post-date" title="2017-05-19 16:47:33">2017/05/19</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/docker-first"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker 初体验">docker 初体验</span>
+            <span class="post-date" title="2017-05-19 16:32:23">2017/05/19</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/linux%E6%97%A0%E6%8D%9F%E8%B0%83%E6%95%B4%E5%88%86%E5%8C%BA%E5%A4%A7%E5%B0%8F"
+           data-tag="运维,磁盘分区"
+           data-author="" >
+            <span class="post-title" title="linux 无损调整分区大小">linux 无损调整分区大小</span>
+            <span class="post-date" title="2017-05-17 22:00:42">2017/05/17</span>
+        </a>
+        
+        <a  class="全部文章 工具 git "
+           href="/Git%E7%BB%9F%E8%AE%A1%E6%93%8D%E4%BD%9C"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="Git 统计操作">Git 统计操作</span>
+            <span class="post-date" title="2017-05-16 09:26:11">2017/05/16</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/%E8%A7%A3%E5%86%B3linux%E4%B8%8Bzip%E6%96%87%E4%BB%B6%E8%A7%A3%E5%8E%8B%E4%B9%B1%E7%A0%81"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="解决 linux 下 zip 文件解压乱码">解决 linux 下 zip 文件解压乱码</span>
+            <span class="post-date" title="2017-04-25 09:10:40">2017/04/25</span>
+        </a>
+        
+        <a  class="全部文章 后端 "
+           href="/encryption-algorithm"
+           data-tag="encryption"
+           data-author="" >
+            <span class="post-title" title="加密算法简介">加密算法简介</span>
+            <span class="post-date" title="2017-04-22 09:30:41">2017/04/22</span>
+        </a>
+        
+        <a  class="全部文章 大前端 "
+           href="/jsp-use-record"
+           data-tag="jsp,jstl"
+           data-author="" >
+            <span class="post-title" title="JSP 操作记录">JSP 操作记录</span>
+            <span class="post-date" title="2017-04-21 11:22:12">2017/04/21</span>
+        </a>
+        
+        <a  class="全部文章 后端 "
+           href="/SpringMVC-implementation-process"
+           data-tag="java,spring,springmvc"
+           data-author="" >
+            <span class="post-title" title="[转] SpringMVC 执行流程及源码解析">[转] SpringMVC 执行流程及源码解析</span>
+            <span class="post-date" title="2017-04-15 10:22:05">2017/04/15</span>
+        </a>
+        
+        <a  class="全部文章 数据库 "
+           href="/postgres-sql-use"
+           data-tag="postgres,sql"
+           data-author="" >
+            <span class="post-title" title="PostgreSQL 常用 SQL 操作">PostgreSQL 常用 SQL 操作</span>
+            <span class="post-date" title="2017-04-14 16:37:24">2017/04/14</span>
+        </a>
+        
+        <a  class="全部文章 工具 软件记录 "
+           href="/deepin-linux"
+           data-tag="运维,deepin"
+           data-author="" >
+            <span class="post-title" title="deepin 系统使用记录">deepin 系统使用记录</span>
+            <span class="post-date" title="2017-03-30 18:58:50">2017/03/30</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/hexo-error-collection"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo 报错合集">hexo 报错合集</span>
+            <span class="post-date" title="2017-03-27 19:40:42">2017/03/27</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/3-hexo-shortcuts"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo 快捷键说明">3-hexo 快捷键说明</span>
+            <span class="post-date" title="2017-03-24 16:45:31">2017/03/24</span>
+        </a>
+        
+        <a  class="全部文章 工具 "
+           href="/the-third-comment"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="关于第三方评论系统">关于第三方评论系统</span>
+            <span class="post-date" title="2017-03-23 11:59:50">2017/03/23</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/windows-hexo"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="windows 环境下使用 hexo 搭建 blog 平台">windows 环境下使用 hexo 搭建 blog 平台</span>
+            <span class="post-date" title="2017-03-17 14:02:55">2017/03/17</span>
+        </a>
+        
+        <a  class="全部文章 大前端 "
+           href="/npm"
+           data-tag="node"
+           data-author="" >
+            <span class="post-title" title="npm 使用介绍">npm 使用介绍</span>
+            <span class="post-date" title="2017-03-16 20:09:48">2017/03/16</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/Hexo-RSS-Sitemap"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="为 Hexo 添加 RSS 和 Sitemap">为 Hexo 添加 RSS 和 Sitemap</span>
+            <span class="post-date" title="2017-03-14 09:44:29">2017/03/14</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/3-hexo-homepage"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo 配置首页">3-hexo 配置首页</span>
+            <span class="post-date" title="2017-03-13 09:56:07">2017/03/13</span>
+        </a>
+        
+        <a  class="全部文章 大前端 "
+           href="/busuanzi-pjax"
+           data-tag="jQuery,hexo"
+           data-author="" >
+            <span class="post-title" title="不蒜子适配 pjax">不蒜子适配 pjax</span>
+            <span class="post-date" title="2017-03-09 20:15:51">2017/03/09</span>
+        </a>
+        
+        <a  class="全部文章 大前端 "
+           href="/duoshuo-pjax"
+           data-tag="jQuery,hexo"
+           data-author="" >
+            <span class="post-title" title="多说适配 pjax">多说适配 pjax</span>
+            <span class="post-date" title="2017-03-09 19:50:45">2017/03/09</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/Hexo-WordCount"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo 加入字数统计 WordCount">Hexo 加入字数统计 WordCount</span>
+            <span class="post-date" title="2017-03-09 16:57:10">2017/03/09</span>
+        </a>
+        
+        <a  class="全部文章 大前端 "
+           href="/understanding-the-critical-rendering-path"
+           data-tag="translation"
+           data-author="" >
+            <span class="post-title" title="[译] 理解浏览器关键渲染路径">[译] 理解浏览器关键渲染路径</span>
+            <span class="post-date" title="2017-03-08 08:58:21">2017/03/08</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/3-hexo"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo 主题 3-hexo">Hexo 主题 3-hexo</span>
+            <span class="post-date" title="2017-03-07 11:15:50">2017/03/07</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/Vim-command"
+           data-tag="vim"
+           data-author="" >
+            <span class="post-title" title="Vim 命令速查表">Vim 命令速查表</span>
+            <span class="post-date" title="2017-03-06 11:23:36">2017/03/06</span>
+        </a>
+        
+        <a  class="全部文章 运维 "
+           href="/linux-ftp"
+           data-tag="ftp"
+           data-author="" >
+            <span class="post-title" title="如何在 linux 中搭建 ftp 服务">如何在 linux 中搭建 ftp 服务</span>
+            <span class="post-date" title="2017-03-06 08:47:48">2017/03/06</span>
+        </a>
+        
+        <a  class="全部文章 大前端 "
+           href="/AngularJs"
+           data-tag="AngularJs"
+           data-author="" >
+            <span class="post-title" title="AngularJs 快速入门">AngularJs 快速入门</span>
+            <span class="post-date" title="2017-03-04 08:40:58">2017/03/04</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/3-hexo-multiple-author"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo 多作者模式">3-hexo 多作者模式</span>
+            <span class="post-date" title="2017-02-28 10:55:31">2017/02/28</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/hexo-create-404-page"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo 创建 404 页面">Hexo 创建 404 页面</span>
+            <span class="post-date" title="2017-02-25 15:18:39">2017/02/25</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/hexo-top-sort"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo 置顶及排序问题">Hexo 置顶及排序问题</span>
+            <span class="post-date" title="2017-02-24 15:50:38">2017/02/24</span>
+        </a>
+        
+        <a  class="全部文章 后端 "
+           href="/the-introduction-of-memory-leak-what-why-and-how"
+           data-tag="java,translation"
+           data-author="" >
+            <span class="post-title" title="[译] Java 内存泄露介绍">[译] Java 内存泄露介绍</span>
+            <span class="post-date" title="2017-02-21 15:05:39">2017/02/21</span>
+        </a>
+        
+        <a  class="全部文章 大前端 "
+           href="/pjax"
+           data-tag="jQuery"
+           data-author="" >
+            <span class="post-title" title="pjax 用法">pjax 用法</span>
+            <span class="post-date" title="2017-02-08 20:18:54">2017/02/08</span>
+        </a>
+        
+        <a  class="全部文章 读书 书单 "
+           href="/reading-list"
+           data-tag="reading"
+           data-author="" >
+            <span class="post-title" title="reading-list">reading-list</span>
+            <span class="post-date" title="2017-01-31 15:29:32">2017/01/31</span>
+        </a>
+        
+        <a  class="全部文章 读书 阅读笔记 "
+           href="/Fortress-Besieged"
+           data-tag="reading"
+           data-author="" >
+            <span class="post-title" title="人生若只如初见 -《围城》">人生若只如初见 -《围城》</span>
+            <span class="post-date" title="2017-01-03 11:27:04">2017/01/03</span>
+        </a>
+        
+        <a  class="全部文章 工具 git "
+           href="/git-reset"
+           data-tag="Git"
+           data-author="" >
+            <span class="post-title" title="Git 之 reset 揭秘">Git 之 reset 揭秘</span>
+            <span class="post-date" title="2016-12-24 11:19:24">2016/12/24</span>
+        </a>
+        
+        <a  class="全部文章 工具 git "
+           href="/git-master"
+           data-tag="Git"
+           data-author="" >
+            <span class="post-title" title="Git 操作之高手过招">Git 操作之高手过招</span>
+            <span class="post-date" title="2016-12-23 10:59:01">2016/12/23</span>
+        </a>
+        
+        <a  class="全部文章 工具 git "
+           href="/Git-SSH-HTTPS-verify-configuration"
+           data-tag="Git"
+           data-author="" >
+            <span class="post-title" title="Git 之 SSH 与 HTTPS 免密码配置">Git 之 SSH 与 HTTPS 免密码配置</span>
+            <span class="post-date" title="2016-12-21 15:31:55">2016/12/21</span>
+        </a>
+        
+        <a  class="全部文章 大前端 "
+           href="/jQuery-checkbox-radio-select"
+           data-tag="jQuery"
+           data-author="" >
+            <span class="post-title" title="jQuery 之 checkbox|radio|select 操作">jQuery 之 checkbox|radio|select 操作</span>
+            <span class="post-date" title="2016-11-23 16:19:34">2016/11/23</span>
+        </a>
+        
+        <a  class="全部文章 大前端 "
+           href="/jQuery-selector"
+           data-tag="jQuery"
+           data-author="" >
+            <span class="post-title" title="jQuery 选择器与节点操作">jQuery 选择器与节点操作</span>
+            <span class="post-date" title="2016-11-22 17:11:48">2016/11/22</span>
+        </a>
+        
+        <a  class="全部文章 工具 软件记录 "
+           href="/idea-shortcuts"
+           data-tag="IntellijIDEA"
+           data-author="" >
+            <span class="post-title" title="idea 常用快捷键">idea 常用快捷键</span>
+            <span class="post-date" title="2016-11-05 15:22:48">2016/11/05</span>
+        </a>
+        
+        <a  class="全部文章 后端 "
+           href="/web-xml"
+           data-tag="java,javaee"
+           data-author="" >
+            <span class="post-title" title="web.xml 详解">web.xml 详解</span>
+            <span class="post-date" title="2016-10-24 10:10:45">2016/10/24</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/hexo-git-server-blog"
+           data-tag="hexo,Git"
+           data-author="" >
+            <span class="post-title" title="Hexo+Git 服务器搭建 blog">Hexo+Git 服务器搭建 blog</span>
+            <span class="post-date" title="2016-10-23 09:24:03">2016/10/23</span>
+        </a>
+        
+        <a  class="全部文章 工具 hexo "
+           href="/hexo-gitHub-pages-create-own-blog"
+           data-tag="hexo,Git,GitHub"
+           data-author="" >
+            <span class="post-title" title="Hexo+GitHub Pages 搭建属于自己的 blog">Hexo+GitHub Pages 搭建属于自己的 blog</span>
+            <span class="post-date" title="2016-10-22 21:24:05">2016/10/22</span>
+        </a>
+        
+        <a  class="全部文章 工具 git "
+           href="/set-up-git-server-on-vps"
+           data-tag="Git"
+           data-author="" >
+            <span class="post-title" title="搭建 Git 服务器">搭建 Git 服务器</span>
+            <span class="post-date" title="2016-10-22 20:08:04">2016/10/22</span>
+        </a>
+        
+        <a  class="全部文章 工具 git "
+           href="/contributing-to-open-source-on-github"
+           data-tag="Git,GitHub"
+           data-author="" >
+            <span class="post-title" title="如何给 GitHub 上的项目贡献代码">如何给 GitHub 上的项目贡献代码</span>
+            <span class="post-date" title="2016-10-13 15:44:07">2016/10/13</span>
+        </a>
+        
+        <a  class="全部文章 数据库 "
+           href="/PostgreSQL-2"
+           data-tag="PostgreSQL"
+           data-author="" >
+            <span class="post-title" title="PostgreSQL 常用操作">PostgreSQL 常用操作</span>
+            <span class="post-date" title="2016-10-12 20:27:07">2016/10/12</span>
+        </a>
+        
+        <a  class="全部文章 数据库 "
+           href="/PostgreSQL-1"
+           data-tag="PostgreSQL"
+           data-author="" >
+            <span class="post-title" title="PostgreSQL 初体验">PostgreSQL 初体验</span>
+            <span class="post-date" title="2016-10-12 19:49:40">2016/10/12</span>
+        </a>
+        
+        <a  class="全部文章 数据库 "
+           href="/PostgreSQL-3"
+           data-tag="PostgreSQL"
+           data-author="" >
+            <span class="post-title" title="PostgreSQL 的介绍与安装">PostgreSQL 的介绍与安装</span>
+            <span class="post-date" title="2016-10-12 15:44:16">2016/10/12</span>
+        </a>
+        
+        <a  class="全部文章 大前端 "
+           href="/FreeMarker"
+           data-tag="java,freemarker"
+           data-author="" >
+            <span class="post-title" title="FreeMarker 语法详解">FreeMarker 语法详解</span>
+            <span class="post-date" title="2016-10-05 11:58:50">2016/10/05</span>
+        </a>
+        
+        <a  class="全部文章 工具 软件记录 "
+           href="/regular-expression"
+           data-tag="regex"
+           data-author="" >
+            <span class="post-title" title="正则表达式详解">正则表达式详解</span>
+            <span class="post-date" title="2016-10-04 09:41:40">2016/10/04</span>
+        </a>
+        
+        <a  class="全部文章 工具 git "
+           href="/Git-command"
+           data-tag="Git"
+           data-author="" >
+            <span class="post-title" title="Git 常用命令">Git 常用命令</span>
+            <span class="post-date" title="2016-10-02 17:15:39">2016/10/02</span>
+        </a>
+        
+        <a  class="全部文章 工具 git "
+           href="/computer-mutiple-github-account"
+           data-tag="Git,GitHub"
+           data-author="" >
+            <span class="post-title" title="一个客户端设置多个 github 账号">一个客户端设置多个 github 账号</span>
+            <span class="post-date" title="2016-09-30 16:42:48">2016/09/30</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-back-end/转-谈谈Java中的语法糖" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">[转] 谈谈 Java 中的语法糖</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="后端">后端</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">java</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2019-08-20 00:48:31'>2017-11-27 22:51</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:1.9k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="article-meta">
+        <span class="origin">原文:
+            <a href="http://blog.csdn.net/danchu/article/details/54986442" target="_blank">
+                
+                谈谈Java中的语法糖
+                
+            </a>
+        </span>
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E4%B8%8E%E7%B1%BB%E5%9E%8B%E6%93%A6%E9%99%A4"><span class="toc-text">泛型与类型擦除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E8%A3%85%E7%AE%B1%E4%B8%8E%E6%8B%86%E7%AE%B1"><span class="toc-text">自动装箱与拆箱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%95%BF%E5%8F%82%E6%95%B0"><span class="toc-text">变长参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A2%9E%E5%BC%BA-for-%E5%BE%AA%E7%8E%AF"><span class="toc-text">增强 for 循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-text">内部类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B"><span class="toc-text">枚举类型</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>语法糖（Syntactic Sugar），也称糖衣语法，指在计算机语言中添加的某种语法，这种语法对语言本身功能来说没有什么影响，只是为了方便程序员的开发，提高开发效率。说白了，语法糖就是对现有语法的一个封装。</p>
+</blockquote>
+<p>Java 作为一种与平台无关的高级语言，当然也含有语法糖，这些语法糖并不被虚拟机所支持，在编译成字节码阶段就自动转换成简单常用语法。一般来说 Java 中的语法糖主要有以下几种：</p>
+<ol>
+<li>泛型与类型擦除</li>
+<li>自动装箱与拆箱，变长参数、</li>
+<li>增强 for 循环</li>
+<li>内部类与枚举类</li>
+</ol>
+<h2 id="泛型与类型擦除"><a href="#泛型与类型擦除" class="headerlink" title="泛型与类型擦除"></a>泛型与类型擦除</h2><p>Java 语言并不是一开始就支持泛型的。在早期的 JDK 中，只能通过 Object 类是所有类型的父类和强制类型转换来实现泛型的功能。强制类型转换的缺点就是把编译期间的问题延迟到运行时，JVM 并不能为我们提供编译期间的检查。</p>
+<p>在 JDK1.5 中，Java 语言引入了泛型机制。但是这种泛型机制是通过类型擦除来实现的，即 Java 中的泛型只在程序源代码中有效（源代码阶段提供类型检查），在编译后的字节码中自动用强制类型转换进行替代。也就是说，Java 语言中的泛型机制其实就是一颗语法糖，相较与 C++、C# 相比，其泛型实现实在是不那么优雅。</p>
+<pre><code class="java">/**
+* 在源代码中存在泛型
+*/
+public static void main (String [] args) &amp;#123;
+    Map&lt;String,String&gt; map = new HashMap&lt;String,String&gt;();
+    map.put (&quot;hello&quot;,&quot;你好&quot;);
+    String hello = map.get (&quot;hello&quot;);
+    System.out.println (hello);
+&amp;#125;</code></pre>
+<p>当上述源代码被编译为 class 文件后，泛型被擦除且引入强制类型转换</p>
+<pre><code class="java">public static void main (String [] args) &amp;#123;
+    HashMap map = new HashMap (); // 类型擦除
+    map.put (&quot;hello&quot;, &quot;你好&quot;);
+    String hello = (String) map.get (&quot;hello&quot;);// 强制转换
+    System.out.println (hello);
+&amp;#125;</code></pre>
+<h2 id="自动装箱与拆箱"><a href="#自动装箱与拆箱" class="headerlink" title="自动装箱与拆箱"></a>自动装箱与拆箱</h2><blockquote>
+<p>Java 中的自动装箱与拆箱指的是基本数据类型与他们的包装类型之间的相互转换。</p>
+</blockquote>
+<p>我们知道 Java 是一门面向对象的语言，在 Java 世界中有一句话是这么说的：“万物皆对象”。但是 Java 中的基本数据类型却不是对象，他们不需要进行 new 操作，也不能调用任何方法，这在使用的时候有诸多不便。因此 Java 为这些基本类型提供了包装类，并且为了使用方便，提供了自动装箱与拆箱功能。自动装箱与拆箱在使用的过程中，其实是一个语法糖，内部还是调用了相应的函数进行转换。</p>
+<p>下面代码演示了自动装箱和拆箱功能</p>
+<pre><code class="java">public static void main (String [] args) &amp;#123;
+    Integer a = 1;
+    int b = 2;
+    int c = a + b;
+    System.out.println (c);
+&amp;#125;</code></pre>
+<p>经过编译后，代码如下</p>
+<pre><code class="java">public static void main (String [] args) &amp;#123;
+    Integer a = Integer.valueOf (1); // 自动装箱
+    byte b = 2;
+    int c = a.intValue () + b;// 自动拆箱
+    System.out.println (c);
+&amp;#125;</code></pre>
+<h2 id="变长参数"><a href="#变长参数" class="headerlink" title="变长参数"></a>变长参数</h2><blockquote>
+<p>所谓变长参数，就是方法可以接受长度不定确定的参数</p>
+</blockquote>
+<p>变长参数特性是在 JDK1.5 中引入的，使用变长参数有两个条件，一是变长的那一部分参数具有相同的类型，二是变长参数必须位于方法参数列表的最后面。变长参数同样是 Java 中的语法糖，其内部实现是 Java 数组。</p>
+<pre><code class="java">public class Varargs &amp;#123;
+    public static void print (String... args) &amp;#123;
+        for (String str : args)&amp;#123;
+            System.out.println (str);
+        &amp;#125;
+    &amp;#125;
+
+    public static void main (String [] args) &amp;#123;
+        print (&quot;hello&quot;, &quot;world&quot;);
+    &amp;#125;
+&amp;#125;</code></pre>
+<p>编译为 class 文件后如下，从中可以很明显的看出变长参数内部是通过数组实现的</p>
+<pre><code class="java">public class Varargs &amp;#123;
+    public Varargs () &amp;#123;
+    &amp;#125;
+
+    public static void print (String... args) &amp;#123;
+        String [] var1 = args;
+        int var2 = args.length;
+        // 增强 for 循环的数组实现方式
+        for (int var3 = 0; var3 &lt; var2; ++var3) &amp;#123;
+            String str = var1 [var3];
+            System.out.println (str);
+        &amp;#125;
+
+    &amp;#125;
+
+    public static void main (String [] args) &amp;#123;
+        // 变长参数转换为数组
+        print (new String []&amp;#123;&quot;hello&quot;, &quot;world&quot;&amp;#125;);
+    &amp;#125;
+&amp;#125;</code></pre>
+<h2 id="增强-for-循环"><a href="#增强-for-循环" class="headerlink" title="增强 for 循环"></a>增强 for 循环</h2><blockquote>
+<p>增强 for 循环与普通 for 循环相比，功能更强并且代码更简洁</p>
+</blockquote>
+<p>增强 for 循环的对象要么是一个数组，要么实现了 Iterable 接口。这个语法糖主要用来对数组或者集合进行遍历，其在循环过程中不能改变集合的大小。</p>
+<pre><code class="java">public static void main (String [] args) &amp;#123;
+    String [] params = new String []&amp;#123;&quot;hello&quot;,&quot;world&quot;&amp;#125;;
+    // 增强 for 循环对象为数组
+    for (String str : params)&amp;#123;
+        System.out.println (str);
+    &amp;#125;
+
+    List&lt;String&gt; lists = Arrays.asList (&quot;hello&quot;,&quot;world&quot;);
+    // 增强 for 循环对象实现 Iterable 接口
+    for (String str : lists)&amp;#123;
+        System.out.println (str);
+    &amp;#125;
+&amp;#125;</code></pre>
+<p>编译后的 class 文件为</p>
+<pre><code class="java">public static void main (String [] args) &amp;#123;
+   String [] params = new String []&amp;#123;&quot;hello&quot;, &quot;world&quot;&amp;#125;;
+   String [] lists = params;
+   int var3 = params.length;
+   // 数组形式的增强 for 退化为普通 for
+   for (int str = 0; str &lt; var3; ++str) &amp;#123;
+       String str1 = lists [str];
+       System.out.println (str1);
+   &amp;#125;
+
+   List var6 = Arrays.asList (new String []&amp;#123;&quot;hello&quot;, &quot;world&quot;&amp;#125;);
+   Iterator var7 = var6.iterator ();
+   // 实现 Iterable 接口的增强 for 使用 iterator 接口进行遍历
+   while (var7.hasNext ()) &amp;#123;
+       String var8 = (String) var7.next ();
+       System.out.println (var8);
+   &amp;#125;
+
+&amp;#125;</code></pre>
+<h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><blockquote>
+<p>内部类就是定义在一个类内部的类</p>
+</blockquote>
+<p>Java 语言中之所以引入内部类，是因为有些时候一个类只在另一个类中有用，我们不想让其在另外一个地方被使用。内部类之所以是语法糖，是因为其只是一个编译时的概念，一旦编译完成，编译器就会为内部类生成一个单独的 class 文件，名为 outer$innter.class。</p>
+<pre><code class="java">public class Outer &amp;#123;
+    class Inner&amp;#123;
+    &amp;#125;
+&amp;#125;</code></pre>
+<p>使用 javac 编译后，生成两个 class 文件 Outer.class 和 Outer$Inner.class，其中 Outer$Inner.class 的内容如下：</p>
+<pre><code class="java">class Outer$Inner &amp;#123;
+    Outer$Inner (Outer var1) &amp;#123;
+        this.this$0 = var1;
+    &amp;#125;
+&amp;#125;</code></pre>
+<p>内部类分为四种：成员内部类、局部内部类、匿名内部类、静态内部类，每一种都有其用法，这里就不介绍了</p>
+<h2 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h2><blockquote>
+<p>枚举类型就是一些具有相同特性的类常量</p>
+</blockquote>
+<p>java 中类的定义使用 class，枚举类的定义使用 enum。在 Java 的字节码结构中，其实并没有枚举类型，枚举类型只是一个语法糖，在编译完成后被编译成一个普通的类。这个类继承 java.lang.Enum，并被 final 关键字修饰。</p>
+<pre><code class="java">public enum Fruit &amp;#123;
+    APPLE,ORINGE
+&amp;#125;</code></pre>
+<p>使用 jad 对编译后的 class 文件进行反编译后得到</p>
+<pre><code class="java">// 继承 java.lang.Enum 并声明为 final
+public final class Fruit extends Enum
+&amp;#123;
+
+    public static Fruit [] values ()
+    &amp;#123;
+        return (Fruit [])$VALUES.clone ();
+    &amp;#125;
+
+    public static Fruit valueOf (String s)
+    &amp;#123;
+        return (Fruit) Enum.valueOf (Fruit, s);
+    &amp;#125;
+
+    private Fruit (String s, int i)
+    &amp;#123;
+        super (s, i);
+    &amp;#125;
+    // 枚举类型常量
+    public static final Fruit APPLE;
+    public static final Fruit ORANGE;
+    private static final Fruit $VALUES [];// 使用数组进行维护
+
+    static
+    &amp;#123;
+        APPLE = new Fruit (&quot;APPLE&quot;, 0);
+        ORANGE = new Fruit (&quot;ORANGE&quot;, 1);
+        $VALUES = (new Fruit [] &amp;#123;
+            APPLE, ORANGE
+        &amp;#125;);
+    &amp;#125;
+&amp;#125;</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'dc7f8ca729fea878e59c',
+            clientSecret: '67417ddbb12eeebb0de47187099e92ace7bdf90e',
+            repo: 'yelog.github.io',
+            owner: 'yelog',
+            admin: ['yelog'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
