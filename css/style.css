@@ -1514,6 +1514,20 @@
   border: none;
   text-align: center;
 }
+#post .pjax article pre {
+  position: relative;
+}
+#post .pjax article pre .code-embed {
+  position: absolute;
+  font-size: 12px;
+  top: 3px;
+  right: 15px;
+  color: rgba(140,140,140,0.8);
+}
+#post .pjax article pre .code-embed-copy {
+  cursor: pointer;
+  padding-left: 10px;
+}
 #post .pjax article pre > code {
   font-size: 14px;
   border-radius: 3px;
