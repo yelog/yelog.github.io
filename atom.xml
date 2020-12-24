@@ -64,9 +64,9 @@
       <category term="运帷" scheme="http://yelog.org/categories/%E8%BF%90%E5%B8%B7/"/>
     
     
-      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
-    
       <category term="docker" scheme="http://yelog.org/tags/docker/"/>
+    
+      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
     
   </entry>
   
@@ -443,9 +443,9 @@ msg=&amp;quot;hello world&amp;quot;
       <category term="运维" scheme="http://yelog.org/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
-      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
-    
       <category term="vim" scheme="http://yelog.org/tags/vim/"/>
+    
+      <category term="linux" scheme="http://yelog.org/tags/linux/"/>
     
       <category term="keybord" scheme="http://yelog.org/tags/keybord/"/>
     

@@ -552,42 +552,6 @@
 .nav-left .icon a:hover {
   color: #309e85;
 }
-.nav-left .icon a.rss:before {
-  content: "\ea9b";
-}
-.nav-left .icon a.github:before {
-  content: "\eab0";
-}
-.nav-left .icon a.twitter:before {
-  content: "\ea96";
-}
-.nav-left .icon a.weibo:before {
-  content: "\ea9a";
-}
-.nav-left .icon a.linkedin:before {
-  content: "\eac9";
-}
-.nav-left .icon a.instagram:before {
-  content: "\ea92";
-}
-.nav-left .icon a.email:before {
-  content: "\e945";
-}
-.nav-left .icon a.facebook:before {
-  content: "\ea91";
-}
-.nav-left .icon a.reddit:before {
-  content: "\eac6";
-}
-.nav-left .icon a.qq:before {
-  content: "\e626";
-}
-.nav-left .icon a.neteasemusic:before {
-  content: "\e607";
-}
-.nav-left .icon a.kugou:before {
-  content: "\e6ce";
-}
 .nav-left ul {
   margin: 0;
   padding: 0;
