@@ -326,7 +326,7 @@
   src: url("//at.alicdn.com/t/font_236002_600u3zzht94.eot?#iefix") format('embedded-opentype'), url("//at.alicdn.com/t/font_236002_600u3zzht94.woff2") format('woff2'), url("//at.alicdn.com/t/font_236002_600u3zzht94.woff") format('woff'), url("//at.alicdn.com/t/font_236002_600u3zzht94.ttf") format('truetype'), url("//at.alicdn.com/t/font_236002_600u3zzht94.svg#iconfont") format('svg');
 }
 .iconfont {
-  font-family: "iconfont" !important;
+  font-family: "iconfont", "custom-iconfont" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -590,6 +590,8 @@
   color: rgba(255,255,255,0.7);
   transition: all 0.15s linear;
   position: relative;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .nav-left ul li>div:hover {
   color: #f7f7f7;
@@ -614,10 +616,11 @@
   border-collapse: collapse;
   bottom: 0;
   width: 100%;
-  font-size: 17px;
+  font-size: 0;
   color: rgba(255,255,255,0.7);
 }
 .nav-left .left-bottom a {
+  font-size: 17px;
   display: table-cell;
   height: 30px;
   text-align: center;
@@ -631,7 +634,7 @@
 }
 .nav-left .left-bottom a.about.hasFriend {
   border-right: 1px solid #fff;
-  width: 49%;
+  width: calc(49% - 1px);
 }
 .nav-left .left-bottom a.friends {
   display: inline-block;

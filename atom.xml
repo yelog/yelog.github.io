@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yelog.org/"/>
-  <updated>2020-10-20T14:03:06.771Z</updated>
+  <updated>2020-12-28T16:53:12.478Z</updated>
   <id>http://yelog.org/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3-hexo添加自定义图标</title>
+    <link href="http://yelog.org/2020/12/28/3-hexo-add-icon/"/>
+    <id>http://yelog.org/2020/12/28/3-hexo-add-icon/</id>
+    <published>2020-12-28T14:00:00.000Z</published>
+    <updated>2020-12-28T16:53:12.478Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>鉴于许多人问过如何添加自定义图标，这里就详细说明一下，以备后人乘凉。</p><p>这篇文章主要讲解是从 <a href="https://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a> 添加图标。</p><h2 id="二、添加彩色图标"><a href="#二、添加彩色图标" class="headerlink" title="二、添加彩色图标"></a>二、添加彩色图标</h2><h3 id="2-1-登录并添加图标"><a href="#2-1-登录并添加图标" class="headerlink" title="2.1 登录并添加图标"></a>2.1 登录并添加图标</h3><p>访问 <a href="https://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a>，点击如下图位置登录，可以使用 <code>Github</code> 账号登录。</p><p><img src="https://img.saodiyang.com/picgo_qiniu20201228230707.png" alt="iconfont 登录"></p><p>登录成功后，搜索合适的图标，然后点击添加到购物车，如下图所示。</p><p><img src="https://img.saodiyang.com/picgo_qiniu20201228231118.png" alt=""></p><p>添加了多个后，可以点击右上角的“购物车”，添加到项目，点击加号创建项目，如下图所示。</p><p><img src="https://img.saodiyang.com/picgo_qiniu20201228231558.png" alt=""></p><p>添加完成后回到项目页面，找到自己刚刚创建的项目。</p><blockquote><p>如果没有到项目页面，可以点击上面菜单进入：资源管理 -&gt; 我的项目</p></blockquote><h3 id="2-2-引入-3-hexo-中"><a href="#2-2-引入-3-hexo-中" class="headerlink" title="2.2 引入 3-hexo 中"></a>2.2 引入 3-hexo 中</h3><p>点击下载到本地，解压并复制其中的 <code>iconfont.js</code> 到项目 <code>3-hexo/source/js/</code> 下，并改名 <code>custom-iconfont.js</code>。</p><p><img src="https://img.saodiyang.com/picgo_qiniu20201229003210.png" alt=""></p><p>在文件 <code>3-hexo/layout/_partial/meta.ejs</code> 最后追加下面一行。</p><pre><code class="html">&lt;script src=&quot;&lt;%=theme.blog_path?theme.blog_path.lastIndexOf(&quot;/&quot;) === theme.blog_path.length-1?theme.blog_path.slice(0, theme.blog_path.length-1):theme.blog_path:&#39;&#39; %&gt;/js/custom-iconfont.js?v=&lt;%=theme.version%&gt;&quot; &gt;&lt;/script&gt;</code></pre><h3 id="2-3-在配置文件中添加生效"><a href="#2-3-在配置文件中添加生效" class="headerlink" title="2.3 在配置文件中添加生效"></a>2.3 在配置文件中添加生效</h3><p>修改 <code>3-hexo/_config.yml</code> 如下图所示</p><p><img src="https://img.saodiyang.com/picgo_qiniu20201229001129.png" alt=""></p><p>完成！</p><blockquote><p>图标名如上面的 <code>gitee</code> 可以在 网站上修改，如下图所示<br><img src="https://img.saodiyang.com/picgo_qiniu20201229002057.png" alt=""></p></blockquote><h2 id="三、添加黑白图标"><a href="#三、添加黑白图标" class="headerlink" title="三、添加黑白图标"></a>三、添加黑白图标</h2><p><code>link.theme=white</code></p><h3 id="3-1-同-2-1"><a href="#3-1-同-2-1" class="headerlink" title="3.1 同 2.1"></a>3.1 同 2.1</h3><h3 id="3-2-引入-3-hexo-中"><a href="#3-2-引入-3-hexo-中" class="headerlink" title="3.2 引入 3-hexo 中"></a>3.2 引入 3-hexo 中</h3><p>点击生成代码，如下图所示。</p><p><img src="https://img.saodiyang.com/picgo_qiniu20201228231715.png" alt=""></p><p>复制生成的代码，修改 <code>font-family</code> 的值为 <code>custom-iconfont</code>，添加到 <code>3-hexo/source/css/_partial/font.styl</code> 最后，并写入图标信息，<code>content</code> 可以移到图标上进行复制，注意前面斜杠转译和去掉后面的分号。</p><pre><code class="css">@font-face {  font-family: &#39;custom-iconfont&#39;;  /* project id 2298064 */  src: url(&#39;//at.alicdn.com/t/font_2298064_34vkk4c9945.eot&#39;);  src: url(&#39;//at.alicdn.com/t/font_2298064_34vkk4c9945.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),  url(&#39;//at.alicdn.com/t/font_2298064_34vkk4c9945.woff2&#39;) format(&#39;woff2&#39;),  url(&#39;//at.alicdn.com/t/font_2298064_34vkk4c9945.woff&#39;) format(&#39;woff&#39;),  url(&#39;//at.alicdn.com/t/font_2298064_34vkk4c9945.ttf&#39;) format(&#39;truetype&#39;),  url(&#39;//at.alicdn.com/t/font_2298064_34vkk4c9945.svg#iconfont&#39;) format(&#39;svg&#39;);}.icon-gitee:before {  content: &quot;\e602&quot;;}.icon-youtubeautored:before {  content: &quot;\e649&quot;;}</code></pre><h3 id="3-3-在配置文件中添加生效-同2-2"><a href="#3-3-在配置文件中添加生效-同2-2" class="headerlink" title="3.3 在配置文件中添加生效 同2.2"></a>3.3 在配置文件中添加生效 同2.2</h3><p>结束！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;一、前言&quot;&gt;&lt;a href=&quot;#一、前言&quot; class=&quot;headerlink&quot; title=&quot;一、前言&quot;&gt;&lt;/a&gt;一、前言&lt;/h2&gt;&lt;p&gt;鉴于许多人问过如何添加自定义图标，这里就详细说明一下，以备后人乘凉。&lt;/p&gt;
+&lt;p&gt;这篇文章主要讲解是从 &lt;a href=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="hexo" scheme="http://yelog.org/categories/%E5%B7%A5%E5%85%B7/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yelog.org/tags/hexo/"/>
+    
+      <category term="3-hexo" scheme="http://yelog.org/tags/3-hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>一文看懂JavaScript中的Promise</title>
@@ -562,35 +593,6 @@ msg=&amp;quot;hello world&amp;quot;
       <category term="hexo" scheme="http://yelog.org/tags/hexo/"/>
     
       <category term="fragment_cache" scheme="http://yelog.org/tags/fragment-cache/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[转]浏览器前进/后退缓存（BF Cache）</title>
-    <link href="http://yelog.org/2017/09/21/bf-cache/"/>
-    <id>http://yelog.org/2017/09/21/bf-cache/</id>
-    <published>2017-09-21T07:35:24.000Z</published>
-    <updated>2019-09-25T08:29:48.338Z</updated>
-    
-    <content type="html"><![CDATA[<hr>[浏览器前进/后退缓存](https://developer.mozilla.org/en-US/docs/Working_with_BFCache)（Backward/Forward Cache，BF Cache）是指浏览器在前进后退过程中， 会应用更强的缓存策略，表现为 DOM、window、甚至 JavaScript 对象被缓存，以及同步 XHR 也被缓存。 这一现象在移动端浏览器尤为常见，除 Chrome for Android、Android Browser 之外的浏览器基本都会触发。<p>BF Cache 本来是一项浏览器优化，但在某些情况下（比如前端路由的 Web App）会引起困惑。 本文主要讨论 BF Cache 的行为、如何检测 BF Cache 缓存、以及如何 workaround。</p><h3 id="缓存行为"><a href="#缓存行为" class="headerlink" title="缓存行为"></a>缓存行为</h3><p>BF Cache 是一种浏览器优化，HTML 标准并未指定其如何进行缓存，因此缓存行为是与浏览器实现相关的。</p><blockquote><p>User agents may discard the Document objects of entries other than the current entry that are not referenced from any script, reloading the pages afresh when the user or script navigates back to such pages. This specification does not specify when user agents should discard Document objects and when they should cache them. – <a href="https://html.spec.whatwg.org/multipage/browsers.html#history" target="_blank" rel="noopener">Session history and navigation</a>, WHATWG</p></blockquote><ul><li>Desktop Chrome：阻塞的资源和同步发出的 XHR 都会被缓存，但不缓存渲染结果。因此可以看到明显的载入过程，此时脚本也会重新执行。</li><li>Chrome for Android：有些情况下不会缓存，缓存时与 Desktop Chrome 行为一致。</li><li>Desktop Firefox：页面会被 Frozen，定时器会被暂停，DOM、Window、JavaScript 对象会被缓存，返回时页面脚本重新开始运行。</li><li>iOS Safari：渲染结果也会被缓存，因此才能支持左右滑动手势来前进/后退。</li></ul><p>Desktop Firefox 暂停计时器的行为非常有趣，以下 HTML 中显示一个每秒加一的数字。 当页面导航时就会暂停，返回时继续增加（因此直接使用 setInterval 倒计时不仅不精确，而且不可靠）：</p><pre><code class="html">&lt;span id=&quot;timer-tick&quot;&gt;&lt;/span&gt;&lt;a href=&quot;http://harttle.com&quot;&gt;External Link&lt;/a&gt;&lt;script&gt;  var i = 0  setInterval(() =&gt; document.querySelector(&#39;#timer-tick&#39;).innerHTML = i++, 1000)&lt;/script&gt;</code></pre><h3 id="pagehide-pageshow-事件"><a href="#pagehide-pageshow-事件" class="headerlink" title="pagehide/pageshow 事件"></a>pagehide/pageshow 事件</h3><p>会话（Session）中的某一个页面显示/隐藏时，会触发 <code>pagehide</code> 和 <code>pageshow</code> 事件。 这两个事件都有一个 <code>persisted</code> 属性用来指示当前页面是否被 BF Cache 缓存。 因此可以通过 <code>persisted</code> 属性来达到禁用 BF Cache 的效果：</p><pre><code class="javascript">window.onpageshow = function(event) {    if (event.persisted) {        window.location.reload()    }};</code></pre><p>注意无论页面是否被缓存 <code>pageshow</code> 总会触发，因此需要检测器 <code>persisted</code> 属性。 另外 <code>pageshow</code> 的时机总是在 <code>load</code> 事件之后。 这一点很容易检测，下面的 <code>pageshow</code> 日志总在 <code>load</code> 之前：</p><pre><code class="javascript">window.addEventListener(&#39;pageshow&#39;, function () {  console.log(&#39;on pageshow&#39;)})window.addEventListener(&#39;load&#39;, function () {  console.log(&#39;load&#39;)})</code></pre><h3 id="XHR-缓存"><a href="#XHR-缓存" class="headerlink" title="XHR 缓存"></a>XHR 缓存</h3><p>同步（阻塞加载的）脚本发出的 XMLHttpRequest 也会被 Chrome 强制缓存， 因此即使在断网的情况下后退到访问过的页面仍然是可以完美渲染的。 如果页面中有这样一段外部脚本：</p><pre><code class="javascript">sendXHR();function sendXHR () {  var xhr = new XMLHttpRequest()  xhr.open(&#39;GET&#39;, &#39;/data.json&#39;)  xhr.onreadystatechange = function () {    if (xhr.readyState === XMLHttpRequest.DONE &amp;&amp;     xhr.status === 200) {      console.log(&#39;xhr arrived&#39;, xhr.responseText)    }  }  xhr.send()}</code></pre><p>超链接跳转后回来，该 xhr 也会被缓存。注意下图中的 XHR 一项 size 为 “from disk cache”：<br><img src="http://img.saodiyang.com/FiUT28A3DCpwPiyvJpsvhkdFQai1.png" alt=""></p><p>为了强制发送 xhr，可以将 xhr 改为异步发送，或者加一个不重要的 query。</p><pre><code class="javascript">setTimeout(sendXHR, 1000)</code></pre><p>这样就能看到 xhr 真正发送出去了 :) 异步 xhr 缓存时机未经兼容性测试， 还是建议读者使用一个随机产生的 query。<br><img src="http://img.saodiyang.com/FjwUrogpYSRjC5EGPGIH2x1t2Eff.png" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-[浏览器前进/后退缓存](https://developer.mozilla.org/en-US/docs/Working_with_BFCache)（Backward/Forward Cache，BF Cache）是指浏览器在前进后退过程中， 会应用更强的缓存策略，表
-      
-    
-    </summary>
-    
-    
-      <category term="大前端" scheme="http://yelog.org/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="js" scheme="http://yelog.org/tags/js/"/>
-    
-      <category term="浏览器" scheme="http://yelog.org/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
   </entry>
   
