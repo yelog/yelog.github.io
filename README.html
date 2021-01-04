@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1511,7 +1511,7 @@
     </div>
     <div class="article-meta">
         
-        <span>字数:564</span>
+        <span>字数:588</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1541,7 +1541,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为-layui-扩展的-下拉多选select"><span class="toc-text">为 layui 扩展的 下拉多选select</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#效果图"><span class="toc-text">效果图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用实例"><span class="toc-text">使用实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#声明"><span class="toc-text">声明</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA-layui-%E6%89%A9%E5%B1%95%E7%9A%84-%E4%B8%8B%E6%8B%89%E5%A4%9A%E9%80%89select"><span class="toc-text">为 layui 扩展的 下拉多选select</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E5%9B%BE"><span class="toc-text">效果图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="toc-text">使用实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E6%98%8E"><span class="toc-text">声明</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1588,97 +1588,24 @@
 <td align="left">无</td>
 <td align="left">开启多选简写，显示勾选条数</td>
 </tr>
-<tr>
-<td align="left">## 使用</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">1. 将项目中的 <code>form.js</code> 覆盖自己项目中的 <code>form.js</code>。</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">2. 引入下面css</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">```css</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">select[multiple]+.layui-form-select&gt;.layui-select-title&gt;input.layui-input{ border-bottom: 0}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">select[multiple]+.layui-form-select dd{ padding:0;}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">select[multiple]+.layui-form-select .layui-form-checkbox[lay-skin=primary]{ margin:0 !important; display:block; line-height:36px !important; position:relative; padding-left:26px;}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">select[multiple]+.layui-form-select .layui-form-checkbox[lay-skin=primary] span{line-height:36px !important; float:none;}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">select[multiple]+.layui-form-select .layui-form-checkbox[lay-skin=primary] i{ position:absolute; left:10px; top:0; margin-top:9px;}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">.multiSelect{ line-height:normal; height:auto; padding:4px 10px; overflow:hidden;min-height:38px; margin-top:-38px; left:0; z-index:99;position:relative;background:none;}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">.multiSelect a{ padding:2px 5px; background:#908e8e; border-radius:2px; color:#fff; display:block; line-height:20px; height:20px; margin:2px 5px 2px 0; float:left;}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">.multiSelect a span{ float:left;}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">.multiSelect a i {float:left;display:block;margin:2px 0 0 2px;border-radius:2px;width:8px;height:8px;padding:4px;position:relative;-webkit-transition:all .3s;transition:all .3s}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">.multiSelect a i:before, .multiSelect a i:after {position:absolute;left:8px;top:2px;content:’’;height:12px;width:1px;background-color:#fff}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">.multiSelect a i:before {-webkit-transform:rotate(45deg);transform:rotate(45deg)}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">.multiSelect a i:after {-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">.multiSelect a i:hover{ background-color:#545556;}</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left">```</td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
 </tbody></table>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
+<li>将项目中的 <code>form.js</code> 覆盖自己项目中的 <code>form.js</code>。</li>
+<li>引入下面css<pre><code class="css">select[multiple]+.layui-form-select&gt;.layui-select-title&gt;input.layui-input&#123; border-bottom: 0&#125;
+select[multiple]+.layui-form-select dd&#123; padding:0;&#125;
+select[multiple]+.layui-form-select .layui-form-checkbox[lay-skin=primary]&#123; margin:0 !important; display:block; line-height:36px !important; position:relative; padding-left:26px;&#125;
+select[multiple]+.layui-form-select .layui-form-checkbox[lay-skin=primary] span&#123;line-height:36px !important; float:none;&#125;
+select[multiple]+.layui-form-select .layui-form-checkbox[lay-skin=primary] i&#123; position:absolute; left:10px; top:0; margin-top:9px;&#125;
+.multiSelect&#123; line-height:normal; height:auto; padding:4px 10px; overflow:hidden;min-height:38px; margin-top:-38px; left:0; z-index:99;position:relative;background:none;&#125;
+.multiSelect a&#123; padding:2px 5px; background:#908e8e; border-radius:2px; color:#fff; display:block; line-height:20px; height:20px; margin:2px 5px 2px 0; float:left;&#125;
+.multiSelect a span&#123; float:left;&#125;
+.multiSelect a i &#123;float:left;display:block;margin:2px 0 0 2px;border-radius:2px;width:8px;height:8px;padding:4px;position:relative;-webkit-transition:all .3s;transition:all .3s&#125;
+.multiSelect a i:before, .multiSelect a i:after &#123;position:absolute;left:8px;top:2px;content:&#39;&#39;;height:12px;width:1px;background-color:#fff&#125;
+.multiSelect a i:before &#123;-webkit-transform:rotate(45deg);transform:rotate(45deg)&#125;
+.multiSelect a i:after &#123;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)&#125;
+.multiSelect a i:hover&#123; background-color:#545556;&#125;</code></pre>
+</li>
+</ol>
 <h2 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h2><p>下面实例 开启了下拉多选（<code>multiple</code>）, 并开启了检索功能（<code>lay-search</code>）。<br>效果可以参考 在线实例 的 <code>多选+搜索+大小写不敏感</code> 模块</p>
 <pre><code class="html">&lt;select name=&quot;多选+搜索+大小写不敏感&quot; lay-verify=&quot;required&quot; multiple lay-search&gt;
     &lt;option value=&quot;&quot;&gt;请选择您的兴趣爱好&lt;/option&gt;
@@ -1695,7 +1622,7 @@
 <blockquote>
 <p><strong>更多实例参考 在线实例、或 <code>index.html</code>。</strong></p>
 </blockquote>
-<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>此项目基于 <a href="https://gitee.com/layuicms/XiaLaDuoXuan" target="_blank" rel="noopener">https://gitee.com/layuicms/XiaLaDuoXuan</a> 项目修改得来，修复了一些bug，扩展了 简化多选、多选搜索、大小写敏感控制等功能。</p>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>此项目基于 <a target="_blank" rel="noopener" href="https://gitee.com/layuicms/XiaLaDuoXuan">https://gitee.com/layuicms/XiaLaDuoXuan</a> 项目修改得来，修复了一些bug，扩展了 简化多选、多选搜索、大小写敏感控制等功能。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

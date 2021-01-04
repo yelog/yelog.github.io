@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-linux-ftp" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-linux/如何在linux中搭建ftp服务" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">如何在linux中搭建ftp服务</h1>
     
@@ -1523,7 +1523,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2017-11-06 10:20:12'>2017-03-06 08:47</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:27'>2017-03-06 08:47</time>
         
     </div>
     <div class="article-meta">
@@ -1558,7 +1558,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是-FTP"><span class="toc-text">什么是 FTP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FTP-服务器是什么"><span class="toc-text">FTP 服务器是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-VSFTP"><span class="toc-text">安装 VSFTP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置-FTP-服务"><span class="toc-text">配置 FTP 服务</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-FTP"><span class="toc-text">什么是 FTP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FTP-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">FTP 服务器是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-VSFTP"><span class="toc-text">安装 VSFTP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-FTP-%E6%9C%8D%E5%8A%A1"><span class="toc-text">配置 FTP 服务</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1601,7 +1601,7 @@ no_anon_password=YES
 anon_max_rate=30000
 # 匿名登录的目录（可选）
 anon_root=/example/directory/</code></pre>
-<p><strong>根目录限制（Chroot Jail）</strong><br>（ LCTT 译注：chroot jail是类unix系统中的一种安全机制，用于修改进程运行的根目录环境，限制该线程不能感知到其根目录树以外的其他目录结构和文件的存在。详情参看<a href="https://zh.wikipedia.org/wiki/Chroot" target="_blank" rel="noopener">chroot jail</a>）</p>
+<p><strong>根目录限制（Chroot Jail）</strong><br>（ LCTT 译注：chroot jail是类unix系统中的一种安全机制，用于修改进程运行的根目录环境，限制该线程不能感知到其根目录树以外的其他目录结构和文件的存在。详情参看<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Chroot">chroot jail</a>）</p>
 <p>有时我们需要设置根目录（chroot）环境来禁止用户离开他们的家（home）目录。在配置文件中增加/修改下面配置开启根目录限制（Chroot Jail）:</p>
 <pre><code class="xml">chroot_list_enable=YES
 chroot_list_file=/etc/vsftpd.chroot_list</code></pre>

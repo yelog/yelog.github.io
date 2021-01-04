@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Git-SSH-HTTPS-verify-configuration" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-tools/Git之SSH与HTTPS免密码配置" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">Git之SSH与HTTPS免密码配置</h1>
     
@@ -1525,12 +1525,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2019-05-21 10:49:13'>2016-12-21 15:31</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:27'>2016-12-21 15:31</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:651</span>
+        <span>字数:658</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1560,7 +1560,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH通信协议"><span class="toc-text">SSH通信协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#GitHub版"><span class="toc-text">GitHub版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git服务器"><span class="toc-text">Git服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTPS通信协议"><span class="toc-text">HTTPS通信协议</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE"><span class="toc-text">SSH通信协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#GitHub%E7%89%88"><span class="toc-text">GitHub版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">Git服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTPS%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE"><span class="toc-text">HTTPS通信协议</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1588,12 +1588,12 @@ config            id_rsa.pub</code></pre>
 $ ssh-keygen -t rsa -C &quot;xx@xx.com&quot;</code></pre>
 <p>首先 <code>ssh-keygen</code> 会确认密钥的存储位置和文件名（默认是 <code>.ssh/id_rsa</code>）,然后他会要求你输入两次密钥口令，留空即可。所以一般选用默认，全部回车即可。</p>
 <p>接下来我们登陆到GitHub上，右上角小头像-&gt;Setting-&gt;SSH and GPG keys中，点击new SSH key。<br><code>Title：</code>可以随便填写，但最好起的名字能让自己知道这个公钥是哪个设备的。<br><code>Key：</code>将上面生成的<code>.pub</code>文件中的所有内容复制到这里。<br>点击下面的Add SSH key即可。<br>然后你就会发现可以免密码访问了</p>
-<h3 id="Git服务器"><a href="#Git服务器" class="headerlink" title="Git服务器"></a>Git服务器</h3><p>如果服务端是自己搭建的git服务器，生成密钥公钥对的步骤是一样的。<br>然后将生成的 <code>.pub</code> 文件内容，导入到git服务器 <code>/home/git/.ssh/authorized_keys</code> 文件内，一行一个。<br>然后你就会发现git push 不再需要密码了<br>搭建git服务器和相关免登陆的详细步骤可参考我的另一篇 <a href="/2016/10/22/set-up-git-server-on-vps/" title="搭建Git服务器">搭建Git服务器</a></p>
+<h3 id="Git服务器"><a href="#Git服务器" class="headerlink" title="Git服务器"></a>Git服务器</h3><p>如果服务端是自己搭建的git服务器，生成密钥公钥对的步骤是一样的。<br>然后将生成的 <code>.pub</code> 文件内容，导入到git服务器 <code>/home/git/.ssh/authorized_keys</code> 文件内，一行一个。<br>然后你就会发现git push 不再需要密码了<br>搭建git服务器和相关免登陆的详细步骤可参考我的另一篇 <a href="#">Post not found: set-up-git-server-on-vps</a></p>
 <h2 id="HTTPS通信协议"><a href="#HTTPS通信协议" class="headerlink" title="HTTPS通信协议"></a>HTTPS通信协议</h2><p>上面讲了SSH方式的免密码，接下来讲一下越来越常用的HTTPS方式的免密码<br>新建文件并保存密码</p>
 <pre><code class="bash">$ touch ~/.git-credentials
 $ vim ~/.git-credentials</code></pre>
 <p>添加内容</p>
-<pre><code class="bash">https://{username}:{passwd}@github.com</code></pre>
+<pre><code class="bash">https://&#123;username&#125;:&#123;passwd&#125;@github.com</code></pre>
 <p>添加git配置</p>
 <pre><code class="bash">$ git config --global credential.helper store</code></pre>
 <p>查看～/.gitconfig文件变化</p>

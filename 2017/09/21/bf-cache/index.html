@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-bf-cache" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-front-end/转-浏览器前进-后退缓存（BF-Cache）" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">[转]浏览器前进/后退缓存（BF Cache）</h1>
     
@@ -1525,12 +1525,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2019-09-25 16:29:48'>2017-09-21 15:35</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:28'>2017-09-21 15:35</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:881</span>
+        <span>字数:895</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1570,7 +1570,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#缓存行为"><span class="toc-text">缓存行为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pagehide-pageshow-事件"><span class="toc-text">pagehide&#x2F;pageshow 事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XHR-缓存"><span class="toc-text">XHR 缓存</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%93%E5%AD%98%E8%A1%8C%E4%B8%BA"><span class="toc-text">缓存行为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pagehide-pageshow-%E4%BA%8B%E4%BB%B6"><span class="toc-text">pagehide&#x2F;pageshow 事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XHR-%E7%BC%93%E5%AD%98"><span class="toc-text">XHR 缓存</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1592,7 +1592,7 @@
 <p>BF Cache 本来是一项浏览器优化，但在某些情况下（比如前端路由的 Web App）会引起困惑。 本文主要讨论 BF Cache 的行为、如何检测 BF Cache 缓存、以及如何 workaround。</p>
 <h3 id="缓存行为"><a href="#缓存行为" class="headerlink" title="缓存行为"></a>缓存行为</h3><p>BF Cache 是一种浏览器优化，HTML 标准并未指定其如何进行缓存，因此缓存行为是与浏览器实现相关的。</p>
 <blockquote>
-<p>User agents may discard the Document objects of entries other than the current entry that are not referenced from any script, reloading the pages afresh when the user or script navigates back to such pages. This specification does not specify when user agents should discard Document objects and when they should cache them. – <a href="https://html.spec.whatwg.org/multipage/browsers.html#history" target="_blank" rel="noopener">Session history and navigation</a>, WHATWG</p>
+<p>User agents may discard the Document objects of entries other than the current entry that are not referenced from any script, reloading the pages afresh when the user or script navigates back to such pages. This specification does not specify when user agents should discard Document objects and when they should cache them. – <a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/browsers.html#history">Session history and navigation</a>, WHATWG</p>
 </blockquote>
 <ul>
 <li>Desktop Chrome：阻塞的资源和同步发出的 XHR 都会被缓存，但不缓存渲染结果。因此可以看到明显的载入过程，此时脚本也会重新执行。</li>
@@ -1608,36 +1608,36 @@
   setInterval(() =&gt; document.querySelector(&#39;#timer-tick&#39;).innerHTML = i++, 1000)
 &lt;/script&gt;</code></pre>
 <h3 id="pagehide-pageshow-事件"><a href="#pagehide-pageshow-事件" class="headerlink" title="pagehide/pageshow 事件"></a>pagehide/pageshow 事件</h3><p>会话（Session）中的某一个页面显示/隐藏时，会触发 <code>pagehide</code> 和 <code>pageshow</code> 事件。 这两个事件都有一个 <code>persisted</code> 属性用来指示当前页面是否被 BF Cache 缓存。 因此可以通过 <code>persisted</code> 属性来达到禁用 BF Cache 的效果：</p>
-<pre><code class="javascript">window.onpageshow = function(event) {
-    if (event.persisted) {
+<pre><code class="javascript">window.onpageshow = function(event) &#123;
+    if (event.persisted) &#123;
         window.location.reload()
-    }
-};</code></pre>
+    &#125;
+&#125;;</code></pre>
 <p>注意无论页面是否被缓存 <code>pageshow</code> 总会触发，因此需要检测器 <code>persisted</code> 属性。 另外 <code>pageshow</code> 的时机总是在 <code>load</code> 事件之后。 这一点很容易检测，下面的 <code>pageshow</code> 日志总在 <code>load</code> 之前：</p>
-<pre><code class="javascript">window.addEventListener(&#39;pageshow&#39;, function () {
+<pre><code class="javascript">window.addEventListener(&#39;pageshow&#39;, function () &#123;
   console.log(&#39;on pageshow&#39;)
-})
-window.addEventListener(&#39;load&#39;, function () {
+&#125;)
+window.addEventListener(&#39;load&#39;, function () &#123;
   console.log(&#39;load&#39;)
-})</code></pre>
+&#125;)</code></pre>
 <h3 id="XHR-缓存"><a href="#XHR-缓存" class="headerlink" title="XHR 缓存"></a>XHR 缓存</h3><p>同步（阻塞加载的）脚本发出的 XMLHttpRequest 也会被 Chrome 强制缓存， 因此即使在断网的情况下后退到访问过的页面仍然是可以完美渲染的。 如果页面中有这样一段外部脚本：</p>
 <pre><code class="javascript">sendXHR();
 
-function sendXHR () {
+function sendXHR () &#123;
   var xhr = new XMLHttpRequest()
   xhr.open(&#39;GET&#39;, &#39;/data.json&#39;)
-  xhr.onreadystatechange = function () {
+  xhr.onreadystatechange = function () &#123;
     if (xhr.readyState === XMLHttpRequest.DONE &amp;&amp;
-     xhr.status === 200) {
+     xhr.status === 200) &#123;
       console.log(&#39;xhr arrived&#39;, xhr.responseText)
-    }
-  }
+    &#125;
+  &#125;
   xhr.send()
-}</code></pre>
-<p>超链接跳转后回来，该 xhr 也会被缓存。注意下图中的 XHR 一项 size 为 “from disk cache”：<br><img src="http://img.saodiyang.com/FiUT28A3DCpwPiyvJpsvhkdFQai1.png" alt=""></p>
+&#125;</code></pre>
+<p>超链接跳转后回来，该 xhr 也会被缓存。注意下图中的 XHR 一项 size 为 “from disk cache”：<br><img src="http://img.saodiyang.com/FiUT28A3DCpwPiyvJpsvhkdFQai1.png"></p>
 <p>为了强制发送 xhr，可以将 xhr 改为异步发送，或者加一个不重要的 query。</p>
 <pre><code class="javascript">setTimeout(sendXHR, 1000)</code></pre>
-<p>这样就能看到 xhr 真正发送出去了 :) 异步 xhr 缓存时机未经兼容性测试， 还是建议读者使用一个随机产生的 query。<br><img src="http://img.saodiyang.com/FjwUrogpYSRjC5EGPGIH2x1t2Eff.png" alt=""></p>
+<p>这样就能看到 xhr 真正发送出去了 :) 异步 xhr 缓存时机未经兼容性测试， 还是建议读者使用一个随机产生的 query。<br><img src="http://img.saodiyang.com/FjwUrogpYSRjC5EGPGIH2x1t2Eff.png"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

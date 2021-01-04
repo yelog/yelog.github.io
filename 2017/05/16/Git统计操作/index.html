@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Git统计操作" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-tools/Git统计操作" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">Git统计操作</h1>
     
@@ -1525,12 +1525,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2019-05-21 10:49:24'>2017-05-16 09:26</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:27'>2017-05-16 09:26</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.5k</span>
+        <span>字数:1.6k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1560,7 +1560,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#按commit统计"><span class="toc-text">按commit统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#按代码行数统计"><span class="toc-text">按代码行数统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-log-说明"><span class="toc-text">git log 说明</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%89commit%E7%BB%9F%E8%AE%A1"><span class="toc-text">按commit统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%89%E4%BB%A3%E7%A0%81%E8%A1%8C%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-text">按代码行数统计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-log-%E8%AF%B4%E6%98%8E"><span class="toc-text">git log 说明</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1590,7 +1590,7 @@ $ git log --author=&quot;faker&quot; --oneline --shortstat
 $ git log --pretty=&#39;%aN&#39; | sort | uniq -c | sort -k1 -n -r | head -n 5
 
 # 按提交者邮箱统计，提交数量排名前5
-$ git log --pretty=format:%ae | gawk -- &#39;{ ++c[$0]; } END { for(cc in c) printf &quot;%5d %s\n&quot;,c[cc],cc; }&#39; | sort -u -n -r | head -n 5
+$ git log --pretty=format:%ae | gawk -- &#39;&#123; ++c[$0]; &#125; END &#123; for(cc in c) printf &quot;%5d %s\n&quot;,c[cc],cc; &#125;&#39; | sort -u -n -r | head -n 5
 
 # 统计贡献者数量
 $ git log --pretty=&#39;%aN&#39; | sort -u | wc -l
@@ -1598,22 +1598,22 @@ $ git log --pretty=&#39;%aN&#39; | sort -u | wc -l
 # 统计提交数量
 $ git log --oneline | wc -l</code></pre>
 <h2 id="按代码行数统计"><a href="#按代码行数统计" class="headerlink" title="按代码行数统计"></a>按代码行数统计</h2><pre><code class="bash"># 统计指定作者增删行数
-$ git log --author=&quot;faker&quot; --pretty=tformat: --numstat | awk &#39;{ add += $1; subs += $2; loc += $1 - $2 } END { printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc }&#39; -
+$ git log --author=&quot;faker&quot; --pretty=tformat: --numstat | awk &#39;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -
 
 # 统计当前作者增删行数
-$ git log --author=&quot;$(git config --get user.name)&quot; --pretty=tformat: --numstat | gawk &#39;{ add += $1 ; subs += $2 ; loc += $1 - $2 } END { printf &quot;added lines: %s removed lines : %s total lines: %s\n&quot;,add,subs,loc }&#39; -
+$ git log --author=&quot;$(git config --get user.name)&quot; --pretty=tformat: --numstat | gawk &#39;&#123; add += $1 ; subs += $2 ; loc += $1 - $2 &#125; END &#123; printf &quot;added lines: %s removed lines : %s total lines: %s\n&quot;,add,subs,loc &#125;&#39; -
 
 # 统计所有邮箱前缀的增删行数 -英文版
-$ git log --shortstat --pretty=&quot;%cE&quot; | sed &#39;s/\(.*\)@.*/\1/&#39; | grep -v &quot;^$&quot; | awk &#39;BEGIN { line=&quot;&quot;; } !/^ / { if (line==&quot;&quot; || !match(line, $0)) {line = $0 &quot;,&quot; line }} /^ / { print line &quot; # &quot; $0; line=&quot;&quot;}&#39; | sort | sed -E &#39;s/# //;s/ files? changed,//;s/([0-9]+) ([0-9]+ deletion)/\1 0 insertions\(+\), \2/;s/\(\+\)$/\(\+\), 0 deletions\(-\)/;s/insertions?\(\+\), //;s/ deletions?\(-\)//&#39; | awk &#39;BEGIN {name=&quot;&quot;; files=0; insertions=0; deletions=0;} {if ($1 != name &amp;&amp; name != &quot;&quot;) { print name &quot;: &quot; files &quot; files changed, &quot; insertions &quot; insertions(+), &quot; deletions &quot; deletions(-), &quot; insertions-deletions &quot; net&quot;; files=0; insertions=0; deletions=0; name=$1; } name=$1; files+=$2; insertions+=$3; deletions+=$4} END {print name &quot;: &quot; files &quot; files changed, &quot; insertions &quot; insertions(+), &quot; deletions &quot; deletions(-), &quot; insertions-deletions &quot; net&quot;;}&#39;
+$ git log --shortstat --pretty=&quot;%cE&quot; | sed &#39;s/\(.*\)@.*/\1/&#39; | grep -v &quot;^$&quot; | awk &#39;BEGIN &#123; line=&quot;&quot;; &#125; !/^ / &#123; if (line==&quot;&quot; || !match(line, $0)) &#123;line = $0 &quot;,&quot; line &#125;&#125; /^ / &#123; print line &quot; # &quot; $0; line=&quot;&quot;&#125;&#39; | sort | sed -E &#39;s/# //;s/ files? changed,//;s/([0-9]+) ([0-9]+ deletion)/\1 0 insertions\(+\), \2/;s/\(\+\)$/\(\+\), 0 deletions\(-\)/;s/insertions?\(\+\), //;s/ deletions?\(-\)//&#39; | awk &#39;BEGIN &#123;name=&quot;&quot;; files=0; insertions=0; deletions=0;&#125; &#123;if ($1 != name &amp;&amp; name != &quot;&quot;) &#123; print name &quot;: &quot; files &quot; files changed, &quot; insertions &quot; insertions(+), &quot; deletions &quot; deletions(-), &quot; insertions-deletions &quot; net&quot;; files=0; insertions=0; deletions=0; name=$1; &#125; name=$1; files+=$2; insertions+=$3; deletions+=$4&#125; END &#123;print name &quot;: &quot; files &quot; files changed, &quot; insertions &quot; insertions(+), &quot; deletions &quot; deletions(-), &quot; insertions-deletions &quot; net&quot;;&#125;&#39;
 
 # 统计所有邮箱前缀的增删行数 -中文版
-$ git log --shortstat --pretty=&quot;%cE&quot; | sed &#39;s/\(.*\)@.*/\1/&#39; | grep -v &quot;^$&quot; | awk &#39;BEGIN { line=&quot;&quot;; } !/^ / { if (line==&quot;&quot; || !match(line, $0)) {line = $0 &quot;,&quot; line }} /^ / { print line &quot; # &quot; $0; line=&quot;&quot;}&#39; | sort | sed -E &#39;s/# //;s/ files? changed,//;s/([0-9]+) ([0-9]+ deletion)/\1 0 insertions\(+\), \2/;s/\(\+\)$/\(\+\), 0 deletions\(-\)/;s/insertions?\(\+\), //;s/ deletions?\(-\)//&#39; | awk &#39;BEGIN {name=&quot;&quot;; files=0; insertions=0; deletions=0;} {if ($1 != name &amp;&amp; name != &quot;&quot;) { print name &quot;: &quot; files &quot; 个文件被改变, &quot; insertions &quot; 行被插入(+), &quot; deletions &quot; 行被删除(-), &quot; insertions-deletions &quot; 行剩余&quot;; files=0; insertions=0; deletions=0; name=$1; } name=$1; files+=$2; insertions+=$3; deletions+=$4} END {print name &quot;: &quot; files &quot; 个文件被改变, &quot; insertions &quot; 行被插入(+), &quot; deletions &quot; 行被删除(-), &quot; insertions-deletions &quot; 行剩余&quot;;}&#39;
+$ git log --shortstat --pretty=&quot;%cE&quot; | sed &#39;s/\(.*\)@.*/\1/&#39; | grep -v &quot;^$&quot; | awk &#39;BEGIN &#123; line=&quot;&quot;; &#125; !/^ / &#123; if (line==&quot;&quot; || !match(line, $0)) &#123;line = $0 &quot;,&quot; line &#125;&#125; /^ / &#123; print line &quot; # &quot; $0; line=&quot;&quot;&#125;&#39; | sort | sed -E &#39;s/# //;s/ files? changed,//;s/([0-9]+) ([0-9]+ deletion)/\1 0 insertions\(+\), \2/;s/\(\+\)$/\(\+\), 0 deletions\(-\)/;s/insertions?\(\+\), //;s/ deletions?\(-\)//&#39; | awk &#39;BEGIN &#123;name=&quot;&quot;; files=0; insertions=0; deletions=0;&#125; &#123;if ($1 != name &amp;&amp; name != &quot;&quot;) &#123; print name &quot;: &quot; files &quot; 个文件被改变, &quot; insertions &quot; 行被插入(+), &quot; deletions &quot; 行被删除(-), &quot; insertions-deletions &quot; 行剩余&quot;; files=0; insertions=0; deletions=0; name=$1; &#125; name=$1; files+=$2; insertions+=$3; deletions+=$4&#125; END &#123;print name &quot;: &quot; files &quot; 个文件被改变, &quot; insertions &quot; 行被插入(+), &quot; deletions &quot; 行被删除(-), &quot; insertions-deletions &quot; 行剩余&quot;;&#125;&#39;
 
 # 统计所有作者增删行数 --英文版
-$ git log --format=&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author=&quot;$name&quot; --pretty=tformat: --numstat | awk &#39;{ add += $1; subs += $2; loc += $1 - $2 } END { printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc }&#39; -; done
+$ git log --format=&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author=&quot;$name&quot; --pretty=tformat: --numstat | awk &#39;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -; done
 
 # 统计所有作者增删行数 --中文版
-$ git log --format=&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author=&quot;$name&quot; --pretty=tformat: --numstat | awk &#39;{ add += $1; subs += $2; loc += $1 - $2 } END { printf &quot;添加行数: %s, 删除行数: %s, 总行数: %s\n&quot;, add, subs, loc }&#39; -; done</code></pre>
+$ git log --format=&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author=&quot;$name&quot; --pretty=tformat: --numstat | awk &#39;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;添加行数: %s, 删除行数: %s, 总行数: %s\n&quot;, add, subs, loc &#125;&#39; -; done</code></pre>
 <h2 id="git-log-说明"><a href="#git-log-说明" class="headerlink" title="git log 说明"></a>git log 说明</h2><blockquote>
 <p>git log 参数说明：<br><code>--</code>author   指定作者<br><code>--</code>stat   显示每次更新的文件修改统计信息，会列出具体文件列表<br><code>--</code>shortstat    统计每个commit 的文件修改行数，包括增加，删除，但不列出文件列表：<br><code>--</code>numstat   统计每个commit 的文件修改行数，包括增加，删除，并列出文件列表：</p>
 </blockquote>

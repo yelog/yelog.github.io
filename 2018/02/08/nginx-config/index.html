@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-nginx-config" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-linux/nginx配置记录" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">nginx配置记录</h1>
     
@@ -1523,12 +1523,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2019-09-25 16:29:48'>2018-02-08 09:19</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:27'>2018-02-08 09:19</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:207</span>
+        <span>字数:211</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1558,7 +1558,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#启用https"><span class="toc-text">启用https</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-购买免费证书"><span class="toc-text">1.购买免费证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-补全证书信息"><span class="toc-text">2.补全证书信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-下载并配置"><span class="toc-text">3.下载并配置</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E7%94%A8https"><span class="toc-text">启用https</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%B4%AD%E4%B9%B0%E5%85%8D%E8%B4%B9%E8%AF%81%E4%B9%A6"><span class="toc-text">1.购买免费证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%A1%A5%E5%85%A8%E8%AF%81%E4%B9%A6%E4%BF%A1%E6%81%AF"><span class="toc-text">2.补全证书信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%8B%E8%BD%BD%E5%B9%B6%E9%85%8D%E7%BD%AE"><span class="toc-text">3.下载并配置</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1579,7 +1579,7 @@
 <h3 id="3-下载并配置"><a href="#3-下载并配置" class="headerlink" title="3.下载并配置"></a>3.下载并配置</h3><p>选择下载 证书for nginx<br><img src="http://img.saodiyang.com/FnMUOU4IZY2ZbMZcqggp4v7JHtej.png" alt="下载证书"></p>
 <p>上面这个页面有相关的配置信息，下面简单介绍：</p>
 <p>① 将下载文件中的 <code>*.pem</code>、<code>*.key</code>, 拷贝到 nginx 目录下 的 <code>cert</code> , 当然也可以是其他目录<br>② 修改 <code>nginx.conf</code></p>
-<pre><code class="conf">server {
+<pre><code class="conf">server &#123;
       listen       443 ssl;
       server_name  xiangzhangshugongyi.com;
 
@@ -1592,7 +1592,7 @@
       ssl_ciphers  HIGH:!aNULL:!MD5;
       ssl_prefer_server_ciphers  on;
 
-      location / {
+      location / &#123;
           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
           proxy_set_header Host $http_host;
           proxy_set_header X-Forwarded-Proto https;
@@ -1602,8 +1602,8 @@
           proxy_read_timeout         240;
           # note, there is not SSL here! plain HTTP is used
           proxy_pass http://127.0.0.1:8080;
-      }
-  }</code></pre>
+      &#125;
+  &#125;</code></pre>
 <p>③ 重启 nginx，通过 证书绑定域名进行 https 访问到 服务器跑在 8080 的服务<br><img src="http://img.saodiyang.com/FtTXB9QIYoZOlPFKsGg-ImxbL58N.png" alt="通过https访问"></p>
 
       

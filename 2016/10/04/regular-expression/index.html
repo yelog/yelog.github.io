@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-regular-expression" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-tools/正则表达式详解" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">正则表达式详解</h1>
     
@@ -1525,12 +1525,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2019-05-21 10:52:43'>2016-10-04 09:41</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:27'>2016-10-04 09:41</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:4.7k</span>
+        <span>字数:4.8k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1560,7 +1560,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#本文目标"><span class="toc-text">本文目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简介及语法"><span class="toc-text">简介及语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#正则表达式是什么"><span class="toc-text">正则表达式是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用元字符"><span class="toc-text">常用元字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符转义"><span class="toc-text">字符转义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重复"><span class="toc-text">重复</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符类"><span class="toc-text">字符类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分支条件"><span class="toc-text">分支条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分组"><span class="toc-text">分组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反义"><span class="toc-text">反义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后向引用"><span class="toc-text">后向引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#零宽断言"><span class="toc-text">零宽断言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#负向零宽断言"><span class="toc-text">负向零宽断言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注释"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#贪婪与懒惰"><span class="toc-text">贪婪与懒惰</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他元字符"><span class="toc-text">其他元字符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式常用实例"><span class="toc-text">正则表达式常用实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#账号-密码"><span class="toc-text">账号&#x2F;密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串校验"><span class="toc-text">字符串校验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#手机号"><span class="toc-text">手机号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IP地址"><span class="toc-text">IP地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EMAIL地址"><span class="toc-text">EMAIL地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#域名"><span class="toc-text">域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#身份证"><span class="toc-text">身份证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数字类校验"><span class="toc-text">数字类校验</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E7%9B%AE%E6%A0%87"><span class="toc-text">本文目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B%E5%8F%8A%E8%AF%AD%E6%B3%95"><span class="toc-text">简介及语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">正则表达式是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%85%83%E5%AD%97%E7%AC%A6"><span class="toc-text">常用元字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E8%BD%AC%E4%B9%89"><span class="toc-text">字符转义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%A4%8D"><span class="toc-text">重复</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E7%B1%BB"><span class="toc-text">字符类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E6%9D%A1%E4%BB%B6"><span class="toc-text">分支条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%BB%84"><span class="toc-text">分组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E4%B9%89"><span class="toc-text">反义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E5%90%91%E5%BC%95%E7%94%A8"><span class="toc-text">后向引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%AE%BD%E6%96%AD%E8%A8%80"><span class="toc-text">零宽断言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%9F%E5%90%91%E9%9B%B6%E5%AE%BD%E6%96%AD%E8%A8%80"><span class="toc-text">负向零宽断言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%AA%E5%A9%AA%E4%B8%8E%E6%87%92%E6%83%B0"><span class="toc-text">贪婪与懒惰</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%85%83%E5%AD%97%E7%AC%A6"><span class="toc-text">其他元字符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B8%B8%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="toc-text">正则表达式常用实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A6%E5%8F%B7-%E5%AF%86%E7%A0%81"><span class="toc-text">账号&#x2F;密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%A1%E9%AA%8C"><span class="toc-text">字符串校验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E5%8F%B7"><span class="toc-text">手机号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IP%E5%9C%B0%E5%9D%80"><span class="toc-text">IP地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EMAIL%E5%9C%B0%E5%9D%80"><span class="toc-text">EMAIL地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D"><span class="toc-text">域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BA%AB%E4%BB%BD%E8%AF%81"><span class="toc-text">身份证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%B1%BB%E6%A0%A1%E9%AA%8C"><span class="toc-text">数字类校验</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1626,7 +1626,7 @@
 <p>如果你想查找元字符本身的话，比如你查找 <code>.</code> ,或者 <code>*</code> ,就出现了问题：你没办法指定它们，因为它们会被解释成别的意思。这时你就得使用 <code>\</code> 来取消这些字符的特殊意义。因此，你应该使用 <code>\.</code> 和 <code>\*</code> 。当然，要查找 <code>\</code> 本身，你也得用 <code>\\</code> .<br>例如： <code>deerchao\.net</code> 匹配 <strong>deerchao.net</strong>，<code>C:\\Windows</code> 匹配 <strong>C:\Windows</strong> 。</p>
 </blockquote>
 <h3 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h3><blockquote>
-<p>你已经看过了前面的 <code>*</code> , <code>+</code> , <code>{2}</code> , <code>{5,12}</code> 这几个匹配重复的方式了。下面是正则表达式中所有的限定符(指定数量的代码，例如*,{5,12}等)</p>
+<p>你已经看过了前面的 <code>*</code> , <code>+</code> , <code>&#123;2&#125;</code> , <code>&#123;5,12&#125;</code> 这几个匹配重复的方式了。下面是正则表达式中所有的限定符(指定数量的代码，例如*,{5,12}等)</p>
 </blockquote>
 <table>
 <thead>
@@ -1648,15 +1648,15 @@
 <td align="left">重复零次或一次</td>
 </tr>
 <tr>
-<td align="left"><code>{n}</code></td>
+<td align="left"><code>&#123;n&#125;</code></td>
 <td align="left">重复n次</td>
 </tr>
 <tr>
-<td align="left"><code>{n,}</code></td>
+<td align="left"><code>&#123;n,&#125;</code></td>
 <td align="left">重复n次或更多次</td>
 </tr>
 <tr>
-<td align="left"><code>{n,m}</code></td>
+<td align="left"><code>&#123;n,m&#125;</code></td>
 <td align="left">重复n到m次</td>
 </tr>
 </tbody></table>
@@ -1664,13 +1664,13 @@
 <p>下面是一些重复的示例：<br><code>Windows\d+</code> 匹配Windows后面跟1个或更多数字<br><code>^\w+</code> 匹配一行的第一个单词(或整个字符串的第一个单词，具体匹配哪个意思得看选项设置)</p>
 </blockquote>
 <h3 id="字符类"><a href="#字符类" class="headerlink" title="字符类"></a>字符类</h3><blockquote>
-<p>要想查找数字，字母或数字，空白是很简单的，因为已经有了对应这些字符集合的元字符，但是如果你想匹配没有预定义元字符的字符集合(比如元音字母a,e,i,o,u),应该怎么办？<br>很简单，你只需要在方括号里列出它们就行了，像 <code>[aeiou]</code> 就匹配任何一个英文元音字母， <code>[.?!]</code> 匹配标点符号(.或?或!)。<br>我们也可以轻松地指定一个字符范围，像 <code>[0-9]</code> 代表的含意与 <code>\d</code> 就是完全一致的：一位数字；同理[a-z0-9A-Z_]也完全等同于 <code>\w</code> （如果只考虑英文的话）。<br>下面是一个更复杂的表达式： <code>\(?0\d{2}[) -]?\d{8}</code> 。<br>这个表达式可以匹配几种格式的电话号码，像(010)88886666，或022-22334455，或02912345678等。我们对它进行一些分析吧：首先是一个转义字符(,它能出现0次或1次(?),然后是一个0，后面跟着2个数字(\d{2})，然后是)或-或空格中的一个，它出现1次或不出现(?)，最后是8个数字(\d{8})。</p>
+<p>要想查找数字，字母或数字，空白是很简单的，因为已经有了对应这些字符集合的元字符，但是如果你想匹配没有预定义元字符的字符集合(比如元音字母a,e,i,o,u),应该怎么办？<br>很简单，你只需要在方括号里列出它们就行了，像 <code>[aeiou]</code> 就匹配任何一个英文元音字母， <code>[.?!]</code> 匹配标点符号(.或?或!)。<br>我们也可以轻松地指定一个字符范围，像 <code>[0-9]</code> 代表的含意与 <code>\d</code> 就是完全一致的：一位数字；同理[a-z0-9A-Z_]也完全等同于 <code>\w</code> （如果只考虑英文的话）。<br>下面是一个更复杂的表达式： <code>\(?0\d&#123;2&#125;[) -]?\d&#123;8&#125;</code> 。<br>这个表达式可以匹配几种格式的电话号码，像(010)88886666，或022-22334455，或02912345678等。我们对它进行一些分析吧：首先是一个转义字符(,它能出现0次或1次(?),然后是一个0，后面跟着2个数字(\d{2})，然后是)或-或空格中的一个，它出现1次或不出现(?)，最后是8个数字(\d{8})。</p>
 </blockquote>
 <h3 id="分支条件"><a href="#分支条件" class="headerlink" title="分支条件"></a>分支条件</h3><blockquote>
-<p>正则表达式里的分枝条件指的是有几种规则，如果满足其中任意一种规则都应该当成匹配，具体方法是用|把不同的规则分隔开。<br>示例： <code>0\d{2}-\d{8}|0\d{3}-\d{7}</code><br>这个表达式匹配3位区号的电话号码，其中区号可以用小括号括起来，也可以不用，区号与本地号间可以用连字号或空格间隔，也可以没有间隔。你可以试试用分枝条件把这个表达式扩展成也支持4位区号的。<br>示例： <code>\d{5}-\d{4}|\d{5}</code><br>这个表达式用于匹配美国的邮政编码。美国邮编的规则是5位数字，或者用连字号间隔的9位数字。之所以要给出这个示例是因为它能说明一个问题：<strong>使用分枝条件时，要注意各个条件的顺序</strong>。如果你把它改成 <code>\d{5}|\d{5}-\d{4}</code> 的话，那么就只会匹配5位的邮编(以及9位邮编的前5位)。原因是匹配分枝条件时，将会从左到右地测试每个条件，如果满足了某个分枝的话，就不会去再管其它的条件了。</p>
+<p>正则表达式里的分枝条件指的是有几种规则，如果满足其中任意一种规则都应该当成匹配，具体方法是用|把不同的规则分隔开。<br>示例： <code>0\d&#123;2&#125;-\d&#123;8&#125;|0\d&#123;3&#125;-\d&#123;7&#125;</code><br>这个表达式匹配3位区号的电话号码，其中区号可以用小括号括起来，也可以不用，区号与本地号间可以用连字号或空格间隔，也可以没有间隔。你可以试试用分枝条件把这个表达式扩展成也支持4位区号的。<br>示例： <code>\d&#123;5&#125;-\d&#123;4&#125;|\d&#123;5&#125;</code><br>这个表达式用于匹配美国的邮政编码。美国邮编的规则是5位数字，或者用连字号间隔的9位数字。之所以要给出这个示例是因为它能说明一个问题：<strong>使用分枝条件时，要注意各个条件的顺序</strong>。如果你把它改成 <code>\d&#123;5&#125;|\d&#123;5&#125;-\d&#123;4&#125;</code> 的话，那么就只会匹配5位的邮编(以及9位邮编的前5位)。原因是匹配分枝条件时，将会从左到右地测试每个条件，如果满足了某个分枝的话，就不会去再管其它的条件了。</p>
 </blockquote>
 <h3 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h3><blockquote>
-<p>重复单个字符，直接在字符后面加上限定符就行了。但如果想要重复多个字符，我们可以用小括号来指定 <strong>子表达式</strong>(也叫作<strong>分组</strong>)。<br><code>(\d{1,3}\.){3}\d{1,3}</code> 是一个简单的IP地址匹配表达式。要理解这个表达式，请按下列顺序分析它： <code>\d{1,3}</code> 匹配1到3位的数字， <code>(\d{1,3}\.){3}</code> 匹配三位数字加上一个英文句号(这个整体也就是这个分组)重复3次，最后再加上一个一到三位的数字 <code>(\d{1,3})</code> 。<br>不幸的是，它也将匹配 <em>256.300.888.999</em> 这种不可能存在的IP地址。我们只能使用冗长的分组，选择，字符串来描述一个 <strong>正确的IP地址：</strong> <code>((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)</code></p>
+<p>重复单个字符，直接在字符后面加上限定符就行了。但如果想要重复多个字符，我们可以用小括号来指定 <strong>子表达式</strong>(也叫作<strong>分组</strong>)。<br><code>(\d&#123;1,3&#125;\.)&#123;3&#125;\d&#123;1,3&#125;</code> 是一个简单的IP地址匹配表达式。要理解这个表达式，请按下列顺序分析它： <code>\d&#123;1,3&#125;</code> 匹配1到3位的数字， <code>(\d&#123;1,3&#125;\.)&#123;3&#125;</code> 匹配三位数字加上一个英文句号(这个整体也就是这个分组)重复3次，最后再加上一个一到三位的数字 <code>(\d&#123;1,3&#125;)</code> 。<br>不幸的是，它也将匹配 <em>256.300.888.999</em> 这种不可能存在的IP地址。我们只能使用冗长的分组，选择，字符串来描述一个 <strong>正确的IP地址：</strong> <code>((2[0-4]\d|25[0-5]|[01]?\d\d?)\.)&#123;3&#125;(2[0-4]\d|25[0-5]|[01]?\d\d?)</code></p>
 </blockquote>
 <h3 id="反义"><a href="#反义" class="headerlink" title="反义"></a>反义</h3><blockquote>
 <p>有时需要查找不属于某个能简单定义的字符类的字符。比如想查找除了数字以外，其它任意字符都行的情况，这时需要用到反义：</p>
@@ -1714,10 +1714,10 @@
 <p>使用小括号指定一个子表达式后，<strong>匹配这个子表达式</strong> 的文本(也就是此分组捕获的内容)可以在表达式或其它程序中作进一步的处理。默认情况下，每个分组会自动拥有一个 <strong>组号</strong>，规则是：从左向右，以分组的左括号为标志，第一个出现的分组的组号为1，第二个为2，以此类推。<br> <strong>后向引用</strong> 用于重复搜索前面某个分组匹配的文本。<br>示例： <code>\b(\w+)\b\s+\1\b</code> 可以用来匹配重复的单词，像go go, 或者kitty kitty。这个表达式首先是一个单词，也就是单词开始处和结束处之间的多于一个的字母或数字 <code>\b(\w+)\b</code> ，这个单词会被捕获到编号为1的分组中，然后是1个或几个空白符<code>\s+</code>，最后是分组1中捕获的内容（也就是前面匹配的那个单词） <code>\1</code> 。<br>你也可以自己指定子表达式的 <strong>组名</strong>.要指定一个子表达式的组名，请使用这样的语法： <code>(?&lt;Word&gt;\w+)</code> (或者把尖括号换成 <code>&#39;</code> 也行： <code>(?&#39;Word&#39;\w+))</code>,这样就把<code>\w+</code>的组名指定为 <strong>Word</strong> 了。要反向引用这个分组捕获的内容，你可以使用 <code>\k&lt;Word&gt;</code> ,所以上一个示例也可以写成这样： <code>\b(?&lt;Word&gt;\w+)\b\s+\k&lt;Word&gt;\b</code> 。</p>
 </blockquote>
 <h3 id="零宽断言"><a href="#零宽断言" class="headerlink" title="零宽断言"></a>零宽断言</h3><blockquote>
-<p>接下来的四个用于查找在某些内容(但并不包括这些内容)之前或之后的东西，也就是说它们像\b,^,$那样用于指定一个位置，这个位置应该满足一定的条件(即断言)，因此它们也被称为 <strong>零宽断言</strong>。<br><code>(?=exp)</code> 也叫 <strong>零宽度正预测先行断言</strong>，它断言自身出现的位置的后面能匹配表达式exp。比如<code>\b\w+(?=ing\b)</code>，匹配以ing结尾的单词的前面部分(除了ing以外的部分)，如查找 <em>I’m singing while you’re dancing.</em> 时，它会匹配 sing 和 danc 。<br><code>(?&lt;=exp)</code> 也叫 <strong>零宽度正回顾后发断言</strong> ，它断言自身出现的位置的前面能匹配表达式exp。比如 <code>(?&lt;=\bre)\w+\b</code> 会匹配以re开头的单词的后半部分(除了re以外的部分)，例如在查找 <em>reading a book</em> 时，它匹配ading。<br>假如你想要给一个很长的数字中每三位间加一个逗号(当然是从右边加起了)，你可以这样查找需要在前面和里面添加逗号的部分： <code>((?&lt;=\d)\d{3})+\b</code> ，用它对1234567890进行查找时结果是234567890。<br>下面这个示例同时使用了这两种断言： <code>(?&lt;=\s)\d+(?=\s)</code> 匹配以空白符间隔的数字( <strong>再次强调，不包括这些空白符</strong> )。</p>
+<p>接下来的四个用于查找在某些内容(但并不包括这些内容)之前或之后的东西，也就是说它们像\b,^,$那样用于指定一个位置，这个位置应该满足一定的条件(即断言)，因此它们也被称为 <strong>零宽断言</strong>。<br><code>(?=exp)</code> 也叫 <strong>零宽度正预测先行断言</strong>，它断言自身出现的位置的后面能匹配表达式exp。比如<code>\b\w+(?=ing\b)</code>，匹配以ing结尾的单词的前面部分(除了ing以外的部分)，如查找 <em>I’m singing while you’re dancing.</em> 时，它会匹配 sing 和 danc 。<br><code>(?&lt;=exp)</code> 也叫 <strong>零宽度正回顾后发断言</strong> ，它断言自身出现的位置的前面能匹配表达式exp。比如 <code>(?&lt;=\bre)\w+\b</code> 会匹配以re开头的单词的后半部分(除了re以外的部分)，例如在查找 <em>reading a book</em> 时，它匹配ading。<br>假如你想要给一个很长的数字中每三位间加一个逗号(当然是从右边加起了)，你可以这样查找需要在前面和里面添加逗号的部分： <code>((?&lt;=\d)\d&#123;3&#125;)+\b</code> ，用它对1234567890进行查找时结果是234567890。<br>下面这个示例同时使用了这两种断言： <code>(?&lt;=\s)\d+(?=\s)</code> 匹配以空白符间隔的数字( <strong>再次强调，不包括这些空白符</strong> )。</p>
 </blockquote>
 <h3 id="负向零宽断言"><a href="#负向零宽断言" class="headerlink" title="负向零宽断言"></a>负向零宽断言</h3><blockquote>
-<p>前面我们提到过怎么查找不是某个字符或不在某个字符类里的字符的方法(反义)。但是如果我们只是想要确保某个字符没有出现，但并不想去匹配它时怎么办？例如，如果我们想查找这样的单词–它里面出现了字母q,但是q后面跟的不是字母u,我们可以尝试这样：<br><code>\b\w*q[^u]\w*\b</code> 匹配 <em>包含后面不是字母u的字母q的单词</em> 。但是如果多做测试(或者你思维足够敏锐，直接就观察出来了)，你会发现，如果q出现在单词的结尾的话，像Iraq,Benq，这个表达式就会出错。这是因为[^u]总要匹配一个字符，所以如果q是单词的最后一个字符的话，后面的[^u]将会匹配q后面的单词分隔符(可能是空格，或者是句号或其它的什么)，后面的 <code>\w*\b</code> 将会匹配下一个单词，于是 <code>\b\w*q[^u]\w*\b</code> 就能匹配整个Iraq fighting。<strong>负向零宽断言</strong> 能解决这样的问题，因为它只匹配一个位置，并不消费任何字符。现在，我们可以这样来解决这个问题： <code>\b\w*q(?!u)\w*\b</code> 。<br><strong>零宽度负预测先行断言</strong>(?!exp)，断言此位置的后面不能匹配表达式exp。例如： <code>\d{3}(?!\d)</code> 匹配三位数字，而且这三位数字的后面不能是数字； <code>\b((?!abc)\w)+\b</code> 匹配不包含连续字符串abc的单词。<br>同理，我们可以用(?&lt;!exp),<strong>零宽度负回顾后发断言来断言</strong> 此位置的前面不能匹配表达式exp：(?&lt;![a-z])\d{7}匹配前面不是小写字母的七位数字。<br>一个更复杂的示例：<code>(?&lt;=&lt;(\w+)&gt;).*(?=&lt;\/\1&gt;)</code> 匹配不包含属性的简单HTML标签内里的内容。<code>(?&lt;=&lt;(\w+)&gt;)</code> 指定了这样的 <strong>前缀</strong>：被尖括号括起来的单词(比如可能是<b>)，然后是. <code>*</code> (任意的字符串),最后是一个 <strong>后缀</strong> <code>(?=&lt;\/\1&gt;)</code>。注意后缀里的 / ，它用到了前面提过的字符转义；\1则是一个反向引用，引用的正是捕获的第一组，前面的 <code>(\w+)</code> 匹配的内容，这样如果前缀实际上是<b>的话，后缀就是</b>了。整个表达式匹配的是<b>和</b>之间的内容(再次提醒，不包括前缀和后缀本身)。</p>
+<p>前面我们提到过怎么查找不是某个字符或不在某个字符类里的字符的方法(反义)。但是如果我们只是想要确保某个字符没有出现，但并不想去匹配它时怎么办？例如，如果我们想查找这样的单词–它里面出现了字母q,但是q后面跟的不是字母u,我们可以尝试这样：<br><code>\b\w*q[^u]\w*\b</code> 匹配 <em>包含后面不是字母u的字母q的单词</em> 。但是如果多做测试(或者你思维足够敏锐，直接就观察出来了)，你会发现，如果q出现在单词的结尾的话，像Iraq,Benq，这个表达式就会出错。这是因为[^u]总要匹配一个字符，所以如果q是单词的最后一个字符的话，后面的[^u]将会匹配q后面的单词分隔符(可能是空格，或者是句号或其它的什么)，后面的 <code>\w*\b</code> 将会匹配下一个单词，于是 <code>\b\w*q[^u]\w*\b</code> 就能匹配整个Iraq fighting。<strong>负向零宽断言</strong> 能解决这样的问题，因为它只匹配一个位置，并不消费任何字符。现在，我们可以这样来解决这个问题： <code>\b\w*q(?!u)\w*\b</code> 。<br><strong>零宽度负预测先行断言</strong>(?!exp)，断言此位置的后面不能匹配表达式exp。例如： <code>\d&#123;3&#125;(?!\d)</code> 匹配三位数字，而且这三位数字的后面不能是数字； <code>\b((?!abc)\w)+\b</code> 匹配不包含连续字符串abc的单词。<br>同理，我们可以用(?&lt;!exp),**零宽度负回顾后发断言来断言** 此位置的前面不能匹配表达式exp：(?&lt;![a-z])\d{7}匹配前面不是小写字母的七位数字。<br>一个更复杂的示例：<code>(?&lt;=&lt;(\w+)&gt;).*(?=&lt;\/\1&gt;)</code> 匹配不包含属性的简单HTML标签内里的内容。<code>(?&lt;=&lt;(\w+)&gt;)</code> 指定了这样的 **前缀**：被尖括号括起来的单词(比如可能是<b>)，然后是. <code>*</code> (任意的字符串),最后是一个 **后缀** <code>(?=&lt;\/\1&gt;)</code>。注意后缀里的 / ，它用到了前面提过的字符转义；\1则是一个反向引用，引用的正是捕获的第一组，前面的 <code>(\w+)</code> 匹配的内容，这样如果前缀实际上是<b>的话，后缀就是</b>了。整个表达式匹配的是<b>和</b>之间的内容(再次提醒，不包括前缀和后缀本身)。</p>
 </blockquote>
 <h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><blockquote>
 <p>小括号的另一种用途是通过语法(?#comment)来包含注释。例如：<code>2[0-4]\d(?#200-249)|25[0-5](?#250-255)|[01]?\d\d?(?#0-199)</code>。<br>要包含注释的话，最好是启用“忽略模式里的空白符”选项，这样在编写表达式时能任意的添加空格，Tab，换行，而实际使用时这些都将被忽略。启用这个选项后，在#后面到这一行结束的所有文本都将被当成注释忽略掉。例如，我们可以前面的一个表达式写成这样：<br>      <code>(?&lt;=</code>    # 断言要匹配的文本的前缀<br>      <code>&lt;(\w+)&gt;</code> # 查找尖括号括起来的字母或数字(即HTML/XML标签)<br>      <code>)</code>       # 前缀结束<br>      <code>.*</code>      # 匹配任意文本<br>      <code>(?=</code>     # 断言要匹配的文本的后缀<br>      <code>&lt;\/\1&gt;</code>  # 查找尖括号括起来的内容：前面是一个”/“，后面是先前捕获的标签<br>      <code>)</code>       # 后缀结束</p>
@@ -1745,11 +1745,11 @@
 <td align="left">重复0次或1次，但尽可能少重复</td>
 </tr>
 <tr>
-<td align="left"><code>{n,m}?</code></td>
+<td align="left"><code>&#123;n,m&#125;?</code></td>
 <td align="left">重复n到m次，但尽可能少重复</td>
 </tr>
 <tr>
-<td align="left"><code>{n,}?</code></td>
+<td align="left"><code>&#123;n,&#125;?</code></td>
 <td align="left">重复n次以上，但尽可能少重复</td>
 </tr>
 </tbody></table>
@@ -1825,7 +1825,7 @@
 <td align="left">当前搜索的开头</td>
 </tr>
 <tr>
-<td align="left"><code>\p{name}</code></td>
+<td align="left"><code>\p&#123;name&#125;</code></td>
 <td align="left">Unicode中命名为name的字符类，例如\p{IsGreek}</td>
 </tr>
 <tr>
@@ -1845,7 +1845,7 @@
 <td align="left">为表达式后面的部分改变处理选项</td>
 </tr>
 <tr>
-<td align="left"><a href="`(?(exp)yes|no)`">1</a></td>
+<td align="left"><a href="%60(?(exp)yes%7Cno)%60">1</a></td>
 <td align="left">把exp当作零宽正向先行断言，如果在这个位置能匹配，使用yes作为此组的表达式；否则使用no</td>
 </tr>
 <tr>
@@ -1853,7 +1853,7 @@
 <td align="left">同上，只是使用空表达式作为no</td>
 </tr>
 <tr>
-<td align="left"><a href="`(?(name)yes|no)`">2</a></td>
+<td align="left"><a href="%60(?(name)yes%7Cno)%60">2</a></td>
 <td align="left">如果命名为name的组捕获到了内容，使用yes作为表达式；否则使用no</td>
 </tr>
 <tr>
@@ -1863,19 +1863,19 @@
 </tbody></table>
 <blockquote>
 </blockquote>
-<h2 id="正则表达式常用实例"><a href="#正则表达式常用实例" class="headerlink" title="正则表达式常用实例"></a>正则表达式常用实例</h2><h3 id="账号-密码"><a href="#账号-密码" class="headerlink" title="账号/密码"></a>账号/密码</h3><pre><code class="java">帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线) = &quot;^[a-zA-Z][a-zA-Z0-9_]{4,15}$&quot;
-密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线) = &quot;^[a-zA-Z]\w{5,17}$&quot;
-强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间) = &quot;^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$&quot;</code></pre>
-<h3 id="字符串校验"><a href="#字符串校验" class="headerlink" title="字符串校验"></a>字符串校验</h3><pre><code class="java">汉字 = &quot;^[\u4e00-\u9fa5]{0,}$&quot;;
-英文和数字 = &quot;^[A-Za-z0-9]+$ 或 ^[A-Za-z0-9]{4,40}$&quot;;
-长度为3-20的所有字符 = &quot;^.{3,20}$&quot;；
+<h2 id="正则表达式常用实例"><a href="#正则表达式常用实例" class="headerlink" title="正则表达式常用实例"></a>正则表达式常用实例</h2><h3 id="账号-密码"><a href="#账号-密码" class="headerlink" title="账号/密码"></a>账号/密码</h3><pre><code class="java">帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线) = &quot;^[a-zA-Z][a-zA-Z0-9_]&#123;4,15&#125;$&quot;
+密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线) = &quot;^[a-zA-Z]\w&#123;5,17&#125;$&quot;
+强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间) = &quot;^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).&#123;8,10&#125;$&quot;</code></pre>
+<h3 id="字符串校验"><a href="#字符串校验" class="headerlink" title="字符串校验"></a>字符串校验</h3><pre><code class="java">汉字 = &quot;^[\u4e00-\u9fa5]&#123;0,&#125;$&quot;;
+英文和数字 = &quot;^[A-Za-z0-9]+$ 或 ^[A-Za-z0-9]&#123;4,40&#125;$&quot;;
+长度为3-20的所有字符 = &quot;^.&#123;3,20&#125;$&quot;；
 由26个英文字母组成的字符串 = &quot;^[A-Za-z]+$&quot;；
 由26个大写英文字母组成的字符串 = &quot;^[A-Z]+$&quot;；
 由26个小写英文字母组成的字符串 = &quot;^[a-z]+$&quot;；
 由数字和26个英文字母组成的字符串 = &quot;^[A-Za-z0-9]+$&quot;；
-由数字、26个英文字母或者下划线组成的字符串 = &quot;^\w+$ 或 ^\w{3,20}$&quot;；
+由数字、26个英文字母或者下划线组成的字符串 = &quot;^\w+$ 或 ^\w&#123;3,20&#125;$&quot;；
 中文、英文、数字包括下划线 = &quot;^[\u4E00-\u9FA5A-Za-z0-9_]+$&quot;；
-中文、英文、数字但不包括下划线等符号 = &quot;^[\u4E00-\u9FA5A-Za-z0-9]+$ 或 ^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$&quot;；
+中文、英文、数字但不包括下划线等符号 = &quot;^[\u4E00-\u9FA5A-Za-z0-9]+$ 或 ^[\u4E00-\u9FA5A-Za-z0-9]&#123;2,20&#125;$&quot;；
 禁止输入含有~的字符 = &quot;[^~\x22]+&quot;；</code></pre>
 <h3 id="手机号"><a href="#手机号" class="headerlink" title="手机号"></a>手机号</h3><pre><code class="java">/**
  * 手机号码
@@ -1883,39 +1883,39 @@
  * 联通：130,131,132,145,152,155,156,1709,171,176,185,186
  * 电信：133,134,153,1700,177,180,181,189
  */
-String MOBILE = &quot;^1(3[0-9]|4[57]|5[0-35-9]|7[01678]|8[0-9])\\d{8}$&quot;;
+String MOBILE = &quot;^1(3[0-9]|4[57]|5[0-35-9]|7[01678]|8[0-9])\\d&#123;8&#125;$&quot;;
 /**
  * 中国移动：China Mobile
  * 134,135,136,137,138,139,147,150,151,152,157,158,159,170,178,182,183,184,187,188
  */
-String CM = &quot;^1(3[4-9]|4[7]|5[0-27-9]|7[0]|7[8]|8[2-478])\\d{8}$&quot;;
+String CM = &quot;^1(3[4-9]|4[7]|5[0-27-9]|7[0]|7[8]|8[2-478])\\d&#123;8&#125;$&quot;;
 /**
  * 中国联通：China Unicom
  * 130,131,132,145,152,155,156,1709,171,176,185,186
  */
-String CU = &quot;^1(3[0-2]|4[5]|5[56]|709|7[1]|7[6]|8[56])\\d{8}$&quot;;
+String CU = &quot;^1(3[0-2]|4[5]|5[56]|709|7[1]|7[6]|8[56])\\d&#123;8&#125;$&quot;;
 /**
  * 中国电信：China Telecom
  * 133,134,153,1700,177,180,181,189
  */
-String CT = &quot;^1(3[34]|53|77|700|8[019])\\d{8}$&quot;;</code></pre>
-<h3 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h3><pre><code class="java">String IPREGEXP = &quot;((2[0-4]\d|25[0-5]|[01]?\d\d?)\.){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)&quot;;</code></pre>
+String CT = &quot;^1(3[34]|53|77|700|8[019])\\d&#123;8&#125;$&quot;;</code></pre>
+<h3 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h3><pre><code class="java">String IPREGEXP = &quot;((2[0-4]\d|25[0-5]|[01]?\d\d?)\.)&#123;3&#125;(2[0-4]\d|25[0-5]|[01]?\d\d?)&quot;;</code></pre>
 <h3 id="EMAIL地址"><a href="#EMAIL地址" class="headerlink" title="EMAIL地址"></a>EMAIL地址</h3><pre><code class="java">Email地址 = &quot;^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$&quot;;</code></pre>
-<h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><pre><code class="java">域名 = &quot;[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?&quot;;
+<h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><pre><code class="java">域名 = &quot;[a-zA-Z0-9][-a-zA-Z0-9]&#123;0,62&#125;(/.[a-zA-Z0-9][-a-zA-Z0-9]&#123;0,62&#125;)+/.?&quot;;
 InternetURL = &quot;[a-zA-z]+://[^\s]* 或 ^http://([\w-]+\.)+[\w-]+(/[\w-./?%&amp;=]*)?$&quot;</code></pre>
-<h3 id="身份证"><a href="#身份证" class="headerlink" title="身份证"></a>身份证</h3><pre><code class="java">身份证号(15位、18位数字) = &quot;^\d{15}|\d{18}$&quot;
-短身份证号码(数字、字母x结尾) = &quot;^([0-9]){7,18}(x|X)?$ 或 ^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$&quot;</code></pre>
+<h3 id="身份证"><a href="#身份证" class="headerlink" title="身份证"></a>身份证</h3><pre><code class="java">身份证号(15位、18位数字) = &quot;^\d&#123;15&#125;|\d&#123;18&#125;$&quot;
+短身份证号码(数字、字母x结尾) = &quot;^([0-9])&#123;7,18&#125;(x|X)?$ 或 ^\d&#123;8,18&#125;|[0-9x]&#123;8,18&#125;|[0-9X]&#123;8,18&#125;?$&quot;</code></pre>
 <h3 id="数字类校验"><a href="#数字类校验" class="headerlink" title="数字类校验"></a>数字类校验</h3><pre><code class="java">数字 = &quot;^[0-9]*$&quot;;
-n位的数字 = &quot;^\d{n}$&quot;;
-至少n位的数字 = &quot;^\d{n,}$&quot;;
-m-n位的数字 = &quot;^\d{m,n}$&quot;;
+n位的数字 = &quot;^\d&#123;n&#125;$&quot;;
+至少n位的数字 = &quot;^\d&#123;n,&#125;$&quot;;
+m-n位的数字 = &quot;^\d&#123;m,n&#125;$&quot;;
 零和非零开头的数字 = &quot;^(0|[1-9][0-9]*)$&quot;;
-非零开头的最多带两位小数的数字 = &quot;^([1-9][0-9]*)+(.[0-9]{1,2})?$&quot;;
-带1-2位小数的正数或负数 = &quot;^(\-)?\d+(\.\d{1,2})?$&quot;;
+非零开头的最多带两位小数的数字 = &quot;^([1-9][0-9]*)+(.[0-9]&#123;1,2&#125;)?$&quot;;
+带1-2位小数的正数或负数 = &quot;^(\-)?\d+(\.\d&#123;1,2&#125;)?$&quot;;
 正数、负数、和小数 = &quot;^(\-|\+)?\d+(\.\d+)?$&quot;;
-有两位小数的正实数 = &quot;^[0-9]+(.[0-9]{2})?$&quot;;
-有1~3位小数的正实数 = &quot;^[0-9]+(.[0-9]{1,3})?$&quot;;
-非零的正整数 = &quot;^[1-9]\d*$ 或 ^([1-9][0-9]*){1,3}$ 或 ^\+?[1-9][0-9]*$&quot;;
+有两位小数的正实数 = &quot;^[0-9]+(.[0-9]&#123;2&#125;)?$&quot;;
+有1~3位小数的正实数 = &quot;^[0-9]+(.[0-9]&#123;1,3&#125;)?$&quot;;
+非零的正整数 = &quot;^[1-9]\d*$ 或 ^([1-9][0-9]*)&#123;1,3&#125;$ 或 ^\+?[1-9][0-9]*$&quot;;
 非零的负整数 = &quot;^\-[1-9][]0-9&quot;*$&quot; 或 &quot;^-[1-9]\d*$&quot;;</code></pre>
 
       

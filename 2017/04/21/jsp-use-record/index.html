@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-jsp-use-record" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-front-end/JSP操作记录" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">JSP操作记录</h1>
     
@@ -1525,12 +1525,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2017-11-06 10:20:12'>2017-04-21 11:22</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:27'>2017-04-21 11:22</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:105</span>
+        <span>字数:117</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1560,7 +1560,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-text">问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#EL表达式失效"><span class="toc-text">EL表达式失效</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Map"><span class="toc-text">Map</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#遍历"><span class="toc-text">遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#取值"><span class="toc-text">取值</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-text">问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%A4%B1%E6%95%88"><span class="toc-text">EL表达式失效</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Map"><span class="toc-text">Map</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%81%8D%E5%8E%86"><span class="toc-text">遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%96%E5%80%BC"><span class="toc-text">取值</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1577,14 +1577,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="EL表达式失效"><a href="#EL表达式失效" class="headerlink" title="EL表达式失效"></a>EL表达式失效</h3><pre><code class="html">&lt;!-- jsp渲染器不识别el表达式，结果页面展示效果如下 --&gt;
-{person.id} {person.name}</code></pre>
+&#123;person.id&#125; &#123;person.name&#125;</code></pre>
 <p><strong>解决方法：</strong><br>在页面内加入下面代码即可</p>
 <pre><code class="html">&lt;%@ page isELIgnored=&quot;false&quot; %&gt;</code></pre>
-<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><pre><code class="html">&lt;c:forEach items=&quot;${map}&quot; var=&quot;entry&quot;&gt;  
-   &lt;c:out value=&quot;${entry.key}&quot; /&gt;  
-   &lt;c:out value=&quot;${entry.value}&quot; /&gt;  
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><pre><code class="html">&lt;c:forEach items=&quot;$&#123;map&#125;&quot; var=&quot;entry&quot;&gt;  
+   &lt;c:out value=&quot;$&#123;entry.key&#125;&quot; /&gt;  
+   &lt;c:out value=&quot;$&#123;entry.value&#125;&quot; /&gt;  
 &lt;/c:forEach&gt;  </code></pre>
-<h3 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h3><pre><code class="html">&lt;c:out value=&quot;${map[key]}&quot; /&gt;</code></pre>
+<h3 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h3><pre><code class="html">&lt;c:out value=&quot;$&#123;map[key]&#125;&quot; /&gt;</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

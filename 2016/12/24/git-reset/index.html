@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-git-reset" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-tools/Git之reset揭秘" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">Git之reset揭秘</h1>
     
@@ -1525,7 +1525,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2019-09-25 16:29:48'>2016-12-24 11:19</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:27'>2016-12-24 11:19</time>
         
     </div>
     <div class="article-meta">
@@ -1560,7 +1560,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#三棵树"><span class="toc-text">三棵树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEAD"><span class="toc-text">HEAD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#索引-Index"><span class="toc-text">索引(Index)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工作目录-Working-Directory"><span class="toc-text">工作目录(Working Directory)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工作流程"><span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重置的作用"><span class="toc-text">重置的作用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-移动-HEAD"><span class="toc-text">1.移动 HEAD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-更新索引-–mixed"><span class="toc-text">2.更新索引(–mixed)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-更新工作目录"><span class="toc-text">3.更新工作目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回顾"><span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过路径来重置"><span class="toc-text">通过路径来重置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#压缩"><span class="toc-text">压缩</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#checkout"><span class="toc-text">checkout</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#不带路径"><span class="toc-text">不带路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#带路径"><span class="toc-text">带路径</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E6%A3%B5%E6%A0%91"><span class="toc-text">三棵树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HEAD"><span class="toc-text">HEAD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95-Index"><span class="toc-text">索引(Index)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95-Working-Directory"><span class="toc-text">工作目录(Working Directory)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E7%BD%AE%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">重置的作用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%A7%BB%E5%8A%A8-HEAD"><span class="toc-text">1.移动 HEAD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9B%B4%E6%96%B0%E7%B4%A2%E5%BC%95-%E2%80%93mixed"><span class="toc-text">2.更新索引(–mixed)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%9B%B4%E6%96%B0%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95"><span class="toc-text">3.更新工作目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E9%A1%BE"><span class="toc-text">回顾</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E8%B7%AF%E5%BE%84%E6%9D%A5%E9%87%8D%E7%BD%AE"><span class="toc-text">通过路径来重置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9"><span class="toc-text">压缩</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#checkout"><span class="toc-text">checkout</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%B8%A6%E8%B7%AF%E5%BE%84"><span class="toc-text">不带路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E8%B7%AF%E5%BE%84"><span class="toc-text">带路径</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1635,7 +1635,7 @@ $ git ls-tree -r HEAD
 <p>现在我们想要对文件进行修改然后提交它。 我们将会经历同样的过程；首先在工作目录中修改文件。 我们称其为该文件的 <strong>v2</strong> 版本，并将它标记为红色。<br><img src="http://img.saodiyang.com/FoJPPHbaxpKomYmGALsLPgg1NlbZ.png" alt="编辑文件"><br>如果现在运行 <code>git status</code>，我们会看到文件显示在 “Changes not staged for commit,” 下面并被标记为红色，因为该条目在索引与工作目录之间存在不同。 接着我们运行 <code>git add</code> 来将它暂存到索引中。<br><img src="http://img.saodiyang.com/FuF8tzqKZfm6enCohAFGL5rSY8pR.png" alt="git add之后情况"><br>此时，由于索引和 HEAD 不同，若运行 <code>git status</code> 的话就会看到 “Changes to be committed” 下的该文件变为绿色 ——也就是说，现在预期的下一次提交与上一次提交不同。 最后，我们运行 <code>git commit</code> 来完成提交。<br><img src="http://img.saodiyang.com/Fvsca5WLZmAr_ApYX3-dHk312zw8.png" alt="git add之后情况"><br>现在运行 <code>git status</code> 会没有输出，因为三棵树又变得相同了。</p>
 <p>切换分支或克隆的过程也类似。 当检出一个分支时，它会修改 <strong>HEAD</strong> 指向新的分支引用，将 <strong>索引</strong> 填充为该次提交的快照，然后将 <strong>索引</strong> 的内容复制到 工作目录 中。</p>
 <h2 id="重置的作用"><a href="#重置的作用" class="headerlink" title="重置的作用"></a>重置的作用</h2><p>在以下情景中观察 <code>reset</code> 命令会更有意义。</p>
-<p>为了演示这些例子，假设我们再次修改了 <code>file.txt</code> 文件并第三次提交它。 现在的历史看起来是这样的：<br><img src="http://img.saodiyang.com/Ft27dwjZotq0XD5tYdVqc7tq-ibP.png" alt=""><br>让我们跟着 <code>reset</code> 看看它都做了什么。 它以一种简单可预见的方式直接操纵这三棵树。 它做了三个基本操作。</p>
+<p>为了演示这些例子，假设我们再次修改了 <code>file.txt</code> 文件并第三次提交它。 现在的历史看起来是这样的：<br><img src="http://img.saodiyang.com/Ft27dwjZotq0XD5tYdVqc7tq-ibP.png"><br>让我们跟着 <code>reset</code> 看看它都做了什么。 它以一种简单可预见的方式直接操纵这三棵树。 它做了三个基本操作。</p>
 <h3 id="1-移动-HEAD"><a href="#1-移动-HEAD" class="headerlink" title="1.移动 HEAD"></a>1.移动 HEAD</h3><p><code>reset</code> 做的第一件事是移动 HEAD 的指向。 这与改变 HEAD 自身不同（<code>checkout</code> 所做的）；<code>reset</code> 移动 HEAD 指向的分支。 这意味着如果 HEAD 设置为 <code>master</code> 分支（例如，你正在 <code>master</code> 分支上），运行 <code>git reset 9e5e64a</code> 将会使 <code>master</code> 指向 <code>9e5e64a</code>。<br><img src="http://img.saodiyang.com/FnlCclgtQ-6JbFSLYJ5aOzZCY7Re.png" alt="git reset --soft"><br>无论你调用了何种形式的带有一个提交的 <code>reset</code>，它首先都会尝试这样做。 使用 <code>reset --soft</code>，它将仅仅停在那儿。</p>
 <p>现在看一眼上图，理解一下发生的事情：它本质上是撤销了上一次 <code>git commit</code> 命令。 当你在运行 <code>git commit</code> 时，Git 会创建一个新的提交，并移动 HEAD 所指向的分支来使其指向该提交。 当你将它 <code>reset</code> 回 <code>HEAD~</code>（HEAD 的父结点）时，其实就是把该分支移动回原来的位置，而不会改变索引和工作目录。 现在你可以更新索引并再次运行 <code>git commit</code> 来完成 <code>git commit --amend</code> 所要做的事情了。</p>
 <h3 id="2-更新索引-–mixed"><a href="#2-更新索引-–mixed" class="headerlink" title="2.更新索引(–mixed)"></a>2.更新索引(–mixed)</h3><p>注意，如果你现在运行 <code>git status</code> 的话，就会看到新的 HEAD 和以绿色标出的它和索引之间的区别。</p>
@@ -1667,7 +1667,7 @@ $ git ls-tree -r HEAD
 <p>首先不同于 <code>reset --hard，checkout</code> 对工作目录是安全的，它会通过检查来确保不会将已更改的文件吹走。 其实它还更聪明一些。它会在工作目录中先试着简单合并一下，这样所有_还未修改过的_文件都会被更新。 而 <code>reset --hard</code> 则会不做检查就全面地替换所有东西。</p>
 <p>第二个重要的区别是如何更新 HEAD。 reset 会移动 HEAD 分支的指向，而 checkout 只会移动 HEAD 自身来指向另一个分支。</p>
 <p>例如，假设我们有 master 和 develop 分支，它们分别指向不同的提交；我们现在在 develop 上（所以 HEAD 指向它）。 如果我们运行 <code>git reset master</code>，那么 develop 自身现在会和 master 指向同一个提交。 而如果我们运行 <code>git checkout master</code> 的话，develop 不会移动，HEAD 自身会移动。 现在 HEAD 将会指向 master。</p>
-<p>所以，虽然在这两种情况下我们都移动 HEAD 使其指向了提交 A，但_做法_是非常不同的。 reset 会移动 HEAD 分支的指向，而 checkout 则移动 HEAD 自身。<br><img src="http://img.saodiyang.com/Fpp-EOuRWOiTBtBWkjrvBIGHAlGm.png" alt=""></p>
+<p>所以，虽然在这两种情况下我们都移动 HEAD 使其指向了提交 A，但_做法_是非常不同的。 reset 会移动 HEAD 分支的指向，而 checkout 则移动 HEAD 自身。<br><img src="http://img.saodiyang.com/Fpp-EOuRWOiTBtBWkjrvBIGHAlGm.png"></p>
 <h3 id="带路径"><a href="#带路径" class="headerlink" title="带路径"></a>带路径</h3><p>运行 <code>checkout</code> 的另一种方式就是指定一个文件路径，这会像 reset 一样不会移动 HEAD。 它就像 <code>git reset [branch] file</code> 那样用该次提交中的那个文件来更新索引，但是它也会覆盖工作目录中对应的文件。 它就像是 <code>git reset --hard [branch] file</code>（如果 reset 允许你这样运行的话）- 这样对工作目录并不安全，它也不会移动 HEAD。</p>
 <p>此外，同 <code>git reset</code> 和 <code>git add</code> 一样，<code>checkout</code> 也接受一个 –patch 选项，允许你根据选择一块一块地恢复文件内容。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>希望你现在熟悉并理解了 <code>reset</code> 命令，不过关于它和 <code>checkout</code> 之间的区别，你可能还是会有点困惑，毕竟不太可能记住不同调用的所有规则。</p>

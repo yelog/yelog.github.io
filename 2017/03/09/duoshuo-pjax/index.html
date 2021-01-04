@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-duoshuo-pjax" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-front-end/多说适配pjax" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">多说适配pjax</h1>
     
@@ -1525,12 +1525,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-05-23 21:15:00'>2017-03-09 19:50</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:28'>2017-03-09 19:50</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:217</span>
+        <span>字数:229</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1579,31 +1579,31 @@
         <p>最近开发3-hexo主题，由于主题使用的pjax，异步加载页面时多说会出现加载不到多说js的问题。</p>
 <p>多说加载代码如下：</p>
 <pre><code class="JavaScript">//加载多说
-function loadComment() {
-  duoshuoQuery = {short_name: $(&quot;.theme_duoshuo_domain&quot;).val()};
+function loadComment() &#123;
+  duoshuoQuery = &#123;short_name: $(&quot;.theme_duoshuo_domain&quot;).val()&#125;;
   var d = document, s = d.createElement(&#39;script&#39;);
   s.src = &#39;https://static.duoshuo.com/embed.js?t=&#39;+new Date().getTime();
   s.async = true; s.charset = &#39;UTF-8&#39;;
   (d.head || d.body).appendChild(s);
-}</code></pre>
-<p>当局部加载页面时，就会无法加载多说。<br>需要编写一个js方法，参考文档：(<a href="http://dev.duoshuo.com/docs/50b344447f32d30066000147" target="_blank" rel="noopener">http://dev.duoshuo.com/docs/50b344447f32d30066000147</a>)</p>
+&#125;</code></pre>
+<p>当局部加载页面时，就会无法加载多说。<br>需要编写一个js方法，参考文档：(<a target="_blank" rel="noopener" href="http://dev.duoshuo.com/docs/50b344447f32d30066000147">http://dev.duoshuo.com/docs/50b344447f32d30066000147</a>)</p>
 <pre><code class="JavaScript">/**
  * pjax后需要回调函数.加载多说
  */
-function pajx_loadDuodsuo(){
-  if(typeof duoshuoQuery ==&quot;undefined&quot;){
+function pajx_loadDuodsuo()&#123;
+  if(typeof duoshuoQuery ==&quot;undefined&quot;)&#123;
     loadComment();
-  } else {
+  &#125; else &#123;
     var dus=$(&quot;.ds-thread&quot;);
-    if($(dus).length==1){
+    if($(dus).length==1)&#123;
       var el = document.createElement(&#39;div&#39;);
       el.setAttribute(&#39;data-thread-key&#39;,$(dus).attr(&quot;data-thread-key&quot;));//必选参数
       el.setAttribute(&#39;data-url&#39;,$(dus).attr(&quot;data-url&quot;));
       DUOSHUO.EmbedThread(el);
       $(dus).html(el);
-    }
-  }
-}</code></pre>
+    &#125;
+  &#125;
+&#125;</code></pre>
 <p>在pjax:end中调用此方法即可。</p>
 
       

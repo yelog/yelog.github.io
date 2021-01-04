@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-git-master" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-tools/Git操作之高手过招" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">Git操作之高手过招</h1>
     
@@ -1525,7 +1525,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2019-05-21 10:49:20'>2016-12-23 10:59</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:28'>2016-12-23 10:59</time>
         
     </div>
     <div class="article-meta">
@@ -1560,7 +1560,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#最后一次commit信息写错了"><span class="toc-text">最后一次commit信息写错了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最后一次commit少添加一个文件"><span class="toc-text">最后一次commit少添加一个文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最后一次commit多添加一个文件"><span class="toc-text">最后一次commit多添加一个文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#移除add过的文件"><span class="toc-text">移除add过的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回退本地commit（还未push）"><span class="toc-text">回退本地commit（还未push）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回退本地commit（已经push）"><span class="toc-text">回退本地commit（已经push）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回退单个文件的历史版本"><span class="toc-text">回退单个文件的历史版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改提交历史中的author和email"><span class="toc-text">修改提交历史中的author和email</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#忽略已提交的文件（-iml）"><span class="toc-text">忽略已提交的文件（.iml）</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1commit%E4%BF%A1%E6%81%AF%E5%86%99%E9%94%99%E4%BA%86"><span class="toc-text">最后一次commit信息写错了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1commit%E5%B0%91%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="toc-text">最后一次commit少添加一个文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1commit%E5%A4%9A%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6"><span class="toc-text">最后一次commit多添加一个文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E9%99%A4add%E8%BF%87%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-text">移除add过的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E9%80%80%E6%9C%AC%E5%9C%B0commit%EF%BC%88%E8%BF%98%E6%9C%AApush%EF%BC%89"><span class="toc-text">回退本地commit（还未push）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E9%80%80%E6%9C%AC%E5%9C%B0commit%EF%BC%88%E5%B7%B2%E7%BB%8Fpush%EF%BC%89"><span class="toc-text">回退本地commit（已经push）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E9%80%80%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%E7%9A%84%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC"><span class="toc-text">回退单个文件的历史版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2%E4%B8%AD%E7%9A%84author%E5%92%8Cemail"><span class="toc-text">修改提交历史中的author和email</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%BD%E7%95%A5%E5%B7%B2%E6%8F%90%E4%BA%A4%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%88-iml%EF%BC%89"><span class="toc-text">忽略已提交的文件（.iml）</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1660,6 +1660,7 @@ $ find . -name &quot;*.iml&quot; | xargs rm -f</code></pre>
 <pre><code>
 ---
 持续更新中～～～</code></pre>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
     </div>

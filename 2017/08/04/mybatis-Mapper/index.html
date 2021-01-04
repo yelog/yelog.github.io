@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-mybatis-Mapper" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-database/Mybatis常用Mapper语句" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">Mybatis常用Mapper语句</h1>
     
@@ -1523,12 +1523,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-11-23 13:06:53'>2017-08-04 15:54</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:28'>2017-08-04 15:54</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:312</span>
+        <span>字数:348</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1558,7 +1558,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#插入"><span class="toc-text">插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新"><span class="toc-text">更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插入或更新"><span class="toc-text">插入或更新</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5"><span class="toc-text">插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0"><span class="toc-text">更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%88%96%E6%9B%B4%E6%96%B0"><span class="toc-text">插入或更新</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1576,21 +1576,21 @@
       
         <h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><pre><code class="sql">/* 简单插入 */
 &lt;insert id=&quot;insertOne&quot; parameterType=&quot;Person&quot;&gt;
-    insert into person (id, name, age) VALUES(#{id}, #{name}, #{age});
+    insert into person (id, name, age) VALUES(#&#123;id&#125;, #&#123;name&#125;, #&#123;age&#125;);
 &lt;/insert&gt;
 
 /* 插入并返回对象的主键（数据库序列） */
 &lt;insert id=&quot;insertOne&quot; parameterType=&quot;Person&quot; useGeneratedKeys=&quot;true&quot; keyProperty=&quot;id&quot;&gt;
-    insert into person (name, age) VALUES(#{name}, #{age});
+    insert into person (name, age) VALUES(#&#123;name&#125;, #&#123;age&#125;);
 &lt;/insert&gt;</code></pre>
 <h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><pre><code class="sql">/* 简单更新 */
 &lt;update id=&quot;updateName&quot;&gt;
-     update person set name = #{name} where id = #{id};
+     update person set name = #&#123;name&#125; where id = #&#123;id&#125;;
 &lt;/update&gt;
 
 /* 更新值并返回 */
 &lt;select id=&quot;updateAge&quot; parameterType=&quot;Person&quot;&gt;
-    update person set age = age + #{age} where id = #{id} returning age;
+    update person set age = age + #&#123;age&#125; where id = #&#123;id&#125; returning age;
 &lt;/select&gt;</code></pre>
 <h3 id="插入或更新"><a href="#插入或更新" class="headerlink" title="插入或更新"></a>插入或更新</h3><p>记录玩家在某种类型游戏下的统计记录：</p>
 <blockquote>
@@ -1605,23 +1605,23 @@
  set
    &quot;count&quot; = &quot;count&quot;+1
  where
-   type_id = #{typeId}
+   type_id = #&#123;typeId&#125;
  and
-   user_id = #{userId};
+   user_id = #&#123;userId&#125;;
  /*如果有记录，则noting；无记录，则插入*/
  insert into
    count_record(type_id, user_id, &quot;count&quot;)
    select
-     #{typeId}, #{userId}, 1
+     #&#123;typeId&#125;, #&#123;userId&#125;, 1
    where not exists
        (select
            *
         from
            count
         where
-           type_id = #{typeId}
+           type_id = #&#123;typeId&#125;
         and
-           user_id = #{userId});
+           user_id = #&#123;userId&#125;);
 &lt;/insert&gt;</code></pre>
 </li>
 <li><p>方式二</p>
@@ -1630,7 +1630,7 @@
  insert into
    count_record(type_id, user_id, &quot;count&quot;)
  VALUES
-   (#{typeId}, #{userId}, #{count})
+   (#&#123;typeId&#125;, #&#123;userId&#125;, #&#123;count&#125;)
  on
    conflict(type_id,user_id)
  do update set

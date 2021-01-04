@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-搭建dubbo+zookeeper平台" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-back-end/搭建dubbo-zookeeper平台" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">搭建dubbo+zookeeper平台</h1>
     
@@ -1525,12 +1525,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2019-09-25 16:29:48'>2017-09-25 16:29</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:27'>2017-09-25 16:29</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:947</span>
+        <span>字数:963</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1560,7 +1560,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一-搭建zookeeper"><span class="toc-text">一.搭建zookeeper</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-安装zkui（非必须）"><span class="toc-text">二.安装zkui（非必须）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-使用dubbo"><span class="toc-text">三.使用dubbo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最后"><span class="toc-text">最后</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E6%90%AD%E5%BB%BAzookeeper"><span class="toc-text">一.搭建zookeeper</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E5%AE%89%E8%A3%85zkui%EF%BC%88%E9%9D%9E%E5%BF%85%E9%A1%BB%EF%BC%89"><span class="toc-text">二.安装zkui（非必须）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E4%BD%BF%E7%94%A8dubbo"><span class="toc-text">三.使用dubbo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E"><span class="toc-text">最后</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1583,7 +1583,7 @@
 <h2 id="二-安装zkui（非必须）"><a href="#二-安装zkui（非必须）" class="headerlink" title="二.安装zkui（非必须）"></a>二.安装zkui（非必须）</h2><p>这个项目为 zookeeper 提供一个 web 的管理界面。当然我们也可以直接在zookeeper中使用命令查看，所以此步骤可以忽略</p>
 <p>在开始前需要安装 Java 环境、Maven 环境。</p>
 <ol>
-<li>到 <a href="https://github.com/DeemOpen/zkui" target="_blank" rel="noopener">zkui</a> 的项目中下载代码。<pre><code class="bash">git clone https://github.com/DeemOpen/zkui.git</code></pre>
+<li>到 <a target="_blank" rel="noopener" href="https://github.com/DeemOpen/zkui">zkui</a> 的项目中下载代码。<pre><code class="bash">git clone https://github.com/DeemOpen/zkui.git</code></pre>
 </li>
 <li>执行 <code>mvn clean install</code> 生成jar文件。</li>
 <li>将config.cfg复制到上一步生成的jar文件所在目录，然后修改配置文件中的zookeeper地址。</li>
@@ -1610,36 +1610,36 @@
 &lt;/dependency&gt;</code></pre>
 </li>
 <li><p>定义服务接口</p>
-<pre><code class="java">public interface IPersonService {
+<pre><code class="java">public interface IPersonService &#123;
  List&lt;Person&gt; listAll();
  Person getById(Integer id);
  Integer delById(Person person);
  Integer updatePerson(Person person);
-}</code></pre>
+&#125;</code></pre>
 </li>
 <li><p>定义服务实现类</p>
 <pre><code class="java">@Service
-public class PersonService implements IPersonService {
+public class PersonService implements IPersonService &#123;
 
  @Autowired
  PersonMapper personMapper;
 
- public List&lt;Person&gt; listAll() {
+ public List&lt;Person&gt; listAll() &#123;
      return personMapper.findAll();
- }
+ &#125;
 
- public Person getById(Integer id) {
+ public Person getById(Integer id) &#123;
      return personMapper.findOneById(id);
- }
+ &#125;
 
- public Integer delById(Person person) {
+ public Integer delById(Person person) &#123;
      return personMapper.del(person);
- }
+ &#125;
 
- public Integer updatePerson(Person person) {
+ public Integer updatePerson(Person person) &#123;
      return personMapper.update(person);
- }
-}</code></pre>
+ &#125;
+&#125;</code></pre>
 </li>
 <li><p>配置生产者，注册服务信息</p>
 <pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -1685,23 +1685,23 @@ public class PersonService implements IPersonService {
 </li>
 <li><p>调用远程服务<br>配置完成后，我们就可以像使用本地 bean 一样，使用 rpc 的 service；</p>
 <pre><code class="java">@Controller
-public class IndexController {
+public class IndexController &#123;
 
  @Autowired
  IPersonService personService;
 
  @RequestMapping(&quot;/index.html&quot;)
- public String index(Model model) {
+ public String index(Model model) &#123;
      RpcContext.getContext().setAttachment(&quot;index&quot;, &quot;1&quot;);//测试ThreadLocal
      List&lt;Person&gt; list = personService.listAll();
      model.addAttribute(&quot;command&quot;,list);
      return &quot;index&quot;;
- }
-}</code></pre>
+ &#125;
+&#125;</code></pre>
 </li>
 </ol>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>至此，单机运行的 rpc 服务已搭建完成。</p>
-<p>代码传送文 <a href="https://github.com/yelog/ssm" target="_blank" rel="noopener">ssm</a></p>
+<p>代码传送文 <a target="_blank" rel="noopener" href="https://github.com/yelog/ssm">ssm</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

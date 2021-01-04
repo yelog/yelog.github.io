@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-AngularJs" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-front-end/AngularJs快速入门" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">AngularJs快速入门</h1>
     
@@ -1523,12 +1523,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2017-11-06 10:20:12'>2017-03-04 08:40</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:27'>2017-03-04 08:40</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:239</span>
+        <span>字数:247</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1558,7 +1558,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表达式"><span class="toc-text">表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#表达式-1"><span class="toc-text">表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数字"><span class="toc-text">数字</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F-1"><span class="toc-text">表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97"><span class="toc-text">数字</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1578,11 +1578,11 @@
 <h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><p>AngularJS 使用 表达式 把数据绑定到 HTML。</p>
 <h3 id="表达式-1"><a href="#表达式-1" class="headerlink" title="表达式"></a>表达式</h3><p>AngularJS 表达式写在双大括号内：{{ expression }} 。<br>AngularJS 表达式把数据绑定到 HTML，这与 ng-bind 指令有异曲同工之妙。<br>AngularJS 将在表达式书写的位置”输出”数据。<br>AngularJS 表达式 很像 JavaScript 表达式：它们可以包含文字、运算符和变量。<br><strong>实例：</strong>  {{ 5 + 5 }}  或 {{ firstName + " " + lastName }}</p>
 <pre><code class="HTML">&lt;div ng-app=&quot;&quot;&gt;
-     &lt;p&gt;我的第一个表达式: {{ 5 + 5 }}&lt;/p&gt;
+     &lt;p&gt;我的第一个表达式: &#123;&#123; 5 + 5 &#125;&#125;&lt;/p&gt;
 &lt;/div&gt;</code></pre>
 <p><strong>效果</strong></p>
 <h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><pre><code class="HTML">&lt;div ng-app=&quot;&quot; ng-init=&quot;quantity=1;cost=5&quot;&gt;
-  &lt;p&gt;总价： {{ quantity * cost }}&lt;/p&gt;
+  &lt;p&gt;总价： &#123;&#123; quantity * cost &#125;&#125;&lt;/p&gt;
 &lt;/div&gt;</code></pre>
 
       

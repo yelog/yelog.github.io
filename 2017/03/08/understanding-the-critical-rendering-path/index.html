@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-understanding-the-critical-rendering-path" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-front-end/理解浏览器关键渲染路径-译" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">[译]理解浏览器关键渲染路径</h1>
     
@@ -1523,12 +1523,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2019-09-25 16:29:48'>2017-03-08 08:58</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:28'>2017-03-08 08:58</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.5k</span>
+        <span>字数:1.6k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1558,7 +1558,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#构建DOM树"><span class="toc-text">构建DOM树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构建CSSOM树"><span class="toc-text">构建CSSOM树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行JavaScript"><span class="toc-text">运行JavaScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建渲染树"><span class="toc-text">创建渲染树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成布局"><span class="toc-text">生成布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绘制页面"><span class="toc-text">绘制页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#整合所有"><span class="toc-text">整合所有</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E5%BB%BADOM%E6%A0%91"><span class="toc-text">构建DOM树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E5%BB%BACSSOM%E6%A0%91"><span class="toc-text">构建CSSOM树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E8%A1%8CJavaScript"><span class="toc-text">运行JavaScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%B8%B2%E6%9F%93%E6%A0%91"><span class="toc-text">创建渲染树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%B8%83%E5%B1%80"><span class="toc-text">生成布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%98%E5%88%B6%E9%A1%B5%E9%9D%A2"><span class="toc-text">绘制页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E5%90%88%E6%89%80%E6%9C%89"><span class="toc-text">整合所有</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -1607,15 +1607,15 @@
 <p>上面的 HTML 将会被解析成下面的DOM树<br><img src="http://img.saodiyang.com/Fq6vahHSu_NZGyeWGuhZ8dFmBS0O.png" alt="DOM树"><br>HTML的优点在于它不必等待整个页面加载完成才呈现页面，可以解析一部分，显示一部分。但是像CSS、JavaScript等其他资源会阻止页面渲染。</p>
 <h2 id="构建CSSOM树"><a href="#构建CSSOM树" class="headerlink" title="构建CSSOM树"></a>构建CSSOM树</h2><p>CSSOM（CSS Object Model） 是一个跟DOM相关的样式对象。它跟DOM的表示方法是相似的，但是不论显式声明还是隐式继承，每个节点都存在关联样式。</p>
 <p>In the style.css file from the document mentioned above, we have the folowing styles<br>在上面提到的html页面的<code>style.css</code>中的样式如下</p>
-<pre><code class="css">body { font-size: 18px; }
+<pre><code class="css">body &#123; font-size: 18px; &#125;
 
-header { color: plum; }  
-h1 { font-size: 28px; }
+header &#123; color: plum; &#125;  
+h1 &#123; font-size: 28px; &#125;
 
-main { color: firebrick; }  
-h2 { font-size: 20px; }
+main &#123; color: firebrick; &#125;  
+h2 &#123; font-size: 20px; &#125;
 
-footer { display: none; }  </code></pre>
+footer &#123; display: none; &#125;  </code></pre>
 <p>它会被构建成下面的CSSOM树<br><img src="http://img.saodiyang.com/FqMiZIUxvPBV4X-PnDFh6iGrdxy0.png" alt="CSSOM树"><br>CSS 被认为是 “渲染阻塞资源”，它意味着如果不首先完全解析资源，渲染树是无法构建的。CSS由于它的层叠继承的性质，不能像HTML一样解析一部分，显示一部分。定义在文档后面的样式会覆盖或改写之前定义的样式，因为在整个样式表都被解析之前，如果我们使用了在样式表中较早定义的样式，那错误的样式将被应用。这意味着CSS必须被全部解析之后，才能开始下一步。</p>
 <p>如果CSS文件适用于当前设备的话，仅仅只是会阻塞渲染。<code>&lt;link rel=&quot;stylesheet&quot;&gt;</code>标签可以使用<code>media</code>属性，用来指定特定样式宽度的特定媒体查询。</p>
 <p>举个例子，如果我们有一个包含媒体属性<code>orientation:landscape</code>的样式，我们使用纵向模式（portrait mode）查看页面，这个资源将不会阻塞渲染。</p>
@@ -1662,7 +1662,7 @@ footer { display: none; }  </code></pre>
 <li><strong>Layout</strong> - 基于HTML的元视窗标签，生成布局</li>
 <li><strong>Paint</strong> - 绘制网页<br>基于这些信息，我们可以知道如何优化关键渲染路径。</li>
 </ol>
-<p>原文： <a href="https://bitsofco.de/understanding-the-critical-rendering-path/" target="_blank" rel="noopener">Understanding the Critical Rendering Path</a></p>
+<p>原文： <a target="_blank" rel="noopener" href="https://bitsofco.de/understanding-the-critical-rendering-path/">Understanding the Critical Rendering Path</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

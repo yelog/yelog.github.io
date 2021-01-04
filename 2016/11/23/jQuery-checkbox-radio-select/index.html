@@ -45,7 +45,7 @@
 
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -459,7 +459,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="91">
-<input type="hidden" id="yelog_site_word_count" value="90.8k">
+<input type="hidden" id="yelog_site_word_count" value="91.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -889,14 +889,14 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,linux,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
         </a>
         
         <a  class="全部文章 运维 "
-           href="/2017/09/25/ascii-ansi-unicode-utf-8%EF%BC%89/"
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
            data-tag="encoding"
            data-author="" >
             <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-jQuery-checkbox-radio-select" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-front-end/jQuery之checkbox-radio-select操作" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">jQuery之checkbox|radio|select操作</h1>
     
@@ -1523,12 +1523,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2017-12-31 23:14:02'>2016-11-23 16:19</time>
+            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:27'>2016-11-23 16:19</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:614</span>
+        <span>字数:620</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1595,13 +1595,13 @@ $(&quot;input[type=checkbox]:not(:checked)&quot;).prop(&quot;checked&quot;,true)
 $(&quot;input[type=checkbox]:checkbox&quot;).prop(&quot;checked&quot;,false)     //都不选中
 
 //反选
-$(&quot;input[type=checkbox]&quot;).each(function(){
-    if($(this).prop(&quot;checked&quot;)){
+$(&quot;input[type=checkbox]&quot;).each(function()&#123;
+    if($(this).prop(&quot;checked&quot;))&#123;
         $(this).prop(&quot;checked&quot;,false);
-    }else{
+    &#125;else&#123;
         $(this).prop(&quot;checked&quot;,true);
-    }
-})</code></pre>
+    &#125;
+&#125;)</code></pre>
 <h2 id="radio"><a href="#radio" class="headerlink" title="radio"></a>radio</h2><pre><code class="html">&lt;input type=&#39;radio&#39; name=&#39;rank&#39; value=&#39;1&#39; /&gt;
 &lt;input type=&#39;radio&#39; name=&#39;rank&#39; value=&#39;2&#39; /&gt;
 &lt;input type=&#39;radio&#39; name=&#39;rank&#39; value=&#39;3&#39; /&gt;</code></pre>
