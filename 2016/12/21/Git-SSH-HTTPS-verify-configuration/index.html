@@ -307,6 +307,18 @@
                         <ul class="sub hide">
                             
                                 <li>
+                                    <div data-rel="工具<--->软件记录">
+                                        
+                                        软件记录
+                                        
+                                            <small>(5
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
                                     <div data-rel="工具<--->git">
                                         
                                         git
@@ -324,18 +336,6 @@
                                         hexo
                                         
                                             <small>(24
-                                                )</small>
-                                        
-                                    </div>
-                                    
-                                </li>
-                            
-                                <li>
-                                    <div data-rel="工具<--->软件记录">
-                                        
-                                        软件记录
-                                        
-                                            <small>(5
                                                 )</small>
                                         
                                     </div>
@@ -418,10 +418,6 @@
     
         
             
-        
-    
-        
-            
                 <li>
                     <div data-rel="运帷">
                         
@@ -431,6 +427,10 @@
                     </div>
                     
                 </li>
+            
+        
+    
+        
             
         
     
@@ -522,6 +522,22 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>3-hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>磁盘分区</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>活着</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>浏览器</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>运维</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -724,22 +740,6 @@
                 <i class="iconfont icon-tag"></i><a>zookeeper</a>
             </li>
         
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>活着</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>浏览器</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>磁盘分区</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>运维</a>
-            </li>
-        
     </div>
 
 </div>
@@ -929,7 +929,7 @@
         
         <a  class="全部文章 大前端 "
            href="/2017/09/21/bf-cache/"
-           data-tag="js,浏览器"
+           data-tag="浏览器,js"
            data-author="" >
             <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
             <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
@@ -1352,7 +1352,7 @@
         </a>
         
         <a  class="全部文章 工具 git "
-           href="/2016/12/21/Git-SSH-HTTPS-verify-configuration/"
+           href="/2016/12/21/git-ssh-https-verify-configuration/"
            data-tag="Git"
            data-author="" >
             <span class="post-title" title="Git之SSH与HTTPS免密码配置">Git之SSH与HTTPS免密码配置</span>
@@ -1496,7 +1496,7 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-tools/Git之SSH与HTTPS免密码配置" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-tools/git-ssh-https-verify-configuration" class="article article-type-post" itemscope itemprop="blogPost">
     
         <h1 class="article-title">Git之SSH与HTTPS免密码配置</h1>
     
@@ -1525,12 +1525,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-01-04 10:36:27'>2016-12-21 15:31</time>
+            发布时间 : <time class="date" title='最后更新: 2021-02-02 14:55:58'>2016-12-21 15:31</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:658</span>
+        <span>字数:655</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -1588,7 +1588,7 @@ config            id_rsa.pub</code></pre>
 $ ssh-keygen -t rsa -C &quot;xx@xx.com&quot;</code></pre>
 <p>首先 <code>ssh-keygen</code> 会确认密钥的存储位置和文件名（默认是 <code>.ssh/id_rsa</code>）,然后他会要求你输入两次密钥口令，留空即可。所以一般选用默认，全部回车即可。</p>
 <p>接下来我们登陆到GitHub上，右上角小头像-&gt;Setting-&gt;SSH and GPG keys中，点击new SSH key。<br><code>Title：</code>可以随便填写，但最好起的名字能让自己知道这个公钥是哪个设备的。<br><code>Key：</code>将上面生成的<code>.pub</code>文件中的所有内容复制到这里。<br>点击下面的Add SSH key即可。<br>然后你就会发现可以免密码访问了</p>
-<h3 id="Git服务器"><a href="#Git服务器" class="headerlink" title="Git服务器"></a>Git服务器</h3><p>如果服务端是自己搭建的git服务器，生成密钥公钥对的步骤是一样的。<br>然后将生成的 <code>.pub</code> 文件内容，导入到git服务器 <code>/home/git/.ssh/authorized_keys</code> 文件内，一行一个。<br>然后你就会发现git push 不再需要密码了<br>搭建git服务器和相关免登陆的详细步骤可参考我的另一篇 <a href="#">Post not found: set-up-git-server-on-vps</a></p>
+<h3 id="Git服务器"><a href="#Git服务器" class="headerlink" title="Git服务器"></a>Git服务器</h3><p>如果服务端是自己搭建的git服务器，生成密钥公钥对的步骤是一样的。<br>然后将生成的 <code>.pub</code> 文件内容，导入到git服务器 <code>/home/git/.ssh/authorized_keys</code> 文件内，一行一个。<br>然后你就会发现git push 不再需要密码了<br>搭建git服务器和相关免登陆的详细步骤可参考我的另一篇 <a href="/2016/10/22/set-up-git-server-on-vps/" title="搭建Git服务器">搭建Git服务器</a></p>
 <h2 id="HTTPS通信协议"><a href="#HTTPS通信协议" class="headerlink" title="HTTPS通信协议"></a>HTTPS通信协议</h2><p>上面讲了SSH方式的免密码，接下来讲一下越来越常用的HTTPS方式的免密码<br>新建文件并保存密码</p>
 <pre><code class="bash">$ touch ~/.git-credentials
 $ vim ~/.git-credentials</code></pre>
