@@ -995,6 +995,11 @@
   overflow: hidden;
   outline: none;
 }
+.nav-right .title-list nav a .post-title .search-keyword,
+.nav-right .title-list #local-search-result a .post-title .search-keyword {
+  color: #f00;
+  font-style: normal;
+}
 .nav-right .title-list nav a .post-date,
 .nav-right .title-list #local-search-result a .post-date {
   font-size: 15px;
