@@ -1,0 +1,2881 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>正则表达式详解 | 叶落阁</title>
+  <meta name="keywords" content=" regex ">
+  <meta name="description" content="正则表达式详解 | 叶落阁">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
+<meta property="og:type" content="website">
+<meta property="og:title" content="叶落阁">
+<meta property="og:url" content="http://yelog.org/README.html">
+<meta property="og:site_name" content="叶落阁">
+<meta property="og:description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+<meta property="article:published_time" content="2023-07-10T00:28:41.033Z">
+<meta property="article:modified_time" content="2023-07-10T00:28:41.033Z">
+<meta property="article:author" content="叶落阁">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oncj6b2vl.bkt.clouddn.com/Frg6VGOCjKJ8fdTYkekfsi-Ax9p2.png">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
+     crossorigin="anonymous"></script>
+<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
+</a>
+<div class="author">
+    <span>叶落阁</span>
+</div>
+
+<div class="icon">
+    
+        
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="github"
+               href="https://github.com/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="facebook"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+    
+        
+            <a title="instagram"
+               href="https://www.facebook.com/faker.tops"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="reddit"
+               href="https://www.reddit.com/user/yelog/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-reddit"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="weibo"
+               href="http://weibo.com/u/2307534817"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="jianshu"
+               href="https://www.jianshu.com/u/ff56736de7cf"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-jianshu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/jaytp/activities"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="oschina"
+               href="https://my.oschina.net/yelog"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-oschina"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+    
+        
+            <a title="email"
+               href="mailto:jaytp@qq.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="qq"
+               href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="kugou"
+               href="https://www.kugou.com/"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-kugou"></use>
+                    </svg>
+                
+            </a>
+        
+    
+        
+            <a title="neteasemusic"
+               href="https://music.163.com/#/user/home?id=88151013"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-neteasemusic"></use>
+                    </svg>
+                
+            </a>
+        
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(158)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="读书">
+            <i class="fold iconfont icon-right"></i>
+            读书
+            <small>(4)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="读书&lt;---&gt;书单">
+            
+            书单
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="读书&lt;---&gt;阅读笔记">
+            
+            阅读笔记
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="工具">
+            <i class="fold iconfont icon-right"></i>
+            工具
+            <small>(40)</small>
+        </div>
+        
+            <ul class="sub hide">
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;软件记录">
+            
+            软件记录
+            <small>(6)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;git">
+            
+            git
+            <small>(8)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;hexo">
+            
+            hexo
+            <small>(24)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IDEA">
+            
+            IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+            </ul>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="大前端">
+            
+            大前端
+            <small>(15)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="后端">
+            
+            后端
+            <small>(10)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="数据库">
+            
+            数据库
+            <small>(6)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="运维">
+            
+            运维
+            <small>(83)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="158">
+<input type="hidden" id="yelog_site_word_count" value="156.4k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://qqdie.com">QQ爹博客</a></li>
+            
+            <li><a target="_blank" href="http://www.xtfml.com">系统伐木累</a></li>
+            
+            <li><a target="_blank" href="https://ilxx.gitee.io">Leesin&#39;s Blog</a></li>
+            
+            <li><a target="_blank" href="http://www.zhangxianshengnetgroup.cn">技术小仙</a></li>
+            
+            <li><a target="_blank" href="https://yiluyanxia.site">一路烟霞</a></li>
+            
+            <li><a target="_blank" href="http://panyifei.github.io">林深鹿现</a></li>
+            
+            <li><a target="_blank" href="https://wallleap.cn">wallleap</a></li>
+            
+            <li><a target="_blank" href="https://songtianfa.github.io">惊风随笔</a></li>
+            
+            <li><a target="_blank" href="http://www.demo1024.com/">深夜书店</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>3-hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>磁盘分区</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>活着</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>浏览器</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>运维</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>AngularJs</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>centos</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>concurrent</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>deepin</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>docker仓库</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>dubbo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>efficiency</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ElementUI</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>emacs</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>encoding</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>encryption</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>firewall</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>fragment_cache</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>freemarker</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ftp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>GitHub</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>gray-release</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>java</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>javaee</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>javascript</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>jQuery</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>jsp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>jstl</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>k8s</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>keybord</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>linux命令</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mac</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mathjax</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>maven</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>mybatis</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nacos</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>neovim</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nexus</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>nginx</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>node</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>pjax</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>postgres</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>PostgreSQL</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>reading</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>regex</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>samba</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>shell</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SkyWalking</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>spring</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>springcloud</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>SpringCloud</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>springmvc</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>sql</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>tale</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>translation</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vim</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>zookeeper</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="全部文章 工具 hexo "
+           href="/2017/03/13/3-hexo-logs/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo开发日志-持续更新">3-hexo开发日志-持续更新</span>
+            <span class="post-date" title="2017-03-13 15:44:57">2017/03/13</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 工具 hexo "
+           href="/2017/03/23/3-hexo-instruction/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo使用说明">3-hexo使用说明</span>
+            <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 IDEA "
+           href="/2023/06/17/idea-tips-percent-mach-xml/"
+           data-tag="efficiency,vim,IntellijIDEA"
+           data-author="" >
+            <span class="post-title" title="ideavim 使用百分号%支持xml的对应标签跳转">ideavim 使用百分号%支持xml的对应标签跳转</span>
+            <span class="post-date" title="2023-06-17 16:09:00">2023/06/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 软件记录 "
+           href="/2023/05/17/mac-raycast/"
+           data-tag="mac,efficiency"
+           data-author="" >
+            <span class="post-title" title="Raycast 最强效率软件推荐">Raycast 最强效率软件推荐</span>
+            <span class="post-date" title="2023-05-17 17:45:00">2023/05/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/08/01/%5BJava%5Doptimize-request-processing-speed-by-completablefuture/"
+           data-tag="java,concurrent"
+           data-author="" >
+            <span class="post-title" title="[Java]通过 CompletableFuture 实现异步多线程优化请求处理速度">[Java]通过 CompletableFuture 实现异步多线程优化请求处理速度</span>
+            <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
+           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-author="" >
+            <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
+            <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
+           data-tag="java,nacos,springcloud,k8s"
+           data-author="" >
+            <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
+            <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
+        </a>
+        
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2022/06/24/Fortress-Besieged/"
+           data-tag="ElementUI,Vue"
+           data-author="" >
+            <span class="post-title" title="el-drawer 实现鼠标拖拽宽度[ElementUI]">el-drawer 实现鼠标拖拽宽度[ElementUI]</span>
+            <span class="post-date" title="2022-06-24 19:38:00">2022/06/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2021/09/26/spring-cloud-skywalking/"
+           data-tag="java,SpringCloud,SkyWalking"
+           data-author="" >
+            <span class="post-title" title="SpringCloud系列之接入SkyWalking进行链路追踪和日志收集">SpringCloud系列之接入SkyWalking进行链路追踪和日志收集</span>
+            <span class="post-date" title="2021-09-26 18:08:00">2021/09/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2020/12/28/3-hexo-add-icon/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo添加自定义图标">3-hexo添加自定义图标</span>
+            <span class="post-date" title="2020-12-28 22:00:00">2020/12/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2020/10/20/know-javascript-promise/"
+           data-tag="javascript"
+           data-author="" >
+            <span class="post-title" title="一文看懂JavaScript中的Promise">一文看懂JavaScript中的Promise</span>
+            <span class="post-date" title="2020-10-20 19:43:44">2020/10/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2020/09/01/Docker-summary/"
+           data-tag="linux,docker"
+           data-author="" >
+            <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
+            <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2020/05/23/3-hexo-comment/"
+           data-tag="3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo评论设置">3-hexo评论设置</span>
+            <span class="post-date" title="2020-05-23 22:26:23">2020/05/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2019/11/12/3-hexo-support-mermaid/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo支持mermaid图表">3-hexo支持mermaid图表</span>
+            <span class="post-date" title="2019-11-12 09:55:37">2019/11/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2019/10/08/3-hexo-add-music/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo 添加音乐插件">3-hexo 添加音乐插件</span>
+            <span class="post-date" title="2019-10-08 10:44:30">2019/10/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2019/09/24/3-hexo-jsfiddle/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo支持jsfiddle渲染">3-hexo支持jsfiddle渲染</span>
+            <span class="post-date" title="2019-09-24 09:59:37">2019/09/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2019/09/24/3-hexo-toc/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo文章内toc生成">3-hexo文章内toc生成</span>
+            <span class="post-date" title="2019-09-24 09:48:20">2019/09/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 读书 阅读笔记 "
+           href="/2019/06/09/misfortune-intellectual/"
+           data-tag="reading"
+           data-author="" >
+            <span class="post-title" title="[记]《知识分子的不幸》-王小波">[记]《知识分子的不幸》-王小波</span>
+            <span class="post-date" title="2019-06-09 21:31:09">2019/06/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 读书 阅读笔记 "
+           href="/2019/05/02/to-live/"
+           data-tag="reading,活着"
+           data-author="" >
+            <span class="post-title" title="人们在一本叫《活着》的书中纷纷死去">人们在一本叫《活着》的书中纷纷死去</span>
+            <span class="post-date" title="2019-05-02 17:46:16">2019/05/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2018/09/08/shell-command/"
+           data-tag="linux,shell"
+           data-author="" >
+            <span class="post-title" title="shell速查表">shell速查表</span>
+            <span class="post-date" title="2018-09-08 11:48:24">2018/09/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2018/02/08/nginx-config/"
+           data-tag="nginx"
+           data-author="" >
+            <span class="post-title" title="nginx配置记录">nginx配置记录</span>
+            <span class="post-date" title="2018-02-08 09:19:09">2018/02/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 软件记录 "
+           href="/2017/12/13/Mac-BetterTouchTool/"
+           data-tag="mac,efficiency"
+           data-author="" >
+            <span class="post-title" title="Mac神器-BTT(BetterTouchTool)不完全教程">Mac神器-BTT(BetterTouchTool)不完全教程</span>
+            <span class="post-date" title="2017-12-13 17:04:25">2017/12/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2017/11/27/java-grammatical-sugar/"
+           data-tag="java"
+           data-author="" >
+            <span class="post-title" title="[转]谈谈Java中的语法糖">[转]谈谈Java中的语法糖</span>
+            <span class="post-date" title="2017-11-27 22:51:45">2017/11/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据库 "
+           href="/2017/11/09/PostgreSQL%E4%BA%8B%E7%89%A9%E5%8F%8A%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB/"
+           data-tag="PostgreSQL"
+           data-author="" >
+            <span class="post-title" title="PostgreSQL事务及隔离级别">PostgreSQL事务及隔离级别</span>
+            <span class="post-date" title="2017-11-09 00:07:33">2017/11/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
+           data-tag="linux,vim,keybord,emacs"
+           data-author="" >
+            <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
+            <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/09/25/ascii-ansi-unicode-utf-8/"
+           data-tag="encoding"
+           data-author="" >
+            <span class="post-title" title="[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）">[转]字符编解码的故事（ASCII，ANSI，Unicode，Utf-8区别）</span>
+            <span class="post-date" title="2017-09-25 19:15:00">2017/09/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2017/09/25/%E6%90%AD%E5%BB%BAdubbo+zookeeper%E5%B9%B3%E5%8F%B0/"
+           data-tag="dubbo,zookeeper"
+           data-author="" >
+            <span class="post-title" title="搭建dubbo+zookeeper平台">搭建dubbo+zookeeper平台</span>
+            <span class="post-date" title="2017-09-25 16:29:07">2017/09/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/09/25/docker-errors/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker报错集锦">docker报错集锦</span>
+            <span class="post-date" title="2017-09-25 10:03:50">2017/09/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/09/21/hexo-fragment_cache/"
+           data-tag="hexo,fragment_cache"
+           data-author="" >
+            <span class="post-title" title="Hexo加速渲染速度之fragment_cache">Hexo加速渲染速度之fragment_cache</span>
+            <span class="post-date" title="2017-09-21 19:34:37">2017/09/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2017/09/21/bf-cache/"
+           data-tag="浏览器,js"
+           data-author="" >
+            <span class="post-title" title="[转]浏览器前进/后退缓存（BF Cache）">[转]浏览器前进/后退缓存（BF Cache）</span>
+            <span class="post-date" title="2017-09-21 15:35:24">2017/09/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2017/09/21/iphone-bf-no-run-js/"
+           data-tag="js"
+           data-author="" >
+            <span class="post-title" title="解决iphone下后退不执行js的问题">解决iphone下后退不执行js的问题</span>
+            <span class="post-date" title="2017-09-21 15:25:32">2017/09/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/09/19/CentOS7%E4%BD%BF%E7%94%A8Firewalld/"
+           data-tag="firewall"
+           data-author="" >
+            <span class="post-title" title="CentOS7使用Firewalld">CentOS7使用Firewalld</span>
+            <span class="post-date" title="2017-09-19 09:53:53">2017/09/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/09/18/docker-save-export/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker备份恢复之save与export">docker备份恢复之save与export</span>
+            <span class="post-date" title="2017-09-18 22:38:52">2017/09/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/09/11/sudo%E5%91%BD%E4%BB%A4%E5%85%8D%E5%AF%86%E7%A0%81%E8%AE%BE%E7%BD%AE/"
+           data-tag="linux"
+           data-author="" >
+            <span class="post-title" title="sudo命令免密码设置">sudo命令免密码设置</span>
+            <span class="post-date" title="2017-09-11 09:30:55">2017/09/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/09/06/build-Maven-Nexus/"
+           data-tag="java,maven,nexus"
+           data-author="" >
+            <span class="post-title" title="搭建Maven私服-Nexus">搭建Maven私服-Nexus</span>
+            <span class="post-date" title="2017-09-06 23:01:31">2017/09/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据库 "
+           href="/2017/08/04/mybatis-Mapper/"
+           data-tag="mybatis"
+           data-author="" >
+            <span class="post-title" title="Mybatis常用Mapper语句">Mybatis常用Mapper语句</span>
+            <span class="post-date" title="2017-08-04 15:54:47">2017/08/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/07/05/MathJax-pjax/"
+           data-tag="mathjax,pjax"
+           data-author="" >
+            <span class="post-title" title="MathJax适配Pjax">MathJax适配Pjax</span>
+            <span class="post-date" title="2017-07-05 19:24:10">2017/07/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/07/05/3-hexo-mathjax/"
+           data-tag="mathjax"
+           data-author="" >
+            <span class="post-title" title="3-hexo配置MathJax数学公式渲染">3-hexo配置MathJax数学公式渲染</span>
+            <span class="post-date" title="2017-07-05 15:09:42">2017/07/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/07/03/CentOS7-anonymous-Samba/"
+           data-tag="samba"
+           data-author="" >
+            <span class="post-title" title="CentOS7安装配置匿名访问Samba">CentOS7安装配置匿名访问Samba</span>
+            <span class="post-date" title="2017-07-03 19:40:14">2017/07/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/06/26/gitment/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="完美替代多说-gitment">完美替代多说-gitment</span>
+            <span class="post-date" title="2017-06-26 12:08:13">2017/06/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/06/01/vim-paste/"
+           data-tag="vim"
+           data-author="" >
+            <span class="post-title" title="解决粘贴到vim缩进错乱问题">解决粘贴到vim缩进错乱问题</span>
+            <span class="post-date" title="2017-06-01 19:45:24">2017/06/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/06/01/entering-docker/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="进入docker容器命令制作">进入docker容器命令制作</span>
+            <span class="post-date" title="2017-06-01 17:25:11">2017/06/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 软件记录 "
+           href="/2017/05/24/tale-build-experience/"
+           data-tag="tale"
+           data-author="" >
+            <span class="post-title" title="tale博客搭建及体验">tale博客搭建及体验</span>
+            <span class="post-date" title="2017-05-24 11:29:30">2017/05/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/05/23/docker-data-manager/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker数据管理">docker数据管理</span>
+            <span class="post-date" title="2017-05-23 21:43:06">2017/05/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/05/23/docker-container/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker容器">docker容器</span>
+            <span class="post-date" title="2017-05-23 21:29:38">2017/05/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/05/23/docker-registry/"
+           data-tag="docker,docker仓库"
+           data-author="" >
+            <span class="post-title" title="docker仓库">docker仓库</span>
+            <span class="post-date" title="2017-05-23 21:15:52">2017/05/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/05/23/linux-command-57-sort/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（58）: sort">每天一个linux命令（58）: sort</span>
+            <span class="post-date" title="2017-05-23 11:44:12">2017/05/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/05/23/CentOS-DNS-GW-IP/"
+           data-tag="运维,centos"
+           data-author="" >
+            <span class="post-title" title="CentOS修改DNS/GW/IP">CentOS修改DNS/GW/IP</span>
+            <span class="post-date" title="2017-05-23 09:53:52">2017/05/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/05/22/Dockerfile/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="Dockerfile指令详解">Dockerfile指令详解</span>
+            <span class="post-date" title="2017-05-22 19:11:42">2017/05/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/05/19/docker-image/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker镜像">docker镜像</span>
+            <span class="post-date" title="2017-05-19 16:47:33">2017/05/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/05/19/docker-first/"
+           data-tag="docker"
+           data-author="" >
+            <span class="post-title" title="docker初体验">docker初体验</span>
+            <span class="post-date" title="2017-05-19 16:32:23">2017/05/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/05/17/linux%E6%97%A0%E6%8D%9F%E8%B0%83%E6%95%B4%E5%88%86%E5%8C%BA%E5%A4%A7%E5%B0%8F/"
+           data-tag="运维,磁盘分区"
+           data-author="" >
+            <span class="post-title" title="linux无损调整分区大小">linux无损调整分区大小</span>
+            <span class="post-date" title="2017-05-17 22:00:42">2017/05/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 git "
+           href="/2017/05/16/git-log/"
+           data-tag="git"
+           data-author="" >
+            <span class="post-title" title="Git统计操作">Git统计操作</span>
+            <span class="post-date" title="2017-05-16 09:26:11">2017/05/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/04/25/%E8%A7%A3%E5%86%B3linux%E4%B8%8Bzip%E6%96%87%E4%BB%B6%E8%A7%A3%E5%8E%8B%E4%B9%B1%E7%A0%81/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="解决linux下zip文件解压乱码">解决linux下zip文件解压乱码</span>
+            <span class="post-date" title="2017-04-25 09:10:40">2017/04/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2017/04/22/encryption-algorithm/"
+           data-tag="encryption"
+           data-author="" >
+            <span class="post-title" title="加密算法简介">加密算法简介</span>
+            <span class="post-date" title="2017-04-22 09:30:41">2017/04/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2017/04/21/jsp-use-record/"
+           data-tag="jsp,jstl"
+           data-author="" >
+            <span class="post-title" title="JSP操作记录">JSP操作记录</span>
+            <span class="post-date" title="2017-04-21 11:22:12">2017/04/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2017/04/15/SpringMVC-implementation-process/"
+           data-tag="java,spring,springmvc"
+           data-author="" >
+            <span class="post-title" title="[转]SpringMVC执行流程及源码解析">[转]SpringMVC执行流程及源码解析</span>
+            <span class="post-date" title="2017-04-15 10:22:05">2017/04/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据库 "
+           href="/2017/04/14/postgres-sql-use/"
+           data-tag="postgres,sql"
+           data-author="" >
+            <span class="post-title" title="PostgreSQL常用SQL操作">PostgreSQL常用SQL操作</span>
+            <span class="post-date" title="2017-04-14 16:37:24">2017/04/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 软件记录 "
+           href="/2017/03/30/deepin-linux/"
+           data-tag="运维,deepin"
+           data-author="" >
+            <span class="post-title" title="deepin系统使用记录">deepin系统使用记录</span>
+            <span class="post-date" title="2017-03-30 18:58:50">2017/03/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/03/27/hexo-error-collection/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo报错合集">hexo报错合集</span>
+            <span class="post-date" title="2017-03-27 19:40:42">2017/03/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/03/24/3-hexo-shortcuts/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo快捷键说明">3-hexo快捷键说明</span>
+            <span class="post-date" title="2017-03-24 16:45:31">2017/03/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 "
+           href="/2017/03/23/the-third-comment/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="关于第三方评论系统">关于第三方评论系统</span>
+            <span class="post-date" title="2017-03-23 11:59:50">2017/03/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/03/17/windows-hexo/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="windows环境下使用hexo搭建blog平台">windows环境下使用hexo搭建blog平台</span>
+            <span class="post-date" title="2017-03-17 14:02:55">2017/03/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2017/03/16/npm/"
+           data-tag="node"
+           data-author="" >
+            <span class="post-title" title="npm使用介绍">npm使用介绍</span>
+            <span class="post-date" title="2017-03-16 20:09:48">2017/03/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/03/14/Hexo-RSS-Sitemap/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="为Hexo添加RSS和Sitemap">为Hexo添加RSS和Sitemap</span>
+            <span class="post-date" title="2017-03-14 09:44:29">2017/03/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/03/13/3-hexo-homepage/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo配置首页">3-hexo配置首页</span>
+            <span class="post-date" title="2017-03-13 09:56:07">2017/03/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2017/03/09/busuanzi-pjax/"
+           data-tag="hexo,jQuery"
+           data-author="" >
+            <span class="post-title" title="不蒜子适配pjax">不蒜子适配pjax</span>
+            <span class="post-date" title="2017-03-09 20:15:51">2017/03/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2017/03/09/duoshuo-pjax/"
+           data-tag="hexo,jQuery"
+           data-author="" >
+            <span class="post-title" title="多说适配pjax">多说适配pjax</span>
+            <span class="post-date" title="2017-03-09 19:50:45">2017/03/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/03/09/hexo-wordcount/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo加入字数统计WordCount">Hexo加入字数统计WordCount</span>
+            <span class="post-date" title="2017-03-09 16:57:10">2017/03/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2017/03/08/font-develop-rule/"
+           data-tag="translation"
+           data-author="" >
+            <span class="post-title" title="前端页面开发规范">前端页面开发规范</span>
+            <span class="post-date" title="2017-03-08 08:58:21">2017/03/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2017/03/08/understanding-the-critical-rendering-path/"
+           data-tag="translation"
+           data-author="" >
+            <span class="post-title" title="[译]理解浏览器关键渲染路径">[译]理解浏览器关键渲染路径</span>
+            <span class="post-date" title="2017-03-08 08:58:21">2017/03/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/03/07/3-hexo/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo主题3-hexo">Hexo主题3-hexo</span>
+            <span class="post-date" title="2017-03-07 11:15:50">2017/03/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/03/06/Vim-command/"
+           data-tag="vim"
+           data-author="" >
+            <span class="post-title" title="Vim命令速查表">Vim命令速查表</span>
+            <span class="post-date" title="2017-03-06 11:23:36">2017/03/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/03/06/linux-ftp/"
+           data-tag="ftp"
+           data-author="" >
+            <span class="post-title" title="如何在linux中搭建ftp服务">如何在linux中搭建ftp服务</span>
+            <span class="post-date" title="2017-03-06 08:47:48">2017/03/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/03/05/linux-command-57-sftp/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（57）: sftp">每天一个linux命令（57）: sftp</span>
+            <span class="post-date" title="2017-03-05 16:29:38">2017/03/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2017/03/04/AngularJs/"
+           data-tag="AngularJs"
+           data-author="" >
+            <span class="post-title" title="AngularJs快速入门">AngularJs快速入门</span>
+            <span class="post-date" title="2017-03-04 08:40:58">2017/03/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/02/28/3-hexo-multiple-author/"
+           data-tag="hexo,3-hexo"
+           data-author="" >
+            <span class="post-title" title="3-hexo多作者模式">3-hexo多作者模式</span>
+            <span class="post-date" title="2017-02-28 10:55:31">2017/02/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/02/25/hexo-create-404-page/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo创建404页面">Hexo创建404页面</span>
+            <span class="post-date" title="2017-02-25 15:18:39">2017/02/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2017/02/24/hexo-top-sort/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="Hexo置顶及排序问题">Hexo置顶及排序问题</span>
+            <span class="post-date" title="2017-02-24 15:50:38">2017/02/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2017/02/21/the-introduction-of-memory-leak-what-why-and-how/"
+           data-tag="java,translation"
+           data-author="" >
+            <span class="post-title" title="[译]Java内存泄露介绍">[译]Java内存泄露介绍</span>
+            <span class="post-date" title="2017-02-21 15:05:39">2017/02/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/02/20/linux-command-56-tailf/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（56）: tailf">每天一个linux命令（56）: tailf</span>
+            <span class="post-date" title="2017-02-20 15:11:06">2017/02/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2017/02/08/pjax/"
+           data-tag="jQuery"
+           data-author="" >
+            <span class="post-title" title="pjax用法">pjax用法</span>
+            <span class="post-date" title="2017-02-08 20:18:54">2017/02/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 读书 书单 "
+           href="/2017/01/31/reading-list/"
+           data-tag="reading"
+           data-author="" >
+            <span class="post-title" title="reading-list">reading-list</span>
+            <span class="post-date" title="2017-01-31 15:29:32">2017/01/31</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/23/linux-command/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令">每天一个linux命令</span>
+            <span class="post-date" title="2017-01-23 11:41:48">2017/01/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/23/linux-command-55-crontab/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（55）: crontab">每天一个linux命令（55）: crontab</span>
+            <span class="post-date" title="2017-01-23 10:44:50">2017/01/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/22/linux-command-54-at/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（54）: at">每天一个linux命令（54）: at</span>
+            <span class="post-date" title="2017-01-22 10:23:44">2017/01/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/21/linux-command-53-watch/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（53）: watch">每天一个linux命令（53）: watch</span>
+            <span class="post-date" title="2017-01-21 10:12:30">2017/01/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/20/linux-command-52-ps/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（52）: ps">每天一个linux命令（52）: ps</span>
+            <span class="post-date" title="2017-01-20 09:46:16">2017/01/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/19/linux-command-51-wc/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（51）: wc">每天一个linux命令（51）: wc</span>
+            <span class="post-date" title="2017-01-19 09:33:59">2017/01/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/18/linux-command-50-grep/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（50）: grep">每天一个linux命令（50）: grep</span>
+            <span class="post-date" title="2017-01-18 10:12:46">2017/01/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/17/linux-command-49-cal/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（49）: cal">每天一个linux命令（49）: cal</span>
+            <span class="post-date" title="2017-01-17 09:38:32">2017/01/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/16/linux-command-48-date/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（48）: date">每天一个linux命令（48）: date</span>
+            <span class="post-date" title="2017-01-16 14:39:27">2017/01/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/15/linux-command-47-diff/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（47）: diff">每天一个linux命令（47）: diff</span>
+            <span class="post-date" title="2017-01-15 14:08:08">2017/01/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/14/linux-command-46-ln/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（46）: ln">每天一个linux命令（46）: ln</span>
+            <span class="post-date" title="2017-01-14 11:00:33">2017/01/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/13/linux-command-45-scp/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（45）: scp">每天一个linux命令（45）: scp</span>
+            <span class="post-date" title="2017-01-13 10:53:48">2017/01/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/12/linux-command-44-rcp/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（44）: rcp">每天一个linux命令（44）: rcp</span>
+            <span class="post-date" title="2017-01-12 10:36:06">2017/01/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/12/linux-command-43-telnet/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（43）: telnet">每天一个linux命令（43）: telnet</span>
+            <span class="post-date" title="2017-01-12 09:24:01">2017/01/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/11/linux-command-42-ss/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（42）: ss">每天一个linux命令（42）: ss</span>
+            <span class="post-date" title="2017-01-11 10:34:47">2017/01/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/10/linux-command-41-netstat/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（41）: netstat">每天一个linux命令（41）: netstat</span>
+            <span class="post-date" title="2017-01-10 09:54:16">2017/01/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/09/linux-command-40-traceroute/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（40）: traceroute">每天一个linux命令（40）: traceroute</span>
+            <span class="post-date" title="2017-01-09 10:56:53">2017/01/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/08/linux-command-39-ping/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（39）: ping">每天一个linux命令（39）: ping</span>
+            <span class="post-date" title="2017-01-08 10:24:50">2017/01/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/07/linux-command-38-route/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（38）: route">每天一个linux命令（38）: route</span>
+            <span class="post-date" title="2017-01-07 10:16:34">2017/01/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/06/linux-command-37-ifconfig/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（37）: ifconfig">每天一个linux命令（37）: ifconfig</span>
+            <span class="post-date" title="2017-01-06 09:57:01">2017/01/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/05/linux-command-36-lsof/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（36）: lsof">每天一个linux命令（36）: lsof</span>
+            <span class="post-date" title="2017-01-05 10:28:13">2017/01/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/04/linux-command-35-iostat/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（35）: iostat">每天一个linux命令（35）: iostat</span>
+            <span class="post-date" title="2017-01-04 10:10:02">2017/01/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 读书 阅读笔记 "
+           href="/2017/01/03/Fortress-Besieged/"
+           data-tag="reading"
+           data-author="" >
+            <span class="post-title" title="人生若只如初见-《围城》">人生若只如初见-《围城》</span>
+            <span class="post-date" title="2017-01-03 11:27:04">2017/01/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/03/linux-command-34-vmstat/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（34）: vmstat">每天一个linux命令（34）: vmstat</span>
+            <span class="post-date" title="2017-01-03 09:46:57">2017/01/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/02/linux-command-33-free/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（33）: free">每天一个linux命令（33）: free</span>
+            <span class="post-date" title="2017-01-02 21:43:26">2017/01/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2017/01/01/linux-command-32-top/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（32）: top">每天一个linux命令（32）: top</span>
+            <span class="post-date" title="2017-01-01 19:31:28">2017/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/31/linux-command-31-du/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（31）: du">每天一个linux命令（31）: du</span>
+            <span class="post-date" title="2016-12-31 14:36:01">2016/12/31</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/30/linux-command-30-df/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（30）: df">每天一个linux命令（30）: df</span>
+            <span class="post-date" title="2016-12-30 14:23:31">2016/12/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/29/linux-command-29-group/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（29）: /etc/group文件详解">每天一个linux命令（29）: /etc/group文件详解</span>
+            <span class="post-date" title="2016-12-29 14:13:05">2016/12/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/28/linux-command-28-chown/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（28）: chown">每天一个linux命令（28）: chown</span>
+            <span class="post-date" title="2016-12-28 09:51:30">2016/12/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/27/linux-command-27-chgrp/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（27）: chgrp">每天一个linux命令（27）: chgrp</span>
+            <span class="post-date" title="2016-12-27 09:40:06">2016/12/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/26/linux-command-26-chmod/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（26）: chmod">每天一个linux命令（26）: chmod</span>
+            <span class="post-date" title="2016-12-26 20:22:43">2016/12/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/25/linux-command-25-gzip/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（25）: gzip">每天一个linux命令（25）: gzip</span>
+            <span class="post-date" title="2016-12-25 16:55:15">2016/12/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 git "
+           href="/2016/12/24/git-reset/"
+           data-tag="Git"
+           data-author="" >
+            <span class="post-title" title="Git之reset揭秘">Git之reset揭秘</span>
+            <span class="post-date" title="2016-12-24 11:19:24">2016/12/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/24/linux-command-24-tar/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（24）: tar">每天一个linux命令（24）: tar</span>
+            <span class="post-date" title="2016-12-24 10:24:17">2016/12/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 git "
+           href="/2016/12/23/git-master/"
+           data-tag="Git"
+           data-author="" >
+            <span class="post-title" title="Git操作之高手过招">Git操作之高手过招</span>
+            <span class="post-date" title="2016-12-23 10:59:01">2016/12/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/23/linux-command-23-%E7%94%A8SecureCRT%E6%9D%A5%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（23）: 用SecureCRT来上传和下载文件">每天一个linux命令（23）: 用SecureCRT来上传和下载文件</span>
+            <span class="post-date" title="2016-12-23 09:48:15">2016/12/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/22/linux-command-22-find%E5%91%BD%E4%BB%A4%E7%9A%84%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（22）: find命令的参数详解">每天一个linux命令（22）: find命令的参数详解</span>
+            <span class="post-date" title="2016-12-22 11:44:14">2016/12/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 git "
+           href="/2016/12/21/git-ssh-https-verify-configuration/"
+           data-tag="Git"
+           data-author="" >
+            <span class="post-title" title="Git之SSH与HTTPS免密码配置">Git之SSH与HTTPS免密码配置</span>
+            <span class="post-date" title="2016-12-21 15:31:55">2016/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/21/linux-command-21-find%E5%91%BD%E4%BB%A4%E4%B9%8Bxargs/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（21）: find命令之xargs">每天一个linux命令（21）: find命令之xargs</span>
+            <span class="post-date" title="2016-12-21 11:08:01">2016/12/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/20/linux-command-20-find%E5%91%BD%E4%BB%A4%E4%B9%8Bexec/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（20）: find命令之exec">每天一个linux命令（20）: find命令之exec</span>
+            <span class="post-date" title="2016-12-20 10:47:32">2016/12/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/19/linux-command-19-find%E5%91%BD%E4%BB%A4%E6%A6%82%E8%A7%88/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（19）: find命令概览">每天一个linux命令（19）: find命令概览</span>
+            <span class="post-date" title="2016-12-19 15:19:10">2016/12/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/18/linux-command-18-locate/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（18）: locate">每天一个linux命令（18）: locate</span>
+            <span class="post-date" title="2016-12-18 15:09:28">2016/12/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/17/linux-command-17-whereis/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（17）: whereis">每天一个linux命令（17）: whereis</span>
+            <span class="post-date" title="2016-12-17 10:42:58">2016/12/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/16/linux-command-16-which/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（16）: which">每天一个linux命令（16）: which</span>
+            <span class="post-date" title="2016-12-16 11:25:49">2016/12/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/15/linux-command-15-tail/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（15）: tail">每天一个linux命令（15）: tail</span>
+            <span class="post-date" title="2016-12-15 15:00:26">2016/12/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/14/linux-command-14-head/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（14）: head">每天一个linux命令（14）: head</span>
+            <span class="post-date" title="2016-12-14 14:35:49">2016/12/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/13/linux-command-13-less/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（13）: less">每天一个linux命令（13）: less</span>
+            <span class="post-date" title="2016-12-13 21:46:14">2016/12/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/12/linux-command-12-more/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（12）: more">每天一个linux命令（12）: more</span>
+            <span class="post-date" title="2016-12-12 21:29:39">2016/12/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/11/linux-command-11-nl/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（11）: nl">每天一个linux命令（11）: nl</span>
+            <span class="post-date" title="2016-12-11 21:11:48">2016/12/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/10/linux-command-10-cat/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（10）: cat">每天一个linux命令（10）: cat</span>
+            <span class="post-date" title="2016-12-10 10:52:50">2016/12/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/09/linux-command-9-touch/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（9）: touch">每天一个linux命令（9）: touch</span>
+            <span class="post-date" title="2016-12-09 07:15:12">2016/12/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/08/linux-command-8-cp/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（8）: cp">每天一个linux命令（8）: cp</span>
+            <span class="post-date" title="2016-12-08 16:31:43">2016/12/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/07/linux-command-7-mv/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（7）: mv">每天一个linux命令（7）: mv</span>
+            <span class="post-date" title="2016-12-07 15:55:20">2016/12/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/06/linux-command-6-rmdir/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（6）: rmdir">每天一个linux命令（6）: rmdir</span>
+            <span class="post-date" title="2016-12-06 15:24:32">2016/12/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/05/linux-command-5-rm/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（5）: rm">每天一个linux命令（5）: rm</span>
+            <span class="post-date" title="2016-12-05 13:40:38">2016/12/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/04/linux-command-4-mkdir/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（4）: mkdir">每天一个linux命令（4）: mkdir</span>
+            <span class="post-date" title="2016-12-04 09:27:32">2016/12/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/03/linux-command-3-pwd/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（3）: pwd">每天一个linux命令（3）: pwd</span>
+            <span class="post-date" title="2016-12-03 09:15:52">2016/12/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/02/linux-command-2-cd/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（2）: cd">每天一个linux命令（2）: cd</span>
+            <span class="post-date" title="2016-12-02 11:04:55">2016/12/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2016/12/01/linux-command-1-ls/"
+           data-tag="linux命令"
+           data-author="" >
+            <span class="post-title" title="每天一个linux命令（1）: ls">每天一个linux命令（1）: ls</span>
+            <span class="post-date" title="2016-12-01 09:38:59">2016/12/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2016/11/23/jQuery-checkbox-radio-select/"
+           data-tag="jQuery"
+           data-author="" >
+            <span class="post-title" title="jQuery之checkbox|radio|select操作">jQuery之checkbox|radio|select操作</span>
+            <span class="post-date" title="2016-11-23 16:19:34">2016/11/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2016/11/22/jQuery-selector/"
+           data-tag="jQuery"
+           data-author="" >
+            <span class="post-title" title="jQuery选择器与节点操作">jQuery选择器与节点操作</span>
+            <span class="post-date" title="2016-11-22 17:11:48">2016/11/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 软件记录 "
+           href="/2016/11/05/idea-shortcuts/"
+           data-tag="IntellijIDEA"
+           data-author="" >
+            <span class="post-title" title="idea常用快捷键">idea常用快捷键</span>
+            <span class="post-date" title="2016-11-05 15:22:48">2016/11/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2016/10/24/web-xml/"
+           data-tag="java,javaee"
+           data-author="" >
+            <span class="post-title" title="web.xml详解">web.xml详解</span>
+            <span class="post-date" title="2016-10-24 10:10:45">2016/10/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2016/10/23/hexo-git-server-blog/"
+           data-tag="hexo,Git"
+           data-author="" >
+            <span class="post-title" title="Hexo+Git服务器搭建blog">Hexo+Git服务器搭建blog</span>
+            <span class="post-date" title="2016-10-23 09:24:03">2016/10/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 hexo "
+           href="/2016/10/22/hexo-gitHub-pages-create-own-blog/"
+           data-tag="hexo,Git,GitHub"
+           data-author="" >
+            <span class="post-title" title="Hexo+GitHub Pages搭建属于自己的blog">Hexo+GitHub Pages搭建属于自己的blog</span>
+            <span class="post-date" title="2016-10-22 21:24:05">2016/10/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 git "
+           href="/2016/10/22/set-up-git-server-on-vps/"
+           data-tag="Git"
+           data-author="" >
+            <span class="post-title" title="搭建Git服务器">搭建Git服务器</span>
+            <span class="post-date" title="2016-10-22 20:08:04">2016/10/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 git "
+           href="/2016/10/13/contributing-to-open-source-on-github/"
+           data-tag="Git,GitHub"
+           data-author="" >
+            <span class="post-title" title="如何给GitHub上的项目贡献代码">如何给GitHub上的项目贡献代码</span>
+            <span class="post-date" title="2016-10-13 15:44:07">2016/10/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据库 "
+           href="/2016/10/12/PostgreSQL-2/"
+           data-tag="PostgreSQL"
+           data-author="" >
+            <span class="post-title" title="PostgreSQL常用操作">PostgreSQL常用操作</span>
+            <span class="post-date" title="2016-10-12 20:27:07">2016/10/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据库 "
+           href="/2016/10/12/PostgreSQL-1/"
+           data-tag="PostgreSQL"
+           data-author="" >
+            <span class="post-title" title="PostgreSQL初体验">PostgreSQL初体验</span>
+            <span class="post-date" title="2016-10-12 19:49:40">2016/10/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 数据库 "
+           href="/2016/10/12/PostgreSQL-3/"
+           data-tag="PostgreSQL"
+           data-author="" >
+            <span class="post-title" title="PostgreSQL的介绍与安装">PostgreSQL的介绍与安装</span>
+            <span class="post-date" title="2016-10-12 15:44:16">2016/10/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 大前端 "
+           href="/2016/10/05/FreeMarker/"
+           data-tag="java,freemarker"
+           data-author="" >
+            <span class="post-title" title="FreeMarker语法详解">FreeMarker语法详解</span>
+            <span class="post-date" title="2016-10-05 11:58:50">2016/10/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 软件记录 "
+           href="/2016/10/04/regular-expression/"
+           data-tag="regex"
+           data-author="" >
+            <span class="post-title" title="正则表达式详解">正则表达式详解</span>
+            <span class="post-date" title="2016-10-04 09:41:40">2016/10/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 git "
+           href="/2016/10/02/git-command/"
+           data-tag="Git"
+           data-author="" >
+            <span class="post-title" title="Git常用命令">Git常用命令</span>
+            <span class="post-date" title="2016-10-02 17:15:39">2016/10/02</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-regular-expression" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">正则表达式详解</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="工具">工具</a> > 
+            
+            <a  data-rel="工具&lt;---&gt;软件记录">软件记录</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">regex</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2023-10-25 20:06:29'>2016-10-04 09:41</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:4.8k</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E7%9B%AE%E6%A0%87"><span class="toc-text">本文目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B%E5%8F%8A%E8%AF%AD%E6%B3%95"><span class="toc-text">简介及语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">正则表达式是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%85%83%E5%AD%97%E7%AC%A6"><span class="toc-text">常用元字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E8%BD%AC%E4%B9%89"><span class="toc-text">字符转义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%A4%8D"><span class="toc-text">重复</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E7%B1%BB"><span class="toc-text">字符类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E6%9D%A1%E4%BB%B6"><span class="toc-text">分支条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%BB%84"><span class="toc-text">分组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E4%B9%89"><span class="toc-text">反义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E5%90%91%E5%BC%95%E7%94%A8"><span class="toc-text">后向引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%AE%BD%E6%96%AD%E8%A8%80"><span class="toc-text">零宽断言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%9F%E5%90%91%E9%9B%B6%E5%AE%BD%E6%96%AD%E8%A8%80"><span class="toc-text">负向零宽断言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%AA%E5%A9%AA%E4%B8%8E%E6%87%92%E6%83%B0"><span class="toc-text">贪婪与懒惰</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%85%83%E5%AD%97%E7%AC%A6"><span class="toc-text">其他元字符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%B8%B8%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="toc-text">正则表达式常用实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A6%E5%8F%B7-%E5%AF%86%E7%A0%81"><span class="toc-text">账号&#x2F;密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A0%A1%E9%AA%8C"><span class="toc-text">字符串校验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E5%8F%B7"><span class="toc-text">手机号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IP%E5%9C%B0%E5%9D%80"><span class="toc-text">IP地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EMAIL%E5%9C%B0%E5%9D%80"><span class="toc-text">EMAIL地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D"><span class="toc-text">域名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BA%AB%E4%BB%BD%E8%AF%81"><span class="toc-text">身份证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%B1%BB%E6%A0%A1%E9%AA%8C"><span class="toc-text">数字类校验</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-6 i,
+    .toc-level-6 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="本文目标"><a href="#本文目标" class="headerlink" title="本文目标"></a>本文目标</h2><blockquote>
+<p>本文旨在更加简洁清晰的展现正则表达式， <code>第一部分</code> 是对正则表达式语法的简洁介绍， <code>第二部分</code> 则是常用正则表达式的示例。</p>
+</blockquote>
+<span id="more"></span>
+<h2 id="简介及语法"><a href="#简介及语法" class="headerlink" title="简介及语法"></a>简介及语法</h2><h3 id="正则表达式是什么"><a href="#正则表达式是什么" class="headerlink" title="正则表达式是什么"></a>正则表达式是什么</h3><blockquote>
+<p>在编写处理字符串的程序或网页时，经常会有查找符合某些复杂规则的字符串的需要。正则表达式就是用于描述这些规则的工具。换句话说，正则表达式就是记录文本规则的代码。</p>
+</blockquote>
+<blockquote>
+<p>正则表达式语言由两种基本字符类型组成：原义（正常）<code>文本字符</code>和<code>元字符</code>。元字符使正则表达式具有处理能力。</p>
+</blockquote>
+<h3 id="常用元字符"><a href="#常用元字符" class="headerlink" title="常用元字符"></a>常用元字符</h3><table>
+<thead>
+<tr>
+<th align="left">元字符</th>
+<th align="left">做什么用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>.</code></td>
+<td align="left">匹配除换行符以外的任意字符</td>
+</tr>
+<tr>
+<td align="left"><code>\w</code></td>
+<td align="left">匹配字母或数字或下划线或汉字</td>
+</tr>
+<tr>
+<td align="left"><code>\s</code></td>
+<td align="left">匹配任意的空白符，包括空格，制表符（Tab），换行符，中文全角空格等）</td>
+</tr>
+<tr>
+<td align="left"><code>\d</code></td>
+<td align="left">匹配数字</td>
+</tr>
+<tr>
+<td align="left"><code>\b</code></td>
+<td align="left">匹配单词的开始或结束</td>
+</tr>
+<tr>
+<td align="left"><code>^</code></td>
+<td align="left">匹配字符串的开始</td>
+</tr>
+<tr>
+<td align="left"><code>$</code></td>
+<td align="left">匹配字符串的结束</td>
+</tr>
+</tbody></table>
+<h3 id="字符转义"><a href="#字符转义" class="headerlink" title="字符转义"></a>字符转义</h3><blockquote>
+<p>如果你想查找元字符本身的话，比如你查找 <code>.</code> ,或者 <code>*</code> ,就出现了问题：你没办法指定它们，因为它们会被解释成别的意思。这时你就得使用 <code>\</code> 来取消这些字符的特殊意义。因此，你应该使用 <code>\.</code> 和 <code>\*</code> 。当然，要查找 <code>\</code> 本身，你也得用 <code>\\</code> .<br>例如： <code>deerchao\.net</code> 匹配 <strong>deerchao.net</strong>，<code>C:\\Windows</code> 匹配 <strong>C:\Windows</strong> 。</p>
+</blockquote>
+<h3 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h3><blockquote>
+<p>你已经看过了前面的 <code>*</code> , <code>+</code> , <code>&#123;2&#125;</code> , <code>&#123;5,12&#125;</code> 这几个匹配重复的方式了。下面是正则表达式中所有的限定符(指定数量的代码，例如*,{5,12}等)</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">元字符</th>
+<th align="left">做什么用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>*</code></td>
+<td align="left">重复零次或更多次</td>
+</tr>
+<tr>
+<td align="left"><code>+</code></td>
+<td align="left">重复一次或更多次</td>
+</tr>
+<tr>
+<td align="left"><code>?</code></td>
+<td align="left">重复零次或一次</td>
+</tr>
+<tr>
+<td align="left"><code>&#123;n&#125;</code></td>
+<td align="left">重复n次</td>
+</tr>
+<tr>
+<td align="left"><code>&#123;n,&#125;</code></td>
+<td align="left">重复n次或更多次</td>
+</tr>
+<tr>
+<td align="left"><code>&#123;n,m&#125;</code></td>
+<td align="left">重复n到m次</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>下面是一些重复的示例：<br><code>Windows\d+</code> 匹配Windows后面跟1个或更多数字<br><code>^\w+</code> 匹配一行的第一个单词(或整个字符串的第一个单词，具体匹配哪个意思得看选项设置)</p>
+</blockquote>
+<h3 id="字符类"><a href="#字符类" class="headerlink" title="字符类"></a>字符类</h3><blockquote>
+<p>要想查找数字，字母或数字，空白是很简单的，因为已经有了对应这些字符集合的元字符，但是如果你想匹配没有预定义元字符的字符集合(比如元音字母a,e,i,o,u),应该怎么办？<br>很简单，你只需要在方括号里列出它们就行了，像 <code>[aeiou]</code> 就匹配任何一个英文元音字母， <code>[.?!]</code> 匹配标点符号(.或?或!)。<br>我们也可以轻松地指定一个字符范围，像 <code>[0-9]</code> 代表的含意与 <code>\d</code> 就是完全一致的：一位数字；同理[a-z0-9A-Z_]也完全等同于 <code>\w</code> （如果只考虑英文的话）。<br>下面是一个更复杂的表达式： <code>\(?0\d&#123;2&#125;[) -]?\d&#123;8&#125;</code> 。<br>这个表达式可以匹配几种格式的电话号码，像(010)88886666，或022-22334455，或02912345678等。我们对它进行一些分析吧：首先是一个转义字符(,它能出现0次或1次(?),然后是一个0，后面跟着2个数字(\d{2})，然后是)或-或空格中的一个，它出现1次或不出现(?)，最后是8个数字(\d{8})。</p>
+</blockquote>
+<h3 id="分支条件"><a href="#分支条件" class="headerlink" title="分支条件"></a>分支条件</h3><blockquote>
+<p>正则表达式里的分枝条件指的是有几种规则，如果满足其中任意一种规则都应该当成匹配，具体方法是用|把不同的规则分隔开。<br>示例： <code>0\d&#123;2&#125;-\d&#123;8&#125;|0\d&#123;3&#125;-\d&#123;7&#125;</code><br>这个表达式匹配3位区号的电话号码，其中区号可以用小括号括起来，也可以不用，区号与本地号间可以用连字号或空格间隔，也可以没有间隔。你可以试试用分枝条件把这个表达式扩展成也支持4位区号的。<br>示例： <code>\d&#123;5&#125;-\d&#123;4&#125;|\d&#123;5&#125;</code><br>这个表达式用于匹配美国的邮政编码。美国邮编的规则是5位数字，或者用连字号间隔的9位数字。之所以要给出这个示例是因为它能说明一个问题：<strong>使用分枝条件时，要注意各个条件的顺序</strong>。如果你把它改成 <code>\d&#123;5&#125;|\d&#123;5&#125;-\d&#123;4&#125;</code> 的话，那么就只会匹配5位的邮编(以及9位邮编的前5位)。原因是匹配分枝条件时，将会从左到右地测试每个条件，如果满足了某个分枝的话，就不会去再管其它的条件了。</p>
+</blockquote>
+<h3 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h3><blockquote>
+<p>重复单个字符，直接在字符后面加上限定符就行了。但如果想要重复多个字符，我们可以用小括号来指定 <strong>子表达式</strong>(也叫作<strong>分组</strong>)。<br><code>(\d&#123;1,3&#125;\.)&#123;3&#125;\d&#123;1,3&#125;</code> 是一个简单的IP地址匹配表达式。要理解这个表达式，请按下列顺序分析它： <code>\d&#123;1,3&#125;</code> 匹配1到3位的数字， <code>(\d&#123;1,3&#125;\.)&#123;3&#125;</code> 匹配三位数字加上一个英文句号(这个整体也就是这个分组)重复3次，最后再加上一个一到三位的数字 <code>(\d&#123;1,3&#125;)</code> 。<br>不幸的是，它也将匹配 <em>256.300.888.999</em> 这种不可能存在的IP地址。我们只能使用冗长的分组，选择，字符串来描述一个 <strong>正确的IP地址：</strong> <code>((2[0-4]\d|25[0-5]|[01]?\d\d?)\.)&#123;3&#125;(2[0-4]\d|25[0-5]|[01]?\d\d?)</code></p>
+</blockquote>
+<h3 id="反义"><a href="#反义" class="headerlink" title="反义"></a>反义</h3><blockquote>
+<p>有时需要查找不属于某个能简单定义的字符类的字符。比如想查找除了数字以外，其它任意字符都行的情况，这时需要用到反义：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">元字符</th>
+<th align="left">做什么用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>\W</code></td>
+<td align="left">匹配任意不是字母，数字，下划线，汉字的字符</td>
+</tr>
+<tr>
+<td align="left"><code>\S</code></td>
+<td align="left">匹配任意不是空白符的字符</td>
+</tr>
+<tr>
+<td align="left"><code>\D</code></td>
+<td align="left">匹配任意非数字的字符</td>
+</tr>
+<tr>
+<td align="left"><code>\B</code></td>
+<td align="left">匹配不是单词开头或结束的位置</td>
+</tr>
+<tr>
+<td align="left"><code>[^x]</code></td>
+<td align="left">匹配除了x以外的任意字符</td>
+</tr>
+<tr>
+<td align="left"><code>[^aeiou]</code></td>
+<td align="left">匹配除了aeiou这几个字母以外的任意字符</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>示例： <code>\S+</code> 匹配不包含空白符的字符串。 <code>&lt;a[^&gt;]+&gt;</code> 匹配用尖括号括起来的以a开头的字符串。</p>
+</blockquote>
+<h3 id="后向引用"><a href="#后向引用" class="headerlink" title="后向引用"></a>后向引用</h3><blockquote>
+<p>使用小括号指定一个子表达式后，<strong>匹配这个子表达式</strong> 的文本(也就是此分组捕获的内容)可以在表达式或其它程序中作进一步的处理。默认情况下，每个分组会自动拥有一个 <strong>组号</strong>，规则是：从左向右，以分组的左括号为标志，第一个出现的分组的组号为1，第二个为2，以此类推。<br> <strong>后向引用</strong> 用于重复搜索前面某个分组匹配的文本。<br>示例： <code>\b(\w+)\b\s+\1\b</code> 可以用来匹配重复的单词，像go go, 或者kitty kitty。这个表达式首先是一个单词，也就是单词开始处和结束处之间的多于一个的字母或数字 <code>\b(\w+)\b</code> ，这个单词会被捕获到编号为1的分组中，然后是1个或几个空白符<code>\s+</code>，最后是分组1中捕获的内容（也就是前面匹配的那个单词） <code>\1</code> 。<br>你也可以自己指定子表达式的 <strong>组名</strong>.要指定一个子表达式的组名，请使用这样的语法： <code>(?&lt;Word&gt;\w+)</code> (或者把尖括号换成 <code>&#39;</code> 也行： <code>(?&#39;Word&#39;\w+))</code>,这样就把<code>\w+</code>的组名指定为 <strong>Word</strong> 了。要反向引用这个分组捕获的内容，你可以使用 <code>\k&lt;Word&gt;</code> ,所以上一个示例也可以写成这样： <code>\b(?&lt;Word&gt;\w+)\b\s+\k&lt;Word&gt;\b</code> 。</p>
+</blockquote>
+<h3 id="零宽断言"><a href="#零宽断言" class="headerlink" title="零宽断言"></a>零宽断言</h3><blockquote>
+<p>接下来的四个用于查找在某些内容(但并不包括这些内容)之前或之后的东西，也就是说它们像\b,^,$那样用于指定一个位置，这个位置应该满足一定的条件(即断言)，因此它们也被称为 <strong>零宽断言</strong>。<br><code>(?=exp)</code> 也叫 <strong>零宽度正预测先行断言</strong>，它断言自身出现的位置的后面能匹配表达式exp。比如<code>\b\w+(?=ing\b)</code>，匹配以ing结尾的单词的前面部分(除了ing以外的部分)，如查找 <em>I’m singing while you’re dancing.</em> 时，它会匹配 sing 和 danc 。<br><code>(?&lt;=exp)</code> 也叫 <strong>零宽度正回顾后发断言</strong> ，它断言自身出现的位置的前面能匹配表达式exp。比如 <code>(?&lt;=\bre)\w+\b</code> 会匹配以re开头的单词的后半部分(除了re以外的部分)，例如在查找 <em>reading a book</em> 时，它匹配ading。<br>假如你想要给一个很长的数字中每三位间加一个逗号(当然是从右边加起了)，你可以这样查找需要在前面和里面添加逗号的部分： <code>((?&lt;=\d)\d&#123;3&#125;)+\b</code> ，用它对1234567890进行查找时结果是234567890。<br>下面这个示例同时使用了这两种断言： <code>(?&lt;=\s)\d+(?=\s)</code> 匹配以空白符间隔的数字( <strong>再次强调，不包括这些空白符</strong> )。</p>
+</blockquote>
+<h3 id="负向零宽断言"><a href="#负向零宽断言" class="headerlink" title="负向零宽断言"></a>负向零宽断言</h3><blockquote>
+<p>前面我们提到过怎么查找不是某个字符或不在某个字符类里的字符的方法(反义)。但是如果我们只是想要确保某个字符没有出现，但并不想去匹配它时怎么办？例如，如果我们想查找这样的单词–它里面出现了字母q,但是q后面跟的不是字母u,我们可以尝试这样：<br><code>\b\w*q[^u]\w*\b</code> 匹配 <em>包含后面不是字母u的字母q的单词</em> 。但是如果多做测试(或者你思维足够敏锐，直接就观察出来了)，你会发现，如果q出现在单词的结尾的话，像Iraq,Benq，这个表达式就会出错。这是因为[^u]总要匹配一个字符，所以如果q是单词的最后一个字符的话，后面的[^u]将会匹配q后面的单词分隔符(可能是空格，或者是句号或其它的什么)，后面的 <code>\w*\b</code> 将会匹配下一个单词，于是 <code>\b\w*q[^u]\w*\b</code> 就能匹配整个Iraq fighting。<strong>负向零宽断言</strong> 能解决这样的问题，因为它只匹配一个位置，并不消费任何字符。现在，我们可以这样来解决这个问题： <code>\b\w*q(?!u)\w*\b</code> 。<br><strong>零宽度负预测先行断言</strong>(?!exp)，断言此位置的后面不能匹配表达式exp。例如： <code>\d&#123;3&#125;(?!\d)</code> 匹配三位数字，而且这三位数字的后面不能是数字； <code>\b((?!abc)\w)+\b</code> 匹配不包含连续字符串abc的单词。<br>同理，我们可以用(?&lt;!exp),**零宽度负回顾后发断言来断言** 此位置的前面不能匹配表达式exp：(?&lt;![a-z])\d{7}匹配前面不是小写字母的七位数字。<br>一个更复杂的示例：<code>(?&lt;=&lt;(\w+)&gt;).*(?=&lt;\/\1&gt;)</code> 匹配不包含属性的简单HTML标签内里的内容。<code>(?&lt;=&lt;(\w+)&gt;)</code> 指定了这样的 **前缀**：被尖括号括起来的单词(比如可能是<b>)，然后是. <code>*</code> (任意的字符串),最后是一个 **后缀** <code>(?=&lt;\/\1&gt;)</code>。注意后缀里的 / ，它用到了前面提过的字符转义；\1则是一个反向引用，引用的正是捕获的第一组，前面的 <code>(\w+)</code> 匹配的内容，这样如果前缀实际上是<b>的话，后缀就是</b>了。整个表达式匹配的是<b>和</b>之间的内容(再次提醒，不包括前缀和后缀本身)。</p>
+</blockquote>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><blockquote>
+<p>小括号的另一种用途是通过语法(?#comment)来包含注释。例如：<code>2[0-4]\d(?#200-249)|25[0-5](?#250-255)|[01]?\d\d?(?#0-199)</code>。<br>要包含注释的话，最好是启用“忽略模式里的空白符”选项，这样在编写表达式时能任意的添加空格，Tab，换行，而实际使用时这些都将被忽略。启用这个选项后，在#后面到这一行结束的所有文本都将被当成注释忽略掉。例如，我们可以前面的一个表达式写成这样：<br>      <code>(?&lt;=</code>    # 断言要匹配的文本的前缀<br>      <code>&lt;(\w+)&gt;</code> # 查找尖括号括起来的字母或数字(即HTML/XML标签)<br>      <code>)</code>       # 前缀结束<br>      <code>.*</code>      # 匹配任意文本<br>      <code>(?=</code>     # 断言要匹配的文本的后缀<br>      <code>&lt;\/\1&gt;</code>  # 查找尖括号括起来的内容：前面是一个”/“，后面是先前捕获的标签<br>      <code>)</code>       # 后缀结束</p>
+</blockquote>
+<h3 id="贪婪与懒惰"><a href="#贪婪与懒惰" class="headerlink" title="贪婪与懒惰"></a>贪婪与懒惰</h3><blockquote>
+<p>当正则表达式中包含能接受重复的限定符时，通常的行为是（在使整个表达式能得到匹配的前提下）匹配 <strong>尽可能多</strong> 的字符。以这个表达式为例： <code>a.*b</code> ，它将会匹配最长的以a开始，以b结束的字符串。如果用它来搜索aabab的话，它会匹配整个字符串aabab。这被称为 <strong>贪婪匹配</strong>。<br>有时，我们更需要 <strong>懒惰匹配</strong>，也就是匹配尽可能少的字符。前面给出的限定符都可以被转化为懒惰匹配模式，只要在它后面加上一个问号 ? 。这样 <code>.*?</code> 就意味着匹配任意数量的重复，但是在能使整个匹配成功的前提下使用最少的重复。<br>示例： <code>a.*?b</code> 匹配最短的，以a开始，以b结束的字符串。如果把它应用于aabab的话，它会匹配aab（第一到第三个字符）和ab（第四到第五个字符）。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">语法</th>
+<th align="left">做什么用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>*?</code></td>
+<td align="left">重复任意次，但尽可能少重复</td>
+</tr>
+<tr>
+<td align="left"><code>+?</code></td>
+<td align="left">重复1次或更多次，但尽可能少重复</td>
+</tr>
+<tr>
+<td align="left"><code>??</code></td>
+<td align="left">重复0次或1次，但尽可能少重复</td>
+</tr>
+<tr>
+<td align="left"><code>&#123;n,m&#125;?</code></td>
+<td align="left">重复n到m次，但尽可能少重复</td>
+</tr>
+<tr>
+<td align="left"><code>&#123;n,&#125;?</code></td>
+<td align="left">重复n次以上，但尽可能少重复</td>
+</tr>
+</tbody></table>
+<h3 id="其他元字符"><a href="#其他元字符" class="headerlink" title="其他元字符"></a>其他元字符</h3><table>
+<thead>
+<tr>
+<th align="left">元字符</th>
+<th align="left">做什么用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>\a</code></td>
+<td align="left">报警字符(打印它的效果是电脑嘀一声)</td>
+</tr>
+<tr>
+<td align="left"><code>\b</code></td>
+<td align="left">通常是单词分界位置，但如果在字符类里使用代表退格</td>
+</tr>
+<tr>
+<td align="left"><code>\t</code></td>
+<td align="left">制表符，Tab</td>
+</tr>
+<tr>
+<td align="left"><code>\r</code></td>
+<td align="left">回车</td>
+</tr>
+<tr>
+<td align="left"><code>\v</code></td>
+<td align="left">竖向制表符</td>
+</tr>
+<tr>
+<td align="left"><code>\f</code></td>
+<td align="left">换页符</td>
+</tr>
+<tr>
+<td align="left"><code>\n</code></td>
+<td align="left">换行符</td>
+</tr>
+<tr>
+<td align="left"><code>\e</code></td>
+<td align="left">Escape</td>
+</tr>
+<tr>
+<td align="left"><code>\0nn</code></td>
+<td align="left">ASCII代码中八进制代码为nn的字符</td>
+</tr>
+<tr>
+<td align="left"><code>\xnn</code></td>
+<td align="left">ASCII代码中十六进制代码为nn的字符</td>
+</tr>
+<tr>
+<td align="left"><code>\unnnn</code></td>
+<td align="left">Unicode代码中十六进制代码为nnnn的字符</td>
+</tr>
+<tr>
+<td align="left"><code>\cN</code></td>
+<td align="left">ASCII控制字符。比如\cC代表Ctrl+C</td>
+</tr>
+<tr>
+<td align="left"><code>\A</code></td>
+<td align="left">字符串开头(类似^，但不受处理多行选项的影响)</td>
+</tr>
+<tr>
+<td align="left"><code>\Z</code></td>
+<td align="left">字符串结尾或行尾(不受处理多行选项的影响)</td>
+</tr>
+<tr>
+<td align="left"><code>\z</code></td>
+<td align="left">字符串结尾(类似$，但不受处理多行选项的影响)</td>
+</tr>
+<tr>
+<td align="left"><code>\G</code></td>
+<td align="left">当前搜索的开头</td>
+</tr>
+<tr>
+<td align="left"><code>\p&#123;name&#125;</code></td>
+<td align="left">Unicode中命名为name的字符类，例如\p{IsGreek}</td>
+</tr>
+<tr>
+<td align="left"><code>(?&gt;exp)</code></td>
+<td align="left">贪婪子表达式</td>
+</tr>
+<tr>
+<td align="left"><code>(?&lt;x&gt;-&lt;y&gt;exp)</code></td>
+<td align="left">平衡组</td>
+</tr>
+<tr>
+<td align="left"><code>(?im-nsx:exp)</code></td>
+<td align="left">在子表达式exp中改变处理选项</td>
+</tr>
+<tr>
+<td align="left"><code>(?im-nsx)</code></td>
+<td align="left">为表达式后面的部分改变处理选项</td>
+</tr>
+<tr>
+<td align="left"><a href="%60(?(exp)yes%7Cno)%60">1</a></td>
+<td align="left">把exp当作零宽正向先行断言，如果在这个位置能匹配，使用yes作为此组的表达式；否则使用no</td>
+</tr>
+<tr>
+<td align="left"><code>(?(exp)yes)</code></td>
+<td align="left">同上，只是使用空表达式作为no</td>
+</tr>
+<tr>
+<td align="left"><a href="%60(?(name)yes%7Cno)%60">2</a></td>
+<td align="left">如果命名为name的组捕获到了内容，使用yes作为表达式；否则使用no</td>
+</tr>
+<tr>
+<td align="left"><code>(?(name)yes)</code></td>
+<td align="left">同上，只是使用空表达式作为no</td>
+</tr>
+</tbody></table>
+<blockquote>
+</blockquote>
+<h2 id="正则表达式常用实例"><a href="#正则表达式常用实例" class="headerlink" title="正则表达式常用实例"></a>正则表达式常用实例</h2><h3 id="账号-密码"><a href="#账号-密码" class="headerlink" title="账号/密码"></a>账号/密码</h3><pre><code class="java">帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线) = &quot;^[a-zA-Z][a-zA-Z0-9_]&#123;4,15&#125;$&quot;
+密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线) = &quot;^[a-zA-Z]\w&#123;5,17&#125;$&quot;
+强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间) = &quot;^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).&#123;8,10&#125;$&quot;</code></pre>
+<h3 id="字符串校验"><a href="#字符串校验" class="headerlink" title="字符串校验"></a>字符串校验</h3><pre><code class="java">汉字 = &quot;^[\u4e00-\u9fa5]&#123;0,&#125;$&quot;;
+英文和数字 = &quot;^[A-Za-z0-9]+$ 或 ^[A-Za-z0-9]&#123;4,40&#125;$&quot;;
+长度为3-20的所有字符 = &quot;^.&#123;3,20&#125;$&quot;；
+由26个英文字母组成的字符串 = &quot;^[A-Za-z]+$&quot;；
+由26个大写英文字母组成的字符串 = &quot;^[A-Z]+$&quot;；
+由26个小写英文字母组成的字符串 = &quot;^[a-z]+$&quot;；
+由数字和26个英文字母组成的字符串 = &quot;^[A-Za-z0-9]+$&quot;；
+由数字、26个英文字母或者下划线组成的字符串 = &quot;^\w+$ 或 ^\w&#123;3,20&#125;$&quot;；
+中文、英文、数字包括下划线 = &quot;^[\u4E00-\u9FA5A-Za-z0-9_]+$&quot;；
+中文、英文、数字但不包括下划线等符号 = &quot;^[\u4E00-\u9FA5A-Za-z0-9]+$ 或 ^[\u4E00-\u9FA5A-Za-z0-9]&#123;2,20&#125;$&quot;；
+禁止输入含有~的字符 = &quot;[^~\x22]+&quot;；</code></pre>
+<h3 id="手机号"><a href="#手机号" class="headerlink" title="手机号"></a>手机号</h3><pre><code class="java">/**
+ * 手机号码
+ * 移动：134,135,136,137,138,139,147,150,151,152,157,158,159,170,178,182,183,184,187,188
+ * 联通：130,131,132,145,152,155,156,1709,171,176,185,186
+ * 电信：133,134,153,1700,177,180,181,189
+ */
+String MOBILE = &quot;^1(3[0-9]|4[57]|5[0-35-9]|7[01678]|8[0-9])\\d&#123;8&#125;$&quot;;
+/**
+ * 中国移动：China Mobile
+ * 134,135,136,137,138,139,147,150,151,152,157,158,159,170,178,182,183,184,187,188
+ */
+String CM = &quot;^1(3[4-9]|4[7]|5[0-27-9]|7[0]|7[8]|8[2-478])\\d&#123;8&#125;$&quot;;
+/**
+ * 中国联通：China Unicom
+ * 130,131,132,145,152,155,156,1709,171,176,185,186
+ */
+String CU = &quot;^1(3[0-2]|4[5]|5[56]|709|7[1]|7[6]|8[56])\\d&#123;8&#125;$&quot;;
+/**
+ * 中国电信：China Telecom
+ * 133,134,153,1700,177,180,181,189
+ */
+String CT = &quot;^1(3[34]|53|77|700|8[019])\\d&#123;8&#125;$&quot;;</code></pre>
+<h3 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h3><pre><code class="java">String IPREGEXP = &quot;((2[0-4]\d|25[0-5]|[01]?\d\d?)\.)&#123;3&#125;(2[0-4]\d|25[0-5]|[01]?\d\d?)&quot;;</code></pre>
+<h3 id="EMAIL地址"><a href="#EMAIL地址" class="headerlink" title="EMAIL地址"></a>EMAIL地址</h3><pre><code class="java">Email地址 = &quot;^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$&quot;;</code></pre>
+<h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><pre><code class="java">域名 = &quot;[a-zA-Z0-9][-a-zA-Z0-9]&#123;0,62&#125;(/.[a-zA-Z0-9][-a-zA-Z0-9]&#123;0,62&#125;)+/.?&quot;;
+InternetURL = &quot;[a-zA-z]+://[^\s]* 或 ^http://([\w-]+\.)+[\w-]+(/[\w-./?%&amp;=]*)?$&quot;</code></pre>
+<h3 id="身份证"><a href="#身份证" class="headerlink" title="身份证"></a>身份证</h3><pre><code class="java">身份证号(15位、18位数字) = &quot;^\d&#123;15&#125;|\d&#123;18&#125;$&quot;
+短身份证号码(数字、字母x结尾) = &quot;^([0-9])&#123;7,18&#125;(x|X)?$ 或 ^\d&#123;8,18&#125;|[0-9x]&#123;8,18&#125;|[0-9X]&#123;8,18&#125;?$&quot;</code></pre>
+<h3 id="数字类校验"><a href="#数字类校验" class="headerlink" title="数字类校验"></a>数字类校验</h3><pre><code class="java">数字 = &quot;^[0-9]*$&quot;;
+n位的数字 = &quot;^\d&#123;n&#125;$&quot;;
+至少n位的数字 = &quot;^\d&#123;n,&#125;$&quot;;
+m-n位的数字 = &quot;^\d&#123;m,n&#125;$&quot;;
+零和非零开头的数字 = &quot;^(0|[1-9][0-9]*)$&quot;;
+非零开头的最多带两位小数的数字 = &quot;^([1-9][0-9]*)+(.[0-9]&#123;1,2&#125;)?$&quot;;
+带1-2位小数的正数或负数 = &quot;^(\-)?\d+(\.\d&#123;1,2&#125;)?$&quot;;
+正数、负数、和小数 = &quot;^(\-|\+)?\d+(\.\d+)?$&quot;;
+有两位小数的正实数 = &quot;^[0-9]+(.[0-9]&#123;2&#125;)?$&quot;;
+有1~3位小数的正实数 = &quot;^[0-9]+(.[0-9]&#123;1,3&#125;)?$&quot;;
+非零的正整数 = &quot;^[1-9]\d*$ 或 ^([1-9][0-9]*)&#123;1,3&#125;$ 或 ^\+?[1-9][0-9]*$&quot;;
+非零的负整数 = &quot;^\-[1-9][]0-9&quot;*$&quot; 或 &quot;^-[1-9]\d*$&quot;;</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: 'dc7f8ca729fea878e59c',
+            clientSecret: '67417ddbb12eeebb0de47187099e92ace7bdf90e',
+            repo: 'yelog.github.io',
+            owner: 'yelog',
+            admin: ['yelog'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2016-2020 Yelog
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close"  onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
