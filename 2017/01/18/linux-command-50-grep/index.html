@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(158)</small>
+                <small>(159)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(10)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -461,8 +461,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="158">
-<input type="hidden" id="yelog_site_word_count" value="156.4k">
+<input type="hidden" id="yelog_site_posts_number" value="159">
+<input type="hidden" id="yelog_site_word_count" value="156.9k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -748,6 +748,10 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>spring-boot</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>springcloud</a>
             </li>
         
@@ -810,6 +814,15 @@
            data-author="" >
             <span class="post-title" title="3-hexo使用说明">3-hexo使用说明</span>
             <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 后端 "
+           href="/2023/12/11/springboot-jarlauncher/"
+           data-tag="docker,java,spring-boot"
+           data-author="" >
+            <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
+            <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
         </a>
         
         
@@ -2253,7 +2266,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-12-05 09:49:48'>2017-01-18 10:12</time>
+            发布时间 : <time class="date" title='最后更新: 2023-12-11 19:20:43'>2017-01-18 10:12</time>
         
     </div>
     <div class="article-meta">
@@ -2422,7 +2435,7 @@
 <td align="left">此参数的效果和指定“-i”参数相同</td>
 </tr>
 </tbody></table>
-<h3 id="规则表达式"><a href="#规则表达式" class="headerlink" title="规则表达式"></a>规则表达式</h3><p><strong>grep的规则表达式</strong><br>　　<code>^</code>  #锚定行的开始 如：<code>&#39;^grep&#39;</code>匹配所有以grep开头的行。<br>　　<code>$</code>  #锚定行的结束 如：<code>&#39;grep$&#39;</code>匹配所有以grep结尾的行。<br>　　<code>.</code>  #匹配一个非换行符的字符 如：<code>&#39;gr.p&#39;</code>匹配gr后接一个任意字符，然后是p。<br>　　<code>*</code>  #匹配零个或多个先前字符 如：<code>&#39;*grep&#39;</code>匹配所有一个或多个空格后紧跟grep的行。<br>　　<code>.*</code>   #一起用代表任意字符。<br>　　<code>[]</code>   #匹配一个指定范围内的字符，如<code>&#39;[Gg]rep&#39;</code>匹配Grep和grep。<br>　　<code>[^]</code>  #匹配一个不在指定范围内的字符，如：<code>&#39;[^A-FH-Z]rep&#39;</code>匹配不包含A-R和T-Z的一个字母开头，紧跟rep的行。<br>　　<code>\(..\)</code>  #标记匹配字符，如<code>&#39;\(love\)&#39;</code>，love被标记为1。<br>　　<code>\&lt;</code>      #锚定单词的开始，如:<code>&#39;\&lt;grep&#39;</code>匹配包含以grep开头的单词的行。<br>　　<code>\&gt;</code>      #锚定单词的结束，如<code>&#39;grep\&gt;&#39;</code>匹配包含以grep结尾的单词的行。<br>　　<code>x\&#123;m\&#125;</code>  #重复字符x，m次，如：<code>&#39;o\&#123;5\&#125;&#39;</code>匹配包含5个o的行。<br>　　<code>x\&#123;m,\&#125;</code>  #重复字符x,至少m次，如：<code>&#39;o\&#123;5,\&#125;&#39;</code>匹配至少有5个o的行。<br>　　<code>x\&#123;m,n\&#125;</code>  #重复字符x，至少m次，不多于n次，如：<code>&#39;o\&#123;5,10\&#125;&#39;</code>匹配5–10个o的行。<br>　　<code>\w</code>    #匹配文字和数字字符，也就是[A-Za-z0-9]，如：<code>&#39;G\w*p&#39;</code>匹配以G后跟零个或多个文字或数字字符，然后是p。<br>　　<code>\W</code>   #<code>\w</code>的反置形式，匹配一个或多个非单词字符，如点号句号等。<br>　　<code>\b</code>   #单词锁定符，如: <code>&#39;\bgrep\b&#39;</code>只匹配grep。<br><strong>POSIX字符</strong><br>　　为了在不同国家的字符编码中保持一至，POSIX(The Portable Operating System Interface)增加了特殊的字符类，如[:alnum:]是[A-Za-z0-9]的另一个写法。要把它们放到[]号内才能成为正则表达式，如[A- Za-z0-9]或[[:alnum:]]。在linux下的grep除fgrep外，都支持POSIX的字符类。<br>　　[:alnum:]    #文字数字字符<br>　　[:alpha:]    #文字字符<br>　　[:digit:]    #数字字符<br>　　[:graph:]    #非空字符（非空格、控制字符）<br>　　[:lower:]    #小写字符<br>　　[:cntrl:]    #控制字符<br>　　[:print:]    #非空字符（包括空格）<br>　　[:punct:]    #标点符号<br>　　[:space:]    #所有空白字符（新行，空格，制表符）<br>　　[:upper:]    #大写字符<br>　　[:xdigit:]   #十六进制数字（0-9，a-f，A-F）</p>
+<h3 id="规则表达式"><a href="#规则表达式" class="headerlink" title="规则表达式"></a>规则表达式</h3><p><strong>grep的规则表达式</strong><br>　　<code>^</code>  #锚定行的开始 如：<code>&#39;^grep&#39;</code>匹配所有以grep开头的行。<br>　　<code>$</code>  #锚定行的结束 如：<code>&#39;grep$&#39;</code>匹配所有以grep结尾的行。<br>　　<code>.</code>  #匹配一个非换行符的字符 如：<code>&#39;gr.p&#39;</code>匹配gr后接一个任意字符，然后是p。<br>　　<code>*</code>  #匹配零个或多个先前字符 如：<code>&#39;*grep&#39;</code>匹配所有一个或多个空格后紧跟grep的行。<br>　　<code>.*</code>   #一起用代表任意字符。<br>　　<code>[]</code>   #匹配一个指定范围内的字符，如<code>&#39;[Gg]rep&#39;</code>匹配Grep和grep。<br>　　<code>[^]</code>  #匹配一个不在指定范围内的字符，如：<code>&#39;[^A-FH-Z]rep&#39;</code>匹配不包含A-R和T-Z的一个字母开头，紧跟rep的行。<br>　　<code>\(..\)</code>  #标记匹配字符，如<code>&#39;\(love\)&#39;</code>，love被标记为1。<br>　　<code>\&lt;</code>      #锚定单词的开始，如:<code>&#39;\&lt;grep&#39;</code>匹配包含以grep开头的单词的行。<br>　　<code>\&gt;</code>      #锚定单词的结束，如<code>&#39;grep\&gt;&#39;</code>匹配包含以grep结尾的单词的行。<br>　　<code>x\&#123;m\&#125;</code>  #重复字符x，m次，如：<code>&#39;o\&#123;5\&#125;&#39;</code>匹配包含5个o的行。<br>　　<code>x\&#123;m,\&#125;</code>  #重复字符x,至少m次，如：<code>&#39;o\&#123;5,\&#125;&#39;</code>匹配至少有5个o的行。<br>　　<code>x\&#123;m,n\&#125;</code>  #重复字符x，至少m次，不多于n次，如：<code>&#39;o\&#123;5,10\&#125;&#39;</code>匹配5–10个o的行。<br>　　<code>\w</code>    #匹配文字和数字字符，也就是[A-Za-z0-9]，如：<code>&#39;G\w*p&#39;</code>匹配以G后跟零个或多个文字或数字字符，然后是p。<br>　　<code>\W</code>   #<code>\w</code>的反置形式，匹配一个或多个非单词字符，如点号句号等。<br>　　<code>\b</code>   #单词锁定符，如: <code>&#39;\bgrep\b&#39;</code>只匹配grep。<br><strong>POSIX字符</strong><br>　　为了在不同国家的字符编码中保持一至，POSIX(The Portable Operating System Interface)增加了特殊的字符类，如[:alnum:]是[A-Za-z0-9]的另一个写法。要把它们放到[]号内才能成为正则表达式，如<code>[A-Za-z0-9]</code>或<code>[[:alnum:]]</code>。在linux下的grep除fgrep外，都支持POSIX的字符类。<br>　　[:alnum:]    #文字数字字符<br>　　[:alpha:]    #文字字符<br>　　[:digit:]    #数字字符<br>　　[:graph:]    #非空字符（非空格、控制字符）<br>　　[:lower:]    #小写字符<br>　　[:cntrl:]    #控制字符<br>　　[:print:]    #非空字符（包括空格）<br>　　[:punct:]    #标点符号<br>　　[:space:]    #所有空白字符（新行，空格，制表符）<br>　　[:upper:]    #大写字符<br>　　[:xdigit:]   #十六进制数字（0-9，a-f，A-F）</p>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：查找指定进程</strong></p>
 <pre><code class="bash">$ ps -ef|grep hexo
 faker    13401 19030  0 09:51 pts/2    00:00:15 hexo
