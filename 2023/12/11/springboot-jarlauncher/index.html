@@ -910,7 +910,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -2270,7 +2270,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-12-14 15:34:57'>2023-12-11 16:58</time>
+            发布时间 : <time class="date" title='最后更新: 2023-12-26 09:50:22'>2023-12-11 16:58</time>
         
     </div>
     <div class="article-meta">
@@ -2323,9 +2323,9 @@
       
         <h2 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h2><p>今天同事再升级框架后(spring-cloud 2022.0.4 -&gt; 2023.0.0)(spring-boot 3.1.6 -&gt; 3.2.0)</p>
 <p>同时因为 spring-boot 的版本问题, 需要将 maven 升级到 3.6.3+</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111837604.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111837604.png" alt="maven version"></p>
 <p>升级后构建 jar 包和构建镜像都是正常的, 但是发布到测试环境就报错 <code>Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111851862.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111851862.png" alt="error log"></p>
 <h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>报错为 JarLauncher 找不到, 检查了 <code>Jenkins</code> 中的打包任务, 发现并没有编译报错, 同事直接使用打包任务中产生的 xx.jar, 可以正常运行.</p>
 <p>说明在打包 <code>Docker</code> 镜像前都没有问题, 这时就想起来我们在打包镜像时, 先解压 xx.jar, 然后直接执行 <code>org.springframework.boot.loader.JarLauncher</code>, 所以很可能是升级后, 启动文件 <code>JarLauncher</code> 的路径变了.</p>
 <p>为了验证我们的猜想, 我们得看一下实际容器内的文件结构, 但是这时容器一直报错导致无法启动, 不能直接通过 <code>Rancher</code> 查看文件结构, 我们可以通过文件拷贝的方式来解决, 如下:</p>
@@ -2334,10 +2334,10 @@ docker create -it --name dumy 10.188.132.123:5000/lemes-cloud/lemes-gateway:deve
 # 直接拷贝容器内的我们想要看的目录
 docker cp dumy:/data .</code></pre>
 <p>到本地后, 就可以通过合适的工具查找 <code>JarLauncher</code> 文件, 我这里通过 <code>vim</code> 来寻找, 如下图:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111902709.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111902709.png" alt="JarLauncher Path"></p>
 <p>发现比原来多了一层目录 <code>launch</code>, 所以问题就发生在这里了.</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>我们在打包脚本 <code>JenkinsCommon.groovy</code> 中根据当前打包的 JDK 版本来判断使用的启动类路径, 如下:</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111905161.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202312111905161.png" alt="Jenkins"></p>
 <p>再次打包, 应用正常启动.</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/2.5.15/api/org/springframework/boot/loader/JarLauncher.html">JarLauncher</a></p>
 

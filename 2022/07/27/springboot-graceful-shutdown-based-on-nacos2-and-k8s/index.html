@@ -910,7 +910,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -2272,7 +2272,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2023-12-14 15:34:56'>2022-07-27 15:35</time>
+            发布时间 : <time class="date" title='最后更新: 2023-12-26 09:50:21'>2022-07-27 15:35</time>
         
     </div>
     <div class="article-meta">
@@ -2343,7 +2343,7 @@
 <li>再优雅关闭<code>副本3</code></li>
 <li>完成了服务不中断的应用升级</li>
 </ol>
-<h2 id="实现关键点"><a href="#实现关键点" class="headerlink" title="实现关键点"></a>实现关键点</h2><p>为了实现上面背景中提到的思路, 主要从一下几个方面入手</p>
+<h2 id="实现关键点"><a href="#实现关键点" class="headerlink" title="实现关键点"></a>实现关键点</h2><p>为了实现上面背景中提到的思路, 主要从如下几个方面入手</p>
 <h3 id="创建从-nacos-中下线副本的API"><a href="#创建从-nacos-中下线副本的API" class="headerlink" title="创建从 nacos 中下线副本的API"></a>创建从 nacos 中下线副本的API</h3><p>我们通过创建自定义名为 <code>deregister</code> 的 <code>endpoint</code> 来通知 <code>nacos</code> 下线副</p>
 <pre><code class="java">import com.alibaba.cloud.nacos.NacosDiscoveryProperties;
 import com.alibaba.cloud.nacos.registry.NacosRegistration;
@@ -2393,7 +2393,7 @@ public class LemesNacosServiceDeregisterEndpoint &#123;
     &#125;
 
 &#125;</code></pre>
-<h3 id="支持-Graceful-Shutdown"><a href="#支持-Graceful-Shutdown" class="headerlink" title="支持 Graceful Shutdown"></a>支持 Graceful Shutdown</h3><p>由于 springboot 原生支持, 我们只需要在 <code>bootstrap.yaml</code> 中添加一下配置即可</p>
+<h3 id="支持-Graceful-Shutdown"><a href="#支持-Graceful-Shutdown" class="headerlink" title="支持 Graceful Shutdown"></a>支持 Graceful Shutdown</h3><p>由于 springboot 原生支持, 我们只需要在 <code>bootstrap.yaml</code> 中添加如下配置即可</p>
 <pre><code class="yaml">server:
   # 开启优雅下线
   shutdown: graceful
