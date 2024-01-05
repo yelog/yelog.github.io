@@ -496,7 +496,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="161">
-<input type="hidden" id="yelog_site_word_count" value="157.2k">
+<input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -875,7 +875,7 @@
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
            data-author="" >
-            <span class="post-title" title="swift 在图像中识别文字(ocr)">swift 在图像中识别文字(ocr)</span>
+            <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
         </a>
         
@@ -2346,7 +2346,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-02 13:58:11'>2022-08-01 20:06</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2022-08-01 20:06</time>
         
     </div>
     <div class="article-meta">
@@ -2398,7 +2398,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>后台框架是基于 spring cloud 的微服务体系, 当开发同学在自己电脑上进行开发工作时, 比如开发订单模块, 除了需要启动订单模块外, 还需要启动网关模块、权限校验模块、公共服务模块等依赖模块, 非常消耗开发同学的本地电脑的资源, 也及其浪费时间.</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20220801233224.png" alt="Spring Cloud"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20220801233224.png" alt="Spring Cloud"></p>
 <h2 id="二、解决方案"><a href="#二、解决方案" class="headerlink" title="二、解决方案"></a>二、解决方案</h2><h3 id="2-1-目标和关键问题"><a href="#2-1-目标和关键问题" class="headerlink" title="2.1 目标和关键问题"></a>2.1 目标和关键问题</h3><p>能不能开发同学本地只需要启动需要开发的模块:订单模块, 其他模块均适用测试环境中正在运行的服务.</p>
 <p>既然要实现的目标有了, 我们就开始研究可行性和关键问题</p>
 <ol>
@@ -2412,9 +2412,9 @@
 <li>开发同学本地启动注册开发环境副本, 都会携带唯一IP, 则我们可以通过IP来区分不同开发同学的副本</li>
 </ol>
 <p>假设我们需要开发的 API 的后台服务调用链条如下:</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20220802004250.png" alt="请求调用"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20220802004250.png" alt="请求调用"></p>
 <p>我们需要开发的 API 为 <code>/addMo</code>, 打算写在 <code>Order</code> 这个微服务里面, 并且他会调用 <code>common</code> 这个微服务的 <code>/getDict</code> 获取一个字典数据, <code>/getDict</code> 是现成的, 不需要开发, 如果是之前的情况, 开发本地至少需要启动5个微服务才能进行调试.</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20220802004109.png" alt="实现效果"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20220802004109.png" alt="实现效果"></p>
 <h2 id="三、具体实现"><a href="#三、具体实现" class="headerlink" title="三、具体实现"></a>三、具体实现</h2><h3 id="3-1-测试环境设置-metadata"><a href="#3-1-测试环境设置-metadata" class="headerlink" title="3.1 测试环境设置 metadata"></a>3.1 测试环境设置 metadata</h3><p>由于测试环境都是通过容器部署的, 那么启动方式就是下面容器中的 <code>CMD</code>, 我们在其中加入 <code>-Dspring.cloud.nacos.discovery.metadata.lemes-env=product</code>, 用于区分开发环境的微服务测测试环境的微服务</p>
 <pre><code class="Dockerfile"># 说明：Dockerfile 过程分为两部分。第一次用来解压 jar 包，并不会在目标镜像内产生 history/layer。第二部分将解压内容分 layer 拷贝到目标镜像内
 # 目的：更新镜像时，只需要传输代码部分，依赖没有变动则不更新，节省发包时的网络传输量
@@ -2462,7 +2462,7 @@ CMD echo &quot;NACOS_ADDR: $&#123;NACOS_ADDR&#125;&quot;; \
     -Dspring.cloud.nacos.discovery.ip=$&#123;HOST_IP&#125; \
     org.springframework.boot.loader.JarLauncher
 </code></pre>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20220802135945.png" alt="set nacos metadata"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20220802135945.png" alt="set nacos metadata"></p>
 <h3 id="3-2-开发前端传递开启智能连接"><a href="#3-2-开发前端传递开启智能连接" class="headerlink" title="3.2 开发前端传递开启智能连接"></a>3.2 开发前端传递开启智能连接</h3><pre><code class="js">const devIp = getLocalIP(&#39;10.&#39;)
 
 module.exports = &#123;

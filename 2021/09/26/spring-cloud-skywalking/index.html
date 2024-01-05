@@ -496,7 +496,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="161">
-<input type="hidden" id="yelog_site_word_count" value="157.2k">
+<input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -875,7 +875,7 @@
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
            data-author="" >
-            <span class="post-title" title="swift 在图像中识别文字(ocr)">swift 在图像中识别文字(ocr)</span>
+            <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
         </a>
         
@@ -2342,7 +2342,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-02 13:58:11'>2021-09-26 18:08</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2021-09-26 18:08</time>
         
     </div>
     <div class="article-meta">
@@ -2494,7 +2494,7 @@ services:
 <p>其中 <strong>自定义服务名</strong> 可以改为应用名 如 <code>lemes-auth</code>，<strong>服务ip</strong> 为第一步搭建的 SkyWalking 服务的ip，<strong>端口11800</strong> 为启动的 oap 这个容器的端口</p>
 <pre><code class="bash">java -javaagent:上一步解压目录/agent/skywalking-agent.jar=agent.service_name=自定义服务名,collector.backend_service=服务ip:11800 -jar xx.jar</code></pre>
 <p>执行命令启动后，访问以下接口，就可以在第一步 <code>服务ip:8080</code> 中看到访问的链接和调用链路。</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20210926164151.png" alt="链路追踪"><br><img src="https://img.saodiyang.com/picgo_qiniu20210926164350.png" alt="拓扑图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926164151.png" alt="链路追踪"><br><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926164350.png" alt="拓扑图"></p>
 <h3 id="4-开启日志收集"><a href="#4-开启日志收集" class="headerlink" title="4. 开启日志收集"></a>4. 开启日志收集</h3><p>本文主要以 log4j2 来介绍，其他的大同小异，可以网上找教程。SpringCloud 集成 log4j2 不是本文重点，所以请自行 Google。</p>
 <h4 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h4><p>要开启日志收集，必须要添加依赖，如下</p>
 <pre><code class="xml">&lt;dependency&gt;
@@ -2563,16 +2563,16 @@ services:
 <p>完整如下</p>
 <pre><code class="bash">java -javaagent:上一步解压目录/agent/skywalking-agent.jar=agent.service_name=自定义服务名,collector.backend_service=服务ip:11800,plugin.toolkit.log.grpc.reporter.server_host=服务ip,plugin.toolkit.log.grpc.reporter.server_port=11800 -jar xx.jar</code></pre>
 <h4 id="日志收集效果"><a href="#日志收集效果" class="headerlink" title="日志收集效果"></a>日志收集效果</h4><p>这样启动日志中就会打印 traceid , <code>N/A</code> 代表的是非请求的日志，有 traceid 的为 api 请求日志</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20210926170409.png" alt="traceid"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926170409.png" alt="traceid"></p>
 <p>在 skywalking 中就能看到我们上报的日志</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20210926170953.png" alt="skywalking 日志上报"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926170953.png" alt="skywalking 日志上报"></p>
 <p>重点：SkyWalking 可以在链路追踪中查看当前请求的所有日志（不同实例/模块）</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20210926171217.png" alt="SkyWalking 链路日志"></p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20210926171256.png" alt="SkyWalking 链路日志"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926171217.png" alt="SkyWalking 链路日志"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926171256.png" alt="SkyWalking 链路日志"></p>
 <h3 id="5-兼容-spring-cloud-gateway"><a href="#5-兼容-spring-cloud-gateway" class="headerlink" title="5. 兼容 spring-cloud-gateway"></a>5. 兼容 spring-cloud-gateway</h3><p>经过上面的步骤之后，链路已经搭建完成，查看发现了一个问题，gateway 模块的 <code>traceId</code> 和 业务模块的 <code>traceId</code> 不统一。</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20210926164350.png" alt="拓扑图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926164350.png" alt="拓扑图"></p>
 <p>这是由于 SkyWalking 对于 <code>spring-cloud-gateway</code> 的支持不是默认的，所以需要将 <code>agent/optional-plugins/apm-spring-cloud-gateway-2.1.x-plugin-8.7.0.jar</code> 复制到 <code>agent/plugins</code> 下，然后重启即可。</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20210926180619.png" alt="优化过 gateway 的拓扑图"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926180619.png" alt="优化过 gateway 的拓扑图"></p>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>SkyWalking 上面这两个功能就已经非常强大，能够有效帮助我们优化我们的程序，监控系统的问题，并及时报警。日志收集也解决的在大规模分布式集群下日志查询难的问题。</p>
 <p>SkyWalking 还支持 VM、浏览器、k8s等监控，后续如果有实践，将会逐步更新。</p>
 

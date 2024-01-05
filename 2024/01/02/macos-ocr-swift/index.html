@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>swift 在图像中识别文字(ocr) | 叶落阁</title>
+  <title>swift 离线图片识别文字(ocr) | 叶落阁</title>
   <meta name="keywords" content=" swift , macos , ocr ">
-  <meta name="description" content="swift 在图像中识别文字(ocr) | 叶落阁">
+  <meta name="description" content="swift 离线图片识别文字(ocr) | 叶落阁">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="为 layui 扩展的 下拉多选select在线demo： http:&#x2F;&#x2F;yelog.org&#x2F;layui-select-multiple&#x2F; 这个在线 demo就是本项目的 index.html。 可将项目 clone 到本地查看效果。 效果图 参数   属性名 属性值 备注    multiple 无 开启多选   lay-search 无 开启搜索   lay-case 无 大小写敏感   la">
 <meta property="og:type" content="website">
@@ -496,7 +496,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="161">
-<input type="hidden" id="yelog_site_word_count" value="157.2k">
+<input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -875,7 +875,7 @@
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
            data-author="" >
-            <span class="post-title" title="swift 在图像中识别文字(ocr)">swift 在图像中识别文字(ocr)</span>
+            <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
         </a>
         
@@ -2313,7 +2313,7 @@
     <div class="pjax">
         <article id="post-macos-ocr-swift" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">swift 在图像中识别文字(ocr)</h1>
+        <h1 class="article-title">swift 离线图片识别文字(ocr)</h1>
     
     <div class="article-meta">
         
@@ -2344,12 +2344,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-02 13:58:11'>2024-01-02 10:09</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2024-01-02 10:09</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:404</span>
+        <span>字数:430</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2395,7 +2395,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近打算写一个 macos 翻译软件, 需要用到 ocr 图像识别, 经过翻阅文档和 chatgpt 拉扯了一下午, 最终成功实现.</p>
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近打算写一个 macos 翻译软件, 需要用到 ocr 图像识别, 并且因为速度问题, 一开始就考虑使用系统的自带能力来实现.</p>
+<p>经过翻阅文档和 chatgpt 拉扯了一下午, 最终成功实现.</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>代码逻辑为, 接受参数: 图片路径, 然后获取图片, 通过 <code>VNImageRequestHandler</code> 对图片进行文字识别</p>
 <p>如下代码可以直接放进一个 <code>ocr.swift</code>, 然后执行 <code>swiftc -o ocr ocr.swift</code> , 在执行 <code>./ocr /Users/yelog/Desktop/3.png</code> 后面为你实际的有文字的图片路经</p>
 <pre><code class="swift">//

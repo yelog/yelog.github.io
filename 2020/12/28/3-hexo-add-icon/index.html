@@ -496,7 +496,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="161">
-<input type="hidden" id="yelog_site_word_count" value="157.2k">
+<input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -875,7 +875,7 @@
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
            data-author="" >
-            <span class="post-title" title="swift 在图像中识别文字(ocr)">swift 在图像中识别文字(ocr)</span>
+            <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
         </a>
         
@@ -2342,7 +2342,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-02 13:58:11'>2020-12-28 22:00</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2020-12-28 22:00</time>
         
     </div>
     <div class="article-meta">
@@ -2396,28 +2396,28 @@
         <h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>鉴于许多人问过如何添加自定义图标，这里就详细说明一下，以备后人乘凉。</p>
 <p>这篇文章主要讲解是从 <a target="_blank" rel="noopener" href="https://www.iconfont.cn/">iconfont</a> 添加图标。</p>
 <h2 id="二、添加彩色图标"><a href="#二、添加彩色图标" class="headerlink" title="二、添加彩色图标"></a>二、添加彩色图标</h2><h3 id="2-1-登录并添加图标"><a href="#2-1-登录并添加图标" class="headerlink" title="2.1 登录并添加图标"></a>2.1 登录并添加图标</h3><p>访问 <a target="_blank" rel="noopener" href="https://www.iconfont.cn/">iconfont</a>，点击如下图位置登录，可以使用 <code>Github</code> 账号登录。</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20201228230707.png" alt="iconfont 登录"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20201228230707.png" alt="iconfont 登录"></p>
 <p>登录成功后，搜索合适的图标，然后点击添加到购物车，如下图所示。</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20201228231118.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20201228231118.png"></p>
 <p>添加了多个后，可以点击右上角的“购物车”，添加到项目，点击加号创建项目，如下图所示。</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20201228231558.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20201228231558.png"></p>
 <p>添加完成后回到项目页面，找到自己刚刚创建的项目。</p>
 <blockquote>
 <p>如果没有到项目页面，可以点击上面菜单进入：资源管理 -&gt; 我的项目</p>
 </blockquote>
 <h3 id="2-2-引入-3-hexo-中"><a href="#2-2-引入-3-hexo-中" class="headerlink" title="2.2 引入 3-hexo 中"></a>2.2 引入 3-hexo 中</h3><p>点击下载到本地，解压并复制其中的 <code>iconfont.js</code> 到项目 <code>3-hexo/source/js/</code> 下，并改名 <code>custom-iconfont.js</code>。</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20201229003210.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20201229003210.png"></p>
 <p>在文件 <code>3-hexo/layout/_partial/meta.ejs</code> 最后追加下面一行。</p>
 <pre><code class="html">&lt;script src=&quot;&lt;%=theme.blog_path?theme.blog_path.lastIndexOf(&quot;/&quot;) === theme.blog_path.length-1?theme.blog_path.slice(0, theme.blog_path.length-1):theme.blog_path:&#39;&#39; %&gt;/js/custom-iconfont.js?v=&lt;%=theme.version%&gt;&quot; &gt;&lt;/script&gt;</code></pre>
 <h3 id="2-3-在配置文件中添加生效"><a href="#2-3-在配置文件中添加生效" class="headerlink" title="2.3 在配置文件中添加生效"></a>2.3 在配置文件中添加生效</h3><p>修改 <code>3-hexo/_config.yml</code> 如下图所示</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20201229001129.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20201229001129.png"></p>
 <p>完成！</p>
 <blockquote>
-<p>图标名如上面的 <code>gitee</code> 可以在 网站上修改，如下图所示<br><img src="https://img.saodiyang.com/picgo_qiniu20201229002057.png"></p>
+<p>图标名如上面的 <code>gitee</code> 可以在 网站上修改，如下图所示<br><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20201229002057.png"></p>
 </blockquote>
 <h2 id="三、添加黑白图标"><a href="#三、添加黑白图标" class="headerlink" title="三、添加黑白图标"></a>三、添加黑白图标</h2><p><code>link.theme=white</code></p>
 <h3 id="3-1-同-2-1"><a href="#3-1-同-2-1" class="headerlink" title="3.1 同 2.1"></a>3.1 同 2.1</h3><h3 id="3-2-引入-3-hexo-中"><a href="#3-2-引入-3-hexo-中" class="headerlink" title="3.2 引入 3-hexo 中"></a>3.2 引入 3-hexo 中</h3><p>点击生成代码，如下图所示。</p>
-<p><img src="https://img.saodiyang.com/picgo_qiniu20201228231715.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20201228231715.png"></p>
 <p>复制生成的代码，修改 <code>font-family</code> 的值为 <code>custom-iconfont</code>，添加到 <code>3-hexo/source/css/_partial/font.styl</code> 最后，并写入图标信息，<code>content</code> 可以移到图标上进行复制，注意前面斜杠转译和去掉后面的分号。</p>
 <pre><code class="css">@font-face &#123;
   font-family: &#39;custom-iconfont&#39;;  /* project id 2298064 */
