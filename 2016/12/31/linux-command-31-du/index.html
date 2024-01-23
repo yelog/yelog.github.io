@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2016-12-31 14:36</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-12-31 14:36</time>
         
     </div>
     <div class="article-meta">
@@ -2391,7 +2374,8 @@
       
         <p>　　Linux du命令也是查看使用空间的，但是与df命令不同的是Linux du命令是对文件和目录磁盘使用的空间的查看，还是和df命令有一些区别的.</p>
 <span id="more"></span>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ du [选项][文件]</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ du [选项][文件]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　显示每个文件和目录的磁盘使用空间。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2462,31 +2446,41 @@
 </tr>
 </tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示目录或者文件所占空间</strong></p>
-<pre><code class="bash">$ du</code></pre>
+<pre><code class="bash">$ du
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong> 只显示当前目录下面的子目录的目录大小和当前目录的总的大小，最下面的1288为当前目录的总大小</p>
 </blockquote>
 <p><strong><code>例二</code>：显示指定文件所占空间</strong></p>
-<pre><code class="bash">$ du log2012.log</code></pre>
+<pre><code class="bash">$ du log2012.log
+</code></pre>
 <p><strong><code>例三</code>：查看指定目录的所占空间</strong></p>
-<pre><code class="bash">$ du scf</code></pre>
+<pre><code class="bash">$ du scf
+</code></pre>
 <p><strong><code>例四</code>：显示多个文件所占空间</strong></p>
-<pre><code class="bash">$ du log30.tar.gz log31.tar.gz</code></pre>
+<pre><code class="bash">$ du log30.tar.gz log31.tar.gz
+</code></pre>
 <p><strong><code>例五</code>：只显示总和的大小</strong></p>
-<pre><code class="bash">$ du -s</code></pre>
+<pre><code class="bash">$ du -s
+</code></pre>
 <p><strong><code>例六</code>：方便阅读的格式显示</strong></p>
-<pre><code class="bash">$ du -h test</code></pre>
+<pre><code class="bash">$ du -h test
+</code></pre>
 <p><strong><code>例七</code>：文件和目录都显示</strong></p>
-<pre><code class="bash">$ du -ah test</code></pre>
+<pre><code class="bash">$ du -ah test
+</code></pre>
 <p><strong><code>例八</code>：显示几个文件或目录各自占用磁盘空间的大小，还统计它们的总和</strong></p>
-<pre><code class="bash">$ du -c log30.tar.gz log31.tar.gz</code></pre>
+<pre><code class="bash">$ du -c log30.tar.gz log31.tar.gz
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong> 加上-c选项后，du不仅显示两个目录各自占用磁盘空间的大小，还在最后一行统计它们的总和。</p>
 </blockquote>
 <p><strong><code>例九</code>：按照空间大小排序</strong></p>
-<pre><code class="bash">$ du|sort -nr|more</code></pre>
+<pre><code class="bash">$ du|sort -nr|more
+</code></pre>
 <p><strong><code>例十</code>：输出当前目录下各个子目录所使用的空间</strong></p>
-<pre><code class="bash">$ du -h  --max-depth=1</code></pre>
+<pre><code class="bash">$ du -h  --max-depth=1
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-01-15 14:08</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-01-15 14:08</time>
         
     </div>
     <div class="article-meta">
@@ -2391,7 +2374,8 @@
       
         <p>　　diff 命令是 linux上非常重要的工具，用于比较文件的内容，特别是比较两个版本不同的文件以找到改动的地方。diff在命令行中打印每一个行的改动。最新版本的diff还支持二进制文件。diff程序的输出被称为补丁 (patch)，因为Linux系统中还有一个patch程序，可以根据diff的输出将a.c的文件内容更新为b.c。diff是svn、cvs、git等版本控制工具不可或缺的一部分。</p>
 <span id="more"></span>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ diff [参数] [文件1或目录1] [文件2或目录2]</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ diff [参数] [文件1或目录1] [文件2或目录2]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　diff命令能比较单个文件或者目录内容。如果指定比较的是文件，则只有当输入为文本文件时才有效。以逐行的方式，比较文本文件的异同处。如果指定比较的是目录的的时候，diff 命令会比较两个目录下名字相同的文本文件。列出不同的二进制文件、公共子目录和只在一个目录出现的文件。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2542,7 +2526,8 @@
 1c1
 &lt; ii
 ---
-&gt; iii</code></pre>
+&gt; iii
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　上面的“1c1”表示第一个文件和第二个文件的第1行内容有所不同；<br>　　diff 的normal 显示格式有三种提示:<br>　　　　a - add<br>　　　　c - change<br>　　　　d - delete</p>
 </blockquote>
@@ -2551,7 +2536,8 @@
 ii              |    iii
 iii                  iii
 iiii                iiii
-iiiii                iiiii</code></pre>
+iiiii                iiiii
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　“|”表示前后2个文件内容有不同<br>　　“&lt;”表示后面文件比前面文件少了1行内容<br>　　“&gt;”表示后面文件比前面文件多了1行内容</p>
 </blockquote>
@@ -2569,7 +2555,8 @@ iiiii                iiiii</code></pre>
 ! iii
   iii
   iiii
-  iiiii</code></pre>
+  iiiii
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　这种方式在开头两行作了比较文件的说明，这里有三中特殊字符：<br>　　“＋” 比较的文件的后者比前着多一行<br>　　“－” 比较的文件的后者比前着少一行<br>　　“！” 比较的文件两者有差别的行</p>
 </blockquote>
@@ -2582,13 +2569,17 @@ iiiii                iiiii</code></pre>
 +iii
  iii
  iiii
- iiiii</code></pre>
+ iiiii
+</code></pre>
 <p><strong><code>例五</code>：比较文件夹不同</strong></p>
-<pre><code class="bash">$ diff test3 test6</code></pre>
+<pre><code class="bash">$ diff test3 test6
+</code></pre>
 <p><strong><code>例六</code>：比较两个文件不同，并生产补丁</strong></p>
-<pre><code class="bash">$ diff -ruN 1.txt 2.txt &gt;patch.log</code></pre>
+<pre><code class="bash">$ diff -ruN 1.txt 2.txt &gt;patch.log
+</code></pre>
 <p><strong><code>例七</code>：打补丁</strong></p>
-<pre><code class="bash">$ 1.txt patch</code></pre>
+<pre><code class="bash">$ 1.txt patch
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

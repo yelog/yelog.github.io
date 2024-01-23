@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2016-12-23 09:48</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-12-23 09:48</time>
         
     </div>
     <div class="article-meta">
@@ -2408,20 +2391,23 @@
 <li>查看里面的INSTALL文档了解安装参数说明和细节</li>
 <li>解压文件</li>
 </ul>
-<pre><code class="bash">$ tar zxvf lrzsz-0.12.20.tar.gz</code></pre>
+<pre><code class="bash">$ tar zxvf lrzsz-0.12.20.tar.gz
+</code></pre>
 <ul>
 <li>进入目录，配置编译</li>
 </ul>
 <pre><code class="bash">$ cd lrzsz-0.12.20
 $ ./configure --prefix=/usr/local/lrzsz
 $ make
-$ make install</code></pre>
+$ make install
+</code></pre>
 <ul>
 <li>建立软链接</li>
 </ul>
 <pre><code class="bash">$ cd /usr/bin
 $ ln -s /usr/local/lrzsz/bin/lrz rz
-$ ln -s /usr/local/lrzsz/bin/lsz sz</code></pre>
+$ ln -s /usr/local/lrzsz/bin/lsz sz
+</code></pre>
 <ul>
 <li>测试</li>
 </ul>
@@ -2430,7 +2416,8 @@ $ ln -s /usr/local/lrzsz/bin/lsz sz</code></pre>
 <h3 id="使用Zmodem从客户端上传文件到linux服务器"><a href="#使用Zmodem从客户端上传文件到linux服务器" class="headerlink" title="使用Zmodem从客户端上传文件到linux服务器"></a>使用Zmodem从客户端上传文件到linux服务器</h3><p>　　用SecureCRT登陆linux终端</p>
 <p>　　选中你要放置上传文件的路径，在目录下然后输入rz命令,SecureCRT会弹出文件选择对话框，在查找范围中找到你要上传的文件，按Add按钮。然后OK就可以把文件上传到linux上了。</p>
 <p>　　或者在Transfer-&gt;Zmodem Upoad list弹出文件选择对话框，选好文件后按Add按钮。然后OK窗口自动关闭。然后在linux下选中存放文件的目录，输入rz命令。liunx就把那个文件上传到这个目录下了。</p>
-<h3 id="使用Zmodem下载文件到客户端"><a href="#使用Zmodem下载文件到客户端" class="headerlink" title="使用Zmodem下载文件到客户端"></a>使用Zmodem下载文件到客户端</h3><pre><code class="bash">$ sz filename</code></pre>
+<h3 id="使用Zmodem下载文件到客户端"><a href="#使用Zmodem下载文件到客户端" class="headerlink" title="使用Zmodem下载文件到客户端"></a>使用Zmodem下载文件到客户端</h3><pre><code class="bash">$ sz filename
+</code></pre>
 <p>　　zmodem 接收可以自行启动.下载的文件存放在你设定的默认下载目录下</p>
 <blockquote>
 <p><code>rz</code>，<code>sz</code> 是 Linux/Unix 同 Windows 进行 ZModem 文件传输的命令行工具 , windows 端需要支持ZModem的telnet/ssh客户端，SecureCRT 就可以用 SecureCRT 登陆到 Unix/Linux 主机（telnet或ssh均可）O 运行命令rz，即是接收文件，SecureCRT就会弹出文件选择对话框，选好文件之后关闭对话框，文件就会上传到当前目录 O 运行命令sz file1 file2就是发文件到windows上（保存的目录是可以配置） 比ftp命令方便多了，而且服务器不用再开FTP服务了</p>

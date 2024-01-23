@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2016-12-05 13:40</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-12-05 13:40</time>
         
     </div>
     <div class="article-meta">
@@ -2391,7 +2374,8 @@
       
         <p>　　rm是常用的命令，该命令的功能为删除一个目录中的一个或多个文件或目录，它也可以将某个目录及其下的所有文件及子目录均删除。对于链接文件，只是删除了链接，原有文件均保持不变。<br>rm是一个危险的命令，使用的时候要特别当心，尤其对于新手，否则整个系统就会毁在这个命令（比如在/（根目录）下执行rm * -rf）。所以，我们在执行rm之前最好先确认一下在哪个目录，到底要删除什么东西，操作时保持高度清醒的头脑。</p>
 <span id="more"></span>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ rm [选项] 文件...</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ rm [选项] 文件...
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><table>
 <thead>
 <tr>
@@ -2425,20 +2409,27 @@
 </tr>
 </tbody></table>
 <h3 id="命令实例"><a href="#命令实例" class="headerlink" title="命令实例"></a>命令实例</h3><p><strong><code>例一</code>：删除文件file，系统会先询问是否删除</strong></p>
-<pre><code class="bash">$ rm file</code></pre>
+<pre><code class="bash">$ rm file
+</code></pre>
 <p><strong><code>例二</code>：强行删除file，系统不再提示</strong></p>
-<pre><code class="bash">$ rm -f file</code></pre>
+<pre><code class="bash">$ rm -f file
+</code></pre>
 <p>**<code>例三</code>：删除任何.log文件；删除前逐一询问确认 **</p>
-<pre><code class="bash">$ rm -i *.log</code></pre>
+<pre><code class="bash">$ rm -i *.log
+</code></pre>
 <p><strong><code>例四</code>：对test文件夹进行递归删除</strong></p>
-<pre><code class="bash">$ rm -r test</code></pre>
+<pre><code class="bash">$ rm -r test
+</code></pre>
 <p><strong><code>例五</code>：递归删除，系统不用一一确认</strong></p>
-<pre><code class="bash">$ rm -rf test</code></pre>
+<pre><code class="bash">$ rm -rf test
+</code></pre>
 <p><strong><code>例六</code>：删除以 -f 开头的文件</strong></p>
-<pre><code class="bash">$ rm -- -f</code></pre>
+<pre><code class="bash">$ rm -- -f
+</code></pre>
 <p><strong><code>例七</code>：自定义回收站功能</strong></p>
 <pre><code class="bash">#下面的操作过程模拟了回收站的效果，即删除文件的时候只是把文件放到一个临时目录中，这样在需要的时候还可以恢复过来。
-$ myrm()&#123; D=/tmp/$(date +%Y%m%d%H%M%S); mkdir -p $D; mv &quot;$@&quot; $D &amp;&amp; echo &quot;moved to $D ok&quot;; &#125;</code></pre>
+$ myrm()&#123; D=/tmp/$(date +%Y%m%d%H%M%S); mkdir -p $D; mv &quot;$@&quot; $D &amp;&amp; echo &quot;moved to $D ok&quot;; &#125;
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

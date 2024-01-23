@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2016-12-21 15:31</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-12-21 15:31</time>
         
     </div>
     <div class="article-meta">
@@ -2397,23 +2380,29 @@
 <pre><code class="bash">$ cd ~/.ssh
 $ ls
 authorized_keys2  id_rsa       known_hosts
-config            id_rsa.pub</code></pre>
+config            id_rsa.pub
+</code></pre>
 <p>我们需要寻找一对 <code>id_rsa</code> 或 <code>id_dsa</code> 命名的文件，其中一个带 <code>.pub</code> 扩展名。 ‘.pub’文件是你的公钥，另一个则是私钥。如果没有找不到这样的文件（或者根本就没有<code>.ssh</code>目录），我们可以通过 <code>ssh-keygen</code> 程序来创建它们。</p>
 <pre><code class="bash">#邮箱可以随便填
-$ ssh-keygen -t rsa -C &quot;xx@xx.com&quot;</code></pre>
+$ ssh-keygen -t rsa -C &quot;xx@xx.com&quot;
+</code></pre>
 <p>首先 <code>ssh-keygen</code> 会确认密钥的存储位置和文件名（默认是 <code>.ssh/id_rsa</code>）,然后他会要求你输入两次密钥口令，留空即可。所以一般选用默认，全部回车即可。</p>
 <p>接下来我们登陆到GitHub上，右上角小头像-&gt;Setting-&gt;SSH and GPG keys中，点击new SSH key。<br><code>Title：</code>可以随便填写，但最好起的名字能让自己知道这个公钥是哪个设备的。<br><code>Key：</code>将上面生成的<code>.pub</code>文件中的所有内容复制到这里。<br>点击下面的Add SSH key即可。<br>然后你就会发现可以免密码访问了</p>
 <h3 id="Git服务器"><a href="#Git服务器" class="headerlink" title="Git服务器"></a>Git服务器</h3><p>如果服务端是自己搭建的git服务器，生成密钥公钥对的步骤是一样的。<br>然后将生成的 <code>.pub</code> 文件内容，导入到git服务器 <code>/home/git/.ssh/authorized_keys</code> 文件内，一行一个。<br>然后你就会发现git push 不再需要密码了<br>搭建git服务器和相关免登陆的详细步骤可参考我的另一篇 <a href="/2016/10/22/set-up-git-server-on-vps/" title="搭建Git服务器">搭建Git服务器</a></p>
 <h2 id="HTTPS通信协议"><a href="#HTTPS通信协议" class="headerlink" title="HTTPS通信协议"></a>HTTPS通信协议</h2><p>上面讲了SSH方式的免密码，接下来讲一下越来越常用的HTTPS方式的免密码<br>新建文件并保存密码</p>
 <pre><code class="bash">$ touch ~/.git-credentials
-$ vim ~/.git-credentials</code></pre>
+$ vim ~/.git-credentials
+</code></pre>
 <p>添加内容</p>
-<pre><code class="bash">https://&#123;username&#125;:&#123;passwd&#125;@github.com</code></pre>
+<pre><code class="bash">https://&#123;username&#125;:&#123;passwd&#125;@github.com
+</code></pre>
 <p>添加git配置</p>
-<pre><code class="bash">$ git config --global credential.helper store</code></pre>
+<pre><code class="bash">$ git config --global credential.helper store
+</code></pre>
 <p>查看～/.gitconfig文件变化</p>
 <pre><code class="xml">[credential]
-    helper = store</code></pre>
+    helper = store
+</code></pre>
 <p>然后再尝试一下git push不再在需要密码了</p>
 
       

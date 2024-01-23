@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:49'>2017-03-08 08:58</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-03-08 08:58</time>
         
     </div>
     <div class="article-meta">
@@ -2418,7 +2401,8 @@
       &lt;small&gt;Copyright 2017&lt;/small&gt;
   &lt;/footer&gt;
 &lt;/body&gt;  
-&lt;/html&gt;  </code></pre>
+&lt;/html&gt;  
+</code></pre>
 <p>上面的 HTML 将会被解析成下面的DOM树<br><img src="http://img.saodiyang.com/Fq6vahHSu_NZGyeWGuhZ8dFmBS0O.png" alt="DOM树"><br>HTML的优点在于它不必等待整个页面加载完成才呈现页面，可以解析一部分，显示一部分。但是像CSS、JavaScript等其他资源会阻止页面渲染。</p>
 <h2 id="构建CSSOM树"><a href="#构建CSSOM树" class="headerlink" title="构建CSSOM树"></a>构建CSSOM树</h2><p>CSSOM（CSS Object Model） 是一个跟DOM相关的样式对象。它跟DOM的表示方法是相似的，但是不论显式声明还是隐式继承，每个节点都存在关联样式。</p>
 <p>In the style.css file from the document mentioned above, we have the folowing styles<br>在上面提到的html页面的<code>style.css</code>中的样式如下</p>
@@ -2430,7 +2414,8 @@ h1 &#123; font-size: 28px; &#125;
 main &#123; color: firebrick; &#125;  
 h2 &#123; font-size: 20px; &#125;
 
-footer &#123; display: none; &#125;  </code></pre>
+footer &#123; display: none; &#125;  
+</code></pre>
 <p>它会被构建成下面的CSSOM树<br><img src="http://img.saodiyang.com/FqMiZIUxvPBV4X-PnDFh6iGrdxy0.png" alt="CSSOM树"><br>CSS 被认为是 “渲染阻塞资源”，它意味着如果不首先完全解析资源，渲染树是无法构建的。CSS由于它的层叠继承的性质，不能像HTML一样解析一部分，显示一部分。定义在文档后面的样式会覆盖或改写之前定义的样式，因为在整个样式表都被解析之前，如果我们使用了在样式表中较早定义的样式，那错误的样式将被应用。这意味着CSS必须被全部解析之后，才能开始下一步。</p>
 <p>如果CSS文件适用于当前设备的话，仅仅只是会阻塞渲染。<code>&lt;link rel=&quot;stylesheet&quot;&gt;</code>标签可以使用<code>media</code>属性，用来指定特定样式宽度的特定媒体查询。</p>
 <p>举个例子，如果我们有一个包含媒体属性<code>orientation:landscape</code>的样式，我们使用纵向模式（portrait mode）查看页面，这个资源将不会阻塞渲染。</p>
@@ -2438,12 +2423,14 @@ footer &#123; display: none; &#125;  </code></pre>
 <h2 id="运行JavaScript"><a href="#运行JavaScript" class="headerlink" title="运行JavaScript"></a>运行JavaScript</h2><p>JavaScript被认为是<code>解析阻塞资源</code>，这意味着HTML的解析会被JavaScript阻塞。</p>
 <p>当解析器解析到 <code>&lt;script&gt;</code> 标签时，无论该资源是内部还是外链的都会停止解析，先去下载资源。这也是为什么，当页面内有引用JavaScript文件时，引用标签要放到可视元素之后了。</p>
 <p>为避免JavaScript解析阻塞，它可以通过设定 async 属性来要求其异步加载。</p>
-<pre><code class="JavaScript">&lt;script async src=&quot;script.js&quot;&gt;</code></pre>
+<pre><code class="JavaScript">&lt;script async src=&quot;script.js&quot;&gt;
+</code></pre>
 <h2 id="创建渲染树"><a href="#创建渲染树" class="headerlink" title="创建渲染树"></a>创建渲染树</h2><p>渲染树是DOM和CSSOM的结合体，它代表最终会渲染在页面上的元素的结构对象。这意味着它只关注可见内容，对于被隐藏或者CSS属性 display:none 的属性，不会被包含在结构内。</p>
 <p>使用上面例子的DOM和CSSOM，渲染树被创建如下：<br><img src="http://img.saodiyang.com/FvhQ0k653cDvORFIiEbYxufNjZa4.png" alt="渲染树"></p>
 <h2 id="生成布局"><a href="#生成布局" class="headerlink" title="生成布局"></a>生成布局</h2><p>布局决定了浏览器视窗的大小,它提供了上下文依赖的CSS样式，如百分比或窗口的单位。视窗尺寸通常通过 <code>&lt;head&gt;</code> 标签中的 <code>&lt;meta&gt;</code> 中的 viewport 设定来决定。如果不存在该标签，则通常默认为 980px</p>
 <p>例如，最常用的 <code>meta veiwport</code> 的值将会被设置为和设备宽度相符：</p>
-<pre><code class="HTML">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;  </code></pre>
+<pre><code class="HTML">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;  
+</code></pre>
 <p>如果用户访问网页的设备宽度为1000px。然后整体视窗尺寸就会基于这个宽度值了，比如 50% 就是500px, 10vw 就是100px 等等。</p>
 <h2 id="绘制页面"><a href="#绘制页面" class="headerlink" title="绘制页面"></a>绘制页面</h2><p>最后，在绘制页面步骤。页面上的所有可见内容都会被转换为像素并呈现在屏幕上。</p>
 <p>具体的绘制时间跟DOM数以及应用的样式有关。有些样式会花费更多的执行时间，比如复杂的渐变背景图片所需要的计算时间远超过简单固定背景色。</p>
@@ -2467,7 +2454,8 @@ footer &#123; display: none; &#125;  </code></pre>
   &lt;/footer&gt;
   &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;  
-&lt;/html&gt;  </code></pre>
+&lt;/html&gt;  
+</code></pre>
 <p>可以看关于页面加载时的事件日志，以下是我们获得的：<br><img src="http://img.saodiyang.com/Fro6Rduywm-txP3EEtak-E5T826l.png" alt="时间轴"></p>
 <ol>
 <li><strong>Send Request</strong> - 发送到index.html的GET请求</li>

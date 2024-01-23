@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-01-23 10:44</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-01-23 10:44</time>
         
     </div>
     <div class="article-meta">
@@ -2408,7 +2391,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 17 *    * * *    root    cd / &amp;&amp; run-parts --report /etc/cron.hourly
 25 6    * * *    root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.daily )
 47 6    * * 7    root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.weekly )
-52 6    1 * *    root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.monthly )</code></pre>
+52 6    1 * *    root    test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.monthly )
+</code></pre>
 <p>　　前四行是用来配置crond任务运行的环境变量，第一行SHELL变量指定了系统要使用哪个shell，这里是bash，第二行PATH变量指定了系统执行命令的路径，第三行MAILTO变量指定了crond的任务执行信息将通过电子邮件发送给root用户，如果MAILTO变量的值为空，则表示不发送任务执行信息给用户，第四行的HOME变量指定了在执行命令或者脚本时使用的主目录。第六至九行表示的含义将在下个小节详细讲述。这里不在多说。</p>
 <p>　　用户任务调度：用户定期要执行的工作，比如用户数据备份、定时邮件提醒等。用户可以使用 crontab 工具来定制自己的计划任务。所有用户定义的crontab 文件都被保存在 /var/spool/cron目录中。其文件名与用户名一致。</p>
 <h3 id="使用者权限文件"><a href="#使用者权限文件" class="headerlink" title="使用者权限文件"></a>使用者权限文件</h3><p>文件：/etc/cron.deny<br>说明：该文件中所列用户不允许使用crontab命令</p>
@@ -2417,22 +2401,29 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 <h3 id="crontab文件的含义"><a href="#crontab文件的含义" class="headerlink" title="crontab文件的含义"></a>crontab文件的含义</h3><p>　　用户所建立的crontab文件中，每一行都代表一项任务，每行的每个字段代表一项设置，它的格式共分为六个字段，前五段是时间设定段，第六段是要执行的命令段，格式如下：<br>minute   hour   day   month   week   command<br>其中：<br>　　minute： 表示分钟，可以是从0到59之间的任何整数。<br>　　hour：表示小时，可以是从0到23之间的任何整数。<br>　　day：表示日期，可以是从1到31之间的任何整数。<br>　　month：表示月份，可以是从1到12之间的任何整数。<br>　　week：表示星期几，可以是从0到7之间的任何整数，这里的0或7代表星期日。<br>　　command：要执行的命令，可以是系统命令，也可以是自己编写的脚本文件。</p>
 <p><strong>在以上各个字段中，还可以使用以下特殊字符：</strong><br><code>星号（*）</code>：代表所有可能的值，例如month字段如果是星号，则表示在满足其它字段的制约条件后每月都执行该命令操作。<br><code>逗号（,）</code>：可以用逗号隔开的值指定一个列表范围，例如，“1,2,5,7,8,9”<br><code>中杠（-）</code>：可以用整数之间的中杠表示一个整数范围，例如“2-6”表示“2,3,4,5,6”<br><code>正斜线（/）</code>：可以用正斜线指定时间的间隔频率，例如“0-23/2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*/10，如果用在minute字段，表示每十分钟执行一次。</p>
 <h3 id="crond服务"><a href="#crond服务" class="headerlink" title="crond服务"></a>crond服务</h3><p>安装crontab：</p>
-<pre><code class="bash">$ yum install crontabs</code></pre>
+<pre><code class="bash">$ yum install crontabs
+</code></pre>
 <p>服务操作说明：</p>
 <pre><code class="bash">$ /sbin/service crond start //启动服务
 $ /sbin/service crond stop //关闭服务
 $ /sbin/service crond restart //重启服务
-$ /sbin/service crond reload //重新载入配置</code></pre>
+$ /sbin/service crond reload //重新载入配置
+</code></pre>
 <p>查看crontab服务状态：</p>
-<pre><code class="bash">$ service crond status</code></pre>
+<pre><code class="bash">$ service crond status
+</code></pre>
 <p>手动启动crontab服务：</p>
-<pre><code class="bash">$ service crond start</code></pre>
+<pre><code class="bash">$ service crond start
+</code></pre>
 <p>查看crontab服务是否已设置为开机启动，执行命令：</p>
-<pre><code class="bash">$ ntsysv</code></pre>
+<pre><code class="bash">$ ntsysv
+</code></pre>
 <p>加入开机自动启动：</p>
-<pre><code class="bash">$ chkconfig –level 35 crond on</code></pre>
+<pre><code class="bash">$ chkconfig –level 35 crond on
+</code></pre>
 <h2 id="contab-命令详解"><a href="#contab-命令详解" class="headerlink" title="contab 命令详解"></a>contab 命令详解</h2><h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ crontab [-u user] file
-$ crontab [-u user] [ -e | -l | -r ]</code></pre>
+$ crontab [-u user] [ -e | -l | -r ]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　通过crontab 命令，我们可以在固定的间隔时间执行指定的系统指令或 shell script脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。这个命令非常设合周期性的日志分析或数据备份等工作。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2467,48 +2458,66 @@ $ crontab [-u user] [ -e | -l | -r ]</code></pre>
 </tr>
 </tbody></table>
 <h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><p><strong><code>例一</code>：创建一个新的crontab文件</strong><br>在考虑向cron进程提交一个crontab文件之前，首先要做的一件事情就是设置环境变量EDITOR。cron进程根据它来确定使用哪个编辑器编辑crontab文件。9 9 %的UNIX和LINUX用户都使用vi，如果你也是这样，那么你就编辑$ HOME目录下的. profile文件，在其中加入这样一行：<br>EDITOR=vi; export EDITOR<br>然后保存并退出。不妨创建一个名为<user> cron的文件，其中<user>是用户名，例如， davecron。在该文件中加入如下的内容。<br>         # (put your own initials here)echo the date to the console every<br>         # 15minutes between 6pm and 6am<br>         0,15,30,45 18-06 * * * /bin/echo ‘date’ &gt; /dev/console<br>    保存并退出。确信前面5个域用空格分隔。<br>在上面的例子中，系统将每隔1 5分钟向控制台输出一次当前时间。如果系统崩溃或挂起，从最后所显示的时间就可以一眼看出系统是什么时间停止工作的。在有些系统中，用tty1来表示控制台，可以根据实际情况对上面的例子进行相应的修改。为了提交你刚刚创建的crontab文件，可以把这个新创建的文件作为cron命令的参数：<br>        $ crontab davecron<br>现在该文件已经提交给cron进程，它将每隔1 5分钟运行一次。<br>同时，新创建文件的一个副本已经被放在/var/spool/cron目录中，文件名就是用户名(即dave)。<br><strong><code>例二</code>：列出crontab文件</strong></p>
-<pre><code class="bash">$ crontab -l</code></pre>
+<pre><code class="bash">$ crontab -l
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>你将会看到和上面类似的内容。可以使用这种方法在$ H O M E目录中对crontab文件做一备份：<br>        $ crontab -l &gt; $HOME/mycron<br>这样，一旦不小心误删了crontab文件，可以用上一节所讲述的方法迅速恢复。</p>
 </blockquote>
 <p><strong><code>例三</code>：编辑crontab文件</strong></p>
-<pre><code class="bash">$ crontab -e</code></pre>
+<pre><code class="bash">$ crontab -e
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>可以像使用v i编辑其他任何文件那样修改crontab文件并退出。如果修改了某些条目或添加了新的条目，那么在保存该文件时， c r o n会对其进行必要的完整性检查。如果其中的某个域出现了超出允许范围的值，它会提示你。<br>我们在编辑crontab文件时，没准会加入新的条目。例如，加入下面的一条：<br>       # DT:delete core files,at 3.30am on 1,7,14,21,26,26 days of each month<br>        30 3 1,7,14,21,26 * * /bin/find -name “core’ -exec rm {} ;<br>现在保存并退出。最好在crontab文件的每一个条目之上加入一条注释，这样就可以知道它的功能、运行时间，更为重要的是，知道这是哪位用户的作业。<br>现在让我们使用前面讲过的crontab -l命令列出它的全部信息：<br>       $ crontab -l<br>       # (crondave installed on Tue May 4 13:07:43 1999)<br>       # DT:ech the date to the console every 30 minites<br>      0,15,30,45 18-06 * * * /bin/echo <code>date</code> &gt; /dev/tty1<br>       # DT:delete core files,at 3.30am on 1,7,14,21,26,26 days of each month<br>       30 3 1,7,14,21,26 * * /bin/find -name “core’ -exec rm {} ;</p>
 </blockquote>
 <p><strong><code>例四</code>：删除crontab文件</strong></p>
-<pre><code class="bash">$ crontab -r</code></pre>
+<pre><code class="bash">$ crontab -r
+</code></pre>
 <p><strong><code>例五</code>：恢复丢失的crontab文件</strong><br>如果不小心误删了crontab文件，假设你在自己的$ H O M E目录下还有一个备份，那么可以将其拷贝到/var/spool/cron/<username>，其中<username>是用户名。如果由于权限问题无法完成拷贝，可以用：<br>        $ crontab <filename><br>    其中，<filename>是你在$ H O M E目录中副本的文件名。<br>我建议你在自己的$ H O M E目录中保存一个该文件的副本。我就有过类似的经历，有数次误删了crontab文件（因为r键紧挨在e键的右边）。这就是为什么有些系统文档建议不要直接编辑crontab文件，而是编辑该文件的一个副本，然后重新提交新的文件。<br>有些crontab的变体有些怪异，所以在使用crontab命令时要格外小心。如果遗漏了任何选项，crontab可能会打开一个空文件，或者看起来像是个空文件。这时敲delete键退出，不要按<Ctrl-D>，否则你将丢失crontab文件。</p>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：每1分钟执行一次command</strong></p>
-<pre><code class="bash">* * * * * command</code></pre>
+<pre><code class="bash">* * * * * command
+</code></pre>
 <p><strong><code>例二</code>：每小时的第3和第15分钟执行</strong></p>
-<pre><code class="bash">3,15 * * * * command</code></pre>
+<pre><code class="bash">3,15 * * * * command
+</code></pre>
 <p><strong><code>例三</code>：在上午8点到11点的第3和第15分钟执行</strong></p>
-<pre><code class="bash">3,15 8-11 * * * command</code></pre>
+<pre><code class="bash">3,15 8-11 * * * command
+</code></pre>
 <p><strong><code>例四</code>：每隔两天的上午8点到11点的第3和第15分钟执行</strong></p>
-<pre><code class="bash">3,15 8-11 */2 * * command</code></pre>
+<pre><code class="bash">3,15 8-11 */2 * * command
+</code></pre>
 <p><strong><code>例五</code>：每个星期一的上午8点到11点的第3和第15分钟执行</strong></p>
-<pre><code class="bash">3,15 8-11 * * 1 command</code></pre>
+<pre><code class="bash">3,15 8-11 * * 1 command
+</code></pre>
 <p><strong><code>例六</code>：每晚的21:30重启smb</strong></p>
-<pre><code class="bash">30 21 * * * /etc/init.d/smb restart</code></pre>
+<pre><code class="bash">30 21 * * * /etc/init.d/smb restart
+</code></pre>
 <p><strong><code>例七</code>：每月1、10、22日的4 : 45重启smb</strong></p>
-<pre><code class="bash">45 4 1,10,22 * * /etc/init.d/smb restart</code></pre>
+<pre><code class="bash">45 4 1,10,22 * * /etc/init.d/smb restart
+</code></pre>
 <p><strong><code>例八</code>：每周六、周日的1 : 10重启smb</strong></p>
-<pre><code class="bash">10 1 * * 6,0 /etc/init.d/smb restart</code></pre>
+<pre><code class="bash">10 1 * * 6,0 /etc/init.d/smb restart
+</code></pre>
 <p><strong><code>例九</code>：每天18 : 00至23 : 00之间每隔30分钟重启smb</strong></p>
-<pre><code class="bash">0,30 18-23 * * * /etc/init.d/smb restart</code></pre>
+<pre><code class="bash">0,30 18-23 * * * /etc/init.d/smb restart
+</code></pre>
 <p><strong><code>例十</code>：每星期六的晚上11 : 00 pm重启smb</strong></p>
-<pre><code class="bash">0 23 * * 6 /etc/init.d/smb restart</code></pre>
+<pre><code class="bash">0 23 * * 6 /etc/init.d/smb restart
+</code></pre>
 <p><strong><code>例十一</code>：每一小时重启smb</strong></p>
-<pre><code class="bash">* */1 * * * /etc/init.d/smb restart</code></pre>
+<pre><code class="bash">* */1 * * * /etc/init.d/smb restart
+</code></pre>
 <p><strong><code>例十二</code>：晚上11点到早上7点之间，每隔一小时重启smb</strong></p>
-<pre><code class="bash">* 23-7/1 * * * /etc/init.d/smb restart</code></pre>
+<pre><code class="bash">* 23-7/1 * * * /etc/init.d/smb restart
+</code></pre>
 <p><strong><code>例十三</code>：每月的4号与每周一到周三的11点重启smb</strong></p>
-<pre><code class="bash">0 11 4 * mon-wed /etc/init.d/smb restart</code></pre>
+<pre><code class="bash">0 11 4 * mon-wed /etc/init.d/smb restart
+</code></pre>
 <p><strong><code>例十四</code>：一月一号的4点重启smb</strong></p>
-<pre><code class="bash">0 4 1 jan * /etc/init.d/smb restart</code></pre>
+<pre><code class="bash">0 4 1 jan * /etc/init.d/smb restart
+</code></pre>
 <p><strong><code>例十五</code>：每小时执行/etc/cron.hourly目录内的脚本</strong></p>
-<pre><code class="bash">01   *   *   *   *     root run-parts /etc/cron.hourly</code></pre>
+<pre><code class="bash">01   *   *   *   *     root run-parts /etc/cron.hourly
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>run-parts这个参数了，如果去掉这个参数的话，后面就可以写要运行的某个脚本名，而不是目录名了</p>
 </blockquote>
@@ -2519,11 +2528,14 @@ $ crontab [-u user] [ -e | -l | -r ]</code></pre>
 #!/bin/sh
 source /etc/profile
 export RUN_CONF=/home/d139/conf/platform/cbp/cbp_jboss.conf
-/usr/local/jboss-4.0.5/bin/run.sh -c mev &amp;</code></pre>
+/usr/local/jboss-4.0.5/bin/run.sh -c mev &amp;
+</code></pre>
 <p>3）当手动执行脚本OK，但是crontab死活不执行时。这时必须大胆怀疑是环境变量惹的祸，并可以尝试在crontab中直接引入环境变量解决问题。如：</p>
-<pre><code class="bash">0 * * * * . /etc/profile;/bin/sh /var/www/java/audit_no_count/bin/restart_audit.sh</code></pre>
+<pre><code class="bash">0 * * * * . /etc/profile;/bin/sh /var/www/java/audit_no_count/bin/restart_audit.sh
+</code></pre>
 <h4 id="注意清理系统用户的邮件日志"><a href="#注意清理系统用户的邮件日志" class="headerlink" title="注意清理系统用户的邮件日志"></a>注意清理系统用户的邮件日志</h4><p>　　每条任务调度执行完毕，系统都会将任务输出信息通过电子邮件的形式发送给当前系统用户，这样日积月累，日志信息会非常大，可能会影响系统的正常运行，因此，将每条任务进行重定向处理非常重要。<br>　　例如，可以在crontab文件中设置如下形式，忽略日志输出：</p>
-<pre><code class="bash">0 */3 * * * /usr/local/apache2/apachectl restart &gt;/dev/null 2&gt;&amp;1</code></pre>
+<pre><code class="bash">0 */3 * * * /usr/local/apache2/apachectl restart &gt;/dev/null 2&gt;&amp;1
+</code></pre>
 <p>“/dev/null 2&gt;&amp;1”表示先将标准输出重定向到/dev/null，然后将标准错误重定向到标准输出，由于标准输出已经重定向到了/dev/null，因此标准错误也会重定向到/dev/null，这样日志输出问题就解决了。</p>
 <h4 id="系统级任务调度与用户级任务调度"><a href="#系统级任务调度与用户级任务调度" class="headerlink" title="系统级任务调度与用户级任务调度"></a>系统级任务调度与用户级任务调度</h4><p>　　系统级任务调度主要完成系统的一些维护操作，用户级任务调度主要完成用户自定义的一些任务，可以将用户级任务调度放到系统级任务调度来完成（不建议这么做），但是反过来却不行，root用户的任务调度操作可以通过“crontab –uroot –e”来设置，也可以将调度任务直接写入/etc/crontab文件，需要注意的是，如果要定义一个定时重启系统的任务，就必须将任务放到/etc/crontab文件，即使在root用户下创建一个定时重启系统的任务也是无效的。</p>
 <h4 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h4><p>　　新创建的cron job，不会马上执行，至少要过2分钟才执行。如果重启cron则马上执行。</p>

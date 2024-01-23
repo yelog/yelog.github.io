@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-01-08 10:24</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-01-08 10:24</time>
         
     </div>
     <div class="article-meta">
@@ -2390,7 +2373,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>　　Linux系统的ping命令是常用的网络命令，它通常用来测试与目标主机的连通性，我们经常会说“ping一下某机器，看是不是开着”、不能打开网页时会说“你先ping网关地址192.168.1.1试试”。它通过发送ICMP ECHO_REQUEST数据包到网络主机（send ICMP ECHO_REQUEST to network hosts），并显示响应情况，这样我们就可以根据它输出的信息来确定目标主机是否可访问（但这不是绝对的）。有些服务器为了防止通过ping探测到，通过防火墙设置了禁止ping或者在内核参数中禁止ping，这样就不能通过ping确定该主机是否还处于开启状态。<br>  <span id="more"></span><br>　　linux下的ping和windows下的ping稍有区别,linux下ping不会自动终止,需要按ctrl+c终止或者用参数-c指定要求完成的回应次数。</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ ping [参数] [主机名或IP地址]</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ ping [参数] [主机名或IP地址]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>  ping命令用于：确定网络和各外部主机的状态；跟踪和隔离硬件和软件问题；测试、评估和管理网络。如果主机正在运行并连在网上，它就对回送信号进行响应。每个回送信号请求包含一个网际协议（IP）和 ICMP 头，后面紧跟一个 tim 结构，以及来填写这个信息包的足够的字节。缺省情况是连续发送回送信号请求直到接收到中断信号（Ctrl-C）。<br>  ping 命令每秒发送一个数据报并且为每个接收到的响应打印一行输出。ping 命令计算信号往返时间和(信息)包丢失情况的统计信息，并且在完成之后显示一个简要总结。ping 命令在程序超时或当接收到 SIGINT 信号时结束。Host 参数或者是一个有效的主机名或者是因特网地址。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2465,7 +2449,8 @@ PING 192.168.0.1 (192.168.0.1) 56(84) bytes of data.
 64 bytes from 192.168.0.1: icmp_seq=4 ttl=64 time=0.210 ms
 
 --- 192.168.0.1 ping statistics ---
-6 packets transmitted, 6 received, 0% packet loss, time 4997ms</code></pre>
+6 packets transmitted, 6 received, 0% packet loss, time 4997ms
+</code></pre>
 <p><strong><code>例二</code>：ping不通的情况</strong></p>
 <pre><code class="bash">$ ping 192.168.0.222
 PING 192.168.0.222 (192.168.0.222) 56(84) bytes of data.
@@ -2475,13 +2460,17 @@ From 192.168.0.101 icmp_seq=3 Destination Host Unreachable
 
 --- 192.168.0.222 ping statistics ---
 7 packets transmitted, 0 received, +6 errors, 100% packet loss, time 6032ms
-pipe 3</code></pre>
+pipe 3
+</code></pre>
 <p><strong><code>例二</code>：ping指定次数</strong></p>
-<pre><code class="bash">$ ping -c 192.168.0.1</code></pre>
+<pre><code class="bash">$ ping -c 192.168.0.1
+</code></pre>
 <p><strong><code>例三</code>：时间间隔和次数限制的ping</strong></p>
-<pre><code class="bash">$ ping -c 10 -i 0.5 192.168.120.206</code></pre>
+<pre><code class="bash">$ ping -c 10 -i 0.5 192.168.120.206
+</code></pre>
 <p><strong><code>例四</code>：通过域名ping公网上的站点</strong></p>
-<pre><code class="bash">$ ping -c 5 yelog.github.com</code></pre>
+<pre><code class="bash">$ ping -c 5 yelog.github.com
+</code></pre>
 <p><strong><code>例五</code>：多参数使用</strong></p>
 <pre><code class="bash"># -i 3 发送周期为 3秒 -s 设置发送包的大小为1024 -t 设置TTL值为 255
 $ ping -i 3 -s 1024 -t yelog.github.com
@@ -2489,7 +2478,8 @@ PING github.map.fastly.net (151.101.192.133) 1024(1052) bytes of data.
 1032 bytes from 151.101.192.133 (151.101.192.133): icmp_seq=1 ttl=56 time=191 ms
 1032 bytes from 151.101.192.133 (151.101.192.133): icmp_seq=2 ttl=56 time=190 ms
 1032 bytes from 151.101.192.133 (151.101.192.133): icmp_seq=3 ttl=56 time=189 ms
-1032 bytes from 151.101.192.133 (151.101.192.133): icmp_seq=4 ttl=56 time=190 ms</code></pre>
+1032 bytes from 151.101.192.133 (151.101.192.133): icmp_seq=4 ttl=56 time=190 ms
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

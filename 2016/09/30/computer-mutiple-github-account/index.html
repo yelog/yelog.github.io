@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2342,7 +2325,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2016-09-30 16:42</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-09-30 16:42</time>
         
     </div>
     <div class="article-meta">
@@ -2397,21 +2380,28 @@
 <span id="more"></span>
 <h2 id="前期工作"><a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h2><p>两个GitHub账号（假设两个账号为one,two）<br>取消Git全局设置</p>
 <pre><code class="bash">$ git config --global --unset user.name
-$ git config --global --unset user.email</code></pre>
+$ git config --global --unset user.email
+</code></pre>
 <h2 id="SSH配置"><a href="#SSH配置" class="headerlink" title="SSH配置"></a>SSH配置</h2><p>生成<code>id_rsa</code>私钥，<code>id_rsa.pub</code>公钥。one可以直接回车，默认生成 id_rsa 和 id_rsa.pub 。</p>
-<pre><code class="bash">$ ssh-keygen -t rsa -C &quot;one@xx.com&quot;</code></pre>
+<pre><code class="bash">$ ssh-keygen -t rsa -C &quot;one@xx.com&quot;
+</code></pre>
 <p>添加two会出现提示输入文件名，输入与默认配置不一样的文件名，如：id_rsa_two。</p>
 <pre><code class="bash">$ cd ~/.ssh
-$ ssh-keygen -t rsa -C &quot;two@126.com&quot;  #  之后会提示输入文件名</code></pre>
+$ ssh-keygen -t rsa -C &quot;two@126.com&quot;  #  之后会提示输入文件名
+</code></pre>
 <p>GitHub添加公钥 id_rsa.pub 、 id_rsa_two.pub，分别登陆one,two的账号，在 Account Settings 的 SSH Keys 里，点 <code>Add SSH Keys</code> ，将公钥(.pub文件)中的内容粘贴到 Key 中，并输入 Title。<br>添加 ssh Key</p>
 <pre><code class="bash">$ ssh-add ~/.ssh/id_rsa
-$ ssh-add ~/.ssh/id_rsa_two</code></pre>
+$ ssh-add ~/.ssh/id_rsa_two
+</code></pre>
 <p>可以在添加前使用下面命令删除所有的 key</p>
-<pre><code class="bash">$ ssh-add -D</code></pre>
+<pre><code class="bash">$ ssh-add -D
+</code></pre>
 <p>最后可以通过下面命令，查看 key 的设置</p>
-<pre><code class="bash">$ ssh-add -l</code></pre>
+<pre><code class="bash">$ ssh-add -l
+</code></pre>
 <h2 id="修改ssh-config文件"><a href="#修改ssh-config文件" class="headerlink" title="修改ssh config文件"></a>修改ssh config文件</h2><pre><code class="bash">$ cd ~/.ssh/
-$ touch config</code></pre>
+$ touch config
+</code></pre>
 <p>打开 .ssh 文件夹下的 <code>config</code> 文件，进行配置</p>
 <pre><code class="yml">#  default
 Host github.com
@@ -2423,7 +2413,8 @@ IdentityFile ~/.ssh/id_rsa
 Host two.github.com  #  前缀名可以任意设置
 HostName github.com
 User git
-IdentityFile ~/.ssh/id_rsa_two</code></pre>
+IdentityFile ~/.ssh/id_rsa_two
+</code></pre>
 <ul>
 <li>这里必须采用这样的方式设置，否则 push 时会出现以下错误:</li>
 </ul>
@@ -2431,39 +2422,48 @@ IdentityFile ~/.ssh/id_rsa_two</code></pre>
 <p>ERROR: Permission to two/two.github.com.git denied to one.</p>
 </blockquote>
 <p>简单分析下原因，我们可以发现 ssh 客户端是通过类似:</p>
-<pre><code class="bash">git@github.com:one/one.github.com.git</code></pre>
+<pre><code class="bash">git@github.com:one/one.github.com.git
+</code></pre>
 <p>这样的 Git 地址中的 User 和 Host 来识别使用哪个本地私钥的。<br>很明显，如果 User 和 Host 始终为 git 和 github.com，那么就只能使用一个私钥。<br>所以需要上面的方式配置，每个账号使用了自己的 Host，每个 Host 的域名做 CNAME 解析到 github.com，这样 ssh 在连接时就可以区别不同的账号了。</p>
 <pre><code class="bash">$ ssh -T git@github.com        #  测试one ssh连接
 # Hi ***! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
 $ ssh -T git@two.github.com    #  测试two ssh连接
-# Hi ***! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code></pre>
+# Hi ***! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre>
 <p>但是这样还没有完，下面还有关联的设置。</p>
 <h2 id="在Git项目中配置账号关联"><a href="#在Git项目中配置账号关联" class="headerlink" title="在Git项目中配置账号关联"></a>在Git项目中配置账号关联</h2><p>可以用 <code>git init</code> 或者 <code>git clone</code> 创建本地项目<br>分别在one和two的git项目目录下，使用下面的命令设置名字和邮箱</p>
 <pre><code class="bash">$ git config user.name &quot;__name__&quot;            #  __name__ 例如 one
-$ git config user.email &quot;__email__&quot;          #  __email__ 例如 one@126.com</code></pre>
+$ git config user.email &quot;__email__&quot;          #  __email__ 例如 one@126.com
+</code></pre>
 <p>注意：由于我不知道Hexo怎样配置 局部的config，所以，我将two的config使用全局，而工作目录配置局部。</p>
 <pre><code class="bash">$ git config --global user.name &quot;__name__&quot;            #  __name__ 例如 two
-$ git config --global user.email &quot;__email__&quot;          #  __email__ 例如 two@126.com</code></pre>
+$ git config --global user.email &quot;__email__&quot;          #  __email__ 例如 two@126.com
+</code></pre>
 <p>查看git项目的配置</p>
-<pre><code class="bash">$ git config --list</code></pre>
+<pre><code class="bash">$ git config --list
+</code></pre>
 <p>查看 one 的 remote.origin.url=git@github.com:one/one.github.com.git<br>查看 two 的 remote.origin.url=git@github.com:two/two.github.com.git<br>由于 one 使用的是默认的 Host ，所以不需要修改，但是 two 使用的是 two.github.com ，则需要进行修改</p>
 <pre><code class="bash">$ git remote rm origin
-$ git remote add origin git@two.github.com:two/two.github.com.git</code></pre>
+$ git remote add origin git@two.github.com:two/two.github.com.git
+</code></pre>
 <p>我在Hexo中的配置（使用two账号）</p>
 <pre><code class="yml">deploy:
     type: git
     repo: git@two.github.com:two/two.github.io.git
-    branch: master</code></pre>
+    branch: master
+</code></pre>
 <h2 id="上传更改"><a href="#上传更改" class="headerlink" title="上传更改"></a>上传更改</h2><p>上面所有的设置无误后，可以修改代码，然后上传了。</p>
 <pre><code class="bash">$ git add -A
 $ git commit -m &quot;your comments&quot;
-$ git push</code></pre>
+$ git push
+</code></pre>
 <p>如果遇到warning</p>
 <blockquote>
 <p>warning: push.default is unset; its implicit value is changing in Git 2.0 from ‘matching’ to ‘simple’. To squelch this messageand maintain the current behavior after the default changes, use…</p>
 </blockquote>
 <p>推荐使用</p>
-<pre><code class="bash">$ git config --global push.default simple</code></pre>
+<pre><code class="bash">$ git config --global push.default simple
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

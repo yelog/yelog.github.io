@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2016-12-24 11:19</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-12-24 11:19</time>
         
     </div>
     <div class="article-meta">
@@ -2426,14 +2409,16 @@ initial commit
 $ git ls-tree -r HEAD
 100644 blob a906cb2a4a904a152...   README
 100644 blob 8f94139338f9404f2...   Rakefile
-040000 tree 99f1a6d12cb4b6f19...   lib</code></pre>
+040000 tree 99f1a6d12cb4b6f19...   lib
+</code></pre>
 <p><code>cat-file</code> 与 <code>ls-tree</code> 是底层命令，它们一般用于底层工作，在日常工作中并不使用。不过它们能帮助我们了解到底发生了什么。</p>
 <h2 id="索引-Index"><a href="#索引-Index" class="headerlink" title="索引(Index)"></a>索引(Index)</h2><p>索引是你的 <strong>预期的下一次提交</strong>。 我们也会将这个概念引用为 Git 的 “暂存区域”，这就是当你运行 <code>git commit</code> 时 Git 看起来的样子。</p>
 <p>Git 将上一次检出到工作目录中的所有文件填充到索引区，它们看起来就像最初被检出时的样子。 之后你会将其中一些文件替换为新版本，接着通过 git commit 将它们转换为树来用作新的提交。</p>
 <pre><code class="bash">$ git ls-files -s
 100644 a906cb2a4a904a152e80877d4088654daad0c859 0    README
 100644 8f94139338f9404f26296befa88755fc2598c289 0    Rakefile
-100644 47c6340d6459e05787f644c2447d2595f5d3a54b 0    lib/simplegit.rb</code></pre>
+100644 47c6340d6459e05787f644c2447d2595f5d3a54b 0    lib/simplegit.rb
+</code></pre>
 <p>再说一次，我们在这里又用到了 <code>ls-files</code> 这个幕后的命令，它会显示出索引当前的样子。</p>
 <p>确切来说，索引并非技术上的树结构，它其实是以扁平的清单实现的。不过对我们而言，把它当做树就够了。</p>
 <h2 id="工作目录-Working-Directory"><a href="#工作目录-Working-Directory" class="headerlink" title="工作目录(Working Directory)"></a>工作目录(Working Directory)</h2><p>最后，你就有了自己的工作目录。 另外两棵树以一种高效但并不直观的方式，将它们的内容存储在 <code>.git</code> 文件夹中。 工作目录会将它们解包为实际的文件以便编辑。 你可以把工作目录当做 <strong>沙盒</strong>。在你将修改提交到暂存区并记录到历史之前，可以随意更改。</p>
@@ -2444,7 +2429,8 @@ $ git ls-tree -r HEAD
 └── lib
     └── simplegit.rb
 
-1 directory, 3 files</code></pre>
+1 directory, 3 files
+</code></pre>
 <h2 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h2><p>Git 主要的目的是通过操纵这三棵树来以更加连续的状态记录项目的快照。<br><img src="http://img.saodiyang.com/FuPJ7H7NQ32SfOF8kjbnzLk6vmEH.png" alt="工作流程"><br>让我们来可视化这个过程：假设我们进入到一个新目录，其中有一个文件。 我们称其为该文件的 <strong>v1</strong> 版本，将它标记为蓝色。 现在运行 <code>git init</code>，这会创建一个 Git 仓库，其中的 HEAD 引用指向未创建的分支（<code>master</code> 还不存在）。<br><img src="http://img.saodiyang.com/FrD7WIEaHU-3MqVa7jIeHVh_j2sf.png" alt="git初始化情况"><br>此时，只有工作目录有内容。</p>
 <p>现在我们想要提交这个文件，所以用 <code>git add</code> 来获取工作目录中的内容，并将其复制到索引中。<br><img src="http://img.saodiyang.com/Fqoqvx7xoY0Ok-U_dSUNdPcrk43t.png" alt="git add之后情况"><br>接着运行 <code>git commit</code>，它首先会移除索引中的内容并将它保存为一个永久的快照，然后创建一个指向该快照的提交对象，最后更新 <code>master</code> 来指向本次提交。<br><img src="http://img.saodiyang.com/FqPDbSnfFD3LM_3-tSY7OLwtCGSa.png" alt="git commit之后情况"><br>此时如果我们运行 <code>git status</code>，会发现没有任何改动，因为现在三棵树完全相同。</p>
 <p>现在我们想要对文件进行修改然后提交它。 我们将会经历同样的过程；首先在工作目录中修改文件。 我们称其为该文件的 <strong>v2</strong> 版本，并将它标记为红色。<br><img src="http://img.saodiyang.com/FoJPPHbaxpKomYmGALsLPgg1NlbZ.png" alt="编辑文件"><br>如果现在运行 <code>git status</code>，我们会看到文件显示在 “Changes not staged for commit,” 下面并被标记为红色，因为该条目在索引与工作目录之间存在不同。 接着我们运行 <code>git add</code> 来将它暂存到索引中。<br><img src="http://img.saodiyang.com/FuF8tzqKZfm6enCohAFGL5rSY8pR.png" alt="git add之后情况"><br>此时，由于索引和 HEAD 不同，若运行 <code>git status</code> 的话就会看到 “Changes to be committed” 下的该文件变为绿色 ——也就是说，现在预期的下一次提交与上一次提交不同。 最后，我们运行 <code>git commit</code> 来完成提交。<br><img src="http://img.saodiyang.com/Fvsca5WLZmAr_ApYX3-dHk312zw8.png" alt="git add之后情况"><br>现在运行 <code>git status</code> 会没有输出，因为三棵树又变得相同了。</p>

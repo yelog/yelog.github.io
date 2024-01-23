@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-06-01 17:25</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-06-01 17:25</time>
         
     </div>
     <div class="article-meta">
@@ -2390,7 +2373,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="通过attach进入容器"><a href="#通过attach进入容器" class="headerlink" title="通过attach进入容器"></a>通过attach进入容器</h2><pre><code class="bash"># 进入容器（Docker自带的命令）
-$ sudo docker attach [name]</code></pre>
+$ sudo docker attach [name]
+</code></pre>
 <p>通过这命令进入容器后，执行ctrl+d退出容器后发现容器也停止了。<br>所以可以通过</p>
 <ul>
 <li>先按，ctrl+p</li>
@@ -2401,13 +2385,16 @@ $ sudo docker attach [name]</code></pre>
 <p>通过 <code>docker exec</code> 进入容器是安全的，但是命令过长</p>
 <p>所以我们可以通过下面操作，简化命令</p>
 <p>1.创建文件 <code>/usr/bin/ctn</code>,内容如下</p>
-<pre><code>docker exec -it $1 /bin/bash</code></pre>
+<pre><code>docker exec -it $1 /bin/bash
+</code></pre>
 <p>2.检查环境变量有没有配置目录 <code>/usr/bin</code></p>
 <pre><code>$PATH
-bash: /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory</code></pre>
+bash: /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or directory
+</code></pre>
 <p>配置环境变量的方式自行百度</p>
 <p>3.完成上面两步即可通过命令 <code>ctn</code> 进入容器</p>
-<pre><code class="bash">$ ctn [name]</code></pre>
+<pre><code class="bash">$ ctn [name]
+</code></pre>
 <blockquote>
 <p>注意：如果是使用非root账号创建的命令，而docker命令是root权限，可能会存在权限问题<br>可以设置 <code>chmod 777 /usr/bin/ctn</code> 设置权限<br>使用 <code>sudo ctn [name]</code> 即可进入容器</p>
 </blockquote>
@@ -2415,7 +2402,8 @@ bash: /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games: No such file or 
 <p>我们可以借助complete命令，来补全docker信息。</p>
 <p>在~/.bashrc(作用于当前用户，如果所有用户，修改/etc/bashrc)文件中添加一行</p>
 <pre><code class="bash"># ctn auto complete
-complete -W &quot;$(docker ps --format &quot;&#123;&#123;.Names&#125;&#125;&quot;)&quot; ctn</code></pre>
+complete -W &quot;$(docker ps --format &quot;&#123;&#123;.Names&#125;&#125;&quot;)&quot; ctn
+</code></pre>
 <p>再执行 <code>source .bashrc</code> 使之生效。</p>
 <p>这样我们输入 <code>ctn</code> 后，按 <code>Tab</code> 就会提示或自动补全了。</p>
 <blockquote>

@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:49'>2017-03-09 19:50</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-03-09 19:50</time>
         
     </div>
     <div class="article-meta">
@@ -2400,7 +2383,8 @@ function loadComment() &#123;
   s.src = &#39;https://static.duoshuo.com/embed.js?t=&#39;+new Date().getTime();
   s.async = true; s.charset = &#39;UTF-8&#39;;
   (d.head || d.body).appendChild(s);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>当局部加载页面时，就会无法加载多说。<br>需要编写一个js方法，参考文档：(<a target="_blank" rel="noopener" href="http://dev.duoshuo.com/docs/50b344447f32d30066000147">http://dev.duoshuo.com/docs/50b344447f32d30066000147</a>)</p>
 <pre><code class="JavaScript">/**
  * pjax后需要回调函数.加载多说
@@ -2418,7 +2402,8 @@ function pajx_loadDuodsuo()&#123;
       $(dus).html(el);
     &#125;
   &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>在pjax:end中调用此方法即可。</p>
 
       

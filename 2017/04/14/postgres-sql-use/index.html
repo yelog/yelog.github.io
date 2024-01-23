@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:49'>2017-04-14 16:37</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:11'>2017-04-14 16:37</time>
         
     </div>
     <div class="article-meta">
@@ -2409,7 +2392,8 @@ grant create on database &quot;sp-boss&quot; to &quot;sp-manager&quot;;
 -- 使用 新用户 登录数据库
 psql -U sp-manager -d sp-boss
 -- 创建自己的 schema
-create schema &quot;sp-manager&quot;;</code></pre>
+create schema &quot;sp-manager&quot;;
+</code></pre>
 <h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><pre><code class="sql">--创建表
 create table user_info (
   id serial primary key,
@@ -2423,7 +2407,8 @@ create table user_info (
 --删除表
 drop table exists user_info;
 --重命名表
-alter table user_info rename to user_infos;</code></pre>
+alter table user_info rename to user_infos;
+</code></pre>
 <h3 id="字段（列）"><a href="#字段（列）" class="headerlink" title="字段（列）"></a>字段（列）</h3><pre><code class="sql">--添加一列
 alter table user_info add [column] username varchar(50);
 --删除一列
@@ -2432,12 +2417,14 @@ alter table user_info drop [column] username;
 alter table user_info rename [column] username to name;
 --修改结构
 alter table user_info alter [column] username set not null;
---</code></pre>
+--
+</code></pre>
 <h3 id="唯一约束"><a href="#唯一约束" class="headerlink" title="唯一约束"></a>唯一约束</h3><pre><code class="SQL">-- 添加名为 uk_name 的联合唯一约束，组合列为column1和column2
 alter table sys_theme add constraint uk_name unique(column1,column2);
 
 -- 删除名为 uk_name 的约束
-alter table sys_theme drop constraint uk_name;</code></pre>
+alter table sys_theme drop constraint uk_name;
+</code></pre>
 <h2 id="DML数据库操作语言"><a href="#DML数据库操作语言" class="headerlink" title="DML数据库操作语言"></a>DML数据库操作语言</h2><h3 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h3><h4 id="查询包含json格式的text类型的数据"><a href="#查询包含json格式的text类型的数据" class="headerlink" title="查询包含json格式的text类型的数据"></a>查询包含json格式的text类型的数据</h4><pre><code class="sql">postgres=# select * from person;
  id |  name  |                          other                           
 ----+--------+----------------------------------------------------------
@@ -2449,7 +2436,8 @@ alter table sys_theme drop constraint uk_name;</code></pre>
   6 | yak    | &#123;&quot;gender&quot;:&quot;female&quot;,&quot;address&quot;:&quot;xiamen&quot;,&quot;college&quot;:&quot;xmut&quot;&#125;
   7 | alice  | &#123;&quot;gender&quot;:&quot;female&quot;,&quot;address&quot;:&quot;shanghai&quot;,&quot;college&quot;:&quot;thu&quot;&#125;
   8 | anita  | &#123;&quot;gender&quot;:&quot;female&quot;,&quot;address&quot;:&quot;xiongan&quot;,&quot;college&quot;:&quot;hku&quot;&#125;
-(8 行记录)</code></pre>
+(8 行记录)
+</code></pre>
 <pre><code class="sql">-- 查询深圳学生的高校分部情况
 select
   other::json-&gt;&gt;&#39;college&#39; college,
@@ -2467,7 +2455,8 @@ ___________________________
   xmut    |     1
  (1 行记录)
 --- 结果可得深圳一共有两个学生，
---- 在深圳大学和厦门理工学院各一个。</code></pre>
+--- 在深圳大学和厦门理工学院各一个。
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

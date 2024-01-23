@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-01-16 14:39</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-01-16 14:39</time>
         
     </div>
     <div class="article-meta">
@@ -2391,7 +2374,8 @@
       
         <p>　　在linux环境中，不管是编程还是其他维护，时间是必不可少的，也经常会用到时间的运算，熟练运用date命令来表示自己想要表示的时间，肯定可以给自己的工作带来诸多方便。</p>
 <span id="more"></span>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ date [参数]... [+格式]</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ date [参数]... [+格式]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　date 可以用来显示或设定系统的日期与时间。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><p><strong>命令参数</strong></p>
 <table>
@@ -2581,9 +2565,11 @@ $ date &#39;+%T&#39;
 14:52:02
 
 $ date &#39;+%X&#39;
-14时52分06秒</code></pre>
+14时52分06秒
+</code></pre>
 <p><strong><code>例二</code>：显示日期和设定时间</strong></p>
-<pre><code class="bash">$ date --date 08:42:00</code></pre>
+<pre><code class="bash">$ date --date 08:42:00
+</code></pre>
 <p><strong><code>例三</code>：date -d参数使用</strong></p>
 <pre><code class="bash">$ date -d &quot;nov 22&quot;
 2012年 11月 22日 星期四 00:00:00 CST
@@ -2622,17 +2608,20 @@ $ date -d &#39;dec 14 -2 weeks&#39;
 2012年 11月 30日 星期五 00:00:00 CST
 
 $ date -d &#39;50 days&#39;
-2013年 01月 27日 星期日 08:52:27 CST</code></pre>
+2013年 01月 27日 星期日 08:52:27 CST
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　date 命令的另一个扩展是 -d 选项，该选项非常有用。使用这个功能强大的选项，通过将日期作为引号括起来的参数提供，您可以快速地查明一个特定的日期。-d 选项还可以告诉您，相对于当前日期若干天的究竟是哪一天，从现在开始的若干天或若干星期以后，或者以前（过去）。通过将这个相对偏移使用引号括起来，作为 -d 选项的参数，就可以完成这项任务。<br>　　具体说明如下：<br>　　　　date -d “nov 22”  今年的 11 月 22 日是星期三<br>　　　　date -d ‘2 weeks’ 2周后的日期<br>　　　　date -d ‘next monday’ (下周一的日期)<br>　　　　date -d next-day +%Y%m%d（明天的日期）或者：date -d tomorrow +%Y%m%d<br>　　　　date -d last-day +%Y%m%d(昨天的日期) 或者：date -d yesterday +%Y%m%d<br>　　　　date -d last-month +%Y%m(上个月是几月)<br>　　　　date -d next-month +%Y%m(下个月是几月)<br>　　使用 ago 指令，您可以得到过去的日期：<br>　　　　date -d ‘30 days ago’ （30天前的日期）<br>　　使用负数以得到相反的日期：<br>　　　　date -d ‘dec 14 -2 weeks’ （相对:dec 14这个日期的两周前的日期）<br>　　　　date -d ‘-100 days’ (100天以前的日期)<br>　　　　date -d ‘50 days’(50天后的日期)</p>
 </blockquote>
 <p><strong><code>例四</code>：显示月份和日数</strong></p>
 <pre><code class="bash">$ date  &#39;+%B %d&#39;
-一月 28</code></pre>
+一月 28
+</code></pre>
 <p><strong><code>例五</code>：显示时间后跳行，再显示目前日期</strong></p>
 <pre><code class="bash">$ date &#39;+%T%n%D&#39;
 14:58:23
-01/28/17</code></pre>
+01/28/17
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

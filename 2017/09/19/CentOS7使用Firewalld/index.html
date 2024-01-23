@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-09-19 09:53</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-09-19 09:53</time>
         
     </div>
     <div class="article-meta">
@@ -2402,9 +2385,11 @@
         <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>FirewallD 提供了支持网络/防火墙区域(zone)定义网络链接以及接口安全等级的动态防火墙管理工具。它支持 IPv4, IPv6 防火墙设置以及以太网桥接，并且拥有运行时配置和永久配置选项。它也支持允许服务或者应用程序直接添加防火墙规则的接口。</p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code class="bash">$ yum install firewalld
 # 如果需要图形界面的话，则再安装
-$ yum install firewall-config</code></pre>
+$ yum install firewall-config
+</code></pre>
 <h3 id="zone"><a href="#zone" class="headerlink" title="zone"></a>zone</h3><p>Firewall 能将不同的网络连接归类到不同的信任级别。</p>
-<pre><code class="bash">$ firewall-cmd --list-all-zones    #查看所有zone信息</code></pre>
+<pre><code class="bash">$ firewall-cmd --list-all-zones    #查看所有zone信息
+</code></pre>
 <p>Zone 提供了以下几个级别：</p>
 <ul>
 <li>drop: 丢弃所有进入的包，而不给出任何响应</li>
@@ -2436,25 +2421,31 @@ $ yum install firewall-config</code></pre>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><pre><code class="bash">$ systemctl start firewalld         # 启动
 $ systemctl stop firewalld          # 关闭
 $ systemctl enable firewalld        # 开机启动
-$ systemctl disable firewalld       # 取消开机启动</code></pre>
+$ systemctl disable firewalld       # 取消开机启动
+</code></pre>
 <p>具体的规则管理，可以使用 <code>firewall-cmd</code>,具体的使用方法</p>
 <pre><code class="bash">$ firewall-cmd --help
 
 --zone=NAME                         # 指定 zone
 --permanent                         # 永久修改，--reload 后生效
---timeout=seconds                   # 持续效果，到期后自动移除，用于调试，不能与 --permanent 同时使用</code></pre>
+--timeout=seconds                   # 持续效果，到期后自动移除，用于调试，不能与 --permanent 同时使用
+</code></pre>
 <h3 id="查看规则"><a href="#查看规则" class="headerlink" title="查看规则"></a>查看规则</h3><p>查看运行状态</p>
-<pre><code class="bash">$ firewall-cmd --state</code></pre>
+<pre><code class="bash">$ firewall-cmd --state
+</code></pre>
 <p>查看已被激活的 Zone 信息</p>
 <pre><code class="bash">$ firewall-cmd --get-active-zones
 public
-  interfaces: eth0 eth1</code></pre>
+  interfaces: eth0 eth1
+</code></pre>
 <p>查看指定接口的 Zone 信息</p>
 <pre><code class="bash">$ firewall-cmd --get-zone-of-interface=eth0
-public</code></pre>
+public
+</code></pre>
 <p>查看指定级别的接口</p>
 <pre><code class="bash">$ firewall-cmd --zone=public --list-interfaces
-eth0</code></pre>
+eth0
+</code></pre>
 <p>查看指定级别的所有信息，譬如 public</p>
 <pre><code class="bash">$ firewall-cmd --zone=public --list-all
 public (default, active)
@@ -2465,76 +2456,108 @@ public (default, active)
   masquerade: no
   forward-ports:
   icmp-blocks:
-  rich rules:</code></pre>
+  rich rules:
+</code></pre>
 <p>查看所有级别被允许的信息</p>
-<pre><code class="bash">$ firewall-cmd --get-service</code></pre>
+<pre><code class="bash">$ firewall-cmd --get-service
+</code></pre>
 <p>查看重启后所有 Zones 级别中被允许的服务，即永久放行的服务</p>
-<pre><code class="bash">$ firewall-cmd --get-service --permanent</code></pre>
+<pre><code class="bash">$ firewall-cmd --get-service --permanent
+</code></pre>
 <h3 id="管理规则"><a href="#管理规则" class="headerlink" title="管理规则"></a>管理规则</h3><pre><code class="bash">$ firewall-cmd --panic-on           # 丢弃
 $ firewall-cmd --panic-off          # 取消丢弃
 $ firewall-cmd --query-panic        # 查看丢弃状态
 $ firewall-cmd --reload             # 更新规则，不重启服务
-$ firewall-cmd --complete-reload    # 更新规则，重启服务</code></pre>
+$ firewall-cmd --complete-reload    # 更新规则，重启服务
+</code></pre>
 <p>添加某接口至某信任等级，譬如添加 eth0 至 public，永久修改</p>
-<pre><code class="bash">$ firewall-cmd --zone=public --add-interface=eth0 --permanent</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=public --add-interface=eth0 --permanent
+</code></pre>
 <p>设置 public 为默认的信任级别</p>
-<pre><code class="bash">$ firewall-cmd --set-default-zone=public</code></pre>
+<pre><code class="bash">$ firewall-cmd --set-default-zone=public
+</code></pre>
 <p><strong><code>a. 管理端口</code></strong><br>列出 dmz 级别的被允许的进入端口</p>
-<pre><code class="bash">$ firewall-cmd --zone=dmz --list-ports</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=dmz --list-ports
+</code></pre>
 <p>允许 tcp 端口 8080 至 dmz 级别</p>
-<pre><code class="bash">$ firewall-cmd --zone=dmz --add-port=8080/tcp</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=dmz --add-port=8080/tcp
+</code></pre>
 <p>允许某范围的 udp 端口至 public 级别，并永久生效</p>
-<pre><code class="bash">$ firewall-cmd --zone=public --add-port=5060-5059/udp --permanent</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=public --add-port=5060-5059/udp --permanent
+</code></pre>
 <p><strong><code>b. 网卡接口</code></strong><br>列出 public zone 所有网卡</p>
-<pre><code class="bash">$ firewall-cmd --zone=public --list-interfaces</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=public --list-interfaces
+</code></pre>
 <p>将 eth0 添加至 public zone，永久</p>
-<pre><code class="bash">$ firewall-cmd --zone=public --permanent --add-interface=eth0</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=public --permanent --add-interface=eth0
+</code></pre>
 <p>eth0 存在与 public zone，将该网卡添加至 work zone，并将之从 public zone 中删除</p>
-<pre><code class="bash">$ firewall-cmd --zone=work --permanent --change-interface=eth0</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=work --permanent --change-interface=eth0
+</code></pre>
 <p>删除 public zone 中的 eth0，永久</p>
-<pre><code class="bash">$ firewall-cmd --zone=public --permanent --remove-interface=eth0</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=public --permanent --remove-interface=eth0
+</code></pre>
 <p><strong><code>c. 管理服务</code></strong><br>添加 smtp 服务至 work zone</p>
-<pre><code class="bash">$ firewall-cmd --zone=work --add-service=smtp</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=work --add-service=smtp
+</code></pre>
 <p>移除 work zone 中的 smtp 服务</p>
-<pre><code class="bash">$ firewall-cmd --zone=work --remove-service=smtp</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=work --remove-service=smtp
+</code></pre>
 <p><strong><code>d. 配置 external zone 中的 ip 地址伪装</code></strong><br>查看</p>
-<pre><code class="bash">$ firewall-cmd --zone=external --query-masquerade</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=external --query-masquerade
+</code></pre>
 <p>打开伪装</p>
-<pre><code class="bash">$ firewall-cmd --zone=external --add-masquerade</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=external --add-masquerade
+</code></pre>
 <p>关闭伪装</p>
-<pre><code class="bash">$ firewall-cmd --zone=external --remove-masquerade</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=external --remove-masquerade
+</code></pre>
 <p><strong><code>e. 配置 public zone 的端口转发</code></strong><br>要打开端口转发，则需要先</p>
-<pre><code class="bash">$ firewall-cmd --zone=public --add-masquerade</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=public --add-masquerade
+</code></pre>
 <p>然后转发 tcp 22 端口至 3753</p>
-<pre><code class="bash">$ firewall-cmd --zone=public --add-forward-port=port=22:proto=tcp:toport=3753</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=public --add-forward-port=port=22:proto=tcp:toport=3753
+</code></pre>
 <p>转发 22 端口数据至另一个 ip 的相同端口上</p>
-<pre><code class="bash">$ firewall-cmd --zone=public --add-forward-port=port=22:proto=tcp:toaddr=192.168.1.100</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=public --add-forward-port=port=22:proto=tcp:toaddr=192.168.1.100
+</code></pre>
 <p>转发 22 端口数据至另一 ip 的 2055 端口上</p>
-<pre><code class="bash">$ firewall-cmd --zone=public --add-forward-port=port=22:proto=tcp:toport=2055:toaddr=192.168.1.100</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=public --add-forward-port=port=22:proto=tcp:toport=2055:toaddr=192.168.1.100
+</code></pre>
 <p><strong><code>f. 配置 public zone 的 icmp</code></strong><br>查看所有支持的 icmp 类型</p>
 <pre><code class="bash">$ firewall-cmd --get-icmptypes
-destination-unreachable echo-reply echo-request parameter-problem redirect router-advertisement router-solicitation source-quench time-exceeded</code></pre>
+destination-unreachable echo-reply echo-request parameter-problem redirect router-advertisement router-solicitation source-quench time-exceeded
+</code></pre>
 <p>列出</p>
-<pre><code class="bash">$ firewall-cmd --zone=public --list-icmp-blocks</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=public --list-icmp-blocks
+</code></pre>
 <p>添加 echo-request 屏蔽</p>
-<pre><code class="bash">$ firewall-cmd --zone=public --add-icmp-block=echo-request [--timeout=seconds]</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=public --add-icmp-block=echo-request [--timeout=seconds]
+</code></pre>
 <p>移除 echo-reply 屏蔽</p>
-<pre><code class="bash">$ firewall-cmd --zone=public --remove-icmp-block=echo-reply</code></pre>
+<pre><code class="bash">$ firewall-cmd --zone=public --remove-icmp-block=echo-reply
+</code></pre>
 <p><strong><code>g. IP 封禁</code></strong></p>
-<pre><code class="bash">$ firewall-cmd --permanent --add-rich-rule=&quot;rule family=&#39;ipv4&#39; source address=&#39;222.222.222.222&#39; reject&quot;</code></pre>
+<pre><code class="bash">$ firewall-cmd --permanent --add-rich-rule=&quot;rule family=&#39;ipv4&#39; source address=&#39;222.222.222.222&#39; reject&quot;
+</code></pre>
 <p>当然，我们仍然可以通过 ipset 来封禁 ip</p>
 <p>封禁 ip</p>
 <pre><code class="bash">$ firewall-cmd --permanent --zone=public --new-ipset=blacklist --type=hash:ip
-$ firewall-cmd --permanent --zone=public --ipset=blacklist --add-entry=222.222.222.222</code></pre>
+$ firewall-cmd --permanent --zone=public --ipset=blacklist --add-entry=222.222.222.222
+</code></pre>
 <p>封禁网段</p>
 <pre><code class="bash">$ firewall-cmd --permanent --zone=public --new-ipset=blacklist --type=hash:net
-$ firewall-cmd --permanent --zone=public --ipset=blacklist --add-entry=222.222.222.0/24</code></pre>
+$ firewall-cmd --permanent --zone=public --ipset=blacklist --add-entry=222.222.222.0/24
+</code></pre>
 <p>倒入 ipset 规则</p>
-<pre><code class="bash">$ firewall-cmd --permanent --zone=public --new-ipset-from-file=/path/blacklist.xml</code></pre>
+<pre><code class="bash">$ firewall-cmd --permanent --zone=public --new-ipset-from-file=/path/blacklist.xml
+</code></pre>
 <p>然后封禁 blacklist</p>
-<pre><code class="bash">$ firewall-cmd --permanent --zone=public --add-rich-rule=&#39;rule source ipset=blacklist drop&#39;</code></pre>
+<pre><code class="bash">$ firewall-cmd --permanent --zone=public --add-rich-rule=&#39;rule source ipset=blacklist drop&#39;
+</code></pre>
 <p>重新载入以生效</p>
-<pre><code class="bash">$ firewall-cmd --reload</code></pre>
+<pre><code class="bash">$ firewall-cmd --reload
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

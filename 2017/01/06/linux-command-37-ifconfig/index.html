@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-01-06 09:57</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-01-06 09:57</time>
         
     </div>
     <div class="article-meta">
@@ -2391,7 +2374,8 @@
       
         <p>　　许多windows非常熟悉ipconfig命令行工具，它被用来获取网络接口配置信息并对此进行修改。Linux系统拥有一个类似的工具，也就是ifconfig(interfaces config)。通常需要以root身份登录或使用sudo以便在Linux机器上使用ifconfig工具。依赖于ifconfig命令中使用一些选项属性，ifconfig工具不仅可以被用来简单地获取网络接口配置信息，还可以修改这些配置。</p>
 <span id="more"></span>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ ifconfig [网络设备] [参数]</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ ifconfig [网络设备] [参数]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　ifconfig 命令用来查看和配置网络设备。当网络环境发生改变时可通过此命令对网络进行相应的配置。</p>
 <blockquote>
 <p><strong>注意：</strong>  用ifconfig命令配置的网卡信息，在网卡重启后机器重启后，配置就不存在。要想将上述的配置信息永远的存的电脑里，那就要修改网卡的配置文件了。</p>
@@ -2481,7 +2465,8 @@
 </tr>
 </tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示网络设备信息（激活状态的）</strong></p>
-<pre><code class="bash">$ ifconfig</code></pre>
+<pre><code class="bash">$ ifconfig
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　eth0 表示第一块网卡， 其中 HWaddr 表示网卡的物理地址，可以看到目前这个网卡的物理地址(MAC地址）是 00:50:56:BF:26:20<br>　　inet addr 用来表示网卡的IP地址，此网卡的 IP地址是 192.168.120.204，广播地址， Bcast:192.168.120.255，掩码地址Mask:255.255.255.0<br>　　lo 是表示主机的回坏地址，这个一般是用来测试一个网络程序，但又不想让局域网或外网的用户能够查看，只能在此台主机上运行和查看所用的网络接口。比如把 HTTPD服务器的指定到回坏地址，在浏览器输入 127.0.0.1 就能看到你所架WEB网站了。但只是您能看得到，局域网的其它主机或用户无从知道。<br>　　第一行：连接类型：Ethernet（以太网）HWaddr（硬件mac地址）<br>　　第二行：网卡的IP地址、子网、掩码<br>　　第三行：UP（代表网卡开启状态）RUNNING（代表网卡的网线被接上）MULTICAST（支持组播）MTU:1500（最大传输单元）：1500字节<br>　　第四、五行：接收、发送数据包情况统计<br>　　第七行：接收、发送数据字节数统计信息。</p>
 </blockquote>
@@ -2490,7 +2475,8 @@
 $ ifconfig eth0 up
 
 # 关闭eth0网卡
-$ ifconfig eth0 down</code></pre>
+$ ifconfig eth0 down
+</code></pre>
 <blockquote>
 <p><strong>注意：</strong> ssh登陆linux服务器操作要小心，关闭了就不能开启了，除非你有多网卡。</p>
 </blockquote>
@@ -2499,9 +2485,11 @@ $ ifconfig eth0 down</code></pre>
 $ ifconfig eth0 add 33ffe:3240:800:1005::2/64
 
 # 删除IPv6的地址
-$ ifconfig eth0 del 33ffe:3240:800:1005::2/64</code></pre>
+$ ifconfig eth0 del 33ffe:3240:800:1005::2/64
+</code></pre>
 <p><strong><code>例四</code>：用ifconfig修改MAC地址</strong></p>
-<pre><code class="bash">$ ifconfig eth0 hw ether 00:AA:BB:CC:DD:EE</code></pre>
+<pre><code class="bash">$ ifconfig eth0 hw ether 00:AA:BB:CC:DD:EE
+</code></pre>
 <p><strong><code>例五</code>：配置IP地址</strong></p>
 <pre><code class="bash"># 配置ip
 $ ifconfig eth0 192.168.120.56
@@ -2510,16 +2498,19 @@ $ ifconfig eth0 192.168.120.56
 $ ifconfig eth0 192.168.120.56 netmask 255.255.255.0
 
 # 配置ip、掩码地址和广播地址
-$ ifconfig eth0 192.168.120.56 netmask 255.255.255.0 broadcast 192.168.120.255</code></pre>
+$ ifconfig eth0 192.168.120.56 netmask 255.255.255.0 broadcast 192.168.120.255
+</code></pre>
 <p><strong><code>例六</code>：启用和关闭ARP协议</strong></p>
 <pre><code class="bash"># 启用eth0的ARP协议
 $ ifconfig eth0 arp
 
 # 关闭eth0的ARP协议
-$ ifconfig eth0 -arp</code></pre>
+$ ifconfig eth0 -arp
+</code></pre>
 <p><strong><code>例七</code>：设置最大传输单元</strong></p>
 <pre><code class="bash"># 设置能通过的最大数据包大小为 1500 bytes
-$ ifconfig eth0 mtu 1500</code></pre>
+$ ifconfig eth0 mtu 1500
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

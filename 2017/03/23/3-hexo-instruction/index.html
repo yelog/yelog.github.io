@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2344,7 +2327,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-03-23 15:13</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-03-23 15:13</time>
         
     </div>
     <div class="article-meta">
@@ -2398,22 +2381,33 @@
         <blockquote>
 <p>下面如果没有特殊说明， <code>_config.yml</code> 都指主题配置文件，即 <code>3-hexo</code> 目录下</p>
 </blockquote>
-<h2 id="一、初始化博客下-config-yml"><a href="#一、初始化博客下-config-yml" class="headerlink" title="一、初始化博客下 _config.yml"></a>一、初始化博客下 _config.yml</h2><h3 id="1-1-国际化"><a href="#1-1-国际化" class="headerlink" title="1.1 国际化"></a>1.1 国际化</h3><pre><code class="yaml">language: zh-CN #支持 zh-CN、en</code></pre>
+<h2 id="一、初始化博客下-config-yml"><a href="#一、初始化博客下-config-yml" class="headerlink" title="一、初始化博客下 _config.yml"></a>一、初始化博客下 _config.yml</h2><h3 id="1-1-国际化"><a href="#1-1-国际化" class="headerlink" title="1.1 国际化"></a>1.1 国际化</h3><pre><code class="yaml">language: zh-CN #支持 zh-CN、en
+</code></pre>
 <h3 id="1-2-关掉-hexo-自带的代码高亮"><a href="#1-2-关掉-hexo-自带的代码高亮" class="headerlink" title="1.2 关掉 hexo 自带的代码高亮"></a>1.2 关掉 hexo 自带的代码高亮</h3><p>主题内置了主题高亮，所以需要禁用 hexo 自带的高亮</p>
-<pre><code class="yaml">highlight:
-    enable: false</code></pre>
+<p>根据 <code>hexo</code> 版本, 禁用的方式发生了变化 <a target="_blank" rel="noopener" href="https://hexo.io/docs/syntax-highlight#Disabled">禁用高亮</a></p>
+<p>below v7.0.0</p>
+<pre><code class="yaml"># _config.yaml
+highlight:
+    enable: false
+</code></pre>
+<p>7.0.0+</p>
+<pre><code class="yaml"># _config.yml
+syntax_highlighter:  # empty
+</code></pre>
 <h2 id="二、功能相关"><a href="#二、功能相关" class="headerlink" title="二、功能相关"></a>二、功能相关</h2><h3 id="2-1-自定义首页"><a href="#2-1-自定义首页" class="headerlink" title="2.1 自定义首页"></a>2.1 自定义首页</h3><p>可查看这篇文章： <a href="/2017/03/13/3-hexo-homepage/" title="3-hexo配置首页">3-hexo配置首页</a></p>
 <h3 id="2-3-blog快捷键"><a href="#2-3-blog快捷键" class="headerlink" title="2.3 blog快捷键"></a>2.3 blog快捷键</h3><p>可查看这篇文章： <a href="/2017/03/24/3-hexo-shortcuts/" title="3-hexo快捷键说明">3-hexo快捷键说明</a></p>
 <h3 id="2-4-多作者模式"><a href="#2-4-多作者模式" class="headerlink" title="2.4 多作者模式"></a>2.4 多作者模式</h3><p>可查看这篇文章： <a href="/2017/02/28/3-hexo-multiple-author/" title="3-hexo多作者模式">3-hexo多作者模式</a></p>
 <h3 id="2-5-开启关于页面"><a href="#2-5-开启关于页面" class="headerlink" title="2.5 开启关于页面"></a>2.5 开启<code>关于</code>页面</h3><ol>
-<li>在 <code>hexo</code> 根目录执行以下，创建 <code>关于</code> 页面<pre><code class="bash">hexo new page &quot;about&quot;</code></pre>
+<li>在 <code>hexo</code> 根目录执行以下，创建 <code>关于</code> 页面<pre><code class="bash">hexo new page &quot;about&quot;
+</code></pre>
 </li>
 <li>位置： <code>source/aoubt/index.md</code> ，根据需要进行编辑。</li>
 <li>在主题中开启显示：修改主题根目录 <code>_config.yml</code> 中的 <code>about</code> 的 <code>on</code> 为 <code>true</code>，如下所示<pre><code class="yml">menu:
 about:  # &#39;关于&#39; 按钮
  on: true # 是否显示
  url: /about  # 跳转链接
- type: 1 # 跳转类型 1：站内异步跳转 2：当前页面跳转 3：打开新的tab页</code></pre>
+ type: 1 # 跳转类型 1：站内异步跳转 2：当前页面跳转 3：打开新的tab页
+</code></pre>
 </li>
 </ol>
 <h3 id="2-6-添加音乐插件"><a href="#2-6-添加音乐插件" class="headerlink" title="2.6 添加音乐插件"></a>2.6 添加音乐插件</h3><a href="/2019/10/08/3-hexo-add-music/" title="3-hexo 添加音乐插件">3-hexo 添加音乐插件</a>
@@ -2422,7 +2416,8 @@ about:  # &#39;关于&#39; 按钮
 
 <h2 id="三、样式设置"><a href="#三、样式设置" class="headerlink" title="三、样式设置"></a>三、样式设置</h2><h3 id="3-1-代码高亮"><a href="#3-1-代码高亮" class="headerlink" title="3.1 代码高亮"></a>3.1 代码高亮</h3><p>首先要关闭hexo根目录下<code>_config.yml</code>中的高亮设置：</p>
 <pre><code class="yaml">highlight:
-  enable: false</code></pre>
+  enable: false
+</code></pre>
 <p>配置主题下<code>_config.yml</code>中的高亮设置：<br>可以根据提示，配置喜欢的高亮主题</p>
 <pre><code class="yaml">highlight:
   on: true # true开启代码高亮
@@ -2444,12 +2439,14 @@ about:  # &#39;关于&#39; 按钮
 # sunburst :
 # kimbie-dark :
 # kimbie-light :
-# school-book : 纸张效果</code></pre>
+# school-book : 纸张效果
+</code></pre>
 <h3 id="3-2-MathJax数学公式"><a href="#3-2-MathJax数学公式" class="headerlink" title="3.2 MathJax数学公式"></a>3.2 MathJax数学公式</h3><p>修改 <code>_config.yml</code></p>
 <pre><code class="yaml"># MathJax 数学公式支持
 mathjax:
   on: true #是否启用
-  per_page: false # 若只渲染单个页面，此选项设为false，页面内加入 mathjax: true</code></pre>
+  per_page: false # 若只渲染单个页面，此选项设为false，页面内加入 mathjax: true
+</code></pre>
 <p>考虑到页面的加载速度，支持渲染单个页面。<br>设置 <code>per_page: false</code> ,在需要渲染的页面内 加入 <code>mathjax: true</code></p>
 <blockquote>
 <p><strong><code>注意: </code></strong><br>由于hexo的MarkDown渲染器与MathJax有冲突，可能会造成矩阵等使用不正常。所以在使用之前需要修改两个地方<br>编辑 <code>node_modules\marked\lib\marked.js</code> 脚本</p>
@@ -2457,11 +2454,13 @@ mathjax:
 <ol>
 <li>将451行 ，这一步取消了对 <code>\\,\&#123;,\&#125;</code> 的转义(escape)<pre><code class="js">escape: /^\\([\\`*&#123;&#125;\[\]()# +\-.!_&gt;])/,
 改为
-escape: /^\\([`*\[\]()# +\-.!_&gt;])/,</code></pre>
+escape: /^\\([`*\[\]()# +\-.!_&gt;])/,
+</code></pre>
 </li>
 <li>将459行，这一步取消了对斜体标记 <code>_</code> 的转义<pre><code class="js">em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 改为
-em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</code></pre>
+em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+</code></pre>
 </li>
 </ol>
 <h3 id="3-3-表格样式"><a href="#3-3-表格样式" class="headerlink" title="3.3 表格样式"></a>3.3 表格样式</h3><p>目前提供了3中样式，修改 <code>_config.yml</code></p>
@@ -2469,19 +2468,22 @@ em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</code></pre>
 # table 的样式
 # 为空时类似github的table样式
 # green 绿色样式
-# green_title 头部为青色的table样式</code></pre>
+# green_title 头部为青色的table样式
+</code></pre>
 <h3 id="3-4-文章列表的hover样式"><a href="#3-4-文章列表的hover样式" class="headerlink" title="3.4 文章列表的hover样式"></a>3.4 文章列表的hover样式</h3><p>鼠标移入的背景色和文字颜色变动，设置 <code>_config.yml</code></p>
 <pre><code class="yaml">#文章列表 鼠标移上去的样式, 为空时使用默认效果
 article_list:
   hover:
     background: &#39;#e2e0e0&#39;  # 背景色:提供几种：&#39;#c1bfc1&#39;  &#39;#fbf4a8&#39;
     color:     # 文字颜色 提供几种：&#39;#ffffff&#39;
-# 注意：由于颜色如果包含#，使用单引号 &#39; 引起来</code></pre>
+# 注意：由于颜色如果包含#，使用单引号 &#39; 引起来
+</code></pre>
 <h3 id="3-5-开启字数统计"><a href="#3-5-开启字数统计" class="headerlink" title="3.5 开启字数统计"></a>3.5 开启字数统计</h3><ol>
 <li>开启此功能需先安装插件，在 hexo根目录 执行 <code>npm i hexo-wordcount --save</code></li>
 <li>修改 <code>_config.yml</code></li>
 </ol>
-<pre><code class="yaml">word_count: true</code></pre>
+<pre><code class="yaml">word_count: true
+</code></pre>
 <h3 id="3-6-更换头像"><a href="#3-6-更换头像" class="headerlink" title="3.6 更换头像"></a>3.6 更换头像</h3><p>两种方式：</p>
 <ol>
 <li>替换 <code>source/img/avatar.jpg</code> 图片。</li>
@@ -2489,7 +2491,8 @@ article_list:
 </ol>
 <pre><code class="yaml"># 你的头像url
 avatar: /img/avatar.jpg
-favicon: /img/avatar.jpg</code></pre>
+favicon: /img/avatar.jpg
+</code></pre>
 <h3 id="3-7-设置链接图标"><a href="#3-7-设置链接图标" class="headerlink" title="3.7 设置链接图标"></a>3.7 设置链接图标</h3><blockquote>
 <p>如果需要自定义图标可以看这篇文章 <a href="/2020/12/28/3-hexo-add-icon/" title="3-hexo添加自定义图标">3-hexo添加自定义图标</a></p>
 </blockquote>
@@ -2504,7 +2507,8 @@ link:
   instagram:
   reddit: https://www.reddit.com/user/yelog/
   weibo: http://weibo.com/u/2307534817
-  email: jaytp@qq.com</code></pre>
+  email: jaytp@qq.com
+</code></pre>
 <h2 id="四、排序及置顶"><a href="#四、排序及置顶" class="headerlink" title="四、排序及置顶"></a>四、排序及置顶</h2><h3 id="4-1-分类排序"><a href="#4-1-分类排序" class="headerlink" title="4.1 分类排序"></a>4.1 分类排序</h3><p>默认按照首字母正序排序，由于中文在 <code>nodejs</code> 环境下不能按照拼音首字母排序，所以添加了自定义排序方式，在主题下 <code>_config.yml</code> 中找到如下配置，<code>category.sort</code>则是定义分类顺序的。</p>
 <p><strong>规则：</strong>在 <code>sort</code>中定义的 <code>category</code> 比 没有在 <code>sort</code> 中定义的更靠前</p>
 <pre><code class="yaml"># 文章分类设置
@@ -2517,7 +2521,8 @@ category:
     - 后端
     - 数据库
     - 工具
-    - 运维</code></pre>
+    - 运维
+</code></pre>
 <h3 id="4-2-文章排序"><a href="#4-2-文章排序" class="headerlink" title="4.2 文章排序"></a>4.2 文章排序</h3><blockquote>
 <p>2020-05-20 更新：无需安装插件或修改源码，主题已经内置排序算法</p>
 </blockquote>
@@ -2531,7 +2536,8 @@ categories:
 - 运维
 tags:
 - linux命令
----</code></pre>
+---
+</code></pre>
 <h2 id="五、关于写文章"><a href="#五、关于写文章" class="headerlink" title="五、关于写文章"></a>五、关于写文章</h2><h3 id="5-1-如何写"><a href="#5-1-如何写" class="headerlink" title="5.1 如何写"></a>5.1 如何写</h3><p>每篇文章最好写上文集和标签，方便筛选和查看。<br>一般推荐一篇文章设置一个文集，一个或多个标签<br><code>categories</code>:文集，为左侧列表<br><code>tags</code>:标签，通过#来筛选<br>例如 本篇文章的设置</p>
 <pre><code class="yaml">---
 title: 3-hexo使用说明
@@ -2541,24 +2547,28 @@ categories:
 tags:
 - hexo
 - 3-hexo
----</code></pre>
+---
+</code></pre>
 <h3 id="5-2-写作"><a href="#5-2-写作" class="headerlink" title="5.2 写作"></a>5.2 写作</h3><p>1.设置模板，blog根目录 <code>scaffolds/post.md</code><br>加入categories,tags等，这样以后通过 <code>hexo new</code> 生成的模板就不用写这两个单词了。<br>当然，你也可以写入任何你每个文章中都会有的部分。</p>
 <pre><code class="yaml">---
 title: &#123;&#123; title &#125;&#125;
 date: &#123;&#123; date &#125;&#125;
 categories:
 tags:
----</code></pre>
+---
+</code></pre>
 <h2 id="六、技巧"><a href="#六、技巧" class="headerlink" title="六、技巧"></a>六、技巧</h2><h3 id="6-1-快捷命令"><a href="#6-1-快捷命令" class="headerlink" title="6.1 快捷命令"></a>6.1 快捷命令</h3><p>其实就通过alias，触发一些命令的集合<br>在 <code>~/.bashrc</code> 文件中添加</p>
 <pre><code class="bash">alias hs=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&#39;  #启动本地服务
-alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&#39;  #部署博客</code></pre>
+alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&#39;  #部署博客
+</code></pre>
 <p>甚至你也可以加入备份文章的命令，可以自由发挥。</p>
 <h3 id="6-3-博客备份（快捷命令升级版）"><a href="#6-3-博客备份（快捷命令升级版）" class="headerlink" title="6.3 博客备份（快捷命令升级版）"></a>6.3 博客备份（快捷命令升级版）</h3><p>为了保证我们写的文章不丢失、快速迁移博客，都需要备份我们的blog。</p>
 <ol>
 <li>博客根目录，执行 <code>git init</code> 创建 git 仓库。</li>
 <li>在 github（或其他托管平台、自建远程仓库等） 创建仓库并和本地仓库建立联系。</li>
 <li>在 <code>~/.bashrc</code> 文件中添加<pre><code class="bash">alias hs=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s&#39;
-alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add . &amp;&amp; git commit -m &quot;update&quot; &amp;&amp; git push -f&#39;</code></pre>
+alias hd=&#39;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d &amp;&amp; git add . &amp;&amp; git commit -m &quot;update&quot; &amp;&amp; git push -f&#39;
+</code></pre>
 </li>
 </ol>
 <p>这样，我们在执行 <code>hd</code> 进行部署时，就一同将博客进行备份了</p>

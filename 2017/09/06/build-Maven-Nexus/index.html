@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2342,7 +2325,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-09-06 23:01</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-09-06 23:01</time>
         
     </div>
     <div class="article-meta">
@@ -2402,10 +2385,12 @@
 <p>官网 pro 版本的是需要付费的。所以我们使用免费的 OSS 版本，下载地址 (<a target="_blank" rel="noopener" href="https://www.sonatype.com/download-oss-sonatype">https://www.sonatype.com/download-oss-sonatype</a>)</p>
 </blockquote>
 <pre><code class="bash"># 上传到服务器并解压
-$ tar xvf nexus-3.5.1-02-unix.tar.gz</code></pre>
+$ tar xvf nexus-3.5.1-02-unix.tar.gz
+</code></pre>
 <h3 id="启动Nexus"><a href="#启动Nexus" class="headerlink" title="启动Nexus"></a>启动Nexus</h3><pre><code class="bash"># 启动服务
 $ cd /nexus-3.5.1-02/bin/
-$ ./nexus start</code></pre>
+$ ./nexus start
+</code></pre>
 <h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>打开网址：(<a target="_blank" rel="noopener" href="http://192.168.0.86:8081/">http://192.168.0.86:8081/</a>) , ip 为搭建私服的服务器 ip 。<br>用户名/密码： admin/admin123<br>出现一下画面，就说明安装成功了。<br><img src="http://img.saodiyang.com/FkIlJRDdMC2yJFT9huIk9gBuCe15.png" alt="nexus"></p>
 <h2 id="发布soul项目到私服"><a href="#发布soul项目到私服" class="headerlink" title="发布soul项目到私服"></a>发布soul项目到私服</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><ol>
 <li>创建yelog-release仓库（<em>名字自定义</em>）, type选择 ： release<br><img src="http://img.saodiyang.com/Fk5UboZXVf4aegz63N4TDrITMh4V.png" alt="①.创建宿主仓库"><br><img src="http://img.saodiyang.com/FjAz8w445FFeVqDDzLLTLitOkZyV.png" alt="②.选择hosted类型"><br><img src="http://img.saodiyang.com/Ft2u5UPqdAFxldkkwAC2uVBtjDhF.png" alt="③.创建release类型仓库"></li>
@@ -2424,7 +2409,8 @@ $ ./nexus start</code></pre>
         &lt;name&gt;Snapshot Repository of yelog&lt;/name&gt;
         &lt;url&gt;http://192.168.0.86:8081/repository/yelog-snapshot/&lt;/url&gt;
     &lt;/snapshotRepository&gt;
-&lt;/distributionManagement&gt;</code></pre>
+&lt;/distributionManagement&gt;
+</code></pre>
 <h3 id="在maven的-settings-xml-中配置"><a href="#在maven的-settings-xml-中配置" class="headerlink" title="在maven的 settings.xml 中配置"></a>在maven的 settings.xml 中配置</h3><p>这里配置 maven 的账号密码，id 要与 distributionManagement 中的id一致。默认账号/密码：admin/admin123</p>
 <pre><code class="xml">&lt;servers&gt;
     &lt;server&gt;
@@ -2437,7 +2423,8 @@ $ ./nexus start</code></pre>
       &lt;username&gt;admin&lt;/username&gt;
       &lt;password&gt;admin123&lt;/password&gt;
     &lt;/server&gt;
-&lt;/servers&gt;</code></pre>
+&lt;/servers&gt;
+</code></pre>
 <h3 id="执行maven命令部署项目到私服上"><a href="#执行maven命令部署项目到私服上" class="headerlink" title="执行maven命令部署项目到私服上"></a>执行maven命令部署项目到私服上</h3><p>我这里直接使用IDE的插件执行<br><img src="http://img.saodiyang.com/Frs7jSIClJvF31AnyAAz5JXL-IAP.png" alt="部署项目到私服"><br>部署完成后，可以在 yelog-snapshot 仓库中，查看部署的情况，如下图所示<br><img src="http://img.saodiyang.com/Fi1YtOKOAK7KMigjAc4S7ZfwLLjl.png" alt="查看部署情况"></p>
 <h2 id="从私服拉去依赖库"><a href="#从私服拉去依赖库" class="headerlink" title="从私服拉去依赖库"></a>从私服拉去依赖库</h2><blockquote>
 <p>上一步我们已经将项目 <code>soul</code> 部署到私服上了，这一步介绍项目 <code>ssm</code> 如何依赖引用 <code>soul</code>。<br>私服中的 maven-central 可以链接远程仓库。这样，当有依赖在私服中找不到后，就可以通过远程仓库自动下载依赖。</p>
@@ -2463,13 +2450,15 @@ $ ./nexus start</code></pre>
      &lt;name&gt;Public Repositories&lt;/name&gt;
      &lt;url&gt;http://192.168.0.86:8081/repository/maven-public/&lt;/url&gt;
  &lt;/pluginRepository&gt;
-&lt;/pluginRepositories&gt;</code></pre>
+&lt;/pluginRepositories&gt;
+</code></pre>
 </li>
 <li>引入依赖<pre><code class="xml">&lt;dependency&gt;
  &lt;groupId&gt;org.soul&lt;/groupId&gt;
  &lt;artifactId&gt;commons&lt;/artifactId&gt;
  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
+&lt;/dependency&gt;
+</code></pre>
 </li>
 <li>ssm项目就可以引用到soul代码<br><img src="http://img.saodiyang.com/FvVCRBtMwy5ckbase3E3wM9JUXp6.png" alt="在代码中就可以直接引用到部署到私服的soul项目代码"></li>
 </ol>

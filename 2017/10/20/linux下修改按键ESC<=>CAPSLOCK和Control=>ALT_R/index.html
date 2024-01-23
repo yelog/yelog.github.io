@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2344,7 +2327,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-10-20 17:38</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-10-20 17:38</time>
         
     </div>
     <div class="article-meta">
@@ -2401,13 +2384,15 @@
 <pre><code class="bash">remove Lock = Caps_Lock
 add Lock = Escape
 keysym Caps_Lock = Escape
-keysym Escape = Caps_Lock</code></pre>
+keysym Escape = Caps_Lock
+</code></pre>
 <p>③. 执行 <code>xmodmap .xmodmaprc</code> 使之生效。</p>
 <h2 id="二、-将-右alt-改为-ctrl"><a href="#二、-将-右alt-改为-ctrl" class="headerlink" title="二、 将 右alt 改为 ctrl"></a>二、 将 右alt 改为 ctrl</h2><p>①. 查看需要修改键位的 keysym<br>通过 <code>xev | grep keycode</code> 获取右 <code>alt</code> 的 keysym 为 <code>Alt_R</code>。如下图所示：<br><img src="http://img.saodiyang.com/FvuqjLi5czeBluMTyIfv_xUOcu5k.png" alt="通过xev获取右alt的keysym"></p>
 <p>②. 查看 <code>Alt_R</code> 是哪个 modifier 使用的<br>通过 <code>xmodmap -pm</code> 查看，发现 <code>Alt_R</code> 是作为 modifier <code>mod1</code> 使用的。如下图所示：<br><img src="http://img.saodiyang.com/Fib8QjT-Ccx30DCf2rF4WkzHsbOH.png" alt="查看 Alt_R 是作为 mode1 使用的"></p>
 <p>③. 修改 modifier</p>
 <pre><code class="bash">xmodmap -e &#39;remove mod1 = Alt_R&#39; # 解除原来绑定
-xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用</code></pre>
+xmodmap -e &#39;add control = Alt_R&#39; # 作为 control 使用
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

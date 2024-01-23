@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-03-14 09:44</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-03-14 09:44</time>
         
     </div>
     <div class="article-meta">
@@ -2392,7 +2375,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="添加RSS"><a href="#添加RSS" class="headerlink" title="添加RSS"></a>添加RSS</h2><p>使用<code>RSS</code>是为自己的blog提供订阅功能。</p>
-<h3 id="1-用npm安装插件"><a href="#1-用npm安装插件" class="headerlink" title="1.用npm安装插件"></a>1.用<code>npm</code>安装插件</h3><pre><code class="bash">$ npm install hexo-generator-feed --save</code></pre>
+<h3 id="1-用npm安装插件"><a href="#1-用npm安装插件" class="headerlink" title="1.用npm安装插件"></a>1.用<code>npm</code>安装插件</h3><pre><code class="bash">$ npm install hexo-generator-feed --save
+</code></pre>
 <h3 id="2-配置根目录-config-yml"><a href="#2-配置根目录-config-yml" class="headerlink" title="2.配置根目录_config.yml"></a>2.配置根目录_config.yml</h3><pre><code class="yml"># Extensions
 ## Plugins: http://hexo.io/plugins/
 #RSS订阅
@@ -2402,17 +2386,21 @@ plugin:
 feed:
 type: atom
 path: atom.xml
-limit: 20</code></pre>
+limit: 20
+</code></pre>
 <h3 id="3-验证配置是否成功"><a href="#3-验证配置是否成功" class="headerlink" title="3.验证配置是否成功"></a>3.验证配置是否成功</h3><p>执行 <code>hexo g</code>，查看一下public目录下，如果有 <code>atom.xml</code> 文件，则表明配置成功。</p>
 <h3 id="4-显示RSS图标"><a href="#4-显示RSS图标" class="headerlink" title="4.显示RSS图标"></a>4.显示RSS图标</h3><p>这里以3-hexo主题为例，给rss添加链接<code>/atom.xml</code>修改<code>/themes/3-hexo/_config.yml</code></p>
 <pre><code class="xml">link:
-  rss: /atom.xml</code></pre>
+  rss: /atom.xml
+</code></pre>
 <h3 id="5-效果"><a href="#5-效果" class="headerlink" title="5.效果"></a>5.效果</h3><p><strong>链接图标：</strong><br><img src="http://img.saodiyang.com/FlmC3WWi9jzgVRdSKJ2_li5UHVsr.png" alt="图标"><br><strong>链接地址效果</strong><br><img src="http://img.saodiyang.com/FuTy1C-xSgdTTOZch_UH1355NAs9.png" alt="效果"></p>
 <h2 id="添加Sitemap"><a href="#添加Sitemap" class="headerlink" title="添加Sitemap"></a>添加Sitemap</h2><p>Sitemap，网站地图，是网站优化中重要的一环，无论是对于访问者还是对于搜索引擎。</p>
-<h3 id="1-用npm安装插件-1"><a href="#1-用npm安装插件-1" class="headerlink" title="1.用npm安装插件"></a>1.用<code>npm</code>安装插件</h3><pre><code class="bash">$ npm install hexo-generator-sitemap --save</code></pre>
+<h3 id="1-用npm安装插件-1"><a href="#1-用npm安装插件-1" class="headerlink" title="1.用npm安装插件"></a>1.用<code>npm</code>安装插件</h3><pre><code class="bash">$ npm install hexo-generator-sitemap --save
+</code></pre>
 <h3 id="2-配置根目录-config-yml-1"><a href="#2-配置根目录-config-yml-1" class="headerlink" title="2.配置根目录_config.yml"></a>2.配置根目录_config.yml</h3><pre><code class="xml">plugin:
 - hexo-generator-feed
-- hexo-generator-sitemap</code></pre>
+- hexo-generator-sitemap
+</code></pre>
 <h3 id="3-验证配置是否成功-1"><a href="#3-验证配置是否成功-1" class="headerlink" title="3.验证配置是否成功"></a>3.验证配置是否成功</h3><p>执行 <code>hexo g</code>，查看一下public目录下，如果有 <code>sitemap.xml</code> 文件，则表明配置成功。</p>
 <h3 id="4-效果"><a href="#4-效果" class="headerlink" title="4.效果"></a>4.效果</h3><p>访问 /sitemap.xml 就能看到生成的站点地图了<br><img src="http://img.saodiyang.com/FtFLZ2CSfYa_IKLS-a9ymvKvaztp.png" alt="站点地图效果"></p>
 

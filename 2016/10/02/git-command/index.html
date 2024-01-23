@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2016-10-02 17:15</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-10-02 17:15</time>
         
     </div>
     <div class="article-meta">
@@ -2408,7 +2391,8 @@
 <pre><code class="xml">Workspace：工作区
 Index / Stage：暂存区
 Repository：仓库区（本地仓库）
-Remote：远程仓库</code></pre>
+Remote：远程仓库
+</code></pre>
 <h2 id="新建版本仓库"><a href="#新建版本仓库" class="headerlink" title="新建版本仓库"></a>新建版本仓库</h2><pre><code class="bash"># 在当前目录新建一个Git代码库
 $ git init
 
@@ -2416,7 +2400,8 @@ $ git init
 $ git init [project-name]
 
 # 下载一个项目和它的整个代码历史, -o 给远程仓库起名:faker,默认origin
-$ git clone [-o faker] [url]</code></pre>
+$ git clone [-o faker] [url]
+</code></pre>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>Git的设置文件为<code>.gitconfig</code>，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
 <pre><code class="bash"># 显示当前的Git配置
 $ git config --list
@@ -2429,7 +2414,8 @@ $ git config [--global] user.name &quot;[name]&quot;
 $ git config [--global] user.email &quot;[email address]&quot;
 
 # 设置大小写敏感（windows不区分大小写的解决办法）
-$ git config core.ignorecase  false</code></pre>
+$ git config core.ignorecase  false
+</code></pre>
 <h2 id="增加-删除文件"><a href="#增加-删除文件" class="headerlink" title="增加/删除文件"></a>增加/删除文件</h2><pre><code class="bash"># 添加指定文件到暂存区
 $ git add [file1] [file2] ...
 
@@ -2450,7 +2436,8 @@ $ git rm [file1] [file2] ...
 $ git rm --cached [file]
 
 # 改名文件，并且将这个改名放入暂存区
-$ git mv [file-original] [file-renamed]</code></pre>
+$ git mv [file-original] [file-renamed]
+</code></pre>
 <h2 id="代码提交"><a href="#代码提交" class="headerlink" title="代码提交"></a>代码提交</h2><pre><code class="bash"># 提交暂存区到仓库区
 $ git commit -m [message]
 
@@ -2468,7 +2455,8 @@ $ git commit -v
 $ git commit --amend -m [message]
 
 # 重做上一次commit，并包括指定文件的新变化
-$ git commit --amend [file1] [file2] ...</code></pre>
+$ git commit --amend [file1] [file2] ...
+</code></pre>
 <h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><pre><code class="bash"># 列出所有本地分支
 $ git branch
 
@@ -2532,7 +2520,8 @@ $ git push origin [branch-name]
 
 # 删除远程分支
 $ git push origin --delete [branch-name]
-$ git branch -dr [remote/branch]</code></pre>
+$ git branch -dr [remote/branch]
+</code></pre>
 <h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><pre><code class="bash"># 列出所有tag
 $ git tag
 
@@ -2558,7 +2547,8 @@ $ git push [remote] [tag]
 $ git push [remote] --tags
 
 # 新建一个分支，指向某个tag
-$ git checkout -b [branch] [tag]</code></pre>
+$ git checkout -b [branch] [tag]
+</code></pre>
 <h2 id="查看信息-搜索"><a href="#查看信息-搜索" class="headerlink" title="查看信息/搜索"></a>查看信息/搜索</h2><pre><code class="bash"># 显示有变更的文件
 $ git status [-sb] #s:short,给一个短格式的展示，b:展示当前分支
 
@@ -2644,7 +2634,8 @@ $ git grep --break --heading [关键字]
 $ git log -SiCheck --oneline
 
 # 查询git_deflate_bound函数每一次的变更
-$ git log -L :git_deflate_bound:zlib.c</code></pre>
+$ git log -L :git_deflate_bound:zlib.c
+</code></pre>
 <h2 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h2><pre><code class="bash"># 下载远程仓库的所有变动 [shortname] 为远程仓库的shortname, 如origin,为空时:默认origin
 $ git fetch [shortname]
 
@@ -2683,7 +2674,8 @@ $ git push [remote] [branch]
 $ git push [remote] --all
 
 # 强行推送当前分支到远程仓库，即使有冲突
-$ git push [remote] --force</code></pre>
+$ git push [remote] --force
+</code></pre>
 <h2 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h2><pre><code class="bash"># 恢复暂存区的指定文件到工作区
 $ git checkout [file]
 
@@ -2742,7 +2734,8 @@ $ git stash list
 $ git clean -f -d
 </code></pre>
 <h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><pre><code class="bash"># 生成一个可供发布的压缩包
-$ git archive</code></pre>
+$ git archive
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:49'>2016-10-05 11:58</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-10-05 11:58</time>
         
     </div>
     <div class="article-meta">
@@ -2425,14 +2408,16 @@ $&#123;lastUpdated?string.long&#125;
 $&#123;lastUpdated?string.full&#125;
 $&#123;lastUpdated?string(&quot;yyyy-MM-dd HH:mm:ss zzzz&quot;)&#125;
 $&#123;lastUpdated?string(&quot;EEE, MMM d, &#39;&#39;yy&quot;)&#125;
-$&#123;lastUpdated?string(&quot;EEEE, MMMM dd, yyyy, hh:mm:ss a &#39;(&#39;zzz&#39;)&#39;&quot;)&#125;</code></pre>
+$&#123;lastUpdated?string(&quot;EEEE, MMMM dd, yyyy, hh:mm:ss a &#39;(&#39;zzz&#39;)&#39;&quot;)&#125;
+</code></pre>
 <h3 id="if-elseif-elseif"><a href="#if-elseif-elseif" class="headerlink" title="if,elseif,elseif"></a>if,elseif,elseif</h3><pre><code class="c">&lt;#if condition&gt;
 ……
 &lt;#elseif condition2&gt;
 ……
 &lt;#else&gt;
 ……
-&lt;/#if&gt;</code></pre>
+&lt;/#if&gt;
+</code></pre>
 <h3 id="switch-case"><a href="#switch-case" class="headerlink" title="switch,case"></a>switch,case</h3><pre><code class="c">&lt;#switch value&gt;  
   &lt;#case refValue1&gt;  
          ...  
@@ -2453,33 +2438,39 @@ $&#123;lastUpdated?string(&quot;EEEE, MMMM dd, yyyy, hh:mm:ss a &#39;(&#39;zzz&#
 
 &lt;#rt&gt;去掉右边空白和回车换行  
 
-&lt;#nt&gt;取消上面的效果  </code></pre>
+&lt;#nt&gt;取消上面的效果  
+</code></pre>
 <h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><pre><code class="c">&lt;#list sequence as item&gt;  
 ...  
 &lt;#if item = &quot;spring&quot;&gt;
   &lt;#break&gt;
 &lt;/#if&gt;  
 ...  
-&lt;/#list&gt;  </code></pre>
+&lt;/#list&gt;  
+</code></pre>
 <blockquote>
 <p>iterm_index:当前值得下标，从0开始<br>item_has_next:判断list是否还有值</p>
 </blockquote>
-<h3 id="include"><a href="#include" class="headerlink" title="include"></a>include</h3><pre><code class="c">&lt;#include filename [options]&gt;</code></pre>
+<h3 id="include"><a href="#include" class="headerlink" title="include"></a>include</h3><pre><code class="c">&lt;#include filename [options]&gt;
+</code></pre>
 <blockquote>
 <p>options 包含两个属性<br>encoding=”GBK”<br>parse=”true” 是否作为ftl语法解析，默认是true<br>示例：&lt;#include “/common/copyright.ftl” encoding=”GBK” parse=”true”&gt;</p>
 </blockquote>
-<h3 id="import"><a href="#import" class="headerlink" title="import"></a>import</h3><pre><code class="c">&lt;#import path as hash&gt;</code></pre>
+<h3 id="import"><a href="#import" class="headerlink" title="import"></a>import</h3><pre><code class="c">&lt;#import path as hash&gt;
+</code></pre>
 <blockquote>
 <p>类似于java里的import,它导入文件，然后就可以在当前文件里使用被导入文件里的宏组件</p>
 </blockquote>
 <h3 id="compress"><a href="#compress" class="headerlink" title="compress"></a>compress</h3><pre><code class="c">&lt;#compress&gt;  
   ...  
-&lt;/#compress&gt;</code></pre>
+&lt;/#compress&gt;
+</code></pre>
 <h3 id="escape-noescape"><a href="#escape-noescape" class="headerlink" title="escape, noescape"></a>escape, noescape</h3><pre><code class="c">&lt;#escape identifier as expression&gt;  
   ...  
   &lt;#noescape&gt;...&lt;/#noescape&gt;  
   ...  
-&lt;/#escape&gt;  </code></pre>
+&lt;/#escape&gt;  
+</code></pre>
 <blockquote>
 <p>主要使用在相似的字符串变量输出，比如某一个模块的所有字符串输出都必须是html安全的，这个时候就可以使用该表达式<br>示例：</p>
 </blockquote>
@@ -2487,11 +2478,13 @@ $&#123;lastUpdated?string(&quot;EEEE, MMMM dd, yyyy, hh:mm:ss a &#39;(&#39;zzz&#
   First name: $&#123;firstName&#125;  
   &lt;#noescape&gt;Last name: $&#123;lastName&#125;&lt;/#noescape&gt;  
   Maiden name: $&#123;maidenName&#125;  
-&lt;/#escape&gt;  </code></pre>
+&lt;/#escape&gt;  
+</code></pre>
 <p>相同表达式</p>
 <pre><code class="c">First name: $&#123;firstName?html&#125;  
 Last name: $&#123;lastName &#125;  
-Maiden name: $&#123;maidenName?html&#125;  </code></pre>
+Maiden name: $&#123;maidenName?html&#125;  
+</code></pre>
 <h3 id="assign"><a href="#assign" class="headerlink" title="assign"></a>assign</h3><pre><code class="c">&lt;#assign name=value&gt;  
 
 &lt;#-- 或则 --&gt;  
@@ -2512,7 +2505,8 @@ Maiden name: $&#123;maidenName?html&#125;  </code></pre>
 
 &lt;#assign name in namespacehash&gt;  
   capture this  
-&lt;/#assign&gt;  </code></pre>
+&lt;/#assign&gt;  
+</code></pre>
 <blockquote>
 <p>生成变量,并且给变量赋值</p>
 </blockquote>
@@ -2522,11 +2516,13 @@ Maiden name: $&#123;maidenName?html&#125;  </code></pre>
 &lt;#--或则--&gt;  
 &lt;#global name&gt;  
   capture this  
-&lt;/#global&gt;  </code></pre>
+&lt;/#global&gt;  
+</code></pre>
 <blockquote>
 <p>全局赋值语法，利用这个语法给变量赋值，那么这个变量在所有的namespace [A1] 中是可见的, 如果这个变量被当前的assign 语法覆盖 如&lt;#global x=2&gt; &lt;#assign x=1&gt; 在当前页面里x=2 将被隐藏，或者通过${.global.x} 来访问</p>
 </blockquote>
-<h3 id="setting"><a href="#setting" class="headerlink" title="setting"></a>setting</h3><pre><code class="c">&lt;#setting name=value&gt;  </code></pre>
+<h3 id="setting"><a href="#setting" class="headerlink" title="setting"></a>setting</h3><pre><code class="c">&lt;#setting name=value&gt;  
+</code></pre>
 <blockquote>
 <p>用来设置整个系统的一个环境<br>locale<br>number_format<br>boolean_format<br>date_format , time_format , datetime_format<br>time_zone<br>classic_compatible</p>
 </blockquote>
@@ -2536,11 +2532,13 @@ Maiden name: $&#123;maidenName?html&#125;  </code></pre>
   ...  
   &lt;#return&gt;  
   ...  
-&lt;/#macro&gt;  </code></pre>
+&lt;/#macro&gt;  
+</code></pre>
 <h3 id="t-lt-rt"><a href="#t-lt-rt" class="headerlink" title="t, lt, rt"></a>t, lt, rt</h3><pre><code class="c">&lt;#t&gt; 去掉左右空白和回车换行  
 &lt;#lt&gt;去掉左边空白和回车换行  
 &lt;#rt&gt;去掉右边空白和回车换行  
-&lt;#nt&gt;取消上面的效果  </code></pre>
+&lt;#nt&gt;取消上面的效果  
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-01-20 09:46</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-01-20 09:46</time>
         
     </div>
     <div class="article-meta">
@@ -2403,7 +2386,8 @@
 <li>停止(进程收到SIGSTOP, SIGSTP, SIGTIN, SIGTOU信号后停止运行运行)</li>
 </ol>
 <p><strong>ps工具标识进程的5种状态码:</strong><br>D 不可中断 uninterruptible sleep (usually IO)<br>R 运行 runnable (on run queue)<br>S 中断 sleeping<br>T 停止 traced or stopped<br>Z 僵死 a defunct (”zombie”) process</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ ps [参数]</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ ps [参数]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>用来现实当前进程的状态</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2490,27 +2474,35 @@
 </tr>
 </tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示所有进程信息</strong></p>
-<pre><code class="bash">$ ps -A</code></pre>
+<pre><code class="bash">$ ps -A
+</code></pre>
 <p><strong><code>例二</code>：显示指定用户的进程信息</strong></p>
-<pre><code class="bash">$ ps -u faker</code></pre>
+<pre><code class="bash">$ ps -u faker
+</code></pre>
 <p><strong><code>例三</code>：显示所有进程信息，连同命令行</strong></p>
-<pre><code class="bash">$ ps -ef</code></pre>
+<pre><code class="bash">$ ps -ef
+</code></pre>
 <p><strong><code>例四</code>：ps 与grep 常用组合用法，查找特定进程</strong></p>
-<pre><code class="bash">$ ps -ef|grep ssh</code></pre>
+<pre><code class="bash">$ ps -ef|grep ssh
+</code></pre>
 <p><strong><code>例五</code>：将目前属于您自己这次登入的 PID 与相关信息列示出来</strong></p>
-<pre><code class="bash">$ ps -l</code></pre>
+<pre><code class="bash">$ ps -l
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>各相关信息的意义：<br>　　F 代表这个程序的旗标 (flag)， 4 代表使用者为 super user<br>　　S 代表这个程序的状态 (STAT)，关于各 STAT 的意义将在内文介绍<br>　　UID 程序被该 UID 所拥有<br>　　PID 就是这个程序的 ID ！<br>　　PPID 则是其上级父程序的ID<br>　　C CPU 使用的资源百分比<br>　　PRI 这个是 Priority (优先执行序) 的缩写，详细后面介绍<br>　　NI 这个是 Nice 值，在下一小节我们会持续介绍<br>　　ADDR 这个是 kernel function，指出该程序在内存的那个部分。如果是个 running的程序，一般就是 “-“<br>　　SZ 使用掉的内存大小<br>　　WCHAN 目前这个程序是否正在运作当中，若为 - 表示正在运作<br>　　TTY 登入者的终端机位置<br>　　TIME 使用掉的 CPU 时间。<br>　　CMD 所下达的指令为何<br>　　在预设的情况下， ps 仅会列出与目前所在的 bash shell 有关的 PID 而已，所以， 当我使用 ps -l 的时候，只有三个 PID。</p>
 </blockquote>
 <p><strong><code>例六</code>：列出目前所有的正在内存当中的程序</strong></p>
-<pre><code class="bash">$ ps aux</code></pre>
+<pre><code class="bash">$ ps aux
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　USER：该 process 属于那个使用者账号的<br>　　PID ：该 process 的号码<br>　　%CPU：该 process 使用掉的 CPU 资源百分比<br>　　%MEM：该 process 所占用的物理内存百分比<br>　　VSZ ：该 process 使用掉的虚拟内存量 (Kbytes)<br>　　RSS ：该 process 占用的固定的内存量 (Kbytes)<br>　　TTY ：该 process 是在那个终端机上面运作，若与终端机无关，则显示 ?，另外， tty1-tty6 是本机上面的登入者程序，若为 pts/0 等等的，则表示为由网络连接进主机的程序。<br>　　STAT：该程序目前的状态，主要的状态有<br>　　R ：该程序目前正在运作，或者是可被运作<br>　　S ：该程序目前正在睡眠当中 (可说是 idle 状态)，但可被某些讯号 (signal) 唤醒。<br>　　T ：该程序目前正在侦测或者是停止了<br>　　Z ：该程序应该已经终止，但是其父程序却无法正常的终止他，造成 zombie (疆尸) 程序的状态<br>　　START：该 process 被触发启动的时间<br>　　TIME ：该 process 实际使用 CPU 运作的时间<br>　　COMMAND：该程序的实际指令</p>
 </blockquote>
 <p><strong><code>例七</code>：列出类似程序树的程序显示</strong></p>
-<pre><code class="bash">$ ps -axjf</code></pre>
+<pre><code class="bash">$ ps -axjf
+</code></pre>
 <p><strong><code>例八</code>：找出与 cron 与 syslog 这两个服务有关的 PID 号码</strong></p>
-<pre><code class="bash">$ ps aux | egrep &#39;(cron|syslog)&#39;</code></pre>
+<pre><code class="bash">$ ps aux | egrep &#39;(cron|syslog)&#39;
+</code></pre>
 <p><strong><code>其他</code></strong></p>
 <pre><code class="bash"># 可以用 | 管道和 more 连接起来分页查看
 $ ps -aux |more
@@ -2519,7 +2511,8 @@ $ ps -aux |more
 $ ps -aux &gt; ps001.txt
 
 # 输出指定的字段
-$ ps -o pid,ppid,pgrp,session,tpgid,comm</code></pre>
+$ ps -o pid,ppid,pgrp,session,tpgid,comm
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

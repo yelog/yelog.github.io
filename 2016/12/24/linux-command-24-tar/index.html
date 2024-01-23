@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2016-12-24 10:24</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-12-24 10:24</time>
         
     </div>
     <div class="article-meta">
@@ -2396,7 +2379,8 @@
 <p>　　首先要弄清两个概念：打包和压缩。打包是指将一大堆文件或目录变成一个总的文件；压缩则是将一个大的文件通过一些压缩算法变成一个小文件。</p>
 <p>　　为什么要区分这两个概念呢？这源于Linux中很多压缩程序只能针对一个文件进行压缩，这样当你想要压缩一大堆文件时，你得先将这一大堆文件先打成一个包（tar命令），然后再用压缩程序进行压缩（gzip bzip2命令）。</p>
 <p>　　linux下最常用的打包程序就是tar了，使用tar程序打出来的包我们常称为tar包，tar包文件的命令通常都是以.tar结尾的。生成tar包后，就可以用其它的程序来进行压缩。</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ tar [必要参数] [选择参数] [文件]</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ tar [必要参数] [选择参数] [文件]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　用来压缩和解压文件。tar本身不具有压缩功能。他是调用压缩功能实现的</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><p><span><strong>必要参数</strong></span></p>
 <table>
@@ -2506,68 +2490,86 @@
 <h3 id="使常见解压-压缩命令"><a href="#使常见解压-压缩命令" class="headerlink" title="使常见解压/压缩命令"></a>使常见解压/压缩命令</h3><p><strong><code>例一</code>：.tar文件</strong></p>
 <pre><code class="bash">$ tar xvf FileName.tar # 解包
 $ tar cvf FileName.tar DirName # 打包
-# 注：tar是打包，不是压缩！</code></pre>
+# 注：tar是打包，不是压缩！
+</code></pre>
 <p><strong><code>例二</code>：.gz文件</strong></p>
 <pre><code class="bash"># 解压
 $ gunzip FileName.gz
 $ gzip -d FileName.gz
 
 # 压缩
-gzip FileName</code></pre>
+gzip FileName
+</code></pre>
 <p><strong><code>例三</code>：.tar.gz和.tgz文件</strong></p>
 <pre><code class="bash">$ tar xvf FileName.tar.gz # 解包
 $ tar cvf FileName.tar.gz DirName # 打包
-# 注：tar是打包，不是压缩！</code></pre>
+# 注：tar是打包，不是压缩！
+</code></pre>
 <p><strong><code>例四</code>：.bz2文件</strong></p>
 <pre><code class="bash"># 解压
 $ bzip2 -d FileName.bz2
 $ bunzip2 FileName.bz2
 # 压缩
-$ bzip2 -z FileName</code></pre>
+$ bzip2 -z FileName
+</code></pre>
 <p><strong><code>例五</code>：.tar.bz2文件</strong></p>
 <pre><code class="bash">$ tar jxvf FileName.tar.bz2 # 解压
-$ tar jcvf FileName.tar.bz2 DirName # 压缩</code></pre>
+$ tar jcvf FileName.tar.bz2 DirName # 压缩
+</code></pre>
 <p><strong><code>例六</code>：.bz文件</strong></p>
 <pre><code class="bash"># 解压
 $ bzip2 -d FileName.bz
-$ bunzip2 FileName.bz</code></pre>
+$ bunzip2 FileName.bz
+</code></pre>
 <p><strong><code>例七</code>：.tar.bz文件</strong></p>
-<pre><code class="bash">$ tar jxvf FileName.tar.bz # 解压</code></pre>
+<pre><code class="bash">$ tar jxvf FileName.tar.bz # 解压
+</code></pre>
 <p><strong><code>例八</code>：.Z文件</strong></p>
 <pre><code class="bash">$ uncompress FileName.Z # 解压
-$ compress FileName # 压缩</code></pre>
+$ compress FileName # 压缩
+</code></pre>
 <p><strong><code>例九</code>：.tar.Z文件</strong></p>
 <pre><code class="bash">$ tar Zxvf FileName.tar.Z # 解压
-$ tar Zcvf FileName.tar.Z DirName # 压缩</code></pre>
+$ tar Zcvf FileName.tar.Z DirName # 压缩
+</code></pre>
 <p><strong><code>例十</code>：.zip文件</strong></p>
 <pre><code class="bash">$ unzip FileName.zip # 解压
-$ zip FileName.zip DirName # 压缩</code></pre>
+$ zip FileName.zip DirName # 压缩
+</code></pre>
 <p><strong><code>例十一</code>：.rar文件</strong></p>
 <pre><code class="bash">$ rar x FileName.rar # 解压
-$ rar a FileName.rar DirName # 压缩</code></pre>
+$ rar a FileName.rar DirName # 压缩
+</code></pre>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：将文件全部打包成tar包</strong></p>
 <pre><code class="bash">$ tar -cvf log.tar log2012.log   # 仅打包，不压缩！
 $ tar -zcvf log.tar.gz log2012.log # 打包后，以 gzip 压缩
-$ tar -jcvf log.tar.bz2 log2012.log # 打包后，以 bzip2 压缩</code></pre>
+$ tar -jcvf log.tar.bz2 log2012.log # 打包后，以 bzip2 压缩
+</code></pre>
 <blockquote>
 <p>在参数 f 之后的文件档名是自己取的，我们习惯上都用 .tar 来作为辨识。 如果加 z 参数，则以 .tar.gz 或 .tgz 来代表 gzip 压缩过的 tar包； 如果加 j 参数，则以 .tar.bz2 来作为tar包名。</p>
 </blockquote>
 <p><strong><code>例二</code>：查阅上述 tar包内有哪些文件</strong></p>
 <pre><code class="bash">$ tar -ztvf log.tar.gz
-# 由于我们使用 gzip 压缩的log.tar.gz，所以要查阅log.tar.gz包内的文件时，就得要加上 z 这个参数了</code></pre>
+# 由于我们使用 gzip 压缩的log.tar.gz，所以要查阅log.tar.gz包内的文件时，就得要加上 z 这个参数了
+</code></pre>
 <p><strong><code>例三</code>：将tar 包解压缩</strong></p>
 <pre><code class="bash">$ tar -zxvf /opt/soft/test/log.tar.gz
-# 在预设的情况下，我们可以将压缩档在任何地方解开的</code></pre>
+# 在预设的情况下，我们可以将压缩档在任何地方解开的
+</code></pre>
 <p><strong><code>例四</code>：只将 /tar 内的 部分文件解压出来</strong></p>
 <pre><code class="bash">$ tar -zxvf /opt/soft/test/log30.tar.gz log2013.log
-# 我可以透过 tar -ztvf 来查阅 tar 包内的文件名称，如果单只要一个文件，就可以透过这个方式来解压部分文件！</code></pre>
+# 我可以透过 tar -ztvf 来查阅 tar 包内的文件名称，如果单只要一个文件，就可以透过这个方式来解压部分文件！
+</code></pre>
 <p><strong><code>例五</code>：文件备份下来，并且保存其权限</strong></p>
 <pre><code class="bash">$ tar -zcvpf log31.tar.gz log2014.log log2015.log log2016.log
-# 这个 -p 的属性是很重要的，尤其是当您要保留原本文件的属性时</code></pre>
+# 这个 -p 的属性是很重要的，尤其是当您要保留原本文件的属性时
+</code></pre>
 <p><strong><code>例六</code>：在 文件夹当中，比某个日期新的文件才备份</strong></p>
-<pre><code class="bash">$ tar -N &quot;2012/11/13&quot; -zcvf log17.tar.gz test</code></pre>
+<pre><code class="bash">$ tar -N &quot;2012/11/13&quot; -zcvf log17.tar.gz test
+</code></pre>
 <p><strong><code>例七</code>：备份文件夹内容是排除部分文件</strong></p>
-<pre><code class="bash">$ tar --exclude scf/service -zcvf scf.tar.gz scf/*</code></pre>
+<pre><code class="bash">$ tar --exclude scf/service -zcvf scf.tar.gz scf/*
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

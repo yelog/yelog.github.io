@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-09-25 19:15</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-09-25 19:15</time>
         
     </div>
     <div class="article-meta">
@@ -2430,7 +2413,8 @@ UTF-8
 0080 - 07FF
 110xxxxx 10xxxxxx
 0800 - FFFF
-1110xxxx 10xxxxxx 10xxxxxx</code></pre>
+1110xxxx 10xxxxxx 10xxxxxx
+</code></pre>
 <p>例如”汉”字的Unicode编码是6C49。6C49在0800-FFFF之间，所以要用3字节模板：1110xxxx 10xxxxxx 10xxxxxx。将6C49写成二进制是：0110 1100 0100 1001，将这个比特流按三字节模板的分段方法分为0110 110001 001001，依次代替模板中的x，得到：1110-0110 10-110001 10-001001，即E6 B1 89，这就是其UTF8的编码。</p>
 <p>讲到这里，我们再顺便说说一个很著名的奇怪现象：当你在 windows 的记事本里新建一个文件，输入”联通”两个字之后，保存，关闭，然后再次打开，你会发现这两个字已经消失了，代之的是几个乱码！呵呵，有人说这就是联通之所以拼不过移动的原因。</p>
 <p>其实这是因为GB2312编码与UTF8编码产生了编码冲撞的原因。</p>
@@ -2441,12 +2425,14 @@ UTF-8
 FF FE UTF-16/UCS-2, little endian
 FE FF UTF-16/UCS-2, big endian
 FF FE 00 00 UTF-32/UCS-4, little endian.
-00 00 FE FF UTF-32/UCS-4, big-endian.</code></pre>
+00 00 FE FF UTF-32/UCS-4, big-endian.
+</code></pre>
 <p>当你新建一个文本文件时，记事本的编码默认是ANSI（代表系统默认编码，在中文系统中一般是GB系列编码）, 如果你在ANSI的编码输入汉字，那么他实际就是GB系列的编码方式，在这种编码下，”联通”的内码是：</p>
 <pre><code class="xml">c1 1100 0001
 aa 1010 1010
 cd 1100 1101
-a8 1010 1000</code></pre>
+a8 1010 1000
+</code></pre>
 <p>注意到了吗？第一二个字节、第三四个字节的起始部分的都是”110”和”10”，正好与UTF8规则里的两字节模板是一致的，</p>
 <p>于是当我们再次打开记事本时，记事本就误认为这是一个UTF8编码的文件，让我们把第一个字节的110和第二个字节的10去掉，我们就得到了”00001 101010”，再把各位对齐，补上前导的0，就得到了”0000 0000 0110 1010”，不好意思，这是UNICODE的006A，也就是小写的字母”j”，而之后的两字节用UTF8解码之后是0368，这个字符什么也不是。这就是只有”联通”两个字的文件没有办法在记事本里正常显示的原因。</p>
 <p>而如果你在”联通”之后多输入几个字，其他的字的编码不见得又恰好是110和10开始的字节，这样再次打开时，记事本就不会坚持这是一个utf8编码的文件，而会用ANSI的方式解读之，这时乱码又不出现了。</p>

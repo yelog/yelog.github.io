@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:49'>2017-02-08 20:18</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-02-08 20:18</time>
         
     </div>
     <div class="article-meta">
@@ -2404,10 +2387,12 @@
 <p>好了，开始操作。</p>
 <h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p>第一步：引入jQuery和jQuery.pjax</p>
 <pre><code class="html">&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
 <p>第二步：将指定的a的链接，转为pjax风格</p>
 <pre><code class="javascript">/*将#menu中的a的链接的页面，只取回class=pjax元素中的内容，替换掉当前页面class=pjax元素中的内容*/
-$(document).pjax(&#39;.#menu a&#39;, &#39;.pjax&#39;, &#123;fragment:&#39;.pjax&#39;, timeout:8000&#125;);</code></pre>
+$(document).pjax(&#39;.#menu a&#39;, &#39;.pjax&#39;, &#123;fragment:&#39;.pjax&#39;, timeout:8000&#125;);
+</code></pre>
 <p>第三步：如果需要在请求的过程中做一些自定义的事件，可以使用下面的方法</p>
 <pre><code class="javascript">$(document).on(&#123;
   &#39;pjax:click&#39;: function() &#123;
@@ -2419,10 +2404,12 @@ $(document).pjax(&#39;.#menu a&#39;, &#39;.pjax&#39;, &#123;fragment:&#39;.pjax&
   &#39;pjax:end&#39;: function() &#123;
     //当请求完成后，需要触发的事件写在这里
   &#125;
-&#125;);</code></pre>
+&#125;);
+</code></pre>
 <p>结束。</p>
 <h2 id="详细文档"><a href="#详细文档" class="headerlink" title="详细文档"></a>详细文档</h2><p>翻译于官方</p>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><pre><code class="javascript">$(document).pjax(selector, [container], options)</code></pre>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><pre><code class="javascript">$(document).pjax(selector, [container], options)
+</code></pre>
 <ol>
 <li><code>selector</code> 触发点击事件的选择器，String类型</li>
 <li><code>container</code> 一个选择器，为唯一的pjax容器</li>

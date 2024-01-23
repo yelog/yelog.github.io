@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2016-12-07 15:55</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-12-07 15:55</time>
         
     </div>
     <div class="article-meta">
@@ -2391,7 +2374,8 @@
       
         <p>　　mv命令是move的缩写，可以用来移动文件或者将文件改名（move (rename) files），是Linux系统下常用的命令，经常用来备份文件或者目录</p>
 <span id="more"></span>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ mv [选项] 源文件或目录 目标文件或目录</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ mv [选项] 源文件或目录 目标文件或目录
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　视mv命令中第二个参数类型的不同（是目标文件还是目标目录），mv命令将文件重命名或将其移至一个新的目录中。当第二个参数类型是文件时，mv命令完成文件重命名，此时，源文件只能有一个（也可以是源目录名），它将所给的源文件或目录重命名为给定的目标文件名。当第二个参数是已存在的目录名称时，源文件或目录参数可以有多个，mv命令将各参数指定的源文件均移至目标目录中。在跨文件系统移动文件时，mv先拷贝，再将原有文件删除，而链至该文件的链接也将丢失。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2422,24 +2406,32 @@
 </tr>
 </tbody></table>
 <h3 id="命令实例"><a href="#命令实例" class="headerlink" title="命令实例"></a>命令实例</h3><p><strong><code>例一</code>：文件改名</strong></p>
-<pre><code class="bash">$ mv test.txt test1.txt</code></pre>
+<pre><code class="bash">$ mv test.txt test1.txt
+</code></pre>
 <p><strong><code>例二</code>：移动文件</strong></p>
 <pre><code class="bash">#将文件test.txt 移动到/usr/doc目录下
-$ mv test.txt /usr/doc</code></pre>
+$ mv test.txt /usr/doc
+</code></pre>
 <p><strong><code>例三</code>：将文件log1.txt,log2.txt,log3.txt移动到目录/usr/doc中</strong></p>
 <pre><code class="bash">$ mv log1.txt log2.txt log3.txt /usr/doc
-$ mv -t /usr/doc log1.txt log2.txt log3.txt</code></pre>
+$ mv -t /usr/doc log1.txt log2.txt log3.txt
+</code></pre>
 <p><strong><code>例四</code>：将文件file1改名为file2，如果file2已经存在，则询问是否覆盖</strong></p>
-<pre><code class="bash">$ mv -i log1.txt log2.txt</code></pre>
+<pre><code class="bash">$ mv -i log1.txt log2.txt
+</code></pre>
 <p><strong><code>例五</code>：将文件file1改名为file2，即使file2存在，也是直接覆盖掉</strong></p>
-<pre><code class="bash">$ mv -f log3.txt log2.txt</code></pre>
+<pre><code class="bash">$ mv -f log3.txt log2.txt
+</code></pre>
 <p><strong><code>例六</code>：目录的移动</strong></p>
 <pre><code class="bash">#将doc下的product目录移动到/usr/doc目录下
-$ mv doc/product /usr/doc</code></pre>
+$ mv doc/product /usr/doc
+</code></pre>
 <p><strong><code>例七</code>：移动当前文件夹下的所有文件到上一级目录</strong></p>
-<pre><code class="bash">$ mv * ../</code></pre>
+<pre><code class="bash">$ mv * ../
+</code></pre>
 <p><strong><code>例八</code>：文件被覆盖前做简单备份，前面加参数-b</strong></p>
-<pre><code class="bash">$ mv log1.txt -b log2.txt</code></pre>
+<pre><code class="bash">$ mv log1.txt -b log2.txt
+</code></pre>
 <blockquote>
 <p>-b不接受参数，mv会去读取环境变量VERSION_CONTROL来作为备份策略。<br>–backup该选项指定如果目标文件存在时的动作，共有四种备份策略：</p>
 </blockquote>

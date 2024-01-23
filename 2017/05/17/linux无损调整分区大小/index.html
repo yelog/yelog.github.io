@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-05-17 22:00</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-05-17 22:00</time>
         
     </div>
     <div class="article-meta">
@@ -2408,7 +2391,8 @@ $ lvreduce -L 200G /dev/centos/home
 $ lvextend -l +100%FREE /dev/centos/root
 
 # 使用XFS文件系统自带的命令集增加分区空间
-$ xfs_growfs /dev/mapper/centos-root</code></pre>
+$ xfs_growfs /dev/mapper/centos-root
+</code></pre>
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="situation"><a href="#situation" class="headerlink" title="situation"></a>situation</h3><p>挂载在根目录的分区 <code>/dev/mapper/centos-root</code> 爆满，占用100%</p>
 <pre><code class="bash">$ df -h
 Filesystem               Size  Used Avail Use% Mounted on
@@ -2419,7 +2403,8 @@ tmpfs                     32G  2.5G   29G   8% /run
 tmpfs                     32G     0   32G   0% /sys/fs/cgroup
 /dev/mapper/centos-home  476G   33M  476G   1% /home
 /dev/sda1                497M  238M  259M  48% /boot
-tmpfs                    6.3G     0  6.3G   0% /run/user/0</code></pre>
+tmpfs                    6.3G     0  6.3G   0% /run/user/0
+</code></pre>
 <h3 id="analyze"><a href="#analyze" class="headerlink" title="analyze"></a>analyze</h3><p>挂载在根目录的分区空间太小，只有50G，而服务器 <code>home</code> 目录为非常用目录，挂在了近500G的空间。</p>
 <p>思路：从 <code>centos-home</code> 分区划出300G空间到 <code>centos-root</code> 分区。</p>
 <h3 id="operation"><a href="#operation" class="headerlink" title="operation"></a>operation</h3><h4 id="1-查看各分区信息"><a href="#1-查看各分区信息" class="headerlink" title="1.查看各分区信息"></a>1.查看各分区信息</h4><pre><code class="bash">$ lvdisplay
@@ -2455,7 +2440,8 @@ Segments               1
 Allocation             inherit
 Read ahead sectors     auto
 - currently set to     256
-Block device           253:0</code></pre>
+Block device           253:0
+</code></pre>
 <h4 id="2-减少-home分区空间"><a href="#2-减少-home分区空间" class="headerlink" title="2.减少/home分区空间"></a>2.减少/home分区空间</h4><pre><code class="bash"># 释放 /dev/centos/home 分区 300G 的空间
 # 命令设置 /dev/centos/home 分区 200G空间
 $ lvreduce -L 200G /dev/centos/home
@@ -2463,10 +2449,12 @@ WARNING: Reducing active logical volume to 200.00 GiB.
  THIS MAY DESTROY YOUR DATA (filesystem etc.)
 Do you really want to reduce centos/home? [y/n]: y
  Size of logical volume centos/home changed from 475.70 GiB (121778 extents) to 200.00 GiB (51200 extents).
- Logical volume centos/home successfully resized.</code></pre>
+ Logical volume centos/home successfully resized.
+</code></pre>
 <h4 id="3-增加-root分区空间"><a href="#3-增加-root分区空间" class="headerlink" title="3.增加/root分区空间"></a>3.增加/root分区空间</h4><pre><code class="bash">$ lvextend -l +100%FREE /dev/centos/root
 Size of logical volume centos/root changed from 50.06 GiB (12816 extents) to 325.76 GiB (83394 extents).
-Logical volume centos/root successfully resized.</code></pre>
+Logical volume centos/root successfully resized.
+</code></pre>
 <h4 id="4-扩展XFS文件空间大小"><a href="#4-扩展XFS文件空间大小" class="headerlink" title="4.扩展XFS文件空间大小"></a>4.扩展XFS文件空间大小</h4><pre><code class="bash">$ xfs_growfs /dev/mapper/centos-root
 meta-data=/dev/mapper/centos-root isize=256    agcount=4, agsize=3276800 blks
          =                       sectsz=512   attr=2, projid32bit=1
@@ -2477,7 +2465,8 @@ naming   =version 2              bsize=4096   ascii-ci=0 ftype=0
 log      =internal               bsize=4096   blocks=6400, version=2
          =                       sectsz=512   sunit=0 blks, lazy-count=1
 realtime =none                   extsz=4096   blocks=0, rtextents=0
-data blocks changed from 13107200 to 85395456</code></pre>
+data blocks changed from 13107200 to 85395456
+</code></pre>
 <p>完成</p>
 
       

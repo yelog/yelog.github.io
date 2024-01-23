@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:49'>2017-06-01 19:45</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:11'>2017-06-01 19:45</time>
         
     </div>
     <div class="article-meta">
@@ -2402,7 +2385,8 @@ then
     fi
 else
     echo -e &quot;\033[37m 缺少关键词，通过&#39;pay help&#39;查看帮助信息 \033[0m&quot;
-fi</code></pre>
+fi
+</code></pre>
 <p>却出现了错乱,如下图所示<br><img src="http://img.saodiyang.com/FoIefs-sorNDjfPD69gH05is3tc5.png" alt="缩进乱掉"></p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>vim 没有相应的程序来处理这个从其他应用复制粘贴的过程，所以Vim通过插入键盘输入的buffer来模拟这个粘贴的过程，这个时候Vim会以为这是用户输入的。</p>
 <p>所以问题是：当上一行结束，光标进入下一行时Vim会自动以上一行的的缩进为初始位置。这样就会破坏原始文件的缩进。</p>
@@ -2411,7 +2395,8 @@ fi</code></pre>
 :set paste
 
 # 退出 paste 模式
-:set nopaste</code></pre>
+:set nopaste
+</code></pre>
 <p><img src="http://img.saodiyang.com/FpHOECFUPpgkJBKhKE_wcRYvPJ81.png" alt="缩进正常"></p>
 <p>如果不想每次都执行这个命令，可以在 <code>～/.vimrc</code> 中添加一行配置 <code>set pastetoggle=&lt;F12&gt;</code> ，这样就可以通过F12快速在paste模式中切换。</p>
 

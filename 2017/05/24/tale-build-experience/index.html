@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:49'>2017-05-24 11:29</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-05-24 11:29</time>
         
     </div>
     <div class="article-meta">
@@ -2397,17 +2380,20 @@
 <pre><code class="bash"># 下载官方Dockerfile
 $ git clone https://github.com/otale/tale-docker.git
 # 构建 tale 镜像
-$ docker build -t tale:1.0 .</code></pre>
+$ docker build -t tale:1.0 .
+</code></pre>
 <h3 id="下载tale博客文件"><a href="#下载tale博客文件" class="headerlink" title="下载tale博客文件"></a>下载tale博客文件</h3><pre><code class="bash"># 下载压缩包
 $ sudo wget http://7xls9k.dl1.z0.glb.clouddn.com/tale.zip
 
 # 讲解压出来的文件夹移入home目录
 $ unzip tale.zip
-$ mv tale /home</code></pre>
+$ mv tale /home
+</code></pre>
 <h3 id="构建tale镜像"><a href="#构建tale镜像" class="headerlink" title="构建tale镜像"></a>构建tale镜像</h3><pre><code class="bash">docker run -d --privileged --hostname tale --name tale \
 -v /etc/localtime:/etc/localtime:ro \
 -v /home/tale:/var/tale_home -p 80:9000 \
--m 1024m --memory-swap -1 tale:1.0</code></pre>
+-m 1024m --memory-swap -1 tale:1.0
+</code></pre>
 <h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>浏览器进入 <code>127.0.0.1</code> 即可访问<br><img src="http://img.saodiyang.com/FtwT7OgspZR3YjpJhH5VSuUmnLjP.png" alt="管理后台"><br><img src="http://img.saodiyang.com/FnFBhuwvQ4atG2F2ahdj5PSFF3eL.png" alt="首页"><br><img src="http://img.saodiyang.com/Fg1891hUmEATDbFDBgdBsncb4U1U.png" alt="文章"></p>
 <h2 id="体验"><a href="#体验" class="headerlink" title="体验"></a>体验</h2><h3 id="管理后台"><a href="#管理后台" class="headerlink" title="管理后台"></a>管理后台</h3><ol>
 <li>文章支持Markdown和富文本。</li>

@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-03-17 14:02</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-03-17 14:02</time>
         
     </div>
     <div class="article-meta">
@@ -2397,7 +2380,8 @@
 <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>1).下载：从官网下载windows版本的git,地址在下方。<br><a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a><br>2).安装：双击安装，一直点击下一步即可</p>
 <h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>1).下载：从官网下载windows版本的node.js安装包（.msi后缀），地址下方<br><a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a><br>2).安装：双击安装，一直点击下一步即可</p>
 <h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>在任意目录如桌面，点击鼠标右键，选择Git Bash Here这一项，打开git bash命令框（前提是git安装成功），如下图<br><img src="http://img.saodiyang.com/FraxkCebAzx-dlPGsUmgcLZRR_Lj.png" alt="鼠标右键"><br>在打开的命令窗内输入下面的命令进行安装</p>
-<pre><code class="bash">npm install hexo-cli -g</code></pre>
+<pre><code class="bash">npm install hexo-cli -g
+</code></pre>
 <p>安装过后，输入 <code>hexo -v</code>，出现下面信息，则表示安装成功</p>
 <pre><code class="bash">$ hexo -v
 hexo-cli: 1.0.2
@@ -2410,17 +2394,21 @@ zlib: 1.2.8
 ares: 1.10.1-DEV
 icu: 58.2
 modules: 48
-openssl: 1.0.2k</code></pre>
+openssl: 1.0.2k
+</code></pre>
 <h2 id="初始化blog"><a href="#初始化blog" class="headerlink" title="初始化blog"></a>初始化blog</h2><p>进入准备创建blog的目录，同样点击鼠标右键，打开git bash命令框，<br>执行一下命令进行初始化</p>
-<pre><code class="bash">$ hexo init myblog</code></pre>
+<pre><code class="bash">$ hexo init myblog
+</code></pre>
 <p>就会自动创建一个名字为myblog目录，这时本地blog就已经创建好了。<br>进入blog目录，启动 blog</p>
 <pre><code class="bash">$ cd myblog
-$ hexo server</code></pre>
+$ hexo server
+</code></pre>
 <p>在浏览器输入 <code>127.0.0.1:4000</code>就可以访问到刚刚创建好的blog了。</p>
 <h2 id="换皮肤"><a href="#换皮肤" class="headerlink" title="换皮肤"></a>换皮肤</h2><p>如果觉的自带的皮肤太难看。可以根据以下步奏更换皮肤<br>在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">官网</a> 可以查看各种各样的皮肤，挑选自己喜欢的皮肤</p>
 <p>这里以 <code>3-hexo</code> 这款皮肤为例（这款皮肤是笔者写的，效果可查看 <a href="http://yelog.org/">yelog.org</a>）<br>1）进入皮肤的 <code>github</code> 官网，如<a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo">3-hexo</a>的网址<br>找到 <code>clone or download</code> ,复制它的url：<a target="_blank" rel="noopener" href="https://github.com/yelog/hexo-theme-3-hexo.git">https://github.com/yelog/hexo-theme-3-hexo.git</a></p>
 <p>2）进入 <code>myblog</code> 目录，打开 <code>git bash</code> 命令框，执行以下命令将皮肤下载到themes目录下</p>
-<pre><code class="bash">$ git clone https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo</code></pre>
+<pre><code class="bash">$ git clone https://github.com/yelog/hexo-theme-3-hexo.git themes/3-hexo
+</code></pre>
 <ol start="3">
 <li>修改 <code>myblog/_config.yml</code> 中的 <code>theme: landscape</code> 为 <code>theme: 3-hexo</code></li>
 </ol>
@@ -2429,7 +2417,8 @@ $ hexo server</code></pre>
 </blockquote>
 <ol start="4">
 <li><p>重新渲染，启动服务器</p>
-<pre><code class="bash">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code></pre>
+<pre><code class="bash">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
+</code></pre>
 </li>
 <li><p>打开浏览器查看效果，换肤成功</p>
 </li>
@@ -2445,7 +2434,8 @@ $ hexo clean
 $ hexo g
 
 # 启动hexo
-$ hexo s</code></pre>
+$ hexo s
+</code></pre>
 <h2 id="发布到网上"><a href="#发布到网上" class="headerlink" title="发布到网上"></a>发布到网上</h2><p>如果想要在github上搭建blog，或者在自己的购买的服务器上搭建blog<br>可以查看笔者的往期文章</p>
 <p>今天的教程就到这里，有什么问题可以在评论区交流。</p>
 

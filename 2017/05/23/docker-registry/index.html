@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:49'>2017-05-23 21:15</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:11'>2017-05-23 21:15</time>
         
     </div>
     <div class="article-meta">
@@ -2402,7 +2385,8 @@ tianon/centos                                   CentOS 5 and 6, created using ri
 blalor/centos                                   Bare-bones base CentOS 6.5 image                6                    [OK]
 saltstack/centos-6-minimal                                                                      6                    [OK]
 tutum/centos-6.4                                DEPRECATED. Use tutum/centos:6.4 instead. ...   5                    [OK]
-...</code></pre>
+...
+</code></pre>
 <p>可以看到返回了很多包含关键字的镜像，其中包括镜像名字、描述、星级（表示该镜像的受欢迎程度）、是否官方创建、是否自动创建。 官方的镜像说明是官方项目组创建和维护的，automated 资源允许用户验证镜像的来源和内容。</p>
 <p>根据是否是官方提供，可将镜像资源分为两类。 一种是类似 centos 这样的基础镜像，被称为基础或根镜像。这些基础镜像是由 Docker 公司创建、验证、支持、提供。这样的镜像往往使用单个单词作为名字。 还有一种类型，比如 tianon/centos 镜像，它是由 Docker 的用户创建并维护的，往往带有用户名称前缀。可以通过前缀 user_name/ 来指定使用某个用户提供的镜像，比如 tianon 用户。</p>
 <p>另外，在查找的时候通过 -s N 参数可以指定仅显示评价为 N 星以上的镜像。</p>
@@ -2412,10 +2396,12 @@ Pulling repository centos
 0b443ba03958: Download complete
 539c0211cd76: Download complete
 511136ea3c5a: Download complete
-7064731afe90: Download complete</code></pre>
+7064731afe90: Download complete
+</code></pre>
 <p>用户也可以在登录后通过 docker push 命令来将镜像推送到 Docker Hub。</p>
 <h2 id="私有仓库"><a href="#私有仓库" class="headerlink" title="私有仓库"></a>私有仓库</h2><h3 id="安装-docker-registry"><a href="#安装-docker-registry" class="headerlink" title="安装 docker-registry"></a>安装 docker-registry</h3><h4 id="容器运行"><a href="#容器运行" class="headerlink" title="容器运行"></a>容器运行</h4><p>在安装了 Docker 后，可以通过获取官方 registry 镜像来运行。</p>
-<pre><code class="bash">$ sudo docker run -d -p 5000:5000 registry</code></pre>
+<pre><code class="bash">$ sudo docker run -d -p 5000:5000 registry
+</code></pre>
 <p>这将使用官方的 registry 镜像来启动本地的私有仓库。 用户可以通过指定参数来配置私有仓库位置，例如配置镜像存储到 Amazon S3 服务。</p>
 <pre><code>$ sudo docker run \
          -e SETTINGS_FLAVOR=s3 \
@@ -2425,28 +2411,37 @@ Pulling repository centos
          -e AWS_SECRET=xdDowwlK7TJajV1Y7EoOZrmuPEJlHYcNP2k4j49T \
          -e SEARCH_BACKEND=sqlalchemy \
          -p 5000:5000 \
-         registry</code></pre>
+         registry
+</code></pre>
 <p>此外，还可以指定本地路径（如 /home/user/registry-conf ）下的配置文件。</p>
-<pre><code class="bash">$ sudo docker run -d -p 5000:5000 -v /home/user/registry-conf:/registry-conf -e DOCKER_REGISTRY_CONFIG=/registry-conf/config.yml registry</code></pre>
+<pre><code class="bash">$ sudo docker run -d -p 5000:5000 -v /home/user/registry-conf:/registry-conf -e DOCKER_REGISTRY_CONFIG=/registry-conf/config.yml registry
+</code></pre>
 <p>默认情况下，仓库会被创建在容器的 /tmp/registry 下。可以通过 -v 参数来将镜像文件存放在本地的指定路径。 例如下面的例子将上传的镜像放到 /opt/data/registry 目录。</p>
-<pre><code class="bash">$ sudo docker run -d -p 5000:5000 -v /opt/data/registry:/tmp/registry registry</code></pre>
+<pre><code class="bash">$ sudo docker run -d -p 5000:5000 -v /opt/data/registry:/tmp/registry registry
+</code></pre>
 <h4 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h4><p>对于 Ubuntu 或 CentOS 等发行版，可以直接通过源安装。<br>1.Ubuntu</p>
 <pre><code class="bash">$ sudo apt-get install -y build-essential python-dev libevent-dev python-pip liblzma-dev
-$ sudo pip install docker-registry</code></pre>
+$ sudo pip install docker-registry
+</code></pre>
 <p>2.CentOS</p>
 <pre><code class="bash">$ sudo yum install -y python-devel libevent-devel python-pip gcc xz-devel
-$ sudo python-pip install docker-registry</code></pre>
+$ sudo python-pip install docker-registry
+</code></pre>
 <p>3.源码安装</p>
 <pre><code class="bash">$ sudo apt-get install build-essential python-dev libevent-dev python-pip libssl-dev liblzma-dev libffi-dev
 $ git clone https://github.com/docker/docker-registry.git
 $ cd docker-registry
-$ sudo python setup.py install</code></pre>
+$ sudo python setup.py install
+</code></pre>
 <p>然后修改配置文件，主要修改 dev 模板段的 storage_path 到本地的存储仓库的路径。</p>
-<pre><code class="bash">$ cp config/config_sample.yml config/config.yml</code></pre>
+<pre><code class="bash">$ cp config/config_sample.yml config/config.yml
+</code></pre>
 <p>之后启动 Web 服务。</p>
-<pre><code class="bash">$ sudo gunicorn -c contrib/gunicorn.py docker_registry.wsgi:application</code></pre>
+<pre><code class="bash">$ sudo gunicorn -c contrib/gunicorn.py docker_registry.wsgi:application
+</code></pre>
 <p>或者</p>
-<pre><code class="bash">$ sudo gunicorn --access-logfile - --error-logfile - -k gevent -b 0.0.0.0:5000 -w 4 --max-requests 100 docker_registry.wsgi:application</code></pre>
+<pre><code class="bash">$ sudo gunicorn --access-logfile - --error-logfile - -k gevent -b 0.0.0.0:5000 -w 4 --max-requests 100 docker_registry.wsgi:application
+</code></pre>
 <p>此时使用 curl 访问本地的 5000 端口，看到输出 docker-registry 的版本信息说明运行成功。</p>
 <blockquote>
 <p><em>注：config/config_sample.yml 文件是示例配置文件。</em></p>
@@ -2456,14 +2451,16 @@ $ sudo python setup.py install</code></pre>
 <pre><code class="bash">$ sudo docker images
 REPOSITORY                        TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 ubuntu                            latest              ba5877dc9bec        6 weeks ago         192.7 MB
-ubuntu                            14.04               ba5877dc9bec        6 weeks ago         192.7 MB</code></pre>
+ubuntu                            14.04               ba5877dc9bec        6 weeks ago         192.7 MB
+</code></pre>
 <p>使用docker tag 将 ba58 这个镜像标记为 192.168.7.26:5000/test（格式为 docker tag IMAGE[:TAG] [REGISTRYHOST/][USERNAME/]NAME[:TAG]）。</p>
 <pre><code class="bash">$ sudo docker tag ba58 192.168.7.26:5000/test
 root ~ # docker images
 REPOSITORY                        TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 ubuntu                            14.04               ba5877dc9bec        6 weeks ago         192.7 MB
 ubuntu                            latest              ba5877dc9bec        6 weeks ago         192.7 MB
-192.168.7.26:5000/test            latest              ba5877dc9bec        6 weeks ago         192.7 MB</code></pre>
+192.168.7.26:5000/test            latest              ba5877dc9bec        6 weeks ago         192.7 MB
+</code></pre>
 <p>使用 docker push 上传标记的镜像。</p>
 <pre><code class="bash">$ sudo docker push 192.168.7.26:5000/test
 The push refers to a repository [192.168.7.26:5000/test] (len: 1)
@@ -2475,10 +2472,12 @@ Image 25f11f5fb0cb already pushed, skipping
 Image ebc34468f71d already pushed, skipping
 Image 2318d26665ef already pushed, skipping
 Image ba5877dc9bec already pushed, skipping
-Pushing tag for rev [ba5877dc9bec] on &#123;http://192.168.7.26:5000/v1/repositories/test/tags/latest&#125;</code></pre>
+Pushing tag for rev [ba5877dc9bec] on &#123;http://192.168.7.26:5000/v1/repositories/test/tags/latest&#125;
+</code></pre>
 <p>用 curl 查看仓库中的镜像。</p>
 <pre><code class="bash">$ curl http://192.168.7.26:5000/v1/search
-&#123;&quot;num_results&quot;: 7, &quot;query&quot;: &quot;&quot;, &quot;results&quot;: [&#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/miaxis_j2ee&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/tomcat&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/ubuntu&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/ubuntu_office&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/desktop_ubu&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;dockerfile/ubuntu&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/test&quot;&#125;]&#125;</code></pre>
+&#123;&quot;num_results&quot;: 7, &quot;query&quot;: &quot;&quot;, &quot;results&quot;: [&#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/miaxis_j2ee&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/tomcat&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/ubuntu&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/ubuntu_office&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/desktop_ubu&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;dockerfile/ubuntu&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/test&quot;&#125;]&#125;
+</code></pre>
 <p>这里可以看到 {“description”: “”, “name”: “library/test”}，表明镜像已经被成功上传了。</p>
 <p>现在可以到另外一台机器去下载这个镜像。</p>
 <pre><code class="bash">$ sudo docker pull 192.168.7.26:5000/test
@@ -2491,7 +2490,8 @@ ebc34468f71d: Download complete
 2318d26665ef: Download complete
 $ sudo docker images
 REPOSITORY                         TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-192.168.7.26:5000/test             latest              ba5877dc9bec        6 weeks ago         192.7 MB</code></pre>
+192.168.7.26:5000/test             latest              ba5877dc9bec        6 weeks ago         192.7 MB
+</code></pre>
 <p>可以使用 <a target="_blank" rel="noopener" href="https://github.com/yeasy/docker_practice/raw/master/_local/push_images.sh">这个脚本</a> 批量上传本地的镜像到注册服务器中，默认是本地注册服务器 127.0.0.1:5000。例如：</p>
 <pre><code class="bash">$ wget https://github.com/yeasy/docker_practice/raw/master/_local/push_images.sh; sudo chmod a+x push_images.sh
 $ ./push_images.sh ubuntu:latest centos:centos7
@@ -2519,7 +2519,8 @@ Image 511136ea3c5a already pushed, skipping
 70214e5d0a90: Image successfully pushed
 Pushing tag for rev [70214e5d0a90] on &#123;http://127.0.0.1:5000/v1/repositories/centos/tags/centos7&#125;
 Untagged: 127.0.0.1:5000/centos:centos7
-Done</code></pre>
+Done
+</code></pre>
 <h2 id="仓库配置文件"><a href="#仓库配置文件" class="headerlink" title="仓库配置文件"></a>仓库配置文件</h2><p>Docker 的 Registry 利用配置文件提供了一些仓库的模板（flavor），用户可以直接使用它们来进行开发或生产部署。</p>
 <h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h3><p>在 config_sample.yml 文件中，可以看到一些现成的模板段：</p>
 <ul>
@@ -2537,7 +2538,8 @@ Done</code></pre>
 </ul>
 <p>用户也可以添加自定义的模版段。</p>
 <p>默认情况下使用的模板是 dev，要使用某个模板作为默认值，可以添加 SETTINGS_FLAVOR 到环境变量中，例如</p>
-<pre><code>export SETTINGS_FLAVOR=dev</code></pre>
+<pre><code>export SETTINGS_FLAVOR=dev
+</code></pre>
 <p>另外，配置文件中支持从环境变量中加载值，语法格式为 <code>_env:VARIABLENAME[:DEFAULT]</code>。</p>
 <h3 id="示例配置"><a href="#示例配置" class="headerlink" title="示例配置"></a>示例配置</h3><pre><code>common:
     loglevel: info
@@ -2564,7 +2566,8 @@ dev:
 
 test:
     storage: local
-    storage_path: /tmp/tmpdockertmp</code></pre>
+    storage_path: /tmp/tmpdockertmp
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

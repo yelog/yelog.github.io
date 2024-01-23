@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:49'>2016-11-22 17:11</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-11-22 17:11</time>
         
     </div>
     <div class="article-meta">
@@ -2392,14 +2375,18 @@
         <p>jQuery 是一个 JavaScript 函数库。jQuery的语法设计使得许多操作变得容易，如操作文档对象（document）、选择文档对象模型（DOM）元素、创建动画效果、处理事件、以及开发Ajax程序。jQuery也提供了给开发人员在其上创建插件的能力。这使开发人员可以对底层交互与动画、高级效果和高级主题化的组件进行抽象化。</p>
 <span id="more"></span>
 <h2 id="jQuery获取元素"><a href="#jQuery获取元素" class="headerlink" title="jQuery获取元素"></a>jQuery获取元素</h2><h3 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h3><pre><code class="JavaScript">//元素选择器 &lt;div &gt;
-$(&quot;div&quot;)</code></pre>
+$(&quot;div&quot;)
+</code></pre>
 <h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><pre><code class="JavaScript">//id选择器 &lt;div id=&#39;id&#39;&gt;
-$(&quot;#id&quot;) $(&quot;div#id&quot;)</code></pre>
+$(&quot;#id&quot;) $(&quot;div#id&quot;)
+</code></pre>
 <h3 id="class选择器"><a href="#class选择器" class="headerlink" title="class选择器"></a>class选择器</h3><pre><code class="javascript">//class选择器 &lt;div class=&#39;class&#39;&gt;
-$(&quot;.class&quot;) $(&quot;div.class&quot;)</code></pre>
+$(&quot;.class&quot;) $(&quot;div.class&quot;)
+</code></pre>
 <h3 id="属性过滤选择器"><a href="#属性过滤选择器" class="headerlink" title="属性过滤选择器"></a>属性过滤选择器</h3><pre><code class="html">&lt;li class=&#39;check&#39; type=&#39;li_01&#39;&gt;&lt;/li&gt;
 &lt;li type=&#39;li_02&#39;&gt;&lt;/li&gt;
-&lt;li type=&#39;li_03&#39;&gt;&lt;/li&gt;</code></pre>
+&lt;li type=&#39;li_03&#39;&gt;&lt;/li&gt;
+</code></pre>
 <pre><code class="javascript">//通过属性获取 如果属性值为有特殊字符，一定要加引号
 $(&quot;[type]&quot;)                  //获取有type属性的元素
 $(&quot;[type=&#39;li_01&#39;]&quot;)          //获取type值等于&#39;li_01&#39;的元素
@@ -2410,8 +2397,10 @@ $(&quot;[type$=&#39;01&#39;]&quot;)            //模糊匹配 获取type值以&#
 $(&quot;li[class=&#39;check&#39;][type]&quot;) //获取多个条件同时满足的元素
 </code></pre>
 <h3 id="选择器"><a href="#选择器" class="headerlink" title="* 选择器"></a>* 选择器</h3><pre><code class="javascript">//遍历form下的所有元素,将其margin设置0
-$(&#39;form *&#39;).css(&#39;margin&#39;,&#39;0px&#39;)</code></pre>
-<h3 id="并列选择器"><a href="#并列选择器" class="headerlink" title="并列选择器"></a>并列选择器</h3><pre><code class="javascript">$(&#39;p, div&#39;).css(&#39;color&#39;,&#39;red&#39;); //将p元素和div元素的字体颜色设置为red</code></pre>
+$(&#39;form *&#39;).css(&#39;margin&#39;,&#39;0px&#39;)
+</code></pre>
+<h3 id="并列选择器"><a href="#并列选择器" class="headerlink" title="并列选择器"></a>并列选择器</h3><pre><code class="javascript">$(&#39;p, div&#39;).css(&#39;color&#39;,&#39;red&#39;); //将p元素和div元素的字体颜色设置为red
+</code></pre>
 <h3 id="层叠选择器"><a href="#层叠选择器" class="headerlink" title="层叠选择器"></a>层叠选择器</h3><pre><code class="html">&lt;div class=&#39;a&#39;&gt;                  &lt;!-- 父级div --&gt;
     &lt;div class=&#39;a1&#39;&gt;             &lt;!-- 子级div1 --&gt;
         &lt;div class=&#39;a11&#39;&gt;&lt;/div&gt;  &lt;!-- 孙级div1 --&gt;
@@ -2419,37 +2408,45 @@ $(&#39;form *&#39;).css(&#39;margin&#39;,&#39;0px&#39;)</code></pre>
     &lt;div class=&#39;a2&#39;&gt;&lt;/div&gt;       &lt;!-- 子级div2 --&gt;
     &lt;div class=&#39;a3&#39;&gt;&lt;/div&gt;       &lt;!-- 子级div3 --&gt;
     &lt;span&gt;&lt;/span&gt;                &lt;!-- 子级span1 --&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
 <pre><code class="javascript">$(&quot;.a div&quot;)       //选择class=a的元素下所有的div 即选择到子级div1,2,3 孙级div1
 $(&quot;.a &gt; div&quot;)     //选择class=a的元素的所有子div元素, 即选择到子级div1,2,3;
 $(&quot;div + span&quot;)   //选择所有的div元素的下一个input元素节点,即选择到:子级div3
-$(&quot;.a1 ~ div&quot;)    //同胞选择器,返回class为a2的标签元素的所有属于同一个父元素的div标签,即div1,2,3</code></pre>
+$(&quot;.a1 ~ div&quot;)    //同胞选择器,返回class为a2的标签元素的所有属于同一个父元素的div标签,即div1,2,3
+</code></pre>
 <h3 id="基本过滤选择器"><a href="#基本过滤选择器" class="headerlink" title="基本过滤选择器"></a>基本过滤选择器</h3><pre><code class="html">&lt;ul&gt;
     &lt;li&gt;&lt;/li&gt;
     &lt;li&gt;&lt;/li&gt;
     &lt;li&gt;&lt;/li&gt;
     &lt;li&gt;&lt;/li&gt;
     &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+&lt;/ul&gt;
+</code></pre>
 <pre><code class="javascript">$(&quot;li:first&quot;)     //选择所有li元素的第一个
 $(&quot;li:last&quot;)      //选择所有li元素的最后一个
 $(&quot;li:even&quot;)      //选择所有li元素的第0,2,4... ...个元素(序号从0开始)
 $(&quot;li:odd&quot;)       //选择所有li元素的第1,3,5... ...个元素
 $(&quot;li:eq(2)&quot;)     //选择所有li元素中的第三个(即序号为2)
 $(&quot;li:gt(3)&quot;)     //选择所有li元素中序号大于3的li元素
-$(&quot;li:ll(2)&quot;)     //选择所有li元素中序号小于2的li元素</code></pre>
+$(&quot;li:ll(2)&quot;)     //选择所有li元素中序号小于2的li元素
+</code></pre>
 <pre><code class="html">&lt;input type=&quot;checkbox&quot; /&gt;
-&lt;input type=&quot;checkbox&quot; /&gt;</code></pre>
+&lt;input type=&quot;checkbox&quot; /&gt;
+</code></pre>
 <pre><code class="javascript">$(&quot;input[type=&#39;checkbox&#39;]:checked&quot;)        //获取所有已被选中的type等于checkbox的input元素
-$(&quot;input[type=&#39;checkbox&#39;]:not(:checked)&quot;)  //获取所有未被选中的type等于checkbox的input元素</code></pre>
+$(&quot;input[type=&#39;checkbox&#39;]:not(:checked)&quot;)  //获取所有未被选中的type等于checkbox的input元素
+</code></pre>
 <h3 id="内容过滤器"><a href="#内容过滤器" class="headerlink" title="内容过滤器"></a>内容过滤器</h3><pre><code class="javascript">$(&quot;div:contains(&#39;Faker&#39;)&quot;)     //选择所有div中含有Faker文本的元素
 $(&quot;div:empty&quot;)                 //选择所有div中为空(不包含任何元素/文本)的元素
 $(&quot;div:has(&#39;p&#39;)&quot;)              //选择所有div中包含p元素的元素
-$(&quot;div:parent&quot;)                //选择所有的含有子元素或文本的div</code></pre>
+$(&quot;div:parent&quot;)                //选择所有的含有子元素或文本的div
+</code></pre>
 <h3 id="可视化过滤器"><a href="#可视化过滤器" class="headerlink" title="可视化过滤器"></a>可视化过滤器</h3><pre><code class="javascript">$(&quot;div:hidden&quot;)            //选择所有被hidden的div元素
 $(&quot;div:not(:hidden)&quot;)      //选择所有没有被hidden的div元素
 $(&quot;div:visible&quot;)           //所有可视化的div元素
-$(&quot;div:not(:visible)&quot;)     //所有非可视化的div元素</code></pre>
+$(&quot;div:not(:visible)&quot;)     //所有非可视化的div元素
+</code></pre>
 <h3 id="子元素过滤器"><a href="#子元素过滤器" class="headerlink" title="子元素过滤器"></a>子元素过滤器</h3><pre><code class="html">&lt;body&gt;
     &lt;div class=&#39;d1&#39;&gt;
         &lt;div class=&#39;d11&#39;&gt;
@@ -2457,7 +2454,8 @@ $(&quot;div:not(:visible)&quot;)     //所有非可视化的div元素</code></pr
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/body&gt;</code></pre>
+&lt;/body&gt;
+</code></pre>
 <pre><code class="javascript">$(&quot;body div:first-child&quot;)  //返回所有的body元素下 所有div 为父元素的第一个元素 的元素.
 //:first 与 :first-child 的区别用法
 //$(&quot;body div:first&quot;)只匹配到第一个合适的元素 即只匹配到 d1
@@ -2465,7 +2463,8 @@ $(&quot;div:not(:visible)&quot;)     //所有非可视化的div元素</code></pr
 //所以匹配到d1,d11,d111
 $(&quot;div span:last-child&quot;)   //返回所有的body元素下 所有div 为父元素的最后一个元素 的元素.
 //:last 与 :last-child 的区别参考first
-$(&quot;div button:only-child&quot;) //如果button是它父级元素的唯一子元素,此button将会被匹配</code></pre>
+$(&quot;div button:only-child&quot;) //如果button是它父级元素的唯一子元素,此button将会被匹配
+</code></pre>
 <h3 id="表单元素选择器"><a href="#表单元素选择器" class="headerlink" title="表单元素选择器"></a>表单元素选择器</h3><pre><code class="javascript">$(&quot;:input&quot;)    //选择所有的表单输入元素，包括input, textarea, select 和 button
 $(&quot;:text&quot;)     //选择所有的text input元素
 $(&quot;:password&quot;) //选择所有的password input元素
@@ -2476,13 +2475,16 @@ $(&quot;:image&quot;)    //选择所有的image input元素
 $(&quot;:reset&quot;)    //选择所有的reset input元素
 $(&quot;:button&quot;)   //选择所有的button input元素
 $(&quot;:file&quot;)     //选择所有的file input元素
-$(&quot;:hidden&quot;)   //选择所有类型为hidden的input元素或表单的隐藏域</code></pre>
+$(&quot;:hidden&quot;)   //选择所有类型为hidden的input元素或表单的隐藏域
+</code></pre>
 <h3 id="表单元素过滤器"><a href="#表单元素过滤器" class="headerlink" title="表单元素过滤器"></a>表单元素过滤器</h3><pre><code class="javascript">$(&quot;:enabled&quot;)               //选择所有的可操作的表单元素
 $(&quot;:disabled&quot;)              //选择所有的不可操作的表单元素
 $(&quot;:checked&quot;)               //选择所有的被checked的表单元素
-$(&quot;select option:selected&quot;) //选择所有的select 的子元素中被selected的元素</code></pre>
+$(&quot;select option:selected&quot;) //选择所有的select 的子元素中被selected的元素
+</code></pre>
 <h2 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h2><h3 id="获取和操作节点属性"><a href="#获取和操作节点属性" class="headerlink" title="获取和操作节点属性"></a>获取和操作节点属性</h3><pre><code class="html">&lt;a href=&#39;index.html&#39; data-type=&#39;a&#39; style=&quot;color:red;&quot;&gt;index&lt;/a&gt;
-&lt;input value=&#39;user&#39; /&gt;</code></pre>
+&lt;input value=&#39;user&#39; /&gt;
+</code></pre>
 <pre><code class="javascript">$(&quot;a&quot;).attr(&quot;href&quot;);               //获取href属性值
 $(&quot;a&quot;).attr(&quot;href&quot;,&quot;about.html&quot;);  //设置href属性值
 
@@ -2495,10 +2497,12 @@ $(&quot;a&quot;).text();                     //获取a的文本节点值
 $(&quot;a&quot;).text(&quot;Index.html&quot;);         //设置a的文本节点值
 
 $(&quot;input&quot;).val();                  //获取input的value值
-$(&quot;input&quot;).val(&quot;username&quot;);        //设置input的value值</code></pre>
+$(&quot;input&quot;).val(&quot;username&quot;);        //设置input的value值
+</code></pre>
 <h3 id="插入节点的方法"><a href="#插入节点的方法" class="headerlink" title="插入节点的方法"></a>插入节点的方法</h3><pre><code class="html">&lt;div class=&quot;head&quot;&gt;
     &lt;span&gt;Faker&lt;span&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
 <pre><code class="javascript">$(&quot;.head&quot;).append(&quot;&lt;span&gt;hello&lt;/span&gt;&quot;)  //在.head中的最后插入一段html
 //结果: &lt;div class=&quot;head&quot;&gt;&lt;span&gt;Faker&lt;/span&gt;&lt;span&gt;hello&lt;/span&gt;&lt;/div&gt;
 
@@ -2521,17 +2525,20 @@ $(&quot;.head *:first&quot;).before(&quot;&lt;span&gt;hello&lt;/span&gt;&quot;) 
 //结果: &lt;div class=&quot;head&quot;&gt;&lt;span&gt;hello&lt;/span&gt;&lt;span&gt;Faker&lt;/span&gt;&lt;/div&gt;
 
 $(&quot;&lt;span&gt;hello&lt;/span&gt;&quot;).insertBefore(&quot;.head *:first&quot;)  //在.head中的第一个元素后插入一段html,
-//结果: &lt;div class=&quot;head&quot;&gt;&lt;span&gt;hello&lt;/span&gt;&lt;span&gt;Faker&lt;/span&gt;&lt;/div&gt;</code></pre>
+//结果: &lt;div class=&quot;head&quot;&gt;&lt;span&gt;hello&lt;/span&gt;&lt;span&gt;Faker&lt;/span&gt;&lt;/div&gt;
+</code></pre>
 <h3 id="load-方法"><a href="#load-方法" class="headerlink" title="$.load()方法"></a>$.load()方法</h3><blockquote>
 <p>在指定位置加载请求回来的html页面</p>
 </blockquote>
 <pre><code class="html">&lt;div class=&quot;head&quot;&gt;
 
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
 <pre><code class="javascript">$(&quot;.head&quot;).load(url[,data][,callback])
 url:           请求HTML页面的URL地址
 data(可选):     请求的key/value参数
-callback(可选)  请求完成的回调函数</code></pre>
+callback(可选)  请求完成的回调函数
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-01-18 10:12</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-01-18 10:12</time>
         
     </div>
     <div class="article-meta">
@@ -2393,7 +2376,8 @@
 <span id="more"></span>
 <p>　　grep的工作方式是这样的，它在一个或多个文件中搜索字符串模板。如果模板包括空格，则必须被引用，模板后的所有字符串被看作文件名。搜索的结果被送到标准输出，不影响原文件内容。</p>
 <p>　　grep可用于shell脚本，因为grep通过返回一个状态值来说明搜索的状态，如果模板搜索成功，则返回0，如果搜索不成功，则返回1，如果搜索的文件不存在，则返回2。我们利用这些返回值就可进行一些自动化的文本处理工作。</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ grep [option] pattern file</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ grep [option] pattern file
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　用于过滤/搜索的特定字符。可使用正则表达式能多种命令配合使用，使用上十分灵活。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2511,55 +2495,66 @@
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：查找指定进程</strong></p>
 <pre><code class="bash">$ ps -ef|grep hexo
 faker    13401 19030  0 09:51 pts/2    00:00:15 hexo
-faker    15465 15449  0 10:34 pts/3    00:00:00 grep hexo</code></pre>
+faker    15465 15449  0 10:34 pts/3    00:00:00 grep hexo
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>第一条记录是查找出的进程；第二条结果是grep进程本身，并非真正要找的进程。</p>
 </blockquote>
 <p><strong><code>例二</code>：查找指定进程数</strong></p>
 <pre><code class="bash">$ ps -ef|grep hexo -c
 $ ps -ef|grep -c hexo
-2</code></pre>
+2
+</code></pre>
 <p><strong><code>例三</code>：从2.txt中读取关键词在1.txt中进行搜索</strong></p>
 <pre><code class="bash"># -n显示行号
 $ cat 1.txt | grep -nf 2.txt
 1:If you please draw me a sheep!
-2:What!</code></pre>
+2:What!
+</code></pre>
 <p><strong><code>例四</code>：从文件中查找关键词</strong></p>
 <pre><code class="bash">$ grep &#39;jump&#39; 1.txt
-I jumped to my feet,completely thunderstruck.</code></pre>
+I jumped to my feet,completely thunderstruck.
+</code></pre>
 <p><strong><code>例五</code>：从多个文件中查找关键词</strong></p>
 <pre><code class="bash">$ grep &#39;jump&#39; 1.txt 2.txt
 1.txt:I jumped to my feet,completely thunderstruck.
-2.txt:I jump</code></pre>
+2.txt:I jump
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>多文件时，输出查询到的信息内容行时，会把文件的命名在行最前面输出并且加上”:”作为标示符</p>
 </blockquote>
 <p><strong><code>例六</code>：grep不显示本身进程</strong></p>
 <pre><code class="bash">$ ps aux|grep \[s]sh
-$ ps aux | grep ssh | grep -v &quot;grep&quot;</code></pre>
+$ ps aux | grep ssh | grep -v &quot;grep&quot;
+</code></pre>
 <p><strong><code>例七</code>：找出以u开头的行内容</strong></p>
 <pre><code class="bash">$ cat 1.txt |grep ^u
 If you please draw me a sheep!
-I jumped to my feet,completely thunderstruck.</code></pre>
+I jumped to my feet,completely thunderstruck.
+</code></pre>
 <p><strong><code>例八</code>：输出非u开头的行内容</strong></p>
 <pre><code class="bash">$ cat 1.txt | grep ^[^I]
 What!
-Draw me a sheep!</code></pre>
+Draw me a sheep!
+</code></pre>
 <p><strong><code>例九</code>：输出以!结尾的行内容</strong></p>
 <pre><code class="bash">$ cat 1.txt |grep \!$
 If you please draw me a sheep!
 What!
-Draw me a sheep!</code></pre>
+Draw me a sheep!
+</code></pre>
 <p><strong><code>例十</code>：显示包含sh或者at字符的内容行</strong></p>
 <pre><code class="bash">$ cat 1.txt |grep -E &quot;sh|at&quot;
 If you please draw me a sheep!
 What!
-Draw me a sheep!</code></pre>
+Draw me a sheep!
+</code></pre>
 <p><strong><code>例十一</code>：显示当前目录下面以.txt 结尾的文件中的所有包含每个字符串至少有7个连续小写字符的字符串的行</strong></p>
 <pre><code class="bash">$ grep &#39;[a-z]\&#123;7\&#125;&#39; *.txt
 1.txt:I jumped to my feet,completely thunderstruck.
 3.txt:kdfkksjdf112123
-4.txt:kisdfsf</code></pre>
+4.txt:kisdfsf
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

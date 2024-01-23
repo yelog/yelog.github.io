@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-08-04 15:54</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-08-04 15:54</time>
         
     </div>
     <div class="article-meta">
@@ -2397,7 +2380,8 @@
 /* 插入并返回对象的主键（数据库序列） */
 &lt;insert id=&quot;insertOne&quot; parameterType=&quot;Person&quot; useGeneratedKeys=&quot;true&quot; keyProperty=&quot;id&quot;&gt;
     insert into person (name, age) VALUES(#&#123;name&#125;, #&#123;age&#125;);
-&lt;/insert&gt;</code></pre>
+&lt;/insert&gt;
+</code></pre>
 <h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><pre><code class="sql">/* 简单更新 */
 &lt;update id=&quot;updateName&quot;&gt;
      update person set name = #&#123;name&#125; where id = #&#123;id&#125;;
@@ -2406,7 +2390,8 @@
 /* 更新值并返回 */
 &lt;select id=&quot;updateAge&quot; parameterType=&quot;Person&quot;&gt;
     update person set age = age + #&#123;age&#125; where id = #&#123;id&#125; returning age;
-&lt;/select&gt;</code></pre>
+&lt;/select&gt;
+</code></pre>
 <h3 id="插入或更新"><a href="#插入或更新" class="headerlink" title="插入或更新"></a>插入或更新</h3><p>记录玩家在某种类型游戏下的统计记录：</p>
 <blockquote>
 <p>如果没有记录，则从插入，count字段为1；<br>如果有记录，则更新count字段+1；</p>
@@ -2437,7 +2422,8 @@
            type_id = #&#123;typeId&#125;
         and
            user_id = #&#123;userId&#125;);
-&lt;/insert&gt;</code></pre>
+&lt;/insert&gt;
+</code></pre>
 </li>
 <li><p>方式二</p>
 <pre><code class="sql">/* 利用 PostgreSQL 的 conflic 特性 */
@@ -2450,7 +2436,8 @@
    conflict(type_id,user_id)
  do update set
    &quot;count&quot; = count_record.&quot;count&quot; + 1
-&lt;/insert&gt;</code></pre>
+&lt;/insert&gt;
+</code></pre>
 </li>
 </ol>
 

@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2342,7 +2325,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-04-15 10:22</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-04-15 10:22</time>
         
     </div>
     <div class="article-meta">
@@ -2435,7 +2418,8 @@
     else &#123;//其他的请求类型的方法经由父类，也就是HttpServlet处理
         super.service(request, response);
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>HttpServlet中会根据请求类型的不同分别调用doGet或者doPost等方法，FrameworkServlet中已经重写了这些方法，在这些方法中会调用processRequest进行处理，在processRequest中会调用doService方法，这个doService方法就是在DispatcherServlet中实现的。下面就看下DispatcherServlet中的doService方法的实现。</p>
 <h3 id="请求到达DispatcherServlet"><a href="#请求到达DispatcherServlet" class="headerlink" title="请求到达DispatcherServlet"></a>请求到达DispatcherServlet</h3><p>doService方法：</p>
 <pre><code class="java">protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception &#123;
@@ -2482,7 +2466,8 @@
             restoreAttributesAfterInclude(request, attributesSnapshot);
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>DispatcherServlet开始真正的处理，doDispatch方法：</p>
 <pre><code class="java">protected void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception &#123;
     HttpServletRequest processedRequest = request;
@@ -2562,12 +2547,14 @@
             cleanupMultipart(processedRequest);
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>可以看到大概的步骤还是按照我们上面分析的走的。</p>
 <h3 id="查找请求对应的Handler对象"><a href="#查找请求对应的Handler对象" class="headerlink" title="查找请求对应的Handler对象"></a>查找请求对应的Handler对象</h3><p>对应着这句代码 <code>mappedHandler = getHandler(processedRequest, false);</code>，看下具体的getHandler方法：</p>
 <pre><code class="java">protected HandlerExecutionChain getHandler(HttpServletRequest request, boolean cache) throws Exception &#123;
     return getHandler(request);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>继续往下看getHandler：</p>
 <pre><code class="java">protected HandlerExecutionChain getHandler(HttpServletRequest request) throws Exception &#123;
     //遍历所有的handlerMappings进行处理
@@ -2579,7 +2566,8 @@
         &#125;
     &#125;
     return null;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>继续往下看getHandler，在AbstractHandlerMapping类中：</p>
 <pre><code class="java">public final HandlerExecutionChain getHandler(HttpServletRequest request) throws Exception &#123;
     //根据request获取handler
@@ -2599,7 +2587,8 @@
     &#125;
     //封装Handler执行链
     return getHandlerExecutionChain(handler, request);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="根据requrst获取handler"><a href="#根据requrst获取handler" class="headerlink" title="根据requrst获取handler"></a>根据requrst获取handler</h3><p>首先看下根据requrst获取handler步骤getHandlerInternal方法，在AbstractHandlerMethodMapping中：</p>
 <pre><code class="java">protected HandlerMethod getHandlerInternal(HttpServletRequest request) throws Exception &#123;
     //获取request中的url，用来匹配handler
@@ -2608,7 +2597,8 @@
     HandlerMethod handlerMethod = lookupHandlerMethod(lookupPath, request);
     //根据handlerMethod中的bean来实例化Handler并添加进HandlerMethod
     return (handlerMethod != null) ? handlerMethod.createWithResolvedBean() : null;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>看下根据路径寻找handler的方法lookupHandlerMethod：</p>
 <pre><code class="java">protected HandlerMethod lookupHandlerMethod(String lookupPath, HttpServletRequest request) throws Exception &#123;
     List&lt;Match&gt; matches = new ArrayList&lt;Match&gt;();
@@ -2648,7 +2638,8 @@
     else &#123;//最后还没有找到，返回null
         return handleNoMatch(handlerMethods.keySet(), lookupPath, request);
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="获取默认Handler"><a href="#获取默认Handler" class="headerlink" title="获取默认Handler"></a>获取默认Handler</h3><p>如果上面没有获取到Handler，就会获取默认的Handler。如果还获取不到就返回null。</p>
 <h3 id="处理String类型的Handler"><a href="#处理String类型的Handler" class="headerlink" title="处理String类型的Handler"></a>处理String类型的Handler</h3><p>如果上面处理完的Handler是String类型的，就会根据这个handlerName获取bean。</p>
 <h3 id="封装Handler执行链"><a href="#封装Handler执行链" class="headerlink" title="封装Handler执行链"></a>封装Handler执行链</h3><p>上面获取完Handler，就开始封装执行链了，就是将我们配置的拦截器加入到执行链中去，getHandlerExecutionChain：</p>
@@ -2669,7 +2660,8 @@
     &#125;
 
     return chain;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="获取对应请求的Handler适配器"><a href="#获取对应请求的Handler适配器" class="headerlink" title="获取对应请求的Handler适配器"></a>获取对应请求的Handler适配器</h3><p>getHandlerAdapter：</p>
 <pre><code class="java">protected HandlerAdapter getHandlerAdapter(Object handler) throws ServletException &#123;
     //遍历所有的HandlerAdapter，找到和当前Handler匹配的就返回
@@ -2679,14 +2671,16 @@
             return ha;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="缓存的处理"><a href="#缓存的处理" class="headerlink" title="缓存的处理"></a>缓存的处理</h3><p>也就是对last-modified的处理</p>
 <h3 id="执行拦截器的preHandle方法"><a href="#执行拦截器的preHandle方法" class="headerlink" title="执行拦截器的preHandle方法"></a>执行拦截器的preHandle方法</h3><p>就是遍历所有的我们定义的interceptor，执行preHandle方法</p>
 <h3 id="使用Handler适配器执行当前的Handler"><a href="#使用Handler适配器执行当前的Handler" class="headerlink" title="使用Handler适配器执行当前的Handler"></a>使用Handler适配器执行当前的Handler</h3><p>ha.handle执行当前Handler，我们这里使用的是RequestMappingHandlerAdapter，首先会进入AbstractHandlerMethodAdapter的handle方法：</p>
 <pre><code class="java">public final ModelAndView handle(HttpServletRequest request, HttpServletResponse response, Object handler)
         throws Exception &#123;
     return handleInternal(request, response, (HandlerMethod) handler);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>handleInternal方法，在RequestMappingHandlerAdapter中：</p>
 <pre><code class="java">protected final ModelAndView handleInternal(HttpServletRequest request,
         HttpServletResponse response, HandlerMethod handlerMethod) throws Exception &#123;
@@ -2712,7 +2706,8 @@
     &#125;
     //执行方法，封装ModelAndView
     return invokeHandleMethod(request, response, handlerMethod);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="组装默认视图名称"><a href="#组装默认视图名称" class="headerlink" title="组装默认视图名称"></a>组装默认视图名称</h3><p>前缀和后缀名都加上</p>
 <h3 id="执行拦截器的postHandle方法"><a href="#执行拦截器的postHandle方法" class="headerlink" title="执行拦截器的postHandle方法"></a>执行拦截器的postHandle方法</h3><p>遍历intercepter的postHandle方法。</p>
 <h3 id="处理最后的结果，渲染之类的"><a href="#处理最后的结果，渲染之类的" class="headerlink" title="处理最后的结果，渲染之类的"></a>处理最后的结果，渲染之类的</h3><p>processDispatchResult方法：</p>
@@ -2751,7 +2746,8 @@
     if (mappedHandler != null) &#123;
         mappedHandler.triggerAfterCompletion(request, response, null);
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>重点看下render方法，进行渲染：</p>
 <pre><code class="java">protected void render(ModelAndView mv, HttpServletRequest request, HttpServletResponse response) throws Exception &#123;
     //设置本地化
@@ -2774,7 +2770,8 @@
 
     //委托给视图进行渲染
     view.render(mv.getModelInternal(), request, response);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>view.render就是进行视图的渲染，然后跳转页面等处理。</p>
 <p>到这里大概的流程就走完了。其中涉及到的东西还有很多，暂先不做详细处理。</p>
 <p>原文：<a target="_blank" rel="noopener" href="http://cxis.me/2017/04/06/SpringMVC%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B%E5%8F%8A%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/">SpringMVC执行流程及源码解析</a></p>

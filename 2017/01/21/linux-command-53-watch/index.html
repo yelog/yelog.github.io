@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-01-21 10:12</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-01-21 10:12</time>
         
     </div>
     <div class="article-meta">
@@ -2391,7 +2374,8 @@
       
         <p>　　watch是一个非常实用的命令，基本所有的Linux发行版都带有这个小工具，如同名字一样，watch可以帮你监测一个命令的运行结果，省得你一遍遍的手动运行。在Linux下，watch是周期性的执行下个程序，并全屏显示执行结果。你可以拿他来监测你想要的一切命令的结果变化，比如 tail 一个 log 文件，ls 监测某个文件的大小变化，看你的想象力了！</p>
 <span id="more"></span>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ watch[参数][命令]</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ watch[参数][命令]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　可以将命令的输出结果输出到标准输出设备，多用于周期性执行命令/定时执行命令</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2422,19 +2406,24 @@
 </tr>
 </tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：每隔一秒高亮显示网络链接数的变化情况</strong></p>
-<pre><code class="bash">$ watch -n 1 -d netstat -ant</code></pre>
+<pre><code class="bash">$ watch -n 1 -d netstat -ant
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>其它操作：<br>切换终端： Ctrl+x<br>退出watch：Ctrl+g (deepin系统没效果，只能使用Ctrl+c退出了)</p>
 </blockquote>
 <p><strong><code>例二</code>：每隔一秒高亮显示http链接数的变化情况</strong></p>
 <pre><code class="bash"># 每隔一秒高亮显示http链接数的变化情况。 后面接的命令若带有管道符，需要加&#39;&#39;将命令区域归整。
-$ watch -n 1 -d &#39;pstree|grep http&#39;</code></pre>
+$ watch -n 1 -d &#39;pstree|grep http&#39;
+</code></pre>
 <p><strong><code>例三</code>：实时查看模拟攻击客户机建立起来的连接数</strong></p>
-<pre><code class="bash">$ watch &#39;netstat -an | grep:21 | \ grep&lt;模拟攻击客户机的IP&gt;| wc -l&#39;</code></pre>
+<pre><code class="bash">$ watch &#39;netstat -an | grep:21 | \ grep&lt;模拟攻击客户机的IP&gt;| wc -l&#39;
+</code></pre>
 <p><strong><code>例四</code>：监测当前目录中 scf’ 的文件的变化</strong></p>
-<pre><code class="bash">$ watch -d &#39;ls -l|grep scf&#39;</code></pre>
+<pre><code class="bash">$ watch -d &#39;ls -l|grep scf&#39;
+</code></pre>
 <p><strong><code>例五</code>：10秒一次输出系统的平均负载</strong></p>
-<pre><code class="bash">$ watch -n 10 &#39;cat /proc/loadavg&#39;</code></pre>
+<pre><code class="bash">$ watch -n 10 &#39;cat /proc/loadavg&#39;
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

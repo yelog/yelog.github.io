@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-05-16 09:26</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-05-16 09:26</time>
         
     </div>
     <div class="article-meta">
@@ -2411,7 +2394,8 @@ $ git log --pretty=format:%ae | gawk -- &#39;&#123; ++c[$0]; &#125; END &#123; f
 $ git log --pretty=&#39;%aN&#39; | sort -u | wc -l
 
 # 统计提交数量
-$ git log --oneline | wc -l</code></pre>
+$ git log --oneline | wc -l
+</code></pre>
 <h2 id="按代码行数统计"><a href="#按代码行数统计" class="headerlink" title="按代码行数统计"></a>按代码行数统计</h2><pre><code class="bash"># 统计指定作者增删行数
 $ git log --author=&quot;faker&quot; --pretty=tformat: --numstat | awk &#39;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -
 
@@ -2428,7 +2412,8 @@ $ git log --shortstat --pretty=&quot;%cE&quot; | sed &#39;s/\(.*\)@.*/\1/&#39; |
 $ git log --format=&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author=&quot;$name&quot; --pretty=tformat: --numstat | awk &#39;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;added lines: %s, removed lines: %s, total lines: %s\n&quot;, add, subs, loc &#125;&#39; -; done
 
 # 统计所有作者增删行数 --中文版
-$ git log --format=&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author=&quot;$name&quot; --pretty=tformat: --numstat | awk &#39;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;添加行数: %s, 删除行数: %s, 总行数: %s\n&quot;, add, subs, loc &#125;&#39; -; done</code></pre>
+$ git log --format=&#39;%aN&#39; | sort -u | while read name; do echo -en &quot;$name\t&quot;; git log --author=&quot;$name&quot; --pretty=tformat: --numstat | awk &#39;&#123; add += $1; subs += $2; loc += $1 - $2 &#125; END &#123; printf &quot;添加行数: %s, 删除行数: %s, 总行数: %s\n&quot;, add, subs, loc &#125;&#39; -; done
+</code></pre>
 <h2 id="git-log-说明"><a href="#git-log-说明" class="headerlink" title="git log 说明"></a>git log 说明</h2><blockquote>
 <p>git log 参数说明：<br><code>--</code>author   指定作者<br><code>--</code>stat   显示每次更新的文件修改统计信息，会列出具体文件列表<br><code>--</code>shortstat    统计每个commit 的文件修改行数，包括增加，删除，但不列出文件列表：<br><code>--</code>numstat   统计每个commit 的文件修改行数，包括增加，删除，并列出文件列表：</p>
 </blockquote>

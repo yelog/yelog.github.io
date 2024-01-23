@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2342,7 +2325,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-03-30 18:58</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-03-30 18:58</time>
         
     </div>
     <div class="article-meta">
@@ -2400,11 +2383,14 @@
 <li><a target="_blank" rel="noopener" href="https://wiki.deepin.org/index.php?title=Deepin%E5%BA%94%E7%94%A8%E7%AE%A1%E7%90%86">Deepin应用列表</a></li>
 </ul>
 <h2 id="输入法"><a href="#输入法" class="headerlink" title="输入法"></a>输入法</h2><p>安装输入法，除了商店下载（好多输入法没有被收录进deepin商店），可以使用fcitx安装。<br>如安装google拼音输入法：</p>
-<pre><code class="bash">$ sudo aptitude install fcitx fcitx-googlepinyin</code></pre>
+<pre><code class="bash">$ sudo aptitude install fcitx fcitx-googlepinyin
+</code></pre>
 <p>如果当前在使用ibus，而不是fcitx的话，看下面<br>1）安装fcitx，并安装google拼音</p>
-<pre><code class="bash">$ sudo apt-get install fcitx fcitx-googlepinyin im-config</code></pre>
+<pre><code class="bash">$ sudo apt-get install fcitx fcitx-googlepinyin im-config
+</code></pre>
 <p>2）打开输入法配置</p>
-<pre><code class="bash">$ im-config</code></pre>
+<pre><code class="bash">$ im-config
+</code></pre>
 <p>依次：<code>ok</code>-&gt;<code>yes</code>,选择fcitx为默认输入法框架,<code>ok</code>-&gt;<code>ok</code></p>
 <h2 id="制作启动器图标"><a href="#制作启动器图标" class="headerlink" title="制作启动器图标"></a>制作启动器图标</h2><p>以创建 <code>atom</code> 这款编辑器的启动器图标为例。<br>1）进入 <code>/usr/share/applications/</code> 目录，创建 <code>atom.desktop</code> 文件<br>2）编辑 <code>atom.desktop</code> 文件</p>
 <pre><code class="xml">[Desktop Entry]
@@ -2415,16 +2401,20 @@ Icon=/opt/atom/atom.png
 Type=Application
 StartupNotify=true
 Categories=TextEditor;Development;Utility;
-MimeType=text/plain;</code></pre>
+MimeType=text/plain;
+</code></pre>
 <blockquote>
 <p>解释：<br><code>Name</code>：创建的图标名称<br><code>Comment</code>：备注，随便填<br><code>Exec</code>：启动文件的位置<br><code>Icon</code>：图标位置<br><code>Type</code>：类型，启动程序就填Application<br><code>StartupNotify</code>: 启动通知，填true就行了。详细可查 <a target="_blank" rel="noopener" href="https://developer.gnome.org/integration-guide/stable/startup-notification.html.en">Startup notification</a><br><code>Categories</code>： 分类，随便填，比如：Application;<br><code>MimeType</code>： 打开文件类型</p>
 </blockquote>
 <h2 id="修改apt源"><a href="#修改apt源" class="headerlink" title="修改apt源"></a>修改apt源</h2><p>修改 <code>/etc/apt/sources.list</code><br>默认的源</p>
-<pre><code class="bash">deb [by-hash=force] http://packages.deepin.com/deepin/ unstable main contrib non-free</code></pre>
+<pre><code class="bash">deb [by-hash=force] http://packages.deepin.com/deepin/ unstable main contrib non-free
+</code></pre>
 <p>阿里云的源</p>
-<pre><code class="bash">deb [by-hash=force] http://mirrors.aliyun.com/deepin unstable main contrib non-free</code></pre>
+<pre><code class="bash">deb [by-hash=force] http://mirrors.aliyun.com/deepin unstable main contrib non-free
+</code></pre>
 <h2 id="更换文件管理器"><a href="#更换文件管理器" class="headerlink" title="更换文件管理器"></a>更换文件管理器</h2><h3 id="Nautilus"><a href="#Nautilus" class="headerlink" title="Nautilus"></a>Nautilus</h3><ol>
-<li>深度商店下载安装 Nautilus<br>2）卸载深度任务管理器<pre><code class="bash">$ sudo apt remove dde-file-manager</code></pre>
+<li>深度商店下载安装 Nautilus<br>2）卸载深度任务管理器<pre><code class="bash">$ sudo apt remove dde-file-manager
+</code></pre>
 Nautilus 常用的快捷键</li>
 </ol>
 <table>

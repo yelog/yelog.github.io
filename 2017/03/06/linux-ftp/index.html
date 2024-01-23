@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-03-06 08:47</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-03-06 08:47</time>
         
     </div>
     <div class="article-meta">
@@ -2400,13 +2383,17 @@ $ dnf -y install vsftpd
 #使用 deb 安装
 $ sudo apt-get install vsftpd
 #在 Arch 中安装
-$ sudo pacman -S vsftpd</code></pre>
+$ sudo pacman -S vsftpd
+</code></pre>
 <h2 id="配置-FTP-服务"><a href="#配置-FTP-服务" class="headerlink" title="配置 FTP 服务"></a>配置 FTP 服务</h2><p>多数的VSFTPD配置项都在/etc/vsftpd.conf配置文件中。这个文件本身已经有非常良好的文档说明了，因此，在本节中，我只强调一些你可能进行修改的重要选项。使用man页面查看所有可用的选项和基本的 文档说明：</p>
-<pre><code class="bash">$ man vsftpd.conf</code></pre>
+<pre><code class="bash">$ man vsftpd.conf
+</code></pre>
 <p>根据文件系统层级标准，FTP共享文件默认位于/srv/ftp目录中。<br><strong>允许上传：</strong><br>为了允许ftp用户可以修改文件系统的内容，如上传文件等，“write_enable”标志必须设置为 YES</p>
-<pre><code class="xml">write_enable=YES</code></pre>
+<pre><code class="xml">write_enable=YES
+</code></pre>
 <p><strong>允许本地（系统）用户登录：</strong><br>为了允许文件/etc/passwd中记录的用户可以登录ftp服务，“local_enable”标记必须设置为YES。</p>
-<pre><code class="xml">local_enable=YES</code></pre>
+<pre><code class="xml">local_enable=YES
+</code></pre>
 <p><strong>匿名用户登录</strong><br>下面配置内容控制匿名用户是否允许登录：</p>
 <pre><code class="xml"># 允许匿名用户登录
 anonymous_enable=YES
@@ -2415,14 +2402,17 @@ no_anon_password=YES
 # 匿名登录的最大传输速率，Bytes/second（可选）
 anon_max_rate=30000
 # 匿名登录的目录（可选）
-anon_root=/example/directory/</code></pre>
+anon_root=/example/directory/
+</code></pre>
 <p><strong>根目录限制（Chroot Jail）</strong><br>（ LCTT 译注：chroot jail是类unix系统中的一种安全机制，用于修改进程运行的根目录环境，限制该线程不能感知到其根目录树以外的其他目录结构和文件的存在。详情参看<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Chroot">chroot jail</a>）</p>
 <p>有时我们需要设置根目录（chroot）环境来禁止用户离开他们的家（home）目录。在配置文件中增加/修改下面配置开启根目录限制（Chroot Jail）:</p>
 <pre><code class="xml">chroot_list_enable=YES
-chroot_list_file=/etc/vsftpd.chroot_list</code></pre>
+chroot_list_file=/etc/vsftpd.chroot_list
+</code></pre>
 <p>“chroot_list_file”变量指定根目录限制所包含的文件/目录（ LCTT 译注：即用户只能访问这些文件/目录）</p>
 <p>最后你必须重启ftp服务，在命令行中输入以下命令：</p>
-<pre><code class="bash">$ sudo systemctl restart vsftpd</code></pre>
+<pre><code class="bash">$ sudo systemctl restart vsftpd
+</code></pre>
 <p>到此为止，你的ftp服务已经搭建完成并且启动了。</p>
 
       

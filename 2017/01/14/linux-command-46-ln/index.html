@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-01-14 11:00</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-01-14 11:00</time>
         
     </div>
     <div class="article-meta">
@@ -2392,7 +2375,8 @@
         <p>　　ln是linux中又一个非常重要命令，它的功能是为某一个文件在另外一个位置建立一个同步的链接.当我们需要在不同的目录，用到相同的文件时，我们不需要在每一个需要的目录下都放一个必须相同的文件，我们只要在某个固定的目录，放上该文件，然后在 其它的目录下用ln命令链接（link）它就可以，不必重复的占用磁盘空间。</p>
 <span id="more"></span>
 
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ ln [参数][源文件或目录][目标文件或目录]</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ ln [参数][源文件或目录][目标文件或目录]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　Linux文件系统中，有所谓的链接(link)，我们可以将其视为档案的别名，而链接又可分为两种 : 硬链接(hard link)与软链接(symbolic link)，硬链接的意思是一个档案可以有多个名称，而软链接的方式则是产生一个特殊的档案，该档案的内容是指向另一个档案的位置。硬链接是存在同一个文件系统中，而软链接却可以跨越不同的文件系统。<br><strong>软连接</strong><br>　　1.软链接，以路径的形式存在。类似于Windows操作系统中的快捷方式<br>　　2.软链接可以 跨文件系统 ，硬链接不可以<br>　　3.软链接可以对一个不存在的文件名进行链接<br>　　4.软链接可以对目录进行链接<br><strong>硬链接</strong><br>　　1.硬链接，以文件副本的形式存在。但不占用实际空间。<br>　　2.不允许给目录创建硬链接<br>　　3.硬链接只有在同一个文件系统中才能创建<br><strong>两点注意</strong><br>　　第一，ln命令会保持每一处链接文件的同步性，也就是说，不论你改动了哪一处，其它的文件都会发生相同的变化；<br>　　第二，ln的链接又分软链接和硬链接两种，软链接就是ln –s 源文件 目标文件，它只会在你选定的位置上生成一个文件的镜像，不会占用磁盘空间，硬链接 ln 源文件 目标文件，没有参数-s， 它会在你选定的位置上生成一个和源文件大小相同的文件，无论是软链接还是硬链接，文件都保持同步变化。<br>　　ln指令用在链接文件或目录，如同时指定两个以上的文件或目录，且最后的目的地是一个已经存在的目录，则会把前面指定的所有文件或目录复制到该目录中。若同时指定多个文件或目录，且最后的目的地并非是一个已存在的目录，则会出现错误信息。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><p><strong>必要参数</strong></p>
 <table>
@@ -2458,10 +2442,12 @@
 </tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：给文件创建软链接</strong></p>
 <pre><code class="bash"># 为2.txt文件创建软链接2，如果2.txt丢失，2将失效
-$ ln -s 2.txt 2</code></pre>
+$ ln -s 2.txt 2
+</code></pre>
 <p><strong><code>例二</code>：给文件创建硬链接</strong></p>
 <pre><code class="bash"># 为1.txt创建硬链接1，1.txt与1的各项属性相同,删除1.txt，1仍能使用
-$ ln 1.txt 1</code></pre>
+$ ln 1.txt 1
+</code></pre>
 <p><strong><code>例三</code>：接上面两实例，链接完毕后，删除和重建链接原文件</strong></p>
 <pre><code class="bash">$ ll
 -rw-r--r-- 2 faker faker   10 1月  22 11:28 1
@@ -2477,7 +2463,8 @@ $ cat 1
 sdfiskdlf
 
 $ cat 2
-cat: 2: 没有那个文件或目录</code></pre>
+cat: 2: 没有那个文件或目录
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　1.源文件被删除后，并没有影响硬链接文件；软链接文件在centos系统下不断的闪烁，提示源文件已经不存在<br>　　2.重建源文件后，软链接不在闪烁提示，说明已经链接成功，找到了链接文件系统；重建后，硬链接文件并没有受到源文件影响，硬链接文件的内容还是保留了删除前源文件的内容，说明硬链接已经失效</p>
 </blockquote>
@@ -2485,9 +2472,11 @@ cat: 2: 没有那个文件或目录</code></pre>
 <pre><code class="bash"># 在ig文件夹中创建一个1.txt的链接
 $ ln 1.txt ig/
 $ ll ig
--rw-r--r-- 2 faker faker   10 1月  28 13:40 1.txt</code></pre>
+-rw-r--r-- 2 faker faker   10 1月  28 13:40 1.txt
+</code></pre>
 <p><strong><code>例五</code>：给目录创建软连接</strong></p>
-<pre><code class="bash">$ ln -s ig gi</code></pre>
+<pre><code class="bash">$ ln -s ig gi
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　1.目录只能创建软链接<br>　　<del>2.目录创建链接必须用绝对路径，相对路径创建会不成功，会提示：符号连接的层数过多 这样的错误</del>（测试并不会出现这样的问题）<br>　　3.在链接目标目录中修改文件都会在源文件目录中同步变化</p>
 </blockquote>

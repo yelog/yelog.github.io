@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-01-22 10:23</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-01-22 10:23</time>
         
     </div>
     <div class="article-meta">
@@ -2393,7 +2376,8 @@
 <span id="more"></span>
 <p>　　在linux系统中你可能已经发现了为什么系统常常会自动的进行一些任务？这些任务到底是谁在支配他们工作的？在linux系统如果你想要让自己设计的备份程序可以自动在某个时间点开始在系统底下运行，而不需要手动来启动它，又该如何处置呢？ 这些例行的工作可能又分为一次性定时工作与循环定时工作，在系统内又是哪些服务在负责？ 还有，如果你想要每年在老婆的生日前一天就发出一封信件提醒自己不要忘记，linux系统下该怎么做呢？</p>
 <p>　　今天我们主要学习一下一次性定时计划任务的at命令的用法！</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ at [参数] [时间]</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ at [参数] [时间]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　在一个指定的时间执行一个指定任务，只能执行一次，且需要开启atd进程（ps -ef | grep atd查看， 开启用/etc/init.d/atd start or restart； 开机即启动则需要运行 chkconfig –level 2345 atd on）。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2466,17 +2450,21 @@
 <pre><code class="bash">$ at 5pm+3 days
 at&gt; /bin/ls
 at&gt; &lt;EOT&gt; # 按一下Ctrl+d就会出现&lt;EOT&gt;结束符
-job 2 at Thu Feb  2 17:00:00 2017</code></pre>
+job 2 at Thu Feb  2 17:00:00 2017
+</code></pre>
 <p><strong><code>例二</code>：明天17点钟，输出时间到指定文件内</strong></p>
 <pre><code class="bash">$ at 17:20 tomorrow
 at&gt; date &gt;/root/2013.log   
-at&gt; &lt;EOT&gt;</code></pre>
+at&gt; &lt;EOT&gt;
+</code></pre>
 <p><strong><code>例三</code>：计划任务设定后，在没有执行之前我们可以用atq命令来查看系统没有执行工作任务</strong></p>
 <pre><code class="bash">$ atq
-2    Thu Feb  2 17:00:00 2017 a faker</code></pre>
+2    Thu Feb  2 17:00:00 2017 a faker
+</code></pre>
 <p><strong><code>例四</code>：删除已经设置的任务</strong></p>
 <pre><code class="bash"># 2 为atq查出来的最前面的任务id
-$ atrm 2</code></pre>
+$ atrm 2
+</code></pre>
 <p><strong><code>例五</code>：显示已经设置的任务内容</strong></p>
 <pre><code class="bash">$ at -c 2
 #!/bin/sh
@@ -2484,12 +2472,15 @@ $ atrm 2</code></pre>
 # mail faker 0
 umask 22
 此处省略n个字符
-/bin/ls</code></pre>
+/bin/ls
+</code></pre>
 <h3 id="atd-的启动与-at-运行的方式"><a href="#atd-的启动与-at-运行的方式" class="headerlink" title="atd 的启动与 at 运行的方式"></a>atd 的启动与 at 运行的方式</h3><h4 id="atd-的启动"><a href="#atd-的启动" class="headerlink" title="atd 的启动"></a>atd 的启动</h4><p>　　要使用一次性计划任务时，我们的 Linux 系统上面必须要有负责这个计划任务的服务，那就是 atd 服务。 不过并非所有的 Linux distributions 都默认会把他打开的，所以，某些时刻我们需要手动将atd 服务激活才行。 激活的方法很简单，就是这样：<br><strong>命令：</strong></p>
 <pre><code class="bash">$ /etc/init.d/atd start
-$ /etc/init.d/atd restart</code></pre>
+$ /etc/init.d/atd restart
+</code></pre>
 <p><strong>配置一下启动时就启动这个服务，免得每次重新启动都得再来一次</strong></p>
-<pre><code class="bash">$ chkconfig atd on</code></pre>
+<pre><code class="bash">$ chkconfig atd on
+</code></pre>
 <h4 id="at-的运行方式"><a href="#at-的运行方式" class="headerlink" title="at 的运行方式"></a>at 的运行方式</h4><p>　　既然是计划任务，那么应该会有任务执行的方式，并且将这些任务排进行程表中。那么产生计划任务的方式是怎么进行的? 事实上，我们使用 at 这个命令来产生所要运行的计划任务，并将这个计划任务以文字档的方式写入 /var/spool/at/ 目录内，该工作便能等待 atd 这个服务的取用与运行了。就这么简单。</p>
 <p>　　不过，并不是所有的人都可以进行 at 计划任务。为什么? 因为系统安全的原因。很多主机被所谓的攻击破解后，最常发现的就是他们的系统当中多了很多的黑客程序， 这些程序非常可能运用一些计划任务来运行或搜集你的系统运行信息,并定时的发送给黑客。 所以，除非是你认可的帐号，否则先不要让他们使用 at 命令。那怎么达到使用 at 的可控呢?</p>
 <p>　　我们可以利用 /etc/at.allow 与 /etc/at.deny 这两个文件来进行 at 的使用限制。加上这两个文件后， at 的工作情况是这样的：</p>

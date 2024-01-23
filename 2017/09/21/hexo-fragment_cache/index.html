@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2342,7 +2325,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-09-21 19:34</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-09-21 19:34</time>
         
     </div>
     <div class="article-meta">
@@ -2397,17 +2380,21 @@
 <p>现在发现了严重的问题，<code>hexo generate</code> 渲染的速度越来越慢，现在132篇左右，每次渲染时间到达了 50+ s，相当不爽。</p>
 <p>今日抽时间，查看了官方api，看到了 <code>fragment_cache</code> 局部缓存这个东西，解决了渲染速度的问题。</p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p>局部缓存。它储存局部内容，下次使用时就能直接使用缓存。</p>
-<pre><code class="javascript">&lt;%- fragment_cache(id, fn); %&gt;</code></pre>
+<pre><code class="javascript">&lt;%- fragment_cache(id, fn); %&gt;
+</code></pre>
 <h3 id="替换简单文本区域"><a href="#替换简单文本区域" class="headerlink" title="替换简单文本区域"></a>替换简单文本区域</h3><p>a. 我们可以将所有页面都一样的区域，如下所示，缓存下来。当下一篇文章在渲染到这个位置时，将不再渲染，直接拿缓存数据。</p>
 <pre><code class="js">&lt;%- fragment_cache(&#39;header&#39;, function()&#123;
     return partial(&#39;&lt;head&gt;&lt;/head&gt;&#39;);
-&#125;) %&gt;</code></pre>
+&#125;) %&gt;
+</code></pre>
 <p>b. 文章模块也可以使用，原来公共引用部分（没有和当前文章耦合的内容）使用下面的方式：</p>
-<pre><code class="js">&lt;%- partial(&#39;_partial/header&#39;); %&gt;</code></pre>
+<pre><code class="js">&lt;%- partial(&#39;_partial/header&#39;); %&gt;
+</code></pre>
 <p>改进为以下代码：</p>
 <pre><code class="js">&lt;%- fragment_cache(&#39;header&#39;, function()&#123;
     return partial(&#39;_partial/header&#39;);
-&#125;) %&gt;</code></pre>
+&#125;) %&gt;
+</code></pre>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>这个语法只适用于所有页面都相同，不随文章内容变化的部分。</p>
 <p>作者在 <code>3-hexo</code> 中加入了此语法，渲染132篇文章的速度已从 50+s 到现在 3s 左右了。</p>
 

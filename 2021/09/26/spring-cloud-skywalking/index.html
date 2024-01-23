@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2342,7 +2325,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2021-09-26 18:08</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2021-09-26 18:08</time>
         
     </div>
     <div class="article-meta">
@@ -2423,7 +2406,8 @@ vi docker-compose.yml
 # 拉去镜像并启动
 docker-compose up -d
 # 查看日志
-docker-compose logs -f</code></pre>
+docker-compose logs -f
+</code></pre>
 <p>docker-compose.yml</p>
 <pre><code class="yaml">version: &#39;3.8&#39;
 services:
@@ -2492,7 +2476,8 @@ services:
 <p>通过命令或者软件进行解压 <code>tar -zxvf apache-skywalking-apm-8.7.0.tar.gz</code></p>
 <h3 id="3-java-命令使用代码启动-jar-包"><a href="#3-java-命令使用代码启动-jar-包" class="headerlink" title="3. java 命令使用代码启动 jar 包"></a>3. java 命令使用代码启动 jar 包</h3><p>springcloud/springboot 一般是通过 <code>java -jar xxx.jar</code> 进行启动。我们只需要在其中加上 <code>-javaagent</code> 参数即可，如下</p>
 <p>其中 <strong>自定义服务名</strong> 可以改为应用名 如 <code>lemes-auth</code>，<strong>服务ip</strong> 为第一步搭建的 SkyWalking 服务的ip，<strong>端口11800</strong> 为启动的 oap 这个容器的端口</p>
-<pre><code class="bash">java -javaagent:上一步解压目录/agent/skywalking-agent.jar=agent.service_name=自定义服务名,collector.backend_service=服务ip:11800 -jar xx.jar</code></pre>
+<pre><code class="bash">java -javaagent:上一步解压目录/agent/skywalking-agent.jar=agent.service_name=自定义服务名,collector.backend_service=服务ip:11800 -jar xx.jar
+</code></pre>
 <p>执行命令启动后，访问以下接口，就可以在第一步 <code>服务ip:8080</code> 中看到访问的链接和调用链路。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926164151.png" alt="链路追踪"><br><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926164350.png" alt="拓扑图"></p>
 <h3 id="4-开启日志收集"><a href="#4-开启日志收集" class="headerlink" title="4. 开启日志收集"></a>4. 开启日志收集</h3><p>本文主要以 log4j2 来介绍，其他的大同小异，可以网上找教程。SpringCloud 集成 log4j2 不是本文重点，所以请自行 Google。</p>
@@ -2501,7 +2486,8 @@ services:
     &lt;groupId&gt;org.apache.skywalking&lt;/groupId&gt;
     &lt;artifactId&gt;apm-toolkit-log4j-2.x&lt;/artifactId&gt;
     &lt;version&gt;8.7.0&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
+&lt;/dependency&gt;
+</code></pre>
 <h4 id="修改-log4j2-xml"><a href="#修改-log4j2-xml" class="headerlink" title="修改 log4j2.xml"></a>修改 log4j2.xml</h4><p>需要修改 log4j2.xml 主要添加下面两个关键点</p>
 <ul>
 <li>添加 <code>%traceId</code> 来打印 traceid</li>
@@ -2561,7 +2547,8 @@ services:
 </code></pre>
 <h4 id="启动命令中声明上报日志"><a href="#启动命令中声明上报日志" class="headerlink" title="启动命令中声明上报日志"></a>启动命令中声明上报日志</h4><p>在上一步的 agent 中添加上报日志的参数 <code>plugin.toolkit.log.grpc.reporter.server_host=服务ip,plugin.toolkit.log.grpc.reporter.server_port=11800</code></p>
 <p>完整如下</p>
-<pre><code class="bash">java -javaagent:上一步解压目录/agent/skywalking-agent.jar=agent.service_name=自定义服务名,collector.backend_service=服务ip:11800,plugin.toolkit.log.grpc.reporter.server_host=服务ip,plugin.toolkit.log.grpc.reporter.server_port=11800 -jar xx.jar</code></pre>
+<pre><code class="bash">java -javaagent:上一步解压目录/agent/skywalking-agent.jar=agent.service_name=自定义服务名,collector.backend_service=服务ip:11800,plugin.toolkit.log.grpc.reporter.server_host=服务ip,plugin.toolkit.log.grpc.reporter.server_port=11800 -jar xx.jar
+</code></pre>
 <h4 id="日志收集效果"><a href="#日志收集效果" class="headerlink" title="日志收集效果"></a>日志收集效果</h4><p>这样启动日志中就会打印 traceid , <code>N/A</code> 代表的是非请求的日志，有 traceid 的为 api 请求日志</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926170409.png" alt="traceid"></p>
 <p>在 skywalking 中就能看到我们上报的日志</p>

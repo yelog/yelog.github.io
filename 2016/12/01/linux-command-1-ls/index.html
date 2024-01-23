@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2016-12-01 09:38</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-12-01 09:38</time>
         
     </div>
     <div class="article-meta">
@@ -2391,7 +2374,8 @@
       
         <p>　　ls命令是linux下最常用的命令。ls命令就是list的缩写，缺省下ls用来打印出当前目录的清单，如果ls指定其他目录，那么就会显示指定目录里的文件及文件夹清单。 通过ls命令不仅可以查看linux文件夹包含的文件，而且可以查看文件权限(包括目录、文件夹、文件权限)、查看目录信息等等。ls命令在日常的linux操作中用的很多!</p>
 <span id="more"></span>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="shell">$ ls [选项] [目录名]</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="shell">$ ls [选项] [目录名]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>列出目标目录中所有的子目录和文件。</p>
 <h3 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h3><table>
 <thead>
@@ -2547,33 +2531,46 @@
 </tbody></table>
 <h3 id="常用范例"><a href="#常用范例" class="headerlink" title="常用范例"></a>常用范例</h3><p><strong><code>例一</code>：列出/home/faker/ 文件夹下的所有文件和目录的详细资料</strong></p>
 <pre><code class="bash">$ ls -l -R /home/faker
-$ ls -lR /home/faker</code></pre>
+$ ls -lR /home/faker
+</code></pre>
 <p><strong><code>例二</code>：列出当前目录中所有以“t”开头的目录的详细内容，可以使用如下命令</strong></p>
-<pre><code class="bash">$ ls -l t*</code></pre>
+<pre><code class="bash">$ ls -l t*
+</code></pre>
 <p><strong><code>例三</code>：只列出文件下的子目录</strong></p>
-<pre><code class="bash">$ ls -F /opt/soft |grep /$</code></pre>
+<pre><code class="bash">$ ls -F /opt/soft |grep /$
+</code></pre>
 <p><strong><code>例四</code>：列出文件下的子目录详细情况</strong></p>
-<pre><code class="bash">$ ls -l /opt/soft | grep &quot;^d&quot;</code></pre>
+<pre><code class="bash">$ ls -l /opt/soft | grep &quot;^d&quot;
+</code></pre>
 <p><strong><code>例五</code>：列出目前工作目录下所有名称是s 开头的文件，愈新的排愈后面，可以使用如下命令</strong></p>
-<pre><code class="bash">$ ls -ltr s*</code></pre>
+<pre><code class="bash">$ ls -ltr s*
+</code></pre>
 <p><strong><code>例六</code>：列出目前工作目录下所有档案及目录;目录于名称后加”/“, 可执行档于名称后加<code>*</code></strong></p>
-<pre><code class="bash">$ ls -AF</code></pre>
+<pre><code class="bash">$ ls -AF
+</code></pre>
 <p><strong><code>例七</code>：计算当前目录下的文件数和目录数</strong></p>
 <pre><code class="bash">$ ls -l * |grep &quot;^-&quot;|wc -l    ---文件个数
-$ ls -l * |grep &quot;^d&quot;|wc -l    ---目录个数</code></pre>
+$ ls -l * |grep &quot;^d&quot;|wc -l    ---目录个数
+</code></pre>
 <p><strong><code>例八</code>：在ls中列出文件的绝对路径</strong></p>
-<pre><code class="bash">$ ls | sed &quot;s:^:`pwd`/:&quot;</code></pre>
+<pre><code class="bash">$ ls | sed &quot;s:^:`pwd`/:&quot;
+</code></pre>
 <p><strong><code>例九</code>：列出当前目录下的所有文件（包括隐藏文件）的绝对路径， 对目录不做递归</strong></p>
-<pre><code class="bash">$ find $PWD -maxdepth 1 | xargs ls -ld</code></pre>
+<pre><code class="bash">$ find $PWD -maxdepth 1 | xargs ls -ld
+</code></pre>
 <p><strong><code>例十</code>：列出当前目录下的所有文件（包括隐藏文件）的绝对路径， 对目录不做递归</strong></p>
-<pre><code class="bash">$ find $PWD -maxdepth 1 | xargs ls -ld</code></pre>
+<pre><code class="bash">$ find $PWD -maxdepth 1 | xargs ls -ld
+</code></pre>
 <p><strong><code>例十</code>：递归列出当前目录下的所有文件（包括隐藏文件）的绝对路径</strong></p>
-<pre><code class="bash">$ find $PWD | xargs ls -ld</code></pre>
+<pre><code class="bash">$ find $PWD | xargs ls -ld
+</code></pre>
 <p><strong><code>例十</code>：指定文件时间输出格式</strong></p>
 <pre><code class="bash">$ ls -tl --time-style=full-iso
-$ ls -ctl --time-style=long-iso</code></pre>
+$ ls -ctl --time-style=long-iso
+</code></pre>
 <pre><code class="bash">2016-08-05 22:17:06.020535551 +0800
-2016-10-29 12:03</code></pre>
+2016-10-29 12:03
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

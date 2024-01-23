@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2340,7 +2323,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-07-05 15:09</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-07-05 15:09</time>
         
     </div>
     <div class="article-meta">
@@ -2399,18 +2382,21 @@
 <ol>
 <li>将451行 ，这一步取消了对 <code>\\,\&#123;,\&#125;</code> 的转义(escape)<pre><code class="js">escape: /^\\([\\`*&#123;&#125;\[\]()# +\-.!_&gt;])/,
 改为
-escape: /^\\([`*\[\]()# +\-.!_&gt;])/,</code></pre>
+escape: /^\\([`*\[\]()# +\-.!_&gt;])/,
+</code></pre>
 </li>
 <li>将459行，这一步取消了对斜体标记 <code>_</code> 的转义<pre><code class="js">em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
 改为
-em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</code></pre>
+em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+</code></pre>
 </li>
 </ol>
 <h2 id="开启MathJax"><a href="#开启MathJax" class="headerlink" title="开启MathJax"></a>开启MathJax</h2><p>修改 <code>3-hexo/_config.yml</code></p>
 <pre><code class="xml"># MathJax 数学公式支持
 mathjax:
   on: true #是否启用
-  per_page: false # 若只渲染单个页面，此选项设为false，页面内加入 mathjax: true</code></pre>
+  per_page: false # 若只渲染单个页面，此选项设为false，页面内加入 mathjax: true
+</code></pre>
 <p>考虑到页面的加载速度，支持渲染单个页面。</p>
 <p>设置 <code>per_page: false</code> ,在需要渲染的页面内 加入 <code>mathjax: true</code></p>
 <p>这样，就可以在页面内写MathJax公式了。</p>
@@ -2427,7 +2413,8 @@ f(n) =
 n/2,  &amp; \text&#123;if $n$ is even&#125; \\
 3n+1, &amp; \text&#123;if $n$ is odd&#125;
 \end&#123;cases&#125;
-$$</code></pre>
+$$
+</code></pre>
 <p>$$<br>f(n) =<br>\begin{cases}<br>n/2,  &amp; \text{if $n$ is even} \<br>3n+1, &amp; \text{if $n$ is odd}<br>\end{cases}<br>$$</p>
 <p>行内公式 <code>$y=ax+b$</code>：$y=ax+b$</p>
 <p>行内公式 <code>$\cos 2\theta = \cos^2 \theta - \sin^2 \theta = 2 \cos^2 \theta$</code>：$\cos 2\theta = \cos^2 \theta - \sin^2 \theta = 2 \cos^2 \theta$</p>
@@ -2438,7 +2425,8 @@ $$</code></pre>
 <pre><code>$$
 \begin&#123;equation&#125;
 \end&#123;equation&#125;
-$$</code></pre>
+$$
+</code></pre>
 <p>进行公式自动编号，同时会自动连续编号，例如：</p>
 <pre><code class="xml">$$
 \begin&#123;equation&#125;
@@ -2449,19 +2437,22 @@ $$
 \begin&#123;equation&#125;
 \beta^*(D) = \mathop&#123;argmin&#125; \limits_&#123;\beta&#125; \lambda &#123;||\beta||&#125;^2 + \sum_&#123;i=1&#125;^n max(0, 1 - y_i f_&#123;\beta&#125;(x_i))
 \end&#123;equation&#125;
-$$</code></pre>
+$$
+</code></pre>
 <p>$$<br>\begin{equation}<br>\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 )<br>\end{equation}<br>$$<br>$$<br>\begin{equation}<br>\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i))<br>\end{equation}<br>$$</p>
 <h2 id="MathJax公式手动编号"><a href="#MathJax公式手动编号" class="headerlink" title="MathJax公式手动编号"></a>MathJax公式手动编号</h2><p>可以在公式书写时使用 <code>\tag&#123;手动编号&#125;</code> 添加手动编号，例如：</p>
 <pre><code>$$
 \begin&#123;equation&#125;
 \sum_&#123;i=0&#125;^n F_i \cdot \phi (H, p_i) - \sum_&#123;i=1&#125;^n a_i \cdot ( \tilde&#123;x_i&#125;, \tilde&#123;y_i&#125;) + b_i \cdot ( \tilde&#123;x_i&#125;^2 , \tilde&#123;y_i&#125;^2 ) \tag&#123;1.2.3&#125;
 \end&#123;equation&#125;
-$$</code></pre>
+$$
+</code></pre>
 <p>$$<br>\begin{equation}<br>\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 ) \tag{1.2.3}<br>\end{equation}<br>$$</p>
 <p>不加 <code>\begin&#123;equation&#125; \end&#123;equation&#125;</code> 也可以，例如：</p>
 <pre><code>$$
 \beta^*(D) = \mathop&#123;argmin&#125; \limits_&#123;\beta&#125; \lambda &#123;||\beta||&#125;^2 + \sum_&#123;i=1&#125;^n max(0, 1 - y_i f_&#123;\beta&#125;(x_i)) \tag&#123;我的公式3&#125;
-$$</code></pre>
+$$
+</code></pre>
 <p>$$<br>\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i)) \tag{我的公式3}<br>$$</p>
 <p>行内公式加\tag{}后会自动成为行间公式，例如： <code>$z = (p_0, ..... , p_n) \tag&#123;公式21&#125; $</code><br>$z = (p_0, ….. , p_n) \tag{公式21} $</p>
 <h3 id="4-其他公式书写技巧"><a href="#4-其他公式书写技巧" class="headerlink" title="4.其他公式书写技巧"></a>4.其他公式书写技巧</h3><p><strong>如何将下标放到正下方？</strong><br>① 如果是数学符号，那么直接用 <code>\limits</code> 命令放在正下方，如Max函数下面的取值范围，需要放在Max的正下方。可以如下实现：<br><code>$ \max \limits_&#123;a&lt;x&lt;b&#125;\&#123;f(x)\&#125; $</code><br>$ \max \limits_{a&lt;x&lt;b}{f(x)} $</p>
@@ -2473,7 +2464,8 @@ $$</code></pre>
 1 &amp; y &amp; y^2 \\
 1 &amp; z &amp; z^2 \\
 \end&#123;matrix&#125;
-$$</code></pre>
+$$
+</code></pre>
 <p>$$<br>\begin{matrix}<br>1 &amp; x &amp; x^2 \<br>1 &amp; y &amp; y^2 \<br>1 &amp; z &amp; z^2 \<br>\end{matrix}<br>$$</p>
 <p>有括号有竖线矩阵：</p>
 <pre><code>$$
@@ -2483,7 +2475,8 @@ $$</code></pre>
       4&amp;5&amp;6
     \end&#123;array&#125;
 \right]
-$$</code></pre>
+$$
+</code></pre>
 <p>$$<br>\left[<br>    \begin{array}{cc|c}<br>      1&amp;2&amp;3\<br>      4&amp;5&amp;6<br>    \end{array}<br>\right]<br>$$</p>
 <p>行内小矩阵：<br><code>$\bigl( \begin&#123;smallmatrix&#125; a &amp; b \\ c &amp; d \end&#123;smallmatrix&#125; \bigr)$</code><br>$\bigl( \begin{smallmatrix} a &amp; b \ c &amp; d \end{smallmatrix} \bigr)$</p>
 <p>这里有个问题，上面的写法在矩阵内没有换行，我看了下源码，双反斜杠\又被MarkDown渲染引擎转义为单个反斜杠了，解决方法是写三个反斜杠\\或在双反斜杠后换行即可：</p>

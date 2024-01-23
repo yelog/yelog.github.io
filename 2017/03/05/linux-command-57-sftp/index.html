@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-03-05 16:29</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-03-05 16:29</time>
         
     </div>
     <div class="article-meta">
@@ -2394,7 +2377,8 @@
 <p>在本文中，我们将向你展示如何使用 sFTP 上传/下载整个目录（包括其子目录和子文件）。</p>
 <h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h2><p>默认情况下，SFTP 协议采用和 SSH 传输协议一样的方式建立到远程服务器的安全连接。虽然，用户验证使用类似于 SSH 默认设置的密码方式，但是，建议创建和使用 SSH 无密码登录，以简化和更安全地连接到远程主机。</p>
 <p>要连接到远程 sftp 服务器，如下建立一个安全 SSH 连接并创建 SFTP 会话：</p>
-<pre><code class="bash">$ sftp root@server</code></pre>
+<pre><code class="bash">$ sftp root@server
+</code></pre>
 <p>登录到远程主机后，你可以如下运行交互式的 sFTP 命令：</p>
 <pre><code class="bash">sftp&gt; ls            #列出服务器文件列表
 sftp&gt; lls           #列出本地文件列表
@@ -2403,22 +2387,29 @@ sftp&gt; lpwd          #当前本地路径
 sftp&gt; cd img        #切换服务器路径
 sftp&gt; lcd img       #切换本地路径
 sftp&gt; mkdir img     #在服务器上创建一个目录
-sftp&gt; lmkdir img    #在本地创建一个目录</code></pre>
+sftp&gt; lmkdir img    #在本地创建一个目录
+</code></pre>
 <h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><pre><code class="bash">sftp&gt; put readme.md #上传单个文件
-sftp&gt; mput *.xls    #上传多个文件</code></pre>
+sftp&gt; mput *.xls    #上传多个文件
+</code></pre>
 <h2 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h2><pre><code class="bash">sftp&gt; get readme.md #下载单个文件
-sftp&gt; mget *.xls    #下载多个文件</code></pre>
+sftp&gt; mget *.xls    #下载多个文件
+</code></pre>
 <h2 id="上传文件夹"><a href="#上传文件夹" class="headerlink" title="上传文件夹"></a>上传文件夹</h2><p>使用<code>put -r</code> .但是远程服务器要提前创建一个相同名称的目录; <code>-r</code> 递归复制子目录和子文件</p>
 <pre><code class="bash">sftp&gt; mkdir img
-sftp&gt; put -r img</code></pre>
+sftp&gt; put -r img
+</code></pre>
 <p>要保留修改时间、访问时间以及被传输的文件的模式，可使用 <code>-p</code> 。</p>
-<pre><code class="bash">sftp&gt; put -pr img</code></pre>
-<h2 id="下载文件夹"><a href="#下载文件夹" class="headerlink" title="下载文件夹"></a>下载文件夹</h2><pre><code class="bash">sftp&gt; get -r img</code></pre>
+<pre><code class="bash">sftp&gt; put -pr img
+</code></pre>
+<h2 id="下载文件夹"><a href="#下载文件夹" class="headerlink" title="下载文件夹"></a>下载文件夹</h2><pre><code class="bash">sftp&gt; get -r img
+</code></pre>
 <h2 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h2><pre><code class="bash">sftp&gt; bye
 或
 sftp&gt; exit
 或
-ctrl + d</code></pre>
+ctrl + d
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

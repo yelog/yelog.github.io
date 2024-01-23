@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-11-27 22:51</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-11-27 22:51</time>
         
     </div>
     <div class="article-meta">
@@ -2419,14 +2402,16 @@ public static void main(String[] args) &#123;
     map.put(&quot;hello&quot;,&quot;你好&quot;);
     String hello = map.get(&quot;hello&quot;);
     System.out.println(hello);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>当上述源代码被编译为class文件后，泛型被擦除且引入强制类型转换</p>
 <pre><code class="java">public static void main(String[] args) &#123;
     HashMap map = new HashMap(); //类型擦除
     map.put(&quot;hello&quot;, &quot;你好&quot;);
     String hello = (String)map.get(&quot;hello&quot;);//强制转换
     System.out.println(hello);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h2 id="自动装箱与拆箱"><a href="#自动装箱与拆箱" class="headerlink" title="自动装箱与拆箱"></a>自动装箱与拆箱</h2><blockquote>
 <p>Java中的自动装箱与拆箱指的是基本数据类型与他们的包装类型之间的相互转换。</p>
 </blockquote>
@@ -2437,14 +2422,16 @@ public static void main(String[] args) &#123;
     int b = 2;
     int c = a + b;
     System.out.println(c);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>经过编译后，代码如下</p>
 <pre><code class="java">public static void main(String[] args) &#123;
     Integer a = Integer.valueOf(1); // 自动装箱
     byte b = 2;
     int c = a.intValue() + b;//自动拆箱
     System.out.println(c);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h2 id="变长参数"><a href="#变长参数" class="headerlink" title="变长参数"></a>变长参数</h2><blockquote>
 <p>所谓变长参数，就是方法可以接受长度不定确定的参数</p>
 </blockquote>
@@ -2459,7 +2446,8 @@ public static void main(String[] args) &#123;
     public static void main(String[] args) &#123;
         print(&quot;hello&quot;, &quot;world&quot;);
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>编译为class文件后如下，从中可以很明显的看出变长参数内部是通过数组实现的</p>
 <pre><code class="java">public class Varargs &#123;
     public Varargs() &#123;
@@ -2480,7 +2468,8 @@ public static void main(String[] args) &#123;
         //变长参数转换为数组
         print(new String[]&#123;&quot;hello&quot;, &quot;world&quot;&#125;);
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h2 id="增强for循环"><a href="#增强for循环" class="headerlink" title="增强for循环"></a>增强for循环</h2><blockquote>
 <p>增强for循环与普通for循环相比，功能更强并且代码更简洁</p>
 </blockquote>
@@ -2497,7 +2486,8 @@ public static void main(String[] args) &#123;
     for(String str : lists)&#123;
         System.out.println(str);
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>编译后的class文件为</p>
 <pre><code class="java">public static void main(String[] args) &#123;
    String[] params = new String[]&#123;&quot;hello&quot;, &quot;world&quot;&#125;;
@@ -2517,7 +2507,8 @@ public static void main(String[] args) &#123;
        System.out.println(var8);
    &#125;
 
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><blockquote>
 <p>内部类就是定义在一个类内部的类</p>
 </blockquote>
@@ -2525,13 +2516,15 @@ public static void main(String[] args) &#123;
 <pre><code class="java">public class Outer &#123;
     class Inner&#123;
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>使用javac编译后，生成两个class文件Outer.class和Outer$Inner.class，其中Outer$Inner.class的内容如下：</p>
 <pre><code class="java">class Outer$Inner &#123;
     Outer$Inner(Outer var1) &#123;
         this.this$0 = var1;
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>内部类分为四种：成员内部类、局部内部类、匿名内部类、静态内部类，每一种都有其用法，这里就不介绍了</p>
 <h2 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h2><blockquote>
 <p>枚举类型就是一些具有相同特性的类常量</p>
@@ -2539,7 +2532,8 @@ public static void main(String[] args) &#123;
 <p>java中类的定义使用class，枚举类的定义使用enum。在Java的字节码结构中，其实并没有枚举类型，枚举类型只是一个语法糖，在编译完成后被编译成一个普通的类。这个类继承java.lang.Enum，并被final关键字修饰。</p>
 <pre><code class="java">public enum Fruit &#123;
     APPLE,ORINGE
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>使用jad对编译后的class文件进行反编译后得到</p>
 <pre><code class="java">//继承java.lang.Enum并声明为final
 public final class Fruit extends Enum
@@ -2572,7 +2566,8 @@ public final class Fruit extends Enum
             APPLE, ORANGE
         &#125;);
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

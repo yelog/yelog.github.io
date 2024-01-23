@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:49'>2017-05-19 16:32</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:11'>2017-05-19 16:32</time>
         
     </div>
     <div class="article-meta">
@@ -2397,15 +2380,18 @@ $ curl -sSL https://get.docker.com/ | sh
 $ curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh -
 
 # DaoCloud 的安装脚本
-$ curl -sSL https://get.daocloud.io/docker | sh</code></pre>
+$ curl -sSL https://get.daocloud.io/docker | sh
+</code></pre>
 <h3 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h3><p><a target="_blank" rel="noopener" href="https://hub.docker.com/explore/">Docker Hub</a> 上有大量的高质量的镜像可以用，这里我们就说一下怎么获取这些镜像并运行。<br>从 Docker Registry 获取镜像的命令是 docker pull。其命令格式为：</p>
-<pre><code class="bash">$ docker pull [选项] [Docker Registry地址]&lt;仓库名&gt;:&lt;标签&gt;</code></pre>
+<pre><code class="bash">$ docker pull [选项] [Docker Registry地址]&lt;仓库名&gt;:&lt;标签&gt;
+</code></pre>
 <p>具体的选项可以通过 <code>docker pull --help</code> 命令看到，这里我们说一下镜像名称的格式。</p>
 <ul>
 <li>Docker Registry地址：地址的格式一般是 <code>&lt;域名/IP&gt;[:端口号]</code>。默认地址是 <code>Docker Hub</code>。</li>
 <li>仓库名：如之前所说，这里的仓库名是两段式名称，既 <code>&lt;用户名&gt;/&lt;软件名&gt;</code>。对于 Docker Hub，如果不给出用户名，则默认为 library，也就是官方镜像。</li>
 </ul>
-<pre><code class="bash">$ sudo docker pull ubuntu</code></pre>
+<pre><code class="bash">$ sudo docker pull ubuntu
+</code></pre>
 <h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>有了镜像后，我们就可以以这个镜像为基础启动一个容器来运行。以上面的 <code>ubuntu</code> 为例，如果我们打算启动里面的 <code>bash</code> 并且进行交互式操作的话，可以执行下面的命令。</p>
 <pre><code class="bash">$ sudo docker run -it --rm ubuntu
 root@0ae011f7b5be:/# cat /etc/os-release  
@@ -2419,7 +2405,8 @@ HOME_URL=&quot;http://www.ubuntu.com/&quot;
 SUPPORT_URL=&quot;http://help.ubuntu.com/&quot;
 BUG_REPORT_URL=&quot;http://bugs.launchpad.net/ubuntu/&quot;
 VERSION_CODENAME=xenial
-UBUNTU_CODENAME=xenial</code></pre>
+UBUNTU_CODENAME=xenial
+</code></pre>
 <p><code>docker run</code> 就是运行容器的命令</p>
 <ul>
 <li><code>-it</code>：这是两个参数，一个是 <code>-i</code>：交互式操作，一个是 <code>-t</code> 终端。我们这里打算进入 bash 执行一些命令并查看返回结果，因此我们需要交互式终端。</li>

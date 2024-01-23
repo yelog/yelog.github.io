@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:49'>2020-10-20 19:43</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2020-10-20 19:43</time>
         
     </div>
     <div class="article-meta">
@@ -2403,7 +2386,8 @@
   //当上面&quot;逻辑&quot;中调用 resolve() 时触发此方法
 &#125;).catch(()=&gt;&#123;
   //当上面&quot;逻辑&quot;中调用 reject() 时触发此方法
-&#125;)</code></pre>
+&#125;)
+</code></pre>
 <h3 id="2-2-执行顺序"><a href="#2-2-执行顺序" class="headerlink" title="2.2 执行顺序"></a>2.2 执行顺序</h3><p><code>Promise</code>一旦创建就立即执行，并且无法中途取消，执行逻辑和顺序可以从下面的示例中获得</p>
 <p>如下，可修改 <code>if</code> 条件来改变异步结果，下面打印开始的数字是执行顺序</p>
 <p><a target="_blank" rel="noopener" href="https://jsbin.com/cijuwakeha/1/edit?js,console">在线调试此示例 - jsbin</a></p>
@@ -2425,13 +2409,15 @@ new Promise(function(resolve, reject) &#123;
 &#125;).catch((error)=&gt;&#123;
   console.log(&#39;5.调用了catch，错误信息：&#39; + error)
 &#125;)
-console.log(&#39;3.本行为同步操作，所以先于 Promise 内的异步操作（setTimeout）&#39;)</code></pre>
+console.log(&#39;3.本行为同步操作，所以先于 Promise 内的异步操作（setTimeout）&#39;)
+</code></pre>
 <p>执行结果如下</p>
 <pre><code class="javascript">&quot;1.开始创建并执行 Promise&quot;
 &quot;2.由于创建会立即执行，所以会立即执行到本行&quot;
 &quot;3.本行为同步操作，所以先于 Promise 内的异步操作（setTimeout）&quot;
 &quot;4. 1s之期已到，开始执行异步操作&quot;
-&quot;5.调用了then，接收数据：成功&quot;</code></pre>
+&quot;5.调用了then，接收数据：成功&quot;
+</code></pre>
 <h3 id="2-3-用函数封装-Promise"><a href="#2-3-用函数封装-Promise" class="headerlink" title="2.3 用函数封装 Promise"></a>2.3 用函数封装 Promise</h3><p>这是比较常用的方法，如下用 <code>setTimeout</code> 模拟异步请求，封装通用请求函数</p>
 <p><a target="_blank" rel="noopener" href="https://jsbin.com/figuhohoki/1/edit?js,console">在线调试此示例 - jsbin</a></p>
 <pre><code class="javascript">// 这是一个异步方法
@@ -2447,11 +2433,13 @@ function ajax(url)&#123;
 // 调用请求函数，并接受处理返回结果
 ajax(&#39;/user/list&#39;).then((res)=&gt;&#123;
   console.log(res)
-&#125;)</code></pre>
+&#125;)
+</code></pre>
 <p>执行结果</p>
 <pre><code class="javascript">&quot;异步方法开始执行&quot;
 &quot;异步方法执行完成&quot;
-&quot;/user/list的结果集&quot;</code></pre>
+&quot;/user/list的结果集&quot;
+</code></pre>
 <h2 id="三、高级用法"><a href="#三、高级用法" class="headerlink" title="三、高级用法"></a>三、高级用法</h2><h3 id="3-1-同时支持Callback与Promise"><a href="#3-1-同时支持Callback与Promise" class="headerlink" title="3.1 同时支持Callback与Promise"></a>3.1 同时支持Callback与Promise</h3><p><a target="_blank" rel="noopener" href="https://jsbin.com/qitewirina/1/edit?js,console">在线调试此示例 - jsbin</a></p>
 <pre><code class="javascript">function ajax(url, success, fail) &#123;
 
@@ -2484,10 +2472,12 @@ ajax(&#39;/user/get&#39;).then((res)=&gt;&#123;
   console.log(&#39;Pormise请求成功！返回结果：&#39;, res)
 &#125;).catch((error)=&gt;&#123;
   console.log(&#39;Promise请求失败！返回结果：&#39;, error)
-&#125;)</code></pre>
+&#125;)
+</code></pre>
 <p>执行结果</p>
 <pre><code class="javascript">Callback请求成功！返回结果: &#123;user: &quot;羊&quot;&#125;
-Pormise请求成功！返回结果： &#123;user: &quot;羊&quot;&#125;</code></pre>
+Pormise请求成功！返回结果： &#123;user: &quot;羊&quot;&#125;
+</code></pre>
 <h3 id="3-2-链式调用"><a href="#3-2-链式调用" class="headerlink" title="3.2 链式调用"></a>3.2 链式调用</h3><p><code>.then</code> 支持返回 <code>Promise</code> 对象进行链式调用</p>
 <pre><code class="javascript">ajax(&#39;/user/info&#39;).then((res)=&gt;&#123;
   // 用户信息查询成功后，可以根据返回结果查询后续信息
@@ -2498,7 +2488,8 @@ Pormise请求成功！返回结果： &#123;user: &quot;羊&quot;&#125;</code></
   return ajax(&#39;/user/friends&#39;)
 &#125;).then((res)=&gt;&#123;
   console.log(&#39;用户朋友:&#39;, res)
-&#125;)</code></pre>
+&#125;)
+</code></pre>
 <h3 id="3-3-Promise-all"><a href="#3-3-Promise-all" class="headerlink" title="3.3 Promise.all"></a>3.3 Promise.all</h3><p><code>Promise.all</code> 方法用于将多个 <code>Promise</code> 实例，包装成一个新的 <code>Promise</code> 实例。<br><a target="_blank" rel="noopener" href="https://jsbin.com/xojifuzapo/1/edit?js,console">在线调试此示例 - jsbin</a></p>
 <pre><code class="javascript">// 生成一个Promise对象的数组
 var promises = [2, 3, 5, 7, 11, 13].map(function(id)&#123;
@@ -2514,9 +2505,11 @@ Promise.all(promises).then(function(post) &#123;
   console.log(&#39;全部通过&#39;)
 &#125;).catch(function(reason)&#123;
   console.log(&#39;未全部通过，有问题id：&#39;+reason)
-&#125;);</code></pre>
+&#125;);
+</code></pre>
 <p>执行结果</p>
-<pre><code class="javascript">未全部通过，有问题id：2</code></pre>
+<pre><code class="javascript">未全部通过，有问题id：2
+</code></pre>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">mozilla web docs</a></p>
 
       

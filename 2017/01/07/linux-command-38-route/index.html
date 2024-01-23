@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2017-01-07 10:16</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-01-07 10:16</time>
         
     </div>
     <div class="article-meta">
@@ -2391,7 +2374,8 @@
       
         <p>　　Linux系统的route命令用于显示和操作IP路由表（show / manipulate the IP routing table）。要实现两个不同的子网之间的通信，需要一台连接两个网络的路由器，或者同时位于两个网络的网关来实现。在Linux系统中，设置路由通常是为了解决以下问题：该Linux系统在一个局域网中，局域网中有一个网关，能够让机器访问Internet，那么就需要将这台机器的IP地址设置为Linux机器的默认路由。要注意的是，直接在命令行下执行route命令来添加路由，不会永久保存，当网卡重启或者机器重启之后，该路由就失效了；可以在/etc/rc.local中添加route命令来保证该路由设置永久有效。</p>
 <span id="more"></span>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">route [-f] [-p] [Command [Destination] [mask Netmask] [Gateway] [metric Metric]] [if Interface]]</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">route [-f] [-p] [Command [Destination] [mask Netmask] [Gateway] [metric Metric]] [if Interface]]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　Route命令是用于操作基于内核ip路由表，它的主要作用是创建一个静态路由让指定一个主机或者一个网络通过一个网络接口，如eth0。当使用”add”或者”del”参数时，路由表被修改，如果没有参数，则显示路由表当前的内容。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2483,7 +2467,8 @@
 </tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示当前路由</strong></p>
 <pre><code class="bash">$ route
-$ route -n</code></pre>
+$ route -n
+</code></pre>
 <pre><code class="bash">[root@localhost ~]# route
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
@@ -2497,22 +2482,27 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 192.168.120.0   0.0.0.0         255.255.255.0   U     0      0        0 eth0
 192.168.0.0     192.168.120.1   255.255.0.0     UG    0      0        0 eth0
 10.0.0.0        192.168.120.1   255.0.0.0       UG    0      0        0 eth0
-0.0.0.0         192.168.120.240 0.0.0.0         UG    0      0        0 eth0</code></pre>
+0.0.0.0         192.168.120.240 0.0.0.0         UG    0      0        0 eth0
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　第一行表示主机所在网络的地址为192.168.120.0，若数据传送目标是在本局域网内通信，则可直接通过eth0转发数据包;<br>　　第四行表示数据传送目的是访问Internet，则由接口eth0，将数据包发送到网关192.168.120.240<br>　　其中Flags为路由标志，标记当前网络节点的状态。<br>　　Flags标志说明：<br>　　U Up表示此路由当前为启动状态<br>　　H Host，表示此网关为一主机<br>　　G Gateway，表示此网关为一路由器<br>　　R Reinstate Route，使用动态路由重新初始化的路由<br>　　D Dynamically,此路由是动态性地写入<br>　　M Modified，此路由是由路由守护程序或导向器动态修改<br>　　! 表示此路由当前为关闭状态<br><strong>备注：</strong><br>　　route -n (-n 表示不解析名字,列出速度会比route 快)</p>
 </blockquote>
 <p><strong><code>例二</code>：添加网关/设置网关</strong></p>
 <pre><code class="bash"># 增加一条 到达244.0.0.0的路由
-$ route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0</code></pre>
+$ route add -net 224.0.0.0 netmask 240.0.0.0 dev eth0
+</code></pre>
 <p><strong><code>例三</code>：屏蔽一条路由</strong></p>
 <pre><code class="bash"># 增加一条屏蔽的路由，目的地址为 224.x.x.x 将被拒绝
-$ route add -net 224.0.0.0 netmask 240.0.0.0 reject</code></pre>
+$ route add -net 224.0.0.0 netmask 240.0.0.0 reject
+</code></pre>
 <p><strong><code>例四</code>：删除路由记录</strong></p>
 <pre><code class="bash">$ route del -net 224.0.0.0 netmask 240.0.0.0
-$ route del -net 224.0.0.0 netmask 240.0.0.0 reject</code></pre>
+$ route del -net 224.0.0.0 netmask 240.0.0.0 reject
+</code></pre>
 <p><strong><code>例五</code>：删除和添加设置默认网关</strong></p>
 <pre><code class="bash">$ route del default gw 192.168.120.240
-$ route add default gw 192.168.120.240</code></pre>
+$ route add default gw 192.168.120.240
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

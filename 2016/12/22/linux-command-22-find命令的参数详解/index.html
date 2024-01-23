@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(161)</small>
+                <small>(160)</small>
             
         </div>
     </li>
@@ -379,7 +379,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(12)</small>
+            <small>(11)</small>
         </div>
         
     </li>
@@ -495,7 +495,7 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="161">
+<input type="hidden" id="yelog_site_posts_number" value="160">
 <input type="hidden" id="yelog_site_word_count" value="157.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
@@ -579,10 +579,6 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>AngularJs</a>
-            </li>
-        
-            <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>architecture</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -770,10 +766,6 @@
             </li>
         
             <li class="article-tag-list-item">
-                <i class="iconfont icon-tag"></i><a>product</a>
-            </li>
-        
-            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>reading</a>
             </li>
         
@@ -877,15 +869,6 @@
            data-author="" >
             <span class="post-title" title="swift 离线图片识别文字(ocr)">swift 离线图片识别文字(ocr)</span>
             <span class="post-date" title="2024-01-02 10:09:19">2024/01/02</span>
-        </a>
-        
-        
-        <a  class="全部文章 后端 "
-           href="/2023/12/28/data-permission/"
-           data-tag="product,architecture"
-           data-author="" >
-            <span class="post-title" title="data-permission">data-permission</span>
-            <span class="post-date" title="2023-12-28 11:11:30">2023/12/28</span>
         </a>
         
         
@@ -2338,7 +2321,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-05 18:01:50'>2016-12-22 11:44</time>
+            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-12-22 11:44</time>
         
     </div>
     <div class="article-meta">
@@ -2412,24 +2395,31 @@ $ find . -print
 $ find / -name &quot;*&quot; -print
 
 # 在当前目录查找文件名以一个个小写字母开头，最后是4到9加上.log结束的文件
-$ find . -name &quot;[a-z]*[4-9].log&quot; -print</code></pre>
+$ find . -name &quot;[a-z]*[4-9].log&quot; -print
+</code></pre>
 <h3 id="用perm选项"><a href="#用perm选项" class="headerlink" title="用perm选项"></a>用perm选项</h3><p>　　按照文件权限模式用-perm选项,按文件权限模式来查找文件的话。最好使用八进制的权限表示法</p>
 <pre><code class="bash"># 在当前目录下查找文件权限位为755的文件
-$ find . -perm 755 -print</code></pre>
+$ find . -perm 755 -print
+</code></pre>
 <p>　　还有一种表达方法：在八进制数字前面要加一个横杠-，表示都匹配，如-007就相当于777，-005相当于555,</p>
-<pre><code class="bash">$ find . -perm -005</code></pre>
+<pre><code class="bash">$ find . -perm -005
+</code></pre>
 <h3 id="忽略某个目录"><a href="#忽略某个目录" class="headerlink" title="忽略某个目录"></a>忽略某个目录</h3><p>　　如果在查找文件时希望忽略某个目录，因为你知道那个目录中没有你所要查找的文件，那么可以使用-prune选项来指出需要忽略的目录。在使用-prune选项时要当心，因为如果你同时使用了-depth选项，那么-prune选项就会被find命令忽略。如果希望在test目录下查找文件，但不希望在test/test3目录下查找，可以用:</p>
-<pre><code class="bash">$ find test -path &quot;test/test3&quot; -prune -o -print</code></pre>
+<pre><code class="bash">$ find test -path &quot;test/test3&quot; -prune -o -print
+</code></pre>
 <h3 id="使用find查找文件的时候怎么避开某个文件目录"><a href="#使用find查找文件的时候怎么避开某个文件目录" class="headerlink" title="使用find查找文件的时候怎么避开某个文件目录"></a>使用find查找文件的时候怎么避开某个文件目录</h3><p><strong><code>例一</code>：在test 目录下查找不在test4子目录之内的所有文件</strong></p>
-<pre><code class="bash">$ find test -path &quot;test/test4&quot; -prune -o -print</code></pre>
+<pre><code class="bash">$ find test -path &quot;test/test4&quot; -prune -o -print
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>find [-path ..] [expression]<br>在路径列表的后面的是表达式<br>-path “test” -prune -o -print 是 -path “test” -a -prune -o -print 的简写表达式按顺序求值, -a 和 -o 都是短路求值，与 shell 的 &amp;&amp; 和 || 类似如果<br>-path “test” 为真，则求值 -prune , -prune 返回真，与逻辑表达式为真；否则不求值 -prune，与逻辑表达式为假。如果 -path “test” -a -prune 为假，则求值 -print ，-print返回真，或逻辑表达式为真；否则不求值 -print，或逻辑表达式为真。<br>这个表达式组合特例可以用伪码写为:<br>if -path “test” then<br>-prune<br>else<br>-print  </p>
 </blockquote>
 <p><strong><code>例二</code>：避开多个文件夹</strong></p>
 <pre><code class="bash"># 圆括号表示表达式的结合。\ 表示引用，即指示 shell 不对后面的字符作特殊解释，而留给 find 命令去解释其意义
-$ find test \( -path test/test4 -o -path test/test3 \) -prune -o -print</code></pre>
+$ find test \( -path test/test4 -o -path test/test3 \) -prune -o -print
+</code></pre>
 <p><strong><code>例三</code>：查找某一确定文件，-name等选项加在-o 之后</strong></p>
-<pre><code class="bash">$ find test \(-path test/test4 -o -path test/test3 \) -prune -o -name &quot;*.log&quot; -print</code></pre>
+<pre><code class="bash">$ find test \(-path test/test4 -o -path test/test3 \) -prune -o -name &quot;*.log&quot; -print
+</code></pre>
 <h3 id="使用user和nouser选项"><a href="#使用user和nouser选项" class="headerlink" title="使用user和nouser选项"></a>使用user和nouser选项</h3><pre><code class="bash"># 在$HOME目录中查找文件属主为peida的文件
 $ find ~ -user peida -print
 
@@ -2437,7 +2427,8 @@ $ find ~ -user peida -print
 $ find /etc -user peida -print
 
 # 为了查找属主帐户已经被删除的文件，可以使用-nouser选项。在/home目录下查找所有的这类文件
-$ find /home -nouser -print</code></pre>
+$ find /home -nouser -print
+</code></pre>
 <h3 id="使用group和nogroup选项"><a href="#使用group和nogroup选项" class="headerlink" title="使用group和nogroup选项"></a>使用group和nogroup选项</h3><pre><code class="bash"># 在/apps目录下查找属于gem用户组的文件
 $ find /apps -group gem -print
 
@@ -2449,7 +2440,8 @@ $ find / -nogroup-print
 $ find / -mtime -5 -print
 
 # 在/var/adm目录下查找更改时间在3日以前的文件
-$ find /var/adm -mtime +3 -print</code></pre>
+$ find /var/adm -mtime +3 -print
+</code></pre>
 <h3 id="查找比某个文件新或旧的文件"><a href="#查找比某个文件新或旧的文件" class="headerlink" title="查找比某个文件新或旧的文件"></a>查找比某个文件新或旧的文件</h3><p>　　如果希望查找更改时间比某个文件新但比另一个文件旧的所有文件，可以使用-newer选项。</p>
 <pre><code class="bash"># 查找更改时间比文件log2012.log新但比文件log2017.log旧的文件
 $ find -newer log2012.log ! -newer log2017.log
@@ -2464,7 +2456,8 @@ $ find /etc -type d -print
 $ find . ! -type d -print
 
 # 在/etc目录下查找所有的符号链接文件
-$ find /etc -type l -print</code></pre>
+$ find /etc -type l -print
+</code></pre>
 <h3 id="使用size选项"><a href="#使用size选项" class="headerlink" title="使用size选项"></a>使用size选项</h3><p>　　可以按照文件长度来查找文件，这里所指的文件长度既可以用块（block）来计量，也可以用字节来计量。以字节计量文件长度的表达形式为N c；以块计量文件长度只用数字表示即可。<br>在按照文件长度查找文件时，一般使用这种以字节表示的文件长度，在查看文件系统的大小，因为这时使用块来计量更容易转换。</p>
 <pre><code class="bash"># 在当前目录下查找文件长度大于1 M字节的文件
 $ find . -size +1000000c -print
@@ -2473,14 +2466,17 @@ $ find . -size +1000000c -print
 $ find /home/apache -size 100c -print
 
 # 在当前目录下查找长度超过10块的文件（一块等于512字节）
-$ find . -size +10 -print</code></pre>
+$ find . -size +10 -print
+</code></pre>
 <h3 id="使用depth选项"><a href="#使用depth选项" class="headerlink" title="使用depth选项"></a>使用depth选项</h3><p>　　在使用find命令时，可能希望先匹配所有的文件，再在子目录中查找。使用depth选项就可以使find命令这样做。这样做的一个原因就是，当在使用find命令向磁带上备份文件系统时，希望首先备份所有的文件，其次再备份子目录中的文件。</p>
 <pre><code class="bash"># find命令从文件系统的根目录开始，查找一个名为CON.FILE的文件
 # 它将首先匹配所有的文件然后再进入子目录中查找
-$ find / -name &quot;CON.FILE&quot; -depth -print</code></pre>
+$ find / -name &quot;CON.FILE&quot; -depth -print
+</code></pre>
 <h3 id="使用mount选项"><a href="#使用mount选项" class="headerlink" title="使用mount选项"></a>使用mount选项</h3><p>　　在当前的文件系统中查找文件（不进入其他文件系统），可以使用find命令的mount选项</p>
 <pre><code class="bash"># 从当前目录开始查找位于本文件系统中文件名以XC结尾的文件
-$ find . -name &quot;*.XC&quot; -mount -print</code></pre>
+$ find . -name &quot;*.XC&quot; -mount -print
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
