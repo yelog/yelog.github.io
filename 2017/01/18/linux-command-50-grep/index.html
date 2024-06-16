@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2321,7 +2362,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-01-18 10:12</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2017-01-18 10:12</time>
         
     </div>
     <div class="article-meta">
@@ -2376,8 +2417,7 @@
 <span id="more"></span>
 <p>　　grep的工作方式是这样的，它在一个或多个文件中搜索字符串模板。如果模板包括空格，则必须被引用，模板后的所有字符串被看作文件名。搜索的结果被送到标准输出，不影响原文件内容。</p>
 <p>　　grep可用于shell脚本，因为grep通过返回一个状态值来说明搜索的状态，如果模板搜索成功，则返回0，如果搜索不成功，则返回1，如果搜索的文件不存在，则返回2。我们利用这些返回值就可进行一些自动化的文本处理工作。</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ grep [option] pattern file
-</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep [option] pattern file</span><br></pre></td></tr></table></figure>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　用于过滤/搜索的特定字符。可使用正则表达式能多种命令配合使用，使用上十分灵活。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2493,68 +2533,33 @@
 </tbody></table>
 <h3 id="规则表达式"><a href="#规则表达式" class="headerlink" title="规则表达式"></a>规则表达式</h3><p><strong>grep的规则表达式</strong><br>　　<code>^</code>  #锚定行的开始 如：<code>&#39;^grep&#39;</code>匹配所有以grep开头的行。<br>　　<code>$</code>  #锚定行的结束 如：<code>&#39;grep$&#39;</code>匹配所有以grep结尾的行。<br>　　<code>.</code>  #匹配一个非换行符的字符 如：<code>&#39;gr.p&#39;</code>匹配gr后接一个任意字符，然后是p。<br>　　<code>*</code>  #匹配零个或多个先前字符 如：<code>&#39;*grep&#39;</code>匹配所有一个或多个空格后紧跟grep的行。<br>　　<code>.*</code>   #一起用代表任意字符。<br>　　<code>[]</code>   #匹配一个指定范围内的字符，如<code>&#39;[Gg]rep&#39;</code>匹配Grep和grep。<br>　　<code>[^]</code>  #匹配一个不在指定范围内的字符，如：<code>&#39;[^A-FH-Z]rep&#39;</code>匹配不包含A-R和T-Z的一个字母开头，紧跟rep的行。<br>　　<code>\(..\)</code>  #标记匹配字符，如<code>&#39;\(love\)&#39;</code>，love被标记为1。<br>　　<code>\&lt;</code>      #锚定单词的开始，如:<code>&#39;\&lt;grep&#39;</code>匹配包含以grep开头的单词的行。<br>　　<code>\&gt;</code>      #锚定单词的结束，如<code>&#39;grep\&gt;&#39;</code>匹配包含以grep结尾的单词的行。<br>　　<code>x\&#123;m\&#125;</code>  #重复字符x，m次，如：<code>&#39;o\&#123;5\&#125;&#39;</code>匹配包含5个o的行。<br>　　<code>x\&#123;m,\&#125;</code>  #重复字符x,至少m次，如：<code>&#39;o\&#123;5,\&#125;&#39;</code>匹配至少有5个o的行。<br>　　<code>x\&#123;m,n\&#125;</code>  #重复字符x，至少m次，不多于n次，如：<code>&#39;o\&#123;5,10\&#125;&#39;</code>匹配5–10个o的行。<br>　　<code>\w</code>    #匹配文字和数字字符，也就是[A-Za-z0-9]，如：<code>&#39;G\w*p&#39;</code>匹配以G后跟零个或多个文字或数字字符，然后是p。<br>　　<code>\W</code>   #<code>\w</code>的反置形式，匹配一个或多个非单词字符，如点号句号等。<br>　　<code>\b</code>   #单词锁定符，如: <code>&#39;\bgrep\b&#39;</code>只匹配grep。<br><strong>POSIX字符</strong><br>　　为了在不同国家的字符编码中保持一至，POSIX(The Portable Operating System Interface)增加了特殊的字符类，如[:alnum:]是[A-Za-z0-9]的另一个写法。要把它们放到[]号内才能成为正则表达式，如<code>[A-Za-z0-9]</code>或<code>[[:alnum:]]</code>。在linux下的grep除fgrep外，都支持POSIX的字符类。<br>　　[:alnum:]    #文字数字字符<br>　　[:alpha:]    #文字字符<br>　　[:digit:]    #数字字符<br>　　[:graph:]    #非空字符（非空格、控制字符）<br>　　[:lower:]    #小写字符<br>　　[:cntrl:]    #控制字符<br>　　[:print:]    #非空字符（包括空格）<br>　　[:punct:]    #标点符号<br>　　[:space:]    #所有空白字符（新行，空格，制表符）<br>　　[:upper:]    #大写字符<br>　　[:xdigit:]   #十六进制数字（0-9，a-f，A-F）</p>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：查找指定进程</strong></p>
-<pre><code class="bash">$ ps -ef|grep hexo
-faker    13401 19030  0 09:51 pts/2    00:00:15 hexo
-faker    15465 15449  0 10:34 pts/3    00:00:00 grep hexo
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ps -ef|grep hexo</span><br><span class="line">faker    13401 19030  0 09:51 pts/2    00:00:15 hexo</span><br><span class="line">faker    15465 15449  0 10:34 pts/3    00:00:00 grep hexo</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>说明：</strong><br>第一条记录是查找出的进程；第二条结果是grep进程本身，并非真正要找的进程。</p>
 </blockquote>
 <p><strong><code>例二</code>：查找指定进程数</strong></p>
-<pre><code class="bash">$ ps -ef|grep hexo -c
-$ ps -ef|grep -c hexo
-2
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ps -ef|grep hexo -c</span><br><span class="line">$ ps -ef|grep -c hexo</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
 <p><strong><code>例三</code>：从2.txt中读取关键词在1.txt中进行搜索</strong></p>
-<pre><code class="bash"># -n显示行号
-$ cat 1.txt | grep -nf 2.txt
-1:If you please draw me a sheep!
-2:What!
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -n显示行号</span></span><br><span class="line">$ <span class="built_in">cat</span> 1.txt | grep -nf 2.txt</span><br><span class="line">1:If you please draw me a sheep!</span><br><span class="line">2:What!</span><br></pre></td></tr></table></figure>
 <p><strong><code>例四</code>：从文件中查找关键词</strong></p>
-<pre><code class="bash">$ grep &#39;jump&#39; 1.txt
-I jumped to my feet,completely thunderstruck.
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ grep <span class="string">&#x27;jump&#x27;</span> 1.txt</span><br><span class="line">I jumped to my feet,completely thunderstruck.</span><br></pre></td></tr></table></figure>
 <p><strong><code>例五</code>：从多个文件中查找关键词</strong></p>
-<pre><code class="bash">$ grep &#39;jump&#39; 1.txt 2.txt
-1.txt:I jumped to my feet,completely thunderstruck.
-2.txt:I jump
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ grep <span class="string">&#x27;jump&#x27;</span> 1.txt 2.txt</span><br><span class="line">1.txt:I jumped to my feet,completely thunderstruck.</span><br><span class="line">2.txt:I jump</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>说明：</strong><br>多文件时，输出查询到的信息内容行时，会把文件的命名在行最前面输出并且加上”:”作为标示符</p>
 </blockquote>
 <p><strong><code>例六</code>：grep不显示本身进程</strong></p>
-<pre><code class="bash">$ ps aux|grep \[s]sh
-$ ps aux | grep ssh | grep -v &quot;grep&quot;
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ps aux|grep \[s]sh</span><br><span class="line">$ ps aux | grep ssh | grep -v <span class="string">&quot;grep&quot;</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例七</code>：找出以u开头的行内容</strong></p>
-<pre><code class="bash">$ cat 1.txt |grep ^u
-If you please draw me a sheep!
-I jumped to my feet,completely thunderstruck.
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> 1.txt |grep ^u</span><br><span class="line">If you please draw me a sheep!</span><br><span class="line">I jumped to my feet,completely thunderstruck.</span><br></pre></td></tr></table></figure>
 <p><strong><code>例八</code>：输出非u开头的行内容</strong></p>
-<pre><code class="bash">$ cat 1.txt | grep ^[^I]
-What!
-Draw me a sheep!
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> 1.txt | grep ^[^I]</span><br><span class="line">What!</span><br><span class="line">Draw me a sheep!</span><br></pre></td></tr></table></figure>
 <p><strong><code>例九</code>：输出以!结尾的行内容</strong></p>
-<pre><code class="bash">$ cat 1.txt |grep \!$
-If you please draw me a sheep!
-What!
-Draw me a sheep!
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> 1.txt |grep \!$</span><br><span class="line">If you please draw me a sheep!</span><br><span class="line">What!</span><br><span class="line">Draw me a sheep!</span><br></pre></td></tr></table></figure>
 <p><strong><code>例十</code>：显示包含sh或者at字符的内容行</strong></p>
-<pre><code class="bash">$ cat 1.txt |grep -E &quot;sh|at&quot;
-If you please draw me a sheep!
-What!
-Draw me a sheep!
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> 1.txt |grep -E <span class="string">&quot;sh|at&quot;</span></span><br><span class="line">If you please draw me a sheep!</span><br><span class="line">What!</span><br><span class="line">Draw me a sheep!</span><br></pre></td></tr></table></figure>
 <p><strong><code>例十一</code>：显示当前目录下面以.txt 结尾的文件中的所有包含每个字符串至少有7个连续小写字符的字符串的行</strong></p>
-<pre><code class="bash">$ grep &#39;[a-z]\&#123;7\&#125;&#39; *.txt
-1.txt:I jumped to my feet,completely thunderstruck.
-3.txt:kdfkksjdf112123
-4.txt:kisdfsf
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ grep <span class="string">&#x27;[a-z]\&#123;7\&#125;&#x27;</span> *.txt</span><br><span class="line">1.txt:I jumped to my feet,completely thunderstruck.</span><br><span class="line">3.txt:kdfkksjdf112123</span><br><span class="line">4.txt:kisdfsf</span><br></pre></td></tr></table></figure>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2321,12 +2362,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-10-12 19:49</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2016-10-12 19:49</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:246</span>
+        <span>字数:251</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2373,33 +2414,25 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="创建操作系统用户"><a href="#创建操作系统用户" class="headerlink" title="创建操作系统用户"></a>创建操作系统用户</h2><p>创建一个新的Linux用户：dbuser</p>
-<pre><code class="bash">$sudo adduser dbuser #创建一个新的Linux用户：dbuser
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sudo</span> adduser dbuser <span class="comment">#创建一个新的Linux用户：dbuser</span></span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 <h2 id="登录PostgreSQL控制台"><a href="#登录PostgreSQL控制台" class="headerlink" title="登录PostgreSQL控制台"></a>登录PostgreSQL控制台</h2><p>切换到postgres用户</p>
-<pre><code class="bash">$sudo su - postgres #切换到postgres用户
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sudo</span> su - postgres <span class="comment">#切换到postgres用户</span></span><br></pre></td></tr></table></figure>
 <p>系统用户postgres以同名数据库用户的身份，登录数据库</p>
-<pre><code class="bash">$psql #系统用户postgres以同名数据库用户的身份，登录数据库
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$psql</span> <span class="comment">#系统用户postgres以同名数据库用户的身份，登录数据库</span></span><br></pre></td></tr></table></figure>
 <p>成功登录到控制台后，显示 <code>postgres=#</code></p>
 <blockquote>
 <p>注意：后面分号不能省略</p>
 </blockquote>
-<pre><code class="bash">\password postgres #给postgres用户设置密码
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\password postgres <span class="comment">#给postgres用户设置密码</span></span><br></pre></td></tr></table></figure>
 <p>创建数据库用户dbuser</p>
-<pre><code class="bash">CREATE USER dbuser WITH PASSWORD &#39;dbuser&#39;; #创建数据库用户dbuser
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER dbuser WITH PASSWORD <span class="string">&#x27;dbuser&#x27;</span>; <span class="comment">#创建数据库用户dbuser</span></span><br></pre></td></tr></table></figure>
 <p>创建用户数据库，这里为exampledb，并指定所有者为dbuser。</p>
-<pre><code class="bash">CREATE DATABASE exampledb OWNER dbuser; #创建用户数据库，这里为exampledb，并指定所有者为dbuser。
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE exampledb OWNER dbuser; <span class="comment">#创建用户数据库，这里为exampledb，并指定所有者为dbuser。</span></span><br></pre></td></tr></table></figure>
 <p>将exampledb数据库的所有权限都赋予dbuser</p>
-<pre><code class="bash">GRANT ALL PRIVILEGES ON DATABASE exampledb to dbuser; #将exampledb数据库的所有权限都赋予dbuser
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON DATABASE exampledb to dbuser; <span class="comment">#将exampledb数据库的所有权限都赋予dbuser</span></span><br></pre></td></tr></table></figure>
 <p>推出控制台（也可以直接按ctrl+D）</p>
-<pre><code class="bash">\q #退出控制台
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\q <span class="comment">#退出控制台</span></span><br></pre></td></tr></table></figure>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

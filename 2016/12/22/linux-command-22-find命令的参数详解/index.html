@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2321,7 +2362,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-12-22 11:44</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2016-12-22 11:44</time>
         
     </div>
     <div class="article-meta">
@@ -2375,108 +2416,37 @@
         <p>　　find一些常用参数的一些常用实例和一些具体用法和注意事项。</p>
 <span id="more"></span>
 <h3 id="使用name选项"><a href="#使用name选项" class="headerlink" title="使用name选项"></a>使用name选项</h3><p>　　文件名选项是find命令最常用的选项，要么单独使用该选项，要么和其他选项一起使用。可以使用某种文件名模式来匹配文件，记住要用引号将文件名模式引起来。</p>
-<pre><code class="bash"># 在自己的根目录$HOME中查找文件名符合*.log的文件，使用~作为 &#39;pathname&#39;参数，波浪号~代表了你的$HOME目录。
-$ find ~ -name &quot;*.log&quot; -print
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在自己的根目录$HOME中查找文件名符合*.log的文件，使用~作为 &#x27;pathname&#x27;参数，波浪号~代表了你的$HOME目录。</span></span><br><span class="line">$ find ~ -name <span class="string">&quot;*.log&quot;</span> -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在当前目录及子目录中查找所有的‘ *.log‘文件</span></span><br><span class="line">$ find . -name <span class="string">&quot;*.log&quot;</span> -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 当前目录及子目录中查找文件名以一个大写字母开头的文件</span></span><br><span class="line">$ find . -name <span class="string">&quot;[A-Z]*&quot;</span> -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在/etc目录中查找文件名以host开头的文件</span></span><br><span class="line">$ find /etc -name <span class="string">&quot;host*&quot;</span> -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 想要查找$HOME目录中的文件</span></span><br><span class="line">$ find ~ -name <span class="string">&quot;*&quot;</span> -<span class="built_in">print</span></span><br><span class="line">$ find . -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 让系统高负荷运行，就从根目录开始查找所有的文件</span></span><br><span class="line">$ find / -name <span class="string">&quot;*&quot;</span> -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在当前目录查找文件名以一个个小写字母开头，最后是4到9加上.log结束的文件</span></span><br><span class="line">$ find . -name <span class="string">&quot;[a-z]*[4-9].log&quot;</span> -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
 
-# 在当前目录及子目录中查找所有的‘ *.log‘文件
-$ find . -name &quot;*.log&quot; -print
-
-# 当前目录及子目录中查找文件名以一个大写字母开头的文件
-$ find . -name &quot;[A-Z]*&quot; -print
-
-# 在/etc目录中查找文件名以host开头的文件
-$ find /etc -name &quot;host*&quot; -print
-
-# 想要查找$HOME目录中的文件
-$ find ~ -name &quot;*&quot; -print
-$ find . -print
-
-# 让系统高负荷运行，就从根目录开始查找所有的文件
-$ find / -name &quot;*&quot; -print
-
-# 在当前目录查找文件名以一个个小写字母开头，最后是4到9加上.log结束的文件
-$ find . -name &quot;[a-z]*[4-9].log&quot; -print
-</code></pre>
 <h3 id="用perm选项"><a href="#用perm选项" class="headerlink" title="用perm选项"></a>用perm选项</h3><p>　　按照文件权限模式用-perm选项,按文件权限模式来查找文件的话。最好使用八进制的权限表示法</p>
-<pre><code class="bash"># 在当前目录下查找文件权限位为755的文件
-$ find . -perm 755 -print
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在当前目录下查找文件权限位为755的文件</span></span><br><span class="line">$ find . -perm 755 -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
 <p>　　还有一种表达方法：在八进制数字前面要加一个横杠-，表示都匹配，如-007就相当于777，-005相当于555,</p>
-<pre><code class="bash">$ find . -perm -005
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find . -perm -005</span><br></pre></td></tr></table></figure>
+
 <h3 id="忽略某个目录"><a href="#忽略某个目录" class="headerlink" title="忽略某个目录"></a>忽略某个目录</h3><p>　　如果在查找文件时希望忽略某个目录，因为你知道那个目录中没有你所要查找的文件，那么可以使用-prune选项来指出需要忽略的目录。在使用-prune选项时要当心，因为如果你同时使用了-depth选项，那么-prune选项就会被find命令忽略。如果希望在test目录下查找文件，但不希望在test/test3目录下查找，可以用:</p>
-<pre><code class="bash">$ find test -path &quot;test/test3&quot; -prune -o -print
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find <span class="built_in">test</span> -path <span class="string">&quot;test/test3&quot;</span> -prune -o -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
 <h3 id="使用find查找文件的时候怎么避开某个文件目录"><a href="#使用find查找文件的时候怎么避开某个文件目录" class="headerlink" title="使用find查找文件的时候怎么避开某个文件目录"></a>使用find查找文件的时候怎么避开某个文件目录</h3><p><strong><code>例一</code>：在test 目录下查找不在test4子目录之内的所有文件</strong></p>
-<pre><code class="bash">$ find test -path &quot;test/test4&quot; -prune -o -print
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find <span class="built_in">test</span> -path <span class="string">&quot;test/test4&quot;</span> -prune -o -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>说明：</strong><br>find [-path ..] [expression]<br>在路径列表的后面的是表达式<br>-path “test” -prune -o -print 是 -path “test” -a -prune -o -print 的简写表达式按顺序求值, -a 和 -o 都是短路求值，与 shell 的 &amp;&amp; 和 || 类似如果<br>-path “test” 为真，则求值 -prune , -prune 返回真，与逻辑表达式为真；否则不求值 -prune，与逻辑表达式为假。如果 -path “test” -a -prune 为假，则求值 -print ，-print返回真，或逻辑表达式为真；否则不求值 -print，或逻辑表达式为真。<br>这个表达式组合特例可以用伪码写为:<br>if -path “test” then<br>-prune<br>else<br>-print  </p>
 </blockquote>
 <p><strong><code>例二</code>：避开多个文件夹</strong></p>
-<pre><code class="bash"># 圆括号表示表达式的结合。\ 表示引用，即指示 shell 不对后面的字符作特殊解释，而留给 find 命令去解释其意义
-$ find test \( -path test/test4 -o -path test/test3 \) -prune -o -print
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 圆括号表示表达式的结合。\ 表示引用，即指示 shell 不对后面的字符作特殊解释，而留给 find 命令去解释其意义</span></span><br><span class="line">$ find <span class="built_in">test</span> \( -path <span class="built_in">test</span>/test4 -o -path <span class="built_in">test</span>/test3 \) -prune -o -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例三</code>：查找某一确定文件，-name等选项加在-o 之后</strong></p>
-<pre><code class="bash">$ find test \(-path test/test4 -o -path test/test3 \) -prune -o -name &quot;*.log&quot; -print
-</code></pre>
-<h3 id="使用user和nouser选项"><a href="#使用user和nouser选项" class="headerlink" title="使用user和nouser选项"></a>使用user和nouser选项</h3><pre><code class="bash"># 在$HOME目录中查找文件属主为peida的文件
-$ find ~ -user peida -print
-
-# 在/etc目录下查找文件属主为peida的文件
-$ find /etc -user peida -print
-
-# 为了查找属主帐户已经被删除的文件，可以使用-nouser选项。在/home目录下查找所有的这类文件
-$ find /home -nouser -print
-</code></pre>
-<h3 id="使用group和nogroup选项"><a href="#使用group和nogroup选项" class="headerlink" title="使用group和nogroup选项"></a>使用group和nogroup选项</h3><pre><code class="bash"># 在/apps目录下查找属于gem用户组的文件
-$ find /apps -group gem -print
-
-# 查找没有有效所属用户组的所有文件
-$ find / -nogroup-print
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find <span class="built_in">test</span> \(-path <span class="built_in">test</span>/test4 -o -path <span class="built_in">test</span>/test3 \) -prune -o -name <span class="string">&quot;*.log&quot;</span> -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用user和nouser选项"><a href="#使用user和nouser选项" class="headerlink" title="使用user和nouser选项"></a>使用user和nouser选项</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在$HOME目录中查找文件属主为peida的文件</span></span><br><span class="line">$ find ~ -user peida -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在/etc目录下查找文件属主为peida的文件</span></span><br><span class="line">$ find /etc -user peida -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 为了查找属主帐户已经被删除的文件，可以使用-nouser选项。在/home目录下查找所有的这类文件</span></span><br><span class="line">$ find /home -nouser -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用group和nogroup选项"><a href="#使用group和nogroup选项" class="headerlink" title="使用group和nogroup选项"></a>使用group和nogroup选项</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在/apps目录下查找属于gem用户组的文件</span></span><br><span class="line">$ find /apps -group gem -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找没有有效所属用户组的所有文件</span></span><br><span class="line">$ find / -nogroup-print</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h3 id="按照更改时间或访问时间等查找文件"><a href="#按照更改时间或访问时间等查找文件" class="headerlink" title="按照更改时间或访问时间等查找文件"></a>按照更改时间或访问时间等查找文件</h3><p>　　如果希望按照更改时间来查找文件，可以使用mtime,atime或ctime选项。如果系统突然没有可用空间了，很有可能某一个文件的长度在此期间增长迅速，这时就可以用mtime选项来查找这样的文件。<br>用减号<code>-</code>来限定更改时间在距今n日以内的文件，而用加号<code>+</code>来限定更改时间在距今n日以前的文件</p>
-<pre><code class="bash"># 在系统根目录下查找更改时间在5日以内的文件
-$ find / -mtime -5 -print
-
-# 在/var/adm目录下查找更改时间在3日以前的文件
-$ find /var/adm -mtime +3 -print
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在系统根目录下查找更改时间在5日以内的文件</span></span><br><span class="line">$ find / -mtime -5 -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在/var/adm目录下查找更改时间在3日以前的文件</span></span><br><span class="line">$ find /var/adm -mtime +3 -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
 <h3 id="查找比某个文件新或旧的文件"><a href="#查找比某个文件新或旧的文件" class="headerlink" title="查找比某个文件新或旧的文件"></a>查找比某个文件新或旧的文件</h3><p>　　如果希望查找更改时间比某个文件新但比另一个文件旧的所有文件，可以使用-newer选项。</p>
-<pre><code class="bash"># 查找更改时间比文件log2012.log新但比文件log2017.log旧的文件
-$ find -newer log2012.log ! -newer log2017.log
-
-# 查找更改时间在比log2012.log文件新的文件
-$ find . -newer log2012.log -print
-</code></pre>
-<h3 id="使用type选项"><a href="#使用type选项" class="headerlink" title="使用type选项"></a>使用type选项</h3><pre><code class="bash"># 在/etc目录下查找所有的目录
-$ find /etc -type d -print
-
-# 在当前目录下查找除目录以外的所有类型的文件
-$ find . ! -type d -print
-
-# 在/etc目录下查找所有的符号链接文件
-$ find /etc -type l -print
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找更改时间比文件log2012.log新但比文件log2017.log旧的文件</span></span><br><span class="line">$ find -newer log2012.log ! -newer log2017.log</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找更改时间在比log2012.log文件新的文件</span></span><br><span class="line">$ find . -newer log2012.log -<span class="built_in">print</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="使用type选项"><a href="#使用type选项" class="headerlink" title="使用type选项"></a>使用type选项</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在/etc目录下查找所有的目录</span></span><br><span class="line">$ find /etc -<span class="built_in">type</span> d -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在当前目录下查找除目录以外的所有类型的文件</span></span><br><span class="line">$ find . ! -<span class="built_in">type</span> d -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在/etc目录下查找所有的符号链接文件</span></span><br><span class="line">$ find /etc -<span class="built_in">type</span> l -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
 <h3 id="使用size选项"><a href="#使用size选项" class="headerlink" title="使用size选项"></a>使用size选项</h3><p>　　可以按照文件长度来查找文件，这里所指的文件长度既可以用块（block）来计量，也可以用字节来计量。以字节计量文件长度的表达形式为N c；以块计量文件长度只用数字表示即可。<br>在按照文件长度查找文件时，一般使用这种以字节表示的文件长度，在查看文件系统的大小，因为这时使用块来计量更容易转换。</p>
-<pre><code class="bash"># 在当前目录下查找文件长度大于1 M字节的文件
-$ find . -size +1000000c -print
-
-# 在/home/apache目录下查找文件长度恰好为100字节的文件
-$ find /home/apache -size 100c -print
-
-# 在当前目录下查找长度超过10块的文件（一块等于512字节）
-$ find . -size +10 -print
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在当前目录下查找文件长度大于1 M字节的文件</span></span><br><span class="line">$ find . -size +1000000c -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在/home/apache目录下查找文件长度恰好为100字节的文件</span></span><br><span class="line">$ find /home/apache -size 100c -<span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在当前目录下查找长度超过10块的文件（一块等于512字节）</span></span><br><span class="line">$ find . -size +10 -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
 <h3 id="使用depth选项"><a href="#使用depth选项" class="headerlink" title="使用depth选项"></a>使用depth选项</h3><p>　　在使用find命令时，可能希望先匹配所有的文件，再在子目录中查找。使用depth选项就可以使find命令这样做。这样做的一个原因就是，当在使用find命令向磁带上备份文件系统时，希望首先备份所有的文件，其次再备份子目录中的文件。</p>
-<pre><code class="bash"># find命令从文件系统的根目录开始，查找一个名为CON.FILE的文件
-# 它将首先匹配所有的文件然后再进入子目录中查找
-$ find / -name &quot;CON.FILE&quot; -depth -print
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># find命令从文件系统的根目录开始，查找一个名为CON.FILE的文件</span></span><br><span class="line"><span class="comment"># 它将首先匹配所有的文件然后再进入子目录中查找</span></span><br><span class="line">$ find / -name <span class="string">&quot;CON.FILE&quot;</span> -depth -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
 <h3 id="使用mount选项"><a href="#使用mount选项" class="headerlink" title="使用mount选项"></a>使用mount选项</h3><p>　　在当前的文件系统中查找文件（不进入其他文件系统），可以使用find命令的mount选项</p>
-<pre><code class="bash"># 从当前目录开始查找位于本文件系统中文件名以XC结尾的文件
-$ find . -name &quot;*.XC&quot; -mount -print
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 从当前目录开始查找位于本文件系统中文件名以XC结尾的文件</span></span><br><span class="line">$ find . -name <span class="string">&quot;*.XC&quot;</span> -mount -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2325,7 +2366,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2021-09-26 18:08</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2021-09-26 18:08</time>
         
     </div>
     <div class="article-meta">
@@ -2397,76 +2438,11 @@
 <li><code>oap</code> 数据接收和分析 Observability Analysis Platform</li>
 <li><code>ui</code> web端的数据展示</li>
 </ol>
-<pre><code class="bash"># 创建配置文件保存的目录
-mkdir -p /data/docker/admin/skywalking
-# 切换到刚创建的目录
-cd /data/docker/admin/skywalking
-# 将下面的 docker-compose.yml 文件保存到这个目录
-vi docker-compose.yml
-# 拉去镜像并启动
-docker-compose up -d
-# 查看日志
-docker-compose logs -f
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建配置文件保存的目录</span></span><br><span class="line"><span class="built_in">mkdir</span> -p /data/docker/admin/skywalking</span><br><span class="line"><span class="comment"># 切换到刚创建的目录</span></span><br><span class="line"><span class="built_in">cd</span> /data/docker/admin/skywalking</span><br><span class="line"><span class="comment"># 将下面的 docker-compose.yml 文件保存到这个目录</span></span><br><span class="line">vi docker-compose.yml</span><br><span class="line"><span class="comment"># 拉去镜像并启动</span></span><br><span class="line">docker-compose up -d</span><br><span class="line"><span class="comment"># 查看日志</span></span><br><span class="line">docker-compose logs -f</span><br></pre></td></tr></table></figure>
+
 <p>docker-compose.yml</p>
-<pre><code class="yaml">version: &#39;3.8&#39;
-services:
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.14.1
-    container_name: elasticsearch
-    restart: always
-    ports:
-      - 9200:9200
-    healthcheck:
-      test: [&quot;CMD-SHELL&quot;, &quot;curl --silent --fail localhost:9200/_cluster/health || exit 1&quot;]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
-    environment:
-      - discovery.type=single-node
-      - bootstrap.memory_lock=true
-      - &quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;
-      - TZ=Asia/Shanghai
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-  oap:
-    image: apache/skywalking-oap-server:8.7.0-es7
-    container_name: oap
-    depends_on:
-      - elasticsearch
-    links:
-      - elasticsearch
-    restart: always
-    ports:
-      - 11800:11800
-      - 12800:12800
-    healthcheck:
-      test: [&quot;CMD-SHELL&quot;, &quot;/skywalking/bin/swctl&quot;]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
-    environment:
-      TZ: Asia/Shanghai
-      SW_STORAGE: elasticsearch7
-      SW_STORAGE_ES_CLUSTER_NODES: elasticsearch:9200
-  ui:
-    image: apache/skywalking-ui:8.7.0
-    container_name: ui
-    depends_on:
-      - oap
-    links:
-      - oap
-    restart: always
-    ports:
-      - 8088:8080
-    environment:
-      TZ: Asia/Shanghai
-      SW_OAP_ADDRESS: http://oap:12800
-</code></pre>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.8&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">elasticsearch:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">docker.elastic.co/elasticsearch/elasticsearch:7.14.1</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">elasticsearch</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">9200</span><span class="string">:9200</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD-SHELL&quot;</span>, <span class="string">&quot;curl --silent --fail localhost:9200/_cluster/health || exit 1&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">30s</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">3</span></span><br><span class="line">      <span class="attr">start_period:</span> <span class="string">40s</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">discovery.type=single-node</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">bootstrap.memory_lock=true</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;ES_JAVA_OPTS=-Xms512m -Xmx512m&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">    <span class="attr">ulimits:</span></span><br><span class="line">      <span class="attr">memlock:</span></span><br><span class="line">        <span class="attr">soft:</span> <span class="number">-1</span></span><br><span class="line">        <span class="attr">hard:</span> <span class="number">-1</span></span><br><span class="line">  <span class="attr">oap:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">apache/skywalking-oap-server:8.7.0-es7</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">oap</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">elasticsearch</span></span><br><span class="line">    <span class="attr">links:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">elasticsearch</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">11800</span><span class="string">:11800</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">12800</span><span class="string">:12800</span></span><br><span class="line">    <span class="attr">healthcheck:</span></span><br><span class="line">      <span class="attr">test:</span> [<span class="string">&quot;CMD-SHELL&quot;</span>, <span class="string">&quot;/skywalking/bin/swctl&quot;</span>]</span><br><span class="line">      <span class="attr">interval:</span> <span class="string">30s</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">10s</span></span><br><span class="line">      <span class="attr">retries:</span> <span class="number">3</span></span><br><span class="line">      <span class="attr">start_period:</span> <span class="string">40s</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">TZ:</span> <span class="string">Asia/Shanghai</span></span><br><span class="line">      <span class="attr">SW_STORAGE:</span> <span class="string">elasticsearch7</span></span><br><span class="line">      <span class="attr">SW_STORAGE_ES_CLUSTER_NODES:</span> <span class="string">elasticsearch:9200</span></span><br><span class="line">  <span class="attr">ui:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">apache/skywalking-ui:8.7.0</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">ui</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">oap</span></span><br><span class="line">    <span class="attr">links:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">oap</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8088</span><span class="string">:8080</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">TZ:</span> <span class="string">Asia/Shanghai</span></span><br><span class="line">      <span class="attr">SW_OAP_ADDRESS:</span> <span class="string">http://oap:12800</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p>启动之后浏览器访问 <code>服务ip:8080</code> 即可</p>
 <h4 id="k8s"><a href="#k8s" class="headerlink" title="k8s"></a>k8s</h4><p>等待更新。。</p>
 <h3 id="2-下载-agent-代理包"><a href="#2-下载-agent-代理包" class="headerlink" title="2. 下载 agent 代理包"></a>2. 下载 agent 代理包</h3><p>点击链接进行下载，<a target="_blank" rel="noopener" href="https://archive.apache.org/dist/skywalking/8.7.0/apache-skywalking-apm-8.7.0.tar.gz">skywalking-apm-8.7</a></p>
@@ -2476,79 +2452,25 @@ services:
 <p>通过命令或者软件进行解压 <code>tar -zxvf apache-skywalking-apm-8.7.0.tar.gz</code></p>
 <h3 id="3-java-命令使用代码启动-jar-包"><a href="#3-java-命令使用代码启动-jar-包" class="headerlink" title="3. java 命令使用代码启动 jar 包"></a>3. java 命令使用代码启动 jar 包</h3><p>springcloud/springboot 一般是通过 <code>java -jar xxx.jar</code> 进行启动。我们只需要在其中加上 <code>-javaagent</code> 参数即可，如下</p>
 <p>其中 <strong>自定义服务名</strong> 可以改为应用名 如 <code>lemes-auth</code>，<strong>服务ip</strong> 为第一步搭建的 SkyWalking 服务的ip，<strong>端口11800</strong> 为启动的 oap 这个容器的端口</p>
-<pre><code class="bash">java -javaagent:上一步解压目录/agent/skywalking-agent.jar=agent.service_name=自定义服务名,collector.backend_service=服务ip:11800 -jar xx.jar
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -javaagent:上一步解压目录/agent/skywalking-agent.jar=agent.service_name=自定义服务名,collector.backend_service=服务ip:11800 -jar xx.jar</span><br></pre></td></tr></table></figure>
+
 <p>执行命令启动后，访问以下接口，就可以在第一步 <code>服务ip:8080</code> 中看到访问的链接和调用链路。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926164151.png" alt="链路追踪"><br><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926164350.png" alt="拓扑图"></p>
 <h3 id="4-开启日志收集"><a href="#4-开启日志收集" class="headerlink" title="4. 开启日志收集"></a>4. 开启日志收集</h3><p>本文主要以 log4j2 来介绍，其他的大同小异，可以网上找教程。SpringCloud 集成 log4j2 不是本文重点，所以请自行 Google。</p>
 <h4 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h4><p>要开启日志收集，必须要添加依赖，如下</p>
-<pre><code class="xml">&lt;dependency&gt;
-    &lt;groupId&gt;org.apache.skywalking&lt;/groupId&gt;
-    &lt;artifactId&gt;apm-toolkit-log4j-2.x&lt;/artifactId&gt;
-    &lt;version&gt;8.7.0&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.skywalking<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>apm-toolkit-log4j-2.x<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.7.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="修改-log4j2-xml"><a href="#修改-log4j2-xml" class="headerlink" title="修改 log4j2.xml"></a>修改 log4j2.xml</h4><p>需要修改 log4j2.xml 主要添加下面两个关键点</p>
 <ul>
 <li>添加 <code>%traceId</code> 来打印 traceid</li>
 <li>声明 GRPCLogClientAppender</li>
 </ul>
 <p>完整内容如下</p>
-<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!--日志级别以及优先级排序: OFF &gt; FATAL &gt; ERROR &gt; WARN &gt; INFO &gt; DEBUG &gt; TRACE &gt; ALL --&gt;
-&lt;!-- Configuration后面的status，这个用于设置log4j2自身内部的信息输出，可以不设置，当设置成trace时，
-     你会看到log4j2内部各种详细输出。可以设置成OFF(关闭) 或 Error(只输出错误信息)。
---&gt;
-&lt;!--monitorInterval：Log4j能够自动检测修改配置 文件和重新配置本身，设置间隔秒数--&gt;
-&lt;configuration status=&quot;WARN&quot; monitorInterval=&quot;30&quot;&gt;
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="comment">&lt;!--日志级别以及优先级排序: OFF &gt; FATAL &gt; ERROR &gt; WARN &gt; INFO &gt; DEBUG &gt; TRACE &gt; ALL --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Configuration后面的status，这个用于设置log4j2自身内部的信息输出，可以不设置，当设置成trace时，</span></span><br><span class="line"><span class="comment">     你会看到log4j2内部各种详细输出。可以设置成OFF(关闭) 或 Error(只输出错误信息)。</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--monitorInterval：Log4j能够自动检测修改配置 文件和重新配置本身，设置间隔秒数--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span> <span class="attr">status</span>=<span class="string">&quot;WARN&quot;</span> <span class="attr">monitorInterval</span>=<span class="string">&quot;30&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">Properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Property</span> <span class="attr">name</span>=<span class="string">&quot;log.path&quot;</span>&gt;</span>logs/lemes-auth<span class="tag">&lt;/<span class="name">Property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Property</span> <span class="attr">name</span>=<span class="string">&quot;logging.lemes.pattern&quot;</span>&gt;</span></span><br><span class="line">            %d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125; [%-5level] [%traceId] [%logger&#123;50&#125;.%M:%L] - %msg%n</span><br><span class="line">        <span class="tag">&lt;/<span class="name">Property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">Appenders</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 输出控制台日志的配置 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Console</span> <span class="attr">name</span>=<span class="string">&quot;Console&quot;</span> <span class="attr">target</span>=<span class="string">&quot;SYSTEM_OUT&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ThresholdFilter</span> <span class="attr">level</span>=<span class="string">&quot;debug&quot;</span> <span class="attr">onMatch</span>=<span class="string">&quot;ACCEPT&quot;</span> <span class="attr">onMismatch</span>=<span class="string">&quot;DENY&quot;</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 输出日志的格式 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">PatternLayout</span> <span class="attr">pattern</span>=<span class="string">&quot;$&#123;logging.lemes.pattern&#125;&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Console</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">RollingRandomAccessFile</span> <span class="attr">name</span>=<span class="string">&quot;debugRollingFile&quot;</span> <span class="attr">fileName</span>=<span class="string">&quot;$&#123;log.path&#125;/debug.log&quot;</span></span></span><br><span class="line"><span class="tag">                                 <span class="attr">filePattern</span>=<span class="string">&quot;$&#123;log.path&#125;/debug/$$&#123;date:yyyy-MM&#125;/debug.%d&#123;yyyy-MM-dd&#125;-%i.log.gz&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ThresholdFilter</span> <span class="attr">level</span>=<span class="string">&quot;debug&quot;</span> <span class="attr">onMatch</span>=<span class="string">&quot;ACCEPT&quot;</span> <span class="attr">onMismatch</span>=<span class="string">&quot;DENY&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">PatternLayout</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> <span class="attr">pattern</span>=<span class="string">&quot;$&#123;logging.lemes.pattern&#125;&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Policies</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">TimeBasedTriggeringPolicy</span> <span class="attr">interval</span>=<span class="string">&quot;1&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">SizeBasedTriggeringPolicy</span> <span class="attr">size</span>=<span class="string">&quot;100 MB&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">Policies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">DefaultRolloverStrategy</span> <span class="attr">max</span>=<span class="string">&quot;30&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">RollingRandomAccessFile</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">GRPCLogClientAppender</span> <span class="attr">name</span>=<span class="string">&quot;grpc-log&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">PatternLayout</span> <span class="attr">pattern</span>=<span class="string">&quot;$&#123;logging.lemes.pattern&#125;&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">GRPCLogClientAppender</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Appenders</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Loggers</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- ALL &lt; TRACE &lt; DEBUG &lt; INFO &lt; WARN &lt; ERROR &lt; FATAL &lt; OFF --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Logger</span> <span class="attr">name</span>=<span class="string">&quot;com.lenovo.lemes&quot;</span> <span class="attr">level</span>=<span class="string">&quot;debug&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Logger</span> <span class="attr">name</span>=<span class="string">&quot;org.apache.kafka&quot;</span> <span class="attr">level</span>=<span class="string">&quot;warn&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Root</span> <span class="attr">level</span>=<span class="string">&quot;info&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">AppenderRef</span> <span class="attr">ref</span>=<span class="string">&quot;Console&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">AppenderRef</span> <span class="attr">ref</span>=<span class="string">&quot;debugRollingFile&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">AppenderRef</span> <span class="attr">ref</span>=<span class="string">&quot;grpc-log&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Root</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Loggers</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-    &lt;Properties&gt;
-        &lt;Property name=&quot;log.path&quot;&gt;logs/lemes-auth&lt;/Property&gt;
-        &lt;Property name=&quot;logging.lemes.pattern&quot;&gt;
-            %d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125; [%-5level] [%traceId] [%logger&#123;50&#125;.%M:%L] - %msg%n
-        &lt;/Property&gt;
-    &lt;/Properties&gt;
-
-    &lt;Appenders&gt;
-        &lt;!-- 输出控制台日志的配置 --&gt;
-        &lt;Console name=&quot;Console&quot; target=&quot;SYSTEM_OUT&quot;&gt;
-            &lt;!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）--&gt;
-            &lt;ThresholdFilter level=&quot;debug&quot; onMatch=&quot;ACCEPT&quot; onMismatch=&quot;DENY&quot;/&gt;
-            &lt;!-- 输出日志的格式 --&gt;
-            &lt;PatternLayout pattern=&quot;$&#123;logging.lemes.pattern&#125;&quot;/&gt;
-        &lt;/Console&gt;
-
-        &lt;RollingRandomAccessFile name=&quot;debugRollingFile&quot; fileName=&quot;$&#123;log.path&#125;/debug.log&quot;
-                                 filePattern=&quot;$&#123;log.path&#125;/debug/$$&#123;date:yyyy-MM&#125;/debug.%d&#123;yyyy-MM-dd&#125;-%i.log.gz&quot;&gt;
-            &lt;ThresholdFilter level=&quot;debug&quot; onMatch=&quot;ACCEPT&quot; onMismatch=&quot;DENY&quot;/&gt;
-            &lt;PatternLayout charset=&quot;UTF-8&quot; pattern=&quot;$&#123;logging.lemes.pattern&#125;&quot;/&gt;
-            &lt;Policies&gt;
-                &lt;TimeBasedTriggeringPolicy interval=&quot;1&quot;/&gt;
-                &lt;SizeBasedTriggeringPolicy size=&quot;100 MB&quot;/&gt;
-            &lt;/Policies&gt;
-            &lt;DefaultRolloverStrategy max=&quot;30&quot;/&gt;
-        &lt;/RollingRandomAccessFile&gt;
-
-        &lt;GRPCLogClientAppender name=&quot;grpc-log&quot;&gt;
-            &lt;PatternLayout pattern=&quot;$&#123;logging.lemes.pattern&#125;&quot;/&gt;
-        &lt;/GRPCLogClientAppender&gt;
-    &lt;/Appenders&gt;
-    &lt;Loggers&gt;
-        &lt;!-- ALL &lt; TRACE &lt; DEBUG &lt; INFO &lt; WARN &lt; ERROR &lt; FATAL &lt; OFF --&gt;
-        &lt;Logger name=&quot;com.lenovo.lemes&quot; level=&quot;debug&quot;/&gt;
-        &lt;Logger name=&quot;org.apache.kafka&quot; level=&quot;warn&quot;/&gt;
-        &lt;Root level=&quot;info&quot;&gt;
-            &lt;AppenderRef ref=&quot;Console&quot;/&gt;
-            &lt;AppenderRef ref=&quot;debugRollingFile&quot;/&gt;
-            &lt;AppenderRef ref=&quot;grpc-log&quot;/&gt;
-        &lt;/Root&gt;
-    &lt;/Loggers&gt;
-&lt;/configuration&gt;
-</code></pre>
 <h4 id="启动命令中声明上报日志"><a href="#启动命令中声明上报日志" class="headerlink" title="启动命令中声明上报日志"></a>启动命令中声明上报日志</h4><p>在上一步的 agent 中添加上报日志的参数 <code>plugin.toolkit.log.grpc.reporter.server_host=服务ip,plugin.toolkit.log.grpc.reporter.server_port=11800</code></p>
 <p>完整如下</p>
-<pre><code class="bash">java -javaagent:上一步解压目录/agent/skywalking-agent.jar=agent.service_name=自定义服务名,collector.backend_service=服务ip:11800,plugin.toolkit.log.grpc.reporter.server_host=服务ip,plugin.toolkit.log.grpc.reporter.server_port=11800 -jar xx.jar
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -javaagent:上一步解压目录/agent/skywalking-agent.jar=agent.service_name=自定义服务名,collector.backend_service=服务ip:11800,plugin.toolkit.log.grpc.reporter.server_host=服务ip,plugin.toolkit.log.grpc.reporter.server_port=11800 -jar xx.jar</span><br></pre></td></tr></table></figure>
+
 <h4 id="日志收集效果"><a href="#日志收集效果" class="headerlink" title="日志收集效果"></a>日志收集效果</h4><p>这样启动日志中就会打印 traceid , <code>N/A</code> 代表的是非请求的日志，有 traceid 的为 api 请求日志</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20210926170409.png" alt="traceid"></p>
 <p>在 skywalking 中就能看到我们上报的日志</p>

@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2323,12 +2364,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-12-23 10:59</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2016-12-23 10:59</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:886</span>
+        <span>字数:888</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2377,98 +2418,41 @@
         <p>在使用git的过程中，总有一天你会遇到下面的问题：）<br>这些也是在开发过程中很常见的问题，以下也是作者的经验之谈，有不对的地方还请指出。</p>
 <span id="more"></span>
 <h3 id="最后一次commit信息写错了"><a href="#最后一次commit信息写错了" class="headerlink" title="最后一次commit信息写错了"></a>最后一次commit信息写错了</h3><p>如果只是提交信息写错了信息，可以通过以下命令单独修改提交信息</p>
-<pre><code class="bash">$ git commit --amend
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit --amend</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>注意：</strong> 通过这样的过程修改提交信息后，相当于删除原来的提交，重新提交了一次。所有如果你在修改前已经将错误的那次提交push到服务端，那在修改后就需要通过 git pull 来合并代码（类似于两个分支了）。<br>通过 <code>git log --graph --oneline</code> 查看就会发现两个分支合并的痕迹</p>
 </blockquote>
-<h3 id="最后一次commit少添加一个文件"><a href="#最后一次commit少添加一个文件" class="headerlink" title="最后一次commit少添加一个文件"></a>最后一次commit少添加一个文件</h3><pre><code class="bash">$ git add file1
-$ git commit --amend
-</code></pre>
-<h3 id="最后一次commit多添加一个文件"><a href="#最后一次commit多添加一个文件" class="headerlink" title="最后一次commit多添加一个文件"></a>最后一次commit多添加一个文件</h3><pre><code class="bash">$ git rm --cached file1
-$ git commit --amend
-</code></pre>
-<h3 id="移除add过的文件"><a href="#移除add过的文件" class="headerlink" title="移除add过的文件"></a>移除add过的文件</h3><pre><code class="bash">#方法一
-$ git rm --cache [文件名]
-
-#方法二
-$ git reset head [文件/文件夹]
-</code></pre>
+<h3 id="最后一次commit少添加一个文件"><a href="#最后一次commit少添加一个文件" class="headerlink" title="最后一次commit少添加一个文件"></a>最后一次commit少添加一个文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add file1</span><br><span class="line">$ git commit --amend</span><br></pre></td></tr></table></figure>
+<h3 id="最后一次commit多添加一个文件"><a href="#最后一次commit多添加一个文件" class="headerlink" title="最后一次commit多添加一个文件"></a>最后一次commit多添加一个文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">rm</span> --cached file1</span><br><span class="line">$ git commit --amend</span><br></pre></td></tr></table></figure>
+<h3 id="移除add过的文件"><a href="#移除add过的文件" class="headerlink" title="移除add过的文件"></a>移除add过的文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#方法一</span></span><br><span class="line">$ git <span class="built_in">rm</span> --cache [文件名]</span><br><span class="line"></span><br><span class="line"><span class="comment">#方法二</span></span><br><span class="line">$ git reset <span class="built_in">head</span> [文件/文件夹]</span><br></pre></td></tr></table></figure>
 <h3 id="回退本地commit（还未push）"><a href="#回退本地commit（还未push）" class="headerlink" title="回退本地commit（还未push）"></a>回退本地commit（还未push）</h3><p>这种情况发生在你的本地仓库，可能你add，commit以后发现代码有点问题，打算取消提交，用到下面命令</p>
-<pre><code class="bash">#只会保留源码（工作区），回退commit(本地仓库)与index（暂存区）到某个版本
-$ git reset &lt;commit_id&gt;   #默认为 --mixed模式
-$ git reset --mixed &lt;commit_id&gt;
-
-#保留源码（工作区）和index（暂存区），只回退commit（本地仓库）到某个版本
-$ git reset --soft &lt;commit_id&gt;
-
-#源码（工作区）、commit（本地仓库）与index（暂存区）都回退到某个版本
-$ git reset --hard &lt;commit_id&gt;
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#只会保留源码（工作区），回退commit(本地仓库)与index（暂存区）到某个版本</span></span><br><span class="line">$ git reset &lt;commit_id&gt;   <span class="comment">#默认为 --mixed模式</span></span><br><span class="line">$ git reset --mixed &lt;commit_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">#保留源码（工作区）和index（暂存区），只回退commit（本地仓库）到某个版本</span></span><br><span class="line">$ git reset --soft &lt;commit_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">#源码（工作区）、commit（本地仓库）与index（暂存区）都回退到某个版本</span></span><br><span class="line">$ git reset --hard &lt;commit_id&gt;</span><br></pre></td></tr></table></figure>
 <p>当然有人在push代码以后，也是用reset –hard回退代码到某个版本之前，但是这样会有一个问题，你线上的代码没有变化。</p>
 <blockquote>
 <p>!!!可以通过 git push –force 将本地的回退推送到服务端,但是除非你很清楚在这么做, 不推荐.</p>
 </blockquote>
 <p>所以，这种情况你要使用下面的方式了。</p>
 <h3 id="回退本地commit（已经push）"><a href="#回退本地commit（已经push）" class="headerlink" title="回退本地commit（已经push）"></a>回退本地commit（已经push）</h3><p>对于已经把代码push到线上仓库,你回退本地代码其实也想同时回退线上代码,回滚到某个指定的版本,线上,线下代码保持一致.你要用到下面的命令</p>
-<pre><code class="bash">$ git revert &lt;commit_id&gt;
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git revert &lt;commit_id&gt;</span><br></pre></td></tr></table></figure>
 <p><strong>注意：</strong></p>
 <ol>
 <li>git revert 用于反转提交，执行命令时要求工作树必须是干净的。</li>
 <li>git revert 用一个新的提交来消除一个历时提交所做出的修改</li>
 </ol>
-<h3 id="回退单个文件的历史版本"><a href="#回退单个文件的历史版本" class="headerlink" title="回退单个文件的历史版本"></a>回退单个文件的历史版本</h3><pre><code class="bash">#查看历史版本
-git log 1.txt
-
-#回退该文件到指定版本
-git reset [commit_id] 1.txt
-git checkout 1.txt
-
-#提交
-git commit -m &quot;回退1.txt的历史版本&quot;
-</code></pre>
+<h3 id="回退单个文件的历史版本"><a href="#回退单个文件的历史版本" class="headerlink" title="回退单个文件的历史版本"></a>回退单个文件的历史版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看历史版本</span></span><br><span class="line">git <span class="built_in">log</span> 1.txt</span><br><span class="line"></span><br><span class="line"><span class="comment">#回退该文件到指定版本</span></span><br><span class="line">git reset [commit_id] 1.txt</span><br><span class="line">git checkout 1.txt</span><br><span class="line"></span><br><span class="line"><span class="comment">#提交</span></span><br><span class="line">git commit -m <span class="string">&quot;回退1.txt的历史版本&quot;</span></span><br></pre></td></tr></table></figure>
 <h3 id="修改提交历史中的author和email"><a href="#修改提交历史中的author和email" class="headerlink" title="修改提交历史中的author和email"></a>修改提交历史中的author和email</h3><p>旧的：author:<code>Old-Author</code> email:<code>old@mail.com</code><br>新的：author:<code>New-Author</code> email:<code>new@mail.com</code><br>1.在git仓库内创建下面的脚本，如<code>change.sh</code></p>
-<pre><code class="shell"># !/bin/sh
-
-git filter-branch --env-filter &#39;
-an=&quot;$GIT_AUTHOR_NAME&quot;
-am=&quot;$GIT_AUTHOR_EMAIL&quot;
-cn=&quot;$GIT_COMMITTER_NAME&quot;
-cm=&quot;$GIT_COMMITTER_EMAIL&quot;
-
-if [ &quot;$GIT_COMMITTER_EMAIL&quot; = &quot;old@mail.com&quot; ]
-then
-    cn=&quot;New-Author&quot;
-    cm=&quot;new@mail.com&quot;
-fi
-if [ &quot;$GIT_AUTHOR_EMAIL&quot; = &quot;old@mail.com&quot; ]
-then
-    an=&quot;New-Author&quot;
-    am=&quot;new@mail.com&quot;
-fi
-
-export GIT_AUTHOR_NAME=&quot;$an&quot;
-export GIT_AUTHOR_EMAIL=&quot;$am&quot;
-export GIT_COMMITTER_NAME=&quot;$cn&quot;
-export GIT_COMMITTER_EMAIL=&quot;$cm&quot;
-&#39;
-</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">!/bin/sh</span></span><br><span class="line"></span><br><span class="line">git filter-branch --env-filter &#x27;</span><br><span class="line">an=&quot;$GIT_AUTHOR_NAME&quot;</span><br><span class="line">am=&quot;$GIT_AUTHOR_EMAIL&quot;</span><br><span class="line">cn=&quot;$GIT_COMMITTER_NAME&quot;</span><br><span class="line">cm=&quot;$GIT_COMMITTER_EMAIL&quot;</span><br><span class="line"></span><br><span class="line">if [ &quot;$GIT_COMMITTER_EMAIL&quot; = &quot;old@mail.com&quot; ]</span><br><span class="line">then</span><br><span class="line">    cn=&quot;New-Author&quot;</span><br><span class="line">    cm=&quot;new@mail.com&quot;</span><br><span class="line">fi</span><br><span class="line">if [ &quot;$GIT_AUTHOR_EMAIL&quot; = &quot;old@mail.com&quot; ]</span><br><span class="line">then</span><br><span class="line">    an=&quot;New-Author&quot;</span><br><span class="line">    am=&quot;new@mail.com&quot;</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">export GIT_AUTHOR_NAME=&quot;$an&quot;</span><br><span class="line">export GIT_AUTHOR_EMAIL=&quot;$am&quot;</span><br><span class="line">export GIT_COMMITTER_NAME=&quot;$cn&quot;</span><br><span class="line">export GIT_COMMITTER_EMAIL=&quot;$cm&quot;</span><br><span class="line">&#x27;</span><br></pre></td></tr></table></figure>
 <p>2.运行脚本</p>
-<pre><code class="bash">$ sh change.sh
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sh change.sh</span><br></pre></td></tr></table></figure>
+
 <h3 id="忽略已提交的文件（-iml）"><a href="#忽略已提交的文件（-iml）" class="headerlink" title="忽略已提交的文件（.iml）"></a>忽略已提交的文件（.iml）</h3><ol>
-<li>删除已提交的文件<pre><code class="bash"># 删除项目中所有的.iml后缀的文件
-$ find . -name &quot;*.iml&quot; | xargs rm -f
-</code></pre>
+<li>删除已提交的文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除项目中所有的.iml后缀的文件</span></span><br><span class="line">$ find . -name <span class="string">&quot;*.iml&quot;</span> | xargs <span class="built_in">rm</span> -f</span><br></pre></td></tr></table></figure></li>
+<li>添加<code>.gitignore</code>文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*.iml</span><br><span class="line">/**/*.iml</span><br></pre></td></tr></table></figure>
+
 </li>
-<li>添加<code>.gitignore</code>文件<br>```bash</li>
 </ol>
-<p><em>.iml<br>/**/</em>.iml</p>
-<pre><code>
----
-持续更新中～～～
-</code></pre>
+<hr>
+<p>持续更新中～～～</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

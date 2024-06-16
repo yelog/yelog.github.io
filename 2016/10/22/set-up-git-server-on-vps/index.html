@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2323,12 +2364,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-10-22 20:08</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2016-10-22 20:08</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:771</span>
+        <span>字数:779</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2378,41 +2419,31 @@
 <span id="more"></span>
 <h2 id="搭建git服务器"><a href="#搭建git服务器" class="headerlink" title="搭建git服务器"></a>搭建git服务器</h2><p>通过ssh链接到服务器，开始进行操作</p>
 <h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>在服务器上安装 git</p>
-<pre><code class="bash">$ sudo apt-get install git
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install git</span><br></pre></td></tr></table></figure>
 <h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>创建 git 用户，用来运行git服务</p>
-<pre><code class="bash">$ sudo adduser git
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo adduser git</span><br></pre></td></tr></table></figure>
 <h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>创建证书，免密码登录：<br>收集所有需要登录的用户的公钥（<code>id_rsa.pub</code>）文件，把所有公钥导入到 <code>/home/git/.ssh/authorized_keys</code> 文件内，一行一个。<br>如果个人的git中的公钥已经连接了其他服务器如：github，可以参考 <a href="#">Post not found: tools/computer-mutiple-github-account</a></p>
 <blockquote>
 <p><strong>注意：一定要通过下面的命令将该文件其他用户的所有权限移除，否则会出现文章尾部问题</strong></p>
 </blockquote>
-<pre><code class="bash">$ chmod 600 authorized_keys
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">chmod</span> 600 authorized_keys</span><br></pre></td></tr></table></figure>
 <h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>初始化git仓库</p>
-<pre><code class="bash">$ git init --bare test.git
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init --bare test.git</span><br></pre></td></tr></table></figure>
 <p>git创建一个裸仓库，裸仓库没有工作区，因为服务器上的git仓库纯粹为了共享，所有不能让用户直接登录到服务器上去改工作区，并且服务器的git仓库通常以 <code>.git</code> 结尾。然后，修改owner改为git：</p>
-<pre><code class="bash">$ sudo chown -R git:git test.git
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="built_in">chown</span> -R git:git test.git</span><br></pre></td></tr></table></figure>
 <h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><p>禁用shell登录：<br>处于安全的考虑，第二步创建的git用户不允许登录shell，这可以通过编辑 <code>/etc/passwd</code> 文件完成。</p>
-<pre><code class="bash">git:x:1003:1003::/home/git:/bin/bash
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git:x:1003:1003::/home/git:/bin/bash</span><br></pre></td></tr></table></figure>
 <p>改为</p>
-<pre><code class="bash">git:x:1003:1003::/home/git:/usr/bin/git-shell
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git:x:1003:1003::/home/git:/usr/bin/git-shell</span><br></pre></td></tr></table></figure>
 <p>这样，git用户可以正常通过ssh使用git，但无法登录shell，因为我们为git用户指定的git-shell每次一登录就自动退出。</p>
 <h3 id="第六步"><a href="#第六步" class="headerlink" title="第六步"></a>第六步</h3><p>克隆远程仓库：<br>现在，可以通过git clone命令克隆远程仓库了，在各自的电脑上运行：</p>
-<pre><code class="bash">$ git clone git@server:/home/git/test.git
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git@server:/home/git/test.git</span><br></pre></td></tr></table></figure>
 <p>如果服务器的ssh端口不是默认的22的话，比如说6789，可以这样写：</p>
-<pre><code class="bash">$ git clone ssh://git@server:6789/home/git/test.git
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> ssh://git@server:6789/home/git/test.git</span><br></pre></td></tr></table></figure>
 <h2 id="问题来了"><a href="#问题来了" class="headerlink" title="问题来了"></a>问题来了</h2><p>本来根据文档，根据广大猿友的经验，我的搭建之路已经完成了，然后最后一步出现了问题。每次跟服务器进行交互(clone,pull,push)，都让我输入git的密码，也就是说，我配置的ssh没有生效。然后就开始到处找原因，重新生成rsa，提升authorized_keys权限，重新创建服务器git账户，重新。。。。。</p>
 <p>翻遍了 Stack Overflow 和 segmentfault ,两个小时过去了，问题仍然没有进展，这么简单的东西，问题到底出在哪里。</p>
 <p>就在心灰意冷，准备放弃的时候，不知道是哪里来的灵感，准备把 authorized_keys 文件的其他用户的权限删掉，然后就能用了，后就能用了，就能用了，能用了，用了，了～～～～，命令如下，不想多说话，我想静静。</p>
-<pre><code class="bash">$ chmod 600 authorized_keys
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">chmod</span> 600 authorized_keys</span><br></pre></td></tr></table></figure>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

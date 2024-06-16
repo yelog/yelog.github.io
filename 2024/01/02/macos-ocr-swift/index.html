@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2327,7 +2368,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2024-01-02 10:09</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2024-01-02 10:09</time>
         
     </div>
     <div class="article-meta">
@@ -2382,75 +2423,12 @@
 <p>经过翻阅文档和 chatgpt 拉扯了一下午, 最终成功实现.</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>代码逻辑为, 接受参数: 图片路径, 然后获取图片, 通过 <code>VNImageRequestHandler</code> 对图片进行文字识别</p>
 <p>如下代码可以直接放进一个 <code>ocr.swift</code>, 然后执行 <code>swiftc -o ocr ocr.swift</code> , 在执行 <code>./ocr /Users/yelog/Desktop/3.png</code> 后面为你实际的有文字的图片路经</p>
-<pre><code class="swift">//
-//  ocr.swift
-//  Fast Translation
-//
-//  Created by 杨玉杰 on 2023/12/31.
-//
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  ocr.swift</span></span><br><span class="line"><span class="comment">//  Fast Translation</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  Created by 杨玉杰 on 2023/12/31.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> SwiftUI</span><br><span class="line"><span class="keyword">import</span> Vision</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> <span class="title function_">handleDetectedText</span>(<span class="params">request</span>: <span class="type">VNRequest</span>?, <span class="params">error</span>: <span class="type">Error</span>?) &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> error <span class="operator">=</span> error &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;ERROR: <span class="subst">\(error)</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> results <span class="operator">=</span> request<span class="operator">?</span>.results, results.count <span class="operator">&gt;</span> <span class="number">0</span> <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;No text found&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> result <span class="keyword">in</span> results &#123;</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">let</span> observation <span class="operator">=</span> result <span class="keyword">as?</span> <span class="type">VNRecognizedTextObservation</span> &#123;</span><br><span class="line">            <span class="keyword">for</span> text <span class="keyword">in</span> observation.topCandidates(<span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">let</span> string <span class="operator">=</span> text.string</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;识别: <span class="subst">\(string)</span>&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> <span class="title function_">ocrImage</span>(<span class="params">path</span>: <span class="type">String</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> cgImage <span class="operator">=</span> <span class="type">NSImage</span>(byReferencingFile: path)<span class="operator">?</span>.ciImage()<span class="operator">?</span>.cgImage</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> requestHandler <span class="operator">=</span> <span class="type">VNImageRequestHandler</span>(cgImage: cgImage<span class="operator">!</span>)</span><br><span class="line">    <span class="keyword">let</span> request <span class="operator">=</span> <span class="type">VNRecognizeTextRequest</span>(completionHandler: handleDetectedText)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置文本识别的语言为英文</span></span><br><span class="line">    request.recognitionLanguages <span class="operator">=</span> [<span class="string">&quot;en&quot;</span>]</span><br><span class="line">    request.recognitionLevel <span class="operator">=</span> .accurate</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> requestHandler.perform([request])</span><br><span class="line">    &#125; <span class="keyword">catch</span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Unable to perform the requests: <span class="subst">\(error)</span>.&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">extension</span> <span class="title class_">NSImage</span> &#123;</span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">ciImage</span>() -&gt; <span class="type">CIImage</span>? &#123;</span><br><span class="line">        <span class="keyword">guard</span> <span class="keyword">let</span> data <span class="operator">=</span> <span class="keyword">self</span>.tiffRepresentation,</span><br><span class="line">              <span class="keyword">let</span> bitmap <span class="operator">=</span> <span class="type">NSBitmapImageRep</span>(data: data) <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> ci <span class="operator">=</span> <span class="type">CIImage</span>(bitmapImageRep: bitmap)</span><br><span class="line">        <span class="keyword">return</span> ci</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行函数，从命令行参数中获取图片的地址</span></span><br><span class="line">ocrImage(path: <span class="type">CommandLine</span>.arguments[<span class="number">1</span>])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-import SwiftUI
-import Vision
-
-
-func handleDetectedText(request: VNRequest?, error: Error?) &#123;
-    if let error = error &#123;
-        print(&quot;ERROR: \(error)&quot;)
-        return
-    &#125;
-    guard let results = request?.results, results.count &gt; 0 else &#123;
-        print(&quot;No text found&quot;)
-        return
-    &#125;
-
-    for result in results &#123;
-        if let observation = result as? VNRecognizedTextObservation &#123;
-            for text in observation.topCandidates(1) &#123;
-                let string = text.string
-                print(&quot;识别: \(string)&quot;)
-            &#125;
-        &#125;
-    &#125;
-&#125;
-
-func ocrImage(path: String) &#123;
-    let cgImage = NSImage(byReferencingFile: path)?.ciImage()?.cgImage
-
-    let requestHandler = VNImageRequestHandler(cgImage: cgImage!)
-    let request = VNRecognizeTextRequest(completionHandler: handleDetectedText)
-
-    // 设置文本识别的语言为英文
-    request.recognitionLanguages = [&quot;en&quot;]
-    request.recognitionLevel = .accurate
-
-    do &#123;
-        try requestHandler.perform([request])
-    &#125; catch &#123;
-        print(&quot;Unable to perform the requests: \(error).&quot;)
-    &#125;
-&#125;
-
-extension NSImage &#123;
-    func ciImage() -&gt; CIImage? &#123;
-        guard let data = self.tiffRepresentation,
-              let bitmap = NSBitmapImageRep(data: data) else &#123;
-            return nil
-        &#125;
-        let ci = CIImage(bitmapImageRep: bitmap)
-        return ci
-    &#125;
-&#125;
-
-// 执行函数，从命令行参数中获取图片的地址
-ocrImage(path: CommandLine.arguments[1])
-</code></pre>
 <p>然后准备待识别的有文字的图片</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202401021353013.png" alt="待识别的图片"> </p>
-<pre><code class="bash"># 编译 swift 文件
-swiftc -o ocr ocr.swift
-# 执行并且传递图片路径参数
-./ocr /Users/yelog/Desktop/3.png
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 编译 swift 文件</span></span><br><span class="line">swiftc -o ocr ocr.swift</span><br><span class="line"><span class="comment"># 执行并且传递图片路径参数</span></span><br><span class="line">./ocr /Users/yelog/Desktop/3.png</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202401021354591.png" alt="执行识别效果"></p>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>最近打算着手写一些 macos 的小工具, 如果对 <code>swift</code> 或者 <code>macos</code> 感兴趣的可以关注或评论.</p>
 

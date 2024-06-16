@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2321,7 +2362,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-11-27 22:51</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2017-11-27 22:51</time>
         
     </div>
     <div class="article-meta">
@@ -2394,180 +2435,48 @@
 </ol>
 <h2 id="泛型与类型擦除"><a href="#泛型与类型擦除" class="headerlink" title="泛型与类型擦除"></a>泛型与类型擦除</h2><p>Java语言并不是一开始就支持泛型的。在早期的JDK中，只能通过Object类是所有类型的父类和强制类型转换来实现泛型的功能。强制类型转换的缺点就是把编译期间的问题延迟到运行时，JVM并不能为我们提供编译期间的检查。</p>
 <p>在JDK1.5中，Java语言引入了泛型机制。但是这种泛型机制是通过类型擦除来实现的，即Java中的泛型只在程序源代码中有效（源代码阶段提供类型检查），在编译后的字节码中自动用强制类型转换进行替代。也就是说，Java语言中的泛型机制其实就是一颗语法糖，相较与C++、C#相比，其泛型实现实在是不那么优雅。</p>
-<pre><code class="java">/**
-* 在源代码中存在泛型
-*/
-public static void main(String[] args) &#123;
-    Map&lt;String,String&gt; map = new HashMap&lt;String,String&gt;();
-    map.put(&quot;hello&quot;,&quot;你好&quot;);
-    String hello = map.get(&quot;hello&quot;);
-    System.out.println(hello);
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 在源代码中存在泛型</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    Map&lt;String,String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;String,String&gt;();</span><br><span class="line">    map.put(<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;你好&quot;</span>);</span><br><span class="line">    <span class="type">String</span> <span class="variable">hello</span> <span class="operator">=</span> map.get(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">    System.out.println(hello);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>当上述源代码被编译为class文件后，泛型被擦除且引入强制类型转换</p>
-<pre><code class="java">public static void main(String[] args) &#123;
-    HashMap map = new HashMap(); //类型擦除
-    map.put(&quot;hello&quot;, &quot;你好&quot;);
-    String hello = (String)map.get(&quot;hello&quot;);//强制转换
-    System.out.println(hello);
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">HashMap</span> <span class="variable">map</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashMap</span>(); <span class="comment">//类型擦除</span></span><br><span class="line">    map.put(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;你好&quot;</span>);</span><br><span class="line">    <span class="type">String</span> <span class="variable">hello</span> <span class="operator">=</span> (String)map.get(<span class="string">&quot;hello&quot;</span>);<span class="comment">//强制转换</span></span><br><span class="line">    System.out.println(hello);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="自动装箱与拆箱"><a href="#自动装箱与拆箱" class="headerlink" title="自动装箱与拆箱"></a>自动装箱与拆箱</h2><blockquote>
 <p>Java中的自动装箱与拆箱指的是基本数据类型与他们的包装类型之间的相互转换。</p>
 </blockquote>
 <p>我们知道Java是一门面向对象的语言，在Java世界中有一句话是这么说的：“万物皆对象”。但是Java中的基本数据类型却不是对象，他们不需要进行new操作，也不能调用任何方法，这在使用的时候有诸多不便。因此Java为这些基本类型提供了包装类，并且为了使用方便，提供了自动装箱与拆箱功能。自动装箱与拆箱在使用的过程中，其实是一个语法糖，内部还是调用了相应的函数进行转换。</p>
 <p>下面代码演示了自动装箱和拆箱功能</p>
-<pre><code class="java">public static void main(String[] args) &#123;
-    Integer a = 1;
-    int b = 2;
-    int c = a + b;
-    System.out.println(c);
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">Integer</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a + b;</span><br><span class="line">    System.out.println(c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>经过编译后，代码如下</p>
-<pre><code class="java">public static void main(String[] args) &#123;
-    Integer a = Integer.valueOf(1); // 自动装箱
-    byte b = 2;
-    int c = a.intValue() + b;//自动拆箱
-    System.out.println(c);
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">Integer</span> <span class="variable">a</span> <span class="operator">=</span> Integer.valueOf(<span class="number">1</span>); <span class="comment">// 自动装箱</span></span><br><span class="line">    <span class="type">byte</span> <span class="variable">b</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a.intValue() + b;<span class="comment">//自动拆箱</span></span><br><span class="line">    System.out.println(c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="变长参数"><a href="#变长参数" class="headerlink" title="变长参数"></a>变长参数</h2><blockquote>
 <p>所谓变长参数，就是方法可以接受长度不定确定的参数</p>
 </blockquote>
 <p>变长参数特性是在JDK1.5中引入的，使用变长参数有两个条件，一是变长的那一部分参数具有相同的类型，二是变长参数必须位于方法参数列表的最后面。变长参数同样是Java中的语法糖，其内部实现是Java数组。</p>
-<pre><code class="java">public class Varargs &#123;
-    public static void print(String... args) &#123;
-        for(String str : args)&#123;
-            System.out.println(str);
-        &#125;
-    &#125;
-
-    public static void main(String[] args) &#123;
-        print(&quot;hello&quot;, &quot;world&quot;);
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Varargs</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">print</span><span class="params">(String... args)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span>(String str : args)&#123;</span><br><span class="line">            System.out.println(str);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        print(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>编译为class文件后如下，从中可以很明显的看出变长参数内部是通过数组实现的</p>
-<pre><code class="java">public class Varargs &#123;
-    public Varargs() &#123;
-    &#125;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Varargs</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Varargs</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">print</span><span class="params">(String... args)</span> &#123;</span><br><span class="line">        String[] var1 = args;</span><br><span class="line">        <span class="type">int</span> <span class="variable">var2</span> <span class="operator">=</span> args.length;</span><br><span class="line">        <span class="comment">//增强for循环的数组实现方式</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">var3</span> <span class="operator">=</span> <span class="number">0</span>; var3 &lt; var2; ++var3) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> var1[var3];</span><br><span class="line">            System.out.println(str);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//变长参数转换为数组</span></span><br><span class="line">        print(<span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    public static void print(String... args) &#123;
-        String[] var1 = args;
-        int var2 = args.length;
-        //增强for循环的数组实现方式
-        for(int var3 = 0; var3 &lt; var2; ++var3) &#123;
-            String str = var1[var3];
-            System.out.println(str);
-        &#125;
-
-    &#125;
-
-    public static void main(String[] args) &#123;
-        //变长参数转换为数组
-        print(new String[]&#123;&quot;hello&quot;, &quot;world&quot;&#125;);
-    &#125;
-&#125;
-</code></pre>
 <h2 id="增强for循环"><a href="#增强for循环" class="headerlink" title="增强for循环"></a>增强for循环</h2><blockquote>
 <p>增强for循环与普通for循环相比，功能更强并且代码更简洁</p>
 </blockquote>
 <p>增强for循环的对象要么是一个数组，要么实现了Iterable接口。这个语法糖主要用来对数组或者集合进行遍历，其在循环过程中不能改变集合的大小。</p>
-<pre><code class="java">public static void main(String[] args) &#123;
-    String[] params = new String[]&#123;&quot;hello&quot;,&quot;world&quot;&#125;;
-    //增强for循环对象为数组
-    for(String str : params)&#123;
-        System.out.println(str);
-    &#125;
-
-    List&lt;String&gt; lists = Arrays.asList(&quot;hello&quot;,&quot;world&quot;);
-    //增强for循环对象实现Iterable接口
-    for(String str : lists)&#123;
-        System.out.println(str);
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    String[] params = <span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;world&quot;</span>&#125;;</span><br><span class="line">    <span class="comment">//增强for循环对象为数组</span></span><br><span class="line">    <span class="keyword">for</span>(String str : params)&#123;</span><br><span class="line">        System.out.println(str);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    List&lt;String&gt; lists = Arrays.asList(<span class="string">&quot;hello&quot;</span>,<span class="string">&quot;world&quot;</span>);</span><br><span class="line">    <span class="comment">//增强for循环对象实现Iterable接口</span></span><br><span class="line">    <span class="keyword">for</span>(String str : lists)&#123;</span><br><span class="line">        System.out.println(str);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>编译后的class文件为</p>
-<pre><code class="java">public static void main(String[] args) &#123;
-   String[] params = new String[]&#123;&quot;hello&quot;, &quot;world&quot;&#125;;
-   String[] lists = params;
-   int var3 = params.length;
-   //数组形式的增强for退化为普通for
-   for(int str = 0; str &lt; var3; ++str) &#123;
-       String str1 = lists[str];
-       System.out.println(str1);
-   &#125;
-
-   List var6 = Arrays.asList(new String[]&#123;&quot;hello&quot;, &quot;world&quot;&#125;);
-   Iterator var7 = var6.iterator();
-   //实现Iterable接口的增强for使用iterator接口进行遍历
-   while(var7.hasNext()) &#123;
-       String var8 = (String)var7.next();
-       System.out.println(var8);
-   &#125;
-
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">   String[] params = <span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>&#125;;</span><br><span class="line">   String[] lists = params;</span><br><span class="line">   <span class="type">int</span> <span class="variable">var3</span> <span class="operator">=</span> params.length;</span><br><span class="line">   <span class="comment">//数组形式的增强for退化为普通for</span></span><br><span class="line">   <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">str</span> <span class="operator">=</span> <span class="number">0</span>; str &lt; var3; ++str) &#123;</span><br><span class="line">       <span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> lists[str];</span><br><span class="line">       System.out.println(str1);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="type">List</span> <span class="variable">var6</span> <span class="operator">=</span> Arrays.asList(<span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;world&quot;</span>&#125;);</span><br><span class="line">   <span class="type">Iterator</span> <span class="variable">var7</span> <span class="operator">=</span> var6.iterator();</span><br><span class="line">   <span class="comment">//实现Iterable接口的增强for使用iterator接口进行遍历</span></span><br><span class="line">   <span class="keyword">while</span>(var7.hasNext()) &#123;</span><br><span class="line">       <span class="type">String</span> <span class="variable">var8</span> <span class="operator">=</span> (String)var7.next();</span><br><span class="line">       System.out.println(var8);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><blockquote>
 <p>内部类就是定义在一个类内部的类</p>
 </blockquote>
 <p>Java语言中之所以引入内部类，是因为有些时候一个类只在另一个类中有用，我们不想让其在另外一个地方被使用。内部类之所以是语法糖，是因为其只是一个编译时的概念，一旦编译完成，编译器就会为内部类生成一个单独的class文件，名为outer$innter.class。</p>
-<pre><code class="java">public class Outer &#123;
-    class Inner&#123;
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Outer</span> &#123;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Inner</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>使用javac编译后，生成两个class文件Outer.class和Outer$Inner.class，其中Outer$Inner.class的内容如下：</p>
-<pre><code class="java">class Outer$Inner &#123;
-    Outer$Inner(Outer var1) &#123;
-        this.this$0 = var1;
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Outer$Inner</span> &#123;</span><br><span class="line">    Outer$Inner(Outer var1) &#123;</span><br><span class="line">        <span class="built_in">this</span>.<span class="built_in">this</span>$<span class="number">0</span> = var1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>内部类分为四种：成员内部类、局部内部类、匿名内部类、静态内部类，每一种都有其用法，这里就不介绍了</p>
 <h2 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h2><blockquote>
 <p>枚举类型就是一些具有相同特性的类常量</p>
 </blockquote>
 <p>java中类的定义使用class，枚举类的定义使用enum。在Java的字节码结构中，其实并没有枚举类型，枚举类型只是一个语法糖，在编译完成后被编译成一个普通的类。这个类继承java.lang.Enum，并被final关键字修饰。</p>
-<pre><code class="java">public enum Fruit &#123;
-    APPLE,ORINGE
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="title class_">Fruit</span> &#123;</span><br><span class="line">    APPLE,ORINGE</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>使用jad对编译后的class文件进行反编译后得到</p>
-<pre><code class="java">//继承java.lang.Enum并声明为final
-public final class Fruit extends Enum
-&#123;
-
-    public static Fruit[] values()
-    &#123;
-        return (Fruit[])$VALUES.clone();
-    &#125;
-
-    public static Fruit valueOf(String s)
-    &#123;
-        return (Fruit)Enum.valueOf(Fruit, s);
-    &#125;
-
-    private Fruit(String s, int i)
-    &#123;
-        super(s, i);
-    &#125;
-    //枚举类型常量
-    public static final Fruit APPLE;
-    public static final Fruit ORANGE;
-    private static final Fruit $VALUES[];//使用数组进行维护
-
-    static
-    &#123;
-        APPLE = new Fruit(&quot;APPLE&quot;, 0);
-        ORANGE = new Fruit(&quot;ORANGE&quot;, 1);
-        $VALUES = (new Fruit[] &#123;
-            APPLE, ORANGE
-        &#125;);
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//继承java.lang.Enum并声明为final</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">Fruit</span> <span class="keyword">extends</span> <span class="title class_">Enum</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Fruit[] values()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> (Fruit[])$VALUES.clone();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Fruit <span class="title function_">valueOf</span><span class="params">(String s)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> (Fruit)Enum.valueOf(Fruit, s);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">Fruit</span><span class="params">(String s, <span class="type">int</span> i)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">super</span>(s, i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//枚举类型常量</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit APPLE;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit ORANGE;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Fruit $VALUES[];<span class="comment">//使用数组进行维护</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span></span><br><span class="line">    &#123;</span><br><span class="line">        APPLE = <span class="keyword">new</span> <span class="title class_">Fruit</span>(<span class="string">&quot;APPLE&quot;</span>, <span class="number">0</span>);</span><br><span class="line">        ORANGE = <span class="keyword">new</span> <span class="title class_">Fruit</span>(<span class="string">&quot;ORANGE&quot;</span>, <span class="number">1</span>);</span><br><span class="line">        $VALUES = (<span class="keyword">new</span> <span class="title class_">Fruit</span>[] &#123;</span><br><span class="line">            APPLE, ORANGE</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

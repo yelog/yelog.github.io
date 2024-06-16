@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2323,7 +2364,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-10-05 11:58</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2016-10-05 11:58</time>
         
     </div>
     <div class="article-meta">
@@ -2384,161 +2425,43 @@
 <span id="more"></span>
 <h2 id="一些规则"><a href="#一些规则" class="headerlink" title="一些规则"></a>一些规则</h2><h3 id="FTL指令规则"><a href="#FTL指令规则" class="headerlink" title="FTL指令规则"></a>FTL指令规则</h3><p>FreeMarker有三种FTL标签，这和HTML的标签是完全类似的<br>     开始标签：&lt;#directivename parameters&gt;<br>     结束标签：&lt;/#directivename&gt;<br>     空标签： &lt;#directivename parameters /&gt;<br>     实际上，使用标签时前面的#符号也可能变成@，如果该指令是一个用户指令而不是系统内建指令时，应将#符号改为@符号</p>
 <h3 id="插值规则"><a href="#插值规则" class="headerlink" title="插值规则"></a>插值规则</h3><p>FreeMarker的插值有如下两种类型<br>    1、通用插值：${expr}<br>    2、数字格式化插值：#{expr}或者#{expr;format}<br>通用插值，有可以分为四种情况<br>    a、插值结果为字符串值：直接输出表达式结果<br>    b、插值结果为数字值：根据默认格式(#setting 指令设置)将表达式结果转换成文本输出。可以使用内建的字符串函数格式单个插值，例如</p>
-<pre><code class="c">&lt;#setting number_format = &quot;currency&quot; /&gt;
-&lt;#assign str = 42 /&gt;
-$&#123;str&#125;
-$&#123;str?string&#125;
-$&#123;str?string.number&#125;
-$&#123;str?string.currency&#125;
-$&#123;str?string.percent&#125;
-$&#123;str?string.computer&#125;
-
-日期处理
-$&#123;openingTime?string.short&#125;
-$&#123;openingTime?string.medium&#125;
-$&#123;openingTime?string.long&#125;
-$&#123;openingTime?string.full&#125;
-$&#123;nextDiscountDay?string.short&#125;
-$&#123;nextDiscountDay?string.medium&#125;
-$&#123;nextDiscountDay?string.long&#125;
-$&#123;nextDiscountDay?string.full&#125;
-$&#123;lastUpdated?string.short&#125;
-$&#123;lastUpdated?string.medium&#125;
-$&#123;lastUpdated?string.long&#125;
-$&#123;lastUpdated?string.full&#125;
-$&#123;lastUpdated?string(&quot;yyyy-MM-dd HH:mm:ss zzzz&quot;)&#125;
-$&#123;lastUpdated?string(&quot;EEE, MMM d, &#39;&#39;yy&quot;)&#125;
-$&#123;lastUpdated?string(&quot;EEEE, MMMM dd, yyyy, hh:mm:ss a &#39;(&#39;zzz&#39;)&#39;&quot;)&#125;
-</code></pre>
-<h3 id="if-elseif-elseif"><a href="#if-elseif-elseif" class="headerlink" title="if,elseif,elseif"></a>if,elseif,elseif</h3><pre><code class="c">&lt;#if condition&gt;
-……
-&lt;#elseif condition2&gt;
-……
-&lt;#else&gt;
-……
-&lt;/#if&gt;
-</code></pre>
-<h3 id="switch-case"><a href="#switch-case" class="headerlink" title="switch,case"></a>switch,case</h3><pre><code class="c">&lt;#switch value&gt;  
-  &lt;#case refValue1&gt;  
-         ...  
-         &lt;#break&gt;  
-  &lt;#case refValue2&gt;  
-         ...  
-         &lt;#break&gt;  
-  ...  
-  &lt;#case refValueN&gt;  
-         ...  
-         &lt;#break&gt;  
-  &lt;#default&gt;
-         ...  
-&lt;/#switch&gt;  
-&lt;#t&gt; 去掉左右空白和回车换行  
-
-&lt;#lt&gt;去掉左边空白和回车换行  
-
-&lt;#rt&gt;去掉右边空白和回车换行  
-
-&lt;#nt&gt;取消上面的效果  
-</code></pre>
-<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><pre><code class="c">&lt;#list sequence as item&gt;  
-...  
-&lt;#if item = &quot;spring&quot;&gt;
-  &lt;#break&gt;
-&lt;/#if&gt;  
-...  
-&lt;/#list&gt;  
-</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#setting number_format = <span class="string">&quot;currency&quot;</span> /&gt;</span></span><br><span class="line">&lt;<span class="meta">#assign str = 42 /&gt;</span></span><br><span class="line">$&#123;str&#125;</span><br><span class="line">$&#123;str?<span class="built_in">string</span>&#125;</span><br><span class="line">$&#123;str?<span class="built_in">string</span>.number&#125;</span><br><span class="line">$&#123;str?<span class="built_in">string</span>.currency&#125;</span><br><span class="line">$&#123;str?<span class="built_in">string</span>.percent&#125;</span><br><span class="line">$&#123;str?<span class="built_in">string</span>.computer&#125;</span><br><span class="line"></span><br><span class="line">日期处理</span><br><span class="line">$&#123;openingTime?<span class="built_in">string</span>.<span class="type">short</span>&#125;</span><br><span class="line">$&#123;openingTime?<span class="built_in">string</span>.medium&#125;</span><br><span class="line">$&#123;openingTime?<span class="built_in">string</span>.<span class="type">long</span>&#125;</span><br><span class="line">$&#123;openingTime?<span class="built_in">string</span>.full&#125;</span><br><span class="line">$&#123;nextDiscountDay?<span class="built_in">string</span>.<span class="type">short</span>&#125;</span><br><span class="line">$&#123;nextDiscountDay?<span class="built_in">string</span>.medium&#125;</span><br><span class="line">$&#123;nextDiscountDay?<span class="built_in">string</span>.<span class="type">long</span>&#125;</span><br><span class="line">$&#123;nextDiscountDay?<span class="built_in">string</span>.full&#125;</span><br><span class="line">$&#123;lastUpdated?<span class="built_in">string</span>.<span class="type">short</span>&#125;</span><br><span class="line">$&#123;lastUpdated?<span class="built_in">string</span>.medium&#125;</span><br><span class="line">$&#123;lastUpdated?<span class="built_in">string</span>.<span class="type">long</span>&#125;</span><br><span class="line">$&#123;lastUpdated?<span class="built_in">string</span>.full&#125;</span><br><span class="line">$&#123;lastUpdated?<span class="built_in">string</span>(<span class="string">&quot;yyyy-MM-dd HH:mm:ss zzzz&quot;</span>)&#125;</span><br><span class="line">$&#123;lastUpdated?<span class="built_in">string</span>(<span class="string">&quot;EEE, MMM d, &#x27;&#x27;yy&quot;</span>)&#125;</span><br><span class="line">$&#123;lastUpdated?<span class="built_in">string</span>(<span class="string">&quot;EEEE, MMMM dd, yyyy, hh:mm:ss a &#x27;(&#x27;zzz&#x27;)&#x27;&quot;</span>)&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="if-elseif-elseif"><a href="#if-elseif-elseif" class="headerlink" title="if,elseif,elseif"></a>if,elseif,elseif</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#<span class="keyword">if</span> condition&gt;</span></span><br><span class="line">……</span><br><span class="line">&lt;<span class="meta">#elseif condition2&gt;</span></span><br><span class="line">……</span><br><span class="line">&lt;<span class="meta">#<span class="keyword">else</span>&gt;</span></span><br><span class="line">……</span><br><span class="line">&lt;/<span class="meta">#<span class="keyword">if</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="switch-case"><a href="#switch-case" class="headerlink" title="switch,case"></a>switch,case</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#switch value&gt;  </span></span><br><span class="line">  &lt;<span class="meta">#case refValue1&gt;  </span></span><br><span class="line">         ...  </span><br><span class="line">         &lt;<span class="meta">#break&gt;  </span></span><br><span class="line">  &lt;<span class="meta">#case refValue2&gt;  </span></span><br><span class="line">         ...  </span><br><span class="line">         &lt;<span class="meta">#break&gt;  </span></span><br><span class="line">  ...  </span><br><span class="line">  &lt;<span class="meta">#case refValueN&gt;  </span></span><br><span class="line">         ...  </span><br><span class="line">         &lt;<span class="meta">#break&gt;  </span></span><br><span class="line">  &lt;<span class="meta">#default&gt;</span></span><br><span class="line">         ...  </span><br><span class="line">&lt;/<span class="meta">#switch&gt;  </span></span><br><span class="line">&lt;<span class="meta">#t&gt; 去掉左右空白和回车换行  </span></span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">#lt&gt;去掉左边空白和回车换行  </span></span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">#rt&gt;去掉右边空白和回车换行  </span></span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">#nt&gt;取消上面的效果  </span></span><br></pre></td></tr></table></figure>
+<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#list sequence as item&gt;  </span></span><br><span class="line">...  </span><br><span class="line">&lt;<span class="meta">#<span class="keyword">if</span> item = <span class="string">&quot;spring&quot;</span>&gt;</span></span><br><span class="line">  &lt;<span class="meta">#break&gt;</span></span><br><span class="line">&lt;/<span class="meta">#<span class="keyword">if</span>&gt;  </span></span><br><span class="line">...  </span><br><span class="line">&lt;/<span class="meta">#list&gt;  </span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>iterm_index:当前值得下标，从0开始<br>item_has_next:判断list是否还有值</p>
 </blockquote>
-<h3 id="include"><a href="#include" class="headerlink" title="include"></a>include</h3><pre><code class="c">&lt;#include filename [options]&gt;
-</code></pre>
+<h3 id="include"><a href="#include" class="headerlink" title="include"></a>include</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#<span class="keyword">include</span> filename [options]&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>options 包含两个属性<br>encoding=”GBK”<br>parse=”true” 是否作为ftl语法解析，默认是true<br>示例：&lt;#include “/common/copyright.ftl” encoding=”GBK” parse=”true”&gt;</p>
 </blockquote>
-<h3 id="import"><a href="#import" class="headerlink" title="import"></a>import</h3><pre><code class="c">&lt;#import path as hash&gt;
-</code></pre>
+<h3 id="import"><a href="#import" class="headerlink" title="import"></a>import</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#import path as hash&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>类似于java里的import,它导入文件，然后就可以在当前文件里使用被导入文件里的宏组件</p>
 </blockquote>
-<h3 id="compress"><a href="#compress" class="headerlink" title="compress"></a>compress</h3><pre><code class="c">&lt;#compress&gt;  
-  ...  
-&lt;/#compress&gt;
-</code></pre>
-<h3 id="escape-noescape"><a href="#escape-noescape" class="headerlink" title="escape, noescape"></a>escape, noescape</h3><pre><code class="c">&lt;#escape identifier as expression&gt;  
-  ...  
-  &lt;#noescape&gt;...&lt;/#noescape&gt;  
-  ...  
-&lt;/#escape&gt;  
-</code></pre>
+<h3 id="compress"><a href="#compress" class="headerlink" title="compress"></a>compress</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#compress&gt;  </span></span><br><span class="line">  ...  </span><br><span class="line">&lt;/<span class="meta">#compress&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="escape-noescape"><a href="#escape-noescape" class="headerlink" title="escape, noescape"></a>escape, noescape</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#escape identifier as expression&gt;  </span></span><br><span class="line">  ...  </span><br><span class="line">  &lt;<span class="meta">#noescape&gt;...<span class="string">&lt;/#noescape&gt;</span>  </span></span><br><span class="line">  ...  </span><br><span class="line">&lt;/<span class="meta">#escape&gt;  </span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>主要使用在相似的字符串变量输出，比如某一个模块的所有字符串输出都必须是html安全的，这个时候就可以使用该表达式<br>示例：</p>
 </blockquote>
-<pre><code class="c">&lt;#escape x as x?html&gt;  
-  First name: $&#123;firstName&#125;  
-  &lt;#noescape&gt;Last name: $&#123;lastName&#125;&lt;/#noescape&gt;  
-  Maiden name: $&#123;maidenName&#125;  
-&lt;/#escape&gt;  
-</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#escape x as x?html&gt;  </span></span><br><span class="line">  First name: $&#123;firstName&#125;  </span><br><span class="line">  &lt;<span class="meta">#noescape&gt;Last name: $&#123;lastName&#125;<span class="string">&lt;/#noescape&gt;</span>  </span></span><br><span class="line">  Maiden name: $&#123;maidenName&#125;  </span><br><span class="line">&lt;/<span class="meta">#escape&gt;  </span></span><br></pre></td></tr></table></figure>
 <p>相同表达式</p>
-<pre><code class="c">First name: $&#123;firstName?html&#125;  
-Last name: $&#123;lastName &#125;  
-Maiden name: $&#123;maidenName?html&#125;  
-</code></pre>
-<h3 id="assign"><a href="#assign" class="headerlink" title="assign"></a>assign</h3><pre><code class="c">&lt;#assign name=value&gt;  
-
-&lt;#-- 或则 --&gt;  
-
-&lt;#assign name1=value1 name2=value2 ... nameN=valueN&gt;  
-
-&lt;#-- 或则 --&gt;  
-
-&lt;#assign same as above... in namespacehash&gt;  
-
-&lt;#-- 或则 --&gt;  
-
-&lt;#assign name&gt;  
-  capture this  
-&lt;/#assign&gt;  
-
-&lt;#-- 或则 --&gt;  
-
-&lt;#assign name in namespacehash&gt;  
-  capture this  
-&lt;/#assign&gt;  
-</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">First name: $&#123;firstName?html&#125;  </span><br><span class="line">Last name: $&#123;lastName &#125;  </span><br><span class="line">Maiden name: $&#123;maidenName?html&#125;  </span><br></pre></td></tr></table></figure>
+<h3 id="assign"><a href="#assign" class="headerlink" title="assign"></a>assign</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#assign name=value&gt;  </span></span><br><span class="line"></span><br><span class="line">&lt;#-- 或则 --&gt;  </span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">#assign name1=value1 name2=value2 ... nameN=valueN&gt;  </span></span><br><span class="line"></span><br><span class="line">&lt;#-- 或则 --&gt;  </span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">#assign same as above... in namespacehash&gt;  </span></span><br><span class="line"></span><br><span class="line">&lt;#-- 或则 --&gt;  </span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">#assign name&gt;  </span></span><br><span class="line">  capture this  </span><br><span class="line">&lt;/<span class="meta">#assign&gt;  </span></span><br><span class="line"></span><br><span class="line">&lt;#-- 或则 --&gt;  </span><br><span class="line"></span><br><span class="line">&lt;<span class="meta">#assign name in namespacehash&gt;  </span></span><br><span class="line">  capture this  </span><br><span class="line">&lt;/<span class="meta">#assign&gt;  </span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>生成变量,并且给变量赋值</p>
 </blockquote>
-<h3 id="global"><a href="#global" class="headerlink" title="global"></a>global</h3><pre><code class="c">&lt;#global name=value&gt;  
-&lt;#--或则--&gt;  
-&lt;#global name1=value1 name2=value2 ... nameN=valueN&gt;  
-&lt;#--或则--&gt;  
-&lt;#global name&gt;  
-  capture this  
-&lt;/#global&gt;  
-</code></pre>
+<h3 id="global"><a href="#global" class="headerlink" title="global"></a>global</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#global name=value&gt;  </span></span><br><span class="line">&lt;#--或则--&gt;  </span><br><span class="line">&lt;<span class="meta">#global name1=value1 name2=value2 ... nameN=valueN&gt;  </span></span><br><span class="line">&lt;#--或则--&gt;  </span><br><span class="line">&lt;<span class="meta">#global name&gt;  </span></span><br><span class="line">  capture this  </span><br><span class="line">&lt;/<span class="meta">#global&gt;  </span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>全局赋值语法，利用这个语法给变量赋值，那么这个变量在所有的namespace [A1] 中是可见的, 如果这个变量被当前的assign 语法覆盖 如&lt;#global x=2&gt; &lt;#assign x=1&gt; 在当前页面里x=2 将被隐藏，或者通过${.global.x} 来访问</p>
 </blockquote>
-<h3 id="setting"><a href="#setting" class="headerlink" title="setting"></a>setting</h3><pre><code class="c">&lt;#setting name=value&gt;  
-</code></pre>
+<h3 id="setting"><a href="#setting" class="headerlink" title="setting"></a>setting</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#setting name=value&gt;  </span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>用来设置整个系统的一个环境<br>locale<br>number_format<br>boolean_format<br>date_format , time_format , datetime_format<br>time_zone<br>classic_compatible</p>
 </blockquote>
-<h3 id="macro-nested-return"><a href="#macro-nested-return" class="headerlink" title="macro, nested, return"></a>macro, nested, return</h3><pre><code class="c">&lt;#macro name param1 param2 ... paramN&gt;  
-  ...  
-  &lt;#nested loopvar1, loopvar2, ..., loopvarN&gt;  
-  ...  
-  &lt;#return&gt;  
-  ...  
-&lt;/#macro&gt;  
-</code></pre>
-<h3 id="t-lt-rt"><a href="#t-lt-rt" class="headerlink" title="t, lt, rt"></a>t, lt, rt</h3><pre><code class="c">&lt;#t&gt; 去掉左右空白和回车换行  
-&lt;#lt&gt;去掉左边空白和回车换行  
-&lt;#rt&gt;去掉右边空白和回车换行  
-&lt;#nt&gt;取消上面的效果  
-</code></pre>
+<h3 id="macro-nested-return"><a href="#macro-nested-return" class="headerlink" title="macro, nested, return"></a>macro, nested, return</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#macro name param1 param2 ... paramN&gt;  </span></span><br><span class="line">  ...  </span><br><span class="line">  &lt;<span class="meta">#nested loopvar1, loopvar2, ..., loopvarN&gt;  </span></span><br><span class="line">  ...  </span><br><span class="line">  &lt;<span class="meta">#return&gt;  </span></span><br><span class="line">  ...  </span><br><span class="line">&lt;/<span class="meta">#macro&gt;  </span></span><br></pre></td></tr></table></figure>
+<h3 id="t-lt-rt"><a href="#t-lt-rt" class="headerlink" title="t, lt, rt"></a>t, lt, rt</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="meta">#t&gt; 去掉左右空白和回车换行  </span></span><br><span class="line">&lt;<span class="meta">#lt&gt;去掉左边空白和回车换行  </span></span><br><span class="line">&lt;<span class="meta">#rt&gt;去掉右边空白和回车换行  </span></span><br><span class="line">&lt;<span class="meta">#nt&gt;取消上面的效果  </span></span><br></pre></td></tr></table></figure>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

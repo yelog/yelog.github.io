@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2321,12 +2362,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-05-23 11:44</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2017-05-23 11:44</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:778</span>
+        <span>字数:760</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2374,53 +2415,23 @@
       
         <p>sort是在Linux里非常常用的一个命令，管排序的。</p>
 <h2 id="1-工作原理"><a href="#1-工作原理" class="headerlink" title="1.工作原理"></a>1.工作原理</h2><p>sort将文件的每一行作为一个单位，相互比较，比较原则是从首字符向后，依次按ASCII码值进行比较，最后将他们按升序输出。</p>
-<pre><code class="bash">$ cat seq.txt
-apple
-allow
-photo
-bowl
-peal
-check
-cheese
-
-$ sort seq.txt
-allow
-apple
-bowl
-check
-cheese
-peal
-photo
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> seq.txt</span><br><span class="line">apple</span><br><span class="line">allow</span><br><span class="line">photo</span><br><span class="line">bowl</span><br><span class="line">peal</span><br><span class="line">check</span><br><span class="line">cheese</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">sort</span> seq.txt</span><br><span class="line">allow</span><br><span class="line">apple</span><br><span class="line">bowl</span><br><span class="line">check</span><br><span class="line">cheese</span><br><span class="line">peal</span><br><span class="line">photo</span><br></pre></td></tr></table></figure>
 <h2 id="2-sort的-u选项"><a href="#2-sort的-u选项" class="headerlink" title="2.sort的-u选项"></a>2.sort的-u选项</h2><p>它的作用很简单，就是在输出行中去除重复行。</p>
 <h2 id="3-sort的-r选项"><a href="#3-sort的-r选项" class="headerlink" title="3.sort的-r选项"></a>3.sort的-r选项</h2><p>sort默认的排序方式是升序，如果想改成降序，就加个-r就搞定了。</p>
 <h2 id="4-sort的-o选项"><a href="#4-sort的-o选项" class="headerlink" title="4.sort的-o选项"></a>4.sort的-o选项</h2><p>由于sort默认是把结果输出到标准输出，所以需要用重定向才能将结果写入文件，形如sort filename &gt; newfile。</p>
 <p>但是，如果你想把排序结果输出到原文件中，用重定向可就不行了。</p>
-<pre><code class="bash">[rocrocket@rocrocket programming]$ sort -r number.txt &gt; number.txt
-[rocrocket@rocrocket programming]$ cat number.txt
-[rocrocket@rocrocket programming]$
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[rocrocket@rocrocket programming]$ <span class="built_in">sort</span> -r number.txt &gt; number.txt</span><br><span class="line">[rocrocket@rocrocket programming]$ <span class="built_in">cat</span> number.txt</span><br><span class="line">[rocrocket@rocrocket programming]$</span><br></pre></td></tr></table></figure>
 <p>看，竟然将number清空了。</p>
 <p>就在这个时候，-o选项出现了，它成功的解决了这个问题，让你放心的将结果写入原文件。这或许也是-o比重定向的唯一优势所在。</p>
 <h2 id="5-sort的-n选项"><a href="#5-sort的-n选项" class="headerlink" title="5.sort的-n选项"></a>5.sort的-n选项</h2><p>你有没有遇到过10比2小的情况。我反正遇到过。出现这种情况是由于排序程序将这些数字按字符来排序了，排序程序会先比较1和2，显然1小，所以就将10放在2前面喽。这也是sort的一贯作风。</p>
 <p>我们如果想改变这种现状，就要使用-n选项，来告诉sort，“要以数值来排序”！</p>
 <h2 id="6-sort的-t选项和-k选项"><a href="#6-sort的-t选项和-k选项" class="headerlink" title="6.sort的-t选项和-k选项"></a>6.sort的-t选项和-k选项</h2><p>如果有一个文件的内容是这样：</p>
-<pre><code class="bash">[rocrocket@rocrocket programming]$ cat facebook.txt
-banana:30:5.5
-apple:10:2.5
-pear:90:2.3
-orange:20:3.4
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[rocrocket@rocrocket programming]$ <span class="built_in">cat</span> facebook.txt</span><br><span class="line">banana:30:5.5</span><br><span class="line">apple:10:2.5</span><br><span class="line">pear:90:2.3</span><br><span class="line">orange:20:3.4</span><br></pre></td></tr></table></figure>
 <p>这个文件有三列，列与列之间用冒号隔开了，第一列表示水果类型，第二列表示水果数量，第三列表示水果价格。</p>
 <p>那么我想以水果数量来排序，也就是以第二列来排序，如何利用sort实现？</p>
 <p>幸好，sort提供了-t选项，后面可以设定间隔符。（是不是想起了cut和paste的-d选项，共鸣～～）</p>
 <p>指定了间隔符之后，就可以用-k来指定列数了。</p>
-<pre><code class="bash">[rocrocket@rocrocket programming]$ sort -n -k 2 -t : facebook.txt
-apple:10:2.5
-orange:20:3.4
-banana:30:5.5
-pear:90:2.3
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[rocrocket@rocrocket programming]$ <span class="built_in">sort</span> -n -k 2 -t : facebook.txt</span><br><span class="line">apple:10:2.5</span><br><span class="line">orange:20:3.4</span><br><span class="line">banana:30:5.5</span><br><span class="line">pear:90:2.3</span><br></pre></td></tr></table></figure>
 <p>我们使用冒号作为间隔符，并针对第二列来进行数值升序排序，结果很令人满意。</p>
 <h2 id="7-其他的sort常用选项"><a href="#7-其他的sort常用选项" class="headerlink" title="7.其他的sort常用选项"></a>7.其他的sort常用选项</h2><p>-f会将小写字母都转换为大写字母来进行比较，亦即忽略大小写</p>
 <p>-c会检查文件是否已排好序，如果乱序，则输出第一个乱序的行的相关信息，最后返回1</p>

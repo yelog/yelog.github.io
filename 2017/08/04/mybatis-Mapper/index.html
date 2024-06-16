@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2321,12 +2362,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-08-04 15:54</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2017-08-04 15:54</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:348</span>
+        <span>字数:352</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2372,72 +2413,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><pre><code class="sql">/* 简单插入 */
-&lt;insert id=&quot;insertOne&quot; parameterType=&quot;Person&quot;&gt;
-    insert into person (id, name, age) VALUES(#&#123;id&#125;, #&#123;name&#125;, #&#123;age&#125;);
-&lt;/insert&gt;
+        <h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 简单插入 */</span></span><br><span class="line"><span class="operator">&lt;</span><span class="keyword">insert</span> id<span class="operator">=</span>&quot;insertOne&quot; parameterType<span class="operator">=</span>&quot;Person&quot;<span class="operator">&gt;</span></span><br><span class="line">    <span class="keyword">insert</span> <span class="keyword">into</span> person (id, name, age) <span class="keyword">VALUES</span>(#&#123;id&#125;, #&#123;name&#125;, #&#123;age&#125;);</span><br><span class="line"><span class="operator">&lt;</span><span class="operator">/</span><span class="keyword">insert</span><span class="operator">&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 插入并返回对象的主键（数据库序列） */</span></span><br><span class="line"><span class="operator">&lt;</span><span class="keyword">insert</span> id<span class="operator">=</span>&quot;insertOne&quot; parameterType<span class="operator">=</span>&quot;Person&quot; useGeneratedKeys<span class="operator">=</span>&quot;true&quot; keyProperty<span class="operator">=</span>&quot;id&quot;<span class="operator">&gt;</span></span><br><span class="line">    <span class="keyword">insert</span> <span class="keyword">into</span> person (name, age) <span class="keyword">VALUES</span>(#&#123;name&#125;, #&#123;age&#125;);</span><br><span class="line"><span class="operator">&lt;</span><span class="operator">/</span><span class="keyword">insert</span><span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
 
-/* 插入并返回对象的主键（数据库序列） */
-&lt;insert id=&quot;insertOne&quot; parameterType=&quot;Person&quot; useGeneratedKeys=&quot;true&quot; keyProperty=&quot;id&quot;&gt;
-    insert into person (name, age) VALUES(#&#123;name&#125;, #&#123;age&#125;);
-&lt;/insert&gt;
-</code></pre>
-<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><pre><code class="sql">/* 简单更新 */
-&lt;update id=&quot;updateName&quot;&gt;
-     update person set name = #&#123;name&#125; where id = #&#123;id&#125;;
-&lt;/update&gt;
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 简单更新 */</span></span><br><span class="line"><span class="operator">&lt;</span><span class="keyword">update</span> id<span class="operator">=</span>&quot;updateName&quot;<span class="operator">&gt;</span></span><br><span class="line">     <span class="keyword">update</span> person <span class="keyword">set</span> name <span class="operator">=</span> #&#123;name&#125; <span class="keyword">where</span> id <span class="operator">=</span> #&#123;id&#125;;</span><br><span class="line"><span class="operator">&lt;</span><span class="operator">/</span><span class="keyword">update</span><span class="operator">&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 更新值并返回 */</span></span><br><span class="line"><span class="operator">&lt;</span><span class="keyword">select</span> id<span class="operator">=</span>&quot;updateAge&quot; parameterType<span class="operator">=</span>&quot;Person&quot;<span class="operator">&gt;</span></span><br><span class="line">    <span class="keyword">update</span> person <span class="keyword">set</span> age <span class="operator">=</span> age <span class="operator">+</span> #&#123;age&#125; <span class="keyword">where</span> id <span class="operator">=</span> #&#123;id&#125; returning age;</span><br><span class="line"><span class="operator">&lt;</span><span class="operator">/</span><span class="keyword">select</span><span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
 
-/* 更新值并返回 */
-&lt;select id=&quot;updateAge&quot; parameterType=&quot;Person&quot;&gt;
-    update person set age = age + #&#123;age&#125; where id = #&#123;id&#125; returning age;
-&lt;/select&gt;
-</code></pre>
 <h3 id="插入或更新"><a href="#插入或更新" class="headerlink" title="插入或更新"></a>插入或更新</h3><p>记录玩家在某种类型游戏下的统计记录：</p>
 <blockquote>
 <p>如果没有记录，则从插入，count字段为1；<br>如果有记录，则更新count字段+1；</p>
 </blockquote>
 <ol>
 <li><p>方式一</p>
-<pre><code class="sql">&lt;insert id=&quot;addCount&quot; parameterType=&quot;CountRecord&quot;&gt;
- /*如果有记录，则更新；无记录，则noting*/
- update
-   count_record
- set
-   &quot;count&quot; = &quot;count&quot;+1
- where
-   type_id = #&#123;typeId&#125;
- and
-   user_id = #&#123;userId&#125;;
- /*如果有记录，则noting；无记录，则插入*/
- insert into
-   count_record(type_id, user_id, &quot;count&quot;)
-   select
-     #&#123;typeId&#125;, #&#123;userId&#125;, 1
-   where not exists
-       (select
-           *
-        from
-           count
-        where
-           type_id = #&#123;typeId&#125;
-        and
-           user_id = #&#123;userId&#125;);
-&lt;/insert&gt;
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">&lt;</span><span class="keyword">insert</span> id<span class="operator">=</span>&quot;addCount&quot; parameterType<span class="operator">=</span>&quot;CountRecord&quot;<span class="operator">&gt;</span></span><br><span class="line">    <span class="comment">/*如果有记录，则更新；无记录，则noting*/</span></span><br><span class="line">    <span class="keyword">update</span></span><br><span class="line">      count_record</span><br><span class="line">    <span class="keyword">set</span></span><br><span class="line">      &quot;count&quot; <span class="operator">=</span> &quot;count&quot;<span class="operator">+</span><span class="number">1</span></span><br><span class="line">    <span class="keyword">where</span></span><br><span class="line">      type_id <span class="operator">=</span> #&#123;typeId&#125;</span><br><span class="line">    <span class="keyword">and</span></span><br><span class="line">      user_id <span class="operator">=</span> #&#123;userId&#125;;</span><br><span class="line">    <span class="comment">/*如果有记录，则noting；无记录，则插入*/</span></span><br><span class="line">    <span class="keyword">insert</span> <span class="keyword">into</span></span><br><span class="line">      count_record(type_id, user_id, &quot;count&quot;)</span><br><span class="line">      <span class="keyword">select</span></span><br><span class="line">        #&#123;typeId&#125;, #&#123;userId&#125;, <span class="number">1</span></span><br><span class="line">      <span class="keyword">where</span> <span class="keyword">not</span> <span class="keyword">exists</span></span><br><span class="line">          (<span class="keyword">select</span></span><br><span class="line">              <span class="operator">*</span></span><br><span class="line">           <span class="keyword">from</span></span><br><span class="line">              count</span><br><span class="line">           <span class="keyword">where</span></span><br><span class="line">              type_id <span class="operator">=</span> #&#123;typeId&#125;</span><br><span class="line">           <span class="keyword">and</span></span><br><span class="line">              user_id <span class="operator">=</span> #&#123;userId&#125;);</span><br><span class="line"><span class="operator">&lt;</span><span class="operator">/</span><span class="keyword">insert</span><span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>方式二</p>
-<pre><code class="sql">/* 利用 PostgreSQL 的 conflic 特性 */
-&lt;insert id=&quot;addCount&quot; parameterType=&quot;CountRecord&quot;&gt;
- insert into
-   count_record(type_id, user_id, &quot;count&quot;)
- VALUES
-   (#&#123;typeId&#125;, #&#123;userId&#125;, #&#123;count&#125;)
- on
-   conflict(type_id,user_id)
- do update set
-   &quot;count&quot; = count_record.&quot;count&quot; + 1
-&lt;/insert&gt;
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 利用 PostgreSQL 的 conflic 特性 */</span></span><br><span class="line"><span class="operator">&lt;</span><span class="keyword">insert</span> id<span class="operator">=</span>&quot;addCount&quot; parameterType<span class="operator">=</span>&quot;CountRecord&quot;<span class="operator">&gt;</span></span><br><span class="line">    <span class="keyword">insert</span> <span class="keyword">into</span></span><br><span class="line">      count_record(type_id, user_id, &quot;count&quot;)</span><br><span class="line">    <span class="keyword">VALUES</span></span><br><span class="line">      (#&#123;typeId&#125;, #&#123;userId&#125;, #&#123;count&#125;)</span><br><span class="line">    <span class="keyword">on</span></span><br><span class="line">      conflict(type_id,user_id)</span><br><span class="line">    do <span class="keyword">update</span> <span class="keyword">set</span></span><br><span class="line">      &quot;count&quot; <span class="operator">=</span> count_record.&quot;count&quot; <span class="operator">+</span> <span class="number">1</span></span><br><span class="line"><span class="operator">&lt;</span><span class="operator">/</span><span class="keyword">insert</span><span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 

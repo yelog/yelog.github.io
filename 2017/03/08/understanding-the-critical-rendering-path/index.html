@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2321,7 +2362,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2017-03-08 08:58</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2017-03-08 08:58</time>
         
     </div>
     <div class="article-meta">
@@ -2384,38 +2425,12 @@
 </ol>
 <h2 id="构建DOM树"><a href="#构建DOM树" class="headerlink" title="构建DOM树"></a>构建DOM树</h2><p>DOM（Document Object Model）树是一个表示整个解析过的HTML页面的对象，从根节点<code>&lt;html&gt;</code>开始，会创建页面中的每个 元素/文本 节点。嵌套在其他元素中的元素作为字节点，每个节点都包含了其所有的元素属性，例如： 一个<code>&lt;a&gt;</code>节点将有 <code>href</code> 属性与其关联。</p>
 <p>举个例子</p>
-<pre><code class="html">&lt;html&gt;  
-&lt;head&gt;  
-  &lt;title&gt;Understanding the Critical Rendering Path&lt;/title&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
-&lt;/head&gt;  
-&lt;body&gt;  
-  &lt;header&gt;
-      &lt;h1&gt;Understanding the Critical Rendering Path&lt;/h1&gt;
-  &lt;/header&gt;
-  &lt;main&gt;
-      &lt;h2&gt;Introduction&lt;/h2&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
-  &lt;/main&gt;
-  &lt;footer&gt;
-      &lt;small&gt;Copyright 2017&lt;/small&gt;
-  &lt;/footer&gt;
-&lt;/body&gt;  
-&lt;/html&gt;  
-</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Understanding the Critical Rendering Path<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;style.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Understanding the Critical Rendering Path<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">main</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h2</span>&gt;</span>Introduction<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">small</span>&gt;</span>Copyright 2017<span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span>  </span><br></pre></td></tr></table></figure>
+
 <p>上面的 HTML 将会被解析成下面的DOM树<br><img src="http://img.saodiyang.com/Fq6vahHSu_NZGyeWGuhZ8dFmBS0O.png" alt="DOM树"><br>HTML的优点在于它不必等待整个页面加载完成才呈现页面，可以解析一部分，显示一部分。但是像CSS、JavaScript等其他资源会阻止页面渲染。</p>
 <h2 id="构建CSSOM树"><a href="#构建CSSOM树" class="headerlink" title="构建CSSOM树"></a>构建CSSOM树</h2><p>CSSOM（CSS Object Model） 是一个跟DOM相关的样式对象。它跟DOM的表示方法是相似的，但是不论显式声明还是隐式继承，每个节点都存在关联样式。</p>
 <p>In the style.css file from the document mentioned above, we have the folowing styles<br>在上面提到的html页面的<code>style.css</code>中的样式如下</p>
-<pre><code class="css">body &#123; font-size: 18px; &#125;
-
-header &#123; color: plum; &#125;  
-h1 &#123; font-size: 28px; &#125;
-
-main &#123; color: firebrick; &#125;  
-h2 &#123; font-size: 20px; &#125;
-
-footer &#123; display: none; &#125;  
-</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123; <span class="attribute">font-size</span>: <span class="number">18px</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">header</span> &#123; <span class="attribute">color</span>: plum; &#125;  </span><br><span class="line"><span class="selector-tag">h1</span> &#123; <span class="attribute">font-size</span>: <span class="number">28px</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">main</span> &#123; <span class="attribute">color</span>: firebrick; &#125;  </span><br><span class="line"><span class="selector-tag">h2</span> &#123; <span class="attribute">font-size</span>: <span class="number">20px</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">footer</span> &#123; <span class="attribute">display</span>: none; &#125;  </span><br></pre></td></tr></table></figure>
 <p>它会被构建成下面的CSSOM树<br><img src="http://img.saodiyang.com/FqMiZIUxvPBV4X-PnDFh6iGrdxy0.png" alt="CSSOM树"><br>CSS 被认为是 “渲染阻塞资源”，它意味着如果不首先完全解析资源，渲染树是无法构建的。CSS由于它的层叠继承的性质，不能像HTML一样解析一部分，显示一部分。定义在文档后面的样式会覆盖或改写之前定义的样式，因为在整个样式表都被解析之前，如果我们使用了在样式表中较早定义的样式，那错误的样式将被应用。这意味着CSS必须被全部解析之后，才能开始下一步。</p>
 <p>如果CSS文件适用于当前设备的话，仅仅只是会阻塞渲染。<code>&lt;link rel=&quot;stylesheet&quot;&gt;</code>标签可以使用<code>media</code>属性，用来指定特定样式宽度的特定媒体查询。</p>
 <p>举个例子，如果我们有一个包含媒体属性<code>orientation:landscape</code>的样式，我们使用纵向模式（portrait mode）查看页面，这个资源将不会阻塞渲染。</p>
@@ -2423,39 +2438,18 @@ footer &#123; display: none; &#125;
 <h2 id="运行JavaScript"><a href="#运行JavaScript" class="headerlink" title="运行JavaScript"></a>运行JavaScript</h2><p>JavaScript被认为是<code>解析阻塞资源</code>，这意味着HTML的解析会被JavaScript阻塞。</p>
 <p>当解析器解析到 <code>&lt;script&gt;</code> 标签时，无论该资源是内部还是外链的都会停止解析，先去下载资源。这也是为什么，当页面内有引用JavaScript文件时，引用标签要放到可视元素之后了。</p>
 <p>为避免JavaScript解析阻塞，它可以通过设定 async 属性来要求其异步加载。</p>
-<pre><code class="JavaScript">&lt;script async src=&quot;script.js&quot;&gt;
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">&quot;script.js&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="创建渲染树"><a href="#创建渲染树" class="headerlink" title="创建渲染树"></a>创建渲染树</h2><p>渲染树是DOM和CSSOM的结合体，它代表最终会渲染在页面上的元素的结构对象。这意味着它只关注可见内容，对于被隐藏或者CSS属性 display:none 的属性，不会被包含在结构内。</p>
 <p>使用上面例子的DOM和CSSOM，渲染树被创建如下：<br><img src="http://img.saodiyang.com/FvhQ0k653cDvORFIiEbYxufNjZa4.png" alt="渲染树"></p>
 <h2 id="生成布局"><a href="#生成布局" class="headerlink" title="生成布局"></a>生成布局</h2><p>布局决定了浏览器视窗的大小,它提供了上下文依赖的CSS样式，如百分比或窗口的单位。视窗尺寸通常通过 <code>&lt;head&gt;</code> 标签中的 <code>&lt;meta&gt;</code> 中的 viewport 设定来决定。如果不存在该标签，则通常默认为 980px</p>
 <p>例如，最常用的 <code>meta veiwport</code> 的值将会被设置为和设备宽度相符：</p>
-<pre><code class="HTML">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;  
-</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width,initial-scale=1&quot;</span>&gt;</span>  </span><br></pre></td></tr></table></figure>
 <p>如果用户访问网页的设备宽度为1000px。然后整体视窗尺寸就会基于这个宽度值了，比如 50% 就是500px, 10vw 就是100px 等等。</p>
 <h2 id="绘制页面"><a href="#绘制页面" class="headerlink" title="绘制页面"></a>绘制页面</h2><p>最后，在绘制页面步骤。页面上的所有可见内容都会被转换为像素并呈现在屏幕上。</p>
 <p>具体的绘制时间跟DOM数以及应用的样式有关。有些样式会花费更多的执行时间，比如复杂的渐变背景图片所需要的计算时间远超过简单固定背景色。</p>
 <h2 id="整合所有"><a href="#整合所有" class="headerlink" title="整合所有"></a>整合所有</h2><p>想要看到关键渲染路径的执行流程，可以使用DevTools，在Chrome中，它是根据时间轴展示的。</p>
 <p>举个例子, 上面的页面加入<code>&lt;script&gt;</code>标签</p>
-<pre><code class="html">&lt;html&gt;  
-&lt;head&gt;  
-  &lt;title&gt;Understanding the Critical Rendering Path&lt;/title&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
-&lt;/head&gt;  
-&lt;body&gt;  
-  &lt;header&gt;
-      &lt;h1&gt;Understanding the Critical Rendering Path&lt;/h1&gt;
-  &lt;/header&gt;
-  &lt;main&gt;
-      &lt;h2&gt;Introduction&lt;/h2&gt;
-      &lt;p&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
-  &lt;/main&gt;
-  &lt;footer&gt;
-      &lt;small&gt;Copyright 2017&lt;/small&gt;
-  &lt;/footer&gt;
-  &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;  
-&lt;/html&gt;  
-</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Understanding the Critical Rendering Path<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;style.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Understanding the Critical Rendering Path<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">main</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h2</span>&gt;</span>Introduction<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">small</span>&gt;</span>Copyright 2017<span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;main.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span>  </span><br></pre></td></tr></table></figure>
 <p>可以看关于页面加载时的事件日志，以下是我们获得的：<br><img src="http://img.saodiyang.com/Fro6Rduywm-txP3EEtak-E5T826l.png" alt="时间轴"></p>
 <ol>
 <li><strong>Send Request</strong> - 发送到index.html的GET请求</li>

@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2321,7 +2362,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2016-12-24 10:24</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2016-12-24 10:24</time>
         
     </div>
     <div class="article-meta">
@@ -2379,8 +2420,7 @@
 <p>　　首先要弄清两个概念：打包和压缩。打包是指将一大堆文件或目录变成一个总的文件；压缩则是将一个大的文件通过一些压缩算法变成一个小文件。</p>
 <p>　　为什么要区分这两个概念呢？这源于Linux中很多压缩程序只能针对一个文件进行压缩，这样当你想要压缩一大堆文件时，你得先将这一大堆文件先打成一个包（tar命令），然后再用压缩程序进行压缩（gzip bzip2命令）。</p>
 <p>　　linux下最常用的打包程序就是tar了，使用tar程序打出来的包我们常称为tar包，tar包文件的命令通常都是以.tar结尾的。生成tar包后，就可以用其它的程序来进行压缩。</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ tar [必要参数] [选择参数] [文件]
-</code></pre>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar [必要参数] [选择参数] [文件]</span><br></pre></td></tr></table></figure>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　用来压缩和解压文件。tar本身不具有压缩功能。他是调用压缩功能实现的</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><p><span><strong>必要参数</strong></span></p>
 <table>
@@ -2488,88 +2528,44 @@
 </tr>
 </tbody></table>
 <h3 id="使常见解压-压缩命令"><a href="#使常见解压-压缩命令" class="headerlink" title="使常见解压/压缩命令"></a>使常见解压/压缩命令</h3><p><strong><code>例一</code>：.tar文件</strong></p>
-<pre><code class="bash">$ tar xvf FileName.tar # 解包
-$ tar cvf FileName.tar DirName # 打包
-# 注：tar是打包，不是压缩！
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ tar xvf FileName.tar <span class="comment"># 解包</span></span><br><span class="line">$ tar cvf FileName.tar DirName <span class="comment"># 打包</span></span><br><span class="line"><span class="comment"># 注：tar是打包，不是压缩！</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例二</code>：.gz文件</strong></p>
-<pre><code class="bash"># 解压
-$ gunzip FileName.gz
-$ gzip -d FileName.gz
-
-# 压缩
-gzip FileName
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压</span></span><br><span class="line">$ gunzip FileName.gz</span><br><span class="line">$ gzip -d FileName.gz</span><br><span class="line"></span><br><span class="line"><span class="comment"># 压缩</span></span><br><span class="line">gzip FileName</span><br></pre></td></tr></table></figure>
 <p><strong><code>例三</code>：.tar.gz和.tgz文件</strong></p>
-<pre><code class="bash">$ tar xvf FileName.tar.gz # 解包
-$ tar cvf FileName.tar.gz DirName # 打包
-# 注：tar是打包，不是压缩！
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ tar xvf FileName.tar.gz <span class="comment"># 解包</span></span><br><span class="line">$ tar cvf FileName.tar.gz DirName <span class="comment"># 打包</span></span><br><span class="line"><span class="comment"># 注：tar是打包，不是压缩！</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例四</code>：.bz2文件</strong></p>
-<pre><code class="bash"># 解压
-$ bzip2 -d FileName.bz2
-$ bunzip2 FileName.bz2
-# 压缩
-$ bzip2 -z FileName
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压</span></span><br><span class="line">$ bzip2 -d FileName.bz2</span><br><span class="line">$ bunzip2 FileName.bz2</span><br><span class="line"><span class="comment"># 压缩</span></span><br><span class="line">$ bzip2 -z FileName</span><br></pre></td></tr></table></figure>
 <p><strong><code>例五</code>：.tar.bz2文件</strong></p>
-<pre><code class="bash">$ tar jxvf FileName.tar.bz2 # 解压
-$ tar jcvf FileName.tar.bz2 DirName # 压缩
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tar jxvf FileName.tar.bz2 <span class="comment"># 解压</span></span><br><span class="line">$ tar jcvf FileName.tar.bz2 DirName <span class="comment"># 压缩</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例六</code>：.bz文件</strong></p>
-<pre><code class="bash"># 解压
-$ bzip2 -d FileName.bz
-$ bunzip2 FileName.bz
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压</span></span><br><span class="line">$ bzip2 -d FileName.bz</span><br><span class="line">$ bunzip2 FileName.bz</span><br></pre></td></tr></table></figure>
 <p><strong><code>例七</code>：.tar.bz文件</strong></p>
-<pre><code class="bash">$ tar jxvf FileName.tar.bz # 解压
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar jxvf FileName.tar.bz <span class="comment"># 解压</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例八</code>：.Z文件</strong></p>
-<pre><code class="bash">$ uncompress FileName.Z # 解压
-$ compress FileName # 压缩
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ uncompress FileName.Z <span class="comment"># 解压</span></span><br><span class="line">$ compress FileName <span class="comment"># 压缩</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例九</code>：.tar.Z文件</strong></p>
-<pre><code class="bash">$ tar Zxvf FileName.tar.Z # 解压
-$ tar Zcvf FileName.tar.Z DirName # 压缩
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tar Zxvf FileName.tar.Z <span class="comment"># 解压</span></span><br><span class="line">$ tar Zcvf FileName.tar.Z DirName <span class="comment"># 压缩</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例十</code>：.zip文件</strong></p>
-<pre><code class="bash">$ unzip FileName.zip # 解压
-$ zip FileName.zip DirName # 压缩
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ unzip FileName.zip <span class="comment"># 解压</span></span><br><span class="line">$ zip FileName.zip DirName <span class="comment"># 压缩</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例十一</code>：.rar文件</strong></p>
-<pre><code class="bash">$ rar x FileName.rar # 解压
-$ rar a FileName.rar DirName # 压缩
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ rar x FileName.rar <span class="comment"># 解压</span></span><br><span class="line">$ rar a FileName.rar DirName <span class="comment"># 压缩</span></span><br></pre></td></tr></table></figure>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：将文件全部打包成tar包</strong></p>
-<pre><code class="bash">$ tar -cvf log.tar log2012.log   # 仅打包，不压缩！
-$ tar -zcvf log.tar.gz log2012.log # 打包后，以 gzip 压缩
-$ tar -jcvf log.tar.bz2 log2012.log # 打包后，以 bzip2 压缩
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ tar -cvf log.tar log2012.log   <span class="comment"># 仅打包，不压缩！</span></span><br><span class="line">$ tar -zcvf log.tar.gz log2012.log <span class="comment"># 打包后，以 gzip 压缩</span></span><br><span class="line">$ tar -jcvf log.tar.bz2 log2012.log <span class="comment"># 打包后，以 bzip2 压缩</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>在参数 f 之后的文件档名是自己取的，我们习惯上都用 .tar 来作为辨识。 如果加 z 参数，则以 .tar.gz 或 .tgz 来代表 gzip 压缩过的 tar包； 如果加 j 参数，则以 .tar.bz2 来作为tar包名。</p>
 </blockquote>
 <p><strong><code>例二</code>：查阅上述 tar包内有哪些文件</strong></p>
-<pre><code class="bash">$ tar -ztvf log.tar.gz
-# 由于我们使用 gzip 压缩的log.tar.gz，所以要查阅log.tar.gz包内的文件时，就得要加上 z 这个参数了
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tar -ztvf log.tar.gz</span><br><span class="line"><span class="comment"># 由于我们使用 gzip 压缩的log.tar.gz，所以要查阅log.tar.gz包内的文件时，就得要加上 z 这个参数了</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例三</code>：将tar 包解压缩</strong></p>
-<pre><code class="bash">$ tar -zxvf /opt/soft/test/log.tar.gz
-# 在预设的情况下，我们可以将压缩档在任何地方解开的
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf /opt/soft/test/log.tar.gz</span><br><span class="line"><span class="comment"># 在预设的情况下，我们可以将压缩档在任何地方解开的</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例四</code>：只将 /tar 内的 部分文件解压出来</strong></p>
-<pre><code class="bash">$ tar -zxvf /opt/soft/test/log30.tar.gz log2013.log
-# 我可以透过 tar -ztvf 来查阅 tar 包内的文件名称，如果单只要一个文件，就可以透过这个方式来解压部分文件！
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zxvf /opt/soft/test/log30.tar.gz log2013.log</span><br><span class="line"><span class="comment"># 我可以透过 tar -ztvf 来查阅 tar 包内的文件名称，如果单只要一个文件，就可以透过这个方式来解压部分文件！</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例五</code>：文件备份下来，并且保存其权限</strong></p>
-<pre><code class="bash">$ tar -zcvpf log31.tar.gz log2014.log log2015.log log2016.log
-# 这个 -p 的属性是很重要的，尤其是当您要保留原本文件的属性时
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tar -zcvpf log31.tar.gz log2014.log log2015.log log2016.log</span><br><span class="line"><span class="comment"># 这个 -p 的属性是很重要的，尤其是当您要保留原本文件的属性时</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例六</code>：在 文件夹当中，比某个日期新的文件才备份</strong></p>
-<pre><code class="bash">$ tar -N &quot;2012/11/13&quot; -zcvf log17.tar.gz test
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -N <span class="string">&quot;2012/11/13&quot;</span> -zcvf log17.tar.gz <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
 <p><strong><code>例七</code>：备份文件夹内容是排除部分文件</strong></p>
-<pre><code class="bash">$ tar --exclude scf/service -zcvf scf.tar.gz scf/*
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar --exclude scf/service -zcvf scf.tar.gz scf/*</span><br></pre></td></tr></table></figure>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

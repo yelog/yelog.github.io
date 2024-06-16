@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(160)</small>
+                <small>(162)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(40)</small>
+            <small>(41)</small>
         </div>
         
             <ul class="sub hide">
@@ -344,6 +344,17 @@
         <div data-rel="工具&lt;---&gt;IDEA">
             
             IDEA
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+                
+                    
+    <li>
+        <div data-rel="工具&lt;---&gt;IOT">
+            
+            IOT
             <small>(1)</small>
         </div>
         
@@ -409,7 +420,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(83)</small>
+            <small>(84)</small>
         </div>
         
     </li>
@@ -475,6 +486,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -495,8 +510,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="160">
-<input type="hidden" id="yelog_site_word_count" value="157.3k">
+<input type="hidden" id="yelog_site_posts_number" value="162">
+<input type="hidden" id="yelog_site_word_count" value="162.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -662,7 +677,15 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>home-assistant</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>IntellijIDEA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>iot</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -863,6 +886,24 @@
         </a>
         
         
+        <a  class="全部文章 工具 IOT "
+           href="/2024/03/22/home-assistant/"
+           data-tag="home-assistant,iot"
+           data-author="" >
+            <span class="post-title" title="离线安装Home Assistant">离线安装Home Assistant</span>
+            <span class="post-date" title="2024-03-22 09:05:44">2024/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2024/02/05/k8s-inner-training/"
+           data-tag="docker,k8s"
+           data-author="" >
+            <span class="post-title" title="K8s-内部培训">K8s-内部培训</span>
+            <span class="post-date" title="2024-02-05 09:17:27">2024/02/05</span>
+        </a>
+        
+        
         <a  class="全部文章 开发 swift "
            href="/2024/01/02/macos-ocr-swift/"
            data-tag="swift,macos,ocr"
@@ -874,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,docker,spring-boot"
+           data-tag="java,spring-boot,docker"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -965,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1082,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="linux,vim,keybord,emacs"
+           data-tag="vim,keybord,emacs,linux"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2323,7 +2364,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-01-23 11:56:12'>2022-08-01 20:06</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-16 14:01:36'>2022-08-01 20:06</time>
         
     </div>
     <div class="article-meta">
@@ -2377,41 +2418,9 @@
         <h3 id="零、背景"><a href="#零、背景" class="headerlink" title="零、背景"></a>零、背景</h3><p>我们在写后端请求的时候, 可能涉及多次 SQL 执行(或其他操作), 当这些请求相互不关联, 在顺序执行时就浪费了时间, 这些不需要先后顺序的操作可以通过多线程进行同时执行, 来加速整个逻辑的执行速度.</p>
 <p>既然有了目标和大致思路, 如果有做过前端的小伙伴应该能想起来 Js 里面有个 <code>Promise.all</code> 来解决这个问题, 在 Java 里也有类似功能的类 <code>CompletableFuture</code> , 它可以实现多线程和线程阻塞, 这样能够保证等待多个线程执行完成后再继续操作.</p>
 <h3 id="一、CompletableFuture-是什么"><a href="#一、CompletableFuture-是什么" class="headerlink" title="一、CompletableFuture 是什么"></a>一、CompletableFuture 是什么</h3><p>首先我们先了解一下 <code>CompletableFuture</code> 是干什么, 接下来我们通过简单的示例来介绍他的作用.</p>
-<pre><code class="java"> long startTime = System.currentTimeMillis();
-//生成几个任务
-List&lt;CompletableFuture&lt;String&gt;&gt; futureList = new ArrayList&lt;&gt;();
-futureList.add(CompletableFuture.supplyAsync(()-&gt;&#123;
-    sleep(4000);
-    System.out.println(&quot;任务1 完成&quot;);
-    return &quot;任务1的数据&quot;;
-&#125;));
-futureList.add(CompletableFuture.supplyAsync(()-&gt;&#123;
-    sleep(2000);
-    System.out.println(&quot;任务2 完成&quot;);
-    return &quot;任务2的数据&quot;;
-&#125;));
-futureList.add(CompletableFuture.supplyAsync(()-&gt;&#123;
-    sleep(3000);
-    System.out.println(&quot;任务3 完成&quot;);
-    return &quot;任务3的数据&quot;;
-&#125;));
-//完成任务
-CompletableFuture&lt;Void&gt; allTask = CompletableFuture.allOf(futureList.toArray(new CompletableFuture[0]))
-        .whenComplete((t, e) -&gt; &#123;
-            System.out.println(&quot;所有任务都完成了， 返回结果集: &quot;
-                    + futureList.stream().map(CompletableFuture::join).collect(Collectors.joining(&quot;,&quot;)));
-        &#125;);
-// 阻塞主线程
-allTask.join();
-System.out.println(&quot;main end, cost: &quot; + (System.currentTimeMillis() - startTime));
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"> <span class="type">long</span> <span class="variable">startTime</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line"><span class="comment">//生成几个任务</span></span><br><span class="line">List&lt;CompletableFuture&lt;String&gt;&gt; futureList = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">futureList.add(CompletableFuture.supplyAsync(()-&gt;&#123;</span><br><span class="line">    sleep(<span class="number">4000</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;任务1 完成&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;任务1的数据&quot;</span>;</span><br><span class="line">&#125;));</span><br><span class="line">futureList.add(CompletableFuture.supplyAsync(()-&gt;&#123;</span><br><span class="line">    sleep(<span class="number">2000</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;任务2 完成&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;任务2的数据&quot;</span>;</span><br><span class="line">&#125;));</span><br><span class="line">futureList.add(CompletableFuture.supplyAsync(()-&gt;&#123;</span><br><span class="line">    sleep(<span class="number">3000</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;任务3 完成&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;任务3的数据&quot;</span>;</span><br><span class="line">&#125;));</span><br><span class="line"><span class="comment">//完成任务</span></span><br><span class="line">CompletableFuture&lt;Void&gt; allTask = CompletableFuture.allOf(futureList.toArray(<span class="keyword">new</span> <span class="title class_">CompletableFuture</span>[<span class="number">0</span>]))</span><br><span class="line">        .whenComplete((t, e) -&gt; &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;所有任务都完成了， 返回结果集: &quot;</span></span><br><span class="line">                    + futureList.stream().map(CompletableFuture::join).collect(Collectors.joining(<span class="string">&quot;,&quot;</span>)));</span><br><span class="line">        &#125;);</span><br><span class="line"><span class="comment">// 阻塞主线程</span></span><br><span class="line">allTask.join();</span><br><span class="line">System.out.println(<span class="string">&quot;main end, cost: &quot;</span> + (System.currentTimeMillis() - startTime));</span><br></pre></td></tr></table></figure>
 <p>执行结果</p>
-<pre><code class="bash">任务2 完成
-任务3 完成
-任务1 完成
-所有任务都完成了， 返回结果集: 任务1的数据,任务2的数据,任务3的数据
-main end, cost: 4032
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">任务2 完成</span><br><span class="line">任务3 完成</span><br><span class="line">任务1 完成</span><br><span class="line">所有任务都完成了， 返回结果集: 任务1的数据,任务2的数据,任务3的数据</span><br><span class="line">main end, cost: 4032</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>结果分析:</strong> 我们需要执行3个任务, 3个任务同时执行, 互不影响</p>
 </blockquote>
@@ -2424,172 +2433,23 @@ main end, cost: 4032
 <li>结论: 多线程执行后, 耗时取决于最耗时的操作, 而单线程是所有操作耗时之和</li>
 </ol>
 <h3 id="二、封装工具类"><a href="#二、封装工具类" class="headerlink" title="二、封装工具类"></a>二、封装工具类</h3><p>经过上面的测试, 通过 <code>CompletableFuture</code> 已经能够实现我们的预想, 为了操作方便, 我们将封装起来, 便于统一管理</p>
-<pre><code class="java">package org.yelog.java.usage.concurrent;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-
-/**
- * 执行并发任务
- *
- * @author yangyj13
- * @date 11/7/22 9:49 PM
- */
-public class MultiTask&lt;T&gt; &#123;
-    private List&lt;CompletableFuture&lt;T&gt;&gt; futureList;
-
-    /**
-     * 添加待执行的任务
-     *
-     * @param completableFuture 任务
-     * @return 当前对象
-     */
-    public MultiTask&lt;T&gt; addTask(CompletableFuture&lt;T&gt; completableFuture) &#123;
-        if (futureList == null) &#123;
-            futureList = new ArrayList&lt;&gt;();
-        &#125;
-        futureList.add(completableFuture);
-        return this;
-    &#125;
-
-    /**
-     * 添加待执行的任务(无返回)
-     *
-     * @param task 任务
-     * @return 当前对象
-     */
-    public MultiTask&lt;T&gt; addTask(Consumer&lt;T&gt; task) &#123;
-        addTask(CompletableFuture.supplyAsync(() -&gt; &#123;
-            task.accept(null);
-            return null;
-        &#125;));
-        return this;
-    &#125;
-    /**
-     * 添加待执行的任务(有返回)
-     *
-     * @param task 任务
-     * @return 当前对象
-     */
-    public MultiTask&lt;T&gt; addTask(Function&lt;Object, T&gt; task) &#123;
-        addTask(CompletableFuture.supplyAsync(() -&gt; task.apply(null)));
-        return this;
-    &#125;
-
-    /**
-     * 开始执行任务
-     *
-     * @param callback                当所有任务都完成后触发的回调方法
-     * @param waitTaskExecuteComplete 是否阻塞主线程
-     */
-    private void execute(Consumer&lt;List&lt;T&gt;&gt; callback, Boolean waitTaskExecuteComplete) &#123;
-        CompletableFuture&lt;Void&gt; allFuture = CompletableFuture.allOf(futureList.toArray(new CompletableFuture[0]))
-                .whenComplete((t, e) -&gt; &#123;
-                    if (callback != null) &#123;
-                        List&lt;T&gt; objectList = new ArrayList&lt;&gt;();
-                        futureList.forEach((future) -&gt; &#123;
-                            objectList.add(future.join());
-                        &#125;);
-                        callback.accept(objectList);
-                    &#125;
-                &#125;);
-        if (callback != null || waitTaskExecuteComplete == null || waitTaskExecuteComplete) &#123;
-            allFuture.join();
-        &#125;
-    &#125;
-
-    /**
-     * 开始执行任务
-     * 等待所有任务完成（阻塞主线程）
-     */
-    public void execute() &#123;
-        execute(null, true);
-    &#125;
-
-    /**
-     * 开始执行任务
-     *
-     * @param waitTaskExecuteComplete 是否阻塞主线程
-     */
-    public void execute(Boolean waitTaskExecuteComplete) &#123;
-        execute(null, waitTaskExecuteComplete);
-    &#125;
-
-    /**
-     * 开始执行任务
-     *
-     * @param callback 当所有任务都完成后触发的回调方法
-     */
-    public void execute(Consumer&lt;List&lt;T&gt;&gt; callback) &#123;
-        execute(callback, true);
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.yelog.java.usage.concurrent;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.CompletableFuture;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Consumer;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Function;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Predicate;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 执行并发任务</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> yangyj13</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 11/7/22 9:49 PM</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MultiTask</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;CompletableFuture&lt;T&gt;&gt; futureList;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 添加待执行的任务</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> completableFuture 任务</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 当前对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> MultiTask&lt;T&gt; <span class="title function_">addTask</span><span class="params">(CompletableFuture&lt;T&gt; completableFuture)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (futureList == <span class="literal">null</span>) &#123;</span><br><span class="line">            futureList = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">        futureList.add(completableFuture);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 添加待执行的任务(无返回)</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> task 任务</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 当前对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> MultiTask&lt;T&gt; <span class="title function_">addTask</span><span class="params">(Consumer&lt;T&gt; task)</span> &#123;</span><br><span class="line">        addTask(CompletableFuture.supplyAsync(() -&gt; &#123;</span><br><span class="line">            task.accept(<span class="literal">null</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;));</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 添加待执行的任务(有返回)</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> task 任务</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 当前对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> MultiTask&lt;T&gt; <span class="title function_">addTask</span><span class="params">(Function&lt;Object, T&gt; task)</span> &#123;</span><br><span class="line">        addTask(CompletableFuture.supplyAsync(() -&gt; task.apply(<span class="literal">null</span>)));</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 开始执行任务</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> callback                当所有任务都完成后触发的回调方法</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> waitTaskExecuteComplete 是否阻塞主线程</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">execute</span><span class="params">(Consumer&lt;List&lt;T&gt;&gt; callback, Boolean waitTaskExecuteComplete)</span> &#123;</span><br><span class="line">        CompletableFuture&lt;Void&gt; allFuture = CompletableFuture.allOf(futureList.toArray(<span class="keyword">new</span> <span class="title class_">CompletableFuture</span>[<span class="number">0</span>]))</span><br><span class="line">                .whenComplete((t, e) -&gt; &#123;</span><br><span class="line">                    <span class="keyword">if</span> (callback != <span class="literal">null</span>) &#123;</span><br><span class="line">                        List&lt;T&gt; objectList = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">                        futureList.forEach((future) -&gt; &#123;</span><br><span class="line">                            objectList.add(future.join());</span><br><span class="line">                        &#125;);</span><br><span class="line">                        callback.accept(objectList);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">        <span class="keyword">if</span> (callback != <span class="literal">null</span> || waitTaskExecuteComplete == <span class="literal">null</span> || waitTaskExecuteComplete) &#123;</span><br><span class="line">            allFuture.join();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 开始执行任务</span></span><br><span class="line"><span class="comment">     * 等待所有任务完成（阻塞主线程）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">execute</span><span class="params">()</span> &#123;</span><br><span class="line">        execute(<span class="literal">null</span>, <span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 开始执行任务</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> waitTaskExecuteComplete 是否阻塞主线程</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">execute</span><span class="params">(Boolean waitTaskExecuteComplete)</span> &#123;</span><br><span class="line">        execute(<span class="literal">null</span>, waitTaskExecuteComplete);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 开始执行任务</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> callback 当所有任务都完成后触发的回调方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">execute</span><span class="params">(Consumer&lt;List&lt;T&gt;&gt; callback)</span> &#123;</span><br><span class="line">        execute(callback, <span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>那么上一步我们测试的流程转换成工具类后如下</p>
-<pre><code class="java">long startTime = System.currentTimeMillis();
-MultiTask&lt;String&gt; multiTask = new MultiTask&lt;&gt;();
-multiTask.addTask(t -&gt; &#123;
-    sleep(1000);
-    System.out.println(&quot;任务1 完成&quot;);
-&#125;).addTask(t -&gt; &#123;
-    sleep(3000);
-    System.out.println(&quot;任务2 完成&quot;);
-&#125;).addTask(CompletableFuture.supplyAsync(()-&gt;&#123;
-    sleep(2000);
-    System.out.println(&quot;任务3 完成&quot;);
-    return &quot;任务3的数据&quot;;
-&#125;)).execute(resultList-&gt;&#123;
-    System.out.println(&quot;all complete: &quot; + resultList);
-&#125;);
-System.out.println(&quot;main end, cost: &quot; + (System.currentTimeMillis() - startTime));
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="variable">startTime</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">MultiTask&lt;String&gt; multiTask = <span class="keyword">new</span> <span class="title class_">MultiTask</span>&lt;&gt;();</span><br><span class="line">multiTask.addTask(t -&gt; &#123;</span><br><span class="line">    sleep(<span class="number">1000</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;任务1 完成&quot;</span>);</span><br><span class="line">&#125;).addTask(t -&gt; &#123;</span><br><span class="line">    sleep(<span class="number">3000</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;任务2 完成&quot;</span>);</span><br><span class="line">&#125;).addTask(CompletableFuture.supplyAsync(()-&gt;&#123;</span><br><span class="line">    sleep(<span class="number">2000</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;任务3 完成&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;任务3的数据&quot;</span>;</span><br><span class="line">&#125;)).execute(resultList-&gt;&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;all complete: &quot;</span> + resultList);</span><br><span class="line">&#125;);</span><br><span class="line">System.out.println(<span class="string">&quot;main end, cost: &quot;</span> + (System.currentTimeMillis() - startTime));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h3 id="三、应用到实际的效果"><a href="#三、应用到实际的效果" class="headerlink" title="三、应用到实际的效果"></a>三、应用到实际的效果</h3><p>执行两次数据库的操作如下</p>
-<pre><code class="java">public interface TestMapper &#123;
-
-    @Select(&quot;select count(*) from test_user where score &lt; 1000 and user_id = #&#123;userId&#125;&quot;)
-    int countScoreLess1000(Integer userId);
-
-    @Select(&quot;select count(1) from test_log where success = true and user_id = #&#123;userId&#125;&quot;)
-    int countSuccess(Integer userId);
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">TestMapper</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Select(&quot;select count(*) from test_user where score &lt; 1000 and user_id = #&#123;userId&#125;&quot;)</span></span><br><span class="line">    <span class="type">int</span> <span class="title function_">countScoreLess1000</span><span class="params">(Integer userId)</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Select(&quot;select count(1) from test_log where success = true and user_id = #&#123;userId&#125;&quot;)</span></span><br><span class="line">    <span class="type">int</span> <span class="title function_">countSuccess</span><span class="params">(Integer userId)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>调用方法:</p>
-<pre><code class="java">long start = System.currentTimeMillis();
-testMapper.countScoreLess1000(userId);
-long countScoreLess1000End = System.currentTimeMillis();
-log.info(&quot;countScoreLess1000 cost: &quot; + (countScoreLess1000End - start));
-testMapper.countSuccess(userId);
-long countSuccessEnd = System.currentTimeMillis();
-log.info(&quot;countSuccess cost: &quot; + (countSuccessEnd - countScoreLess1000End));
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="variable">start</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">testMapper.countScoreLess1000(userId);</span><br><span class="line"><span class="type">long</span> <span class="variable">countScoreLess1000End</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">log.info(<span class="string">&quot;countScoreLess1000 cost: &quot;</span> + (countScoreLess1000End - start));</span><br><span class="line">testMapper.countSuccess(userId);</span><br><span class="line"><span class="type">long</span> <span class="variable">countSuccessEnd</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">log.info(<span class="string">&quot;countSuccess cost: &quot;</span> + (countSuccessEnd - countScoreLess1000End));</span><br><span class="line"></span><br><span class="line">log.info(<span class="string">&quot;all cost: &quot;</span> + (countSuccessEnd - start));</span><br></pre></td></tr></table></figure>
 
-log.info(&quot;all cost: &quot; + (countSuccessEnd - start));
-</code></pre>
 <p>顺序执行的平均时间如下</p>
-<pre><code class="bash">countScoreLess1000 cost: 368
-countSuccess cost: 404
-all cost: 772
-</code></pre>
-<p>当我们应用的上面的工具类后的调用方法</p>
-<pre><code class="java">MultiTask multiTask = new MultiTask&lt;&gt;();
-multiTask.addTask(t -&gt; &#123;
-    testMapper.countScoreLess1000(userId);
-    log.info(&quot;countScoreLess1000 cost: &quot; + (System.currentTimeMillis() - start));
-&#125;).addTask(t -&gt; &#123;
-    testMapper.countSuccess(userId);
-    log.info(&quot;countSuccess cost: &quot; + (System.currentTimeMillis() - start));
-&#125;).execute();
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">countScoreLess1000 cost: 368</span><br><span class="line">countSuccess cost: 404</span><br><span class="line">all cost: 772</span><br></pre></td></tr></table></figure>
 
-log.info(&quot;all cost: &quot; + (System.currentTimeMillis() - start));
-</code></pre>
+<p>当我们应用的上面的工具类后的调用方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">MultiTask</span> <span class="variable">multiTask</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MultiTask</span>&lt;&gt;();</span><br><span class="line">multiTask.addTask(t -&gt; &#123;</span><br><span class="line">    testMapper.countScoreLess1000(userId);</span><br><span class="line">    log.info(<span class="string">&quot;countScoreLess1000 cost: &quot;</span> + (System.currentTimeMillis() - start));</span><br><span class="line">&#125;).addTask(t -&gt; &#123;</span><br><span class="line">    testMapper.countSuccess(userId);</span><br><span class="line">    log.info(<span class="string">&quot;countSuccess cost: &quot;</span> + (System.currentTimeMillis() - start));</span><br><span class="line">&#125;).execute();</span><br><span class="line"></span><br><span class="line">log.info(<span class="string">&quot;all cost: &quot;</span> + (System.currentTimeMillis() - start));</span><br></pre></td></tr></table></figure>
 <p>效果如下</p>
-<pre><code class="bash">countScoreLess1000 cost: 433
-countSuccess cost: 463
-all cost: 464
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">countScoreLess1000 cost: 433</span><br><span class="line">countSuccess cost: 463</span><br><span class="line">all cost: 464</span><br></pre></td></tr></table></figure>
+
 <p>可以看到各子任务执行时长是差不多的, 但是总耗时使用多线程后有了明显下降</p>
 <h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><p>通过使用 <code>CompletableFuture</code> 实现多线程阻塞执行后, 大幅降低这类请求, 并且当可以异步执行的子任务越多, 效果越明显.</p>
 
