@@ -1584,13 +1584,6 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/linux/</loc>
-    <lastmod>2024-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yelog.org/tags/docker/</loc>
     <lastmod>2024-06-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -1599,6 +1592,13 @@
   
   <url>
     <loc>http://yelog.org/tags/reading/</loc>
+    <lastmod>2024-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/linux/</loc>
     <lastmod>2024-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1619,14 +1619,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/k8s/</loc>
+    <loc>http://yelog.org/tags/translation/</loc>
     <lastmod>2024-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/translation/</loc>
+    <loc>http://yelog.org/tags/k8s/</loc>
     <lastmod>2024-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
