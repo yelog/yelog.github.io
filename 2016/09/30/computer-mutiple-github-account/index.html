@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2366,12 +2366,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2016-09-30 16:42</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2016-09-30 16:42</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:917</span>
+        <span>字数:937</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2420,50 +2420,91 @@
         <p>最近想要使用自己的GitHub搭建Hexo博客，同时还要使用工作的GitHub开发项目，所以在网上找寻了一些文章，在此将自己的搭建过程记录一下。</p>
 <span id="more"></span>
 <h2 id="前期工作"><a href="#前期工作" class="headerlink" title="前期工作"></a>前期工作</h2><p>两个GitHub账号（假设两个账号为one,two）<br>取消Git全局设置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">$ git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ git config --global --unset user.name
+$ git config --global --unset user.email
+</code></pre>
 <h2 id="SSH配置"><a href="#SSH配置" class="headerlink" title="SSH配置"></a>SSH配置</h2><p>生成<code>id_rsa</code>私钥，<code>id_rsa.pub</code>公钥。one可以直接回车，默认生成 id_rsa 和 id_rsa.pub 。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;one@xx.com&quot;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ssh-keygen -t rsa -C &quot;one@xx.com&quot;
+</code></pre>
 <p>添加two会出现提示输入文件名，输入与默认配置不一样的文件名，如：id_rsa_two。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;two@126.com&quot;</span>  <span class="comment">#  之后会提示输入文件名</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ cd ~/.ssh
+$ ssh-keygen -t rsa -C &quot;two@126.com&quot;  #  之后会提示输入文件名
+</code></pre>
 <p>GitHub添加公钥 id_rsa.pub 、 id_rsa_two.pub，分别登陆one,two的账号，在 Account Settings 的 SSH Keys 里，点 <code>Add SSH Keys</code> ，将公钥(.pub文件)中的内容粘贴到 Key 中，并输入 Title。<br>添加 ssh Key</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add ~/.ssh/id_rsa</span><br><span class="line">$ ssh-add ~/.ssh/id_rsa_two</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ssh-add ~/.ssh/id_rsa
+$ ssh-add ~/.ssh/id_rsa_two
+</code></pre>
 <p>可以在添加前使用下面命令删除所有的 key</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -D</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ssh-add -D
+</code></pre>
 <p>最后可以通过下面命令，查看 key 的设置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -l</span><br></pre></td></tr></table></figure>
-<h2 id="修改ssh-config文件"><a href="#修改ssh-config文件" class="headerlink" title="修改ssh config文件"></a>修改ssh config文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh/</span><br><span class="line">$ <span class="built_in">touch</span> config</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ssh-add -l
+</code></pre>
+<h2 id="修改ssh-config文件"><a href="#修改ssh-config文件" class="headerlink" title="修改ssh config文件"></a>修改ssh config文件</h2><pre><code class="bash">$ cd ~/.ssh/
+$ touch config
+</code></pre>
 <p>打开 .ssh 文件夹下的 <code>config</code> 文件，进行配置</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  default</span></span><br><span class="line"><span class="string">Host</span> <span class="string">github.com</span></span><br><span class="line"><span class="string">HostName</span> <span class="string">github.com</span></span><br><span class="line"><span class="string">User</span> <span class="string">git</span></span><br><span class="line"><span class="string">IdentityFile</span> <span class="string">~/.ssh/id_rsa</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#  two</span></span><br><span class="line"><span class="string">Host</span> <span class="string">two.github.com</span>  <span class="comment">#  前缀名可以任意设置</span></span><br><span class="line"><span class="string">HostName</span> <span class="string">github.com</span></span><br><span class="line"><span class="string">User</span> <span class="string">git</span></span><br><span class="line"><span class="string">IdentityFile</span> <span class="string">~/.ssh/id_rsa_two</span></span><br></pre></td></tr></table></figure>
+<pre><code class="yml">#  default
+Host github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa
+
+#  two
+Host two.github.com  #  前缀名可以任意设置
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_two
+</code></pre>
 <ul>
 <li>这里必须采用这样的方式设置，否则 push 时会出现以下错误:</li>
 </ul>
 <blockquote>
-<p>ERROR: Permission to two/two.github.com.git denied to one.</p>
+<p>ERROR: Permission to two&#x2F;two.github.com.git denied to one.</p>
 </blockquote>
 <p>简单分析下原因，我们可以发现 ssh 客户端是通过类似:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@github.com:one/one.github.com.git</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">git@github.com:one/one.github.com.git
+</code></pre>
 <p>这样的 Git 地址中的 User 和 Host 来识别使用哪个本地私钥的。<br>很明显，如果 User 和 Host 始终为 git 和 github.com，那么就只能使用一个私钥。<br>所以需要上面的方式配置，每个账号使用了自己的 Host，每个 Host 的域名做 CNAME 解析到 github.com，这样 ssh 在连接时就可以区别不同的账号了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com        <span class="comment">#  测试one ssh连接</span></span><br><span class="line"><span class="comment"># Hi ***! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br><span class="line">$ ssh -T git@two.github.com    <span class="comment">#  测试two ssh连接</span></span><br><span class="line"><span class="comment"># Hi ***! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ssh -T git@github.com        #  测试one ssh连接
+# Hi ***! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+$ ssh -T git@two.github.com    #  测试two ssh连接
+# Hi ***! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre>
 <p>但是这样还没有完，下面还有关联的设置。</p>
 <h2 id="在Git项目中配置账号关联"><a href="#在Git项目中配置账号关联" class="headerlink" title="在Git项目中配置账号关联"></a>在Git项目中配置账号关联</h2><p>可以用 <code>git init</code> 或者 <code>git clone</code> 创建本地项目<br>分别在one和two的git项目目录下，使用下面的命令设置名字和邮箱</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config user.name <span class="string">&quot;__name__&quot;</span>            <span class="comment">#  __name__ 例如 one</span></span><br><span class="line">$ git config user.email <span class="string">&quot;__email__&quot;</span>          <span class="comment">#  __email__ 例如 one@126.com</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ git config user.name &quot;__name__&quot;            #  __name__ 例如 one
+$ git config user.email &quot;__email__&quot;          #  __email__ 例如 one@126.com
+</code></pre>
 <p>注意：由于我不知道Hexo怎样配置 局部的config，所以，我将two的config使用全局，而工作目录配置局部。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;__name__&quot;</span>            <span class="comment">#  __name__ 例如 two</span></span><br><span class="line">$ git config --global user.email <span class="string">&quot;__email__&quot;</span>          <span class="comment">#  __email__ 例如 two@126.com</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ git config --global user.name &quot;__name__&quot;            #  __name__ 例如 two
+$ git config --global user.email &quot;__email__&quot;          #  __email__ 例如 two@126.com
+</code></pre>
 <p>查看git项目的配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --list</span><br></pre></td></tr></table></figure>
-<p>查看 one 的 remote.origin.url=git@github.com:one/one.github.com.git<br>查看 two 的 remote.origin.url=git@github.com:two/two.github.com.git<br>由于 one 使用的是默认的 Host ，所以不需要修改，但是 two 使用的是 two.github.com ，则需要进行修改</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote <span class="built_in">rm</span> origin</span><br><span class="line">$ git remote add origin git@two.github.com:two/two.github.com.git</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ git config --list
+</code></pre>
+<p>查看 one 的 remote.origin.url&#x3D;<a href="mailto:&#103;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#x74;&#x40;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#x6d;</a>:one&#x2F;one.github.com.git<br>查看 two 的 remote.origin.url&#x3D;<a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a>:two&#x2F;two.github.com.git<br>由于 one 使用的是默认的 Host ，所以不需要修改，但是 two 使用的是 two.github.com ，则需要进行修改</p>
+<pre><code class="bash">$ git remote rm origin
+$ git remote add origin git@two.github.com:two/two.github.com.git
+</code></pre>
 <p>我在Hexo中的配置（使用two账号）</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">git@two.github.com:two/two.github.io.git</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<pre><code class="yml">deploy:
+    type: git
+    repo: git@two.github.com:two/two.github.io.git
+    branch: master
+</code></pre>
 <h2 id="上传更改"><a href="#上传更改" class="headerlink" title="上传更改"></a>上传更改</h2><p>上面所有的设置无误后，可以修改代码，然后上传了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add -A</span><br><span class="line">$ git commit -m <span class="string">&quot;your comments&quot;</span></span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ git add -A
+$ git commit -m &quot;your comments&quot;
+$ git push
+</code></pre>
 <p>如果遇到warning</p>
 <blockquote>
 <p>warning: push.default is unset; its implicit value is changing in Git 2.0 from ‘matching’ to ‘simple’. To squelch this messageand maintain the current behavior after the default changes, use…</p>
 </blockquote>
 <p>推荐使用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global push.default simple</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ git config --global push.default simple
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

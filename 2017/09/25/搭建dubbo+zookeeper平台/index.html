@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2364,12 +2364,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2017-09-25 16:29</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2017-09-25 16:29</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:966</span>
+        <span>字数:963</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2418,11 +2418,16 @@
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文将介绍在SpringMVC+Spring+Mybatis项目中添加 <code>dubbo</code> 作为 <code>rpc</code> 服务。</p>
 <p>文末有项目代码地址。</p>
 <h2 id="一-搭建zookeeper"><a href="#一-搭建zookeeper" class="headerlink" title="一.搭建zookeeper"></a>一.搭建zookeeper</h2><p>使用 docker 一句话创建：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -dit --name zookeeper --hostname zookeeper-host -v /data:/data -p 2181:2181 jplock/zookeeper:latest</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">docker run -dit --name zookeeper --hostname zookeeper-host -v /data:/data -p 2181:2181 jplock/zookeeper:latest
+</code></pre>
 <h2 id="二-安装zkui（非必须）"><a href="#二-安装zkui（非必须）" class="headerlink" title="二.安装zkui（非必须）"></a>二.安装zkui（非必须）</h2><p>这个项目为 zookeeper 提供一个 web 的管理界面。当然我们也可以直接在zookeeper中使用命令查看，所以此步骤可以忽略</p>
 <p>在开始前需要安装 Java 环境、Maven 环境。</p>
 <ol>
-<li>到 <a target="_blank" rel="noopener" href="https://github.com/DeemOpen/zkui">zkui</a> 的项目中下载代码。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/DeemOpen/zkui.git</span><br></pre></td></tr></table></figure></li>
+<li>到 <a target="_blank" rel="noopener" href="https://github.com/DeemOpen/zkui">zkui</a> 的项目中下载代码。</li>
+</ol>
+<pre><code class="bash">git clone https://github.com/DeemOpen/zkui.git
+</code></pre>
+<ol start="2">
 <li>执行 <code>mvn clean install</code> 生成jar文件。</li>
 <li>将config.cfg复制到上一步生成的jar文件所在目录，然后修改配置文件中的zookeeper地址。</li>
 <li>执行 <code>nohup java -jar zkui-2.0-SNAPSHOT-jar-with-dependencies.jar &amp;</code></li>
@@ -2430,15 +2435,124 @@
 </ol>
 <p><img src="http://img.saodiyang.com/Fherw3peRgh-grmGz6qkNri5J1aG.png" alt="登录页面"><br><img src="http://img.saodiyang.com/FvEVMOzSZBP4N4-Q14noQT_VsKF6.png" alt="首页"></p>
 <h2 id="三-使用dubbo"><a href="#三-使用dubbo" class="headerlink" title="三.使用dubbo"></a>三.使用dubbo</h2><ol>
-<li>在原来 SpringMVC+Spring+Mybatis 项目中，除了原来 spring 相关依赖外，还需要加入以下依赖<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>dubbo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.5.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.zookeeper<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zookeeper<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.101tec<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>zkclient<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>定义服务接口<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">IPersonService</span> &#123;</span><br><span class="line">    List&lt;Person&gt; <span class="title function_">listAll</span><span class="params">()</span>;</span><br><span class="line">    Person <span class="title function_">getById</span><span class="params">(Integer id)</span>;</span><br><span class="line">    Integer <span class="title function_">delById</span><span class="params">(Person person)</span>;</span><br><span class="line">    Integer <span class="title function_">updatePerson</span><span class="params">(Person person)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>定义服务实现类<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PersonService</span> <span class="keyword">implements</span> <span class="title class_">IPersonService</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    PersonMapper personMapper;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> List&lt;Person&gt; <span class="title function_">listAll</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> personMapper.findAll();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Person <span class="title function_">getById</span><span class="params">(Integer id)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> personMapper.findOneById(id);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Integer <span class="title function_">delById</span><span class="params">(Person person)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> personMapper.del(person);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Integer <span class="title function_">updatePerson</span><span class="params">(Person person)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> personMapper.update(person);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>配置生产者，注册服务信息<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:dubbo</span>=<span class="string">&quot;http://code.alibabatech.com/schema/dubbo&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd</span></span></span><br><span class="line"><span class="string"><span class="tag">	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--定义了提供方应用信息，用于计算依赖关系；--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dubbo:application</span> <span class="attr">name</span>=<span class="string">&quot;demotest-provider&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 使用 zookeeper 注册中心暴露服务地址 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dubbo:registry</span> <span class="attr">address</span>=<span class="string">&quot;zookeeper://192.168.0.86:2181&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 用dubbo协议在20880端口暴露服务 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dubbo:protocol</span> <span class="attr">name</span>=<span class="string">&quot;dubbo&quot;</span> <span class="attr">port</span>=<span class="string">&quot;20880&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 和本地bean一样实现服务 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;personService&quot;</span> <span class="attr">class</span>=<span class="string">&quot;com.ssm.service.PersonService&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 声明需要暴露的服务接口 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dubbo:service</span> <span class="attr">interface</span>=<span class="string">&quot;com.ssm.iservice.IPersonService&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;personService&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>配置消费者，订阅服务<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:dubbo</span>=<span class="string">&quot;http://code.alibabatech.com/schema/dubbo&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd</span></span></span><br><span class="line"><span class="string"><span class="tag">	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dubbo:application</span> <span class="attr">name</span>=<span class="string">&quot;demo-consumer&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 使用 zookeeper 注册中心暴露发现服务地址 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dubbo:registry</span> <span class="attr">address</span>=<span class="string">&quot;zookeeper://192.168.0.86:2181&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 生成远程服务代理，可以和本地bean一样使用demoService --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dubbo:reference</span> <span class="attr">id</span>=<span class="string">&quot;personService&quot;</span> <span class="attr">check</span>=<span class="string">&quot;false&quot;</span> <span class="attr">interface</span>=<span class="string">&quot;com.ssm.iservice.IPersonService&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>调用远程服务<br>配置完成后，我们就可以像使用本地 bean 一样，使用 rpc 的 service；<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">IndexController</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    IPersonService personService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping(&quot;/index.html&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">index</span><span class="params">(Model model)</span> &#123;</span><br><span class="line">        RpcContext.getContext().setAttachment(<span class="string">&quot;index&quot;</span>, <span class="string">&quot;1&quot;</span>);<span class="comment">//测试ThreadLocal</span></span><br><span class="line">        List&lt;Person&gt; list = personService.listAll();</span><br><span class="line">        model.addAttribute(<span class="string">&quot;command&quot;</span>,list);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;index&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>在原来 SpringMVC+Spring+Mybatis 项目中，除了原来 spring 相关依赖外，还需要加入以下依赖</li>
 </ol>
+<pre><code class="xml">&lt;dependency&gt;
+        &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+        &lt;artifactId&gt;dubbo&lt;/artifactId&gt;
+        &lt;version&gt;2.5.5&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+        &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;
+        &lt;artifactId&gt;zookeeper&lt;/artifactId&gt;
+        &lt;version&gt;3.4.9&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+        &lt;groupId&gt;com.101tec&lt;/groupId&gt;
+        &lt;artifactId&gt;zkclient&lt;/artifactId&gt;
+        &lt;version&gt;0.2&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<ol start="2">
+<li>定义服务接口</li>
+</ol>
+<pre><code class="java">public interface IPersonService &#123;
+    List&lt;Person&gt; listAll();
+    Person getById(Integer id);
+    Integer delById(Person person);
+    Integer updatePerson(Person person);
+&#125;
+</code></pre>
+<ol start="3">
+<li>定义服务实现类</li>
+</ol>
+<pre><code class="java">@Service
+public class PersonService implements IPersonService &#123;
+
+    @Autowired
+    PersonMapper personMapper;
+
+    public List&lt;Person&gt; listAll() &#123;
+        return personMapper.findAll();
+    &#125;
+
+    public Person getById(Integer id) &#123;
+        return personMapper.findOneById(id);
+    &#125;
+
+    public Integer delById(Person person) &#123;
+        return personMapper.del(person);
+    &#125;
+
+    public Integer updatePerson(Person person) &#123;
+        return personMapper.update(person);
+    &#125;
+&#125;
+</code></pre>
+<ol start="4">
+<li>配置生产者，注册服务信息</li>
+</ol>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:dubbo=&quot;http://code.alibabatech.com/schema/dubbo&quot;
+       xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd&quot;&gt;
+
+    &lt;!--定义了提供方应用信息，用于计算依赖关系；--&gt;
+    &lt;dubbo:application name=&quot;demotest-provider&quot; /&gt;
+
+    &lt;!-- 使用 zookeeper 注册中心暴露服务地址 --&gt;
+    &lt;dubbo:registry address=&quot;zookeeper://192.168.0.86:2181&quot;/&gt;
+
+    &lt;!-- 用dubbo协议在20880端口暴露服务 --&gt;
+    &lt;dubbo:protocol name=&quot;dubbo&quot; port=&quot;20880&quot;/&gt;
+
+    &lt;!-- 和本地bean一样实现服务 --&gt;
+    &lt;bean id=&quot;personService&quot; class=&quot;com.ssm.service.PersonService&quot;/&gt;
+
+    &lt;!-- 声明需要暴露的服务接口 --&gt;
+    &lt;dubbo:service interface=&quot;com.ssm.iservice.IPersonService&quot; ref=&quot;personService&quot;/&gt;
+&lt;/beans&gt;
+</code></pre>
+<ol start="5">
+<li>配置消费者，订阅服务</li>
+</ol>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:dubbo=&quot;http://code.alibabatech.com/schema/dubbo&quot;
+       xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd&quot;&gt;
+
+    &lt;!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 --&gt;
+    &lt;dubbo:application name=&quot;demo-consumer&quot;/&gt;
+
+    &lt;!-- 使用 zookeeper 注册中心暴露发现服务地址 --&gt;
+    &lt;dubbo:registry address=&quot;zookeeper://192.168.0.86:2181&quot;/&gt;
+
+    &lt;!-- 生成远程服务代理，可以和本地bean一样使用demoService --&gt;
+    &lt;dubbo:reference id=&quot;personService&quot; check=&quot;false&quot; interface=&quot;com.ssm.iservice.IPersonService&quot;/&gt;
+&lt;/beans&gt;
+</code></pre>
+<ol start="6">
+<li>调用远程服务<br>配置完成后，我们就可以像使用本地 bean 一样，使用 rpc 的 service；</li>
+</ol>
+<pre><code class="java">@Controller
+public class IndexController &#123;
+
+    @Autowired
+    IPersonService personService;
+
+    @RequestMapping(&quot;/index.html&quot;)
+    public String index(Model model) &#123;
+        RpcContext.getContext().setAttachment(&quot;index&quot;, &quot;1&quot;);//测试ThreadLocal
+        List&lt;Person&gt; list = personService.listAll();
+        model.addAttribute(&quot;command&quot;,list);
+        return &quot;index&quot;;
+    &#125;
+&#125;
+</code></pre>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>至此，单机运行的 rpc 服务已搭建完成。</p>
 <p>代码传送文 <a target="_blank" rel="noopener" href="https://github.com/yelog/ssm">ssm</a></p>
 

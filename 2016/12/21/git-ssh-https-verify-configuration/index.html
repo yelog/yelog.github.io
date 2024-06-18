@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2364,12 +2364,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2016-12-21 15:31</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2016-12-21 15:31</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:658</span>
+        <span>字数:656</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2418,20 +2418,32 @@
         <p>Git作为当前最受欢迎的版本控制软件，使用是很频繁的。但每次使用git push等操作时都要输入密码，实在是挺麻烦的。本文对使用ssh与https两种通讯协议讨论一下免密码配置。<br>注：这个过程在所有操作系统上都是相似的：）</p>
 <span id="more"></span>
 <h2 id="SSH通信协议"><a href="#SSH通信协议" class="headerlink" title="SSH通信协议"></a>SSH通信协议</h2><h3 id="GitHub版"><a href="#GitHub版" class="headerlink" title="GitHub版"></a>GitHub版</h3><p>许多Git服务器都使用SSH公钥进行认证，当然也包括github。<br>首先你需要确认一下自己是否已经拥有密钥了，默认情况下，用户的 SSH 密钥存储在其 <code>~/.ssh</code> 目录下。进入该目录并列出其中内容，你变可以下快速确认自己是否已经拥有密钥：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ <span class="built_in">ls</span></span><br><span class="line">authorized_keys2  id_rsa       known_hosts</span><br><span class="line">config            id_rsa.pub</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ cd ~/.ssh
+$ ls
+authorized_keys2  id_rsa       known_hosts
+config            id_rsa.pub
+</code></pre>
 <p>我们需要寻找一对 <code>id_rsa</code> 或 <code>id_dsa</code> 命名的文件，其中一个带 <code>.pub</code> 扩展名。 ‘.pub’文件是你的公钥，另一个则是私钥。如果没有找不到这样的文件（或者根本就没有<code>.ssh</code>目录），我们可以通过 <code>ssh-keygen</code> 程序来创建它们。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#邮箱可以随便填</span></span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;xx@xx.com&quot;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">#邮箱可以随便填
+$ ssh-keygen -t rsa -C &quot;xx@xx.com&quot;
+</code></pre>
 <p>首先 <code>ssh-keygen</code> 会确认密钥的存储位置和文件名（默认是 <code>.ssh/id_rsa</code>）,然后他会要求你输入两次密钥口令，留空即可。所以一般选用默认，全部回车即可。</p>
 <p>接下来我们登陆到GitHub上，右上角小头像-&gt;Setting-&gt;SSH and GPG keys中，点击new SSH key。<br><code>Title：</code>可以随便填写，但最好起的名字能让自己知道这个公钥是哪个设备的。<br><code>Key：</code>将上面生成的<code>.pub</code>文件中的所有内容复制到这里。<br>点击下面的Add SSH key即可。<br>然后你就会发现可以免密码访问了</p>
 <h3 id="Git服务器"><a href="#Git服务器" class="headerlink" title="Git服务器"></a>Git服务器</h3><p>如果服务端是自己搭建的git服务器，生成密钥公钥对的步骤是一样的。<br>然后将生成的 <code>.pub</code> 文件内容，导入到git服务器 <code>/home/git/.ssh/authorized_keys</code> 文件内，一行一个。<br>然后你就会发现git push 不再需要密码了<br>搭建git服务器和相关免登陆的详细步骤可参考我的另一篇 <a href="/2016/10/22/set-up-git-server-on-vps/" title="搭建Git服务器">搭建Git服务器</a></p>
 <h2 id="HTTPS通信协议"><a href="#HTTPS通信协议" class="headerlink" title="HTTPS通信协议"></a>HTTPS通信协议</h2><p>上面讲了SSH方式的免密码，接下来讲一下越来越常用的HTTPS方式的免密码<br>新建文件并保存密码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> ~/.git-credentials</span><br><span class="line">$ vim ~/.git-credentials</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ touch ~/.git-credentials
+$ vim ~/.git-credentials
+</code></pre>
 <p>添加内容</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://&#123;username&#125;:&#123;passwd&#125;@github.com</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">https://&#123;username&#125;:&#123;passwd&#125;@github.com
+</code></pre>
 <p>添加git配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global credential.helper store</span><br></pre></td></tr></table></figure>
-<p>查看～/.gitconfig文件变化</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[credential]</span><br><span class="line">    helper = store</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ git config --global credential.helper store
+</code></pre>
+<p>查看～&#x2F;.gitconfig文件变化</p>
+<pre><code class="xml">[credential]
+    helper = store
+</code></pre>
 <p>然后再尝试一下git push不再在需要密码了</p>
 
       

@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2364,12 +2364,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2017-05-23 09:53</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:11'>2017-05-23 09:53</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:568</span>
+        <span>字数:574</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2416,26 +2416,45 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="1-修改DNS"><a href="#1-修改DNS" class="headerlink" title="1.修改DNS"></a>1.修改DNS</h2><p><strong>解决方案一：</strong><br>修改网卡的DNS的配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ vim /etc/resolv.conf
+</code></pre>
 <p>添加以下内容,设置两条dns</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nameserver 8.8.8.8 #google域名服务器</span><br><span class="line">nameserver 8.8.4.4 #google域名服务器</span><br></pre></td></tr></table></figure>
+<pre><code>nameserver 8.8.8.8 #google域名服务器
+nameserver 8.8.4.4 #google域名服务器
+</code></pre>
 <blockquote>
 <p>若未生效，可执行 <code>chattr +i /etc/resolv.conf</code> 设置文件属性只有root用户才能修改<br>然后执行 <code>service NetworkManager restart </code></p>
 </blockquote>
-<p><strong>解决方案二：</strong><br>对接口添加dns信息；编辑/etc/sysconfig/network-scripts/ifcfg-xxx，xxx为你的网卡名，但一般是ifcfg-eth0的，具体的xxx根据你的网卡确定，在最下面添加：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DNS1=8.8.8.8   #google dns服务器, 根据实际情况更换</span><br><span class="line">DNS2=8.8.4.4   #google dns服务器, 根据实际情况更换</span><br></pre></td></tr></table></figure>
+<p><strong>解决方案二：</strong><br>对接口添加dns信息；编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-xxx，xxx为你的网卡名，但一般是ifcfg-eth0的，具体的xxx根据你的网卡确定，在最下面添加：</p>
+<pre><code>DNS1=8.8.8.8   #google dns服务器, 根据实际情况更换
+DNS2=8.8.4.4   #google dns服务器, 根据实际情况更换
+</code></pre>
 <p>保存后重启网络</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ service network restart</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ service network restart
+</code></pre>
 <h2 id="2-修改网关"><a href="#2-修改网关" class="headerlink" title="2.修改网关"></a>2.修改网关</h2><p>修改网关的配置文件(第3部分也可以设置)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/sysconfig/network</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ vim /etc/sysconfig/network
+</code></pre>
 <p>修改为一下内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NETWORKING=yes(表示系统是否使用网络，一般设置为yes。如果设为no，则不能使用网络，而且很多系统服务程序将无法启动)</span><br><span class="line">HOSTNAME=centos(设置本机的主机名，这里设置的主机名要和/etc/hosts中设置的主机名对应)</span><br><span class="line">GATEWAY=192.168.1.1(设置本机连接的网关的IP地址。例如，网关为10.0.0.2)</span><br></pre></td></tr></table></figure>
-
+<pre><code>NETWORKING=yes(表示系统是否使用网络，一般设置为yes。如果设为no，则不能使用网络，而且很多系统服务程序将无法启动)
+HOSTNAME=centos(设置本机的主机名，这里设置的主机名要和/etc/hosts中设置的主机名对应)
+GATEWAY=192.168.1.1(设置本机连接的网关的IP地址。例如，网关为10.0.0.2)
+</code></pre>
 <h2 id="3-修改ip"><a href="#3-修改ip" class="headerlink" title="3.修改ip"></a>3.修改ip</h2><p>修改对应的网卡的IP地址的配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/sysconfig/network-scripts/ifcfg-eth0</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ vim /etc/sysconfig/network-scripts/ifcfg-eth0
+</code></pre>
 <p>修改为一下内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DEVICE=eth0 #描述网卡对应的设备别名，例如ifcfg-eth0的文件中它为eth0</span><br><span class="line">BOOTPROTO=static #设置网卡获得ip地址的方式，可能的选项为static，dhcp或bootp，分别对应静态指定的 ip地址，通过dhcp协议获得的ip地址，通过bootp协议获得的ip地址</span><br><span class="line">BROADCAST=192.168.0.255 #对应的子网广播地址</span><br><span class="line">HWADDR=00:07:E9:05:E8:B4 #对应的网卡物理地址</span><br><span class="line">IPADDR=12.168.1.2 #如果设置网卡获得 ip地址的方式为静态指定，此字段就指定了网卡对应的ip地址</span><br><span class="line">IPV6INIT=no</span><br><span class="line">IPV6_AUTOCONF=no</span><br><span class="line">NETMASK=255.255.255.0 #网卡对应的网络掩码</span><br><span class="line">NETWORK=192.168.1.0 #网卡对应的网络地址</span><br><span class="line">ONBOOT=yes #系统启动时是否设置此网络接口，设置为yes时，系统启动时激活此设备</span><br></pre></td></tr></table></figure>
+<pre><code>DEVICE=eth0 #描述网卡对应的设备别名，例如ifcfg-eth0的文件中它为eth0
+BOOTPROTO=static #设置网卡获得ip地址的方式，可能的选项为static，dhcp或bootp，分别对应静态指定的 ip地址，通过dhcp协议获得的ip地址，通过bootp协议获得的ip地址
+BROADCAST=192.168.0.255 #对应的子网广播地址
+HWADDR=00:07:E9:05:E8:B4 #对应的网卡物理地址
+IPADDR=12.168.1.2 #如果设置网卡获得 ip地址的方式为静态指定，此字段就指定了网卡对应的ip地址
+IPV6INIT=no
+IPV6_AUTOCONF=no
+NETMASK=255.255.255.0 #网卡对应的网络掩码
+NETWORK=192.168.1.0 #网卡对应的网络地址
+ONBOOT=yes #系统启动时是否设置此网络接口，设置为yes时，系统启动时激活此设备
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

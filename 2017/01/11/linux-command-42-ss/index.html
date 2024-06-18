@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2362,7 +2362,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2017-01-11 10:34</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:11'>2017-01-11 10:34</time>
         
     </div>
     <div class="article-meta">
@@ -2415,9 +2415,11 @@
       
         <p>　　ss是Socket Statistics的缩写。顾名思义，ss命令可以用来获取socket统计信息，它可以显示和netstat类似的内容。但ss的优势在于它能够显示更多更详细的有关TCP和连接状态的信息，而且比netstat更快速更高效。</p>
 <span id="more"></span>
-<p>　　当服务器的socket连接数量变得非常大时，无论是使用netstat命令还是直接cat /proc/net/tcp，执行速度都会很慢。可能你不会有切身的感受，但请相信我，当服务器维持的连接达到上万个的时候，使用netstat等于浪费 生命，而用ss才是节省时间。</p>
+<p>　　当服务器的socket连接数量变得非常大时，无论是使用netstat命令还是直接cat &#x2F;proc&#x2F;net&#x2F;tcp，执行速度都会很慢。可能你不会有切身的感受，但请相信我，当服务器维持的连接达到上万个的时候，使用netstat等于浪费 生命，而用ss才是节省时间。</p>
 <p>　　天下武功唯快不破。ss快的秘诀在于，它利用到了TCP协议栈中tcp_diag。tcp_diag是一个用于分析统计的模块，可以获得Linux 内核中第一手的信息，这就确保了ss的快捷高效。当然，如果你的系统中没有tcp_diag，ss也可以正常运行，只是效率会变得稍慢。（但仍然比 netstat要快。）</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ss [参数]</span><br><span class="line">$ ss[参数] [过滤]</span><br></pre></td></tr></table></figure>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ ss [参数]
+$ ss[参数] [过滤]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　ss(Socket Statistics的缩写)命令可以用来获取 socket统计信息，此命令输出的结果类似于 netstat输出的内容，但它能显示更多更详细的 TCP连接状态的信息，且比 netstat 更快速高效。它使用了 TCP协议栈中 tcp_diag（是一个用于分析统计的模块），能直接从获得第一手内核信息，这就使得 ss命令快捷高效。在没有 tcp_diag，ss也可以正常运行。</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2507,63 +2509,99 @@
 <td align="left">仅显示 Unix套接字（sockets）</td>
 </tr>
 <tr>
-<td align="left">-f, –family=FAMILY</td>
+<td align="left">-f, –family&#x3D;FAMILY</td>
 <td align="left">显示 FAMILY类型的套接字（sockets），FAMILY可选，支持  unix, inet, inet6, link, netlink</td>
 </tr>
 <tr>
-<td align="left">-A, –query=QUERY, –socket=QUERY<br/>QUERY := {all</td>
+<td align="left">-A, –query&#x3D;QUERY, –socket&#x3D;QUERY<br/>QUERY :&#x3D; {all</td>
 <td align="left">inet</td>
 </tr>
 <tr>
-<td align="left">-D, –diag=FILE</td>
+<td align="left">-D, –diag&#x3D;FILE</td>
 <td align="left">将原始TCP套接字（sockets）信息转储到文件</td>
 </tr>
 <tr>
-<td align="left">-F, –filter=FILE</td>
+<td align="left">-F, –filter&#x3D;FILE</td>
 <td align="left">从文件中都去过滤器信息</td>
 </tr>
 <tr>
-<td align="left">FILTER := [ state TCP-STATE ] [ EXPRESSION ]</td>
+<td align="left">FILTER :&#x3D; [ state TCP-STATE ] [ EXPRESSION ]</td>
 <td align="left"></td>
 </tr>
 </tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示TCP连接</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ss -t -a</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ss -t -a
+</code></pre>
 <p><strong><code>例二</code>：显示 Sockets 摘要</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ ss -s</span><br><span class="line">Total: 1385 (kernel 0)</span><br><span class="line">TCP:   199 (estab 64, closed 76, orphaned 0, synrecv 0, timewait 1/0), ports 0</span><br><span class="line"></span><br><span class="line">Transport Total     IP        IPv6</span><br><span class="line">*	  0         -         -        </span><br><span class="line">RAW	  2         1         1        </span><br><span class="line">UDP	  29        21        8        </span><br><span class="line">TCP	  123       47        76       </span><br><span class="line">INET	  154       69        85       </span><br><span class="line">FRAG	  0         0         0  </span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ss -s
+Total: 1385 (kernel 0)
+TCP:   199 (estab 64, closed 76, orphaned 0, synrecv 0, timewait 1/0), ports 0
+
+Transport Total     IP        IPv6
+*	  0         -         -        
+RAW	  2         1         1        
+UDP	  29        21        8        
+TCP	  123       47        76       
+INET	  154       69        85       
+FRAG	  0         0         0  
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　列出当前的established, closed, orphaned and waiting TCP sockets</p>
 </blockquote>
 <p><strong><code>例三</code>：列出所有打开的网络连接端口</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ss -l</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ss -l
+</code></pre>
 <p><strong><code>例四</code>：查看进程使用的socket</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ss -pl</span><br></pre></td></tr></table></figure>
-<p><strong><code>例五</code>：找出打开套接字/端口应用程序</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ss -lp | grep 3306</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ss -pl
+</code></pre>
+<p><strong><code>例五</code>：找出打开套接字&#x2F;端口应用程序</strong></p>
+<pre><code class="bash">$ ss -lp | grep 3306
+</code></pre>
 <p><strong><code>例六</code>：显示所有UDP Sockets</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ss -u -a</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ss -u -a
+</code></pre>
 <p><strong><code>例七</code>：显示所有状态为established的SMTP连接</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ss -o state established <span class="string">&#x27;( dport = :smtp or sport = :smtp )&#x27;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ss -o state established &#39;( dport = :smtp or sport = :smtp )&#39;
+</code></pre>
 <p><strong><code>例八</code>：显示所有状态为Established的HTTP连接</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ss -o state established <span class="string">&#x27;( dport = :http or sport = :http )&#x27;</span></span><br></pre></td></tr></table></figure>
-<p><strong><code>例九</code>：列举出处于 FIN-WAIT-1状态的源端口为 80或者 443，目标网络为 193.233.7/24所有 tcp套接字<br>命令</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ss -o state fin-wait-1 <span class="string">&#x27;( sport = :http or sport = :https )&#x27;</span> dst 193.233.7/24</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ss -o state established &#39;( dport = :http or sport = :http )&#39;
+</code></pre>
+<p><strong><code>例九</code>：列举出处于 FIN-WAIT-1状态的源端口为 80或者 443，目标网络为 193.233.7&#x2F;24所有 tcp套接字<br>命令</strong></p>
+<pre><code class="bash">$ ss -o state fin-wait-1 &#39;( sport = :http or sport = :https )&#39; dst 193.233.7/24
+</code></pre>
 <p><strong><code>例十</code>：用TCP 状态过滤Sockets</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ss -4 state FILTER-NAME-HERE</span><br><span class="line">$ ss -6 state FILTER-NAME-HERE</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ss -4 state FILTER-NAME-HERE
+$ ss -6 state FILTER-NAME-HERE
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>FILTER-NAME-HERE 可以代表以下任何一个：<br>　　established<br>　　syn-sent<br>　　syn-recv<br>　　fin-wait-1<br>　　fin-wait-2<br>　　time-wait<br>　　closed<br>　　close-wait<br>　　last-ack<br>　　listen<br>　　closing<br>　　all : 所有以上状态<br>　　connected : 除了listen and closed的所有状态<br>　　synchronized :所有已连接的状态除了syn-sent<br>　　bucket : 显示状态为maintained as minisockets,如：time-wait和syn-recv.<br>　　big : 和bucket相反.</p>
 </blockquote>
 <p><strong><code>例十一</code>：匹配远程地址和端口号</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ss dst ADDRESS_PATTERN</span><br><span class="line">$ ss dst 192.168.1.5</span><br><span class="line">$ ss dst 192.168.119.113:http</span><br><span class="line">$ ss dst 192.168.119.113:smtp</span><br><span class="line">$ ss dst 192.168.119.113:443</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ss dst ADDRESS_PATTERN
+$ ss dst 192.168.1.5
+$ ss dst 192.168.119.113:http
+$ ss dst 192.168.119.113:smtp
+$ ss dst 192.168.119.113:443
+</code></pre>
 <p><strong><code>例十二</code>：匹配本地地址和端口号</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ ss src ADDRESS_PATTERN</span><br><span class="line">$ ss src 192.168.119.103</span><br><span class="line">$ ss src 192.168.119.103:http</span><br><span class="line">$ ss src 192.168.119.103:80</span><br><span class="line">$ ss src 192.168.119.103:smtp</span><br><span class="line">$ ss src 192.168.119.103:25</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ss src ADDRESS_PATTERN
+$ ss src 192.168.119.103
+$ ss src 192.168.119.103:http
+$ ss src 192.168.119.103:80
+$ ss src 192.168.119.103:smtp
+$ ss src 192.168.119.103:25
+</code></pre>
 <p><strong><code>例十三</code>：将本地或者远程端口和一个数比较</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ss dport OP PORT</span><br><span class="line">$ ss sport OP PORT</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ss dport OP PORT
+$ ss sport OP PORT
+</code></pre>
 <blockquote>
-<p><strong>说明：</strong><br>　　ss dport OP PORT 远程端口和一个数比较；ss sport OP PORT 本地端口和一个数比较。<br>　　OP 可以代表以下任意一个:<br>　　　　&lt;= or le : 小于或等于端口号<br>　　　　&gt;= or ge : 大于或等于端口号<br>　　　　== or eq : 等于端口号<br>　　　　!= or ne : 不等于端口号<br>　　　　&lt; or gt : 小于端口号<br>　　　　&gt; or lt : 大于端口号</p>
+<p><strong>说明：</strong><br>　　ss dport OP PORT 远程端口和一个数比较；ss sport OP PORT 本地端口和一个数比较。<br>　　OP 可以代表以下任意一个:<br>　　　　&lt;&#x3D; or le : 小于或等于端口号<br>　　　　&gt;&#x3D; or ge : 大于或等于端口号<br>　　　　&#x3D;&#x3D; or eq : 等于端口号<br>　　　　!&#x3D; or ne : 不等于端口号<br>　　　　&lt; or gt : 小于端口号<br>　　　　&gt; or lt : 大于端口号</p>
 </blockquote>
 <p><strong><code>例十四</code>：ss 和 netstat 效率对比</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ time netstat -at</span><br><span class="line">$ time ss</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ time netstat -at
+$ time ss
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>　　用time 命令分别获取通过netstat和ss命令获取程序和概要占用资源所使用的时间。在服务器连接数比较多的时候，netstat的效率完全没法和ss比。</p>
 </blockquote>

@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2362,7 +2362,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2017-04-22 09:30</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2017-04-22 09:30</time>
         
     </div>
     <div class="article-meta">
@@ -2454,8 +2454,8 @@
 <h3 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h3><p>RSA算法是最著名的非对称加密算法。RSA是1977年提出的，名字来源于Rivest、Shmir和Adleman三位作者。<br>我们平时用到的SSL协议，TLS协议都采用了该算法加密，SSH（Secure Shell）也是基于RSA实现的。</p>
 <p>RSA的数学基础是极大整数的因数分解，具体实现过程如下：</p>
 <ul>
-<li>随意选择两个大的质数p和q，p不等于q，计算N=pq。</li>
-<li>根据欧拉函数，求得r=varphi (N) = varphi(p) * varphi(q)=(p-1)(q-1)</li>
+<li>随意选择两个大的质数p和q，p不等于q，计算N&#x3D;pq。</li>
+<li>根据欧拉函数，求得r&#x3D;varphi (N) &#x3D; varphi(p) * varphi(q)&#x3D;(p-1)(q-1)</li>
 <li>选择一个小于r的整数e，使e与r互质。并求得e关于r的模反元素，命名为d。</li>
 <li>(N,e)是公钥，(N,d)是私钥。</li>
 <li>加密时，加密的块 n^e ≡ c(MOD N)，得到的c就是密文。解密时，c^d ≡ n(MOD N)。</li>
@@ -2463,8 +2463,13 @@
 <p>要破解RSA要解决怎么把一个极大数分解为两个质数p和q，然后通过欧拉函数再得到公钥和私钥。但极大数因数分解目前还没什么好办法，所以只要N足够大，RSA在算法层面上就是安全的。</p>
 <p>当N的长度为256时，用普通电脑花几小时即可以分解，当N长度为512时需要花数月时间分解，1024时需要大型分布式系统才能分解，长度到2046则可以确保是完全安全的。目前已有记录里，被分解的极大数最大位数是768位，于2009年被分解。</p>
 <p>RSA也常被用来做数字签名，在消息内附加一个私钥加密过的散列值（Message digest），以此来确保消息发送人是可靠的。<br><strong>公钥私钥对生成</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.该命令会生成1024位的私钥,此时我们就可以在当前路径下看到rsa_private_key.pem文件了.</span></span><br><span class="line">genrsa -out rsa_private_key.pem 1024</span><br><span class="line"><span class="comment"># 2.生成的密钥不是pcs8格式，我们需要转成pkcs8格式</span></span><br><span class="line">pkcs8 -topk8 -inform PEM -<span class="keyword">in</span> rsa_private_key.pem -outform PEM -nocrypt</span><br><span class="line"><span class="comment"># 3.生成 rsa 公钥</span></span><br><span class="line">rsa -<span class="keyword">in</span> rsa_private_key.pem -pubout -out rsa_public_key.pem</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash"># 1.该命令会生成1024位的私钥,此时我们就可以在当前路径下看到rsa_private_key.pem文件了.
+genrsa -out rsa_private_key.pem 1024
+# 2.生成的密钥不是pcs8格式，我们需要转成pkcs8格式
+pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt
+# 3.生成 rsa 公钥
+rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
+</code></pre>
 <h3 id="椭圆曲线算法"><a href="#椭圆曲线算法" class="headerlink" title="椭圆曲线算法"></a>椭圆曲线算法</h3><p>椭圆曲线算法（Elliptic curve cryptography）也是一种非对称加密算法，于1985年被提出，以下简称ECC。<br>相比RSA，同等破解难度时ECC的秘钥更短。另外，ECC可定义椭圆曲线群的双线性映射，该特性可能将来被用来实现身份基加密体制（Identity-Based Encryption，IBE）。</p>
 <p>ECC的数学基础是求椭圆曲线离散对数问题。实现比较复杂我就不写了，因为我也看不懂(⊙﹏⊙)b。 也正因为实现复杂，ECC的加解密速度慢，消耗资源也更多。</p>
 <p>ECC也同样可以实现数字签名，叫做ECDSA。</p>

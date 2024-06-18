@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2364,7 +2364,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:38'>2024-02-05 09:17</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2024-02-05 09:17</time>
         
     </div>
     <div class="article-meta">
@@ -2516,12 +2516,17 @@
 <h4 id="Node-节点"><a href="#Node-节点" class="headerlink" title="Node 节点"></a>Node 节点</h4><p>Kubernetes 通过将容器放入在节点(Node) 上运行的 Pod 来执行你的负载. 节点可以是一个虚拟机或物理机, 每个节点包含 Pod 所需的服务器, 这些节点由 <code>Control Plane</code> 负责管理</p>
 <p>一个集群的节点数量可以是1个, 也可以是多个. 且节点名称是唯一的.</p>
 <p>可以通过 <code>kubectl</code> 来创建和修改 Node 对象</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查一下集群中的所有节点信息</span></span><br><span class="line">kubectl get node</span><br><span class="line"><span class="comment"># 查看某个节点详细信息</span></span><br><span class="line">kubectl descibe <span class="variable">$NODENAME</span></span><br><span class="line"><span class="comment"># 标记一个 Node 为不可调度</span></span><br><span class="line">kubectl cordon <span class="variable">$NODENAME</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash"># 查一下集群中的所有节点信息
+kubectl get node
+# 查看某个节点详细信息
+kubectl descibe $NODENAME
+# 标记一个 Node 为不可调度
+kubectl cordon $NODENAME
+</code></pre>
 <h4 id="Controllers-控制器"><a href="#Controllers-控制器" class="headerlink" title="Controllers 控制器"></a>Controllers 控制器</h4><p>在机器人和自动化领域, 又一个类似的概念叫控制回路 (Control Loop), 用于调节系统状态, 如: 房间里的温度自动调节器</p>
 <p>当你设置了温度, 温度自动调节器让其当前状态接近期望温度; 在 Kubernetes 中, 控制器通过监控集群的公共状态, <strong>并致力于将当前的状态转为期望状态</strong></p>
 <p>控制器是通过通知 <code>apiserver</code> 来管理状态的, 就像温度自动调节器是通过控制空调来调节气温的</p>
-<h4 id="Container-Runtime-Interface-CRI-容器运行时接口"><a href="#Container-Runtime-Interface-CRI-容器运行时接口" class="headerlink" title="Container Runtime Interface/CRI 容器运行时接口"></a>Container Runtime Interface/CRI 容器运行时接口</h4><p>CRI 是一个插件接口, 它使 kubelet 能够使用各种容器运行时, 定义了主要 gRPC 协议, 用于节点组件 kubelet 和容器运行时之间的通信</p>
+<h4 id="Container-Runtime-Interface-CRI-容器运行时接口"><a href="#Container-Runtime-Interface-CRI-容器运行时接口" class="headerlink" title="Container Runtime Interface&#x2F;CRI 容器运行时接口"></a>Container Runtime Interface&#x2F;CRI 容器运行时接口</h4><p>CRI 是一个插件接口, 它使 kubelet 能够使用各种容器运行时, 定义了主要 gRPC 协议, 用于节点组件 kubelet 和容器运行时之间的通信</p>
 <h3 id="Containers-容器"><a href="#Containers-容器" class="headerlink" title="Containers 容器"></a>Containers 容器</h3><p><strong>容器</strong>将应用从底层主机设备中解耦, 这使得在不同的云或 OS 环境中部署更加容易</p>
 <p>Kubernetes 集群中的每个节点都会运行容器, 这些容器构成分配给该节点的 Pod, 单个 Pod 中的容器会在共同调度下, 运行在相同的节点</p>
 <p><strong>容器镜像</strong>是一个随时可以运行的软件包, 它包含了运行容器程序所需要的一切, 代码和它需要的运行时、应用程序和系统库, 以及一些基本设置</p>
@@ -2530,11 +2535,22 @@
 <p>Pod 是有一个或多个容器组成, 这些容器共享存储、网络、已经怎么样运行这些容器的声明, 统一调度.</p>
 <p>此外还可以包含 init container, 用于做一些启动主应用前的准备工作, 比如通过 init container 注入 tingyun 等 agent 包</p>
 <p>如下示例, 它由一个运行镜像 <code>nginx:1.14.2</code> 的容器组成</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Pod</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">my-nginx</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">containers:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">nginx:1.14.2</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">80</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    app: my-nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+</code></pre>
 <p>要创建上面显示的 Pod, 保存上面内容到 <code>my-nginx.yaml</code>, 可以通过如下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f my-nginx.yaml</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">kubectl apply -f my-nginx.yaml
+</code></pre>
 <h3 id="Workloads-工作负载"><a href="#Workloads-工作负载" class="headerlink" title="Workloads 工作负载"></a>Workloads 工作负载</h3><p>工作负载是在 Kubernetes 上运行的应用程序, 无论是又一个还是多个组件构成, 你都可以通过一组 Pod 来运行它, Pod 代表的是集群上处于运行状态的一组容器的集合, 但通常一个 Pod 内只运行一个容器</p>
 <p>Kubernetes 提供若干种内置的工作负载资源:</p>
 <ul>
@@ -2546,14 +2562,25 @@
 <h3 id="Network-网络"><a href="#Network-网络" class="headerlink" title="Network 网络"></a>Network 网络</h3><h4 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h4><p><code>Service</code> 是将一个或者一组 Pod 公开代理给集群内部, 使之能够各个应用之间通信, 甚至用于公开到集群外(NodePort 或者 代理给 Ingress)</p>
 <p>它提供了类似域名的访问方式, 使用者无需关心后面有多少个 Pod 在提供服务, 他们是否健康, 他们 IP 是否发生变化.</p>
 <p>定义 Service</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">nginx-service</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">my-nginx</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">name-of-service-port</span></span><br><span class="line">    <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">80</span></span><br><span class="line">    <span class="attr">targetPort:</span> <span class="string">http-web-svc</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="yaml">apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: my-nginx
+  ports:
+  - name: name-of-service-port
+    protocol: TCP
+    port: 80
+    targetPort: http-web-svc
+</code></pre>
 <p>服务类型(type):</p>
 <ul>
 <li><code>ClusterIp</code>: 默认值, 智能在集群内访问</li>
 <li><code>NodePort</code>: 直接向集群外暴露, 通过节点端口访问</li>
 <li><code>LoadBalancer</code>: 使用云平台的负载均衡, Kubernetes 不直接提供</li>
-<li><code>Externalname</code>: 将服务映射到 externalName 字段的内容, 例如<code>api.foo.bar.example</code> </li>
+<li><code>Externalname</code>: 将服务映射到 externalName 字段的内容, 例如<code>api.foo.bar.example</code></li>
 </ul>
 
       

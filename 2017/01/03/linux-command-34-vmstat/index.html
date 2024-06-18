@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2362,7 +2362,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2017-01-03 09:46</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:11'>2017-01-03 09:46</time>
         
     </div>
     <div class="article-meta">
@@ -2428,7 +2428,14 @@
 <p>　　在Linux内存管理中，主要是通过“调页Paging”和“交换Swapping”来完成上述的内存调度。调页算法是将内存中最近不常使用的页面换到磁盘上，把活动页面保留在内存中供进程使用。交换技术是将整个进程，而不是部分页面，全部交换到磁盘上。</p>
 <p>　　分页(Page)写入磁盘的过程被称作Page-Out，分页(Page)从磁盘重新回到内存的过程被称作Page-In。当内核需要一个分页时，但发现此分页不在物理内存中(因为已经被Page-Out了)，此时就发生了分页错误（Page Fault）。</p>
 <p>　　当系统内核发现可运行内存变少时，就会通过Page-Out来释放一部分物理内存。经管Page-Out不是经常发生，但是如果Page-out频繁不断的发生，直到当内核管理分页的时间超过运行程式的时间时，系统效能会急剧下降。这时的系统已经运行非常慢或进入暂停状态，这种状态亦被称作thrashing(颠簸)。</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vmstat [-a] [-n] [-S unit] [delay [ count]]</span><br><span class="line">$ vmstat [-s] [-n] [-S unit]</span><br><span class="line">$ vmstat [-m] [-n] [delay [ count]]</span><br><span class="line">$ vmstat [-d] [-n] [delay [ count]]</span><br><span class="line">$ vmstat [-p disk partition] [-n] [delay [ count]]</span><br><span class="line">$ vmstat [-f]</span><br><span class="line">$ vmstat [-V]</span><br></pre></td></tr></table></figure>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ vmstat [-a] [-n] [-S unit] [delay [ count]]
+$ vmstat [-s] [-n] [-S unit]
+$ vmstat [-m] [-n] [delay [ count]]
+$ vmstat [-d] [-n] [delay [ count]]
+$ vmstat [-p disk partition] [-n] [delay [ count]]
+$ vmstat [-f]
+$ vmstat [-V]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　用来显示虚拟内存的信息</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2483,39 +2490,49 @@
 </tr>
 </tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示虚拟内存使用情况</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ vmstat</span><br><span class="line">procs   -----------memory----------  ---swap-- -----io---  --system--- -----cpu---</span><br><span class="line"> r  b   swpd    free   buff   cache   si   so    bi    bo   <span class="keyword">in</span>   cs us sy <span class="built_in">id</span> wa st</span><br><span class="line"> 0  0      0 7108340 129544 3155916    0    0   184    53  203  995  4  1 95  0  0</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ vmstat
+procs   -----------memory----------  ---swap-- -----io---  --system--- -----cpu---
+ r  b   swpd    free   buff   cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 7108340 129544 3155916    0    0   184    53  203  995  4  1 95  0  0
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br><code>Procs（进程）：</code><br>r: 运行队列中进程数量<br>b: 等待IO的进程数量<br>Memory（内存）：<br>swpd: 使用虚拟内存大小<br>free: 可用内存大小<br>buff: 用作缓冲的内存大小<br>cache: 用作缓存的内存大小<br><code>Swap：</code><br>si: 每秒从交换区写到内存的大小<br>so: 每秒写入交换区的内存大小<br>IO：（现在的Linux版本块的大小为1024bytes）<br>bi: 每秒读取的块数<br>bo: 每秒写入的块数<br><code>系统：</code><br>in: 每秒中断数，包括时钟中断。<br>cs: 每秒上下文切换数。<br>CPU（以百分比表示）：<br>us: 用户进程执行时间(user time)<br>sy: 系统进程执行时间(system time)<br>id: 空闲时间(包括IO等待时间),中央处理器的空闲时间 。以百分比表示。<br>wa: 等待IO时间<br><strong>备注：</strong> 如果 r经常大于 4 ，且id经常少于40，表示cpu的负荷很重。如果pi，po 长期不等于0，表示内存不足。如果disk 经常不等于0， 且在 b中的队列 大于3， 表示 io性能不好。Linux在具有高稳定性、可靠性的同时，具有很好的可伸缩性和扩展性，能够针对不同的应用和硬件环境调整，优化出满足当前应用需要的最佳性能。因此企业在维护Linux系统、进行系统调优时，了解系统性能分析工具是至关重要的。<br>命令：vmstat 5 5<br>表示在5秒时间内进行5次采样。将得到一个数据汇总他能够反映真正的系统情况。</p>
 </blockquote>
 <p><strong><code>例二</code>：显示活跃和非活跃内存</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vmstat -a 2 5</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ vmstat -a 2 5
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>使用-a选项显示活跃和非活跃内存时，所显示的内容除增加inact和active外，其他显示内容与例子1相同。<br>Memory（内存）：<br>inact: 非活跃内存大小（当使用-a选项时显示）<br>active: 活跃的内存大小（当使用-a选项时显示）</p>
 </blockquote>
 <p><strong><code>例三</code>：查看系统已经fork了多少次</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vmstat -f</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ vmstat -f
+</code></pre>
 <blockquote>
-<p><strong>说明：</strong><br>这个数据是从/proc/stat中的processes字段里取得的</p>
+<p><strong>说明：</strong><br>这个数据是从&#x2F;proc&#x2F;stat中的processes字段里取得的</p>
 </blockquote>
 <p><strong><code>例四</code>：查看内存使用的详细信息</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vmstat -s</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ vmstat -s
+</code></pre>
 <blockquote>
-<p><strong>说明：</strong><br>这些信息的分别来自于/proc/meminfo,/proc/stat和/proc/vmstat。</p>
+<p><strong>说明：</strong><br>这些信息的分别来自于&#x2F;proc&#x2F;meminfo,&#x2F;proc&#x2F;stat和&#x2F;proc&#x2F;vmstat。</p>
 </blockquote>
-<p><strong><code>例五</code>：查看磁盘的读/写</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vmstat -d</span><br></pre></td></tr></table></figure>
+<p><strong><code>例五</code>：查看磁盘的读&#x2F;写</strong></p>
+<pre><code class="bash">$ vmstat -d
+</code></pre>
 <blockquote>
-<p><strong>说明：</strong><br>这些信息主要来自于/proc/diskstats.<br>merged:表示一次来自于合并的写/读请求,一般系统会把多个连接/邻近的读/写请求合并到一起来操作.</p>
+<p><strong>说明：</strong><br>这些信息主要来自于&#x2F;proc&#x2F;diskstats.<br>merged:表示一次来自于合并的写&#x2F;读请求,一般系统会把多个连接&#x2F;邻近的读&#x2F;写请求合并到一起来操作.</p>
 </blockquote>
-<p><strong><code>例六</code>：查看/dev/sda1磁盘的读/写</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vmstat -p /dev/sda1</span><br></pre></td></tr></table></figure>
+<p><strong><code>例六</code>：查看&#x2F;dev&#x2F;sda1磁盘的读&#x2F;写</strong></p>
+<pre><code class="bash">$ vmstat -p /dev/sda1
+</code></pre>
 <blockquote>
-<p><strong>说明：</strong><br>这些信息主要来自于/proc/diskstats。<br>reads:来自于这个分区的读的次数。<br>read sectors:来自于这个分区的读扇区的次数。<br>writes:来自于这个分区的写的次数。<br>requested writes:来自于这个分区的写请求次数。</p>
+<p><strong>说明：</strong><br>这些信息主要来自于&#x2F;proc&#x2F;diskstats。<br>reads:来自于这个分区的读的次数。<br>read sectors:来自于这个分区的读扇区的次数。<br>writes:来自于这个分区的写的次数。<br>requested writes:来自于这个分区的写请求次数。</p>
 </blockquote>
 <p><strong><code>例七</code>：查看系统的slab信息</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vmstat -m</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ vmstat -m
+</code></pre>
 <blockquote>
-<p><strong>说明：</strong><br>这组信息来自于/proc/slabinfo。<br>slab:由于内核会有许多小对象，这些对象构造销毁十分频繁，比如i-node，dentry，这些对象如果每次构建的时候就向内存要一个页(4kb)，而其实只有几个字节，这样就会非常浪费，为了解决这个问题，就引入了一种新的机制来处理在同一个页框中如何分配小存储区，而slab可以对小对象进行分配,这样就不用为每一个对象分配页框，从而节省了空间，内核对一些小对象创建析构很频繁，slab对这些小对象进行缓冲,可以重复利用,减少内存分配次数。</p>
+<p><strong>说明：</strong><br>这组信息来自于&#x2F;proc&#x2F;slabinfo。<br>slab:由于内核会有许多小对象，这些对象构造销毁十分频繁，比如i-node，dentry，这些对象如果每次构建的时候就向内存要一个页(4kb)，而其实只有几个字节，这样就会非常浪费，为了解决这个问题，就引入了一种新的机制来处理在同一个页框中如何分配小存储区，而slab可以对小对象进行分配,这样就不用为每一个对象分配页框，从而节省了空间，内核对一些小对象创建析构很频繁，slab对这些小对象进行缓冲,可以重复利用,减少内存分配次数。</p>
 </blockquote>
 
       

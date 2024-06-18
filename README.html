@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2430,12 +2430,36 @@
 </tbody></table>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
 <li>将项目中的 <code>form.js</code> 覆盖自己项目中的 <code>form.js</code>。</li>
-<li>引入下面css<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">select<span class="selector-attr">[multiple]</span>+<span class="selector-class">.layui-form-select</span>&gt;<span class="selector-class">.layui-select-title</span>&gt;<span class="selector-tag">input</span><span class="selector-class">.layui-input</span>&#123; <span class="attribute">border-bottom</span>: <span class="number">0</span>&#125;</span><br><span class="line">select<span class="selector-attr">[multiple]</span>+<span class="selector-class">.layui-form-select</span> <span class="selector-tag">dd</span>&#123; <span class="attribute">padding</span>:<span class="number">0</span>;&#125;</span><br><span class="line">select<span class="selector-attr">[multiple]</span>+<span class="selector-class">.layui-form-select</span> <span class="selector-class">.layui-form-checkbox</span><span class="selector-attr">[lay-skin=primary]</span>&#123; <span class="attribute">margin</span>:<span class="number">0</span> <span class="meta">!important</span>; <span class="attribute">display</span>:block; <span class="attribute">line-height</span>:<span class="number">36px</span> <span class="meta">!important</span>; <span class="attribute">position</span>:relative; <span class="attribute">padding-left</span>:<span class="number">26px</span>;&#125;</span><br><span class="line">select<span class="selector-attr">[multiple]</span>+<span class="selector-class">.layui-form-select</span> <span class="selector-class">.layui-form-checkbox</span><span class="selector-attr">[lay-skin=primary]</span> <span class="selector-tag">span</span>&#123;<span class="attribute">line-height</span>:<span class="number">36px</span> <span class="meta">!important</span>; <span class="attribute">float</span>:none;&#125;</span><br><span class="line">select<span class="selector-attr">[multiple]</span>+<span class="selector-class">.layui-form-select</span> <span class="selector-class">.layui-form-checkbox</span><span class="selector-attr">[lay-skin=primary]</span> <span class="selector-tag">i</span>&#123; <span class="attribute">position</span>:absolute; <span class="attribute">left</span>:<span class="number">10px</span>; <span class="attribute">top</span>:<span class="number">0</span>; <span class="attribute">margin-top</span>:<span class="number">9px</span>;&#125;</span><br><span class="line"><span class="selector-class">.multiSelect</span>&#123; <span class="attribute">line-height</span>:normal; <span class="attribute">height</span>:auto; <span class="attribute">padding</span>:<span class="number">4px</span> <span class="number">10px</span>; <span class="attribute">overflow</span>:hidden;<span class="attribute">min-height</span>:<span class="number">38px</span>; <span class="attribute">margin-top</span>:-<span class="number">38px</span>; <span class="attribute">left</span>:<span class="number">0</span>; <span class="attribute">z-index</span>:<span class="number">99</span>;<span class="attribute">position</span>:relative;<span class="attribute">background</span>:none;&#125;</span><br><span class="line"><span class="selector-class">.multiSelect</span> <span class="selector-tag">a</span>&#123; <span class="attribute">padding</span>:<span class="number">2px</span> <span class="number">5px</span>; <span class="attribute">background</span>:<span class="number">#908e8e</span>; <span class="attribute">border-radius</span>:<span class="number">2px</span>; <span class="attribute">color</span>:<span class="number">#fff</span>; <span class="attribute">display</span>:block; <span class="attribute">line-height</span>:<span class="number">20px</span>; <span class="attribute">height</span>:<span class="number">20px</span>; <span class="attribute">margin</span>:<span class="number">2px</span> <span class="number">5px</span> <span class="number">2px</span> <span class="number">0</span>; <span class="attribute">float</span><span class="selector-pseudo">:left</span>;&#125;</span><br><span class="line"><span class="selector-class">.multiSelect</span> <span class="selector-tag">a</span> <span class="selector-tag">span</span>&#123; <span class="attribute">float</span><span class="selector-pseudo">:left</span>;&#125;</span><br><span class="line"><span class="selector-class">.multiSelect</span> <span class="selector-tag">a</span> <span class="selector-tag">i</span> &#123;<span class="attribute">float</span><span class="selector-pseudo">:left</span>;<span class="attribute">display</span>:block;<span class="attribute">margin</span>:<span class="number">2px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">2px</span>;<span class="attribute">border-radius</span>:<span class="number">2px</span>;<span class="attribute">width</span>:<span class="number">8px</span>;<span class="attribute">height</span>:<span class="number">8px</span>;<span class="attribute">padding</span>:<span class="number">4px</span>;<span class="attribute">position</span>:relative;-webkit-<span class="attribute">transition</span>:all .<span class="number">3s</span>;<span class="attribute">transition</span>:all .<span class="number">3s</span>&#125;</span><br><span class="line"><span class="selector-class">.multiSelect</span> <span class="selector-tag">a</span> <span class="selector-tag">i</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.multiSelect</span> <span class="selector-tag">a</span> <span class="selector-tag">i</span><span class="selector-pseudo">:after</span> &#123;<span class="attribute">position</span>:absolute;<span class="attribute">left</span>:<span class="number">8px</span>;<span class="attribute">top</span>:<span class="number">2px</span>;<span class="attribute">content</span>:<span class="string">&#x27;&#x27;</span>;<span class="attribute">height</span>:<span class="number">12px</span>;<span class="attribute">width</span>:<span class="number">1px</span>;<span class="attribute">background-color</span>:<span class="number">#fff</span>&#125;</span><br><span class="line"><span class="selector-class">.multiSelect</span> <span class="selector-tag">a</span> <span class="selector-tag">i</span><span class="selector-pseudo">:before</span> &#123;-webkit-<span class="attribute">transform</span>:<span class="built_in">rotate</span>(<span class="number">45deg</span>);<span class="attribute">transform</span>:<span class="built_in">rotate</span>(<span class="number">45deg</span>)&#125;</span><br><span class="line"><span class="selector-class">.multiSelect</span> <span class="selector-tag">a</span> <span class="selector-tag">i</span><span class="selector-pseudo">:after</span> &#123;-webkit-<span class="attribute">transform</span>:<span class="built_in">rotate</span>(-<span class="number">45deg</span>);<span class="attribute">transform</span>:<span class="built_in">rotate</span>(-<span class="number">45deg</span>)&#125;</span><br><span class="line"><span class="selector-class">.multiSelect</span> <span class="selector-tag">a</span> <span class="selector-tag">i</span><span class="selector-pseudo">:hover</span>&#123; <span class="attribute">background-color</span>:<span class="number">#545556</span>;&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>引入下面css</li>
 </ol>
+<pre><code class="css">select[multiple]+.layui-form-select&gt;.layui-select-title&gt;input.layui-input&#123; border-bottom: 0&#125;
+select[multiple]+.layui-form-select dd&#123; padding:0;&#125;
+select[multiple]+.layui-form-select .layui-form-checkbox[lay-skin=primary]&#123; margin:0 !important; display:block; line-height:36px !important; position:relative; padding-left:26px;&#125;
+select[multiple]+.layui-form-select .layui-form-checkbox[lay-skin=primary] span&#123;line-height:36px !important; float:none;&#125;
+select[multiple]+.layui-form-select .layui-form-checkbox[lay-skin=primary] i&#123; position:absolute; left:10px; top:0; margin-top:9px;&#125;
+.multiSelect&#123; line-height:normal; height:auto; padding:4px 10px; overflow:hidden;min-height:38px; margin-top:-38px; left:0; z-index:99;position:relative;background:none;&#125;
+.multiSelect a&#123; padding:2px 5px; background:#908e8e; border-radius:2px; color:#fff; display:block; line-height:20px; height:20px; margin:2px 5px 2px 0; float:left;&#125;
+.multiSelect a span&#123; float:left;&#125;
+.multiSelect a i &#123;float:left;display:block;margin:2px 0 0 2px;border-radius:2px;width:8px;height:8px;padding:4px;position:relative;-webkit-transition:all .3s;transition:all .3s&#125;
+.multiSelect a i:before, .multiSelect a i:after &#123;position:absolute;left:8px;top:2px;content:&#39;&#39;;height:12px;width:1px;background-color:#fff&#125;
+.multiSelect a i:before &#123;-webkit-transform:rotate(45deg);transform:rotate(45deg)&#125;
+.multiSelect a i:after &#123;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)&#125;
+.multiSelect a i:hover&#123; background-color:#545556;&#125;
+</code></pre>
 <h2 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h2><p>下面实例 开启了下拉多选（<code>multiple</code>）, 并开启了检索功能（<code>lay-search</code>）。<br>效果可以参考 在线实例 的 <code>多选+搜索+大小写不敏感</code> 模块</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;多选+搜索+大小写不敏感&quot;</span> <span class="attr">lay-verify</span>=<span class="string">&quot;required&quot;</span> <span class="attr">multiple</span> <span class="attr">lay-search</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>请选择您的兴趣爱好<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>sing1<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">selected</span>&gt;</span>sing2<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>SING1-大写<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>movie1<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">selected</span>&gt;</span>movie2<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>movie3<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>MOVIE4<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>swim<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>moon<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="html">&lt;select name=&quot;多选+搜索+大小写不敏感&quot; lay-verify=&quot;required&quot; multiple lay-search&gt;
+    &lt;option value=&quot;&quot;&gt;请选择您的兴趣爱好&lt;/option&gt;
+    &lt;option&gt;sing1&lt;/option&gt;
+    &lt;option selected&gt;sing2&lt;/option&gt;
+    &lt;option&gt;SING1-大写&lt;/option&gt;
+    &lt;option&gt;movie1&lt;/option&gt;
+    &lt;option selected&gt;movie2&lt;/option&gt;
+    &lt;option&gt;movie3&lt;/option&gt;
+    &lt;option&gt;MOVIE4&lt;/option&gt;
+    &lt;option&gt;swim&lt;/option&gt;
+    &lt;option&gt;moon&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
 <blockquote>
 <p><strong>更多实例参考 在线实例、或 <code>index.html</code>。</strong></p>
 </blockquote>

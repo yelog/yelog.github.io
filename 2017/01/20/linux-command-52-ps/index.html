@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2362,7 +2362,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2017-01-20 09:46</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:11'>2017-01-20 09:46</time>
         
     </div>
     <div class="article-meta">
@@ -2427,7 +2427,8 @@
 <li>停止(进程收到SIGSTOP, SIGSTP, SIGTIN, SIGTOU信号后停止运行运行)</li>
 </ol>
 <p><strong>ps工具标识进程的5种状态码:</strong><br>D 不可中断 uninterruptible sleep (usually IO)<br>R 运行 runnable (on run queue)<br>S 中断 sleeping<br>T 停止 traced or stopped<br>Z 僵死 a defunct (”zombie”) process</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps [参数]</span><br></pre></td></tr></table></figure>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ ps [参数]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>用来现实当前进程的状态</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2514,29 +2515,45 @@
 </tr>
 </tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：显示所有进程信息</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps -A</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ps -A
+</code></pre>
 <p><strong><code>例二</code>：显示指定用户的进程信息</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps -u faker</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ps -u faker
+</code></pre>
 <p><strong><code>例三</code>：显示所有进程信息，连同命令行</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps -ef</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ps -ef
+</code></pre>
 <p><strong><code>例四</code>：ps 与grep 常用组合用法，查找特定进程</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps -ef|grep ssh</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ps -ef|grep ssh
+</code></pre>
 <p><strong><code>例五</code>：将目前属于您自己这次登入的 PID 与相关信息列示出来</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps -l</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ps -l
+</code></pre>
 <blockquote>
 <p><strong>说明：</strong><br>各相关信息的意义：<br>　　F 代表这个程序的旗标 (flag)， 4 代表使用者为 super user<br>　　S 代表这个程序的状态 (STAT)，关于各 STAT 的意义将在内文介绍<br>　　UID 程序被该 UID 所拥有<br>　　PID 就是这个程序的 ID ！<br>　　PPID 则是其上级父程序的ID<br>　　C CPU 使用的资源百分比<br>　　PRI 这个是 Priority (优先执行序) 的缩写，详细后面介绍<br>　　NI 这个是 Nice 值，在下一小节我们会持续介绍<br>　　ADDR 这个是 kernel function，指出该程序在内存的那个部分。如果是个 running的程序，一般就是 “-“<br>　　SZ 使用掉的内存大小<br>　　WCHAN 目前这个程序是否正在运作当中，若为 - 表示正在运作<br>　　TTY 登入者的终端机位置<br>　　TIME 使用掉的 CPU 时间。<br>　　CMD 所下达的指令为何<br>　　在预设的情况下， ps 仅会列出与目前所在的 bash shell 有关的 PID 而已，所以， 当我使用 ps -l 的时候，只有三个 PID。</p>
 </blockquote>
 <p><strong><code>例六</code>：列出目前所有的正在内存当中的程序</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps aux</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ps aux
+</code></pre>
 <blockquote>
-<p><strong>说明：</strong><br>　　USER：该 process 属于那个使用者账号的<br>　　PID ：该 process 的号码<br>　　%CPU：该 process 使用掉的 CPU 资源百分比<br>　　%MEM：该 process 所占用的物理内存百分比<br>　　VSZ ：该 process 使用掉的虚拟内存量 (Kbytes)<br>　　RSS ：该 process 占用的固定的内存量 (Kbytes)<br>　　TTY ：该 process 是在那个终端机上面运作，若与终端机无关，则显示 ?，另外， tty1-tty6 是本机上面的登入者程序，若为 pts/0 等等的，则表示为由网络连接进主机的程序。<br>　　STAT：该程序目前的状态，主要的状态有<br>　　R ：该程序目前正在运作，或者是可被运作<br>　　S ：该程序目前正在睡眠当中 (可说是 idle 状态)，但可被某些讯号 (signal) 唤醒。<br>　　T ：该程序目前正在侦测或者是停止了<br>　　Z ：该程序应该已经终止，但是其父程序却无法正常的终止他，造成 zombie (疆尸) 程序的状态<br>　　START：该 process 被触发启动的时间<br>　　TIME ：该 process 实际使用 CPU 运作的时间<br>　　COMMAND：该程序的实际指令</p>
+<p><strong>说明：</strong><br>　　USER：该 process 属于那个使用者账号的<br>　　PID ：该 process 的号码<br>　　%CPU：该 process 使用掉的 CPU 资源百分比<br>　　%MEM：该 process 所占用的物理内存百分比<br>　　VSZ ：该 process 使用掉的虚拟内存量 (Kbytes)<br>　　RSS ：该 process 占用的固定的内存量 (Kbytes)<br>　　TTY ：该 process 是在那个终端机上面运作，若与终端机无关，则显示 ?，另外， tty1-tty6 是本机上面的登入者程序，若为 pts&#x2F;0 等等的，则表示为由网络连接进主机的程序。<br>　　STAT：该程序目前的状态，主要的状态有<br>　　R ：该程序目前正在运作，或者是可被运作<br>　　S ：该程序目前正在睡眠当中 (可说是 idle 状态)，但可被某些讯号 (signal) 唤醒。<br>　　T ：该程序目前正在侦测或者是停止了<br>　　Z ：该程序应该已经终止，但是其父程序却无法正常的终止他，造成 zombie (疆尸) 程序的状态<br>　　START：该 process 被触发启动的时间<br>　　TIME ：该 process 实际使用 CPU 运作的时间<br>　　COMMAND：该程序的实际指令</p>
 </blockquote>
 <p><strong><code>例七</code>：列出类似程序树的程序显示</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps -axjf</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ps -axjf
+</code></pre>
 <p><strong><code>例八</code>：找出与 cron 与 syslog 这两个服务有关的 PID 号码</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ps aux | egrep <span class="string">&#x27;(cron|syslog)&#x27;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ ps aux | egrep &#39;(cron|syslog)&#39;
+</code></pre>
 <p><strong><code>其他</code></strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 可以用 | 管道和 more 连接起来分页查看</span></span><br><span class="line">$ ps -aux |more</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把所有进程显示出来，并输出到ps001.txt文件</span></span><br><span class="line">$ ps -aux &gt; ps001.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出指定的字段</span></span><br><span class="line">$ ps -o pid,ppid,pgrp,session,tpgid,<span class="built_in">comm</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash"># 可以用 | 管道和 more 连接起来分页查看
+$ ps -aux |more
+
+# 把所有进程显示出来，并输出到ps001.txt文件
+$ ps -aux &gt; ps001.txt
+
+# 输出指定的字段
+$ ps -o pid,ppid,pgrp,session,tpgid,comm
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

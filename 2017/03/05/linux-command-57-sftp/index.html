@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2362,12 +2362,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2017-03-05 16:29</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:11'>2017-03-05 16:29</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:543</span>
+        <span>字数:546</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2415,24 +2415,42 @@
       
         <p>sFTP（安全文件传输程序）是一种安全的交互式文件传输程序，其工作方式与 FTP（文件传输协议）类似。 然而，sFTP 比 FTP 更安全；它通过加密 SSH 传输处理所有操作。</p>
 <p>它可以配置使用几个有用的 SSH 功能，如公钥认证和压缩。 它连接并登录到指定的远程机器，然后切换到交互式命令模式，在该模式下用户可以执行各种命令。</p>
-<p>在本文中，我们将向你展示如何使用 sFTP 上传/下载整个目录（包括其子目录和子文件）。</p>
+<p>在本文中，我们将向你展示如何使用 sFTP 上传&#x2F;下载整个目录（包括其子目录和子文件）。</p>
 <h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h2><p>默认情况下，SFTP 协议采用和 SSH 传输协议一样的方式建立到远程服务器的安全连接。虽然，用户验证使用类似于 SSH 默认设置的密码方式，但是，建议创建和使用 SSH 无密码登录，以简化和更安全地连接到远程主机。</p>
 <p>要连接到远程 sftp 服务器，如下建立一个安全 SSH 连接并创建 SFTP 会话：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sftp root@server</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ sftp root@server
+</code></pre>
 <p>登录到远程主机后，你可以如下运行交互式的 sFTP 命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sftp&gt; <span class="built_in">ls</span>            <span class="comment">#列出服务器文件列表</span></span><br><span class="line">sftp&gt; lls           <span class="comment">#列出本地文件列表</span></span><br><span class="line">sftp&gt; <span class="built_in">pwd</span>           <span class="comment">#当前服务器上路径</span></span><br><span class="line">sftp&gt; lpwd          <span class="comment">#当前本地路径</span></span><br><span class="line">sftp&gt; <span class="built_in">cd</span> img        <span class="comment">#切换服务器路径</span></span><br><span class="line">sftp&gt; lcd img       <span class="comment">#切换本地路径</span></span><br><span class="line">sftp&gt; <span class="built_in">mkdir</span> img     <span class="comment">#在服务器上创建一个目录</span></span><br><span class="line">sftp&gt; lmkdir img    <span class="comment">#在本地创建一个目录</span></span><br></pre></td></tr></table></figure>
-<h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sftp&gt; put readme.md <span class="comment">#上传单个文件</span></span><br><span class="line">sftp&gt; mput *.xls    <span class="comment">#上传多个文件</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sftp&gt; get readme.md <span class="comment">#下载单个文件</span></span><br><span class="line">sftp&gt; mget *.xls    <span class="comment">#下载多个文件</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">sftp&gt; ls            #列出服务器文件列表
+sftp&gt; lls           #列出本地文件列表
+sftp&gt; pwd           #当前服务器上路径
+sftp&gt; lpwd          #当前本地路径
+sftp&gt; cd img        #切换服务器路径
+sftp&gt; lcd img       #切换本地路径
+sftp&gt; mkdir img     #在服务器上创建一个目录
+sftp&gt; lmkdir img    #在本地创建一个目录
+</code></pre>
+<h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><pre><code class="bash">sftp&gt; put readme.md #上传单个文件
+sftp&gt; mput *.xls    #上传多个文件
+</code></pre>
+<h2 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h2><pre><code class="bash">sftp&gt; get readme.md #下载单个文件
+sftp&gt; mget *.xls    #下载多个文件
+</code></pre>
 <h2 id="上传文件夹"><a href="#上传文件夹" class="headerlink" title="上传文件夹"></a>上传文件夹</h2><p>使用<code>put -r</code> .但是远程服务器要提前创建一个相同名称的目录; <code>-r</code> 递归复制子目录和子文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sftp&gt; <span class="built_in">mkdir</span> img</span><br><span class="line">sftp&gt; put -r img</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">sftp&gt; mkdir img
+sftp&gt; put -r img
+</code></pre>
 <p>要保留修改时间、访问时间以及被传输的文件的模式，可使用 <code>-p</code> 。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sftp&gt; put -<span class="built_in">pr</span> img</span><br></pre></td></tr></table></figure>
-
-<h2 id="下载文件夹"><a href="#下载文件夹" class="headerlink" title="下载文件夹"></a>下载文件夹</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sftp&gt; get -r img</span><br></pre></td></tr></table></figure>
-
-<h2 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sftp&gt; <span class="built_in">bye</span></span><br><span class="line">或</span><br><span class="line">sftp&gt; <span class="built_in">exit</span></span><br><span class="line">或</span><br><span class="line">ctrl + d</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">sftp&gt; put -pr img
+</code></pre>
+<h2 id="下载文件夹"><a href="#下载文件夹" class="headerlink" title="下载文件夹"></a>下载文件夹</h2><pre><code class="bash">sftp&gt; get -r img
+</code></pre>
+<h2 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h2><pre><code class="bash">sftp&gt; bye
+或
+sftp&gt; exit
+或
+ctrl + d
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

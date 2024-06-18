@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2362,7 +2362,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2020-10-20 19:43</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2020-10-20 19:43</time>
         
     </div>
     <div class="article-meta">
@@ -2421,33 +2421,136 @@
 <li><code>rejected</code>: 意味着操作失败。</li>
 </ul>
 <h2 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用"></a>二、使用</h2><h3 id="2-1-创建-Promise"><a href="#2-1-创建-Promise" class="headerlink" title="2.1 创建 Promise"></a>2.1 创建 Promise</h3><p>通过 <code>new Promise</code> 来实例化，支持链式调用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">// 逻辑</span></span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">//当上面&quot;逻辑&quot;中调用 resolve() 时触发此方法</span></span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">//当上面&quot;逻辑&quot;中调用 reject() 时触发此方法</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">new Promise((resolve, reject)=&gt;&#123;
+  // 逻辑
+&#125;).then(()=&gt;&#123;
+  //当上面&quot;逻辑&quot;中调用 resolve() 时触发此方法
+&#125;).catch(()=&gt;&#123;
+  //当上面&quot;逻辑&quot;中调用 reject() 时触发此方法
+&#125;)
+</code></pre>
 <h3 id="2-2-执行顺序"><a href="#2-2-执行顺序" class="headerlink" title="2.2 执行顺序"></a>2.2 执行顺序</h3><p><code>Promise</code>一旦创建就立即执行，并且无法中途取消，执行逻辑和顺序可以从下面的示例中获得</p>
 <p>如下，可修改 <code>if</code> 条件来改变异步结果，下面打印开始的数字是执行顺序</p>
 <p><a target="_blank" rel="noopener" href="https://jsbin.com/cijuwakeha/1/edit?js,console">在线调试此示例 - jsbin</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;1.开始创建并执行 Promise&#x27;</span>)</span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span>(<span class="params">resolve, reject</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;2.由于创建会立即执行，所以会立即执行到本行&#x27;</span>)</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123; <span class="comment">// 模拟异步请求</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;4. 1s之期已到，开始执行异步操作&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="comment">// 一般我们符合预期的结果时调用 resolve()，会在 .then 中继续执行</span></span><br><span class="line">        <span class="title function_">resolve</span>(<span class="string">&#x27;成功&#x27;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 不符合预期时调用 reject()，会在 .catch 中继续执行</span></span><br><span class="line">        <span class="title function_">reject</span>(<span class="string">&#x27;不符合预期&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;5.调用了then，接收数据：&#x27;</span> + res)</span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="function">(<span class="params">error</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;5.调用了catch，错误信息：&#x27;</span> + error)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;3.本行为同步操作，所以先于 Promise 内的异步操作（setTimeout）&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">console.log(&#39;1.开始创建并执行 Promise&#39;)
+new Promise(function(resolve, reject) &#123;
+  console.log(&#39;2.由于创建会立即执行，所以会立即执行到本行&#39;)
+  setTimeout(()=&gt;&#123; // 模拟异步请求
+    console.log(&#39;4. 1s之期已到，开始执行异步操作&#39;)
+    if (true) &#123;
+        // 一般我们符合预期的结果时调用 resolve()，会在 .then 中继续执行
+        resolve(&#39;成功&#39;)
+    &#125; else &#123;
+        // 不符合预期时调用 reject()，会在 .catch 中继续执行
+        reject(&#39;不符合预期&#39;)
+    &#125;
+  &#125;, 1000)
+&#125;).then((res)=&gt;&#123;
+  console.log(&#39;5.调用了then，接收数据：&#39; + res)
+&#125;).catch((error)=&gt;&#123;
+  console.log(&#39;5.调用了catch，错误信息：&#39; + error)
+&#125;)
+console.log(&#39;3.本行为同步操作，所以先于 Promise 内的异步操作（setTimeout）&#39;)
+</code></pre>
 <p>执行结果如下</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;1.开始创建并执行 Promise&quot;</span></span><br><span class="line"><span class="string">&quot;2.由于创建会立即执行，所以会立即执行到本行&quot;</span></span><br><span class="line"><span class="string">&quot;3.本行为同步操作，所以先于 Promise 内的异步操作（setTimeout）&quot;</span></span><br><span class="line"><span class="string">&quot;4. 1s之期已到，开始执行异步操作&quot;</span></span><br><span class="line"><span class="string">&quot;5.调用了then，接收数据：成功&quot;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">&quot;1.开始创建并执行 Promise&quot;
+&quot;2.由于创建会立即执行，所以会立即执行到本行&quot;
+&quot;3.本行为同步操作，所以先于 Promise 内的异步操作（setTimeout）&quot;
+&quot;4. 1s之期已到，开始执行异步操作&quot;
+&quot;5.调用了then，接收数据：成功&quot;
+</code></pre>
 <h3 id="2-3-用函数封装-Promise"><a href="#2-3-用函数封装-Promise" class="headerlink" title="2.3 用函数封装 Promise"></a>2.3 用函数封装 Promise</h3><p>这是比较常用的方法，如下用 <code>setTimeout</code> 模拟异步请求，封装通用请求函数</p>
 <p><a target="_blank" rel="noopener" href="https://jsbin.com/figuhohoki/1/edit?js,console">在线调试此示例 - jsbin</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是一个异步方法</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">ajax</span>(<span class="params">url</span>)&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;异步方法开始执行&#x27;</span>)</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;异步方法执行完成&#x27;</span>)</span><br><span class="line">      <span class="title function_">resolve</span>(url+<span class="string">&#x27;的结果集&#x27;</span>)</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 调用请求函数，并接受处理返回结果</span></span><br><span class="line"><span class="title function_">ajax</span>(<span class="string">&#x27;/user/list&#x27;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">// 这是一个异步方法
+function ajax(url)&#123;
+  return new Promise(resolve=&gt;&#123;
+    console.log(&#39;异步方法开始执行&#39;)
+    setTimeout(()=&gt;&#123;
+      console.log(&#39;异步方法执行完成&#39;)
+      resolve(url+&#39;的结果集&#39;)
+    &#125;, 1000)
+  &#125;)
+&#125;
+// 调用请求函数，并接受处理返回结果
+ajax(&#39;/user/list&#39;).then((res)=&gt;&#123;
+  console.log(res)
+&#125;)
+</code></pre>
 <p>执行结果</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;异步方法开始执行&quot;</span></span><br><span class="line"><span class="string">&quot;异步方法执行完成&quot;</span></span><br><span class="line"><span class="string">&quot;/user/list的结果集&quot;</span></span><br></pre></td></tr></table></figure>
-
-
+<pre><code class="javascript">&quot;异步方法开始执行&quot;
+&quot;异步方法执行完成&quot;
+&quot;/user/list的结果集&quot;
+</code></pre>
 <h2 id="三、高级用法"><a href="#三、高级用法" class="headerlink" title="三、高级用法"></a>三、高级用法</h2><h3 id="3-1-同时支持Callback与Promise"><a href="#3-1-同时支持Callback与Promise" class="headerlink" title="3.1 同时支持Callback与Promise"></a>3.1 同时支持Callback与Promise</h3><p><a target="_blank" rel="noopener" href="https://jsbin.com/qitewirina/1/edit?js,console">在线调试此示例 - jsbin</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">ajax</span>(<span class="params">url, success, fail</span>) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> success === <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="title function_">success</span>(&#123;<span class="attr">user</span>: <span class="string">&#x27;羊&#x27;</span>&#125;)</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> fail === <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> fail)</span><br><span class="line">        <span class="title function_">fail</span>(<span class="string">&#x27;用户不存在&#x27;</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">ajax</span>(url, resolve, reject)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// callback 调用方式</span></span><br><span class="line"><span class="title function_">ajax</span>(<span class="string">&#x27;/user/get&#x27;</span>, <span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Callback请求成功！返回结果:&#x27;</span>, res)</span><br><span class="line">&#125;, <span class="function">(<span class="params">error</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Callback请求失败！错误信息:&#x27;</span>, error)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Promise 调用方式</span></span><br><span class="line"><span class="title function_">ajax</span>(<span class="string">&#x27;/user/get&#x27;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Pormise请求成功！返回结果：&#x27;</span>, res)</span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="function">(<span class="params">error</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Promise请求失败！返回结果：&#x27;</span>, error)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>执行结果</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Callback</span>请求成功！返回结果: &#123;<span class="attr">user</span>: <span class="string">&quot;羊&quot;</span>&#125;</span><br><span class="line"><span class="title class_">Pormise</span>请求成功！返回结果： &#123;<span class="attr">user</span>: <span class="string">&quot;羊&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">function ajax(url, success, fail) &#123;
 
+  if (typeof success === &#39;function&#39;) &#123;
+    setTimeout(() =&gt; &#123;
+      if (true) &#123;
+        success(&#123;user: &#39;羊&#39;&#125;)
+      &#125; else if (typeof fail === &#39;function&#39;) &#123;
+        console.log(typeof fail)
+        fail(&#39;用户不存在&#39;)
+      &#125;
+    &#125;, 1000)
+  &#125; else &#123;
+    return new Promise((resolve, reject) =&gt; &#123;
+      this.ajax(url, resolve, reject)
+    &#125;)
+  &#125;
+
+&#125;
+
+// callback 调用方式
+ajax(&#39;/user/get&#39;, (res)=&gt;&#123;
+  console.log(&#39;Callback请求成功！返回结果:&#39;, res)
+&#125;, (error)=&gt;&#123;
+  console.log(&#39;Callback请求失败！错误信息:&#39;, error)
+&#125;)
+
+// Promise 调用方式
+ajax(&#39;/user/get&#39;).then((res)=&gt;&#123;
+  console.log(&#39;Pormise请求成功！返回结果：&#39;, res)
+&#125;).catch((error)=&gt;&#123;
+  console.log(&#39;Promise请求失败！返回结果：&#39;, error)
+&#125;)
+</code></pre>
+<p>执行结果</p>
+<pre><code class="javascript">Callback请求成功！返回结果: &#123;user: &quot;羊&quot;&#125;
+Pormise请求成功！返回结果： &#123;user: &quot;羊&quot;&#125;
+</code></pre>
 <h3 id="3-2-链式调用"><a href="#3-2-链式调用" class="headerlink" title="3.2 链式调用"></a>3.2 链式调用</h3><p><code>.then</code> 支持返回 <code>Promise</code> 对象进行链式调用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">ajax</span>(<span class="string">&#x27;/user/info&#x27;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="comment">// 用户信息查询成功后，可以根据返回结果查询后续信息</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;用户信息:&#x27;</span>, res)</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">ajax</span>(<span class="string">&#x27;/user/score&#x27;</span>)</span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;用户成绩:&#x27;</span>, res)</span><br><span class="line">  <span class="keyword">return</span> <span class="title function_">ajax</span>(<span class="string">&#x27;/user/friends&#x27;</span>)</span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;用户朋友:&#x27;</span>, res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">ajax(&#39;/user/info&#39;).then((res)=&gt;&#123;
+  // 用户信息查询成功后，可以根据返回结果查询后续信息
+  console.log(&#39;用户信息:&#39;, res)
+  return ajax(&#39;/user/score&#39;)
+&#125;).then((res)=&gt;&#123;
+  console.log(&#39;用户成绩:&#39;, res)
+  return ajax(&#39;/user/friends&#39;)
+&#125;).then((res)=&gt;&#123;
+  console.log(&#39;用户朋友:&#39;, res)
+&#125;)
+</code></pre>
 <h3 id="3-3-Promise-all"><a href="#3-3-Promise-all" class="headerlink" title="3.3 Promise.all"></a>3.3 Promise.all</h3><p><code>Promise.all</code> 方法用于将多个 <code>Promise</code> 实例，包装成一个新的 <code>Promise</code> 实例。<br><a target="_blank" rel="noopener" href="https://jsbin.com/xojifuzapo/1/edit?js,console">在线调试此示例 - jsbin</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 生成一个Promise对象的数组</span></span><br><span class="line"><span class="keyword">var</span> promises = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>].<span class="title function_">map</span>(<span class="keyword">function</span>(<span class="params">id</span>)&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (id % <span class="number">3</span> === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="title function_">resolve</span>(id)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="title function_">reject</span>(id)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">all</span>(promises).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">post</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;全部通过&#x27;</span>)</span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="keyword">function</span>(<span class="params">reason</span>)&#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;未全部通过，有问题id：&#x27;</span>+reason)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">// 生成一个Promise对象的数组
+var promises = [2, 3, 5, 7, 11, 13].map(function(id)&#123;
+  return new Promise((resolve, reject)=&gt;&#123;
+    if (id % 3 === 0) &#123;
+      resolve(id)
+    &#125; else &#123;
+      reject(id)
+    &#125;
+  &#125;);
+&#125;);
+Promise.all(promises).then(function(post) &#123;
+  console.log(&#39;全部通过&#39;)
+&#125;).catch(function(reason)&#123;
+  console.log(&#39;未全部通过，有问题id：&#39;+reason)
+&#125;);
+</code></pre>
 <p>执行结果</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">未全部通过，有问题id：<span class="number">2</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="javascript">未全部通过，有问题id：2
+</code></pre>
 <h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise">mozilla web docs</a></p>
 
       

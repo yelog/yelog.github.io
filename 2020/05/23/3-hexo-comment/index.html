@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2364,12 +2364,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2020-05-23 22:26</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2020-05-23 22:26</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:558</span>
+        <span>字数:556</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2422,34 +2422,53 @@
 <p>注册完后，可得到 <code>Client ID</code> 和 <code>Client Secret</code></p>
 <h3 id="2-新建存放评论的仓库"><a href="#2-新建存放评论的仓库" class="headerlink" title="2. 新建存放评论的仓库"></a>2. 新建存放评论的仓库</h3><p>因为 <code>gitalk</code> 是基于 Github 的 Issue 的，所以需要指定一个仓库，用来承接 gitalk 的评论，我们一般使用 Github Page 来做我们博客的评论，所以，新建仓库名为 <code>xxx.github.io</code>，其中 xxx 为你的 Github 用户名</p>
 <h3 id="3-配置主题"><a href="#3-配置主题" class="headerlink" title="3. 配置主题"></a>3. 配置主题</h3><p>在主题下 <code>_config.yml</code> 中找到如下配置，启用评论，并使用 <code>gitalk</code></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##########评论设置#############</span></span><br><span class="line"><span class="attr">comment:</span></span><br><span class="line">  <span class="attr">on:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">gitalk</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="yaml">##########评论设置#############
+comment:
+  on: true
+  type: gitalk
+</code></pre>
 <p>在主题下 <code>_config.yml</code> 中找到 gitalk 配置，将 第1步 得到的  <code>Client ID</code> 和 <code>Client Secret</code> 复制到如下位置</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">githubID:</span>    <span class="comment"># 填你的 github 用户名</span></span><br><span class="line">  <span class="attr">repo:</span>  <span class="string">xxx.github.io</span>	 <span class="comment"># 承载评论的仓库，一般使用 Github Page 仓库</span></span><br><span class="line">  <span class="attr">ClientID:</span>   <span class="comment"># 第1步获得 Client ID</span></span><br><span class="line">  <span class="attr">ClientSecret:</span>  <span class="comment"># 第1步获得 Client Secret</span></span><br><span class="line">  <span class="attr">adminUser:</span>     <span class="comment"># Github 用户名</span></span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line">  <span class="attr">perPage:</span> <span class="number">10</span></span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="yaml">gitalk:
+  githubID:    # 填你的 github 用户名
+  repo:  xxx.github.io	 # 承载评论的仓库，一般使用 Github Page 仓库
+  ClientID:   # 第1步获得 Client ID
+  ClientSecret:  # 第1步获得 Client Secret
+  adminUser:     # Github 用户名
+  distractionFreeMode: true
+  language: zh-CN
+  perPage: 10
+</code></pre>
 <h2 id="二、来必力"><a href="#二、来必力" class="headerlink" title="二、来必力"></a>二、来必力</h2><h3 id="1-创建来必力账号，并选择-City-免费版"><a href="#1-创建来必力账号，并选择-City-免费版" class="headerlink" title="1. 创建来必力账号，并选择 City 免费版"></a>1. 创建来必力账号，并选择 City 免费版</h3><p>官网<a target="_blank" rel="noopener" href="http://livere.com/">http://livere.com/</a> ，创建账号，点击上面的安装，选择 City 免费版</p>
 <p><img src="https://i.loli.net/2020/05/23/mLYfjrJ1UgOIpiD.png" alt="选择 city 免费版"></p>
 <p>复制获取到的代码中的 <code>data-uid</code></p>
 <p><img src="http://yelog-img.test.upcdn.net/447D431A-998C-4327-9463-A51D7CE91CE3.png" alt="复制 data-uid"></p>
 <h3 id="2-主题选择使用来必力评论"><a href="#2-主题选择使用来必力评论" class="headerlink" title="2. 主题选择使用来必力评论"></a>2. 主题选择使用来必力评论</h3><p>在主题下 <code>_config.yml</code>  </p>
 <p>在找到来必力配置如下，第一步中复制的 <code>data-uid</code> 粘贴到下面 <code>data_uid</code> 处</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">livere:</span></span><br><span class="line">  <span class="attr">data_uid:</span> <span class="string">xxxxxx</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="yaml">livere:
+  data_uid: xxxxxx
+</code></pre>
 <p>找到以下代码， 开启并选择 livere (来必力)</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##########评论设置#############</span></span><br><span class="line"><span class="attr">comment:</span></span><br><span class="line">  <span class="attr">on:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">livere</span></span><br></pre></td></tr></table></figure>
-
-
-
+<pre><code class="yaml">##########评论设置#############
+comment:
+  on: true
+  type: livere
+</code></pre>
 <h2 id="三、utteranc"><a href="#三、utteranc" class="headerlink" title="三、utteranc"></a>三、utteranc</h2><p>官网地址：<a target="_blank" rel="noopener" href="https://utteranc.es/">https://utteranc.es/</a></p>
 <h3 id="1-安装-utterances"><a href="#1-安装-utterances" class="headerlink" title="1. 安装 utterances"></a>1. 安装 utterances</h3><p><a target="_blank" rel="noopener" href="https://github.com/apps/utterances">点我进行安装</a></p>
 <h3 id="2-配置主题"><a href="#2-配置主题" class="headerlink" title="2. 配置主题"></a>2. 配置主题</h3><p>在主题下 <code>_config.yml</code> 中找到 <code>utteranc</code> 的配置 ，修改 <code>repo</code> 为自己的仓库名</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">utteranc:</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">xxx/xxx.github.io</span> <span class="comment"># 承载评论的仓库，填上自己的仓库</span></span><br><span class="line">  <span class="attr">issue_term:</span> <span class="string">pathname</span>    <span class="comment"># Issue 与 博客文章 之间映射关系</span></span><br><span class="line">  <span class="attr">label:</span> <span class="string">utteranc</span>         <span class="comment"># 创建的 Issue 添加的标签</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">github-light</span>     <span class="comment"># 主题，可选主题请查看官方文档 https://utteranc.es/#heading-theme</span></span><br><span class="line"><span class="comment"># 官方文档 https://utteranc.es/</span></span><br><span class="line"><span class="comment"># 使用说明 https://yelog.org//2020/05/23/3-hexo-comment/</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="yaml">utteranc:
+  repo: xxx/xxx.github.io # 承载评论的仓库，填上自己的仓库
+  issue_term: pathname    # Issue 与 博客文章 之间映射关系
+  label: utteranc         # 创建的 Issue 添加的标签
+  theme: github-light     # 主题，可选主题请查看官方文档 https://utteranc.es/#heading-theme
+# 官方文档 https://utteranc.es/
+# 使用说明 https://yelog.org//2020/05/23/3-hexo-comment/
+</code></pre>
 <p>在主题下 <code>_config.yml</code> 中找到如下配置，启用评论，并使用 <code>utteranc</code></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">comment:</span></span><br><span class="line">  <span class="attr">on:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">utteranc</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="yaml">comment:
+  on: true
+  type: utteranc
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

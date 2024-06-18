@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2364,12 +2364,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2022-06-24 19:38</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2022-06-24 19:38</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:477</span>
+        <span>字数:476</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2418,14 +2418,67 @@
         <h3 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu2022-06-25%2010.12.32.gif" alt="el-drawer-drag-width"></p>
 <h3 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h3><p>通过指令的方式, 在 <code>drawer</code> 的左侧边缘, 添加一个触发拖拽的长条形区域, 监听鼠标左键按下时启动 <code>document.onmousemove</code> 的监听, 监听鼠标距离浏览器右边的距离, 设置为 <code>drawer</code> 的宽度, 并添加约束: 不能小于浏览器宽度的 20%, 不能大于浏览器宽度的 80%.</p>
 <h3 id="指令代码"><a href="#指令代码" class="headerlink" title="指令代码"></a>指令代码</h3><p>创建文件 <code>src/directive/elment-ui/drawer-drag-width.js</code>, 内容如下</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">Vue</span> <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * el-drawer 拖拽指令</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="title class_">Vue</span>.<span class="title function_">directive</span>(<span class="string">&#x27;el-drawer-drag-width&#x27;</span>, &#123;</span><br><span class="line">  <span class="title function_">bind</span>(<span class="params">el, binding, vnode, oldVnode</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> drawerEle = el.<span class="title function_">querySelector</span>(<span class="string">&#x27;.el-drawer&#x27;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(drawerEle)</span><br><span class="line">    <span class="comment">// 创建触发拖拽的元素</span></span><br><span class="line">    <span class="keyword">const</span> dragItem = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;div&#x27;</span>)</span><br><span class="line">    <span class="comment">// 将元素放置到抽屉的左边边缘</span></span><br><span class="line">    dragItem.<span class="property">style</span>.<span class="property">cssText</span> = <span class="string">&#x27;height: 100%;width: 5px;cursor: w-resize;position: absolute;left: 0;&#x27;</span></span><br><span class="line">    drawerEle.<span class="title function_">append</span>(dragItem)</span><br><span class="line"></span><br><span class="line">    dragItem.<span class="property">onmousedown</span> = <span class="function">(<span class="params">downEvent</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 拖拽时禁用文本选中</span></span><br><span class="line">      <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">style</span>.<span class="property">userSelect</span> = <span class="string">&#x27;none&#x27;</span></span><br><span class="line">      <span class="variable language_">document</span>.<span class="property">onmousemove</span> = <span class="keyword">function</span>(<span class="params">moveEvent</span>) &#123;</span><br><span class="line">        <span class="comment">// 获取鼠标距离浏览器右边缘的距离</span></span><br><span class="line">        <span class="keyword">let</span> realWidth = <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">clientWidth</span> - moveEvent.<span class="property">pageX</span></span><br><span class="line">        <span class="keyword">const</span> width30 = <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">clientWidth</span> * <span class="number">0.2</span></span><br><span class="line">        <span class="keyword">const</span> width80 = <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">clientWidth</span> * <span class="number">0.8</span></span><br><span class="line">        <span class="comment">// 宽度不能大于浏览器宽度 80%，不能小于宽度的 20%</span></span><br><span class="line">        realWidth = realWidth &gt; width80 ? width80 : realWidth &lt; width30 ? width30 : realWidth</span><br><span class="line">        drawerEle.<span class="property">style</span>.<span class="property">width</span> = realWidth + <span class="string">&#x27;px&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="variable language_">document</span>.<span class="property">onmouseup</span> = <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">        <span class="comment">// 拖拽时结束时，取消禁用文本选中</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">style</span>.<span class="property">userSelect</span> = <span class="string">&#x27;initial&#x27;</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">onmousemove</span> = <span class="literal">null</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">onmouseup</span> = <span class="literal">null</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="js">import Vue from &#39;vue&#39;
 
+/**
+ * el-drawer 拖拽指令
+ */
+Vue.directive(&#39;el-drawer-drag-width&#39;, &#123;
+  bind(el, binding, vnode, oldVnode) &#123;
+    const drawerEle = el.querySelector(&#39;.el-drawer&#39;)
+    console.log(drawerEle)
+    // 创建触发拖拽的元素
+    const dragItem = document.createElement(&#39;div&#39;)
+    // 将元素放置到抽屉的左边边缘
+    dragItem.style.cssText = &#39;height: 100%;width: 5px;cursor: w-resize;position: absolute;left: 0;&#39;
+    drawerEle.append(dragItem)
+
+    dragItem.onmousedown = (downEvent) =&gt; &#123;
+      // 拖拽时禁用文本选中
+      document.body.style.userSelect = &#39;none&#39;
+      document.onmousemove = function(moveEvent) &#123;
+        // 获取鼠标距离浏览器右边缘的距离
+        let realWidth = document.body.clientWidth - moveEvent.pageX
+        const width30 = document.body.clientWidth * 0.2
+        const width80 = document.body.clientWidth * 0.8
+        // 宽度不能大于浏览器宽度 80%，不能小于宽度的 20%
+        realWidth = realWidth &gt; width80 ? width80 : realWidth &lt; width30 ? width30 : realWidth
+        drawerEle.style.width = realWidth + &#39;px&#39;
+      &#125;
+      document.onmouseup = function(e) &#123;
+        // 拖拽时结束时，取消禁用文本选中
+        document.body.style.userSelect = &#39;initial&#39;
+        document.onmousemove = null
+        document.onmouseup = null
+      &#125;
+    &#125;
+  &#125;
+&#125;)
+</code></pre>
 <p>然后在 <code>main.js</code> 中将其导入</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./directive/element-ui/drawer-drag-width&#x27;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="js">import &#39;./directive/element-ui/drawer-drag-width&#39;
+</code></pre>
 <h3 id="指令使用"><a href="#指令使用" class="headerlink" title="指令使用"></a>指令使用</h3><p>在 <code>el-drawer</code>  上添加指令 <code>v-el-drawer-drag-width</code> 即可, 如下</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-drawer</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-el-drawer-drag-width</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:visible.sync</span>=<span class="string">&quot;helpDrawer.show&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">direction</span>=<span class="string">&quot;rtl&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">class</span>=<span class="string">&quot;my-drawer&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">template</span> #<span class="attr">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;draw-title&quot;</span>&gt;</span>&#123;&#123; helpDrawer.title &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Editor</span></span></span><br><span class="line"><span class="tag">    <span class="attr">v-model</span>=<span class="string">&quot;helpDrawer.html&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">v-loading</span>=<span class="string">&quot;helpDrawer.loading&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">class</span>=<span class="string">&quot;my-wang-editor&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">style</span>=<span class="string">&quot;overflow-y: auto;&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:default-config</span>=<span class="string">&quot;helpDrawer.editorConfig&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:mode</span>=<span class="string">&quot;helpDrawer.mode&quot;</span></span></span><br><span class="line"><span class="tag">    @<span class="attr">onCreated</span>=<span class="string">&quot;onCreatedHelp&quot;</span></span></span><br><span class="line"><span class="tag">  /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-drawer</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="html">&lt;el-drawer
+  v-el-drawer-drag-width
+  :visible.sync=&quot;helpDrawer.show&quot;
+  direction=&quot;rtl&quot;
+  class=&quot;my-drawer&quot;
+&gt;
+  &lt;template #title&gt;
+    &lt;div class=&quot;draw-title&quot;&gt;&#123;&#123; helpDrawer.title &#125;&#125;&lt;/div&gt;
+  &lt;/template&gt;
+  &lt;Editor
+    v-model=&quot;helpDrawer.html&quot;
+    v-loading=&quot;helpDrawer.loading&quot;
+    class=&quot;my-wang-editor&quot;
+    style=&quot;overflow-y: auto;&quot;
+    :default-config=&quot;helpDrawer.editorConfig&quot;
+    :mode=&quot;helpDrawer.mode&quot;
+    @onCreated=&quot;onCreatedHelp&quot;
+  /&gt;
+&lt;/el-drawer&gt;
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

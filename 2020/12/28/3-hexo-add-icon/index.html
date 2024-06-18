@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2366,12 +2366,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2020-12-28 22:00</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2020-12-28 22:00</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:566</span>
+        <span>字数:564</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2432,8 +2432,8 @@
 <h3 id="2-2-引入-3-hexo-中"><a href="#2-2-引入-3-hexo-中" class="headerlink" title="2.2 引入 3-hexo 中"></a>2.2 引入 3-hexo 中</h3><p>点击下载到本地，解压并复制其中的 <code>iconfont.js</code> 到项目 <code>3-hexo/source/js/</code> 下，并改名 <code>custom-iconfont.js</code>。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20201229003210.png"></p>
 <p>在文件 <code>3-hexo/layout/_partial/meta.ejs</code> 最后追加下面一行。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;&lt;%=theme.blog_path?theme.blog_path.lastIndexOf(&quot;</span>/&quot;) === <span class="string">theme.blog_path.length-1?theme.blog_path.slice(0,</span> <span class="attr">theme.blog_path.length-1</span>)<span class="attr">:theme.blog_path:</span>&#x27;&#x27; %&gt;</span>/js/custom-iconfont.js?v=&lt;%=theme.version%&gt;&quot; &gt;<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="html">&lt;script src=&quot;&lt;%=theme.blog_path?theme.blog_path.lastIndexOf(&quot;/&quot;) === theme.blog_path.length-1?theme.blog_path.slice(0, theme.blog_path.length-1):theme.blog_path:&#39;&#39; %&gt;/js/custom-iconfont.js?v=&lt;%=theme.version%&gt;&quot; &gt;&lt;/script&gt;
+</code></pre>
 <h3 id="2-3-在配置文件中添加生效"><a href="#2-3-在配置文件中添加生效" class="headerlink" title="2.3 在配置文件中添加生效"></a>2.3 在配置文件中添加生效</h3><p>修改 <code>3-hexo/_config.yml</code> 如下图所示</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20201229001129.png"></p>
 <p>完成！</p>
@@ -2444,7 +2444,23 @@
 <h3 id="3-1-同-2-1"><a href="#3-1-同-2-1" class="headerlink" title="3.1 同 2.1"></a>3.1 同 2.1</h3><h3 id="3-2-引入-3-hexo-中"><a href="#3-2-引入-3-hexo-中" class="headerlink" title="3.2 引入 3-hexo 中"></a>3.2 引入 3-hexo 中</h3><p>点击生成代码，如下图所示。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/picgo_qiniu20201228231715.png"></p>
 <p>复制生成的代码，修改 <code>font-family</code> 的值为 <code>custom-iconfont</code>，添加到 <code>3-hexo/source/css/_partial/font.styl</code> 最后，并写入图标信息，<code>content</code> 可以移到图标上进行复制，注意前面斜杠转译和去掉后面的分号。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;custom-iconfont&#x27;</span>;  <span class="comment">/* project id 2298064 */</span></span><br><span class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;//at.alicdn.com/t/font_2298064_34vkk4c9945.eot&#x27;</span>);</span><br><span class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;//at.alicdn.com/t/font_2298064_34vkk4c9945.eot?#iefix&#x27;</span>) <span class="built_in">format</span>(<span class="string">&#x27;embedded-opentype&#x27;</span>),</span><br><span class="line">  <span class="built_in">url</span>(<span class="string">&#x27;//at.alicdn.com/t/font_2298064_34vkk4c9945.woff2&#x27;</span>) <span class="built_in">format</span>(<span class="string">&#x27;woff2&#x27;</span>),</span><br><span class="line">  <span class="built_in">url</span>(<span class="string">&#x27;//at.alicdn.com/t/font_2298064_34vkk4c9945.woff&#x27;</span>) <span class="built_in">format</span>(<span class="string">&#x27;woff&#x27;</span>),</span><br><span class="line">  <span class="built_in">url</span>(<span class="string">&#x27;//at.alicdn.com/t/font_2298064_34vkk4c9945.ttf&#x27;</span>) <span class="built_in">format</span>(<span class="string">&#x27;truetype&#x27;</span>),</span><br><span class="line">  <span class="built_in">url</span>(<span class="string">&#x27;//at.alicdn.com/t/font_2298064_34vkk4c9945.svg#iconfont&#x27;</span>) <span class="built_in">format</span>(<span class="string">&#x27;svg&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.icon-gitee</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;\e602&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.icon-youtubeautored</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;\e649&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="css">@font-face &#123;
+  font-family: &#39;custom-iconfont&#39;;  /* project id 2298064 */
+  src: url(&#39;//at.alicdn.com/t/font_2298064_34vkk4c9945.eot&#39;);
+  src: url(&#39;//at.alicdn.com/t/font_2298064_34vkk4c9945.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;),
+  url(&#39;//at.alicdn.com/t/font_2298064_34vkk4c9945.woff2&#39;) format(&#39;woff2&#39;),
+  url(&#39;//at.alicdn.com/t/font_2298064_34vkk4c9945.woff&#39;) format(&#39;woff&#39;),
+  url(&#39;//at.alicdn.com/t/font_2298064_34vkk4c9945.ttf&#39;) format(&#39;truetype&#39;),
+  url(&#39;//at.alicdn.com/t/font_2298064_34vkk4c9945.svg#iconfont&#39;) format(&#39;svg&#39;);
+&#125;
+.icon-gitee:before &#123;
+  content: &quot;\e602&quot;;
+&#125;
+
+.icon-youtubeautored:before &#123;
+  content: &quot;\e649&quot;;
+&#125;
+</code></pre>
 <h3 id="3-3-在配置文件中添加生效-同2-2"><a href="#3-3-在配置文件中添加生效-同2-2" class="headerlink" title="3.3 在配置文件中添加生效 同2.2"></a>3.3 在配置文件中添加生效 同2.2</h3><p>结束！</p>
 
       

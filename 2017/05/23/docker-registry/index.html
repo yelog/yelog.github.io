@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2364,7 +2364,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2017-05-23 21:15</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2017-05-23 21:15</time>
         
     </div>
     <div class="article-meta">
@@ -2419,53 +2419,149 @@
 <h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><p>可以通过执行 docker login 命令来输入用户名、密码和邮箱来完成注册和登录。 注册成功后，本地用户目录的 .dockercfg 中将保存用户的认证信息。</p>
 <h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><p>用户无需登录即可通过 docker search 命令来查找官方仓库中的镜像，并利用 docker pull 命令来将它下载到本地。</p>
 <p>例如以 centos 为关键词进行搜索：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker search centos</span><br><span class="line">NAME                                            DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED</span><br><span class="line">centos                                          The official build of CentOS.                   465       [OK]</span><br><span class="line">tianon/centos                                   CentOS 5 and 6, created using rinse instea...   28</span><br><span class="line">blalor/centos                                   Bare-bones base CentOS 6.5 image                6                    [OK]</span><br><span class="line">saltstack/centos-6-minimal                                                                      6                    [OK]</span><br><span class="line">tutum/centos-6.4                                DEPRECATED. Use tutum/centos:6.4 instead. ...   5                    [OK]</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ sudo docker search centos
+NAME                                            DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+centos                                          The official build of CentOS.                   465       [OK]
+tianon/centos                                   CentOS 5 and 6, created using rinse instea...   28
+blalor/centos                                   Bare-bones base CentOS 6.5 image                6                    [OK]
+saltstack/centos-6-minimal                                                                      6                    [OK]
+tutum/centos-6.4                                DEPRECATED. Use tutum/centos:6.4 instead. ...   5                    [OK]
+...
+</code></pre>
 <p>可以看到返回了很多包含关键字的镜像，其中包括镜像名字、描述、星级（表示该镜像的受欢迎程度）、是否官方创建、是否自动创建。 官方的镜像说明是官方项目组创建和维护的，automated 资源允许用户验证镜像的来源和内容。</p>
-<p>根据是否是官方提供，可将镜像资源分为两类。 一种是类似 centos 这样的基础镜像，被称为基础或根镜像。这些基础镜像是由 Docker 公司创建、验证、支持、提供。这样的镜像往往使用单个单词作为名字。 还有一种类型，比如 tianon/centos 镜像，它是由 Docker 的用户创建并维护的，往往带有用户名称前缀。可以通过前缀 user_name/ 来指定使用某个用户提供的镜像，比如 tianon 用户。</p>
+<p>根据是否是官方提供，可将镜像资源分为两类。 一种是类似 centos 这样的基础镜像，被称为基础或根镜像。这些基础镜像是由 Docker 公司创建、验证、支持、提供。这样的镜像往往使用单个单词作为名字。 还有一种类型，比如 tianon&#x2F;centos 镜像，它是由 Docker 的用户创建并维护的，往往带有用户名称前缀。可以通过前缀 user_name&#x2F; 来指定使用某个用户提供的镜像，比如 tianon 用户。</p>
 <p>另外，在查找的时候通过 -s N 参数可以指定仅显示评价为 N 星以上的镜像。</p>
 <p>下载官方 centos 镜像到本地。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker pull centos</span><br><span class="line">Pulling repository centos</span><br><span class="line">0b443ba03958: Download complete</span><br><span class="line">539c0211cd76: Download complete</span><br><span class="line">511136ea3c5a: Download complete</span><br><span class="line">7064731afe90: Download complete</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ sudo docker pull centos
+Pulling repository centos
+0b443ba03958: Download complete
+539c0211cd76: Download complete
+511136ea3c5a: Download complete
+7064731afe90: Download complete
+</code></pre>
 <p>用户也可以在登录后通过 docker push 命令来将镜像推送到 Docker Hub。</p>
 <h2 id="私有仓库"><a href="#私有仓库" class="headerlink" title="私有仓库"></a>私有仓库</h2><h3 id="安装-docker-registry"><a href="#安装-docker-registry" class="headerlink" title="安装 docker-registry"></a>安装 docker-registry</h3><h4 id="容器运行"><a href="#容器运行" class="headerlink" title="容器运行"></a>容器运行</h4><p>在安装了 Docker 后，可以通过获取官方 registry 镜像来运行。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker run -d -p 5000:5000 registry</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ sudo docker run -d -p 5000:5000 registry
+</code></pre>
 <p>这将使用官方的 registry 镜像来启动本地的私有仓库。 用户可以通过指定参数来配置私有仓库位置，例如配置镜像存储到 Amazon S3 服务。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker run \</span><br><span class="line">         -e SETTINGS_FLAVOR=s3 \</span><br><span class="line">         -e AWS_BUCKET=acme-docker \</span><br><span class="line">         -e STORAGE_PATH=/registry \</span><br><span class="line">         -e AWS_KEY=AKIAHSHB43HS3J92MXZ \</span><br><span class="line">         -e AWS_SECRET=xdDowwlK7TJajV1Y7EoOZrmuPEJlHYcNP2k4j49T \</span><br><span class="line">         -e SEARCH_BACKEND=sqlalchemy \</span><br><span class="line">         -p 5000:5000 \</span><br><span class="line">         registry</span><br></pre></td></tr></table></figure>
-<p>此外，还可以指定本地路径（如 /home/user/registry-conf ）下的配置文件。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker run -d -p 5000:5000 -v /home/user/registry-conf:/registry-conf -e DOCKER_REGISTRY_CONFIG=/registry-conf/config.yml registry</span><br></pre></td></tr></table></figure>
-<p>默认情况下，仓库会被创建在容器的 /tmp/registry 下。可以通过 -v 参数来将镜像文件存放在本地的指定路径。 例如下面的例子将上传的镜像放到 /opt/data/registry 目录。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker run -d -p 5000:5000 -v /opt/data/registry:/tmp/registry registry</span><br></pre></td></tr></table></figure>
+<pre><code>$ sudo docker run \
+         -e SETTINGS_FLAVOR=s3 \
+         -e AWS_BUCKET=acme-docker \
+         -e STORAGE_PATH=/registry \
+         -e AWS_KEY=AKIAHSHB43HS3J92MXZ \
+         -e AWS_SECRET=xdDowwlK7TJajV1Y7EoOZrmuPEJlHYcNP2k4j49T \
+         -e SEARCH_BACKEND=sqlalchemy \
+         -p 5000:5000 \
+         registry
+</code></pre>
+<p>此外，还可以指定本地路径（如 &#x2F;home&#x2F;user&#x2F;registry-conf ）下的配置文件。</p>
+<pre><code class="bash">$ sudo docker run -d -p 5000:5000 -v /home/user/registry-conf:/registry-conf -e DOCKER_REGISTRY_CONFIG=/registry-conf/config.yml registry
+</code></pre>
+<p>默认情况下，仓库会被创建在容器的 &#x2F;tmp&#x2F;registry 下。可以通过 -v 参数来将镜像文件存放在本地的指定路径。 例如下面的例子将上传的镜像放到 &#x2F;opt&#x2F;data&#x2F;registry 目录。</p>
+<pre><code class="bash">$ sudo docker run -d -p 5000:5000 -v /opt/data/registry:/tmp/registry registry
+</code></pre>
 <h4 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h4><p>对于 Ubuntu 或 CentOS 等发行版，可以直接通过源安装。<br>1.Ubuntu</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install -y build-essential python-dev libevent-dev python-pip liblzma-dev</span><br><span class="line">$ sudo pip install docker-registry</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ sudo apt-get install -y build-essential python-dev libevent-dev python-pip liblzma-dev
+$ sudo pip install docker-registry
+</code></pre>
 <p>2.CentOS</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo yum install -y python-devel libevent-devel python-pip gcc xz-devel</span><br><span class="line">$ sudo python-pip install docker-registry</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ sudo yum install -y python-devel libevent-devel python-pip gcc xz-devel
+$ sudo python-pip install docker-registry
+</code></pre>
 <p>3.源码安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install build-essential python-dev libevent-dev python-pip libssl-dev liblzma-dev libffi-dev</span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/docker/docker-registry.git</span><br><span class="line">$ <span class="built_in">cd</span> docker-registry</span><br><span class="line">$ sudo python setup.py install</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ sudo apt-get install build-essential python-dev libevent-dev python-pip libssl-dev liblzma-dev libffi-dev
+$ git clone https://github.com/docker/docker-registry.git
+$ cd docker-registry
+$ sudo python setup.py install
+</code></pre>
 <p>然后修改配置文件，主要修改 dev 模板段的 storage_path 到本地的存储仓库的路径。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> config/config_sample.yml config/config.yml</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ cp config/config_sample.yml config/config.yml
+</code></pre>
 <p>之后启动 Web 服务。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gunicorn -c contrib/gunicorn.py docker_registry.wsgi:application</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ sudo gunicorn -c contrib/gunicorn.py docker_registry.wsgi:application
+</code></pre>
 <p>或者</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gunicorn --access-logfile - --error-logfile - -k gevent -b 0.0.0.0:5000 -w 4 --max-requests 100 docker_registry.wsgi:application</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ sudo gunicorn --access-logfile - --error-logfile - -k gevent -b 0.0.0.0:5000 -w 4 --max-requests 100 docker_registry.wsgi:application
+</code></pre>
 <p>此时使用 curl 访问本地的 5000 端口，看到输出 docker-registry 的版本信息说明运行成功。</p>
 <blockquote>
-<p><em>注：config/config_sample.yml 文件是示例配置文件。</em></p>
+<p><em>注：config&#x2F;config_sample.yml 文件是示例配置文件。</em></p>
 </blockquote>
 <h3 id="在私有仓库上传、下载、搜索镜像"><a href="#在私有仓库上传、下载、搜索镜像" class="headerlink" title="在私有仓库上传、下载、搜索镜像"></a>在私有仓库上传、下载、搜索镜像</h3><p>创建好私有仓库之后，就可以使用 docker tag 来标记一个镜像，然后推送它到仓库，别的机器上就可以下载下来了。例如私有仓库地址为 192.168.7.26:5000。</p>
 <p>先在本机查看已有的镜像。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker images</span><br><span class="line">REPOSITORY                        TAG                 IMAGE ID            CREATED             VIRTUAL SIZE</span><br><span class="line">ubuntu                            latest              ba5877dc9bec        6 weeks ago         192.7 MB</span><br><span class="line">ubuntu                            14.04               ba5877dc9bec        6 weeks ago         192.7 MB</span><br></pre></td></tr></table></figure>
-<p>使用docker tag 将 ba58 这个镜像标记为 192.168.7.26:5000/test（格式为 docker tag IMAGE[:TAG] [REGISTRYHOST/][USERNAME/]NAME[:TAG]）。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker tag ba58 192.168.7.26:5000/test</span><br><span class="line">root ~ <span class="comment"># docker images</span></span><br><span class="line">REPOSITORY                        TAG                 IMAGE ID            CREATED             VIRTUAL SIZE</span><br><span class="line">ubuntu                            14.04               ba5877dc9bec        6 weeks ago         192.7 MB</span><br><span class="line">ubuntu                            latest              ba5877dc9bec        6 weeks ago         192.7 MB</span><br><span class="line">192.168.7.26:5000/test            latest              ba5877dc9bec        6 weeks ago         192.7 MB</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ sudo docker images
+REPOSITORY                        TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+ubuntu                            latest              ba5877dc9bec        6 weeks ago         192.7 MB
+ubuntu                            14.04               ba5877dc9bec        6 weeks ago         192.7 MB
+</code></pre>
+<p>使用docker tag 将 ba58 这个镜像标记为 192.168.7.26:5000&#x2F;test（格式为 docker tag IMAGE[:TAG] [REGISTRYHOST&#x2F;][USERNAME&#x2F;]NAME[:TAG]）。</p>
+<pre><code class="bash">$ sudo docker tag ba58 192.168.7.26:5000/test
+root ~ # docker images
+REPOSITORY                        TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+ubuntu                            14.04               ba5877dc9bec        6 weeks ago         192.7 MB
+ubuntu                            latest              ba5877dc9bec        6 weeks ago         192.7 MB
+192.168.7.26:5000/test            latest              ba5877dc9bec        6 weeks ago         192.7 MB
+</code></pre>
 <p>使用 docker push 上传标记的镜像。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker push 192.168.7.26:5000/test</span><br><span class="line">The push refers to a repository [192.168.7.26:5000/test] (len: 1)</span><br><span class="line">Sending image list</span><br><span class="line">Pushing repository 192.168.7.26:5000/test (1 tags)</span><br><span class="line">Image 511136ea3c5a already pushed, skipping</span><br><span class="line">Image 9bad880da3d2 already pushed, skipping</span><br><span class="line">Image 25f11f5fb0cb already pushed, skipping</span><br><span class="line">Image ebc34468f71d already pushed, skipping</span><br><span class="line">Image 2318d26665ef already pushed, skipping</span><br><span class="line">Image ba5877dc9bec already pushed, skipping</span><br><span class="line">Pushing tag <span class="keyword">for</span> rev [ba5877dc9bec] on &#123;http://192.168.7.26:5000/v1/repositories/test/tags/latest&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ sudo docker push 192.168.7.26:5000/test
+The push refers to a repository [192.168.7.26:5000/test] (len: 1)
+Sending image list
+Pushing repository 192.168.7.26:5000/test (1 tags)
+Image 511136ea3c5a already pushed, skipping
+Image 9bad880da3d2 already pushed, skipping
+Image 25f11f5fb0cb already pushed, skipping
+Image ebc34468f71d already pushed, skipping
+Image 2318d26665ef already pushed, skipping
+Image ba5877dc9bec already pushed, skipping
+Pushing tag for rev [ba5877dc9bec] on &#123;http://192.168.7.26:5000/v1/repositories/test/tags/latest&#125;
+</code></pre>
 <p>用 curl 查看仓库中的镜像。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ curl http://192.168.7.26:5000/v1/search</span><br><span class="line">&#123;<span class="string">&quot;num_results&quot;</span>: 7, <span class="string">&quot;query&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="string">&quot;results&quot;</span>: [&#123;<span class="string">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="string">&quot;name&quot;</span>: <span class="string">&quot;library/miaxis_j2ee&quot;</span>&#125;, &#123;<span class="string">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="string">&quot;name&quot;</span>: <span class="string">&quot;library/tomcat&quot;</span>&#125;, &#123;<span class="string">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="string">&quot;name&quot;</span>: <span class="string">&quot;library/ubuntu&quot;</span>&#125;, &#123;<span class="string">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="string">&quot;name&quot;</span>: <span class="string">&quot;library/ubuntu_office&quot;</span>&#125;, &#123;<span class="string">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="string">&quot;name&quot;</span>: <span class="string">&quot;library/desktop_ubu&quot;</span>&#125;, &#123;<span class="string">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="string">&quot;name&quot;</span>: <span class="string">&quot;dockerfile/ubuntu&quot;</span>&#125;, &#123;<span class="string">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="string">&quot;name&quot;</span>: <span class="string">&quot;library/test&quot;</span>&#125;]&#125;</span><br></pre></td></tr></table></figure>
-<p>这里可以看到 {“description”: “”, “name”: “library/test”}，表明镜像已经被成功上传了。</p>
+<pre><code class="bash">$ curl http://192.168.7.26:5000/v1/search
+&#123;&quot;num_results&quot;: 7, &quot;query&quot;: &quot;&quot;, &quot;results&quot;: [&#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/miaxis_j2ee&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/tomcat&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/ubuntu&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/ubuntu_office&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/desktop_ubu&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;dockerfile/ubuntu&quot;&#125;, &#123;&quot;description&quot;: &quot;&quot;, &quot;name&quot;: &quot;library/test&quot;&#125;]&#125;
+</code></pre>
+<p>这里可以看到 {“description”: “”, “name”: “library&#x2F;test”}，表明镜像已经被成功上传了。</p>
 <p>现在可以到另外一台机器去下载这个镜像。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker pull 192.168.7.26:5000/test</span><br><span class="line">Pulling repository 192.168.7.26:5000/test</span><br><span class="line">ba5877dc9bec: Download complete</span><br><span class="line">511136ea3c5a: Download complete</span><br><span class="line">9bad880da3d2: Download complete</span><br><span class="line">25f11f5fb0cb: Download complete</span><br><span class="line">ebc34468f71d: Download complete</span><br><span class="line">2318d26665ef: Download complete</span><br><span class="line">$ sudo docker images</span><br><span class="line">REPOSITORY                         TAG                 IMAGE ID            CREATED             VIRTUAL SIZE</span><br><span class="line">192.168.7.26:5000/test             latest              ba5877dc9bec        6 weeks ago         192.7 MB</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ sudo docker pull 192.168.7.26:5000/test
+Pulling repository 192.168.7.26:5000/test
+ba5877dc9bec: Download complete
+511136ea3c5a: Download complete
+9bad880da3d2: Download complete
+25f11f5fb0cb: Download complete
+ebc34468f71d: Download complete
+2318d26665ef: Download complete
+$ sudo docker images
+REPOSITORY                         TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+192.168.7.26:5000/test             latest              ba5877dc9bec        6 weeks ago         192.7 MB
+</code></pre>
 <p>可以使用 <a target="_blank" rel="noopener" href="https://github.com/yeasy/docker_practice/raw/master/_local/push_images.sh">这个脚本</a> 批量上传本地的镜像到注册服务器中，默认是本地注册服务器 127.0.0.1:5000。例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://github.com/yeasy/docker_practice/raw/master/_local/push_images.sh; sudo <span class="built_in">chmod</span> a+x push_images.sh</span><br><span class="line">$ ./push_images.sh ubuntu:latest centos:centos7</span><br><span class="line">The registry server is 127.0.0.1</span><br><span class="line">Uploading ubuntu:latest...</span><br><span class="line">The push refers to a repository [127.0.0.1:5000/ubuntu] (len: 1)</span><br><span class="line">Sending image list</span><br><span class="line">Pushing repository 127.0.0.1:5000/ubuntu (1 tags)</span><br><span class="line">Image 511136ea3c5a already pushed, skipping</span><br><span class="line">Image bfb8b5a2ad34 already pushed, skipping</span><br><span class="line">Image c1f3bdbd8355 already pushed, skipping</span><br><span class="line">Image 897578f527ae already pushed, skipping</span><br><span class="line">Image 9387bcc9826e already pushed, skipping</span><br><span class="line">Image 809ed259f845 already pushed, skipping</span><br><span class="line">Image 96864a7d2df3 already pushed, skipping</span><br><span class="line">Pushing tag <span class="keyword">for</span> rev [96864a7d2df3] on &#123;http://127.0.0.1:5000/v1/repositories/ubuntu/tags/latest&#125;</span><br><span class="line">Untagged: 127.0.0.1:5000/ubuntu:latest</span><br><span class="line">Done</span><br><span class="line">Uploading centos:centos7...</span><br><span class="line">The push refers to a repository [127.0.0.1:5000/centos] (len: 1)</span><br><span class="line">Sending image list</span><br><span class="line">Pushing repository 127.0.0.1:5000/centos (1 tags)</span><br><span class="line">Image 511136ea3c5a already pushed, skipping</span><br><span class="line">34e94e67e63a: Image successfully pushed</span><br><span class="line">70214e5d0a90: Image successfully pushed</span><br><span class="line">Pushing tag <span class="keyword">for</span> rev [70214e5d0a90] on &#123;http://127.0.0.1:5000/v1/repositories/centos/tags/centos7&#125;</span><br><span class="line">Untagged: 127.0.0.1:5000/centos:centos7</span><br><span class="line">Done</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ wget https://github.com/yeasy/docker_practice/raw/master/_local/push_images.sh; sudo chmod a+x push_images.sh
+$ ./push_images.sh ubuntu:latest centos:centos7
+The registry server is 127.0.0.1
+Uploading ubuntu:latest...
+The push refers to a repository [127.0.0.1:5000/ubuntu] (len: 1)
+Sending image list
+Pushing repository 127.0.0.1:5000/ubuntu (1 tags)
+Image 511136ea3c5a already pushed, skipping
+Image bfb8b5a2ad34 already pushed, skipping
+Image c1f3bdbd8355 already pushed, skipping
+Image 897578f527ae already pushed, skipping
+Image 9387bcc9826e already pushed, skipping
+Image 809ed259f845 already pushed, skipping
+Image 96864a7d2df3 already pushed, skipping
+Pushing tag for rev [96864a7d2df3] on &#123;http://127.0.0.1:5000/v1/repositories/ubuntu/tags/latest&#125;
+Untagged: 127.0.0.1:5000/ubuntu:latest
+Done
+Uploading centos:centos7...
+The push refers to a repository [127.0.0.1:5000/centos] (len: 1)
+Sending image list
+Pushing repository 127.0.0.1:5000/centos (1 tags)
+Image 511136ea3c5a already pushed, skipping
+34e94e67e63a: Image successfully pushed
+70214e5d0a90: Image successfully pushed
+Pushing tag for rev [70214e5d0a90] on &#123;http://127.0.0.1:5000/v1/repositories/centos/tags/centos7&#125;
+Untagged: 127.0.0.1:5000/centos:centos7
+Done
+</code></pre>
 <h2 id="仓库配置文件"><a href="#仓库配置文件" class="headerlink" title="仓库配置文件"></a>仓库配置文件</h2><p>Docker 的 Registry 利用配置文件提供了一些仓库的模板（flavor），用户可以直接使用它们来进行开发或生产部署。</p>
 <h3 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h3><p>在 config_sample.yml 文件中，可以看到一些现成的模板段：</p>
 <ul>
@@ -2479,13 +2575,40 @@
 <li>swift：存储数据到 OpenStack Swift 服务</li>
 <li>glance：存储数据到 OpenStack Glance 服务，本地文件系统为后备</li>
 <li>glance-swift：存储数据到 OpenStack Glance 服务，Swift 为后备</li>
-<li>elliptics：存储数据到 Elliptics key/value 存储</li>
+<li>elliptics：存储数据到 Elliptics key&#x2F;value 存储</li>
 </ul>
 <p>用户也可以添加自定义的模版段。</p>
 <p>默认情况下使用的模板是 dev，要使用某个模板作为默认值，可以添加 SETTINGS_FLAVOR 到环境变量中，例如</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export SETTINGS_FLAVOR=dev</span><br></pre></td></tr></table></figure>
+<pre><code>export SETTINGS_FLAVOR=dev
+</code></pre>
 <p>另外，配置文件中支持从环境变量中加载值，语法格式为 <code>_env:VARIABLENAME[:DEFAULT]</code>。</p>
-<h3 id="示例配置"><a href="#示例配置" class="headerlink" title="示例配置"></a>示例配置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">common:</span><br><span class="line">    loglevel: info</span><br><span class="line">    search_backend: &quot;_env:SEARCH_BACKEND:&quot;</span><br><span class="line">    sqlalchemy_index_database:</span><br><span class="line">        &quot;_env:SQLALCHEMY_INDEX_DATABASE:sqlite:////tmp/docker-registry.db&quot;</span><br><span class="line"></span><br><span class="line">prod:</span><br><span class="line">    loglevel: warn</span><br><span class="line">    storage: s3</span><br><span class="line">    s3_access_key: _env:AWS_S3_ACCESS_KEY</span><br><span class="line">    s3_secret_key: _env:AWS_S3_SECRET_KEY</span><br><span class="line">    s3_bucket: _env:AWS_S3_BUCKET</span><br><span class="line">    boto_bucket: _env:AWS_S3_BUCKET</span><br><span class="line">    storage_path: /srv/docker</span><br><span class="line">    smtp_host: localhost</span><br><span class="line">    from_addr: docker@myself.com</span><br><span class="line">    to_addr: my@myself.com</span><br><span class="line"></span><br><span class="line">dev:</span><br><span class="line">    loglevel: debug</span><br><span class="line">    storage: local</span><br><span class="line">    storage_path: /home/myself/docker</span><br><span class="line"></span><br><span class="line">test:</span><br><span class="line">    storage: local</span><br><span class="line">    storage_path: /tmp/tmpdockertmp</span><br></pre></td></tr></table></figure>
+<h3 id="示例配置"><a href="#示例配置" class="headerlink" title="示例配置"></a>示例配置</h3><pre><code>common:
+    loglevel: info
+    search_backend: &quot;_env:SEARCH_BACKEND:&quot;
+    sqlalchemy_index_database:
+        &quot;_env:SQLALCHEMY_INDEX_DATABASE:sqlite:////tmp/docker-registry.db&quot;
+
+prod:
+    loglevel: warn
+    storage: s3
+    s3_access_key: _env:AWS_S3_ACCESS_KEY
+    s3_secret_key: _env:AWS_S3_SECRET_KEY
+    s3_bucket: _env:AWS_S3_BUCKET
+    boto_bucket: _env:AWS_S3_BUCKET
+    storage_path: /srv/docker
+    smtp_host: localhost
+    from_addr: docker@myself.com
+    to_addr: my@myself.com
+
+dev:
+    loglevel: debug
+    storage: local
+    storage_path: /home/myself/docker
+
+test:
+    storage: local
+    storage_path: /tmp/tmpdockertmp
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

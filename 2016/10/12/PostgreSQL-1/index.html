@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2362,12 +2362,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2016-10-12 19:49</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2016-10-12 19:49</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:251</span>
+        <span>字数:246</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2414,25 +2414,33 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="创建操作系统用户"><a href="#创建操作系统用户" class="headerlink" title="创建操作系统用户"></a>创建操作系统用户</h2><p>创建一个新的Linux用户：dbuser</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sudo</span> adduser dbuser <span class="comment">#创建一个新的Linux用户：dbuser</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$sudo adduser dbuser #创建一个新的Linux用户：dbuser
+</code></pre>
 <span id="more"></span>
 <h2 id="登录PostgreSQL控制台"><a href="#登录PostgreSQL控制台" class="headerlink" title="登录PostgreSQL控制台"></a>登录PostgreSQL控制台</h2><p>切换到postgres用户</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sudo</span> su - postgres <span class="comment">#切换到postgres用户</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$sudo su - postgres #切换到postgres用户
+</code></pre>
 <p>系统用户postgres以同名数据库用户的身份，登录数据库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$psql</span> <span class="comment">#系统用户postgres以同名数据库用户的身份，登录数据库</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$psql #系统用户postgres以同名数据库用户的身份，登录数据库
+</code></pre>
 <p>成功登录到控制台后，显示 <code>postgres=#</code></p>
 <blockquote>
 <p>注意：后面分号不能省略</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\password postgres <span class="comment">#给postgres用户设置密码</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">\password postgres #给postgres用户设置密码
+</code></pre>
 <p>创建数据库用户dbuser</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER dbuser WITH PASSWORD <span class="string">&#x27;dbuser&#x27;</span>; <span class="comment">#创建数据库用户dbuser</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">CREATE USER dbuser WITH PASSWORD &#39;dbuser&#39;; #创建数据库用户dbuser
+</code></pre>
 <p>创建用户数据库，这里为exampledb，并指定所有者为dbuser。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE exampledb OWNER dbuser; <span class="comment">#创建用户数据库，这里为exampledb，并指定所有者为dbuser。</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">CREATE DATABASE exampledb OWNER dbuser; #创建用户数据库，这里为exampledb，并指定所有者为dbuser。
+</code></pre>
 <p>将exampledb数据库的所有权限都赋予dbuser</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON DATABASE exampledb to dbuser; <span class="comment">#将exampledb数据库的所有权限都赋予dbuser</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">GRANT ALL PRIVILEGES ON DATABASE exampledb to dbuser; #将exampledb数据库的所有权限都赋予dbuser
+</code></pre>
 <p>推出控制台（也可以直接按ctrl+D）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\q <span class="comment">#退出控制台</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">\q #退出控制台
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

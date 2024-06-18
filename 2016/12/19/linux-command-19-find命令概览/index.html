@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2362,7 +2362,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2016-12-19 15:19</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:11'>2016-12-19 15:19</time>
         
     </div>
     <div class="article-meta">
@@ -2415,7 +2415,8 @@
       
         <p>　　Linux下find命令在目录结构中搜索文件，并执行指定的操作。Linux下find命令提供了相当多的查找条件，功能很强大。由于find具有强大的功能，所以它的选项也很多，其中大部分选项都值得我们花时间来了解一下。即使系统中含有网络文件系统( NFS)，find命令在该文件系统中同样有效，只你具有相应的权限。 在运行一个非常消耗资源的find命令时，很多人都倾向于把它放在后台执行，因为遍历一个大的文件系统可能会花费很长的时间(这里是指30G字节以上的文件系统)。</p>
 <span id="more"></span>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find pathname -options [-<span class="built_in">print</span> -<span class="built_in">exec</span> -ok ...]</span><br></pre></td></tr></table></figure>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><pre><code class="bash">$ find pathname -options [-print -exec -ok ...]
+</code></pre>
 <h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>　　用于在文件树种查找文件，并作出相应的处理</p>
 <h3 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h3><table>
 <thead>
@@ -2426,7 +2427,7 @@
 </thead>
 <tbody><tr>
 <td align="left">pathname</td>
-<td align="left">find命令所查找的目录路径。例如用.来表示当前目录，用/来表示系统根目录</td>
+<td align="left">find命令所查找的目录路径。例如用.来表示当前目录，用&#x2F;来表示系统根目录</td>
 </tr>
 <tr>
 <td align="left">-print</td>
@@ -2474,11 +2475,11 @@
 </tr>
 <tr>
 <td align="left">-nogroup</td>
-<td align="left">查找无有效所属组的文件，即该文件所属的组在/etc/groups中不存在</td>
+<td align="left">查找无有效所属组的文件，即该文件所属的组在&#x2F;etc&#x2F;groups中不存在</td>
 </tr>
 <tr>
 <td align="left">-nouser</td>
-<td align="left">查找无有效属主的文件，即该文件的属主在/etc/passwd中不存在</td>
+<td align="left">查找无有效属主的文件，即该文件的属主在&#x2F;etc&#x2F;passwd中不存在</td>
 </tr>
 <tr>
 <td align="left">-newer file1 ! file2</td>
@@ -2494,7 +2495,7 @@
 </tr>
 <tr>
 <td align="left">-fstype</td>
-<td align="left">查找位于某一类型文件系统中的文件，这些文件系统类型通常可以在配置文件/etc/fstab中找到，该配置文件中包含了本系统中有关文件系统的信息</td>
+<td align="left">查找位于某一类型文件系统中的文件，这些文件系统类型通常可以在配置文件&#x2F;etc&#x2F;fstab中找到，该配置文件中包含了本系统中有关文件系统的信息</td>
 </tr>
 <tr>
 <td align="left">-mount</td>
@@ -2534,17 +2535,28 @@
 </tr>
 </tbody></table>
 <h3 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h3><p><strong><code>例一</code>：查找指定时间内修改过的文件</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找48小时内修改过的文件</span></span><br><span class="line">$ find -atime -2</span><br></pre></td></tr></table></figure>
+<pre><code class="bash"># 查找48小时内修改过的文件
+$ find -atime -2
+</code></pre>
 <p><strong><code>例二</code>：根据关键字查找</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在当前目录查找一.log结尾的文件。 &quot;. &quot;代表当前目录</span></span><br><span class="line">$ find . -name <span class="string">&quot;*.log&quot;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash"># 在当前目录查找一.log结尾的文件。 &quot;. &quot;代表当前目录
+$ find . -name &quot;*.log&quot;
+</code></pre>
 <p><strong><code>例三</code>：按照目录或文件的权限来查找文件</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找/opt/soft/test/目录下 权限为 777的文件</span></span><br><span class="line">$ find /opt/soft/test/ -perm 777</span><br></pre></td></tr></table></figure>
+<pre><code class="bash"># 查找/opt/soft/test/目录下 权限为 777的文件
+$ find /opt/soft/test/ -perm 777
+</code></pre>
 <p><strong><code>例四</code>：按类型查找</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找当目录，以.log结尾的普通文件</span></span><br><span class="line">$ find . -<span class="built_in">type</span> f -name <span class="string">&quot;*.log&quot;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash"># 查找当目录，以.log结尾的普通文件
+$ find . -type f -name &quot;*.log&quot;
+</code></pre>
 <p><strong><code>例五</code>：查找当前所有目录并排序</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find . -<span class="built_in">type</span> d | <span class="built_in">sort</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ find . -type d | sort
+</code></pre>
 <p><strong><code>例六</code>：按大小查找文件</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找当前目录大于1K的文件</span></span><br><span class="line">$ find . -size +1000c -<span class="built_in">print</span></span><br></pre></td></tr></table></figure>
+<pre><code class="bash"># 查找当前目录大于1K的文件
+$ find . -size +1000c -print
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

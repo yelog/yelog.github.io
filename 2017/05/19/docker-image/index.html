@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2362,12 +2362,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2017-05-19 16:47</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2017-05-19 16:47</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:603</span>
+        <span>字数:602</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2415,9 +2415,60 @@
       
         <h2 id="What"><a href="#What" class="headerlink" title="What"></a>What</h2><p>Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。</p>
 <p>因为镜像包含操作系统完整的 root 文件系统，其体积往往是庞大的，因此在 Docker 设计时，就充分利用 Union FS 的技术，将其设计为分层存储的架构。所以严格来说，镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 官方 的安装脚本</span></span><br><span class="line">$ curl -sSL https://get.docker.com/ | sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 阿里云 的安装脚本</span></span><br><span class="line">$ curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh -</span><br><span class="line"></span><br><span class="line"><span class="comment"># DaoCloud 的安装脚本</span></span><br><span class="line">$ curl -sSL https://get.daocloud.io/docker | sh</span><br></pre></td></tr></table></figure>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code class="bash"># 官方 的安装脚本
+$ curl -sSL https://get.docker.com/ | sh
 
-<h2 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"># 获取镜像，registry为空默认从Docker Hub上获取</span><br><span class="line">docker pull [选项] [Docker Registry地址]&lt;仓库名&gt;:&lt;标签&gt;</span><br><span class="line"></span><br><span class="line"># 交互式运行，退出删除: -i:交互式 ,-t:终端,--rm 退出删除 ,bash 启动bash窗口</span><br><span class="line">$ docker run -it --rm ubuntu:14.04 bash</span><br><span class="line"></span><br><span class="line"># 列出已下载的镜像（只显示顶层镜像） -a:显示所有镜像 image_name:指定列出某个镜像</span><br><span class="line">$ docker images [-a] [image_name]</span><br><span class="line"></span><br><span class="line"># 只显示虚悬镜像(dangling image) -f:--filter 过滤</span><br><span class="line">$ docker images -f dangling=true</span><br><span class="line"></span><br><span class="line"># 过滤从mongo:3.2建立之后的镜像</span><br><span class="line">$ docker images -f since=mongo:3.2</span><br><span class="line"></span><br><span class="line"># 通过label过滤</span><br><span class="line">$ docker images -f label=com.example.version=0.1</span><br><span class="line"></span><br><span class="line"># 只显示镜像id</span><br><span class="line">$ docker images -q</span><br><span class="line"></span><br><span class="line"># 只包含镜像ID和仓库名</span><br><span class="line">$ docker images --format &quot;&#123;&#123;.ID&#125;&#125;: &#123;&#123;.Repository&#125;&#125;&quot;</span><br><span class="line"></span><br><span class="line"># 以表格等距显示 有标题行，和默认一样，不过自己定义列</span><br><span class="line">$ docker images --format &quot;table &#123;&#123;.ID&#125;&#125;\t&#123;&#123;.Repository&#125;&#125;\t&#123;&#123;.Tag&#125;&#125;&quot;</span><br><span class="line"></span><br><span class="line"># 删除镜像ID为image_id的镜像</span><br><span class="line">$ docker rmi &lt;image_id&gt;</span><br><span class="line"></span><br><span class="line"># 删除虚悬镜像</span><br><span class="line">$ docker rmi $(docker images -q -f dangling=true)</span><br><span class="line"></span><br><span class="line"># 将容器保存为镜像</span><br><span class="line">$ docker commit [选项] &lt;容器ID或容器名&gt; [&lt;仓库名&gt;[:&lt;标签&gt;]]</span><br><span class="line"></span><br><span class="line"># 将容器保存为镜像</span><br><span class="line">$ docker commit \</span><br><span class="line">    --author &quot;Tao Wang &lt;twang2218@gmail.com&gt;&quot; \</span><br><span class="line">    --message &quot;修改了默认网页&quot; \</span><br><span class="line">    webserver \</span><br><span class="line">    nginx:v2</span><br><span class="line"></span><br><span class="line">$ docker history nginx:v2</span><br></pre></td></tr></table></figure>
+# 阿里云 的安装脚本
+$ curl -sSL http://acs-public-mirror.oss-cn-hangzhou.aliyuncs.com/docker-engine/internet | sh -
+
+# DaoCloud 的安装脚本
+$ curl -sSL https://get.daocloud.io/docker | sh
+</code></pre>
+<h2 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h2><pre><code># 获取镜像，registry为空默认从Docker Hub上获取
+docker pull [选项] [Docker Registry地址]&lt;仓库名&gt;:&lt;标签&gt;
+
+# 交互式运行，退出删除: -i:交互式 ,-t:终端,--rm 退出删除 ,bash 启动bash窗口
+$ docker run -it --rm ubuntu:14.04 bash
+
+# 列出已下载的镜像（只显示顶层镜像） -a:显示所有镜像 image_name:指定列出某个镜像
+$ docker images [-a] [image_name]
+
+# 只显示虚悬镜像(dangling image) -f:--filter 过滤
+$ docker images -f dangling=true
+
+# 过滤从mongo:3.2建立之后的镜像
+$ docker images -f since=mongo:3.2
+
+# 通过label过滤
+$ docker images -f label=com.example.version=0.1
+
+# 只显示镜像id
+$ docker images -q
+
+# 只包含镜像ID和仓库名
+$ docker images --format &quot;&#123;&#123;.ID&#125;&#125;: &#123;&#123;.Repository&#125;&#125;&quot;
+
+# 以表格等距显示 有标题行，和默认一样，不过自己定义列
+$ docker images --format &quot;table &#123;&#123;.ID&#125;&#125;\t&#123;&#123;.Repository&#125;&#125;\t&#123;&#123;.Tag&#125;&#125;&quot;
+
+# 删除镜像ID为image_id的镜像
+$ docker rmi &lt;image_id&gt;
+
+# 删除虚悬镜像
+$ docker rmi $(docker images -q -f dangling=true)
+
+# 将容器保存为镜像
+$ docker commit [选项] &lt;容器ID或容器名&gt; [&lt;仓库名&gt;[:&lt;标签&gt;]]
+
+# 将容器保存为镜像
+$ docker commit \
+    --author &quot;Tao Wang &lt;twang2218@gmail.com&gt;&quot; \
+    --message &quot;修改了默认网页&quot; \
+    webserver \
+    nginx:v2
+
+$ docker history nginx:v2
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>

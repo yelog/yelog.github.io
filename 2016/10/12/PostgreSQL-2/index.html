@@ -47,7 +47,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7312950143901041"
      crossorigin="anonymous"></script>
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="叶落阁" type="application/atom+xml">
 </head>
 <div style="display: none">
   <input class="theme_disqus_on" value="false">
@@ -511,7 +511,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="162">
-<input type="hidden" id="yelog_site_word_count" value="162.7k">
+<input type="hidden" id="yelog_site_word_count" value="163.2k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -915,7 +915,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="java,spring-boot,docker"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -951,7 +951,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/08/01/reducing-local-springcloud-base-on-nacos-and-gray-release/"
-           data-tag="java,nacos,springcloud,k8s,gray-release"
+           data-tag="java,k8s,nacos,springcloud,gray-release"
            data-author="" >
             <span class="post-title" title="基于 nacos/灰度发布 实现减少本地启动微服务数量的实践">基于 nacos/灰度发布 实现减少本地启动微服务数量的实践</span>
             <span class="post-date" title="2022-08-01 20:06:14">2022/08/01</span>
@@ -960,7 +960,7 @@
         
         <a  class="全部文章 后端 "
            href="/2022/07/27/springboot-graceful-shutdown-based-on-nacos2-and-k8s/"
-           data-tag="java,nacos,springcloud,k8s"
+           data-tag="java,k8s,nacos,springcloud"
            data-author="" >
             <span class="post-title" title="基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]">基于 nacos/springcloud/k8s 的不停机服务更新[graceful shutdown]</span>
             <span class="post-date" title="2022-07-27 15:35:39">2022/07/27</span>
@@ -1006,7 +1006,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -1123,7 +1123,7 @@
         
         <a  class="全部文章 运维 "
            href="/2017/10/20/linux%E4%B8%8B%E4%BF%AE%E6%94%B9%E6%8C%89%E9%94%AEESC%3C=%3ECAPSLOCK%E5%92%8CControl=%3EALT_R/"
-           data-tag="vim,keybord,emacs,linux"
+           data-tag="linux,vim,keybord,emacs"
            data-author="" >
             <span class="post-title" title="linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R">linux下修改按键ESC&lt;=&gt;CAPSLOCK和Control=&gt;ALT_R</span>
             <span class="post-date" title="2017-10-20 17:38:49">2017/10/20</span>
@@ -2362,12 +2362,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-06-16 17:12:39'>2016-10-12 20:27</time>
+            发布时间 : <time class="date" title='最后更新: 2024-06-18 14:30:10'>2016-10-12 20:27</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:255</span>
+        <span>字数:253</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2413,11 +2413,52 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="控制台命令"><a href="#控制台命令" class="headerlink" title="控制台命令"></a>控制台命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\h: <span class="comment">#查看SQL命令的解释，比如\h select。</span></span><br><span class="line">\?: <span class="comment">#查看psql命令列表。</span></span><br><span class="line">\l: <span class="comment">#列出所有数据库。</span></span><br><span class="line">\c [database_name]: <span class="comment">#连接其他数据库。</span></span><br><span class="line">\d: <span class="comment">#列出当前数据库的所有表格。</span></span><br><span class="line">\d [table_name]: <span class="comment">#列出某一张表格的结构。</span></span><br><span class="line">\<span class="built_in">du</span>: <span class="comment">#列出所有用户。</span></span><br><span class="line">\e: <span class="comment">#打开文本编辑器。</span></span><br><span class="line">\conninfo: <span class="comment">#列出当前数据库和连接的信息。</span></span><br></pre></td></tr></table></figure>
+        <h2 id="控制台命令"><a href="#控制台命令" class="headerlink" title="控制台命令"></a>控制台命令</h2><pre><code class="bash">\h: #查看SQL命令的解释，比如\h select。
+\?: #查看psql命令列表。
+\l: #列出所有数据库。
+\c [database_name]: #连接其他数据库。
+\d: #列出当前数据库的所有表格。
+\d [table_name]: #列出某一张表格的结构。
+\du: #列出所有用户。
+\e: #打开文本编辑器。
+\conninfo: #列出当前数据库和连接的信息。
+</code></pre>
 <span id="more"></span>
 
 <h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><p>基本的数据库操作，就是使用一般的SQL语言</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># 创建新表</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> user_tbl(name <span class="type">VARCHAR</span>(<span class="number">20</span>), signup_date <span class="type">DATE</span>);</span><br><span class="line"></span><br><span class="line"># 插入数据</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> user_tbl(name, signup_date) <span class="keyword">VALUES</span>(<span class="string">&#x27;张三&#x27;</span>, <span class="string">&#x27;2013-12-22&#x27;</span>);</span><br><span class="line"></span><br><span class="line"># 选择记录</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> user_tbl;</span><br><span class="line"></span><br><span class="line"># 更新数据</span><br><span class="line"><span class="keyword">UPDATE</span> user_tbl <span class="keyword">set</span> name <span class="operator">=</span> <span class="string">&#x27;李四&#x27;</span> <span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="string">&#x27;张三&#x27;</span>;</span><br><span class="line"></span><br><span class="line"># 删除记录</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> user_tbl <span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="string">&#x27;李四&#x27;</span> ;</span><br><span class="line"></span><br><span class="line"># 添加栏位</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> user_tbl <span class="keyword">ADD</span> email <span class="type">VARCHAR</span>(<span class="number">40</span>);</span><br><span class="line"></span><br><span class="line"># 更新结构</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> user_tbl <span class="keyword">ALTER</span> <span class="keyword">COLUMN</span> signup_date <span class="keyword">SET</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span>;</span><br><span class="line"></span><br><span class="line"># 更名栏位</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> user_tbl RENAME <span class="keyword">COLUMN</span> signup_date <span class="keyword">TO</span> signup;</span><br><span class="line"></span><br><span class="line"># 删除栏位</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> user_tbl <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> email;</span><br><span class="line"></span><br><span class="line"># 表格更名</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> user_tbl RENAME <span class="keyword">TO</span> backup_tbl;</span><br><span class="line"></span><br><span class="line"># 删除表格</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> backup_tbl;</span><br></pre></td></tr></table></figure>
+<pre><code class="SQL"># 创建新表
+CREATE TABLE user_tbl(name VARCHAR(20), signup_date DATE);
+
+# 插入数据
+INSERT INTO user_tbl(name, signup_date) VALUES(&#39;张三&#39;, &#39;2013-12-22&#39;);
+
+# 选择记录
+SELECT * FROM user_tbl;
+
+# 更新数据
+UPDATE user_tbl set name = &#39;李四&#39; WHERE name = &#39;张三&#39;;
+
+# 删除记录
+DELETE FROM user_tbl WHERE name = &#39;李四&#39; ;
+
+# 添加栏位
+ALTER TABLE user_tbl ADD email VARCHAR(40);
+
+# 更新结构
+ALTER TABLE user_tbl ALTER COLUMN signup_date SET NOT NULL;
+
+# 更名栏位
+ALTER TABLE user_tbl RENAME COLUMN signup_date TO signup;
+
+# 删除栏位
+ALTER TABLE user_tbl DROP COLUMN email;
+
+# 表格更名
+ALTER TABLE user_tbl RENAME TO backup_tbl;
+
+# 删除表格
+DROP TABLE IF EXISTS backup_tbl;
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
