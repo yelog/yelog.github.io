@@ -1565,20 +1565,6 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/java/</loc>
-    <lastmod>2024-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/tags/concurrent/</loc>
-    <lastmod>2024-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yelog.org/tags/%E8%BF%90%E7%BB%B4/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1587,6 +1573,20 @@
   
   <url>
     <loc>http://yelog.org/tags/centos/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/java/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/concurrent/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1614,6 +1614,13 @@
   </url>
   
   <url>
+    <loc>http://yelog.org/tags/translation/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://yelog.org/tags/jsp/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1622,13 +1629,6 @@
   
   <url>
     <loc>http://yelog.org/tags/jstl/</loc>
-    <lastmod>2024-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/tags/translation/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1936,14 +1936,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/neovim/</loc>
+    <loc>http://yelog.org/tags/%E6%B4%BB%E7%9D%80/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/%E6%B4%BB%E7%9D%80/</loc>
+    <loc>http://yelog.org/tags/neovim/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
