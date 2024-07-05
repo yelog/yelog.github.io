@@ -46,7 +46,7 @@
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.1",
     "webpack-dev-server": "^3.7.2",
-    "xlsx": "^0.14.3"
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@babel/plugin-syntax-jsx": "^7.2.0"
