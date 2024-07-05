@@ -1565,20 +1565,6 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/%E8%BF%90%E7%BB%B4/</loc>
-    <lastmod>2024-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/tags/centos/</loc>
-    <lastmod>2024-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yelog.org/tags/java/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1593,7 +1579,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/docker/</loc>
+    <loc>http://yelog.org/tags/%E8%BF%90%E7%BB%B4/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/centos/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1601,6 +1594,13 @@
   
   <url>
     <loc>http://yelog.org/tags/linux/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/docker/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1635,6 +1635,13 @@
   </url>
   
   <url>
+    <loc>http://yelog.org/tags/k8s/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://yelog.org/tags/mac/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1643,13 +1650,6 @@
   
   <url>
     <loc>http://yelog.org/tags/efficiency/</loc>
-    <lastmod>2024-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/tags/k8s/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1873,14 +1873,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/nginx/</loc>
+    <loc>http://yelog.org/tags/mybatis/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/mybatis/</loc>
+    <loc>http://yelog.org/tags/nginx/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1929,13 +1929,6 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/%E6%B4%BB%E7%9D%80/</loc>
-    <lastmod>2024-07-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yelog.org/tags/tale/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -1944,6 +1937,13 @@
   
   <url>
     <loc>http://yelog.org/tags/neovim/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/%E6%B4%BB%E7%9D%80/</loc>
     <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
