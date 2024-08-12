@@ -1611,14 +1611,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/docker/</loc>
+    <loc>http://yelog.org/tags/linux/</loc>
     <lastmod>2024-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/linux/</loc>
+    <loc>http://yelog.org/tags/docker/</loc>
     <lastmod>2024-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1744,14 +1744,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/docker%E4%BB%93%E5%BA%93/</loc>
+    <loc>http://yelog.org/tags/deepin/</loc>
     <lastmod>2024-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/deepin/</loc>
+    <loc>http://yelog.org/tags/docker%E4%BB%93%E5%BA%93/</loc>
     <lastmod>2024-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1793,13 +1793,6 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/IntellijIDEA/</loc>
-    <lastmod>2024-08-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yelog.org/tags/home-assistant/</loc>
     <lastmod>2024-08-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -1808,6 +1801,13 @@
   
   <url>
     <loc>http://yelog.org/tags/iot/</loc>
+    <lastmod>2024-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/IntellijIDEA/</loc>
     <lastmod>2024-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1912,14 +1912,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/regex/</loc>
+    <loc>http://yelog.org/tags/gray-release/</loc>
     <lastmod>2024-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/gray-release/</loc>
+    <loc>http://yelog.org/tags/regex/</loc>
     <lastmod>2024-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2010,20 +2010,6 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/dubbo/</loc>
-    <lastmod>2024-08-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/tags/zookeeper/</loc>
-    <lastmod>2024-08-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yelog.org/tags/maven/</loc>
     <lastmod>2024-08-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -2032,6 +2018,20 @@
   
   <url>
     <loc>http://yelog.org/tags/nexus/</loc>
+    <lastmod>2024-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/dubbo/</loc>
+    <lastmod>2024-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/zookeeper/</loc>
     <lastmod>2024-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
