@@ -1541,15 +1541,6 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/2024/09/30/undefined/</loc>
-    
-    <lastmod>2024-09-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://yelog.org/2017/01/31/reading-list/</loc>
     
     <lastmod>2024-09-30</lastmod>
@@ -1668,14 +1659,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/firewall/</loc>
+    <loc>http://yelog.org/tags/samba/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/samba/</loc>
+    <loc>http://yelog.org/tags/firewall/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1710,14 +1701,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/linux/</loc>
+    <loc>http://yelog.org/tags/docker/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/docker/</loc>
+    <loc>http://yelog.org/tags/linux/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1745,14 +1736,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/translation/</loc>
+    <loc>http://yelog.org/tags/k8s/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/k8s/</loc>
+    <loc>http://yelog.org/tags/translation/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1829,6 +1820,20 @@
   </url>
   
   <url>
+    <loc>http://yelog.org/tags/centos7/</loc>
+    <lastmod>2024-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/yum/</loc>
+    <lastmod>2024-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://yelog.org/tags/Git/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -1844,20 +1849,6 @@
   
   <url>
     <loc>http://yelog.org/tags/deepin/</loc>
-    <lastmod>2024-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/tags/centos7/</loc>
-    <lastmod>2024-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/tags/yum/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2095,14 +2086,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/rancher/</loc>
+    <loc>http://yelog.org/tags/file-manager/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/file-manager/</loc>
+    <loc>http://yelog.org/tags/rancher/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2130,14 +2121,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/shell/</loc>
+    <loc>http://yelog.org/tags/regex/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/regex/</loc>
+    <loc>http://yelog.org/tags/shell/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2186,13 +2177,6 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/javaee/</loc>
-    <lastmod>2024-09-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yelog.org/tags/window-manager/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -2200,7 +2184,7 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/clippings/</loc>
+    <loc>http://yelog.org/tags/javaee/</loc>
     <lastmod>2024-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
