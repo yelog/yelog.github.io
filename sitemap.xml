@@ -686,6 +686,15 @@
   </url>
   
   <url>
+    <loc>http://yelog.org/2024/10/10/install-ollama-offline-english/</loc>
+    
+    <lastmod>2024-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yelog.org/2024/01/02/macos-ocr-swift/</loc>
     
     <lastmod>2024-10-12</lastmod>
@@ -1691,20 +1700,6 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/java/</loc>
-    <lastmod>2024-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/tags/concurrent/</loc>
-    <lastmod>2024-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yelog.org/tags/%E8%BF%90%E7%BB%B4/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -1719,7 +1714,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/docker/</loc>
+    <loc>http://yelog.org/tags/java/</loc>
+    <lastmod>2024-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/concurrent/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1727,6 +1729,13 @@
   
   <url>
     <loc>http://yelog.org/tags/linux/</loc>
+    <lastmod>2024-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/docker/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1768,6 +1777,13 @@
   </url>
   
   <url>
+    <loc>http://yelog.org/tags/pjax/</loc>
+    <lastmod>2024-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://yelog.org/tags/mac/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -1776,13 +1792,6 @@
   
   <url>
     <loc>http://yelog.org/tags/efficiency/</loc>
-    <lastmod>2024-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/tags/pjax/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1866,14 +1875,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/commands/</loc>
+    <loc>http://yelog.org/tags/deepin/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/deepin/</loc>
+    <loc>http://yelog.org/tags/commands/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2421,21 +2430,7 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/categories/Software-Installation/</loc>
-    <lastmod>2024-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yelog.org/categories/%E5%BC%80%E5%8F%91/java/</loc>
-    <lastmod>2024-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/categories/Software-Installation/Offline-Installation/</loc>
     <lastmod>2024-10-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

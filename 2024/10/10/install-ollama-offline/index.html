@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(177)</small>
+                <small>(178)</small>
             
         </div>
     </li>
@@ -301,7 +301,7 @@
         <div data-rel="工具">
             <i class="fold iconfont icon-right"></i>
             工具
-            <small>(46)</small>
+            <small>(48)</small>
         </div>
         
             <ul class="sub hide">
@@ -518,40 +518,6 @@
     
         
             
-                
-    <li>
-        <div data-rel="Software Installation">
-            <i class="fold iconfont icon-right"></i>
-            Software Installation
-            <small>(1)</small>
-        </div>
-        
-            <ul class="sub hide">
-                
-                    
-    <li>
-        <div data-rel="Software Installation&lt;---&gt;Offline Installation">
-            
-            Offline Installation
-            <small>(1)</small>
-        </div>
-        
-    </li>
-
-                
-            </ul>
-        
-    </li>
-
-            
-        
-    
-        
-            
-        
-    
-        
-            
         
     
         
@@ -589,8 +555,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="177">
-<input type="hidden" id="yelog_site_word_count" value="185.4k">
+<input type="hidden" id="yelog_site_posts_number" value="178">
+<input type="hidden" id="yelog_site_word_count" value="187.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -1065,7 +1031,16 @@
         </a>
         
         
-        <a  class="全部文章 Software Installation Offline Installation "
+        <a  class="全部文章 工具 "
+           href="/2024/10/10/install-ollama-offline-english/"
+           data-tag="Ollama,Offline,Tutorial,Installation Guide"
+           data-author="" >
+            <span class="post-title" title="Installing Ollama offline and loading offline models">Installing Ollama offline and loading offline models</span>
+            <span class="post-date" title="2024-10-10 16:31:27">2024/10/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 工具 "
            href="/2024/10/10/install-ollama-offline/"
            data-tag="Ollama,Offline,Tutorial,Installation Guide"
            data-author="" >
@@ -1320,7 +1295,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="docker,linux"
+           data-tag="linux,docker"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -2661,9 +2636,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="Software Installation">Software Installation</a> > 
-            
-            <a  data-rel="Software Installation&lt;---&gt;Offline Installation">Offline Installation</a>
+            <a  data-rel="工具">工具</a>
             
         </span>
         
@@ -2684,7 +2657,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-10-12 14:49:55'>2024-10-10 16:31</time>
+            发布时间 : <time class="date" title='最后更新: 2024-10-12 15:44:26'>2024-10-10 16:31</time>
         
     </div>
     <div class="article-meta">
@@ -2735,16 +2708,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本地已经玩了 ollama 很长时间了, 今天打算把 ollama 安装到服务器上, 但是服务器没有外网, 所以只能离线安装了, 找了一下离线装教程还是比较少了, 所以自己写一篇, 以便以后查阅.</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本地已经玩了 <code>ollama</code> 很长时间了, 今天打算把 <code>ollama</code> 安装到服务器上, 但是服务器没有外网, 所以只能离线安装了, 找了一下离线装教程还是比较少了, 所以自己写一篇, 以便以后查阅.</p>
 <h1 id="离线安装-Ollama"><a href="#离线安装-Ollama" class="headerlink" title="离线安装 Ollama"></a>离线安装 Ollama</h1><h2 id="下载安装包"><a href="#下载安装包" class="headerlink" title="下载安装包"></a>下载安装包</h2><p>在官方 <a target="_blank" rel="noopener" href="https://github.com/ollama/ollama/releases">Release</a> 中进行下载, 根据服务器的 cpu 类型下载对应的安装包, 下载完成后上传到服务器上.</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202410101649580.png" alt="Ollama Relase"></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>解压安装包 ollama linux amd64.tgz, 进入到解压后的目录, 执行 <code>install.sh</code> 脚本进行安装.</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>解压安装包 <code>ollama linux amd64.tgz</code>, 进入到解压后的目录, 执行 <code>install.sh</code> 脚本进行安装.</p>
 <pre><code class="bash"># 解压安装包
 tar -zxvf Ollama\ Linux\ AMD64.tgz
 # 将 ollama 执行命令移动到 /usr/bin 目录下
 sudo mv bin/ollama /usr/bin/ollama
 </code></pre>
-<h2 id="启动并添加开机启动"><a href="#启动并添加开机启动" class="headerlink" title="启动并添加开机启动"></a>启动并添加开机启动</h2><p>1.创建执行用户, 这一步可以忽略, 可以直接设置 root 或其他有 ollama 执行权限的用户都可以</p>
+<h2 id="启动并添加开机启动"><a href="#启动并添加开机启动" class="headerlink" title="启动并添加开机启动"></a>启动并添加开机启动</h2><p>1.创建执行用户, 这一步可以忽略, 可以直接设置 <code>root</code> 或其他有 <code>ollama</code> 执行权限的用户都可以</p>
 <pre><code class="bash">sudo useradd -r -s /bin/false -U -m -d /usr/share/ollama ollama
 sudo usermod -a -G ollama $(whoami)
 </code></pre>
@@ -2776,7 +2749,7 @@ sudo systemctl start ollama
 <h1 id="离线安装模型"><a href="#离线安装模型" class="headerlink" title="离线安装模型"></a>离线安装模型</h1><p>如下使用 <code>gguf</code> 模型安装方式, 模型安装的方式都差不多, 可以参考如下方式</p>
 <h2 id="Qwen2-5-3b"><a href="#Qwen2-5-3b" class="headerlink" title="Qwen2.5-3b"></a>Qwen2.5-3b</h2><p>1.下载模型, 可以到 <a target="_blank" rel="noopener" href="https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat-GGUF/tree/main">huggingface</a> 上搜索对应模型的 gguf 版本, 如搜索 <em>qwen2.5-3b-gguf</em></p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202410120953995.png" alt="search huggingface model"></p>
-<p>具体选那个微调版本都可以, 我们这里参考 ollama 上选择的模型版本, 如下图</p>
+<p>具体选那个微调版本都可以, 我们这里参考 <code>ollama</code> 上选择的模型版本, 如下图</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202410121437723.png" alt="ollama qwen2.5-3b model"></p>
 <p>我们直接在刚才找到的模型中, 点击 <code>Files and versions</code>, 找到在 ollama 中找到的版本, 点击下载</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202410121440090.png" alt="download qwen2.5-3b"></p>
@@ -2864,7 +2837,7 @@ curl --location --request POST &#39;http://127.0.0.1:11434/api/generate&#39; \
 <p>具体选那个微调版本都可以, 我们这里参考 ollama 上选择的模型版本, 如下图</p>
 <p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202410121445150.png" alt="ollama llama3.2-3b model"></p>
 <p>我们直接在刚才找到的模型中, 点击 <code>Files and versions</code>, 找到在 ollama 中找到的版本, 点击下载</p>
-<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202410121448569.png" alt="download qwen2.5-3b"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/yelog/assets/images/202410121448569.png" alt="download llama3.2-3b"></p>
 <p>2.将下载后的文件上传到服务器的目录 <code>/data/ollama</code>, 并重命名为 <code>llama3.2-3b.gguf</code>, (重命名为了方便后面引用)<br>3.在 <code>/data/ollama</code> 目录下创建文件 <code>Modelfile</code>, 添加如下内容</p>
 <pre><code class="dockerfile"># 上一步的模型名
 FROM ./llama3.2-3b.gguf
