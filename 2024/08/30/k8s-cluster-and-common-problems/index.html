@@ -556,7 +556,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="178">
-<input type="hidden" id="yelog_site_word_count" value="187.3k">
+<input type="hidden" id="yelog_site_word_count" value="187.4k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -1295,7 +1295,7 @@
         
         <a  class="全部文章 运维 "
            href="/2020/09/01/Docker-summary/"
-           data-tag="linux,docker"
+           data-tag="docker,linux"
            data-author="" >
             <span class="post-title" title="Docker 技术整理">Docker 技术整理</span>
             <span class="post-date" title="2020-09-01 22:11:00">2020/09/01</span>
@@ -2655,12 +2655,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2024-10-12 15:44:26'>2024-08-30 11:16</time>
+            发布时间 : <time class="date" title='最后更新: 2024-10-28 10:12:18'>2024-08-30 11:16</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:2.6k</span>
+        <span>字数:2.7k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -3009,6 +3009,15 @@ sudo find /data/docker/system/containers/ -name &quot;*-json.log&quot; | xargs s
 <p>2023-08-31 smt-wh 和 smt-tjsc 都出现了这个问题 <code>The node was low on resource: ephemeral-storage. Container lemes-service-wh-report was using 1936Ki, which exceeds its request of 0.</code></p>
 <p>超出了0，就不是有限制， 而是当前磁盘已经达到了 85%，造成了 pod 驱逐</p>
 <h3 id="导入-lemes-web-出现问题"><a href="#导入-lemes-web-出现问题" class="headerlink" title="导入 lemes-web 出现问题"></a>导入 lemes-web 出现问题</h3><p>Error from server (InternalError): error when creating “management-state&#x2F;tmp&#x2F;yaml-397511040”: Internal error occurred: failed calling webhook “validate.nginx.ingress.kubernetes.io”: Post “<a target="_blank" rel="noopener" href="https://ingress-nginx-controller-admission.ingress-nginx.svc/networking/v1/ingresses?timeout=10s">https://ingress-nginx-controller-admission.ingress-nginx.svc:443/networking/v1/ingresses?timeout=10s</a>“: x509: certificate is not valid for any names, but wanted to match ingress-nginx-controller-admission.ingress-nginx.svc</p>
+<p>2024-10-28 导入 moss-web 时, 再次遇到:<br>Internal error occurred: failed calling webhook &quot;validate.nginx.ingress.kubernetes.io&quot;: Post &quot;<a target="_blank" rel="noopener" href="https://ingress-nginx-controller-admission.ingress-nginx.svc/networking/v1beta1/ingresses?timeout=10s%5C">https://ingress-nginx-controller-admission.ingress-nginx.svc:443/networking/v1beta1/ingresses?timeout=10s\</a>“: x509: certificate is valid for localhost, rancher.cattle-system, not ingress-nginx-controller-admission.ingress-nginx.svc</p>
+<p>解决方案: <a target="_blank" rel="noopener" href="https://github.com/kubernetes/ingress-nginx/issues/5968#issuecomment-782092413">https://github.com/kubernetes/ingress-nginx/issues/5968#issuecomment-782092413</a></p>
+<pre><code class="bash"># Find name of the ingress-nginx-admission resource
+kubectl get -A ValidatingWebhookConfiguration
+# Delete it
+kubectl delete -A ValidatingWebhookConfiguration &lt;name&gt;
+# Example:
+kubectl delete -A ValidatingWebhookConfiguration foobar-ingress-nginx-admission
+</code></pre>
 <h3 id="node-节点报错-PLEG-is-not-healthy-pleg-was-last-seen-active-7m20-510472824s-ago-threshold-is-3m0s"><a href="#node-节点报错-PLEG-is-not-healthy-pleg-was-last-seen-active-7m20-510472824s-ago-threshold-is-3m0s" class="headerlink" title="node 节点报错 PLEG is not healthy: pleg was last seen active 7m20.510472824s ago; threshold is 3m0s"></a>node 节点报错 PLEG is not healthy: pleg was last seen active 7m20.510472824s ago; threshold is 3m0s</h3><p>有个 <code>issue</code> 问题很像 <a target="_blank" rel="noopener" href="https://github.com/rancher/rancher/issues/31793#issuecomment-911143593">PLEG is not healthy K8 1.20.4&#x2F;Ubuntu 20.04</a></p>
 <p>根据 <code>minchieh-fay</code> 老哥的回答,是 <code>runc</code> 的 <code>runc-1.0.0-rc93</code> 这个版本有问题</p>
 <p>可以通过 <code>docker version</code> 来查看 <code>runc</code> 的版本, 确实是 <code>runc-1.0.0-rc93</code>, 按照如下方式进行离线升级</p>
