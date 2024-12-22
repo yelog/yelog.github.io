@@ -683,6 +683,7 @@
   background-image: radial-gradient(transparent 1px, #fff 1px);
   background-size: 4px 4px;
   backdrop-filter: saturate(50%) blur(4px);
+  z-index: 10;
   height: 45px;
   position: absolute;
   top: 0;
@@ -917,7 +918,8 @@
   overflow-y: auto;
   overflow-x: hidden;
   position: absolute;
-  top: 45px;
+  padding-top: 45px;
+  top: 0;
   bottom: 0;
   -webkit-overflow-scrolling: touch;
 }
