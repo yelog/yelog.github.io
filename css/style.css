@@ -1491,6 +1491,8 @@
 #post .pjax article pre.mermaid {
   border: none;
   text-align: center;
+  width: 100%;
+  overflow-x: auto;
 }
 #post .pjax article pre {
   position: relative;

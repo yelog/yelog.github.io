@@ -1041,19 +1041,19 @@
         
         
         <a  class="全部文章 工具 "
-           href="/2024/10/10/install-ollama-offline/"
+           href="/2024/10/10/install-ollama-offline-english/"
            data-tag="Ollama,Offline,Tutorial,Installation Guide"
            data-author="" >
-            <span class="post-title" title="离线安装 Ollama及加载离线模型">离线安装 Ollama及加载离线模型</span>
+            <span class="post-title" title="Installing Ollama offline and loading offline models">Installing Ollama offline and loading offline models</span>
             <span class="post-date" title="2024-10-10 16:31:27">2024/10/10</span>
         </a>
         
         
         <a  class="全部文章 工具 "
-           href="/2024/10/10/install-ollama-offline-english/"
+           href="/2024/10/10/install-ollama-offline/"
            data-tag="Ollama,Offline,Tutorial,Installation Guide"
            data-author="" >
-            <span class="post-title" title="Installing Ollama offline and loading offline models">Installing Ollama offline and loading offline models</span>
+            <span class="post-title" title="离线安装 Ollama及加载离线模型">离线安装 Ollama及加载离线模型</span>
             <span class="post-date" title="2024-10-10 16:31:27">2024/10/10</span>
         </a>
         
@@ -2662,12 +2662,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2025-05-12 13:38:14'>2017-01-31 15:29</time>
+            发布时间 : <time class="date" title='最后更新: 2025-05-18 18:19:23'>2017-01-31 15:29</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:605</span>
+        <span>字数:608</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2759,6 +2759,7 @@
 <li><strong>《从零到一》</strong> by 彼得·蒂尔 2015年6月 ★ ★ ★ ★ ☆ ☆ ☆</li>
 <li><strong>《创业维艰》</strong> by 本·霍洛维茨  2015年6月 ★ ★ ★ ★ ★ ☆ ☆</li>
 <li><strong>《餐巾纸上的创业课》</strong> by 神田昌典  2016年6月 ★ ★ ★ ★ ☆ ☆ ☆</li>
+<li><strong>《生生不息:一个中国企业的进化和转型》</strong> by 范海涛 2025年5月 ★ ★ ★ ★ ★ ★ ☆</li>
 </ol>
 <h2 id="方法论"><a href="#方法论" class="headerlink" title="方法论"></a>方法论</h2><ol>
 <li><strong>《如何高效学习》</strong> by 斯科特·扬  2017年1月 ★ ★ ★ ★ ★ ☆ ☆</li>
@@ -2773,7 +2774,6 @@
 </ol>
 <h2 id="待读-在读"><a href="#待读-在读" class="headerlink" title="待读&#x2F;在读"></a>待读&#x2F;在读</h2><ol>
 <li><strong>《基督山伯爵》</strong> by 大仲马</li>
-<li><strong>《生生不息:一个中国企业的进化和转型》</strong> by 范海涛</li>
 <li><strong>《未来简史》</strong> by 尤瓦尔·赫拉利</li>
 <li><strong>《硅谷之火》</strong> by 迈克尔·斯韦特 &amp; 保罗·弗赖伯格</li>
 <li><strong>《银河系搭车指南》</strong> by 道格拉斯·亚当斯</li>
@@ -2888,25 +2888,6 @@
         $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
 
         
-        
-        /* 渲染*/
-        function HTMLDecode(text) {
-            var temp = document.createElement("div");
-            temp.innerHTML = text;
-            var output = temp.innerText || temp.textContent;
-            temp = null;
-            return output;
-        }
-        if (window.mermaid){
-            window.mermaid = null
-        }
-        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
-            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
-            if (window.mermaid) {
-                mermaid.initialize(mermaidOptions)
-                mermaid.contentLoaded()
-            }
-        })
         
     }
 
