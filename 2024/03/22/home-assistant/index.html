@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(181)</small>
+                <small>(182)</small>
             
         </div>
     </li>
@@ -401,7 +401,7 @@
         <div data-rel="后端">
             
             后端
-            <small>(13)</small>
+            <small>(14)</small>
         </div>
         
     </li>
@@ -555,8 +555,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="181">
-<input type="hidden" id="yelog_site_word_count" value="191.6k">
+<input type="hidden" id="yelog_site_posts_number" value="182">
+<input type="hidden" id="yelog_site_word_count" value="195.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -1039,6 +1039,15 @@
         </a>
         
         
+        <a  class="全部文章 后端 "
+           href="/2026/02/01/create-intellij-plugin/"
+           data-tag="java,IntellijIDEA,i18n"
+           data-author="" >
+            <span class="post-title" title="从模板到实战：写一个 IntelliJ 平台插件（以 I18n Toolkit 为例）">从模板到实战：写一个 IntelliJ 平台插件（以 I18n Toolkit 为例）</span>
+            <span class="post-date" title="2026-02-01 18:24:21">2026/02/01</span>
+        </a>
+        
+        
         <a  class="全部文章 大前端 "
            href="/2026/01/24/macos-orc/"
            data-tag="swift,macos,ocr"
@@ -1050,7 +1059,7 @@
         
         <a  class="全部文章 工具 vim "
            href="/2025/09/10/neovim-i18n/"
-           data-tag="vim,neovim,i18n,internationalization"
+           data-tag="vim,i18n,neovim,internationalization"
            data-author="" >
             <span class="post-title" title="Neovim 插件 i18n.nvim 介绍">Neovim 插件 i18n.nvim 介绍</span>
             <span class="post-date" title="2025-09-10 11:20:19">2025/09/10</span>
@@ -2690,12 +2699,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2026-01-24 15:42:57'>2024-03-22 09:05</time>
+            发布时间 : <time class="date" title='最后更新: 2026-02-01 22:26:21'>2024-03-22 09:05</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:145</span>
+        <span>字数:545</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -2744,8 +2753,57 @@
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近搬到了新家，家里的智能设备也越来越多, 引入很多米家设备, 但博主使用的是苹果生态, 需要将这些不支持 <code>homekit</code> 的米家设备接入到 <code>homekit</code> 中, 经过调研发现 <code>Home Assistant</code> 是一个不错的选择, 本文会介绍联网安装的过程, 并且如果有需要联网的步骤, 也会提供<strong>离线安装</strong>的方法.</p>
 <p>本篇主要介绍通过 <code>docker</code> 部署的方式</p>
 <h2 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h2><p>如已有 <code>docker</code> 环境, 可以跳过这一步</p>
-<pre><code class="bash">sudo apt-get update
-sudo 
+<p>以下以 Ubuntu 为例, 其他发行版请参考官方文档</p>
+<pre><code class="bash"># 1) 安装依赖并添加官方 GPG key
+sudo apt update
+sudo apt install -y ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# 2) 添加 Docker 官方仓库
+sudo tee /etc/apt/sources.list.d/docker.sources &gt;/dev/null &lt;&lt;EOF
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: $(. /etc/os-release &amp;&amp; echo &quot;$&#123;UBUNTU_CODENAME:-$VERSION_CODENAME&#125;&quot;)
+Components: stable
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+
+sudo apt update
+
+# 3) 安装 Docker Engine
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# 4) 启动并验证
+sudo systemctl status docker
+# 如未启动, 可执行: sudo systemctl start docker
+sudo docker run hello-world
+</code></pre>
+<p>可选: 免 <code>sudo</code> 使用 Docker</p>
+<pre><code class="bash">sudo usermod -aG docker $USER
+# 重新登录后生效
+docker ps
+</code></pre>
+<p>离线安装(无法访问官方仓库)</p>
+<p>在另一台可联网机器上下载与你系统版本&#x2F;架构对应的 <code>.deb</code> 包, 例如:</p>
+<ul>
+<li><code>containerd.io_&lt;version&gt;_&lt;arch&gt;.deb</code></li>
+<li><code>docker-ce_&lt;version&gt;_&lt;arch&gt;.deb</code></li>
+<li><code>docker-ce-cli_&lt;version&gt;_&lt;arch&gt;.deb</code></li>
+<li><code>docker-buildx-plugin_&lt;version&gt;_&lt;arch&gt;.deb</code></li>
+<li><code>docker-compose-plugin_&lt;version&gt;_&lt;arch&gt;.deb</code></li>
+</ul>
+<p>拷贝到目标机器后安装:</p>
+<pre><code class="bash">sudo dpkg -i ./containerd.io_&lt;version&gt;_&lt;arch&gt;.deb \
+  ./docker-ce_&lt;version&gt;_&lt;arch&gt;.deb \
+  ./docker-ce-cli_&lt;version&gt;_&lt;arch&gt;.deb \
+  ./docker-buildx-plugin_&lt;version&gt;_&lt;arch&gt;.deb \
+  ./docker-compose-plugin_&lt;version&gt;_&lt;arch&gt;.deb
+# 如果提示缺少依赖, 需使用本地镜像/离线源补齐依赖后再重试
+sudo systemctl status docker
+# 如未启动, 可执行: sudo systemctl start docker
+sudo docker run hello-world
 </code></pre>
 
       
