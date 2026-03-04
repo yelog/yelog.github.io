@@ -110,6 +110,15 @@
   </url>
   
   <url>
+    <loc>http://yelog.org/2026/03/04/Tailscale-Guide-from-Basic-to-Private-DERP/</loc>
+    
+    <lastmod>2026-03-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://yelog.org/2017/09/06/build-Maven-Nexus/</loc>
     
     <lastmod>2026-03-04</lastmod>
@@ -1747,7 +1756,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/firewall/</loc>
+    <loc>http://yelog.org/tags/java/</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/concurrent/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1768,6 +1784,13 @@
   </url>
   
   <url>
+    <loc>http://yelog.org/tags/firewall/</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://yelog.org/tags/linux/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -1782,21 +1805,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/java/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/tags/concurrent/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yelog.org/tags/reading/</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/translation/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1817,7 +1833,7 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/translation/</loc>
+    <loc>http://yelog.org/tags/k8s/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1832,13 +1848,6 @@
   
   <url>
     <loc>http://yelog.org/tags/efficiency/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/tags/k8s/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1880,13 +1889,6 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/vim/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://yelog.org/tags/antdv-next/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -1908,14 +1910,7 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/centos7/</loc>
-    <lastmod>2026-03-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://yelog.org/tags/yum/</loc>
+    <loc>http://yelog.org/tags/vim/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1950,6 +1945,20 @@
   </url>
   
   <url>
+    <loc>http://yelog.org/tags/centos7/</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/yum/</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://yelog.org/tags/deepin/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -1971,14 +1980,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/commands/</loc>
+    <loc>http://yelog.org/tags/docker%E4%BB%93%E5%BA%93/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/docker%E4%BB%93%E5%BA%93/</loc>
+    <loc>http://yelog.org/tags/commands/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2188,14 +2197,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/linux%E5%91%BD%E4%BB%A4/</loc>
+    <loc>http://yelog.org/tags/container/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/tags/container/</loc>
+    <loc>http://yelog.org/tags/linux%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2378,6 +2387,27 @@
   
   <url>
     <loc>http://yelog.org/tags/encoding/</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/vpn/</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/tailscale/</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yelog.org/tags/remote/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2568,14 +2598,14 @@
   </url>
   
   <url>
-    <loc>http://yelog.org/categories/%E5%B7%A5%E5%85%B7/vim/</loc>
+    <loc>http://yelog.org/categories/%E5%BC%80%E5%8F%91/java/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://yelog.org/categories/%E5%BC%80%E5%8F%91/java/</loc>
+    <loc>http://yelog.org/categories/%E5%B7%A5%E5%85%B7/vim/</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

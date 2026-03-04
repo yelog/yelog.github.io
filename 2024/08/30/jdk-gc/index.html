@@ -248,7 +248,7 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(184)</small>
+                <small>(185)</small>
             
         </div>
     </li>
@@ -431,7 +431,7 @@
         <div data-rel="运维">
             
             运维
-            <small>(88)</small>
+            <small>(89)</small>
         </div>
         
     </li>
@@ -555,8 +555,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="184">
-<input type="hidden" id="yelog_site_word_count" value="199.1k">
+<input type="hidden" id="yelog_site_posts_number" value="185">
+<input type="hidden" id="yelog_site_word_count" value="202.1k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -950,6 +950,10 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>remote</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>samba</a>
             </li>
         
@@ -990,6 +994,10 @@
             </li>
         
             <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>tailscale</a>
+            </li>
+        
+            <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>tale</a>
             </li>
         
@@ -1015,6 +1023,10 @@
         
             <li class="article-tag-list-item">
                 <i class="iconfont icon-tag"></i><a>vim</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vpn</a>
             </li>
         
             <li class="article-tag-list-item">
@@ -1064,6 +1076,15 @@
            data-author="" >
             <span class="post-title" title="3-hexo使用说明">3-hexo使用说明</span>
             <span class="post-date" title="2017-03-23 15:13:47">2017/03/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 运维 "
+           href="/2026/03/04/Tailscale-Guide-from-Basic-to-Private-DERP/"
+           data-tag="vpn,tailscale,remote"
+           data-author="" >
+            <span class="post-title" title="Tailscale 完全指南：从入门到私有 DERP 部署">Tailscale 完全指南：从入门到私有 DERP 部署</span>
+            <span class="post-date" title="2026-03-04 13:55:15">2026/03/04</span>
         </a>
         
         
@@ -1285,7 +1306,7 @@
         
         <a  class="全部文章 后端 "
            href="/2023/12/11/springboot-jarlauncher/"
-           data-tag="docker,java,spring-boot"
+           data-tag="java,docker,spring-boot"
            data-author="" >
             <span class="post-title" title="Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher">Caused by: java.lang.ClassNotFoundException: org.springframework.boot.loader.JarLauncher</span>
             <span class="post-date" title="2023-12-11 16:58:00">2023/12/11</span>
@@ -2745,7 +2766,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2026-03-04 10:04:05'>2024-08-30 11:12</time>
+            发布时间 : <time class="date" title='最后更新: 2026-03-04 15:53:10'>2024-08-30 11:12</time>
         
     </div>
     <div class="article-meta">
@@ -2909,7 +2930,7 @@
 <h2 id="others"><a href="#others" class="headerlink" title="others"></a>others</h2><pre><code class="bash"># 查看堆空间占用类， 前20条
 jmap -histo PID | head -n20
 </code></pre>
-<h2 id="bash-4-2-jmap-histo-9-head-n20-num-instances-bytes-class-name-module"><a href="#bash-4-2-jmap-histo-9-head-n20-num-instances-bytes-class-name-module" class="headerlink" title="bash-4.2# jmap -histo 9 | head -n20 num     #instances         #bytes  class name (module)"></a>bash-4.2# jmap -histo 9 | head -n20<br> num     #instances         #bytes  class name (module)</h2><p>   1:        544456     3280814896  [C (<a href="mailto:&#106;&#x61;&#x76;&#x61;&#46;&#98;&#97;&#x73;&#101;&#x40;&#49;&#49;&#x2e;&#48;&#x2e;&#x31;&#x38;">&#106;&#x61;&#x76;&#x61;&#46;&#98;&#97;&#x73;&#101;&#x40;&#49;&#49;&#x2e;&#48;&#x2e;&#x31;&#x38;</a>)<br>   2:       3076195     1819165352  [B (<a href="mailto:&#106;&#x61;&#118;&#x61;&#x2e;&#x62;&#97;&#x73;&#101;&#x40;&#49;&#x31;&#46;&#48;&#46;&#49;&#x38;">&#106;&#x61;&#118;&#x61;&#x2e;&#x62;&#97;&#x73;&#101;&#x40;&#49;&#x31;&#46;&#48;&#46;&#49;&#x38;</a>)<br>   3:       1029042      626773184  [I (<a href="mailto:&#106;&#97;&#x76;&#x61;&#46;&#x62;&#x61;&#115;&#x65;&#x40;&#x31;&#49;&#46;&#48;&#x2e;&#49;&#x38;">&#106;&#97;&#x76;&#x61;&#46;&#x62;&#x61;&#115;&#x65;&#x40;&#x31;&#49;&#46;&#48;&#x2e;&#49;&#x38;</a>)<br>   4:       6287573      201202336  java.lang.ClassValue$Entry (<a href="mailto:&#x6a;&#x61;&#x76;&#x61;&#46;&#98;&#x61;&#x73;&#101;&#64;&#49;&#x31;&#46;&#x30;&#46;&#x31;&#56;">&#x6a;&#x61;&#x76;&#x61;&#46;&#98;&#x61;&#x73;&#101;&#64;&#49;&#x31;&#46;&#x30;&#46;&#x31;&#56;</a>)<br>   5:       4575213      183008520  java.util.WeakHashMap$Entry (<a href="mailto:&#x6a;&#x61;&#x76;&#x61;&#46;&#x62;&#97;&#x73;&#101;&#64;&#x31;&#49;&#x2e;&#48;&#x2e;&#49;&#x38;">&#x6a;&#x61;&#x76;&#x61;&#46;&#x62;&#97;&#x73;&#101;&#64;&#x31;&#49;&#x2e;&#48;&#x2e;&#49;&#x38;</a>)<br>   6:       2214270      141713280  java.util.concurrent.ConcurrentHashMap (<a href="mailto:&#x6a;&#97;&#x76;&#x61;&#46;&#x62;&#97;&#x73;&#101;&#64;&#49;&#49;&#46;&#48;&#x2e;&#49;&#x38;">&#x6a;&#97;&#x76;&#x61;&#46;&#x62;&#97;&#x73;&#101;&#64;&#49;&#49;&#46;&#48;&#x2e;&#49;&#x38;</a>)<br>   7:       1085202      130240080  [Ljava.lang.Object; (<a href="mailto:&#x6a;&#x61;&#x76;&#97;&#46;&#98;&#x61;&#x73;&#x65;&#x40;&#49;&#x31;&#46;&#x30;&#46;&#x31;&#x38;">&#x6a;&#x61;&#x76;&#97;&#46;&#98;&#x61;&#x73;&#x65;&#x40;&#49;&#x31;&#46;&#x30;&#46;&#x31;&#x38;</a>)<br>   8:       1492883      130059632  [Ljava.util.WeakHashMap$Entry; (<a href="mailto:&#x6a;&#x61;&#x76;&#97;&#x2e;&#x62;&#97;&#115;&#x65;&#x40;&#49;&#x31;&#46;&#48;&#x2e;&#49;&#56;">&#x6a;&#x61;&#x76;&#97;&#x2e;&#x62;&#97;&#115;&#x65;&#x40;&#49;&#x31;&#46;&#48;&#x2e;&#49;&#56;</a>)<br>   9:       3101147      124045880  java.lang.ref.SoftReference (<a href="mailto:&#x6a;&#x61;&#x76;&#97;&#46;&#98;&#x61;&#115;&#x65;&#64;&#x31;&#x31;&#46;&#x30;&#46;&#x31;&#56;">&#x6a;&#x61;&#x76;&#97;&#46;&#98;&#x61;&#115;&#x65;&#64;&#x31;&#x31;&#46;&#x30;&#46;&#x31;&#56;</a>)<br>  10:       3068059      122722360  java.lang.invoke.BoundMethodHandle$Species_LL (<a href="mailto:&#106;&#97;&#x76;&#x61;&#46;&#x62;&#x61;&#115;&#101;&#64;&#x31;&#x31;&#46;&#x30;&#46;&#49;&#56;">&#106;&#97;&#x76;&#x61;&#46;&#x62;&#x61;&#115;&#101;&#64;&#x31;&#x31;&#46;&#x30;&#46;&#49;&#56;</a>)<br>  11:       4341767      104202408  java.lang.ClassValue$Version (<a href="mailto:&#106;&#97;&#x76;&#97;&#46;&#98;&#x61;&#x73;&#101;&#64;&#x31;&#49;&#46;&#x30;&#46;&#x31;&#x38;">&#106;&#97;&#x76;&#97;&#46;&#98;&#x61;&#x73;&#101;&#64;&#x31;&#49;&#46;&#x30;&#46;&#x31;&#x38;</a>)<br>  12:       1506502       84364112  jdk.nashorn.internal.runtime.ScriptFunction (<a href="mailto:&#106;&#x64;&#107;&#46;&#x73;&#x63;&#114;&#x69;&#112;&#116;&#x69;&#x6e;&#103;&#x2e;&#x6e;&#97;&#x73;&#x68;&#x6f;&#114;&#x6e;&#x40;&#49;&#x31;&#46;&#48;&#x2e;&#49;&#x38;">&#106;&#x64;&#107;&#46;&#x73;&#x63;&#114;&#x69;&#112;&#116;&#x69;&#x6e;&#103;&#x2e;&#x6e;&#97;&#x73;&#x68;&#x6f;&#114;&#x6e;&#x40;&#49;&#x31;&#46;&#48;&#x2e;&#49;&#x38;</a>)<br>  13:       2004817       80192680  java.util.TreeMap$Entry (<a href="mailto:&#106;&#x61;&#118;&#x61;&#46;&#98;&#97;&#115;&#x65;&#64;&#x31;&#49;&#x2e;&#48;&#x2e;&#49;&#56;">&#106;&#x61;&#118;&#x61;&#46;&#98;&#97;&#115;&#x65;&#64;&#x31;&#49;&#x2e;&#48;&#x2e;&#49;&#56;</a>)<br>  14:       2316002       74112064  java.util.HashMap$Node (<a href="mailto:&#106;&#x61;&#118;&#x61;&#46;&#98;&#x61;&#115;&#101;&#64;&#x31;&#x31;&#46;&#48;&#x2e;&#x31;&#56;">&#106;&#x61;&#118;&#x61;&#46;&#98;&#x61;&#115;&#101;&#64;&#x31;&#x31;&#46;&#48;&#x2e;&#x31;&#56;</a>)<br>  15:       2282867       73051744  jdk.nashorn.internal.runtime.PropertyHashMap$Element (<a href="mailto:&#106;&#100;&#x6b;&#x2e;&#x73;&#99;&#x72;&#105;&#x70;&#116;&#x69;&#110;&#103;&#x2e;&#110;&#97;&#x73;&#x68;&#111;&#114;&#110;&#x40;&#x31;&#49;&#x2e;&#48;&#x2e;&#49;&#x38;">&#106;&#100;&#x6b;&#x2e;&#x73;&#99;&#x72;&#105;&#x70;&#116;&#x69;&#110;&#103;&#x2e;&#110;&#97;&#x73;&#x68;&#111;&#114;&#110;&#x40;&#x31;&#49;&#x2e;&#48;&#x2e;&#49;&#x38;</a>)<br>  16:       4341767       69468272  java.lang.ClassValue$Identity (<a href="mailto:&#x6a;&#97;&#118;&#97;&#x2e;&#x62;&#x61;&#x73;&#x65;&#64;&#x31;&#x31;&#46;&#x30;&#x2e;&#x31;&#56;">&#x6a;&#97;&#118;&#97;&#x2e;&#x62;&#x61;&#x73;&#x65;&#64;&#x31;&#x31;&#46;&#x30;&#x2e;&#x31;&#56;</a>)<br>  17:       1435938       68925024  java.util.WeakHashMap (<a href="mailto:&#106;&#97;&#118;&#x61;&#46;&#x62;&#x61;&#x73;&#x65;&#x40;&#49;&#x31;&#x2e;&#x30;&#46;&#x31;&#x38;">&#106;&#97;&#118;&#x61;&#46;&#x62;&#x61;&#x73;&#x65;&#x40;&#49;&#x31;&#x2e;&#x30;&#46;&#x31;&#x38;</a>)<br>  18:       1657484       66299360  jdk.nashorn.internal.runtime.CompiledFunction (<a href="mailto:&#106;&#100;&#107;&#x2e;&#115;&#99;&#114;&#105;&#112;&#116;&#x69;&#110;&#103;&#46;&#110;&#x61;&#115;&#x68;&#x6f;&#x72;&#110;&#x40;&#x31;&#49;&#46;&#x30;&#46;&#49;&#56;">&#106;&#100;&#107;&#x2e;&#115;&#99;&#114;&#105;&#112;&#116;&#x69;&#110;&#103;&#46;&#110;&#x61;&#115;&#x68;&#x6f;&#x72;&#110;&#x40;&#x31;&#49;&#46;&#x30;&#46;&#49;&#56;</a>)</p>
+<h2 id="bash-4-2-jmap-histo-9-head-n20-num-instances-bytes-class-name-module"><a href="#bash-4-2-jmap-histo-9-head-n20-num-instances-bytes-class-name-module" class="headerlink" title="bash-4.2# jmap -histo 9 | head -n20 num     #instances         #bytes  class name (module)"></a>bash-4.2# jmap -histo 9 | head -n20<br> num     #instances         #bytes  class name (module)</h2><p>   1:        544456     3280814896  [C (<a href="mailto:&#x6a;&#97;&#x76;&#97;&#x2e;&#x62;&#97;&#115;&#101;&#64;&#49;&#x31;&#x2e;&#48;&#46;&#x31;&#56;">&#x6a;&#97;&#x76;&#97;&#x2e;&#x62;&#97;&#115;&#101;&#64;&#49;&#x31;&#x2e;&#48;&#46;&#x31;&#56;</a>)<br>   2:       3076195     1819165352  [B (<a href="mailto:&#106;&#97;&#x76;&#97;&#46;&#x62;&#97;&#x73;&#101;&#x40;&#x31;&#x31;&#46;&#x30;&#46;&#49;&#56;">&#106;&#97;&#x76;&#97;&#46;&#x62;&#97;&#x73;&#101;&#x40;&#x31;&#x31;&#46;&#x30;&#46;&#49;&#56;</a>)<br>   3:       1029042      626773184  [I (<a href="mailto:&#106;&#x61;&#118;&#x61;&#x2e;&#98;&#97;&#x73;&#101;&#64;&#x31;&#x31;&#x2e;&#x30;&#x2e;&#49;&#x38;">&#106;&#x61;&#118;&#x61;&#x2e;&#98;&#97;&#x73;&#101;&#64;&#x31;&#x31;&#x2e;&#x30;&#x2e;&#49;&#x38;</a>)<br>   4:       6287573      201202336  java.lang.ClassValue$Entry (<a href="mailto:&#x6a;&#97;&#118;&#x61;&#46;&#x62;&#97;&#115;&#101;&#x40;&#x31;&#x31;&#x2e;&#48;&#46;&#49;&#x38;">&#x6a;&#97;&#118;&#x61;&#46;&#x62;&#97;&#115;&#101;&#x40;&#x31;&#x31;&#x2e;&#48;&#46;&#49;&#x38;</a>)<br>   5:       4575213      183008520  java.util.WeakHashMap$Entry (<a href="mailto:&#x6a;&#97;&#x76;&#x61;&#x2e;&#98;&#x61;&#115;&#101;&#64;&#49;&#49;&#x2e;&#48;&#46;&#x31;&#56;">&#x6a;&#97;&#x76;&#x61;&#x2e;&#98;&#x61;&#115;&#101;&#64;&#49;&#49;&#x2e;&#48;&#46;&#x31;&#56;</a>)<br>   6:       2214270      141713280  java.util.concurrent.ConcurrentHashMap (<a href="mailto:&#106;&#x61;&#118;&#97;&#x2e;&#98;&#97;&#115;&#101;&#64;&#49;&#49;&#46;&#x30;&#x2e;&#x31;&#56;">&#106;&#x61;&#118;&#97;&#x2e;&#98;&#97;&#115;&#101;&#64;&#49;&#49;&#46;&#x30;&#x2e;&#x31;&#56;</a>)<br>   7:       1085202      130240080  [Ljava.lang.Object; (<a href="mailto:&#106;&#97;&#118;&#x61;&#x2e;&#x62;&#x61;&#x73;&#101;&#64;&#x31;&#x31;&#46;&#x30;&#x2e;&#x31;&#x38;">&#106;&#97;&#118;&#x61;&#x2e;&#x62;&#x61;&#x73;&#101;&#64;&#x31;&#x31;&#46;&#x30;&#x2e;&#x31;&#x38;</a>)<br>   8:       1492883      130059632  [Ljava.util.WeakHashMap$Entry; (<a href="mailto:&#106;&#x61;&#x76;&#97;&#46;&#x62;&#x61;&#115;&#x65;&#x40;&#x31;&#x31;&#46;&#x30;&#x2e;&#x31;&#56;">&#106;&#x61;&#x76;&#97;&#46;&#x62;&#x61;&#115;&#x65;&#x40;&#x31;&#x31;&#46;&#x30;&#x2e;&#x31;&#56;</a>)<br>   9:       3101147      124045880  java.lang.ref.SoftReference (<a href="mailto:&#x6a;&#x61;&#x76;&#x61;&#x2e;&#98;&#x61;&#x73;&#101;&#64;&#49;&#49;&#x2e;&#x30;&#46;&#49;&#56;">&#x6a;&#x61;&#x76;&#x61;&#x2e;&#98;&#x61;&#x73;&#101;&#64;&#49;&#49;&#x2e;&#x30;&#46;&#49;&#56;</a>)<br>  10:       3068059      122722360  java.lang.invoke.BoundMethodHandle$Species_LL (<a href="mailto:&#x6a;&#x61;&#x76;&#x61;&#x2e;&#98;&#97;&#x73;&#101;&#64;&#49;&#x31;&#46;&#48;&#46;&#x31;&#x38;">&#x6a;&#x61;&#x76;&#x61;&#x2e;&#98;&#97;&#x73;&#101;&#64;&#49;&#x31;&#46;&#48;&#46;&#x31;&#x38;</a>)<br>  11:       4341767      104202408  java.lang.ClassValue$Version (<a href="mailto:&#106;&#97;&#x76;&#97;&#46;&#98;&#x61;&#x73;&#x65;&#x40;&#49;&#49;&#46;&#48;&#x2e;&#49;&#x38;">&#106;&#97;&#x76;&#97;&#46;&#98;&#x61;&#x73;&#x65;&#x40;&#49;&#49;&#46;&#48;&#x2e;&#49;&#x38;</a>)<br>  12:       1506502       84364112  jdk.nashorn.internal.runtime.ScriptFunction (<a href="mailto:&#106;&#x64;&#x6b;&#x2e;&#x73;&#x63;&#x72;&#105;&#x70;&#x74;&#105;&#x6e;&#103;&#x2e;&#110;&#x61;&#115;&#104;&#x6f;&#114;&#x6e;&#x40;&#x31;&#x31;&#x2e;&#48;&#46;&#49;&#x38;">&#106;&#x64;&#x6b;&#x2e;&#x73;&#x63;&#x72;&#105;&#x70;&#x74;&#105;&#x6e;&#103;&#x2e;&#110;&#x61;&#115;&#104;&#x6f;&#114;&#x6e;&#x40;&#x31;&#x31;&#x2e;&#48;&#46;&#49;&#x38;</a>)<br>  13:       2004817       80192680  java.util.TreeMap$Entry (<a href="mailto:&#x6a;&#x61;&#x76;&#97;&#x2e;&#x62;&#97;&#115;&#x65;&#x40;&#49;&#49;&#46;&#48;&#46;&#49;&#56;">&#x6a;&#x61;&#x76;&#97;&#x2e;&#x62;&#97;&#115;&#x65;&#x40;&#49;&#49;&#46;&#48;&#46;&#49;&#56;</a>)<br>  14:       2316002       74112064  java.util.HashMap$Node (<a href="mailto:&#106;&#97;&#118;&#x61;&#46;&#x62;&#97;&#x73;&#101;&#64;&#x31;&#49;&#x2e;&#48;&#46;&#49;&#x38;">&#106;&#97;&#118;&#x61;&#46;&#x62;&#97;&#x73;&#101;&#64;&#x31;&#49;&#x2e;&#48;&#46;&#49;&#x38;</a>)<br>  15:       2282867       73051744  jdk.nashorn.internal.runtime.PropertyHashMap$Element (<a href="mailto:&#x6a;&#x64;&#x6b;&#x2e;&#115;&#99;&#x72;&#x69;&#112;&#x74;&#x69;&#x6e;&#103;&#46;&#110;&#97;&#x73;&#104;&#111;&#114;&#x6e;&#64;&#49;&#49;&#x2e;&#x30;&#x2e;&#49;&#56;">&#x6a;&#x64;&#x6b;&#x2e;&#115;&#99;&#x72;&#x69;&#112;&#x74;&#x69;&#x6e;&#103;&#46;&#110;&#97;&#x73;&#104;&#111;&#114;&#x6e;&#64;&#49;&#49;&#x2e;&#x30;&#x2e;&#49;&#56;</a>)<br>  16:       4341767       69468272  java.lang.ClassValue$Identity (<a href="mailto:&#x6a;&#x61;&#x76;&#x61;&#x2e;&#98;&#x61;&#x73;&#x65;&#x40;&#x31;&#x31;&#x2e;&#x30;&#x2e;&#x31;&#56;">&#x6a;&#x61;&#x76;&#x61;&#x2e;&#98;&#x61;&#x73;&#x65;&#x40;&#x31;&#x31;&#x2e;&#x30;&#x2e;&#x31;&#56;</a>)<br>  17:       1435938       68925024  java.util.WeakHashMap (<a href="mailto:&#106;&#97;&#x76;&#97;&#46;&#x62;&#97;&#x73;&#x65;&#64;&#x31;&#49;&#46;&#48;&#46;&#x31;&#56;">&#106;&#97;&#x76;&#97;&#46;&#x62;&#97;&#x73;&#x65;&#64;&#x31;&#49;&#46;&#48;&#46;&#x31;&#56;</a>)<br>  18:       1657484       66299360  jdk.nashorn.internal.runtime.CompiledFunction (<a href="mailto:&#x6a;&#100;&#107;&#x2e;&#x73;&#99;&#114;&#x69;&#112;&#116;&#105;&#110;&#103;&#46;&#x6e;&#97;&#x73;&#104;&#x6f;&#114;&#110;&#64;&#49;&#x31;&#46;&#x30;&#x2e;&#49;&#56;">&#x6a;&#100;&#107;&#x2e;&#x73;&#99;&#114;&#x69;&#112;&#116;&#105;&#110;&#103;&#46;&#x6e;&#97;&#x73;&#104;&#x6f;&#114;&#110;&#64;&#49;&#x31;&#46;&#x30;&#x2e;&#49;&#56;</a>)</p>
 <p>[C is a char[]<br>[B is a byte[]<br>[I is a int[]<br>[S is a short[]<br>[[I is a int[][]</p>
 <pre><code class="bash"># 查看堆空间存活, 注意, 会触发 full gc
 jmap -histo:live PID | head -n20
@@ -3024,6 +3045,25 @@ jmap -histo:live PID | head -n20
         $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
 
         
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
         
     }
 
